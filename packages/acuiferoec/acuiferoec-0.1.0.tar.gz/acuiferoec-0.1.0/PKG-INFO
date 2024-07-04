@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: acuiferoec
+Version: 0.1.0
+Summary: Calcula el volumen de agua almacenada en un sistema de acuíferos.
+Author: ('Santiago Quiñones', 'Luis Cuenca')
+Author-email: lsquinones@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# AcuiferoEC
+
+Este paquete calcula el volumen de agua almacenada en un sistema de acuÃ­feros dado por una matriz 3Ã—3 que representa las longitudes, anchos y profundidades en diferentes puntos del acuÃ­fero.
