@@ -1,0 +1,19 @@
+%YAML 1.2
+---
+# This is some metadata about the badge
+name: Long Life to Pagure (Pagure I)
+description: Pushed 1 commit to a Pagure repository.
+creator: robyduck
+
+# This is a link to the discussion about adopting this as a for-real badge.
+discussion: https://pagure.io/design/issue/434
+
+# A link to the image for the badge
+image_url: https://badges.fedoraproject.org/pngs/pagure-long-life-01.png
+# That's us!
+issuer_id: fedora-project
+
+trigger:
+  topic: pagure.git.receive
+
+recipient: '[a["name"] for a in message.body["authors"] if a["name"] is not None]'

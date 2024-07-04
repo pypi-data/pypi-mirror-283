@@ -1,0 +1,25 @@
+%YAML 1.2
+---
+# This is some metadata about the badge
+name: The Zen of Foo Bar Baz
+description: Your packaging efforts refer to a meta-syntactic variable.
+creator: ralph
+
+# This is a link to the discussion about adopting this as a for-real badge.
+discussion: http://github.com/fedora-infra/badges/pull/SOME_NUMBER
+
+# A link to the image for the badge
+image_url: http://upload.wikimedia.org/wikipedia/commons/d/df/Koto-in_Zen_Temple_Kyoto_-_entrance_walkway.jpg
+
+# That's us!
+issuer_id: fedora-project
+
+# Here we'll run our check if the message that we receive is in either the
+# 'bodhi' or the 'git' categories.
+trigger:
+  category:
+    any:
+      - bodhi
+      - git
+
+  # If there is no condition, the incoming message will award the badge, no need to look at previous messages
