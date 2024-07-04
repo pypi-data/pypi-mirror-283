@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: command-controller
+Version: 0.0.5
+Summary: Command Controller By Python
+Home-page: https://github.com/czasg/CommandController
+Author: czasg
+Author-email: 972542644@qq.com
+License: MIT
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.6
+
+see https://github.com/czasg/CommandController
