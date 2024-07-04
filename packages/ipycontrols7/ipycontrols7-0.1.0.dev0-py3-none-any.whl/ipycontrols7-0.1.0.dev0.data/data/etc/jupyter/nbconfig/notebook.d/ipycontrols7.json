@@ -1,0 +1,5 @@
+{
+  "load_extensions": {
+    "ipycontrols7/extension": true
+  }
+}
