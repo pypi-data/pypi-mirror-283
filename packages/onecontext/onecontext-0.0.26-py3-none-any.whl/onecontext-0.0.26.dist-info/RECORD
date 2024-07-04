@@ -1,0 +1,13 @@
+onecontext/__about__.py,sha256=Uo7fyxQsD_ez-4T9Di7e8J56WgMQ2DYHGASt3lnRdUY,23
+onecontext/__init__.py,sha256=cSlr84Ef1CoTS4k1_15qVs2GhXpYWwbO8DJp5mnK1LQ,125
+onecontext/chunk.py,sha256=qSQt9P8xmdNcbKW8FcJGi4k_Mw4VLU9G2Hh8Kstr2Sc,676
+onecontext/client.py,sha256=pp-IHfzmoXus0OAL4SCNaitF9vN8S5aEop5Paodboew,2715
+onecontext/components.py,sha256=zAGyPTqdwVMEoSOg8w8WzaeVxpkfnsfBPFy8r8fkvFE,1247
+onecontext/index.py,sha256=3e7ozSNe4FDMGpibomFe0IN-rm33KrHcjjDk5v8mDOU,4832
+onecontext/knowledgebase.py,sha256=hkzxVOXL-jkrcPY5aG-DCpG5Lw1lNBtGggr8v63wqUo,10026
+onecontext/main.py,sha256=cSU3ozQ8Tm_2PGLxrqOs4XREAaRA9GaLUlA6XlvkfLU,11342
+onecontext/pipeline.py,sha256=TmwoXb0goOLRp6my_7MGOYD3ryiL-2JMxMGsk0msYh4,3288
+onecontext-0.0.26.dist-info/METADATA,sha256=HJnlmp2tQL1ezUwN2LUivg5IbdfEtxAl38If795VmU4,7026
+onecontext-0.0.26.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+onecontext-0.0.26.dist-info/licenses/LICENSE.txt,sha256=Q6XFAGRY98Bo63uMHuZSbXvkEkvHRYxiii6Hh6bvWqk,1095
+onecontext-0.0.26.dist-info/RECORD,,
