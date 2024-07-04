@@ -1,0 +1,2 @@
+[gymnasium.envs]
+__root__ = hyphi_gym.__init__:register_envs
