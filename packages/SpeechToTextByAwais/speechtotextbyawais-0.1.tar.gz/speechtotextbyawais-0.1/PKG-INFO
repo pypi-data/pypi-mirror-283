@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: SpeechToTextByAwais
+Version: 0.1
+Summary: A Python library for converting speech to text with high accuracy.
+Author: Awais
+Author-email: tahirawais341@gmail.com
+Requires-Dist: selenium
+Requires-Dist: webdriver-manager
