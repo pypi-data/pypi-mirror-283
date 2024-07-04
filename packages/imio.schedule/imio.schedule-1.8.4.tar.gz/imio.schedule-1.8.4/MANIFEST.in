@@ -1,0 +1,10 @@
+graft src/imio
+graft docs
+include *.rst
+global-exclude *.pyc
+include *.py
+include *.txt
+include Makefile
+exclude pyvenv.cfg
+prune news
+exclude *.toml
