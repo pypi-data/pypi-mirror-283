@@ -1,0 +1,6 @@
+auth
+download_bids
+download_dicom
+upload_bids
+upload_dicom
+utilities
