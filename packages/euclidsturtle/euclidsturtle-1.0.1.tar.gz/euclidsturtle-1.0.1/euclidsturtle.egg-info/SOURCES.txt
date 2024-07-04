@@ -1,0 +1,14 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+euclidsturtle/__init__.py
+euclidsturtle/geotool.py
+euclidsturtle/turtle.py
+euclidsturtle.egg-info/PKG-INFO
+euclidsturtle.egg-info/SOURCES.txt
+euclidsturtle.egg-info/dependency_links.txt
+euclidsturtle.egg-info/requires.txt
+euclidsturtle.egg-info/top_level.txt
+tests/__init__.py
+tests/test_geotool.py
