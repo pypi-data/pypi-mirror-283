@@ -1,0 +1,3 @@
+include MixPage/configs.ini
+include MixPage/*.pyi
+recursive-include MixPage/commons *.py

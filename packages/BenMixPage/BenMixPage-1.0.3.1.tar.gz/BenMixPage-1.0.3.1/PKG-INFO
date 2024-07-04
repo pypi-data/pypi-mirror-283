@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: BenMixPage
+Version: 1.0.3.1
+Summary: Python based web automation tool. It can control the browser and send and receive data packets.
+Home-page: https://gitee.com/g1879/MixPage
+Author: g1879
+Author-email: g1879@qq.com
+License: BSD
+Keywords: MixPage
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: BSD License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## 概述
+
+MixPage 是一个基于 python 的网页自动化工具。
+
+它对 selenium 和 requests 进行了封装，可实现两者的同步。
+
+可兼顾浏览器自动化的便利性和 requests 的高效率。
+
+它功能强大，内置无数人性化设计和便捷功能。
+
+它的语法简洁而优雅，代码量少，对新手友好。
+
+---
+
+## 背景
+
+原项目为 [MixPage](https://pypi.org/project/MixPage/)，由于原项目现在引入后无法正常使用，故修改后发布此版本
+
+* [BenMixPage Gitee](https://gitee.com/ben__1993/MixPage)
+* [BenMixPage PyPI](https://pypi.org/project/BenMixPage/)
+
+## 如何使用
+
+> 文档参考[MixPage](https://pypi.org/project/MixPage/)
+
+```ini
+pip install BenMixPage
+```
+
+## 我是如何发布的？
+
+```ini
+# 依赖安装
+pip install -r requirements.txt
+pip install wheel
+pip install twine
+
+# 打包
+# 这将在 dist 目录中生成 .tar.gz 和 .whl 文件
+python setup.py sdist bdist_wheel
+
+
+
+# 发布到 PyPI
+twine upload dist/*
+```
