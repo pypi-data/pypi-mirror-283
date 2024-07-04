@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: VerbalRegex
+Version: 1.0.0
+Summary: 정규표현식을 쉽게 쓸 수 있게 합니다. Makes it easy to use regular expressions
+Home-page: https://github.com/DM-09/Verbal-Regex.py/
+Author: dongmin
+Author-email: happydm09@naver.com
+License: MIT
+Keywords: Regex,VerbalRegex,Verbal Regex,Regular Expression
+Requires-Python: >=3.1
+
