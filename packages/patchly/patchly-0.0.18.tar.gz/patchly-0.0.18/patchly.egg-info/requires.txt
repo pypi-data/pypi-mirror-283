@@ -1,0 +1,9 @@
+numpy>=1.24.1
+
+[testing]
+tox
+numpy<2.0.0,>=1.24.1
+pytest
+pytest-cov
+zarr
+torch
