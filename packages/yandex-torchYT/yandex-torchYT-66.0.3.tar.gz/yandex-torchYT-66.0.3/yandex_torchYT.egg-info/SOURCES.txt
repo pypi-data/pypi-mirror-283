@@ -1,0 +1,6 @@
+README.md
+setup.py
+yandex_torchYT.egg-info/PKG-INFO
+yandex_torchYT.egg-info/SOURCES.txt
+yandex_torchYT.egg-info/dependency_links.txt
+yandex_torchYT.egg-info/top_level.txt
