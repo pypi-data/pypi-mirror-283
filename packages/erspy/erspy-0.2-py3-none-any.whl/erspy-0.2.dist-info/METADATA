@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: erspy
+Version: 0.2
+Summary: Python package handling ERS-1 and ERS-2 scatterometer data
+Home-page: https://github.com/TUW-GEO/erspy/
+Author: TU Wien
+Author-email: remote.sensing@geo.tuwien.ac.at
+License: MIT
+Project-URL: Documentation, https://erspy.readthedocs.io/
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Description-Content-Type: text/x-rst; charset=UTF-8
+License-File: LICENSE.txt
+Requires-Dist: importlib-metadata ; python_version < "3.8"
+Provides-Extra: testing
+Requires-Dist: setuptools ; extra == 'testing'
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+
+=====
+erspy
+=====
+
+
+A Python package handling ERS-1 and ERS-2 scatterometer data.
+
+
+.. _pyscaffold-notes:
+
+Note
+====
+
+This project has been set up using PyScaffold 4.5. For details and usage
+information on PyScaffold see https://pyscaffold.org/.
