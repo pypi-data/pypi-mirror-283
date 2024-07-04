@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "sqlalchemy-crudx"
+version = "0.1.0"
+description = "Basic async CRUD of SQLAlChemy2"
+authors = ["codemaxi <codemaxi@163.com>"]
+readme = "README.md"
+packages = [{ include = "crudx" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+sqlalchemy = "^2.0.31"
+pydantic = "^2.7.4"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+pytest-asyncio = "^0.23.7"
+aiosqlite = "^0.20.0"
+mypy = "^1.10.1"
+ruff = "^0.5.0"
+coverage = "^7.5.4"
+pre-commit = "^3.7.1"
+
+[[tool.poetry.source]]
+name = "tsinghua"
+url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/"
+priority = 'primary'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
