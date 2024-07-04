@@ -1,0 +1,12 @@
+bs4
+click
+datetime
+html5lib
+numpy
+pandas
+requests
+
+[doc]
+sphinx>=7.0.1
+sphinx-rtd-theme
+sphinx-autodocgen

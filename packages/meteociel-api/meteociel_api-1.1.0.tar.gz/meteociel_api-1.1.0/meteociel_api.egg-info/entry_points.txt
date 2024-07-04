@@ -1,0 +1,2 @@
+[console_scripts]
+meteociel = meteociel.__main__:main
