@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "spark-roomba"
+version = "0.1.0"
+description = "A CLI tool to control Roomba"
+authors = ["Maki <sunwood.ai.labs@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "spark_roomba"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+loguru = "^0.6.0"
+pyserial = "^3.5"
+python-dotenv = "^0.19.0"
+open-interpreter = "^0.1.0"
+
+[tool.poetry.scripts]
+spark-roomba = "spark_roomba.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.urls]
+"Homepage" = "https://github.com/Sunwood-ai-labs/SPARK"
+"Bug Tracker" = "https://github.com/Sunwood-ai-labs/SPARK/issues"
