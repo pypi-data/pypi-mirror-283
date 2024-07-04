@@ -1,0 +1,7 @@
+setup.py
+VerbalRegex/VerbalRegex.py
+VerbalRegex/__init__.py
+VerbalRegex.egg-info/PKG-INFO
+VerbalRegex.egg-info/SOURCES.txt
+VerbalRegex.egg-info/dependency_links.txt
+VerbalRegex.egg-info/top_level.txt
