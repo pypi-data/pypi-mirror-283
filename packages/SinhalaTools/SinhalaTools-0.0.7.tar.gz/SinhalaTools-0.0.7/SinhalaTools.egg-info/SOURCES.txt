@@ -1,0 +1,12 @@
+README.md
+setup.py
+SinhalaTools/__init__.py
+SinhalaTools/input_tools.py
+SinhalaTools/sinhala_matches.py
+SinhalaTools/translator.py
+SinhalaTools/unicode_convertor.py
+SinhalaTools.egg-info/PKG-INFO
+SinhalaTools.egg-info/SOURCES.txt
+SinhalaTools.egg-info/dependency_links.txt
+SinhalaTools.egg-info/requires.txt
+SinhalaTools.egg-info/top_level.txt
