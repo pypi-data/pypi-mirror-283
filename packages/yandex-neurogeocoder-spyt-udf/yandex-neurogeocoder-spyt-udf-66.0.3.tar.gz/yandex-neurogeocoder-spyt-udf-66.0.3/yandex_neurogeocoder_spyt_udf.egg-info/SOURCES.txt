@@ -1,0 +1,6 @@
+README.md
+setup.py
+yandex_neurogeocoder_spyt_udf.egg-info/PKG-INFO
+yandex_neurogeocoder_spyt_udf.egg-info/SOURCES.txt
+yandex_neurogeocoder_spyt_udf.egg-info/dependency_links.txt
+yandex_neurogeocoder_spyt_udf.egg-info/top_level.txt
