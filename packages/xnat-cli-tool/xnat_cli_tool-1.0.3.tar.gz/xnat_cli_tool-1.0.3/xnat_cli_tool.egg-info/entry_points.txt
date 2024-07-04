@@ -1,0 +1,3 @@
+[console_scripts]
+xt = xnat_cli:main
+
