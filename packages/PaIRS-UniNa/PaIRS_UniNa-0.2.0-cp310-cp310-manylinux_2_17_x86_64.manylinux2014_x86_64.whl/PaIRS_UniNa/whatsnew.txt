@@ -1,0 +1,4 @@
+* PaIRS now features a completely redesigned interface: enjoy the Explorer, which allows you to organize processes into different projects and copy and modify each item quickly and simply!
+* PaIRS now includes a module for stereoscopic Particle Image Velocimetry!
+* CalVi is finally integrated in the new interface: harness the power of the camera calibration tool without launching a new window!
+* Input and Vis tabs have been improved to handle both input and result files in a very straightforwad fashion .
