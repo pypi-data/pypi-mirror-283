@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco>
+	<compiler angle="radian" coordinate="local" meshdir="fetch/mesh" texturedir="fetch/textures"></compiler>
+	<option timestep="0.002">
+		<flag warmstart="enable"></flag>
+	</option>
+
+	<include file="fetch/shared.xml"></include>
+
+	<worldbody>
+		<body><site name="target" material="target" pos="1 1 1" size="0.02 0.02 0.02" type="sphere"></site></body>
+		<include file="fetch/robot.xml"></include>
+		
+    <body pos="1 1 0.5" name="table0">
+			<geom size="0.3 0.6 0.2" type="box" mass="2000" material="table_mat"></geom>
+		</body>
+
+		<light directional="true" ambient="0.2 0.2 0.2" diffuse="0.8 0.8 0.8" specular="0.3 0.3 0.3" castshadow="false" pos="0 0 4" dir="0 0 -1" name="light0"></light>
+	</worldbody>
+  <actuator>
+		<position ctrllimited="true" ctrlrange="0 0.2" joint="robot0:l_gripper_finger_joint" kp="30000" name="robot0:l_gripper_finger_joint" user="1"></position>
+		<position ctrllimited="true" ctrlrange="0 0.2" joint="robot0:r_gripper_finger_joint" kp="30000" name="robot0:r_gripper_finger_joint" user="1"></position>
+	</actuator>
+
+</mujoco>
