@@ -1,0 +1,6 @@
+README.md
+setup.py
+lipomora.egg-info/PKG-INFO
+lipomora.egg-info/SOURCES.txt
+lipomora.egg-info/dependency_links.txt
+lipomora.egg-info/top_level.txt
