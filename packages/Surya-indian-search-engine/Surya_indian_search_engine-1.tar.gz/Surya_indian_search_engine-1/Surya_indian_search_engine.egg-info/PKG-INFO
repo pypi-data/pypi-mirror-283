@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: Surya_indian_search_engine
+Version: 1
+Summary: Hi, are you ready for experiencing the first Indian search engine "Surya"? I know it is not that advanced, but it is my first module. Here are all the functions of my search engine: search different search engine results to give you results on one engine, read aloud function for those who want to hear it in English right now, which also looks good.
+Author: Suraj sharma
+Author-email: Surajsharma963472@gmail.com
+Keywords: Surya,web,search,python tutorial,Suraj
+Requires-Dist: PyQtWebEngine
+Requires-Dist: PyQt5
+Requires-Dist: beautifulsoup4
+Requires-Dist: pyttsx3
+Requires-Dist: qtwidgets

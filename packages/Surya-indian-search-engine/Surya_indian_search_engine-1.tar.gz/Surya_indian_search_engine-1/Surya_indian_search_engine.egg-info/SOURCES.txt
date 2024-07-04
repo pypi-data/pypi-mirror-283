@@ -1,0 +1,9 @@
+setup.py
+Surya_indian_search_engine/__init__.py
+Surya_indian_search_engine/__main__.py
+Surya_indian_search_engine/main.py
+Surya_indian_search_engine.egg-info/PKG-INFO
+Surya_indian_search_engine.egg-info/SOURCES.txt
+Surya_indian_search_engine.egg-info/dependency_links.txt
+Surya_indian_search_engine.egg-info/requires.txt
+Surya_indian_search_engine.egg-info/top_level.txt
