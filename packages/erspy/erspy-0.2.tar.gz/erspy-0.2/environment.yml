@@ -1,0 +1,15 @@
+name: env
+dependencies:
+  - numpy
+  - pandas
+  - netCDF4
+  - xarray
+  - dask
+  - zarr
+  - pip
+  - pip:
+      - cadati
+      - fibgrid
+      - build
+      - flake8
+      - yapf
