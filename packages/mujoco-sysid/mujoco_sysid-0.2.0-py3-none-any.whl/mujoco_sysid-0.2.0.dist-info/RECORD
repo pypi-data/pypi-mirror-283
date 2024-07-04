@@ -1,0 +1,12 @@
+mujoco_sysid/__init__.py,sha256=oFyV-e2EMI9wTZ0Xs-89nxs5_t1c7k8xvgnXKqlvmWw,85
+mujoco_sysid/convert.py,sha256=aIrRQRvByH732Y4_8JhmYnEE2R0RQOIRHMxi170Ulxo,11325
+mujoco_sysid/parameters.py,sha256=I9yo-DWKyMIWWLmiShrJynZuNNTkTjXi62nIo385vyY,2371
+mujoco_sysid/regressors.py,sha256=s67eFz1tohx-o0n2FrVF1bYtSqRT1mW2bgay5PGmjHU,9978
+mujoco_sysid/utils.py,sha256=0-YPknEt4W_mj93YXMIBJhf1c1Izvh8cGG668TDDGjQ,4030
+mujoco_sysid/mjx/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mujoco_sysid/mjx/parameters.py,sha256=aaDE8fMZLUkeIMkEoyL_IPVVgaQRkDm2nEAr3Io7D8U,2634
+mujoco_sysid/mjx/regressors.py,sha256=W2hi5mTDShbCvZUYIN_XE8PRbTtwicb-PTDjB-xjVOE,9792
+mujoco_sysid-0.2.0.dist-info/METADATA,sha256=3DbnT3v10PgDe9sNttH1mFp61wzRDtvZIBD3qYpXabk,3613
+mujoco_sysid-0.2.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+mujoco_sysid-0.2.0.dist-info/top_level.txt,sha256=AvxVgSEkHK55LBiaQSGr_b041SrnUr3XbspVje5WReE,13
+mujoco_sysid-0.2.0.dist-info/RECORD,,
