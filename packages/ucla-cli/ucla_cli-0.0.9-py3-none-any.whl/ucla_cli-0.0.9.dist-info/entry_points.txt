@@ -1,0 +1,3 @@
+[console_scripts]
+ucla=ucla_cli:ucla
+
