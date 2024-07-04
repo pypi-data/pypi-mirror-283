@@ -1,0 +1,27 @@
+Metadata-Version: 2.3
+Name: reed-solomon-ccsds
+Version: 1.0.3
+Summary: Reed Solomon CCSDS (255, 223)
+Project-URL: Documentation, https://github.com/kplabs-pl/reed-solomon-ccsds#readme
+Project-URL: Issues, https://github.com/kplabs-pl/reed-solomon-ccsds/issues
+Project-URL: Source, https://github.com/kplabs-pl/reed-solomon-ccsds
+Author: KPLabs Team
+License-Expression: LGPL-2.1
+License-File: LICENSE
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: numpy>=1.17.4
+Description-Content-Type: text/markdown
+
+# Reed-Solomon
+
+Reed Solomon (255, 223) CCSDS in Python.
+
+Library based on https://github.com/crozone/ReedSolomonCCSDS
