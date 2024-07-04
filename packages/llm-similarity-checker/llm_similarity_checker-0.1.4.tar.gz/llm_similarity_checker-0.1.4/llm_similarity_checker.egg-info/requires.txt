@@ -1,0 +1,4 @@
+transformers==4.42.3
+scipy==1.14.0
+joblib==1.4.2
+torch==2.3.1
