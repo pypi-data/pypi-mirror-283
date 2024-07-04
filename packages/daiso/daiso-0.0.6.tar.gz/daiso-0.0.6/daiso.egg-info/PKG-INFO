@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: daiso
+Version: 0.0.6
+Summary: DAISO: Deep-learning Assistance for Inspection, Supervision, and Optimization
+Home-page: https://sclab.yonsei.ac.kr/
+Author: Taphy
+Author-email: yhpat1@gmail.com
+Keywords: daiso,Daiso,logger,tool,deep learning,wandb,grad
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Requires-Dist: pyyaml
+Requires-Dist: numpy
+Requires-Dist: torch

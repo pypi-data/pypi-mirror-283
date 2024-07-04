@@ -1,0 +1,9 @@
+setup.py
+daiso/__init__.py
+daiso/alltil.py
+daiso.egg-info/PKG-INFO
+daiso.egg-info/SOURCES.txt
+daiso.egg-info/dependency_links.txt
+daiso.egg-info/not-zip-safe
+daiso.egg-info/requires.txt
+daiso.egg-info/top_level.txt
