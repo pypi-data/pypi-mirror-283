@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aetherdb"
+version = "0.0.1b1"
+requires-python = ">=3.10"
+readme = "README.md"
+description = "AetherDB is a lightweight document-like database for Python."
+authors = [
+    {name = "Dragooonat", email = "59411437+Dragooonat@users.noreply.github.com"}
+]
+keywords = ["database", "document", "python"]
+license = {text = "Apache-2.0 license"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+
+[tool.setuptools.package-dir]
+aetherdb = "src/AetherDB"

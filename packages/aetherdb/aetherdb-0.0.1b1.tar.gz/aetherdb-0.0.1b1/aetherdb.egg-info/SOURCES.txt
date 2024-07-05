@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+aetherdb.egg-info/PKG-INFO
+aetherdb.egg-info/SOURCES.txt
+aetherdb.egg-info/dependency_links.txt
+aetherdb.egg-info/top_level.txt
+src/AetherDB/__init__.py
+src/AetherDB/db.py
+tests/test_db.py
