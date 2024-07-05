@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: reading-machine
+Version: 0.0.1
+Summary: A machine that reads texts analytically and syntopically.
+Author-email: Alexander Fedotov <alex.fedotov@aol.com>
+Project-URL: Homepage, https://github.com/machina-ratiocinatrix/reading-machine
+Project-URL: Bug Tracker, https://github.com/machina-ratiocinatrix/reading-machine/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PyGithub >=2.3.0
+Requires-Dist: PyYAML >=6.0.1
+
+# Reading Machine
+A machine that reads texts analytically and syntopically.
+<pre>
+  pip install reading-machine
+</pre>
+Then:
+```Python
+  # Python
+  import reading_machine
+```
