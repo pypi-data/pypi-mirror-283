@@ -1,0 +1,7 @@
+xmlschema
+xmltodict
+astropy
+
+[dev]
+pip-tools
+pytest
