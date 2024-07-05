@@ -1,0 +1,10 @@
+sync_mailchimp_entra/__init__.py,sha256=XeU2H9WWQuSCOBxGpBp9hhbYCmaXarhnprZJwcgI40Y,37
+sync_mailchimp_entra/__main__.py,sha256=8BCRVK0CWgskMUYeGmj5xvpqO5cizo5424dA4wKr-pU,191
+sync_mailchimp_entra/core/graph.py,sha256=gNfwZ1ki64vF_rRwGxy2rpuwRn9_BQQw-5JJ7O2_Xoc,3239
+sync_mailchimp_entra/core/mailchimp.py,sha256=RK3ES1SyplV4-aDkqJz5910eED-962-_bzmVBDqO1ik,4622
+sync_mailchimp_entra/core/sync.py,sha256=o8WAH05dBF664GeJdYLDNCXqsZ2z_f7p9AomUpsf1NA,2227
+sync_mailchimp_entra/scripts.py,sha256=ZS3YWRh-nIUCKmdXGhAINs4R51l0uFi8LSM37atQAvs,1506
+sync_mailchimp_entra/utils/errors.py,sha256=ZjihpzUCbLBs8jWUoMH34iT34B8-tjHcsi5Lcpn-czk,426
+sync_mailchimp_entra-0.6.0.dist-info/METADATA,sha256=U6yp2L8Ikj-s_qZyeUj75T4QhNR1aC8pMEyV1-Cvep0,999
+sync_mailchimp_entra-0.6.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+sync_mailchimp_entra-0.6.0.dist-info/RECORD,,
