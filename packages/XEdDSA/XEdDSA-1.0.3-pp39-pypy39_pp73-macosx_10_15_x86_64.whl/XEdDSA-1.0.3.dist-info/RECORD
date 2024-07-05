@@ -1,0 +1,12 @@
+_libxeddsa.pypy39-pp73-darwin.so,sha256=iTZlUn1vNiV3stBygMlrTYUUzupqhqMm7R5hmUqts6c,51208
+xeddsa/version.py,sha256=lZvahqy0ZfIjIWvJPHXG_8GxjpJR4KOCb7n4bHkSAnQ,211
+xeddsa/libxeddsa_emscripten.py,sha256=zroZeLXhtR_zXSMgsfQVuLM8hTyNxydkNHWZDImww40,5864
+xeddsa/__init__.py,sha256=_UGsN1IP_Cux5kbp3yzzZ2FnL9g5R4E6GbtjdqBrP1w,1407
+xeddsa/bindings.py,sha256=mkxA19p1CuRcZfCiFvIp4yGI6chkP0XhnQ6j4NiIlEU,11265
+xeddsa/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xeddsa/project.py,sha256=UpQ9c33vtC7HEWvuwc8ghZNs6PGM7DXj3JEXMMGjg5w,410
+XEdDSA-1.0.3.dist-info/RECORD,,
+XEdDSA-1.0.3.dist-info/LICENSE,sha256=xkchEeGFpIuNAkUskKig4finhpnf_mXqGyWmYF7zXKk,1081
+XEdDSA-1.0.3.dist-info/WHEEL,sha256=zU9p6wHX7HKxGfyful6sQWRs2G7xFHAis8YZX_WD2Ak,116
+XEdDSA-1.0.3.dist-info/top_level.txt,sha256=HI-HhCHGNTVk1R8E9vfnaIXYtyCPuKoEFFLtb_m1KhU,18
+XEdDSA-1.0.3.dist-info/METADATA,sha256=WCowiHQBHJlaYOIvsUMMtymG62P9a35CyAnc-QNkGo8,4214
