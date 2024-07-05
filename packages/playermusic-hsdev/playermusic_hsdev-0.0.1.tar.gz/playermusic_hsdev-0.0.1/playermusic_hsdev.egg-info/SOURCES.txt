@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+playermusic_hsdev/__init__.py
+playermusic_hsdev/lala.py
+playermusic_hsdev/player.py
+playermusic_hsdev.egg-info/PKG-INFO
+playermusic_hsdev.egg-info/SOURCES.txt
+playermusic_hsdev.egg-info/dependency_links.txt
+playermusic_hsdev.egg-info/top_level.txt
