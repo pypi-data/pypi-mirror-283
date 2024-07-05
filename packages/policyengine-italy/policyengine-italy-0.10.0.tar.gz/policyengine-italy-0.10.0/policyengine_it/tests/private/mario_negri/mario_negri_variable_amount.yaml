@@ -1,0 +1,39 @@
+- name: Employee with zero income
+  period: 2024
+  input:
+    employment_category: EMPLOYEE
+    total_individual_pre_tax_income: 0
+  output:
+    mario_negri_variable_amount: 0
+
+- name: Executive with zero income
+  period: 2024
+  input:
+    employment_category: EXECUTIVE
+    total_individual_pre_tax_income: 0
+  output:
+    mario_negri_variable_amount: 0
+
+- name: Executive below threshold
+  period: 2024
+  input:
+    employment_category: EXECUTIVE
+    total_individual_pre_tax_income: 55_000
+  output:
+    mario_negri_variable_amount: 550
+
+- name: Executive above threshold
+  period: 2024
+  input:
+    employment_category: EXECUTIVE
+    total_individual_pre_tax_income: 100_000
+  output:
+    mario_negri_variable_amount: 592.2454
+
+- name: Unemployed person
+  period: 2024
+  input:
+    employment_category: UNEMPLOYED
+    total_individual_pre_tax_income: 0
+  output:
+    mario_negri_variable_amount: 0
