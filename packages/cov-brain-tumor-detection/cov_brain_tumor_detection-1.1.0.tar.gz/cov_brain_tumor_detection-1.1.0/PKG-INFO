@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: cov-brain-tumor-detection
+Version: 1.1.0
+Summary: Implementation of CNN models (VGG16, EfficientNetB0, MNASNet) for detecting brain tumors in MRI images.
+Author: Anastasiia Ponkratova
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: opencv-python (>=4.10.0.84,<5.0.0.0)
+Requires-Dist: pytorch-lightning (>=2.3.1,<3.0.0)
+Requires-Dist: scikit-learn (>=1.5.1,<2.0.0)
+Requires-Dist: torch (>=2.3.1,<3.0.0)
+Requires-Dist: torchaudio (>=2.3.1,<3.0.0)
+Requires-Dist: torchvision (>=0.18.1,<0.19.0)
+Description-Content-Type: text/markdown
+
+# COV Brain Tumor Detection
+
+This project aims to detect brain tumors using machine learning techniques. The code specifically trains and evaluates CNN models (VGG16, EfficientNetB0, MNASNet) on MRI images and compares their effectiveness.
+
+## Installation
+
+To install the package from PyPI, use:
+
+```sh
+pip install cov_brain_tumor_detection
+
