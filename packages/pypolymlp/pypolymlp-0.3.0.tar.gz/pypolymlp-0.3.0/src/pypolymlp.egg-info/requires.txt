@@ -1,0 +1,12 @@
+setuptools>=61.0
+scikit-build
+ninja
+wheel
+cmake
+make
+pybind11
+pybind11-global
+eigen
+numpy
+scipy
+pyyaml
