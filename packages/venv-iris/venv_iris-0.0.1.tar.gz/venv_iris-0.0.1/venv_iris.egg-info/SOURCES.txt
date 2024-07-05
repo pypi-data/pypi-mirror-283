@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+venv-iris/__init__.py
+venv-iris/__main__.py
+venv-iris/scripts/common/Activate.ps1
+venv-iris/scripts/common/activate
+venv-iris/scripts/common/bind
+venv-iris/scripts/common/unbind
+venv-iris/scripts/posix/activate.csh
+venv-iris/scripts/posix/activate.fish
+venv_iris.egg-info/PKG-INFO
+venv_iris.egg-info/SOURCES.txt
+venv_iris.egg-info/dependency_links.txt
+venv_iris.egg-info/top_level.txt
