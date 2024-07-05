@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+sosin/__init__.py
+sosin.egg-info/PKG-INFO
+sosin.egg-info/SOURCES.txt
+sosin.egg-info/dependency_links.txt
+sosin.egg-info/requires.txt
+sosin.egg-info/top_level.txt
