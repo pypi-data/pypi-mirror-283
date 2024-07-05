@@ -1,0 +1,9 @@
+cachebox-3.3.0.dist-info/METADATA,sha256=wcBSfvTwUnhFLuImKeK8fJC-FY3CEWOc7T6qg062Wws,9590
+cachebox-3.3.0.dist-info/WHEEL,sha256=DzHgklH-N2Rm5CKeMVkz9xJT6rK_2P-i_Xf1Csdhcdo,95
+cachebox-3.3.0.dist-info/license_files/LICENSE,sha256=PtaZzbHvAYrs6g0EqSW8ZSR3xjsVTZ251eU1lxOzeU8,1084
+cachebox/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cachebox/utils.py,sha256=z9-OJ5BYsVn0GGP-CTvlowZS79QZKPeALWANiqZVTI8,9435
+cachebox/_cachebox.pyi,sha256=Hawvoaq9TZvSzjoWG34yCqTzbpDysVYf8lbl4Ku3ypU,69745
+cachebox/__init__.py,sha256=CeyTLqik3S7rbgwJ6m77PO_lPTKIEsQ-2CAIEC_3kCE,741
+cachebox/_cachebox.cp311-win_amd64.pyd,sha256=k4QldHtax1clJfQe-SKVqTEmvgdVpSKGCeBk2_oMw2o,652800
+cachebox-3.3.0.dist-info/RECORD,,
