@@ -1,0 +1,11 @@
+gpxprofpy/__init__.py,sha256=iF1qTBmUJbudjBizDorwMD3gArvH1XkEbv9IDXXZC94,1860
+gpxprofpy/main.py,sha256=j5KYzUU5xJXNQSBNjgzPNPY82kbydtT2GHiaJbyWjjQ,1985
+gpxprofpy/params.py,sha256=KQGTCCR9vzqgW97jxxT0aUrxaWT-yo8qg1eCPAM7ndg,278
+gpxprofpy/points.py,sha256=cLwEwMbhFG-Q7JiF9IAoXTc5d1AJyDQkXEJFOJ1nQ2g,2867
+gpxprofpy/profile.py,sha256=JLi3NlBsLV6gmvYW4_SE3oTtLKCFVcg2fYYHrskvRm8,1967
+gpxprofpy/segments.py,sha256=Eg5z_3AaIOG6drVOLNzfEHBqBg5mvT76Wh4y1n10Ax8,8312
+gpxprofpy/utils.py,sha256=n_uPndo_GomAqpnMS_0jQNLDS3ZWHV1UEtQboDuczoc,2189
+gpxprofpy-0.1.0.dist-info/METADATA,sha256=FSzOlJIGlLGloz2G7qywnxpmHPt6awD9KuVmhMUIYm0,2560
+gpxprofpy-0.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+gpxprofpy-0.1.0.dist-info/licenses/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+gpxprofpy-0.1.0.dist-info/RECORD,,
