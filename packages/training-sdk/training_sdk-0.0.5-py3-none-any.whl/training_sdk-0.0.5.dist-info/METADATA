@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: training-sdk
+Version: 0.0.5
+Summary: A Python SDK for training service.
+Author: Luka
+Author-email: luka@bitdeer.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: grpcio ==1.64.1
+Requires-Dist: protobuf ==5.27.2
+Requires-Dist: protoc-gen-openapiv2 ==0.0.1
+Requires-Dist: pydantic ==2.8.1
+
