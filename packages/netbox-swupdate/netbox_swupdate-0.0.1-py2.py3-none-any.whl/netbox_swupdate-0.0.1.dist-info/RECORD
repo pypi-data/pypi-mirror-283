@@ -1,0 +1,14 @@
+netbox_swupdate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+netbox_swupdate/urls.py,sha256=uraznLOy0pNix_Q2S2uuLUjEUb7mqX3hn3m-6Wxkp5g,10
+netbox_swupdate/api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+netbox_swupdate/api/urls.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+netbox_swupdate/api/serializers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+netbox_swupdate/api/views/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+netbox_swupdate/forms/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+netbox_swupdate/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+netbox_swupdate/tables/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+netbox_swupdate/views/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+netbox_swupdate-0.0.1.dist-info/METADATA,sha256=exjVAfbXM-hGZM2cXoZfXxv-lMr8zO6r4zQIAAkSi1A,2907
+netbox_swupdate-0.0.1.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+netbox_swupdate-0.0.1.dist-info/top_level.txt,sha256=ILI7hVSLiGgUALEO5DjpQrTdZuBXxQBAPpTmltP7Ukc,16
+netbox_swupdate-0.0.1.dist-info/RECORD,,
