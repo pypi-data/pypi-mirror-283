@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: jzinstaller
+Version: 59.84.6
+Home-page: https://github.com/JZ-Enterprises/jzinstaller/
+Author: Zack Allen
+Author-email: zjacka01@sfx.act.edu.au
+License: MIT
+Requires-Dist: requests
+Requires-Dist: tqdm
+Requires-Dist: wheel
+
