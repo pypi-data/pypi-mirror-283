@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: kjsonForPython
+Version: 1.0.0
+Summary: A json library for python, which can be used in network communication
+Home-page: https://github.com/kuankuan2007/kjson-for-python/
+Author: kuankuan
+Author-email: 2163826131@qq.com
+License: Mulan PSL v2
+Keywords: kjson,json,javascript,network
+Platform: windows
+Platform: linux
+Platform: macos
+Classifier: Natural Language :: English
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: License :: OSI Approved :: Mulan Permissive Software License v2 (MulanPSL-2.0)
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# kjson-for-python
+
+This module is a Python encoder and decoder for the KJson format.
+
+## About KJson
+
+KJson is an extended format based on [json](https://www.json.org/) developed by [kuankuan](https://npmjs.org/package/@kuankuan/assist-2024).
+
+KJson originally focused on the transmission of data between programs in different programming languages and technologies, ensuring that data types other than those defined in the basic data types of json format can be transmitted normally.
+
+With the evolution of the technology stack and programming languages used by the team, KJson has gradually spread to other programming languages.
+
+## Installation
+
+```bash
+pip install kjsonForPython
+```
+
+## Usage
+
+```python
+from kjsonForPython import KJson
+
+KJson.stringify(...)
+KJson.parse('...')
+```
+
+## License
+
+This project is open-source under the [MulanPSL-2.0](LICENSE) license

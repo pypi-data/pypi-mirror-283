@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+kjsonForPython/__init__.py
+kjsonForPython/main.py
+kjsonForPython/typeMap.py
+kjsonForPython.egg-info/PKG-INFO
+kjsonForPython.egg-info/SOURCES.txt
+kjsonForPython.egg-info/dependency_links.txt
+kjsonForPython.egg-info/top_level.txt
