@@ -1,0 +1,54 @@
+# How often the main program will check if any of the monitored resources are
+# above their respective thresholds (in seconds).
+poll_period: 20
+
+# Only collect monitoring stats for this many seconds, do not actually guard
+# against sleeping.
+burn_in: 60
+
+# The numeric python logging level.
+log_level: 20
+
+# The logging format
+log_format: "%(asctime)-15s [%(name)s]:%(lineno)d %(levelname)s %(message)s"
+
+# Log to the system logger at this Unix Domain Socket. This entry can be
+# removed if you do not want to log to the system logger. Only log messages
+# with 'INFO' or greater will appear in the system log regardless of the
+# 'log_level' option.
+syslog_address: "/dev/log"
+
+# The list of system utilization monitors to use.
+monitor_criteria:
+    # The name of the resource to monitor. It should be one of:
+    # cpu_load, cpu_util, gpu_util, net_util.
+  - system_resource: "cpu_load"
+
+    # How many seconds to wait between querying the system resource and
+    # recording the value in its log. Note, for 'cpu_load' only, the
+    # poll_period is ignored, but should be a value greater than 0
+    # to avoid validation errors.
+    poll_period: 1
+
+    # If the average value over the logged values is greater than this
+    # value the system will be kept awake.
+    threshold: 2.0
+
+    # For 'cpu_load' the log_history_size must be in {1, 5, 15} corresponding
+    # to the 1, 5, and 15-minute load average. For all other monitors the
+    # poll_period determines how often the monitor will query the resource
+    # and store an entry in the log.
+    log_history_size: 1
+  - system_resource: "cpu_util"
+    poll_period: 2
+    threshold: 20
+    log_history_size: 90
+  - system_resource: "gpu_util"
+    poll_period: 2
+    threshold: 40
+    log_history_size: 90
+  - system_resource: "net_util"
+    poll_period: 2
+    threshold: 16384
+    log_history_size: 90
+
