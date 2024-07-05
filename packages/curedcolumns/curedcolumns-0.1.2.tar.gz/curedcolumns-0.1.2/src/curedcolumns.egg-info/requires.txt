@@ -1,0 +1,7 @@
+boto3==1.*
+pyarrow==16.*
+boto3-type-annotations==0.*
+
+[test]
+pytest==8.*
+moto[s3]==5.*

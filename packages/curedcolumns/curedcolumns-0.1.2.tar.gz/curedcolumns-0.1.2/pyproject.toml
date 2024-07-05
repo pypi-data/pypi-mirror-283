@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "curedcolumns"
+description = "CUREd+ metadata tool: generates a list of all the columns in every table in the database."
+version = "0.1.2"
+dependencies = [
+    "boto3==1.*",
+    "pyarrow==16.*",
+    "boto3-type-annotations==0.*"
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+
+[project.optional-dependencies]
+test = [
+    "pytest==8.*",
+    "moto[s3]==5.*"
+]
+
+# Executable scripts
+# https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#creating-executable-scripts
+[project.scripts]
+curedcolumns = "curedcolumns.__main__:main"
+
+[project.urls]
+Homepage = "https://www.sheffield.ac.uk/data-connect"
+Bug_Tracker = "https://github.com/CUREd-Plus/curedcolumns/issues"
+Documentation = "https://github.com/CUREd-Plus/curedcolumns/blob/main/README.md"
+Repository = "https://github.com/CUREd-Plus/curedcolumns"
+Changelog = "https://github.com/CUREd-Plus/curedcolumns/releases"

@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/curedcolumns/__init__.py
+src/curedcolumns/__main__.py
+src/curedcolumns/exceptions.py
+src/curedcolumns/get_s3_parquet_schema.py
+src/curedcolumns/iter_files.py
+src/curedcolumns.egg-info/PKG-INFO
+src/curedcolumns.egg-info/SOURCES.txt
+src/curedcolumns.egg-info/dependency_links.txt
+src/curedcolumns.egg-info/entry_points.txt
+src/curedcolumns.egg-info/requires.txt
+src/curedcolumns.egg-info/top_level.txt
+tests/test_get_s3_parquet_schema.py
+tests/test_iter_files.py
