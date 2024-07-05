@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: text2resume
+Version: 0.1
+Summary: A module to generate PDFs from YAML data and TeX templates
+Home-page: 
+Author: Rishi Mulchandani
+Author-email: rishimulchandani100@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PyYAML
+Requires-Dist: Jinja2
+
+# My TeX PDF Module
+
+A Python module to generate PDFs from YAML data and TeX templates.
+
+## Installation
+
+First, ensure you have `pdflatex` installed on your system. You can install it via a LaTeX distribution such as TeX Live or MiKTeX.
+
+Then, install the module using pip:
+
+```bash
+pip install technical-resume
+```
+
+```bash
+generate-resume path/to/yaml/file output_file_name.tex
+```
