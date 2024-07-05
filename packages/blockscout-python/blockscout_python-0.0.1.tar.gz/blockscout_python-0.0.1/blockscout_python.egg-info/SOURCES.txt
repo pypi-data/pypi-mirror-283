@@ -1,0 +1,12 @@
+LICENSE
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+blockscout_python.egg-info/PKG-INFO
+blockscout_python.egg-info/SOURCES.txt
+blockscout_python.egg-info/dependency_links.txt
+blockscout_python.egg-info/not-zip-safe
+blockscout_python.egg-info/top_level.txt
+python/prod/__init__.py
+python/prod/erc/__init__.py
