@@ -1,0 +1,3 @@
+[console_scripts]
+ch = chat_openai:main
+
