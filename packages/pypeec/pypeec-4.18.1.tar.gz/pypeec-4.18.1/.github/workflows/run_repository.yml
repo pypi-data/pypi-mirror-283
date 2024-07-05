@@ -1,0 +1,91 @@
+# Run the "Repository tests" with the following conditions.
+#   - dispatch
+#   - weekly
+#
+# The tests are run on the following repositories:
+#   - installing the package from the PyPi repository
+#   - installing the package from the Conda repository
+#
+# Thomas Guillod - Dartmouth College
+# Mozilla Public License Version 2.0
+
+name: Run Repository Tests
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 2 * * 1"
+
+env:
+  extract: |
+    pypeec --version
+    pypeec examples .
+  mesher: |
+    pypeec mesher \
+        --geometry tutorial/geometry.yaml \
+        --voxel tutorial/voxel.json.gz
+  solver: |
+    pypeec solver \
+        --voxel tutorial/voxel.json.gz \
+        --problem tutorial/problem.yaml \
+        --tolerance config/tolerance.yaml \
+        --solution tutorial/solution.json.gz
+  viewer: |
+    pypeec viewer \
+        --voxel tutorial/voxel.json.gz \
+        --viewer config/viewer.yaml \
+        --plot_mode none
+  plotter: |
+    pypeec plotter \
+        --solution tutorial/solution.json.gz \
+        --plotter config/plotter.yaml \
+        --plot_mode none
+
+jobs:
+  # ===================== run the tests with conda
+  conda:
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 20
+    steps:
+      - name: Set up Conda
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          miniforge-version: latest
+          python-version: "3.10"
+          auto-activate-base: false
+          activate-environment: pypeec
+          use-mamba: true
+      - name: Install dependencies
+        shell: bash -el {0}
+        run: |
+          conda install --yes conda-forge::pypeec
+      - name: Run the tests
+        shell: bash -el {0}
+        run: |
+          ${{ env.extract }}
+          ${{ env.mesher }}
+          ${{ env.solver }}
+          ${{ env.viewer }}
+          ${{ env.plotter }}
+  # ===================== run the tests with pip
+  pip:
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 20
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        shell: bash -el {0}
+        run: |
+          pip install --upgrade pip
+          pip install pypeec
+      - name: Run the tests
+        shell: bash -el {0}
+        run: |
+          ${{ env.extract }}
+          ${{ env.mesher }}
+          ${{ env.solver }}
+          ${{ env.viewer }}
+          ${{ env.plotter }}
