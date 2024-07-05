@@ -1,0 +1,15 @@
+[package]
+name = "loot"
+version = "0.2.6"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "4.5.8", features = ["derive"] }
+directories = "5.0.1"
+inline_colorization = "0.1.6"
+reqwest = { version = "0.12.5", features = ["blocking"] }
+serde = { version = "1.0.203", features = ["derive"] }
+serde_json = "1.0.120"
+toml = "0.8.14"
