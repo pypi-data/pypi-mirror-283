@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: cpstools
+Version: 1.0.1
+Summary: CPStools is a package for analyzing chloroplast genome sequences.
+Home-page: https://github.com/Xwb7533/CPStools
+Author: Xu Wenbo
+Author-email: xwb7533@163.com
+License-File: LICENSE
+Requires-Dist: biopython==1.78
+Requires-Dist: numpy==1.26.4
