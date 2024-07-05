@@ -1,0 +1,2 @@
+[console_scripts]
+anc-maper = anc_maper:main
