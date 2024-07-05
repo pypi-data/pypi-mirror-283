@@ -1,0 +1,6 @@
+include README.md
+include setup.py
+include setup.cfg
+include api.py
+include async_api.py
+include __init__.py
