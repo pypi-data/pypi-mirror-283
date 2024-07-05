@@ -1,0 +1,9 @@
+README.md
+setup.py
+NewBingImageCreator/__init__.py
+NewBingImageCreator.egg-info/PKG-INFO
+NewBingImageCreator.egg-info/SOURCES.txt
+NewBingImageCreator.egg-info/dependency_links.txt
+NewBingImageCreator.egg-info/requires.txt
+NewBingImageCreator.egg-info/top_level.txt
+NewBingImageCreator/aio/__init__.py
