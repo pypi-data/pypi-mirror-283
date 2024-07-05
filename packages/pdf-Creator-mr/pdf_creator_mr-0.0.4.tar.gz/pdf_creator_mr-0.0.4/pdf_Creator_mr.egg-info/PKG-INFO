@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: pdf-Creator-mr
+Version: 0.0.4
+Summary: A simple library for creating PDFs in Python. USE: Django,tkinter....
+Home-page: https://github.com/mateusdosreisf/pdf_generator
+Author: Mateus Reis
+Author-email: mateussgp12@gmail.com
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: reportlab
+
+
+# PDF pdf-Creator-mr
+
+Uma biblioteca simples para criacao de PDFs em Python. |
+A simple library for creating PDFs in Python. |
+Una biblioteca simple para crear PDFs en Python. |
+
+Install
+
+```sh
+pip install reportlab
+
+
+
+################################English################################
+The PDFCreator class facilitates the creation of PDF documents using the ReportLab library in Python.
+
+#Constructor
+def __init__(self, filename, width=A4[0], height=A4[1]):
+    """
+    Initializes a PDFCreator object.
+
+    :param filename: Name of the PDF file to create.
+    :param width: Width of the PDF page (default is A4 width).
+    :param height: Height of the PDF page (default is A4 height).
+    """
+Methods
+    *add_title(title, fontsize=24, x=None, y=None)
+        -Adds a title to the PDF.
+    *add_paragraph(text, fontsize=12, spacing=0.5*inch, x=0, y=0)
+        -Adds a paragraph of text to the PDF.
+    *add_image(image_path, x=inch, y=None, width=2inch, height=2inch)
+        -Adds an image to the PDF.
+    *add_separator(thickness=1, start_x=inch, y_position=None, width=None)
+        -Adds a horizontal separator line to the PDF.
+    *add_vertical_line(start_y, end_y, x, thickness=1)
+        -Adds a vertical line to the PDF.
+    *add_square(width, height, x=inch, y=None)
+        -Adds a square or rectangle shape to the PDF.
+    *add_multiples_squares(squares, width=None, height=None, x=inch, y=inch)
+        -Adds multiple squares or rectangles to the PDF.
+    *save()
+        -Saves the PDF document.
