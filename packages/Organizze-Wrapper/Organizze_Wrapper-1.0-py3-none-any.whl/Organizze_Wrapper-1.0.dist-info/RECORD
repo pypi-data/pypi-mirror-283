@@ -1,0 +1,15 @@
+OrganizzeWrapper/API.py,sha256=V3cfDgztKLtR2lF5feJEUhw8LDJzI6tcjP_ADuFftjo,1096
+OrganizzeWrapper/CartoesCredito.py,sha256=NN6sQR4I-wpXpUM_ycNADrk84Mj8Obfw9KkNvVe8K-I,4199
+OrganizzeWrapper/Categorias.py,sha256=Q5o_GtLN0R5VHgw5M-CHlR9kppbNSoT78-3GSznQ574,1658
+OrganizzeWrapper/Contas.py,sha256=LoXEkjNp07ASRG_o8O6V-brOSTsRSJwZ-yffoSBD5NI,2275
+OrganizzeWrapper/FaturasCartao.py,sha256=O7Uff4ZPajuVtudvXsvnOJVeHGAxxfPVpQC6UMTcRSs,2883
+OrganizzeWrapper/Lancamentos.py,sha256=QYZCkLqw8xzJ5W5yMpnaQkK7kLDLeF6602utYXHdVHg,8551
+OrganizzeWrapper/Metas.py,sha256=yIvcpBPzP-Danvc9s8CiYtcPOXQ0L3pM7CTw0JFiicY,1615
+OrganizzeWrapper/Usuarios.py,sha256=xiZOqlgsFqhjrKy9KFsLApG5wPTHyL4AXfIW_zF_WoI,879
+OrganizzeWrapper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+OrganizzeWrapper/_settings.py,sha256=rPyS0XZ1GWy4NeGdjf3BzzVaRAfDkKiyL0CXmEfqVEA,60
+OrganizzeWrapper/auxiliar.py,sha256=GZXCAoOfBtxuyyANxjMdRLgB2k80_xCKXqUZBYRbJPQ,2128
+Organizze_Wrapper-1.0.dist-info/METADATA,sha256=N6l60TbaecgBRjQB25vvF4zD19uKtuP1_Vry_71lKAM,188
+Organizze_Wrapper-1.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+Organizze_Wrapper-1.0.dist-info/top_level.txt,sha256=sWBkTT3_YMMHtIeVnND_wKknSDWI4LMPTZVh5vTLWso,17
+Organizze_Wrapper-1.0.dist-info/RECORD,,
