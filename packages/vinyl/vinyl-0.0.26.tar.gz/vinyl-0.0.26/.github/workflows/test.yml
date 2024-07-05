@@ -1,0 +1,49 @@
+name: Run Tests
+
+on: [pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Setup rye
+        uses: eifinger/setup-rye@v3
+
+      - name: Load secrets from One Password
+        uses: 1password/load-secrets-action@v2
+        with:
+          # Export loaded secrets as environment variables
+          export-env: true
+        env:
+          OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
+          GITHUB_WEBHOOK_SECRET: op://Env/Github/webhook_secret
+          GITHUB_APP_ID: op://Env/Github/app_id
+          GITHUB_PRIVATE_KEY_BASE64: op://Env/Github/key
+          HATCHET_CLIENT_TOKEN: op://Env/Hatchet/token
+          ENCRYPTION_KEY: op://Env/internal/key
+          SUPABASE_KEY: op://Env/Supabase/key
+          SUPABASE_URL: op://Env/Supabase/url
+          GOOGLE_APPLICATION_CREDENTIALS: op://Env/Google Cloud/service_account_json
+          SNOWFLAKE_ACCOUNT: op://Env/Snowflake/account
+          SNOWFLAKE_PASSWORD: op://Env/Snowflake/password
+          SNOWFLAKE_USER: op://Env/Snowflake/username
+          REDIS_HOST: op://Env/Redis/host
+          REDIS_PASSWORD: op://Env/Redis/password
+          REDIS_PORT: op://Env/Redis/port
+          REDIS_USERNAME: op://Env/Redis/user
+
+
+      - name: Install dependencies
+        run: |
+          rye config --set-bool behavior.use-uv=true
+          rye sync --no-lock
+
+      - name: Run Tests
+        run: |
+          rye run pytest
+        env:
+          NO_POSTHOG_LOGGING: "true"
