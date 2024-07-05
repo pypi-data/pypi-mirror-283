@@ -1,0 +1,2 @@
+[console_scripts]
+hypered = hypered.cli:main
