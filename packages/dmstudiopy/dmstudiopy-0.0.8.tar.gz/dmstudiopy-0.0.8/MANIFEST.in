@@ -1,0 +1,12 @@
+include version.py
+include README.md
+
+# Exclude Python compiled files
+global-exclude __pycache__/*
+global-exclude *.py[cod]
+
+# Exclude virtual environment
+global-exclude venv/*
+
+# Exclude PyCharm project settings
+global-exclude .idea/*
