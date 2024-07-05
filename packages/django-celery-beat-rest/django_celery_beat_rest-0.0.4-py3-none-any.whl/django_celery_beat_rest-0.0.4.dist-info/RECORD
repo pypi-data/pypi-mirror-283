@@ -1,0 +1,11 @@
+celery_beat_rest/__init__.py,sha256=iLykldn4mWzLUMGWpTqKSVon0U3gd_W5ewdzPNkNb8Y,185
+celery_beat_rest/fields.py,sha256=qvUyfhypkDlhcL1xttStbG5iNRR9OanKgtA7OzE6HXw,487
+celery_beat_rest/filters.py,sha256=4fsdGG_50tpp1_szP2GWAy2tC0PtwsbFRIzL3tiL8ao,1349
+celery_beat_rest/serializers.py,sha256=sdMM6PLwyRO9_G3W14P-d0HJmP3GbwN0CnsKcVAtNFc,1510
+celery_beat_rest/urls.py,sha256=waqQRZ-56di5OVBpuHei6su1K509fua0evBbRTj9S-g,532
+celery_beat_rest/views.py,sha256=e1Wqz8dpArd9V3hMaKRpSNz1sezRmK2EkWbrXCcgUsw,2779
+django_celery_beat_rest-0.0.4.dist-info/LICENSE,sha256=iI9fPUw567gyiSD45gcbSwCNwWq8OjCKE2ZxdhmQEUA,1064
+django_celery_beat_rest-0.0.4.dist-info/METADATA,sha256=7JV6LFZEkHQ5vGTZyPAhGFM_QApfWW158q12haxaAbY,1530
+django_celery_beat_rest-0.0.4.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+django_celery_beat_rest-0.0.4.dist-info/top_level.txt,sha256=FQN4VRxPAXBbScVOo6uhmLNrlaMbza-mEOgjPjREEUI,17
+django_celery_beat_rest-0.0.4.dist-info/RECORD,,
