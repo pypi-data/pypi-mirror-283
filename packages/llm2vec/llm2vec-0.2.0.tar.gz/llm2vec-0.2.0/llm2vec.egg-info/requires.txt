@@ -1,0 +1,11 @@
+numpy
+tqdm
+torch
+peft
+transformers>=4.39.1
+datasets
+evaluate
+scikit-learn
+
+[evaluation]
+mteb>=1.12.60
