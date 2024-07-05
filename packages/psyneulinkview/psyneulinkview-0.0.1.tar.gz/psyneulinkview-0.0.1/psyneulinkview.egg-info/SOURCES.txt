@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+psyneulinkview.egg-info/PKG-INFO
+psyneulinkview.egg-info/SOURCES.txt
+psyneulinkview.egg-info/dependency_links.txt
+psyneulinkview.egg-info/entry_points.txt
+psyneulinkview.egg-info/top_level.txt
+psyneulinkviewer/__init__.py
+psyneulinkviewer/start.py
