@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "authens"
+dynamic = ["version"]
+authors = [
+  {name = "Klub Dev ENS", email = "klub-dev@ens.fr"},
+  {name = "Tom Hubrecht", email = "pypi@mail.hubrecht.ovh"},
+]
+description = "CAS Authentication Client at the ENS."
+license = {file = "LICENSE"}
+readme = "README.md"
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Web Environment",
+  "Framework :: Django",
+  "Framework :: Django :: 2.2",
+  "Framework :: Django :: 3.1",
+  "Framework :: Django :: 3.2",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+]
+dependencies = [
+  "django >= 2.2",
+  "python-ldap >= 3, < 4",
+  "python-cas >= 1.5, < 2",
+]
+
+[project.urls]
+Homepage = "https://git.dgnum.eu/DGNum/authens"
+Repository = "https://git.dgnum.eu/DGNum/authens"
+Issues = "https://git.dgnum.eu/DGNum/authens/issues"
+
+[tool.setuptools.dynamic]
+version = {attr = "authens.__VERSION__"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

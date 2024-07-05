@@ -1,0 +1,177 @@
+# AuthENS translations.
+# Copyright (C) 2021 Klub Dev ENS
+# This file is distributed under the same license as the authens package.
+# Klub Dev ENS <klub-dev@ens.fr>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-02 10:22+0100\n"
+"PO-Revision-Date: 2021-01-30 20:48+0100\n"
+"Last-Translator: Tom Hubrecht <tom.hubrecht@ens.fr>\n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: forms.py:15
+msgid "Ancien login clipper"
+msgstr "Old clipper username"
+
+#: forms.py:18 templates/authens/login_switch.html:15
+msgid "Mot de passe"
+msgstr "Password"
+
+#: forms.py:23
+msgid "Promotion"
+msgstr "Entrance year"
+
+#: forms.py:55
+msgid ""
+"Aucun utilisateur n'existe avec ce clipper, cette promo et/ou ce mot de "
+"passe. Veuillez vérifier votre saisie. Attention, tous les champs sont "
+"sensibles à la casse !"
+msgstr ""
+"No user exists with this username, this entrance year and/or this password. "
+"Please check your entry. Attention, all fields are case sensitive!"
+
+#: models.py:19 models.py:60
+msgid "utilisateurice"
+msgstr "user"
+
+#: models.py:24
+msgid "login CAS"
+msgstr "CAS username"
+
+#: models.py:30 models.py:70
+msgid "année de création du compte CAS"
+msgstr "year of CAS account creation"
+
+#: models.py:37
+msgid "Compte CAS"
+msgstr "CAS account"
+
+#: models.py:38
+msgid "Comptes CAS"
+msgstr "CAS accounts"
+
+#: models.py:42
+#, python-format
+msgid "compte CAS %(cas_login)s (promo %(entrance_year)s) lié à %(user)s"
+msgstr "CAS account %(cas_login)s (year %(entrance_year)s) linked to %(user)s"
+
+#: models.py:66
+msgid "ancien login CAS"
+msgstr "old CAS username"
+
+#: models.py:81
+msgid "Ancien compte CAS"
+msgstr "Old CAS account"
+
+#: models.py:82
+msgid "Anciens comptes CAS"
+msgstr "Old CAS accounts"
+
+#: models.py:86
+#, python-format
+msgid ""
+"Ancien compte CAS %(cas_login)s (promo %(entrance_year)s) lié à %(user)s"
+msgstr ""
+"Old CAS account %(cas_login)s (year %(entrance_year)s) linked to %(user)s"
+
+#: templates/authens/login_switch.html:5
+msgid "Mode de connexion"
+msgstr "Connection method"
+
+#: templates/authens/login_switch.html:11
+msgid "Clipper"
+msgstr "Clipper"
+
+#: templates/authens/login_switch.html:20
+msgid "Vieilleux"
+msgstr "Alumni"
+
+#: templates/authens/login_switch.html:27
+#, python-format
+msgid ""
+"Si votre fin de scolarité approche, créez un mot de passe pour votre compte "
+"pour bénéficier de la connexion vieilleux : <a href=\"%(url_reset)s\">créer "
+"un mot de passe</a>."
+msgstr ""
+"If your graduation is approaching, create a password for your account to "
+"benefit from the alumni connection method: <a href=\"%(url_reset)s\">create "
+"password</a>."
+
+#: templates/authens/oldcas_login.html:5
+msgid "Connexion vieilleux"
+msgstr "Alumni login"
+
+#: templates/authens/pwd_login.html:5
+msgid "Connexion par mot de passe"
+msgstr "Password login"
+
+#: templates/authens/pwd_login.html:13
+msgid "Mot de passe oublié ?"
+msgstr "Forgot your password?"
+
+#: templates/authens/pwd_reset.html:5
+msgid "Réinitialisation du mot de passe"
+msgstr "Password reset"
+
+#: templates/authens/pwd_reset_confirm.html:5
+msgid "Nouveau mot de passe"
+msgstr "New password"
+
+#: templates/authens/pwd_reset_email.txt:2
+#, python-format
+msgid ""
+"Quelqu'un (probablement vous) a demandé la réinitialisation du mot de passe "
+"associé à cette addresse sur %(site_name)s."
+msgstr ""
+"Someone (probably you) has asked to reset the password associated with this "
+"address on %(site_name)s."
+
+#: templates/authens/pwd_reset_email.txt:4
+msgid ""
+"S'il s'agit bien de vous, vous pouvez vous rendre à l'adresse suivante pour "
+"en choisir un nouveau : "
+msgstr ""
+"If it is indeed you, you can go to the following address to choose a new "
+"one : "
+
+#: templates/authens/pwd_reset_email.txt:8
+#, python-format
+msgid "Pour information, votre nom d'utilisateur est le suivant : %(username)s"
+msgstr "For your information, your username is the following: %(username)s"
+
+#: templates/authens/pwd_reset_email.txt:10
+#, python-format
+msgid "L'équipe %(site_name)s"
+msgstr "The %(site_name)s team"
+
+#: views.py:89
+#, fuzzy
+#| msgid "Connexion échouée !"
+msgid "Connection échouée !"
+msgstr "Connection failed!"
+
+#: views.py:105
+msgid ""
+"Si un compte avec cet email existe, un email de réinitialisation vient de "
+"lui être envoyé !"
+msgstr ""
+"A password reset email has just been send to the inidcated address, "
+"provided an account with this email exists)"
+
+#: views.py:115
+msgid "Mot de passe modifié avec succès !"
+msgstr "Password changed successfully!"
+
+#~ msgid ""
+#~ "Un email de réinitialisation du mot de passe vient d'être envoyé à "
+#~ "l'adresse indiquée !"
+#~ msgstr "A password reset email has just been sent to the indicated address!"

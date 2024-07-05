@@ -1,0 +1,9 @@
+{% extends "example/base.html" %}
+
+{% block "content" %}
+  <h2>Home page</h2>
+  <p>You are logged in as {{ user }}</p>
+  <p><a href="{% url "protected" %}">A protected page</a></p>
+  <p><a href="{% url "authens:login" %}">Log in</a></p>
+  <p><a href="{% url "authens:logout" %}">Log out</a></p>
+{% endblock %}
