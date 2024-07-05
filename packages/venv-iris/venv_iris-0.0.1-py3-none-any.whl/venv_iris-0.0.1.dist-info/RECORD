@@ -1,0 +1,13 @@
+venv-iris/__init__.py,sha256=yqosWhIcqrpl9A6pA38CQG91zqz5uxqNn0tdTNV9HPM,15624
+venv-iris/__main__.py,sha256=2RSCQ7d4lc6CwD-rlGn9UicPFg-P5du7ZD_yh-kuBEU,57
+venv-iris/scripts/common/Activate.ps1,sha256=B8ceP0zQECBG3Z-aX-9Mq1AybdWuhZsHgJYZYDmXfB4,8834
+venv-iris/scripts/common/activate,sha256=J0auBc9D7BW29kEWq2HSr8P1uV5EY7NlRNTPKDlqD88,2263
+venv-iris/scripts/common/bind,sha256=WzRq1KO4IuaonBA5q-_-ZEoJ3VeSDN1agbUkj0ikU54,9943
+venv-iris/scripts/common/unbind,sha256=IyziP-_GhNdNC0hqM-JEbePMuWNz2K2pLrV23EZToVg,435
+venv-iris/scripts/posix/activate.csh,sha256=pngslSr4w689LIoYmSwQXyL8G63FK4tv-ub54sQSFyA,858
+venv-iris/scripts/posix/activate.fish,sha256=Vc1b2stIAjeU9CJhG_ZRF6heGvxWLdZ1ngO5CrgYm-8,1998
+venv_iris-0.0.1.dist-info/LICENSE,sha256=TCJQMG2ivADQt7lVL32adKu7dzHg4eRGSv73zA8yk1k,1074
+venv_iris-0.0.1.dist-info/METADATA,sha256=MJHzv7d6_t70dwFAA2riZeq4lGWJfAuVxz2nML7ldmw,5655
+venv_iris-0.0.1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+venv_iris-0.0.1.dist-info/top_level.txt,sha256=wCHt_Bq7n9Tz2M8-fzrYkiPu7R8lVAe-yKuUzTfohes,10
+venv_iris-0.0.1.dist-info/RECORD,,
