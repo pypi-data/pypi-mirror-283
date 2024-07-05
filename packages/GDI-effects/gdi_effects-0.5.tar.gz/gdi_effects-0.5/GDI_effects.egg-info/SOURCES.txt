@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+pyproject.toml
+GDI_effects/__init__.py
+GDI_effects.egg-info/PKG-INFO
+GDI_effects.egg-info/SOURCES.txt
+GDI_effects.egg-info/dependency_links.txt
+GDI_effects.egg-info/top_level.txt

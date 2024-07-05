@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "GDI_effects"
+version = "0.5"
+authors = [
+  { name="coder", email="memecoder17@gmail.com" },
+]
+description = "GDI_effects is a Python library that allows you to create GDI screen effects on Windows."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+
