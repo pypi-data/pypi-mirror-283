@@ -1,0 +1,12 @@
+RoxiLib/RoxiCommunication.py,sha256=XjPElMGzApkuq0tZpNYhXk172UYxEeMcmFppTXjeXXU,2569
+RoxiLib/RoxiStateHandler.py,sha256=AYT0ejOwnVjZRCEJVSdJ8h7zT6YDdHEc_pzVaEZlDmM,20522
+RoxiLib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+RoxiLib/bt_data.h,sha256=vpTM7nnduy-tLLGakq39b3ZPnCSIa-OwKv7bBoy9Eqo,151393
+RoxiLib/libRoxi.dll,sha256=7aD4OKdxpk_WITsGxAIIwceVHWNosyw1_MOOoc-md24,2352128
+RoxiLib/library_version.h,sha256=3EWb_qccxBdq6QshiVXo1JP7A_GCAafQUSuevJBMIBI,666
+RoxiLib/roxi_api_common.h,sha256=9oveXdjwEmOVmM1D-7ujUH6lgLQCHMRzv4Cn84Uz0YA,495
+RoxiLib/roxi_api_wdk.h,sha256=0PLTyTXcRRLsbukVpMHpvYnRChaYBc-sEzIouzFxkuI,38954
+RoxiLib-0.6.0.dist-info/METADATA,sha256=L7oF7d6gt7WwrXhuZufXqo8ZuipVTr0ID87_U8LyZMg,877
+RoxiLib-0.6.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+RoxiLib-0.6.0.dist-info/top_level.txt,sha256=RoLrTAEq2QAVf9xZSICHzPiXh8H7Ctd6tEDHINe9dtU,8
+RoxiLib-0.6.0.dist-info/RECORD,,
