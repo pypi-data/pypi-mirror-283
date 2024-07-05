@@ -1,0 +1,16 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+cytonuiautomatordump/LICENSE.txt
+cytonuiautomatordump/__init__.py
+cytonuiautomatordump/cyuiautomatordump.pyx
+cytonuiautomatordump/cyuiautomatordump_compile.py
+cytonuiautomatordump/requirements.txt
+cytonuiautomatordump/thirdparty.json
+cytonuiautomatordump.egg-info/PKG-INFO
+cytonuiautomatordump.egg-info/SOURCES.txt
+cytonuiautomatordump.egg-info/dependency_links.txt
+cytonuiautomatordump.egg-info/requires.txt
+cytonuiautomatordump.egg-info/top_level.txt

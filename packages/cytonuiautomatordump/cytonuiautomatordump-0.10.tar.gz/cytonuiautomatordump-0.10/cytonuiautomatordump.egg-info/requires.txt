@@ -1,0 +1,8 @@
+Cython
+cythondfprint
+cythonscreencap2ppm
+exceptdrucker
+numpy
+pandas
+setuptools
+xmlhtml2pandas

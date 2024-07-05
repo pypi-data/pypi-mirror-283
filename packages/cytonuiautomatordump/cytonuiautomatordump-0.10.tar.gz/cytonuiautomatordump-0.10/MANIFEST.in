@@ -1,0 +1,5 @@
+include cytonuiautomatordump/requirements.txt
+include cytonuiautomatordump/thirdparty.json
+include cytonuiautomatordump/cyuiautomatordump.pyx
+include cytonuiautomatordump/cyuiautomatordump_compile.py
+include cytonuiautomatordump/LICENSE.txt
