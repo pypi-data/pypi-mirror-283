@@ -1,0 +1,7 @@
+description: Refundable tax credits.
+values:
+  0000-01-01:
+    - dependent_spouse_deduction
+    
+metadata:
+  unit: program
