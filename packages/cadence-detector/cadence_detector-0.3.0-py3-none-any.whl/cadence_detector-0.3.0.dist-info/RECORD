@@ -1,0 +1,11 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cadence_detector/CadenceDetectData.py,sha256=i8LjwgeEN9eQvcXTdDzIMzoaIR_3bxZ9723PcBrynvo,1654
+cadence_detector/CadenceDetectStateMachine.py,sha256=6OCV82IqKvJF6U7O1ylZpFhsmmTNvd_339VHnQmJ6-c,62929
+cadence_detector/CadenceDetector.py,sha256=iZ084bSSGwpTPrM8QkAaGS3Fz-rnjIIc_J7_1sRpAYE,69299
+cadence_detector/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+cadence_detector/cadence_detector.py,sha256=0bl6UGP4n4ejzlpQPEBX93Ebhswk0gsPe3XQAaHgMyw,2277
+cadence_detector-0.3.0.dist-info/LICENSE,sha256=P58mRRZgUaLNLBiS3LN4ubVKQ3MepVGr8TNoZzDuJH8,1058
+cadence_detector-0.3.0.dist-info/METADATA,sha256=wV9-YZb2nMW-o7FJL2o45roH2CwwS4NqwsSTquLF48c,1319
+cadence_detector-0.3.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+cadence_detector-0.3.0.dist-info/top_level.txt,sha256=8rYNyeLnP83rwaQ6mHC8ZH-Q_5z9pPc33DhI_9eam_0,26
+cadence_detector-0.3.0.dist-info/RECORD,,
