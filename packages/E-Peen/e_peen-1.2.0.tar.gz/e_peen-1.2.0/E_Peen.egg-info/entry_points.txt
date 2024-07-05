@@ -1,0 +1,2 @@
+[console_scripts]
+e-peen = e_peen.app:run
