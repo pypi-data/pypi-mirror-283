@@ -1,0 +1,28 @@
+[
+  {
+    "homeName": "bd99114ada8189a6ee54de771691782cd0908587",
+    "serialNumber": "d961455ed5f06a3a3af5bdfde2a4d1fd472289ee",
+    "systemId": "418177c551f50953232e72bae479afaf67ce2018",
+    "productMetadata": {
+      "productType": "VR921",
+      "productionYear": "22",
+      "productionWeek": "36",
+      "articleNumber": "0020260962"
+    },
+    "state": "CLAIMED",
+    "migrationState": "FINISHED",
+    "migrationFinishedAt": "2023-07-18T10:00:17.376916596Z",
+    "onlineState": "ONLINE",
+    "firmware": {
+      "version": "0357.40.35",
+      "connectedToOldIoTPlatform": null,
+      "updateEnabled": true,
+      "updateRequired": false
+    },
+    "nomenclature": "VR 921",
+    "cag": false,
+    "countryCode": "DE",
+    "productInformation": "VR921",
+    "firmwareVersion": "0357.40.35"
+  }
+]
