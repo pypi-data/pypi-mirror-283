@@ -1,0 +1,2 @@
+[console_scripts]
+manage.py = manage_wrapper.django_manage:django_manage
