@@ -1,0 +1,6 @@
+[console_scripts]
+deltemp = rltests.del_jupyter_temp:del_jupyter_temp
+findtool = rltests.findtool:find
+gpuinfo = rltests.systeminfos:gpu_info
+sysinfo = rltests.systeminfos:general_info
+testcuda = rltests.cuda_test:cudatest
