@@ -1,0 +1,9 @@
+README.md
+setup.py
+fmfocus/__init__.py
+fmfocus/main.py
+fmfocus.egg-info/PKG-INFO
+fmfocus.egg-info/SOURCES.txt
+fmfocus.egg-info/dependency_links.txt
+fmfocus.egg-info/requires.txt
+fmfocus.egg-info/top_level.txt
