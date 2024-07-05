@@ -1,0 +1,9 @@
+pytest_bazel/__init__.py,sha256=rbBerQaGd0D2iPapShvgQ6lQlt88AQ872iv4obRBOi8,50
+pytest_bazel/__main__.py,sha256=_hknNB5pLDAVBmSfKy-L72pXSqVkdfan61hkceAuvPU,43
+pytest_bazel/main.py,sha256=sNt07vHP2XWExHIC8PSrXhhk2mW6IOoOv--1mKiR-PY,5036
+pytest_bazel-0.0.7.dist-info/WHEEL,sha256=sobxWSyDDkdg_rinUth-jxhXHqoNqlmNMJY3aTZn2Us,91
+pytest_bazel-0.0.7.dist-info/METADATA,sha256=RclpN8KUgWDzN0PA7qLRBk-f6umx3gtaPtwtzshgQcA,5142
+pytest_bazel-0.0.7.dist-info/entry_points.txt,sha256=COcmy_SI1FI9sdzFmdTLnResJXmbyxS2lJ4bIE5acxQ,50
+pytest_bazel-0.0.7.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pytest_bazel-0.0.7.dist-info/README,sha256=ltsn8aabfp3IEoc27HYLDh76UPxlypAgevliC-aNU34,4407
+pytest_bazel-0.0.7.dist-info/RECORD,,
