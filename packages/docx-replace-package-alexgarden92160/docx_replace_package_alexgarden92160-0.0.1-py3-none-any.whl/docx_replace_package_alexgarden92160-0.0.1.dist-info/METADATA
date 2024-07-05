@@ -1,0 +1,20 @@
+Metadata-Version: 2.3
+Name: docx_replace_package_alexgarden92160
+Version: 0.0.1
+Summary: A small package for replace text in docx
+Project-URL: Homepage, https://github.com/alexgarden92160/docx-replace
+Author-email: alexgarden92160 <aalexandregarden@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: flask
+Requires-Dist: python-docx
+Description-Content-Type: text/markdown
+
+# docx-replace 
+
+![tests](https://github.com/alexgarden92160/docx-replace/actions/workflows/tests.yml/badge.svg?event=push)
+
+Docx Python replace text variable.
