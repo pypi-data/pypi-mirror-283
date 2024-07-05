@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pythonipc
+Version: 1.2.1
+Summary: Inter-process communication library for Python3 to interact with JS renderer
+Home-page: https://github.com/its-mr-monday/pyipc
+Author: itsmrmonday
+Author-email: zackary.live8@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: flask
+Requires-Dist: flask-cors
+Requires-Dist: flask-socketio
+
