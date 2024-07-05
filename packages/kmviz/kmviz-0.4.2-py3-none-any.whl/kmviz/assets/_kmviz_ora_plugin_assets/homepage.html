@@ -1,0 +1,102 @@
+<div class="bootstrap push_to_top">
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img class="navbar-brand" src="/assets/_kmviz_ora_plugin_assets/ora.png">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#InterfaceSection">Interface</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#DataSection">Data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#ReferenceSection">References</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://ocean-read-atlas.mio.osupytheas.fr/">ORA</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/dashboard"><i class="fa-solid fa-chart-simple"></i> <b>DASHBOARD</b> </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<br>
+
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+
+
+<div class="zero">
+
+<p align="justify">Welcome to the <b>kmviz</b> instance of <a href="https://ora.mio.osupytheas.fr">Ocean Read Atlas</a> (ORA). ORA is a web service to explore the biogeography of one or several sequences in a marine environmental context. <b>ORA</b> enables to query DNA sequences against an index of read sequences and determine the similarity to each indexed sample</p>
+<p align="justify">ORA contains 1,393 read samples from the Tara Ocean project associated with a collection of metadata collected during the sampling campaigns. See <a href="#DataSection">Data</a> section for a description of the dataset.</p>
+
+<section id="InterfaceSection">
+
+<h2>Interface</h2>
+<p align="justify">This new query interface is based on <a href="https://github.com/tlemane/kmviz.git"><b><code>kmviz</code></b></a>, a generic interface to query sequence indexes and explore associated metadata.</p>
+
+Before submitting a query, you have to select a database, here <code>TaraOcean</code>. Two parameters are available:
+<ul>
+    <li><code>z</code>: We recommend <b>3</b>. See <a href="https://tlemane.github.io/kmindex">kmindex documentation</a> for details.</li>
+    <li><code>coverage</code>: The min ratio of shared <i>k</i>-mer between a query sequence and an indexed sample to consider a positive hit.</li>
+</ul>
+<p align="justify">The documentation is available here: <a href="https://tlemane.github.io/kmviz"><b>kmviz documentation</b></a>.</p>
+
+</section>
+
+
+<section id="DataSection">
+<h2>Data</h2>
+<h4 class="anchored" data-anchor-id="environmental-context-files">Environmental context files</h4>
+<p align="justify">Registry of all the samples from the <em>Tara</em> Oceans Expedition (2009-2013) have been deposited at <a href="https://doi.org/10.1594/PANGAEA.875582">PANGAEA</a>. The environmental variables were retrieved from the following databases:</p>
+<ul>
+<li><code>BIODIV</code>: <a href="https://doi.org/10.1594/PANGAEA.853809">https://doi.org/10.1594/PANGAEA.853809</a></li>
+<li><code>CARB</code>: <a href="https://doi.org/10.1594/PANGAEA.875567">https://doi.org/10.1594/PANGAEA.875567</a></li>
+<li><code>HPLC</code>: <a href="https://doi.org/10.1594/PANGAEA.875569">https://doi.org/10.1594/PANGAEA.875569</a></li>
+<li><code>MESOSCALE</code>: <a href="https://doi.org/10.1594/PANGAEA.875577">https://doi.org/10.1594/PANGAEA.875577</a></li>
+<li><code>NUT</code>: <a href="https://doi.org/10.1594/PANGAEA.875575">https://doi.org/10.1594/PANGAEA.875575</a></li>
+<li><code>SENSORS</code>: <a href="https://doi.org/10.1594/PANGAEA.875576">https://doi.org/10.1594/PANGAEA.875576</a></li>
+<li><code>WATERCOLUMN</code>: <a href="https://doi.org/10.1594/PANGAEA.875579">https://doi.org/10.1594/PANGAEA.875579</a></li>
+</ul>
+
+<h4 class="anchored" data-anchor-id="sequencing-reads">Sequencing reads</h4>
+<p align="justify">Shotgun metagenomic sequences of all the samples from the <em>Tara</em> Oceans Expedition (2009–2013) are available at the European Nucleotide Archive (<a href="https://www.ebi.ac.uk/ena/">ENA</a>) under global accession number PRJEB402 (PRJEB1787 and PRJEB9740 for bacteria and archaea, PRJEB1788 for giant viruses, PRJEB4352 and PRJEB9691 for protists, and PRJEB4419 and PRJEB9742 for DNA viruses).</p>
+
+</section>
+
+
+<section id="ReferenceSection">
+
+<h2>References</h2>
+
+<ul>
+<li><p>T. Lemane, N. Lezzoche, J. Lecubin, E. Pelletier, M. Lescot, R. Chikhi, P. Peterlongo (2024). <strong>Indexing and real-time user-friendly queries in terabyte-sized complex genomic datasets with kmindex and ORA</strong>. <em>Nature Computational Science</em> <a href="https://www.nature.com/articles/s43588-024-00596-6">10.1038/s43588-024-00596-6</a></p></li>
+<li><p>T. Lemane, N. Lezzoche, J. Lecubin, E. Pelletier, M. Lescot, R. Chikhi, P. Peterlongo (2023). <strong>kmindex and ORA: indexing and real-time user-friendly queries in terabytes-sized complex genomic datasets</strong>. <em>bioRxiv 2023.05.31.543043</em>. doi: <a href="https://doi.org/10.1101/2023.05.31.543043">10.1101/2023.05.31.543043</a></p></li>
+<li><p>C. Vernette, J. Lecubin, P. Sanchez, Tara Oceans Coordinators, S. Sunagawa, T.O. Delmont, S.G. Acinas, E. Pelletier, P. Hingamp, M. Lescot (2022) . <strong>The Ocean Gene Atlas v2.0: online exploration of the biogeography and phylogeny of plankton genes.</strong> <em>Nucleic Acides Research. doi: <a href="10.1093/nar/gkac420">10.1093/nar/gkac420</a>.</em></p></li>
+<li><p>E. Villar, T. Vannier, C. Vernette, M. Lescot, M. Cuenca, A. Alexandre, P. Bachelerie, T. Rosnet, E. Pelletier, S. Sunagawa and P. Hingamp (2018). <strong>The Ocean Gene Atlas: exploring the biogeography of plankton genes online.</strong> <em>Nucleic Acids Research. doi: <a href="10.1093/nar/gky376">10.1093/nar/gky376</a></em></p></li>
+<li><p>Robidou, Lucas, and Pierre Peterlongo. <strong>findere: fast and precise approximate membership query.</strong> String Processing and Information Retrieval: 28th International Symposium, SPIRE 2021.</p></li>
+<li><p>Téo Lemane, Paul Medvedev, Rayan Chikhi, and Pierre Peterlongo. <strong>kmtricks: Efficient and flexible construction of bloom filters for large sequencing data collections.</strong> <em>Bioinformatics Advances, 2022.</em></p></li>
+</ul>
+
+
+</section>
+
+</div>
+
+</div>
+</div>
+</div>
+
+<a class="btn btn-primary ora_dashboard_button" href="/dashboard"> <i class="fa-solid fa-chart-simple"></i> DASHBOARD<a>
+</div>
