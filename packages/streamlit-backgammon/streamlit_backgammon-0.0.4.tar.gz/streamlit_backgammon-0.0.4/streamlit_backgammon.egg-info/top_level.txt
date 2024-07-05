@@ -1,0 +1,5 @@
+backgammon
+build
+dist
+e2e
+venv
