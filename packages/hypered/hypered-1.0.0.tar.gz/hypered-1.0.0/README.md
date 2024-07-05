@@ -1,0 +1,152 @@
+# Hypered: Hyperparameter Optimizer Library
+
+This library provides a flexible interface for optimizing hyperparameters of any blackbox system. It uses `skopt` for Gaussian Process minimization and supports the creation of various types of hyperparameter search spaces, such as real, integer, and categorical variables. The library also facilitates managing experiment directories and executing subprocesses for the experiments.
+
+## Features
+
+- **Flexible Hyperparameter Spaces**: Define real, integer, and categorical variables.
+- **Objective Functions**: Easily create minimization and maximization objectives.
+- **Experiment Management**: Automatically handles experiment directories and parameter/result files.
+- **Parallel Execution**: Supports parallel execution of experiments.
+
+## Usage
+
+### Model
+
+To use hypered you first need to define a model script that takes the hyper-parameters as an input json file and computes the loss/objective value and write it as a json file. Both input and output files should be provided by a command line arguments. The following is an example model script:
+
+```python
+import argparse
+import json
+import numpy as np
+
+def main(args):
+    params = json.loads(open(args.params).read())
+
+    op = params["vars"]["option"]
+    x = params["vars"]["x"]
+
+    if op == "first":
+        loss = np.square(x - 5)
+    elif op == "second":
+        loss = np.abs(x - 3) - 2
+    else:
+        print("Invalid option", op)
+        exit(0)
+
+    print(x, loss)
+    results = {
+        "loss": loss
+    }
+    with open(args.results, "w") as f:
+        f.write(json.dumps(results))
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Simple model.")
+    parser.add_argument("params", type=str, help="Params file.")
+    parser.add_argument("results", type=str, help="Results file.")
+    args = parser.parse_args()
+    main(args)
+```
+
+### Configuration File
+
+Next we need to define a configuration file that specifies the hyper parameters as well as the objective function. Below is an example configuration file:
+
+```python
+optimize(
+    name="learning_params",
+    objective=minimize("loss"),
+    binary="python3 example/basic/basic.py {params_path} {results_path}",
+    random_starts=10,
+    iterations=30,
+    parallelism=8,
+    params={
+        "output_dir": experiment_dir(),
+        "device_id": device_id(4),
+        "vars": {
+            "option": categorical(["first", "second"]),
+            "x": real(-10, 10)
+        }
+    }
+)
+```
+
+## Library Modules
+
+### `optimize`
+
+This function performs hyperparameter optimization using Gaussian Process minimization.
+
+**Arguments:**
+- `name` (str): The name of the parameter group.
+- `objective` (function): The objective function to minimize or maximize.
+- `binary` (str): The command line binary to execute the experiment.
+- `params` (dict): The dictionary of parameters to optimize.
+- `random_starts` (int, optional): The number of random initialization points.
+- `iterations` (int, optional): The number of iterations to run the optimization.
+- `seed` (int, optional): The random seed for reproducibility.
+- `parallelism` (int, optional): The number of parallel jobs to run.
+- `cwd` (str, optional): The current working directory for the subprocess.
+
+### `uniform`
+
+Returns the string identifier for a uniform distribution.
+
+### `log_uniform`
+
+Returns the string identifier for a log-uniform distribution.
+
+### `variable`
+
+Base class for defining different types of variables in hyperparameter optimization.
+
+### `real`
+
+Class for defining a real-valued hyperparameter.
+
+### `integer`
+
+Class for defining an integer-valued hyperparameter.
+
+### `categorical`
+
+Class for defining a categorical hyperparameter.
+
+### `experiment_dir`
+
+Class for retrieving the experiment directory from the context.
+
+### `params_path`
+
+Class for retrieving the parameters path from the context.
+
+### `results_path`
+
+Class for retrieving the results path from the context.
+
+### `device_id`
+
+Class for managing device IDs in a round-robin fashion.
+
+## Running the Hyperparameter Optimizer
+
+To run the hyperparameter optimizer, use the `hypered.py` script with the path to your configuration file:
+
+```bash
+./hypered.py basic.conf
+```
+
+This will start the optimization process as defined in your configuration file.
+
+## License
+
+This library is licensed under the MIT License. See the `LICENSE` file for more details.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request on GitHub.
+
+## Contact
+
+For any questions or issues, please open an issue on the GitHub repository.
