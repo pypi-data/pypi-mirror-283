@@ -1,0 +1,12 @@
+numpy
+jax
+jaxopt
+optax
+equinox
+jax-tqdm
+diffrax
+matplotlib
+
+[notebook]
+jupyter
+matplotlib
