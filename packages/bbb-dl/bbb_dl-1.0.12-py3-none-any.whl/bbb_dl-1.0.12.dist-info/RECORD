@@ -1,0 +1,13 @@
+bbb_dl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bbb_dl/batch.py,sha256=KVFn83T_RXqcCZPZsrJFrVOTRB3y0RFbxVhPSjq1MQI,13081
+bbb_dl/ffmpeg.py,sha256=EPfcS34QbG9sX27MB-GopC04QQA5JhDA7XIicCx1b7I,11138
+bbb_dl/main.py,sha256=TqIambvSbcl0jU5-OcdPUw7fDVTilMFDlbCyz3qkrcE,60781
+bbb_dl/utils.py,sha256=I0oocnKmpqH6HGsWgxuGbIjNH0iKRViXkW-asQ9TiaU,24692
+bbb_dl/version.py,sha256=ZG-qYTZd9tnM6yhKhsqAqdfD7BQJk-XbcBhQJEmdeeM,23
+bbb_dl-1.0.12.dist-info/AUTHORS,sha256=4MaLPvR3Vve1W0HapD8zLF2MyzY0qDoQ-ck9YvosZ6g,421
+bbb_dl-1.0.12.dist-info/LICENSE,sha256=tRwtTRj1yGv5K9lBbymjdH5sgPT7qTA7lbU3Qi00AMY,1093
+bbb_dl-1.0.12.dist-info/METADATA,sha256=QlvKV1eDevFEagax17ieid8ZdSOInmiuXP8ag72NwYA,11865
+bbb_dl-1.0.12.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+bbb_dl-1.0.12.dist-info/entry_points.txt,sha256=SinCIpP82WuE-5-ly6vUjIToukP5z3_gXdr66WT4an8,77
+bbb_dl-1.0.12.dist-info/top_level.txt,sha256=FDJlQVlLgO6oDBtCWr9A2RiEW-JlaN0Aps0xQlzwhbw,7
+bbb_dl-1.0.12.dist-info/RECORD,,
