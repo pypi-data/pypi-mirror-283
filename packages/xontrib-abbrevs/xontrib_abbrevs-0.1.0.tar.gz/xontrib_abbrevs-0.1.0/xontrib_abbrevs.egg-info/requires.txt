@@ -1,0 +1,5 @@
+xonsh>=0.17
+prompt-toolkit
+
+[dev]
+pytest>=7.0

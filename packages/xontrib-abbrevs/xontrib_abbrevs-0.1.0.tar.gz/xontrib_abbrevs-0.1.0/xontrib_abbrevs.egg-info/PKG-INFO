@@ -1,0 +1,95 @@
+Metadata-Version: 2.1
+Name: xontrib-abbrevs
+Version: 0.1.0
+Summary: Expands input words as you type in xonsh shell.
+Author-email: xontrib-abbrevs <no@no.no>
+License: MIT License
+        
+        Copyright (c) 2023, xontrib-abbrevs
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/xonsh/xontrib-abbrevs
+Project-URL: Documentation, https://github.com/xonsh/xontrib-abbrevs/blob/master/README.md
+Project-URL: Code, https://github.com/xonsh/xontrib-abbrevs
+Project-URL: Issue tracker, https://github.com/xonsh/xontrib-abbrevs/issues
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: System :: Shells
+Classifier: Topic :: System :: System Shells
+Classifier: Topic :: Terminals
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: xonsh>=0.17
+Requires-Dist: prompt-toolkit
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+
+<p align="center">
+Expands input words as you type in xonsh shell.
+</p>
+
+<p align="center">
+If you like the idea click ⭐ on the repo and <a href="https://twitter.com/intent/tweet?text=Nice%20xontrib%20for%20the%20xonsh%20shell!&url=https://github.com/xonsh/xontrib-abbrevs" target="_blank">tweet</a>.
+</p>
+
+
+## Installation
+
+To install use pip:
+
+```bash
+xpip install xontrib-abbrevs
+# or: xpip install -U git+https://github.com/xonsh/xontrib-abbrevs
+```
+
+## Usage
+
+This expands input words from `abbrevs` dictionary as you type.
+Adds ``abbrevs`` dictionary to hold user-defined "command abbreviations.
+The dictionary is searched as you type the matching words are replaced
+at the command line by the corresponding dictionary contents once you hit
+'Space' or 'Return' key.
+
+For instance a frequently used command such as ``git status`` can be abbreviated to ``gst`` as follows:
+
+```xsh
+xontrib load abbrevs
+abbrevs['gst'] = 'git status'
+gst # Once you hit <space> or <return> 'gst' gets expanded to 'git status'.
+```
+
+one can set a callback function that receives current buffer and word to customize the expanded word based on context
+
+```xsh
+abbrevs['ps'] = lambda buffer, word: "procs" if buffer.text.startswith(word) else word
+```
+
+It is also possible to set the cursor position after expansion with,
+
+```xsh
+abbrevs['gp'] = "git push <edit> --force"
+```
+
+## Credits
+
+This package was created with [xontrib template](https://github.com/xonsh/xontrib-template).
