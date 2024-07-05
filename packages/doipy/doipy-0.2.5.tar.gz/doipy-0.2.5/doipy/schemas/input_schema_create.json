@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "",
+  "title": "Input to create",
+  "description": "Input to the create operation to generate a DO.",
+  "type": "object",
+  "properties": {
+    "file": {
+      "type": "string",
+      "description": "Bit-sequence of a DO."
+    },
+    "md-file": {
+      "type": "string",
+      "description": "Metadata of a DO, written into the PID record."
+    }
+  },
+  "minProperties": 1,
+  "additionalProperties": false
+}
