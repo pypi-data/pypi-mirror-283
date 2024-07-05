@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+tests/test_helpers.py
+tests/test_pass.py
+zsuite/__init__.py
+zsuite/exceptions.py
+zsuite.egg-info/PKG-INFO
+zsuite.egg-info/SOURCES.txt
+zsuite.egg-info/dependency_links.txt
+zsuite.egg-info/requires.txt
+zsuite.egg-info/top_level.txt

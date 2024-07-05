@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: zsuite
+Version: 0.1.5
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tzdata
+
+# zsuite
+Just a place to throw common code I use across my various personal python projects
