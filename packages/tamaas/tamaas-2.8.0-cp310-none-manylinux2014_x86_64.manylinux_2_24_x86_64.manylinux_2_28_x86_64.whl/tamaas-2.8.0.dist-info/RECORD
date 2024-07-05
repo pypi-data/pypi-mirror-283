@@ -1,0 +1,14 @@
+tamaas-2.8.0.dist-info/entry_points.txt,sha256=fyxMj6-8krQofhWv00I6Gwtc6sbnb2Z2ULop4CPq_nw,48
+tamaas-2.8.0.dist-info/WHEEL,sha256=UAjmBwb5uj_Rf0Whle2I61MreDib_TMY-85wN_wMsoA,163
+tamaas-2.8.0.dist-info/METADATA,sha256=4fLQxwSuAb17U-x267iIAdhdLYFyJ3DhoG3hez-kFM4,4124
+tamaas-2.8.0.dist-info/top_level.txt,sha256=PbD86C6GYTaGxmm46x7ppHw5jGvC-tvULaFLGNB7wC0,7
+tamaas-2.8.0.dist-info/RECORD,,
+tamaas/_tamaas.cpython-310-x86_64-linux-gnu.so,sha256=PEmartY4vZ-gwnR8v_7r7i9DbyysSZuq72EW07z16NQ,5304688
+tamaas/compute.py,sha256=0-iXfJjHSGhCT1kdn8jjluN9kzI1o0I0KGfJHMhodBQ,919
+tamaas/__main__.py,sha256=IDx6aOEh-3djubSGaKlOv4l3R2zStOSX1rGlo3ICLl8,7470
+tamaas/__init__.py,sha256=7SOVaTxOYIV_J-9xm8cI_Vvokd9AhqeDt8y6aBtYsxQ,2295
+tamaas/utils.py,sha256=WyncZQJK7bW4aeiUSS4rHFh0uLnuXaStaqRWAyysFGk,13677
+tamaas/nonlinear_solvers/__init__.py,sha256=Vce6FbrLS62KYyeCAo8su_INvRugTF806ZU3k0jFnqs,7775
+tamaas/materials/__init__.py,sha256=OZxFVkWkd0NuuS_g56zQIQ57WGIErUfPdu9yd25zpgM,6594
+tamaas/dumpers/__init__.py,sha256=mCoNdRHD89JrtbW5MwReat7Ia_vGhG9m6P80aQlAM1c,20052
+tamaas/dumpers/_helper.py,sha256=DoM7IvMXr4dxPNLMSsajZs6dvd7VBDoxOacoRTo_524,5349
