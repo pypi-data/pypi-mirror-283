@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: fluospotter
+Version: 0.2
+Summary: Python library designed for nuclei segmentation and puncta detection in fluorescence microscopy images.
+Home-page: https://github.com/arnaublanco/Fluospotter
+Author: Arnau Blanco Borrego
+Author-email: blancoarnau@gmail.com
+License: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: torch
+Requires-Dist: monai
+Requires-Dist: scikit-image
+Requires-Dist: sklearn
+Requires-Dist: tifffile
+Requires-Dist: pandas
