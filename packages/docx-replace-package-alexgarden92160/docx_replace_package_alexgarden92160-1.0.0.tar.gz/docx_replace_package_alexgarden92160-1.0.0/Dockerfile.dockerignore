@@ -1,0 +1,13 @@
+.github/workflows
+.DS_Store
+Dockerfile
+Dockerfile.*
+output.docx
+README.md
+LICENSE
+tests
+pytest.ini
+.coverage
+__pycache__
+tests/__pycache__/
+dist
