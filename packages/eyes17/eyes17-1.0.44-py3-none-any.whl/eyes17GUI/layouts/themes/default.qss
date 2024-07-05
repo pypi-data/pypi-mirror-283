@@ -1,0 +1,73 @@
+/*
+Authored by: jithinbp@gmail.com for CSMCA software
+*/
+
+*{
+outline:none;
+}
+/* my default stylesheet */
+.mainbg {background:  qlineargradient( x1:0 y1:0, x2:1 y2:0, stop:0 #ddd, stop:.7 #537895) !important;}
+
+QMessageBox {background: #444544;} 
+
+.deep,#widgets,#additionalParameters,#decayParameters,#saveAllParameters{ background: qlineargradient( x1:0 y1:0, x2:1 y2:0, stop:0 #09203f, stop:1 #537895); }
+
+QListWidget{background: rgb(26, 32, 35);color:#FFFFFF;} 
+QListWidget::item:hover{background: #223344;color:#FFFFFF;} 
+
+QLabel,QRadioButton,QRadioButton,QDockWidget{color:#000; margin:1px 2px;}
+
+QSlider::groove:horizontal {margin:0px; padding:0px; border:none; background:#DDFDFE; color:#BB7777; height: 4px;}
+QSlider::handle:horizontal {background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #eee, stop:1 #ccc);border: 2px solid #777;width: 13px;margin-top: -3px;margin-bottom: -3px;border-radius: 3px;}
+
+QCheckBox,QPushButton{
+padding:2px; color:#000;
+background:#e4efe9;
+}
+
+QCheckBox{border:none; margin:3px 0px;}
+
+QCheckBox:hover,QPushButton:hover{
+background:qlineargradient( x1:0 y1:0, x2:1 y2:0, stop:0 #537895, stop:1 #09203f);
+color:white;
+border:1px solid #cffef3; 
+}
+QCheckBox::disabled,QPushButton::disabled{border:None;background:rgba(100,100,100,50) ; color:#000;}
+#countLabel{border:1px solid green; padding:0px;color:#FFF;background:rgba(0,0,0,0);}
+/*#calibrationButton{border:0px none; padding:0px;color:#FFF;background:rgba(0,0,0,0);}*/
+QPushButton,QPushButton{min-height24px; min-width:30px;}  
+
+
+QComboBox QAbstractItemView::item {
+    border-bottom: 5px solid white; margin:3px;
+}
+QComboBox QAbstractItemView::item:selected {
+    border-bottom: 5px solid black; margin:3px;
+}
+
+QToolTip{
+   background-color: rgb(191, 210, 214);
+    border-bottom: 3px dotted blue;
+    color:#000; 
+
+    padding:4px; border:0px; margin:0px;
+}
+
+QInputDialog {color: black;background-color: rgb(122, 122, 131);}
+
+
+.active{ border:2px solid #ABF9E7;}
+
+QProgressBar::chunk {
+    background-color: #8D465D;
+    width: 5px;
+    margin-right: 0.5px;
+   margin-left:0.5px;
+
+}
+QProgressBar {
+    border-radius: 1px;
+    text-align: center;
+   font-size:1pt;
+  height:3px;
+}
