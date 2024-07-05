@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ClaimInsight
+Version: 0.0.1
+Summary: A library for extracting claims from various types of records
+Home-page: https://github.com/mdarshad/ClaimInsight
+Author: Mohd Arshad
+Author-email: mdarshad1000@gmail.com
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Claims Extractor
+
+Claims Extractor is a Python library for extracting verifiable atomic claims from a piece of text. The text could be a conversation, a feedback, a survey, or anything similar.

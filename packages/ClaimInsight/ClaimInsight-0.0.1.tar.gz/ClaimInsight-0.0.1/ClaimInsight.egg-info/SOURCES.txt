@@ -1,0 +1,13 @@
+README.md
+setup.py
+ClaimInsight.egg-info/PKG-INFO
+ClaimInsight.egg-info/SOURCES.txt
+ClaimInsight.egg-info/dependency_links.txt
+ClaimInsight.egg-info/requires.txt
+ClaimInsight.egg-info/top_level.txt
+claimInsight/__init__.py
+claimInsight/config.py
+claimInsight/exceptions.py
+claimInsight/extractor.py
+claimInsight/prompts.py
+claimInsight/utils.py
