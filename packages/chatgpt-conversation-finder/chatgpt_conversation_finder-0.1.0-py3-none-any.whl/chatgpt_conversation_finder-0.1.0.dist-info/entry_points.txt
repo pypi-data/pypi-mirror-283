@@ -1,0 +1,3 @@
+[console_scripts]
+chatgpt-conversation-finder=chatgpt_conversation_finder.main:main
+
