@@ -1,0 +1,7 @@
+abstract_database/__init__.py,sha256=557v70ZZan4KhSqapb5URvbR7T66yaMR75rlYa_kj00,37
+abstract_database/abstract_database_cmd.py,sha256=rg99LLvEDxNDks9jhxj-XH5OAyv_Q_Zr7sqfy7XLcNY,12114
+abstract_database/directory_mgr.py,sha256=nqfQu-Jk_mHHHT6Rjp0ZvEw8b8RduFIzSm8DIBYyj14,197
+abstract_database-0.0.0.5.dist-info/METADATA,sha256=Nr1YOeekwPv5bwdHzcy9dh4mI08uWcHbK0SA8ILa_J8,554
+abstract_database-0.0.0.5.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+abstract_database-0.0.0.5.dist-info/top_level.txt,sha256=E8s-Lhlo4ffmtGOrB9LTvWgw5x7iF0JkW3EEXquaQ0Y,18
+abstract_database-0.0.0.5.dist-info/RECORD,,
