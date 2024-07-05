@@ -1,0 +1,10 @@
+@reboot (cd /home/ceres/scripts; bash /home/ceres/scripts/start_c19.sh) && echo $(date -u) "C19 reboot start sucessful" >> /home/ceres/scripts/log_whole_start || echo $(date -u) "C19 reboot start failed" >> /home/ceres/scripts/log_whole_start
+@reboot (cd /home/ceres/scripts; bash /home/ceres/scripts/start_defricheur.sh) && echo $(date -u) "Defricheur reboot start sucessful" >> /home/ceres/scripts/log_whole_start || echo $(date -u) "Defricheur reboot start failed" >> /home/ceres/scripts/log_whole_start
+@reboot (cd /home/ceres/scripts; bash /home/ceres/scripts/start_europarser.sh) && echo $(date -u) "Europarser reboot start sucessful" >> /home/ceres/scripts/log_whole_start || echo $(date -u) "Europarser reboot start failed" >> /home/ceres/scripts/log_whole_start
+@reboot (cd /home/ceres/scripts; bash /home/ceres/scripts/start_gg.sh) && echo $(date -u) "GG reboot start sucessful" >> /home/ceres/scripts/log_whole_start || echo $(date -u) "GG reboot start failed" >> /home/ceres/scripts/log_whole_start
+@reboot (cd /home/ceres/scripts; bash /home/ceres/scripts/start_mazette.sh) && echo $(date -u) "Mazette reboot start sucessful" >> /home/ceres/scripts/log_whole_start || echo $(date -u) "Mazette reboot start failed" >> /home/ceres/scripts/log_whole_start
+@reboot (cd /home/ceres/scripts; bash /home/ceres/scripts/start_tunnel.sh) && echo $(date -u) "Tunnel reboot start sucessful" >> /home/ceres/scripts/log_whole_start || echo $(date -u) "Tunnel reboot start failed" >> /home/ceres/scripts/log_whole_start
+@reboot (cd /home/ceres/scripts; bash /home/ceres/scripts/start_whisper.sh) && echo $(date -u) "Whisper reboot start sucessful" >> /home/ceres/scripts/log_whole_start || echo $(date -u) "Whisper reboot start failed" >> /home/ceres/scripts/log_whole_start
+
+
+@reboot (cd /home/ceres/scripts; bash /home/ceres/scripts/start_escriptorium.sh) && echo $(date -u) "Escriptorium reboot start sucessful" >> /home/ceres/scripts/log_whole_start || echo $(date -u) "Escriptorium reboot start failed" >> /home/ceres/scripts/log_whole_start
