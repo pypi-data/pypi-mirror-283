@@ -1,0 +1,2 @@
+[ape_cli_subcommands]
+ape_keyring = ape_keyring._cli:cli
