@@ -1,0 +1,10 @@
+numpy
+pandas
+requests
+signalrcore
+matplotlib
+httpx
+
+[dev]
+pre-commit
+ruff
