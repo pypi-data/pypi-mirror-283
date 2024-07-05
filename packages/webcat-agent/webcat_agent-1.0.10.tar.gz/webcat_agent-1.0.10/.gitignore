@@ -1,0 +1,6 @@
+*.pyc
+*.egg-info
+wheelhouse/
+build/
+.coverage
+dist/

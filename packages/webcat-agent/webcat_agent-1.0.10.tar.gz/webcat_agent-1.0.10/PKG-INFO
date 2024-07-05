@@ -1,0 +1,33 @@
+Metadata-Version: 2.3
+Name: webcat-agent
+Version: 1.0.10
+Summary: WebCat Agent
+Project-URL: homepage, https://github.com/webcatfi/webcatfi
+Project-URL: repository, https://github.com/webcatfi/webcatfi
+Author-email: Kenneth Falck <kennu@clouden.net>
+License: MIT
+Provides-Extra: ci
+Provides-Extra: tests
+Requires-Dist: pytest; extra == 'tests'
+Description-Content-Type: text/markdown
+
+# WebCat Agent
+
+Copyright (C) Clouden Oy 2024
+
+## Overview
+
+This is the WebCat system agent daemon. It collects basic system information
+and submits it to the user's WebCat systems database using an API key.
+
+## Building and publishing this package
+
+Get PyPI API token: https://test.pypi.org/manage/account/#api-tokens
+
+On Linux:
+
+    python3 -m pip install --upgrade build
+    python3 -m pip install --upgrade twine
+    rm -rf dist
+    python3 -m build
+    python3 -m twine upload --repository testpypi dist/*
