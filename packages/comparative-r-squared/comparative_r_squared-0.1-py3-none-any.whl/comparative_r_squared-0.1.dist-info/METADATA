@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: comparative-r-squared
+Version: 0.1
+Summary: Package for calculating Comparative R Squared
+Home-page: https://github.com/yourusername/comparative_r_squared
+Author: Shashank Ramachandran
+Author-email: sr31@Bu.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: numpy
+Requires-Dist: statsmodels
+
+# Comparative R Squared
+
+Comparative R Squared is a robust statistic for evaluating the additional explanatory power of new variables in regression models. This package provides functions to calculate Comparative R Squared for both nested and non-nested models.
+
+## Installation
+
+```bash
+pip install comparative_r_squared

@@ -1,0 +1,8 @@
+comparative_r_squared/__init__.py,sha256=4gwxKUFBiHbAZZZEHoAJZfC8CmTA7BgoObpEMjvobNw,113
+comparative_r_squared/comparative_r_squared.py,sha256=MjvyxQhCDyNM2K89JCXMZ7qR4Hw0y68tZH9obyDmgPw,4610
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_comparative_r_squared.py,sha256=HzD1uM9KqazgpPShf7FbtgzWCLRMuWZxdj7RmxJ2i_4,1401
+comparative_r_squared-0.1.dist-info/METADATA,sha256=NB4S-XxudGuJ3hg8darkF2iPmC0G5ewSbpPLO_UsTUg,862
+comparative_r_squared-0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+comparative_r_squared-0.1.dist-info/top_level.txt,sha256=RAUwhy5b5Wz7lnEvDimW7ZEjaDuvRlP2jXtZSkbs_AQ,28
+comparative_r_squared-0.1.dist-info/RECORD,,
