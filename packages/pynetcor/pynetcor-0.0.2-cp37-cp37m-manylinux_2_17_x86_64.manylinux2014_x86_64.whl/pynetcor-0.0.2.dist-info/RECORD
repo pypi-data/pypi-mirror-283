@@ -1,0 +1,14 @@
+pynetcor.libs/libgomp-a34b3233.so.1.0.0,sha256=On6uznIxkRvi-7Gz58tMtcLg-E4MK7c3OUcrWh_uyME,168193
+pynetcor.libs/libopenblas_haswellp-r0-f3e30b32.3.27.dev.so,sha256=5-Nhj8ECf86qxGesgHWWlpQ9kgvHeO6A-GVOwgvOSIA,14979473
+pynetcor.libs/libnetcor-59a96f83.so,sha256=HOZGP1Chho2TInrFTF3sLeoZdjLuSL5EoPCgAzTCpAs,580929
+pynetcor.libs/libquadmath-96973f99.so.0.0.0,sha256=k0wi3tDn0WnE1GeIdslgUa3z2UVF2pYvYLQWWbB12js,247609
+pynetcor.libs/libgfortran-040039e1.so.5.0.0,sha256=FK-zEpsai1C8QKOwggx_EVLqm8EBIaqxUpQ_cFdHKIY,2686065
+pynetcor-0.0.2.dist-info/METADATA,sha256=1PLZ4AwPZIE9q0CzZ8xvcOa04Y9kVRJbpglAhF99Cfg,5342
+pynetcor-0.0.2.dist-info/RECORD,,
+pynetcor-0.0.2.dist-info/top_level.txt,sha256=Wtb8XaxcZJ81eg48RXoxQ3WlD2Cx9NX1xuADdH3OwQ0,9
+pynetcor-0.0.2.dist-info/WHEEL,sha256=5qaUL7R7UuAgTpV1hnYjoipMHezG5YJtRxtV3_rU2Ew,150
+pynetcor/cluster.py,sha256=sg4UxBwdoBvJ_HSeLd9BKfn_P7FbLvjleL0MNXn7AhE,4784
+pynetcor/__init__.py,sha256=TlKtjSBKmDEtWAz6ThftF1p5O_aATCsHkKXh4yVd3qM,131
+pynetcor/_core.cpython-37m-x86_64-linux-gnu.so,sha256=pcPQvuU_wlaamYY0U2cNcFTsXTdxCCe_PW7tlD3w1Hs,344665
+pynetcor/libnetcor.so,sha256=3ORtZdWXNnPibVAZ7kfQFdxnooNYlOVepACP2alePlg,544649
+pynetcor/cor.py,sha256=bz6WZonjBkCB-MQ9HP6KQGdUDL_-DYX_un0b1T5KWOw,16480
