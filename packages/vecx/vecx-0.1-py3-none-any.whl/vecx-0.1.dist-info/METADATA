@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: vecx
+Version: 0.1
+Summary: A simple example package
+Home-page: https://github.com/launchxlabs/vectorx
+Author: LaunchX Labs
+Author-email: vectorx@launchxlabs.ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+python setup.py sdist bdist_wheel
