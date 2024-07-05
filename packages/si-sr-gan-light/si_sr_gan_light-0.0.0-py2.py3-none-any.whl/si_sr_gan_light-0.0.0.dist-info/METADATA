@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: si_sr_gan_light
+Version: 0.0.0
+Summary: Generate 5m sup-resolved images from Sentinel-2 products
+Author: Khlaifia Bilel
+Author-email: khlaifiabilel@icloud.com
+License: Apache 2.0 / LGPL v3
+Project-URL: Source, https://github.com/nextav/si_sr_gan_light.git
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst; charset=UTF-8
+License-File: LICENSE
+Requires-Dist: si-sr-gan-io
+Requires-Dist: onnxruntime
+Requires-Dist: tqdm
+Provides-Extra: gpu
+Requires-Dist: onnxruntime-gpu ; extra == 'gpu'
+Requires-Dist: nvidia-cudnn-cu11 ; extra == 'gpu'
+Provides-Extra: testing
+Requires-Dist: setuptools ; extra == 'testing'
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+

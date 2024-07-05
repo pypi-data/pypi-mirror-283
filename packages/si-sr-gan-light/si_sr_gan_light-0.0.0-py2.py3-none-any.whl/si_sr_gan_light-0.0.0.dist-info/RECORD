@@ -1,0 +1,14 @@
+si_sr_gan_light/__init__.py,sha256=pH5i4Fj1tbXLqLtTVIdoojiplZssQn0nnud8-HXodRE,577
+si_sr_gan_light/run.py,sha256=xgjQujgVQPiQJeMC7onTZ1siMg4SiAxoTSn6ou2rb-8,14273
+si_sr_gan_light/__pycache__/__init__.cpython-310.pyc,sha256=1H9bimoWwFOTLH_fB0Xxur6iS-aoQyBAUm-Zio57SLE,487
+si_sr_gan_light/__pycache__/__init__.cpython-38.pyc,sha256=3HjrI-pi7kF1isvHP-Wjw8za9-2xCqrxHggkvQfUn84,457
+si_sr_gan_light/__pycache__/run.cpython-310.pyc,sha256=R_JOyhn7tU1ESBQjnWKZVAtnLJE4qYoD9fK8w46zzrg,9095
+si_sr_gan_light/__pycache__/run.cpython-38.pyc,sha256=UCY1-Ax4LXCNjnei6B46y4RkSgZ8inRgdQ_njVqJ1Pk,8931
+si_sr_gan_light/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+si_sr_gan_light/models/si_sr_gan_light_5x.onnx,sha256=NhIz7hyxl3puLEHju0DrVc6ovf4AHpRdO3S27sr_ZRY,10103338
+si_sr_gan_light-0.0.0.dist-info/LICENSE,sha256=R6mL0G-qS1ztV_0YKTF9E5sd6BCQON_mjvyCAlhZJlE,11344
+si_sr_gan_light-0.0.0.dist-info/METADATA,sha256=HrPvPuHSePdgG_oz7oTt1m5UN73dMiPTqvJWvaWCvB8,836
+si_sr_gan_light-0.0.0.dist-info/WHEEL,sha256=0XQbNV6JE5ziJsWjIU8TRRv0N6SohNonLWgP86g5fiI,109
+si_sr_gan_light-0.0.0.dist-info/entry_points.txt,sha256=H0AVVpJ3TJ0jUcSb2FUZi98SPjJ1Iu4R2o6a2lRQjq8,60
+si_sr_gan_light-0.0.0.dist-info/top_level.txt,sha256=5-8oz3LcfghZQkiPP_eSgGL10-43VnJzHKdcTKbZ_9M,16
+si_sr_gan_light-0.0.0.dist-info/RECORD,,

@@ -1,0 +1,2 @@
+[console_scripts]
+si_sr_gan_light = si_sr_gan_light.run:run
