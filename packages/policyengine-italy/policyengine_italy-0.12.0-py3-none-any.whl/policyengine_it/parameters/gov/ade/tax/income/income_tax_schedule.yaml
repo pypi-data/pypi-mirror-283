@@ -1,0 +1,39 @@
+description: Italian national tax rates
+brackets:
+  - threshold:
+      values:
+        0000-01-01: 0
+    rate:
+      values:
+        0000-01-01: 0.23
+  - threshold:
+      values:
+        0000-01-01: 15000
+    rate:
+      values:
+        0000-01-01: 0.27
+  - threshold:
+      values:
+        0000-01-01: 28000
+    rate:
+      values:
+        0000-01-01: 0.38
+  - threshold:
+      values:
+        0000-01-01: 55000
+    rate:
+      values:
+        0000-01-01: 0.41
+  - threshold:
+      values:
+        0000-01-01: 75000
+    rate:
+      values:
+        0000-01-01: 0.42
+
+metadata:
+  type: marginal_rate
+  rate_unit: /1
+  threshold_unit: currency-EUR
+  name: national_tax_rates
+  label: National tax rates
