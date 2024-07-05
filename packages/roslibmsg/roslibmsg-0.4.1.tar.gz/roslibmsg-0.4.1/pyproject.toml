@@ -1,0 +1,39 @@
+[build-system]
+requires = ["roslibpy"]
+
+
+[project]
+name = "roslibmsg"
+version = "0.4.1"
+authors = [
+  { name="OxygenLost", email="oxygenlostx@gmail.com" },
+]
+description = "Unofficial implementation of msg for roslibpy"
+readme = "README.md"
+requires-python = ">=3.6"
+dependencies = [
+  "roslibpy"
+]
+classifiers=[ 
+        # 发展时期,常见的如下
+        #   3 - Alpha
+        #   4 - Beta
+        #   5 - Production/Stable
+            'Development Status :: 5 - Production/Stable',
+        # 开发的目标用户
+            'Intended Audience :: Developers',
+        #  许可证信息
+            'License :: OSI Approved :: Apache Software License',
+        #  操作系统
+            'Operating System :: OS Independent',
+        # 目标 Python 版本
+            'Programming Language :: Python :: 3',
+            'Programming Language :: Python :: 3.6',
+            'Programming Language :: Python :: 3.7',
+            'Programming Language :: Python :: 3.8',
+            'Programming Language :: Python :: 3.9',
+]
+
+[project.urls]
+"Homepage" = "https://github.com/oxygenlost/roslibmsg"
+"Bug Tracker" = "https://github.com/oxygenlost/roslibmsg/issues"
