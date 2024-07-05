@@ -1,0 +1,16 @@
+quickdraws/__init__.py,sha256=0YeWGkLNZr_oBih90nK99kWYbLnMxqVozX55zkXW_e4,1102
+quickdraws/blr.py,sha256=25j6g5aWlpepBuZDx3aloUtHY73MXfLcpap49T5jucA,69506
+quickdraws/correct_for_relatives.py,sha256=lqqpZmQlKwjB_lmKQMuBLpvteqbbNMMYlewCrfDDOnc,5238
+quickdraws/custom_linear_regression.py,sha256=DP0p1BzN-TDVVTpwJAObZFHhrc5vxkDbCKBDE_C9Q9Y,23393
+quickdraws/firth_logistic.py,sha256=eCbN8SxXYDfB9U2Iz_YcILK3SLaeBcGvFL65vm__Z9g,8168
+quickdraws/preprocess_phenotypes.py,sha256=kLYKMZQ8BXsjgyCHgqirjaLnN7RzQofOwBzqjdoZbm8,11415
+quickdraws/runRHE.py,sha256=h46VRhlTuwpCoHF6McMAyrClu0UhESO-sZDSKVucyag,13491
+quickdraws/scripts/__init__.py,sha256=CO4IyT7gM5DnUTwcDGrqUYCvZSEBtkHxoxNRLWFD0Q8,1865
+quickdraws/scripts/convert_to_hdf5.py,sha256=3a41IkznKTHfitxJ_gm3f0NZa_rPsl6CwOclnw3L-rc,13960
+quickdraws/scripts/quickdraws_step1.py,sha256=5Jdl1bgg6E5c0To00NkstUL9lpU-eWHoedYDb5i1MKY,14697
+quickdraws/scripts/quickdraws_step2.py,sha256=Ig9WagpniwnOAPp93xiyN7xhVZTTwiW6Os4iGjJvVCU,24949
+quickdraws-0.0.3.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+quickdraws-0.0.3.dist-info/METADATA,sha256=t5D69jYrFaVCcYMEtuwnDQ2e0XEuU2nerGm4OUASQq8,2950
+quickdraws-0.0.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+quickdraws-0.0.3.dist-info/entry_points.txt,sha256=dJF3GUBWAuOxp9olEj_bFp5uhz44prjLGin3FCKgiFc,193
+quickdraws-0.0.3.dist-info/RECORD,,
