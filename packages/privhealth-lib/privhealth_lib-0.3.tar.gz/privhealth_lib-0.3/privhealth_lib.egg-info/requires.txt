@@ -1,0 +1,7 @@
+fastapi_keycloak
+Pyjwt
+requests
+starlette
+openclean
+pandas
+numpy
