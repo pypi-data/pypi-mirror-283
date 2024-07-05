@@ -1,0 +1,11 @@
+cytonuiautomatordump/LICENSE.txt,sha256=ndpYZYI03EbMfGAKRGyzptvVTUli5FsBjobLjMJkesM,1069
+cytonuiautomatordump/__init__.py,sha256=fbrJCgKavxPxphTNzwJBzfSLnNwPBXKK4rWnuGcijys,825
+cytonuiautomatordump/cyuiautomatordump.pyx,sha256=4drbv6AUxPN5scT74rHPweJanrRqUoPKpfOt6mr-qOQ,14463
+cytonuiautomatordump/cyuiautomatordump_compile.py,sha256=D2ZfXMSrwTXuFViqfiHubcI-Ii3OhLzRCP0cO0J1YLU,3470
+cytonuiautomatordump/requirements.txt,sha256=j5m5PtY5kvcIr8gdTmvN5XlC0_M7JQSxMzKD4rklNPE,100
+cytonuiautomatordump/thirdparty.json,sha256=wqjbsmvhhKsBBEgx1U_C7_9Je5EcNVbMhOO9ri8fC54,54220
+cytonuiautomatordump-0.10.dist-info/LICENSE.rst,sha256=JG2U-syJOvqaKI4hLK8jP4BdnxFaMsrMir_Qn5dbgdc,1148
+cytonuiautomatordump-0.10.dist-info/METADATA,sha256=X3uKjoaIOKPVUUyYHFH9zRYP0bDZIbSVzoGUMcOkqX4,2996
+cytonuiautomatordump-0.10.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+cytonuiautomatordump-0.10.dist-info/top_level.txt,sha256=1M7GpNyExk-BKtjgPiLcdLf6Nl6jU2WDDZkLkoF9iTg,21
+cytonuiautomatordump-0.10.dist-info/RECORD,,
