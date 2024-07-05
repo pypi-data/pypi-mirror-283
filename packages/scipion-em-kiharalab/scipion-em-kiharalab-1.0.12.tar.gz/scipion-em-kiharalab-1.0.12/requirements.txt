@@ -1,0 +1,1 @@
+scipion-em-phenix>=3.2.1
