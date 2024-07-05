@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+pypi-distribution/__init__.py
+testspgmidistribution.egg-info/PKG-INFO
+testspgmidistribution.egg-info/SOURCES.txt
+testspgmidistribution.egg-info/dependency_links.txt
+testspgmidistribution.egg-info/requires.txt
+testspgmidistribution.egg-info/top_level.txt
