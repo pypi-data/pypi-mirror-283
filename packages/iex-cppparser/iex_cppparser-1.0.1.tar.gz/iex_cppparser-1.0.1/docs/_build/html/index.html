@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contents &mdash; C++ IEX Parser  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Financial Markets and Trading" href="market_data.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            C++ IEX Parser
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="market_data.html">Financial Markets and Trading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html#usage">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Package Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unsupported_os.html">Unsupported OS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iex_format.html">IEX-PCAP file format</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">C++ IEX Parser</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Contents</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="contents">
+<h1>Contents<a class="headerlink" href="#contents" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="market_data.html">Financial Markets and Trading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html#usage">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Package Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unsupported_os.html">Unsupported OS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iex_format.html">IEX-PCAP file format</a></li>
+</ul>
+</div>
+</section>
+<section id="iex-parser-documentation">
+<h1>IEX Parser Documentation<a class="headerlink" href="#iex-parser-documentation" title="Link to this heading"></a></h1>
+<p>The IEX exchange offers two types of historical data: DEEP and TOPS, both provided as PCAP files capturing network activity (see <a class="reference internal" href="iex_format.html"><span class="doc">IEX-PCAP file format</span></a> for more details). This package provides a convenient API for extracting data from DEEP files . These files contain various types of messages, such as trade reports, bid submissions, security messages, etc. Currently, our package supports parsing two specific types of messages:</p>
+<ul class="simple">
+<li><p><strong>Trade reports</strong> - Detailed records of executed trades.</p></li>
+<li><p><strong>Price level updates</strong> - Information about changes in the bid and ask price levels.</p></li>
+</ul>
+</section>
+<section id="key-benefits">
+<h1>Key benefits:<a class="headerlink" href="#key-benefits" title="Link to this heading"></a></h1>
+<ul>
+<li><p><strong>High-performance parsing</strong>: Significantly faster than other available Python parsers.</p></li>
+<li><p><strong>Multi-timestamp support</strong>: Provides three timestamps for each event.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Event timestamp</strong>: Indicates when the event happened in the matching engine.</p></li>
+<li><p><strong>Packet send timestamp</strong>: Indicates when the packet was sent.</p></li>
+<li><p><strong>Packet capture timestamp</strong>: Indicates when the packet was captured.</p></li>
+</ul>
+<p>These timestamps provide insights into the time delay between event occurrence time and the data reception time, enabling more accurate backtesting.</p>
+</div></blockquote>
+</li>
+<li><p><strong>Easy-to-use API</strong>: Provides a simple interface for extracting data from DEEP files.</p></li>
+<li><p><strong>OneTick compatibility</strong>: The output format is compatible with OneTick, a popular time-series database for financial data.</p></li>
+</ul>
+<p>For detailed information on the essential software requirements, consult the <a class="reference internal" href="usage.html"><span class="doc">Requirements</span></a> section. To find instructions for installation, refer to <a class="reference internal" href="usage.html#installation"><span class="std std-ref">Installation</span></a>.</p>
+</section>
+<section id="acknowledgement">
+<h1>Acknowledgement<a class="headerlink" href="#acknowledgement" title="Link to this heading"></a></h1>
+<p>This project extends the work of the authors done as part of IE 421 course at <a class="reference external" href="https://illinois.edu/">University of Illinois Urbana-Champaign</a>. The previous project repository can be found at <a class="reference external" href="https://gitlab.engr.illinois.edu/ie421_high_frequency_trading_spring_2024/ie421_hft_spring_2024_group_03/group_03_project">this link</a> (a private UIUC repository at the time of this writing).</p>
+</section>
+<section id="citing-this-work">
+<h1>Citing this Work<a class="headerlink" href="#citing-this-work" title="Link to this heading"></a></h1>
+<p>To cite this work in academic papers or publications, you can use the following BibTeX format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@misc</span><span class="p">{</span><span class="n">bavisettyvasu</span><span class="p">,</span>
+  <span class="n">author</span>       <span class="o">=</span> <span class="p">{</span><span class="n">Bavisetty</span><span class="p">,</span> <span class="n">Venkata</span> <span class="n">Sai</span> <span class="n">Narayana</span> <span class="ow">and</span> <span class="n">Vasu</span><span class="p">,</span> <span class="n">Karthik</span><span class="p">},</span>
+  <span class="n">title</span>        <span class="o">=</span> <span class="p">{</span><span class="n">IEX</span> <span class="n">C</span><span class="o">++</span> <span class="n">Parser</span><span class="p">},</span>
+  <span class="n">year</span>         <span class="o">=</span> <span class="p">{</span><span class="mi">2024</span><span class="p">},</span>
+  <span class="n">publisher</span>    <span class="o">=</span> <span class="p">{</span><span class="n">GitHub</span><span class="p">},</span>
+  <span class="n">journal</span>      <span class="o">=</span> <span class="p">{</span><span class="n">GitHub</span> <span class="n">Repository</span><span class="p">},</span>
+  <span class="n">howpublished</span> <span class="o">=</span> <span class="p">{</span>\<span class="n">url</span><span class="p">{[</span><span class="n">Repository</span> <span class="n">URL</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Sai271828</span><span class="o">/</span><span class="n">iex</span><span class="o">-</span><span class="n">parser</span><span class="p">)}}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This project is under active development.</p>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="market_data.html" class="btn btn-neutral float-right" title="Financial Markets and Trading" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Copyright (c) 2024, VENKATA SAI NARAYANA BAVISETTY, KARTHIK VASU.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
