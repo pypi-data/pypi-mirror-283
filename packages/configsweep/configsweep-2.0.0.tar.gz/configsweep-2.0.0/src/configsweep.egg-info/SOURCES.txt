@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/configsweep/__init__.py
+src/configsweep/affiliate.py
+src/configsweep/sweep.py
+src/configsweep/sweep_combination.py
+src/configsweep/sweep_dag.py
+src/configsweep/sweeper.py
+src/configsweep.egg-info/PKG-INFO
+src/configsweep.egg-info/SOURCES.txt
+src/configsweep.egg-info/dependency_links.txt
+src/configsweep.egg-info/requires.txt
+src/configsweep.egg-info/top_level.txt
+tests/test_affiliate.py
+tests/test_sweeper.py
