@@ -1,0 +1,16 @@
+PyDicomGrouping/CTImage.py,sha256=m6JB0_sdhNnEIRGQcWqP0n508LPVBO1LMdpI3gFJI0k,41740
+PyDicomGrouping/MRImage.py,sha256=OxChxLEMdUK5E5VT0MdSoTgMij9qtjGA2yOuAi23cyw,164122
+PyDicomGrouping/__init__.py,sha256=ZtdJq_RTrgQFh-ml0-RaRtXdHC8fVI22p2qiesKikBA,1470
+PyDicomGrouping/main.py,sha256=_MyAF77mB8vO_V-Vbv8tCo1iGWqiKe4ZWd4kw0f0jfQ,70447
+PyDicomGrouping/utils.py,sha256=V3yHHvzWW6Y1ljGpn55kqxPsKVEKD7De3z-MGjmDg3c,67377
+PyDicomGrouping/dicom_standard_scrapping/DicomStandardEnums.py,sha256=fAI-lpmQ5XH-HZJ_Prm9BuhGtino5tz83mnIKFejfS8,51180
+PyDicomGrouping/dicom_standard_scrapping/__init__.py,sha256=VAFipdE21tOecIGdq-ZfXfZ2f92ks1iTNplSiqsl0uM,877
+PyDicomGrouping/dicom_standard_scrapping/tree_node_encryptor.py,sha256=SSrHML1GQu8v2ASUQUFTgQ3WPCBOaMxNMPev8x6Z7OY,9448
+PyDicomGrouping/dicom_standard_scrapping/webscraping.py,sha256=DDsdsUmIpeo4ETPkewqBOJs_HqOifWJzZRwloM8E_BU,56646
+pyarmor_runtime_000000/__init__.py,sha256=3ZjK47bFT_7afP_-IPJs6-7u5dxJDs_t4_tYZubutYE,103
+pyarmor_runtime_000000/pyarmor.rkey,sha256=rUf-GNg8ljdaNyNQgzTRhbNH7WRY9IE3N9lNwgiIxLU,499
+pyarmor_runtime_000000/pyarmor_runtime.pyd,sha256=1YUGSIGJfY_e18ozNlcdy3JjxSfG9SY_8M0NnUR7i-E,632832
+PyDicomGrouping_Win-0.1.28.dist-info/METADATA,sha256=NrnW65Ym3Em26_8hRBTCDzDEgaZcPMJ8L84z8dZXqyE,2317
+PyDicomGrouping_Win-0.1.28.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+PyDicomGrouping_Win-0.1.28.dist-info/top_level.txt,sha256=7Oqqsvqdkr4L7iiUYIJ_GoDhCr--YWrOR7EU0ZEnj2I,39
+PyDicomGrouping_Win-0.1.28.dist-info/RECORD,,
