@@ -1,0 +1,6 @@
+queue_worker_local/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+queue_worker_local/queue_worker.py,sha256=7q7BU9q3lPAxsXlVUK6JLgk4IWSdHT_BlM0RpvkL-Sc,16549
+queue_worker_local-0.0.47.dist-info/METADATA,sha256=JUg16OEA3XloRIRrVFssOmwu06KaaCXzmiXK9zhey34,610
+queue_worker_local-0.0.47.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+queue_worker_local-0.0.47.dist-info/top_level.txt,sha256=CY5bqYFijs2_2uC_Q-KQP7QDS9Bi98v1mjkygYHdvKA,19
+queue_worker_local-0.0.47.dist-info/RECORD,,
