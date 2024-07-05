@@ -1,0 +1,37 @@
+# serializer version: 1
+# name: test_fuels[response0][fuels]
+  list([
+    Fuel(id='1-x', price=0, name='Benzina', fuel_id=0, is_self=False, insert_date=None, validity_date=None),
+    Fuel(id='1-1', price=0, name='Benzina (Self)', fuel_id=0, is_self=False, insert_date=None, validity_date=None),
+    Fuel(id='1-0', price=0, name='Benzina (Servito)', fuel_id=0, is_self=False, insert_date=None, validity_date=None),
+    Fuel(id='2-x', price=0, name='Gasolio', fuel_id=0, is_self=False, insert_date=None, validity_date=None),
+    Fuel(id='2-1', price=0, name='Gasolio (Self)', fuel_id=0, is_self=False, insert_date=None, validity_date=None),
+    Fuel(id='2-0', price=0, name='Gasolio (Servito)', fuel_id=0, is_self=False, insert_date=None, validity_date=None),
+    Fuel(id='3-x', price=0, name='Metano', fuel_id=0, is_self=False, insert_date=None, validity_date=None),
+    Fuel(id='3-1', price=0, name='Metano (Self)', fuel_id=0, is_self=False, insert_date=None, validity_date=None),
+    Fuel(id='3-0', price=0, name='Metano (Servito)', fuel_id=0, is_self=False, insert_date=None, validity_date=None),
+    Fuel(id='4-x', price=0, name='GPL', fuel_id=0, is_self=False, insert_date=None, validity_date=None),
+    Fuel(id='4-1', price=0, name='GPL (Self)', fuel_id=0, is_self=False, insert_date=None, validity_date=None),
+    Fuel(id='4-0', price=0, name='GPL (Servito)', fuel_id=0, is_self=False, insert_date=None, validity_date=None),
+    Fuel(id='323-x', price=0, name='L-GNC', fuel_id=0, is_self=False, insert_date=None, validity_date=None),
+    Fuel(id='323-1', price=0, name='L-GNC (Self)', fuel_id=0, is_self=False, insert_date=None, validity_date=None),
+    Fuel(id='323-0', price=0, name='L-GNC (Servito)', fuel_id=0, is_self=False, insert_date=None, validity_date=None),
+    Fuel(id='324-x', price=0, name='GNL', fuel_id=0, is_self=False, insert_date=None, validity_date=None),
+    Fuel(id='324-1', price=0, name='GNL (Self)', fuel_id=0, is_self=False, insert_date=None, validity_date=None),
+    Fuel(id='324-0', price=0, name='GNL (Servito)', fuel_id=0, is_self=False, insert_date=None, validity_date=None),
+  ])
+# ---
+# name: test_fuels[response1][fuels]
+  list([
+    Fuel(id=75557219, price=2.079, name='Benzina', fuel_id=1, is_self=False, insert_date=None, validity_date=None),
+    Fuel(id=75557218, price=1.869, name='Benzina', fuel_id=1, is_self=True, insert_date=None, validity_date=None),
+    Fuel(id=75557221, price=1.989, name='Gasolio', fuel_id=2, is_self=False, insert_date=None, validity_date=None),
+    Fuel(id=75557220, price=1.779, name='Gasolio', fuel_id=2, is_self=True, insert_date=None, validity_date=None),
+  ])
+# ---
+# name: test_fuels[response2][fuels]
+  list([
+    Fuel(id=75557219, price=2.079, name='Benzina', fuel_id=1, is_self=False, insert_date=datetime.datetime(2024, 7, 2, 12, 0, 38, tzinfo=datetime.timezone.utc), validity_date=datetime.datetime(2024, 7, 2, 11, 59, tzinfo=datetime.timezone.utc)),
+    Fuel(id=75557218, price=1.869, name='Benzina', fuel_id=1, is_self=True, insert_date=datetime.datetime(2024, 7, 2, 12, 0, 38, tzinfo=datetime.timezone.utc), validity_date=datetime.datetime(2024, 7, 2, 11, 59, tzinfo=datetime.timezone.utc)),
+  ])
+# ---

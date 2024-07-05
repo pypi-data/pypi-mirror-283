@@ -1,0 +1,40 @@
+# serializer version: 1
+# name: test_brand_from_json[json0][brand_from_json]
+  Brand(id=1, name='Brand #1', markers=[])
+# ---
+# name: test_brand_from_json[json1][brand_from_json]
+  Brand(id=2, name='Brand #2', markers=[Marker(type='logo', extension='png', content='iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==')])
+# ---
+# name: test_fuel_from_json[json0][fuel_from_json]
+  Fuel(id='1-x', price=0, name='Benzina', fuel_id=0, is_self=False, insert_date=None, validity_date=None)
+# ---
+# name: test_fuel_from_json[json1][fuel_from_json]
+  Fuel(id=75557219, price=2.079, name='Benzina', fuel_id=1, is_self=False, insert_date=None, validity_date=None)
+# ---
+# name: test_fuel_from_json[json2][fuel_from_json]
+  Fuel(id=75557219, price=2.079, name='Benzina', fuel_id=1, is_self=False, insert_date=datetime.datetime(2024, 7, 2, 12, 0, 38, tzinfo=datetime.timezone.utc), validity_date=datetime.datetime(2024, 7, 2, 11, 59, tzinfo=datetime.timezone.utc))
+# ---
+# name: test_gps_coordinates_from_json[json0][gps_coordinates_from_json]
+  GPSCoordinates(latitude=0, longitude=0)
+# ---
+# name: test_gps_coordinates_from_json[json1][gps_coordinates_from_json]
+  GPSCoordinates(latitude=45.541553, longitude=10.211802)
+# ---
+# name: test_marker_from_json[json0][marker_from_json]
+  Marker(type='logo', extension='png', content='iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==')
+# ---
+# name: test_service_from_json[json0][service_from_json]
+  Service(id=1, description='Dummy Service')
+# ---
+# name: test_service_from_json[json1][service_from_json]
+  Service(id=6, description='Bancomat')
+# ---
+# name: test_station_from_json[json0][station_from_json]
+  Station(id=1, name='Service Area 1', description='', fuels=[Fuel(id=10001, price=2.079, name='Benzina', fuel_id=1, is_self=False, insert_date=None, validity_date=None), Fuel(id=10002, price=1.869, name='Benzina', fuel_id=1, is_self=True, insert_date=None, validity_date=None), Fuel(id=10003, price=1.989, name='Gasolio', fuel_id=2, is_self=False, insert_date=None, validity_date=None), Fuel(id=10004, price=1.779, name='Gasolio', fuel_id=2, is_self=True, insert_date=None, validity_date=None)], location=GPSCoordinates(latitude=1.5, longitude=5.9), insert_date=datetime.datetime(1985, 5, 1, 18, 20, tzinfo=datetime.timezone(datetime.timedelta(seconds=3600))), address='This is the service area address', brand='Octan', email=None, website=None, phone=None, company=None, services=[])
+# ---
+# name: test_station_from_json[json1][station_from_json]
+  Station(id=2, name='Service Area 2', description='', fuels=[Fuel(id=20001, price=1.839, name='Benzina', fuel_id=1, is_self=True, insert_date=None, validity_date=None), Fuel(id=20002, price=1.709, name='Gasolio', fuel_id=2, is_self=True, insert_date=None, validity_date=None)], location=GPSCoordinates(latitude=1.6, longitude=4.7), insert_date=datetime.datetime(1985, 9, 5, 11, 56, 40, tzinfo=datetime.timezone(datetime.timedelta(seconds=3600))), address=None, brand='Octan', email=None, website=None, phone=None, company=None, services=[])
+# ---
+# name: test_station_from_json[json2][station_from_json]
+  Station(id=1, name='Octan Service Area', description='Octan Service Area', fuels=[Fuel(id=20001, price=1.839, name='Benzina', fuel_id=1, is_self=True, insert_date=datetime.datetime(2024, 7, 2, 12, 0, 38, tzinfo=datetime.timezone.utc), validity_date=datetime.datetime(2024, 7, 2, 11, 59, tzinfo=datetime.timezone.utc)), Fuel(id=20002, price=1.709, name='Gasolio', fuel_id=2, is_self=True, insert_date=datetime.datetime(2024, 7, 2, 12, 0, 38, tzinfo=datetime.timezone.utc), validity_date=datetime.datetime(2024, 7, 2, 11, 59, tzinfo=datetime.timezone.utc))], location=GPSCoordinates(latitude=0, longitude=0), insert_date=None, address='Service Area Address', brand='Octan', email='', website='', phone='', company='Ugo Legozzi', services=[Service(id=6, description='Bancomat')])
+# ---

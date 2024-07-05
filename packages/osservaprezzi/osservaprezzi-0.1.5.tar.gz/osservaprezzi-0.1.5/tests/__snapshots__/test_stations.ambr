@@ -1,0 +1,14 @@
+# serializer version: 1
+# name: test_single_station[1-response0][station_1]
+  Station(id=1, name='Octan Service Area', description='Octan Service Area', fuels=[Fuel(id=20001, price=1.839, name='Benzina', fuel_id=1, is_self=True, insert_date=datetime.datetime(2024, 7, 2, 12, 0, 38, tzinfo=datetime.timezone.utc), validity_date=datetime.datetime(2024, 7, 2, 11, 59, tzinfo=datetime.timezone.utc)), Fuel(id=20002, price=1.709, name='Gasolio', fuel_id=2, is_self=True, insert_date=datetime.datetime(2024, 7, 2, 12, 0, 38, tzinfo=datetime.timezone.utc), validity_date=datetime.datetime(2024, 7, 2, 11, 59, tzinfo=datetime.timezone.utc))], location=GPSCoordinates(latitude=0, longitude=0), insert_date=None, address='Service Area Address', brand='Octan', email='', website='', phone='', company='Ugo Legozzi', services=[Service(id=6, description='Bancomat')])
+# ---
+# name: test_stations[test0-response0][stations]
+  list([
+    Station(id=1, name='Service Area 1', description='', fuels=[Fuel(id=10001, price=2.079, name='Benzina', fuel_id=1, is_self=False, insert_date=None, validity_date=None), Fuel(id=10002, price=1.869, name='Benzina', fuel_id=1, is_self=True, insert_date=None, validity_date=None), Fuel(id=10003, price=1.989, name='Gasolio', fuel_id=2, is_self=False, insert_date=None, validity_date=None), Fuel(id=10004, price=1.779, name='Gasolio', fuel_id=2, is_self=True, insert_date=None, validity_date=None)], location=GPSCoordinates(latitude=1.5, longitude=5.9), insert_date=datetime.datetime(1985, 5, 1, 18, 20, tzinfo=datetime.timezone(datetime.timedelta(seconds=3600))), address='This is the service area address', brand='Octan', email=None, website=None, phone=None, company=None, services=[]),
+    Station(id=2, name='Service Area 2', description='', fuels=[Fuel(id=20001, price=1.839, name='Benzina', fuel_id=1, is_self=True, insert_date=None, validity_date=None), Fuel(id=20002, price=1.709, name='Gasolio', fuel_id=2, is_self=True, insert_date=None, validity_date=None)], location=GPSCoordinates(latitude=1.6, longitude=4.7), insert_date=datetime.datetime(1985, 9, 5, 11, 56, 40, tzinfo=datetime.timezone(datetime.timedelta(seconds=3600))), address=None, brand='Octan', email=None, website=None, phone=None, company=None, services=[]),
+  ])
+# ---
+# name: test_stations[test1-response1][stations]
+  list([
+  ])
+# ---

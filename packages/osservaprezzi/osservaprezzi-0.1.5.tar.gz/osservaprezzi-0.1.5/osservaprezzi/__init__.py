@@ -1,0 +1,1 @@
+"""Osservaprezzi client module."""
