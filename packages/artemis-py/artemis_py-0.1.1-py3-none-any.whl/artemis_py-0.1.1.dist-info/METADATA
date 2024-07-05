@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: artemis_py
+Version: 0.1.1
+Summary: A package to interact with the Artemis API. Blame ChatGPT for errors.
+Home-page: https://github.com/MattMaximo/artemis_py
+Author: Matt Maximo
+Author-email: matt@pioneerdigital.org
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: pandas
+Requires-Dist: requests
+
