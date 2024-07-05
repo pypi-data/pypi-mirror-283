@@ -1,0 +1,5 @@
+numpy
+pandas
+scikit-fuzzy
+python-dateutil~=2.8.2
+ypstruct~=0.0.2
