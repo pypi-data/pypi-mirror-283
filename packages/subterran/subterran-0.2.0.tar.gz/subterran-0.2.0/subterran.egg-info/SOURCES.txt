@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+subterran/__init__.py
+subterran/acuifero.py
+subterran.egg-info/PKG-INFO
+subterran.egg-info/SOURCES.txt
+subterran.egg-info/dependency_links.txt
+subterran.egg-info/requires.txt
+subterran.egg-info/top_level.txt
