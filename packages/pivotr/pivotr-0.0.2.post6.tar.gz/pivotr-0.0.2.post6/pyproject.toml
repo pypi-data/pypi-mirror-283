@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pivotr"
+version = "0.0.2-6"
+authors = [
+  {name = "Maturon Miner III", email = "maturon@protonmail.com"},
+]
+description = "Pivotr - a remote command execution and pivoting framework"
+readme = "README.md"
+license = {file = "LICENSE.md"}
+requires-python = ">=3.12"
+dependencies = [
+    "netifaces",
+    "scp",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: POSIX :: Linux",
+]
+keywords = ["ssh", "tunneling", "pivoting", "pentest tools"]
+
+[project.scripts]
+pivotr = "pivotr.pivotr:main"
+
+[tool.setuptools]
+packages = ["pivotr", "pivotr.file", "pivotr.networking", "pivotr.nodes"]
+
+[project.urls]
+Homepage = "https://gitlab.com/maturon/pivotr"
