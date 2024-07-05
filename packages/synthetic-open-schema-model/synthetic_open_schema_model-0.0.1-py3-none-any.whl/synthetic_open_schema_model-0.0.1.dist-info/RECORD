@@ -1,0 +1,12 @@
+synthetic_open_schema_model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+synthetic_open_schema_model/base.py,sha256=sUFnJgI8ptqRXq0OqSxaVAw3o5ZciGrccR0oI79FJiw,3441
+synthetic_open_schema_model/v1beta1/__init__.py,sha256=dBw1JTkfQDvTx9AWlgzeI1Aoa8xKMUqwblKDvf_W1P0,183
+synthetic_open_schema_model/v1beta1/channels.py,sha256=GmDg0KPVgvgxeTvkGFTdicBDZZvSwTAbIDdF_laoilI,643
+synthetic_open_schema_model/v1beta1/dns.py,sha256=ZKokQvjIw7YAdVCJMSeTIEZ-WOrkKJNYGjs2Ajo0X3o,1675
+synthetic_open_schema_model/v1beta1/http.py,sha256=gE4DpXOK2QdEV5dslE4dRjMKrrl9Z1VTzQI7ym5jDZA,861
+synthetic_open_schema_model/v1beta1/playwright.py,sha256=yMr02XSF4fTBUaQ_fqvrEZiutns8mI165GmXiSVMhu0,404
+synthetic_open_schema_model/v1beta1/ssl.py,sha256=x7MG957SqbEz4T5SreqU8yMrtZxuEmWXIwccL_KJglo,328
+synthetic_open_schema_model/v1beta1/tcp.py,sha256=QrA-S-J86OdFtiuMs2Q6MMoW2sRDf84N-08JtpiH0XM,2460
+synthetic_open_schema_model-0.0.1.dist-info/METADATA,sha256=CvstRNKZ25WtJf9SiObfp42TGybfku0bTFJXsNr3gz4,591
+synthetic_open_schema_model-0.0.1.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+synthetic_open_schema_model-0.0.1.dist-info/RECORD,,
