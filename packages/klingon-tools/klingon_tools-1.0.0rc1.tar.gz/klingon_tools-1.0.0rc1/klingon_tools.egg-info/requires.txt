@@ -1,0 +1,16 @@
+openai
+gitpython
+argparse
+requests
+httpx
+pandas
+flask
+watchdog
+pyyaml
+pytest
+ruamel.yaml
+pre-commit
+psutil
+
+[:platform_system == "Windows"]
+windows-curses
