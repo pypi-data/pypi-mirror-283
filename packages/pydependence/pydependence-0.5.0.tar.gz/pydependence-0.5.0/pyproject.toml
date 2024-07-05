@@ -1,0 +1,231 @@
+# =========================================== #
+# BUILD SYSTEM                                #
+# =========================================== #
+
+[build-system]
+requires = ["setuptools>=61", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+# =========================================== #
+# TOOLS                                       #
+# =========================================== #
+
+# packing tools
+[tool.setuptools]
+packages = ["pydependence"]
+
+# obtain the version from git
+# https://github.com/pypa/setuptools_scm
+[tool.setuptools_scm]
+local_scheme = "node-and-timestamp"
+
+# automated tests
+[tool.pytest]
+minversion = "6.0"
+testpaths = ["tests", "pydependence"]
+python_files = ["test.py", "test_*.py", "__test__*.py"]
+
+# - - - - - - - - - - - - - - - - - - - - - - #
+# BOOTSTRAPPED PYDEPENDANCE EXAMPLE           #
+# - - - - - - - - - - - - - - - - - - - - - - #
+
+# general settings / overrides
+[tool.pydependence]
+
+# defaults [optional]:
+default_root = "."
+default_resolve_rules = {visit_lazy=false, re_add_lazy=false, exclude_unvisited=true, exclude_in_search_space=true, exclude_builtins=true, strict_requirements_map=true}
+default_scope_rules = {unreachable_mode="error"}
+
+# map requirements and resolved imports to specific
+# packages and version requirements.
+versions = [
+    "networkx",
+    "pydantic>=2.0.0",
+    {requirement="pydantic<2.0.0,>=1.0.0", env='legacy'},
+    "stdlib_list",
+    "tomlkit",
+    "packaging",
+    {requirement="pydependence", scope="pydependence"},
+    "pytest>=6",
+    "pytest-cov>=4",
+    "typing-extensions",
+]
+
+# Scopes represent graphs of modules (nodes) and their interconnecting
+# import statements (directed edges) that reference themselves or other modules.
+scopes = [
+    {name = "pydependence", pkg_paths = "./pydependence"},
+    {name = "pydependence-core", parents = ["pydependence"], limit = "pydependence._core"},
+    {name = "pydependence-tests", parents = ["pydependence"], pkg_paths = "./tests"}
+]
+
+# Output resolvers define the resolution and generation of output requirements by
+#   1. traversing a scope's directed module and import graph
+#   2. collecting all imports and mapping these using the version list above to specific pypi requirements.
+resolvers = [
+    {                                    output_mode='dependencies',          scope='pydependence'},
+    {output_name='some',                 output_mode='optional-dependencies', scope='pydependence', visit_lazy=false},
+    {output_name='all',                  output_mode='optional-dependencies', scope='pydependence', visit_lazy=true},
+    {output_name='core',                 output_mode='optional-dependencies', scope='pydependence', start_scope='pydependence-core', visit_lazy=true},
+    {output_name='example-core-no-lazy', output_mode='optional-dependencies', scope='pydependence'},
+    {output_name='example-legacy',       output_mode='optional-dependencies', scope='pydependence', env='legacy', visit_lazy=true},
+    {output_name='test',                 output_mode='optional-dependencies', scope="pydependence-tests", raw=["pytest-cov"], visit_lazy=true},
+    {output_name='dev',                  output_mode='optional-dependencies', raw=['pre-commit'], strict_requirements_map=false},
+]
+
+# =========================================== #
+# PROJECT                                     #
+# =========================================== #
+
+[project]
+name = "pydependence"
+dynamic = ["version"]
+description = "Python local package dependency discovery, resolution and requirements generation."
+urls = {repository = "https://github.com/nmichlo/pydependence"}
+authors = [{name = "Nathan Michlo", email = "nathanjmichlo@gmail.com"}]
+readme = "README.md"
+license = {file="LICENSE"}
+classifiers = [
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+# - - - - - - - - - - - - - - - - - - - - - - #
+# [AUTOGEN] PROJECT: DEPS           [AUTOGEN] #
+# !!! do not modify this section manually !!! #
+# !!! do not modify this section manually !!! #
+# !!! do not modify this section manually !!! #
+# - - - - - - - - - - - - - - - - - - - - - - #
+
+requires-python = ">=3.8"
+dependencies = [
+    # [AUTOGEN] by pydependence resolver 'pydependence' **DO NOT EDIT** [AUTOGEN]
+    "networkx",
+    #     ← pydependence._core.modules_resolver
+    #     ← pydependence._core.modules_scope
+    "packaging",
+    #     ← pydependence._cli
+    "pydantic>=2.0.0",
+    #     ← pydependence._cli
+    "stdlib_list",
+    #     ← pydependence._core.builtin
+    "typing-extensions",
+    #     ← pydependence._cli
+]
+
+# - - - - - - - - - - - - - - - - - - - - - - #
+# [AUTOGEN] PROJECT: OPTIONAL DEPS  [AUTOGEN] #
+# !!! do not modify this section manually !!! #
+# !!! do not modify this section manually !!! #
+# !!! do not modify this section manually !!! #
+# - - - - - - - - - - - - - - - - - - - - - - #
+
+[project.optional-dependencies]
+
+dev = [
+    # [AUTOGEN] by pydependence resolver 'dev' **DO NOT EDIT** [AUTOGEN]
+    "pre_commit", # [M]
+    #     ← <manual: pre_commit>
+]
+test = [
+    # [AUTOGEN] by pydependence resolver 'test' **DO NOT EDIT** [AUTOGEN]
+    "networkx",
+    #     ← pydependence._core.modules_resolver
+    #     ← pydependence._core.modules_scope
+    "packaging",
+    #     ← pydependence._cli
+    "pydantic>=2.0.0",
+    #     ← pydependence._cli
+    "pytest-cov>=4", # [M]
+    #     ← <manual: pytest_cov>
+    "pytest>=6",
+    #     ← tests.test_module_data
+    #     ← tests.test_utils
+    "stdlib_list",
+    #     ← pydependence._core.builtin
+    "tomlkit", # [L]
+    #     ← [L] pydependence._core.requirements_out
+    #     ← [L] pydependence._core.utils
+    #     ← [L] tests.test_module_data
+    "typing-extensions",
+    #     ← pydependence._cli
+]
+some = [
+    # [AUTOGEN] by pydependence resolver 'some' **DO NOT EDIT** [AUTOGEN]
+    "networkx",
+    #     ← pydependence._core.modules_resolver
+    #     ← pydependence._core.modules_scope
+    "packaging",
+    #     ← pydependence._cli
+    "pydantic>=2.0.0",
+    #     ← pydependence._cli
+    "stdlib_list",
+    #     ← pydependence._core.builtin
+    "typing-extensions",
+    #     ← pydependence._cli
+]
+all = [
+    # [AUTOGEN] by pydependence resolver 'all' **DO NOT EDIT** [AUTOGEN]
+    "networkx",
+    #     ← pydependence._core.modules_resolver
+    #     ← pydependence._core.modules_scope
+    "packaging",
+    #     ← pydependence._cli
+    "pydantic>=2.0.0",
+    #     ← pydependence._cli
+    "stdlib_list",
+    #     ← pydependence._core.builtin
+    "tomlkit", # [L]
+    #     ← [L] pydependence._core.requirements_out
+    #     ← [L] pydependence._core.utils
+    "typing-extensions",
+    #     ← pydependence._cli
+]
+core = [
+    # [AUTOGEN] by pydependence resolver 'core' **DO NOT EDIT** [AUTOGEN]
+    "networkx",
+    #     ← pydependence._core.modules_resolver
+    #     ← pydependence._core.modules_scope
+    "stdlib_list",
+    #     ← pydependence._core.builtin
+    "tomlkit", # [L]
+    #     ← [L] pydependence._core.requirements_out
+    #     ← [L] pydependence._core.utils
+]
+example-core-no-lazy = [
+    # [AUTOGEN] by pydependence resolver 'example-core-no-lazy' **DO NOT EDIT** [AUTOGEN]
+    "networkx",
+    #     ← pydependence._core.modules_resolver
+    #     ← pydependence._core.modules_scope
+    "packaging",
+    #     ← pydependence._cli
+    "pydantic>=2.0.0",
+    #     ← pydependence._cli
+    "stdlib_list",
+    #     ← pydependence._core.builtin
+    "typing-extensions",
+    #     ← pydependence._cli
+]
+example-legacy = [
+    # [AUTOGEN] by pydependence resolver 'example-legacy' **DO NOT EDIT** [AUTOGEN]
+    "networkx",
+    #     ← pydependence._core.modules_resolver
+    #     ← pydependence._core.modules_scope
+    "packaging",
+    #     ← pydependence._cli
+    "pydantic<2.0.0,>=1.0.0",
+    #     ← pydependence._cli
+    "stdlib_list",
+    #     ← pydependence._core.builtin
+    "tomlkit", # [L]
+    #     ← [L] pydependence._core.requirements_out
+    #     ← [L] pydependence._core.utils
+    "typing-extensions",
+    #     ← pydependence._cli
+]
