@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: peft_patched
+Version: 0.9.2
+Summary: Parameter-Efficient Fine-Tuning (PEFT)
+Home-page: https://gitlab.com/aletrn/peft_patched
+Author: Alessandro Trinca Tornidor, based on https://github.com/huggingface/peft
+Author-email: alessandro@trinca.tornidor.com
+License: Apache
+Keywords: deep learning
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy <2.0.0,>=1.17
+Requires-Dist: packaging >=20.0
+Requires-Dist: psutil
+Requires-Dist: pyyaml
+Requires-Dist: torch >=1.13.0
+Requires-Dist: transformers-backport ==4.33.4
+Requires-Dist: tqdm
+Requires-Dist: accelerate >=0.21.0
+Requires-Dist: safetensors
+Requires-Dist: huggingface-hub >=0.17.0
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: hf-doc-builder ; extra == 'dev'
+Requires-Dist: ruff ~=0.2.1 ; extra == 'dev'
+Provides-Extra: docs_specific
+Requires-Dist: black ; extra == 'docs_specific'
+Requires-Dist: hf-doc-builder ; extra == 'docs_specific'
+Provides-Extra: quality
+Requires-Dist: black ; extra == 'quality'
+Requires-Dist: hf-doc-builder ; extra == 'quality'
+Requires-Dist: ruff ~=0.2.1 ; extra == 'quality'
+Provides-Extra: test
+Requires-Dist: black ; extra == 'test'
+Requires-Dist: hf-doc-builder ; extra == 'test'
+Requires-Dist: ruff ~=0.2.1 ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: pytest-xdist ; extra == 'test'
+Requires-Dist: parameterized ; extra == 'test'
+Requires-Dist: datasets ; extra == 'test'
+Requires-Dist: diffusers <0.21.0 ; extra == 'test'
+Requires-Dist: scipy ; extra == 'test'
+
+<!---
+Copyright 2023 The HuggingFace Team. All rights reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<h1 align="center"> <p>🤗 PEFT</p></h1>
+<h3 align="center">
+    <p>State-of-the-art Parameter-Efficient Fine-Tuning (PEFT) methods</p>
+</h3>
+
+Patching dependencies for [peft](https://github.com/huggingface/peft).
