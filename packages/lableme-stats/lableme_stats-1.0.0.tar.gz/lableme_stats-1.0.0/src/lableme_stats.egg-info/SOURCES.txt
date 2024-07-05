@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/labelme_stats/cli.py
+src/lableme_stats.egg-info/PKG-INFO
+src/lableme_stats.egg-info/SOURCES.txt
+src/lableme_stats.egg-info/dependency_links.txt
+src/lableme_stats.egg-info/entry_points.txt
+src/lableme_stats.egg-info/requires.txt
+src/lableme_stats.egg-info/top_level.txt
