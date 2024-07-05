@@ -1,0 +1,8 @@
+music_duration/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+music_duration/duration.py,sha256=NWptS-4YbiQ7d2tbABrAe9fCp1oVv0Z3FzdHcLr-fr4,309
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/tests.py,sha256=f0Eei8fN2ZeUMNGIeVW_D4PNYcyJ03xBtwusXJ66qmY,882
+music_duration-0.1.0.dist-info/METADATA,sha256=vkC8q8xY84Yjp_XaZy9OG6uWbDZpcXOOfRuEdNi86r8,653
+music_duration-0.1.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+music_duration-0.1.0.dist-info/top_level.txt,sha256=s4d24mJXuhayDhmL3uAXWgz3jlckXBR3SLphpAQB2Bw,21
+music_duration-0.1.0.dist-info/RECORD,,
