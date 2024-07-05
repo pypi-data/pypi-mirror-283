@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: xontrib-jedi
+Version: 0.1.1
+Summary: Improved Xonsh's Python completions using jedi
+Home-page: https://github.com/xonsh/xontrib-jedi
+License: MIT
+Keywords: xontrib,xonsh
+Author: Xonsh Dev
+Author-email: xonsh@email.address
+Requires-Python: >=3.10,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: System :: Shells
+Classifier: Topic :: System :: System Shells
+Classifier: Topic :: Terminals
+Requires-Dist: jedi (>=0.19)
+Requires-Dist: xonsh (>=0.17)
+Project-URL: Code, https://github.com/xonsh/xontrib-jedi
+Project-URL: Documentation, https://github.com/xonsh/xontrib-jedi/blob/master/README.md
+Project-URL: Issue tracker, https://github.com/xonsh/xontrib-jedi/issues
+Project-URL: Repository, https://github.com/xonsh/xontrib-jedi
+Description-Content-Type: text/markdown
+
+<p align="center">
+Xonsh Python completions using <a href="https://jedi.readthedocs.io/en/latest/">jedi</a>.
+</p>
+
+<p align="center">
+If you like the idea click ⭐ on the repo and <a href="https://twitter.com/intent/tweet?text=Nice%20xontrib%20for%20the%20xonsh%20shell!&url=https://github.com/xonsh/xontrib-jedi" target="_blank">tweet</a>.
+</p>
+
+
+## Installation
+
+To install use pip:
+
+```bash
+xpip install xontrib-jedi
+# or: xpip install -U git+https://github.com/xonsh/xontrib-jedi
+```
+
+## Usage
+
+```xsh
+xontrib load jedi
+
+import json
+json.<Tab>
+```
+
+## Release
+
+- update the version in `pyproject.toml`
+- Create a new release with the same tag using Github releases
+
+## Credits
+
+This package was created with [xontrib cookiecutter template](https://github.com/xonsh/xontrib-cookiecutter).
+
