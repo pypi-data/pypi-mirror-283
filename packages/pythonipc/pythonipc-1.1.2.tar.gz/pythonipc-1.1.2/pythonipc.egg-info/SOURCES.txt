@@ -1,0 +1,6 @@
+setup.py
+pythonipc.egg-info/PKG-INFO
+pythonipc.egg-info/SOURCES.txt
+pythonipc.egg-info/dependency_links.txt
+pythonipc.egg-info/requires.txt
+pythonipc.egg-info/top_level.txt
