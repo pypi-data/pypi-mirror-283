@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools >= 70.1.1", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mob-tool"
+version = "2.0.1"
+authors = [
+    { name = "rfst" },
+]
+description = "Mob session management tool"
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = [
+    "mob", "mob-programming", "timer", "mob-programming-timer", "cli-tool",
+    "remote-mob-programming", "remote-mobs", "mob-timer", "mob-tool",
+]
+license = { file = "LICENSE.txt" }
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python"
+]
+dependencies = [
+    'click==8.1.7',
+    'injector==0.21.0',
+    'dataclasses-json==0.6.7',
+    'GitPython==3.1.43',
+    'colorama==0.4.6',
+    'requests==2.32.3',
+    'packaging==23.2',
+    'marshmallow==3.21.3',
+    'flet==0.9.0',
+    'platformdirs==4.2.2',
+    'setuptools==70.1.1',
+]
+
+[project.scripts]
+mobt = "mobt.Controllers:cli"
+mob-tool = "mobt.Controllers:cli"
+
+[project.urls]
+source = "https://github.com/stavarengo/mob-tool"
+Say_Thanks = "https://saythanks.io/to/faelsta"
