@@ -1,0 +1,17 @@
+odoorpc-stubs/__init__.pyi,sha256=kNt-LWnUlwGggAvNBeMF0fGtXsFaYaWwNQNHcXFWuMA,102
+odoorpc-stubs/db.pyi,sha256=KOuiLQi9kY9Gb5lbTjTxeqVVb83pqLP0l9oMpPH5eGU,593
+odoorpc-stubs/env.pyi,sha256=iAlOHv9FTGMfUbjlyRKFYACqdgNlVozWmRtTl3MDM04,776
+odoorpc-stubs/error.pyi,sha256=-XmAHNLUMA0QgoEtRNd2590IIEHmAxisl1SBfyBSQ3w,236
+odoorpc-stubs/fields.pyi,sha256=aro_5uJ_GaDWN2Ec52J-8vcEwzSjPvUc70HHbZ8JnpQ,4058
+odoorpc-stubs/models.pyi,sha256=oNJLerBEcQONgT3XdZ9g1bo5BscrSScdDywkS6JVCzg,975
+odoorpc-stubs/odoo.pyi,sha256=eljbRbKcuzVM91_7_a3WhdnpZ5-TufYcGmSwqVoJnXo,1558
+odoorpc-stubs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+odoorpc-stubs/report.pyi,sha256=BFJs-70srHYL0DnVTgbYDQyhebPRUzJP6s5DEXaWeNs,315
+odoorpc-stubs/rpc/__init__.pyi,sha256=wmZaRLgGxr1o5yp2w0bQsrP9kRIgm_2utoUnBfhFAA8,1278
+odoorpc-stubs/rpc/error.pyi,sha256=ePeyEBiGsChWsYc9vizH32WhO3JpFC_dfjBmTk0Bsrg,213
+odoorpc-stubs/rpc/jsonrpclib.pyi,sha256=1vHtsBOy06FjlgYFziYLf54cfdCIdCcgo162dIO3QpU,1107
+odoorpc-stubs/session.pyi,sha256=QR5h7AUDvYVuKQhU0i_b69VqOnqatXe37aewmtPyO9I,224
+odoorpc-stubs/tools.pyi,sha256=TaJzSzkNgpTtxHiu5dQDrVWBEq55K0xrJuohXO0FkBE,605
+odoorpc_stubs-0.1.0.dev0.dist-info/METADATA,sha256=tVTwenLawiaI2-xo0PpqerK0WxXLA9IkKk5dKiB39Wk,554
+odoorpc_stubs-0.1.0.dev0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+odoorpc_stubs-0.1.0.dev0.dist-info/RECORD,,
