@@ -1,0 +1,9 @@
+[
+  "test_config.py::TestConfigs::test_config_loading",
+  "test_config.py::TestConfigs::test_config_saving",
+  "test_config.py::TestConfigs::test_json_loading",
+  "test_config.py::TestConfigs::test_json_saving",
+  "test_config.py::TestConfigs::test_yaml_loading",
+  "test_config.py::TestConfigs::test_yaml_saving",
+  "test_config.py::test_config_loading"
+]
