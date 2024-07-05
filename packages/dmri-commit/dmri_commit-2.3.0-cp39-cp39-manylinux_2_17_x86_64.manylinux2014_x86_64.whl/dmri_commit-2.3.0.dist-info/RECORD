@@ -1,0 +1,15 @@
+dmri_commit-2.3.0.dist-info/LICENSE,sha256=EedOv1ctIOrVRt7KG8iNXhwzLdWlziqg9uoUf30N3L0,4414
+dmri_commit-2.3.0.dist-info/WHEEL,sha256=R2Iwi5bVevUz_9XnGyQnNhBO8W9-31XyF9DRAu23_xA,147
+dmri_commit-2.3.0.dist-info/top_level.txt,sha256=UINu7ldOz_ed6jtP1AZz19AA96Xxd9imowALWceDg7g,7
+dmri_commit-2.3.0.dist-info/RECORD,,
+dmri_commit-2.3.0.dist-info/METADATA,sha256=S3TxGQSSU3v2kFwqEV3uSDmhwyoWdoei8-DhGNrJcAM,10269
+commit/trk2dictionary.cpython-39-x86_64-linux-gnu.so,sha256=ysI8Jk9sDiqhf4BLze-oltheEStYw_olpeX6R5hSZmY,5493560
+commit/proximals.cpython-39-x86_64-linux-gnu.so,sha256=if_jK-t_oRm0g-7izwfUIlOzeZZXCD_hhBaMKtk8GTU,1686808
+commit/core.cpython-39-x86_64-linux-gnu.so,sha256=0LXru9e0d9hxKIWjH6ldRaLS_XkSRK7__wRAsUqVPIg,7446440
+commit/solvers.py,sha256=xj5J6GYoI-zQMjFhNDWw8PEEzgaLGJKi7EdfaapB6AE,17322
+commit/models.py,sha256=Wwk_ku3RO5OxGKzB-ALE461BUv1f50cWYw_uRbNNSSg,3494
+commit/__init__.py,sha256=zcqHYnlDf7wQI6-PDBsG0SYOqj3uIrs6W1-WXDNh5nk,252
+commit/operator/operator_c.c,sha256=YZluo1VsPXwcs6sTfBkknrJOLlxi0v7ijStdCLUQIWA,352115
+commit/operator/operator.cpython-39-x86_64-linux-gnu.so,sha256=Eun9xz4ZM0VJlZBBZwsjDUs-y57JmG2fDo8a9gsqCKw,2894944
+commit/operator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+commit/operator/operator.pyx,sha256=odBy2Nmvr9ddkfiHt9c5bKbaw6frAKuJUdohfBTlEog,9154
