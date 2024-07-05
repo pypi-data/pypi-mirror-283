@@ -1,0 +1,21 @@
+description: Social security rates for executives
+brackets:
+  - threshold:
+      values:
+        0000-01-01: 0
+    rate:
+      values:
+        0000-01-01: 0.0919
+  - threshold:
+      values:
+        0000-01-01: 55_008
+    rate:
+      values:
+        0000-01-01: 0.1019
+
+metadata:
+  type: marginal_rate
+  rate_unit: /1
+  threshold_unit: currency-EUR
+  name: social_security_rates_executive
+  label: Social security rates (executive)
