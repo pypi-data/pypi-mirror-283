@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "testspgmidistribution"
+version = "2.0.1"
+description = "Demonstration of SPGMICIQ python SDK"
+readme = "README.md"
+authors = [
+    { name = "SPGMICIQ", email = "gds_python_sdk_support@spglobal.com" }
+]
+dependencies = [
+    "requests",
+    "pandas",
+    "IPython",
+    "Jinja2",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+[tool.setuptools.packages.find]
+where = ["."]
