@@ -1,0 +1,61 @@
+A python cli application, built using the "click" framework. Name the entry point function as 'main'.
+
+The application takes a prompt file stored in the local filesystem and produces raw code file, 
+stored along with the prompt.
+
+The prompt files have ".prompt" suffix. For example, a prompt to produce example.py 
+will be stored in the example.py.prompt file. Make sure the input file has the ".prompt" suffix.
+
+Prompt files may contain @include(filename) directives. The directives are always placed at the beginning of a line.
+Example:
+
+```
+  @include(path/to/some/file.py)
+  @include(../filename.txt)
+  It is possible to specify a path relative to the file that contains the directive.
+```
+Ignore the directive if it is not placed at the beginning of a line.
+The application shall replace these directives with the contents of the specified file.
+If the file being included contains directives itself, they should be expanded as well.
+If the included file does not exist, print a warning and continue.
+
+The user may ask to recreate the included files using --recursive option. In this case, when including 
+a file using @include directive (somefile.txt), the application should first regenerate it from the 
+corresponding .prompt file (say somefile.txt.prompt) if it exists.
+Print to then name of the file being included and whether is is being regenerated from .prompt file. 
+An error should be shown to the user whenever a circular dependency is found.
+
+To produce code from the prompt use llm_invoke function from the .models module in the same folder.
+The function takes three params:
+- provider, which can be either 'bedrock' or 'anthropic', the default being 'bedrock'. Let the user specify the needed
+provider using --provider parameter.
+- model, the default being 'anthropic.claude-3-5-sonnet-20240620-v1:0'. Let the user specify the needed model
+using the --model parameter.
+- messages, an array of chat messages to pass to the model
+The function returns LLM's answer.
+
+Use these system instructions when invoking the LLM:
+<instructions>
+Make only the necessary changes to the existing file:
+<existing_file>existing file contents here...</existing_file>
+Important! Output just the naked file content,  without any 
+introductory text or enclosing the code in triple quotes. 
+Include a comment in the code saying that this file was produced by https://github.com/ai-1st/dotprompt 
+and shouldn't be edited directly.
+</instructions>
+
+Include the contents of the existing output file in the prompt if it exists.
+If the user gives --from-scratch flag, remove the output file before processing 
+and don't include its contents in the instructions.
+
+Also provide a one-shot example, such as 
+<user>Hello world in python</user>
+<assistant>print('Hello world')</assistant>
+
+System message must be at beginning of message list when invoking LLM.
+
+Print the name of each file being processed before sending it to LLM.
+This applies to files included through @include directives.
+
+In the docstring at the beginning of the file, lay out the implementation plan. Which 
+functions will there be, and what will be their inputs/outputs.
