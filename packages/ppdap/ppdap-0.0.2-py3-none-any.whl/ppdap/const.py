@@ -1,0 +1,12 @@
+"""Constants used be the Digo Accessory Protocol component."""
+
+HTTP_TIMEOUT = 10
+
+MQTT_CONNECTED = "mqtt_connected"
+MQTT_DISCONNECTED = "mqtt_disconnected"
+
+NOTIFY_TITLE_DI = "TITLE_DI"
+NOTIFY_TITLE_DW = "TITLE_DW"
+NOTIFY_TITLE_DE = "TITLE_DE"
+
+NOTIFY_MSG_SCHDED_01 = "SCHDED_01"
