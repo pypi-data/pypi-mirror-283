@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/func_az/__init__.py
+src/func_az/jobs.py
+src/func_az/safe.py
+src/func_az.egg-info/PKG-INFO
+src/func_az.egg-info/SOURCES.txt
+src/func_az.egg-info/dependency_links.txt
+src/func_az.egg-info/top_level.txt
