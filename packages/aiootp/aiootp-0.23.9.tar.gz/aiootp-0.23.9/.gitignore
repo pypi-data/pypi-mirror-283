@@ -1,0 +1,15 @@
+__pycache__
+.pytest_cache
+.coverage*
+.pyc
+.hypothesis
+htmlcov
+build
+dist
+logs
+venv
+env
+/aiootp.egg-info/*
+/aiootp/db/*
+/aiootp/tor/*
+/docs/*
