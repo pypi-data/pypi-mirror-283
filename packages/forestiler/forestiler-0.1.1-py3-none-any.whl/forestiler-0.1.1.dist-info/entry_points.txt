@@ -1,0 +1,3 @@
+[console_scripts]
+forestile=forestiler.apps.forestile:main
+
