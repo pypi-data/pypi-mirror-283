@@ -1,0 +1,15 @@
+askyou/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+askyou/cli.py,sha256=kSGqt-QZ0hPdwteolQAdpeXoz1vQEWJxEWbTQ7cVYEU,3884
+askyou/config.json,sha256=q9Vl2LJY6ywdJcHpojUONIfSWDnKuExK_5jTu3xkDQw,1247
+askyou/config_manager.py,sha256=tV1N3hIl4lH5dmRdjBYo0QA15nUfShLSizkiopoal2Q,1570
+askyou/main.py,sha256=mHfMt6f0q1rp1DaDdinfwqusdX2Glxa_YbfZ35fnLKs,379
+askyou/search_engine.py,sha256=Yg98gn8V7OPFvhd3vY67DcyjbAkx2KDEM0idT1PGzmo,1024
+askyou/summarizer.py,sha256=NvXE238bZsSIu3gddOqTQ3OaIaGLQyjOfSpTCT3ratQ,1966
+askyou/translator.py,sha256=eIZ_w_xiAIrTipwG72P0fFrLkbsUbGEkp5RN_cxUHC4,2097
+askyou/utils.py,sha256=LchZzhRpPo89TEeiHJK3la7jxfeydm5NJflPy3BRN6s,605
+askyou-0.1.0.dist-info/LICENSE,sha256=OPs3642yvMfROgmnJz-DxY_hbX-FcKoRWi8Q7Gw0vxQ,1068
+askyou-0.1.0.dist-info/METADATA,sha256=YrA5TqGQ8aqfRuPBAHukGJNu4qQjEgko02wpGdAlZ2U,1292
+askyou-0.1.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+askyou-0.1.0.dist-info/entry_points.txt,sha256=MtiK7_lBVyageQiGV8izvpCBA67qXnDZs9oCY2n4OZI,44
+askyou-0.1.0.dist-info/top_level.txt,sha256=BLjhlIkHPC9IYYM699OLUHlmuzinVd8i8cN6pmtS0Mg,7
+askyou-0.1.0.dist-info/RECORD,,
