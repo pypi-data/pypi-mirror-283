@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: auto-switch-providers
+Version: 0.0.6
+Summary: Auto Switch Providers
+Home-page: https://github.com/fuongz/auto-switch-providers
+Author: fuongz
+Author-email: hi@phuongphung.com
+License: MIT
+Project-URL: Bug Reports, https://github.com/fuongz/auto-switch-providers/issues
+Project-URL: Source, https://github.com/fuongz/auto-switch-providers
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: certifi==2024.7.4
+Requires-Dist: charset-normalizer==3.3.2
+Requires-Dist: idna==3.7
+Requires-Dist: Jinja2==3.1.4
+Requires-Dist: MarkupSafe==2.1.5
+Requires-Dist: marshmallow==3.21.2
+Requires-Dist: packaging==24.1
+Requires-Dist: PyYAML==6.0.1
+Requires-Dist: redis==5.0.7
+Requires-Dist: requests==2.32.2
+Requires-Dist: urllib3==2.2.2
+
+# Auto Switch Providers
+
+## Install
+
+Install the latest auto-switch-providers release via **pip**
+
+```bash
+pip install auto-switch-providers
+```
+
+## How to use?
+
+To use `auto-switch-providers`, you must first import it, like the following code:
+
+```python
+from auto_switch_providers import AutoSwitchProviders
+
+# Import path from os to get template path
+from os import path
+
+# Define config
+TEMPLATE_CONFIG = {
+    "custom_api_provider": {
+        "http_service": {
+            "params": {
+                "token": ""
+            }
+        }
+    },
+}
+
+# Init service
+service = AutoSwitchProviders(
+    template_dir=f"{path.dirname(__file__)}/templates",
+    config=TEMPLATE_CONFIG
+)
+
+# Process
+service.process({
+    "custom_param": "example"
+})
+```
+
+## ©️ License
+
+- [MIT](/LICENSE)
