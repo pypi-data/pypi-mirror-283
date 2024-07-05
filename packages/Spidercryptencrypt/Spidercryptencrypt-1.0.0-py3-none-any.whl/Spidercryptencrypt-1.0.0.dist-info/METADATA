@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: Spidercryptencrypt
+Version: 1.0.0
+Summary: A library for encryption and decryption using AES
+Home-page: https://github.com/mouhawos/Spidercryptencrypt
+Author: Spidercrypt
+Author-email: mouhawoss@gmail.com
+License: MIT
+Keywords: encryption decryption cryptography
+Description-Content-Type: text/markdown
+Requires-Dist: cryptography
+
+# Spidercryptencrypt
+
+Spidercryptencrypt is a Python library for AES (Advanced Encryption Standard) encryption and decryption. It provides functionality to securely encrypt sensitive data before storage or transmission.
+
+## Features
+
+- AES encryption and decryption in CBC (Cipher Block Chaining) mode.
+- Uses PKCS7 padding to handle data lengths that are not multiples of the AES block size.
+- Integration with `cryptography`, a Python library for modern cryptography.
+
+## Installation
+
+You can install Spidercryptencrypt via `pip`:
+
+```bash
+
+from Spidercryptencrypt import Spidercryptencrypt
+import os
+
+# Generate a secure AES key (replace with a secure key management method)
+password = b"my_secure_password"
+salt = os.urandom(16)
+kdf = PBKDF2HMAC(
+    algorithm=hashes.SHA256(),
+    length=32,
+    salt=salt,
+    iterations=100000,
+    backend=default_backend()
+)
+key = kdf.derive(password)
+
+# Initialize Spidercryptencrypt instance with the generated key
+crypter = Spidercryptencrypt(key)
+
+# Encrypt a message
+plaintext = b"Hello, world!"
+encrypted_data = crypter.encrypt(plaintext)
+print("Encrypted message:", encrypted_data)
+
+# Decrypt the encrypted message
+decrypted_data = crypter.decrypt(encrypted_data)
+print("Decrypted message:", decrypted_data.decode())
+
+
+API Reference
+Spidercryptencrypt Class
+Spidercryptencrypt(key)
+Parameters:
+key (bytes): AES encryption key.
+encrypt(plaintext)
+Encrypts the given plaintext message.
+
+Parameters:
+plaintext (bytes): Message to encrypt.
+Returns:
+bytes: Encrypted ciphertext.
+decrypt(ciphertext)
+Decrypts the given ciphertext message.
+
+Parameters:
+ciphertext (bytes): Encrypted message.
+Returns:
+bytes: Decrypted plaintext.
+
+
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+
+
+### Customization
+
+- **Features:** Add specific features of your library.
+- **Installation:** Ensure clear installation instructions tailored to your environment (e.g., specify required dependencies).
+- **Usage Example:** Replace the example with a relevant use case for your library.
+- **API Reference:** Add more details about additional methods and parameters if your library has more complex functionality.
+- **License:** Modify the License section according to the license you intend to apply to your project.
+
+Once customized, save this `README.md` file in the root directory of your project alongside `setup.py` to provide comprehensive documentation for users and developers interested in using your `Spidercryptencrypt` library.
+
