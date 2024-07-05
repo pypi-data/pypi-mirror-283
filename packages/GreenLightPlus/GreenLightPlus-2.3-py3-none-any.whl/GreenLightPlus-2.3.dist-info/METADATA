@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: GreenLightPlus
+Version: 2.3
+Summary: Greenhouse Simulation and Optimization Toolkit
+Author-email: Daidai Qiu <qiu.daidai@outlook.com>
+Project-URL: Homepage, https://github.com/greenpeer/GreenLightPlus
+Project-URL: Bug Reports, https://github.com/greenpeer/GreenLightPlus/issues
+Project-URL: Source, https://github.com/greenpeer/GreenLightPlus
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: gymnasium
+Requires-Dist: openstudio (==3.6.1)
+Requires-Dist: gdown
+Requires-Dist: ray[rllib]
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme ; extra == 'dev'
+
