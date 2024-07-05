@@ -1,0 +1,3 @@
+[console_scripts]
+sentimentpredictor=sentimentpredictor:main
+
