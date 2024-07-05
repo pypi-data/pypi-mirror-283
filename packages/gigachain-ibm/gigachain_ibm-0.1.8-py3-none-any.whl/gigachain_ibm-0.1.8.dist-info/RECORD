@@ -1,0 +1,9 @@
+langchain_ibm/__init__.py,sha256=kXHvWMOBxsLSLgiAHtGyjRaqWb9qBdJz3ZESXblBWfI,209
+langchain_ibm/chat_models.py,sha256=UPgecFuUmS7Gx1GMBTcGtKNOTwgONuwZpMRaD8zlvOU,35941
+langchain_ibm/embeddings.py,sha256=yxI1PqPRu_dko_FIYkkVHIA0y2YmngkpScoJa_Bt4iU,6746
+langchain_ibm/llms.py,sha256=sJpIjy0uQ4sZz0iL83iD8lp7f5GJ2so67SYIEWtsQew,16171
+langchain_ibm/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gigachain_ibm-0.1.8.dist-info/LICENSE,sha256=DppmdYJVSc1jd0aio6ptnMUn5tIHrdAhQ12SclEBfBg,1072
+gigachain_ibm-0.1.8.dist-info/METADATA,sha256=eyuB04mWbSBfNsnHtDhB51pkrl_q69omsSajDgATY4I,5176
+gigachain_ibm-0.1.8.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+gigachain_ibm-0.1.8.dist-info/RECORD,,
