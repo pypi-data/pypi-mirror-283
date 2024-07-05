@@ -1,0 +1,8 @@
+licence
+setup.py
+OptiMultiPy/__init__.py
+OptiMultiPy/versao_final.py
+OptiMultiPy.egg-info/PKG-INFO
+OptiMultiPy.egg-info/SOURCES.txt
+OptiMultiPy.egg-info/dependency_links.txt
+OptiMultiPy.egg-info/top_level.txt
