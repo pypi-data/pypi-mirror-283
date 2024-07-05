@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: llama-cpp-cffi
+Version: 0.0.1
+Summary: Python binding for llama.cpp using cffi
+License: MIT
+Author: Marko Tasic
+Author-email: mtasic85@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: cffi (>=1.16.0,<2.0.0)
+Requires-Dist: setuptools (>=70.2.0,<71.0.0)
+Description-Content-Type: text/markdown
+
+# llama-cpp-cffi
+
+Python binding for llama.cpp using cffi
+
