@@ -1,0 +1,17 @@
+psplpy/__init__.py,sha256=NKNd6V8aqCixnDOrucVtEAkvJqLdfrQCqonKSc-boTQ,80
+psplpy/concurrency_utils.py,sha256=uOASo9QapIXpuEK6YDHSwF5xjSgyP35LVGlcnopRAEA,2339
+psplpy/dynamic_compose.py,sha256=OS3gEvCsKBz06RmVuohFz1HFWEloX82ln3nPhJ0GxpM,4185
+psplpy/file_utils.py,sha256=6Q09Pc0Haxf2YzVi_45WcVv2RzQtARZgjKwNpUvwTGA,932
+psplpy/image_det.py,sha256=V6Ue1HHAmI7fLK78gwlqUByQkF1g3SKoATIX0L_UmlE,4439
+psplpy/image_utils.py,sha256=8Np_HjweEqpoh9pZvp0QQHo1cquSISIB6-mwJJZZ6Bg,16862
+psplpy/middleware_utils.py,sha256=NswPvtusmHKcWOnxWeY8aMiq7LhCTH7DAQB_mNlV3dY,5164
+psplpy/network_utils.py,sha256=w-RC4qDE6C2Q74yQOjnwGq0wLhBhGpGgMfe-Yhglt3c,9508
+psplpy/ocr_utils.py,sha256=hZtG8dhy2gwqT7JQ5ePd1yJXbT1jEhZgJkKRQpkhZeY,4273
+psplpy/other_utils.py,sha256=_ib6EFYSbFfLmmtY1B7qvnlxkNSvudduq8kRCbwEoeQ,7221
+psplpy/serialization_utils.py,sha256=SgGML_5XmGe-I_1vHcOg_jREhQ02IhoKE0afxG8fBMg,6500
+psplpy/scripts/block_jetbrains.py,sha256=u2KsBzQ_QN6QfCk2_F3MQsuqD6AkmtBY2ffd2ujJYKE,4316
+psplpy/scripts/upload_pypi_project.py,sha256=80avSXlpwMKxfTPJO_xB9SMMJvtN4W1yisxpA0DeP80,1194
+psplpy-1.5.1.dist-info/METADATA,sha256=-4mu6nMUplhMo-IMAOiHqTYCPmUrtDw0iTqC3PjFTKc,530
+psplpy-1.5.1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+psplpy-1.5.1.dist-info/top_level.txt,sha256=GxL2RbTLIbDoPqTbPrfNus5lmNSHWM2loF1m_RinJy4,7
+psplpy-1.5.1.dist-info/RECORD,,
