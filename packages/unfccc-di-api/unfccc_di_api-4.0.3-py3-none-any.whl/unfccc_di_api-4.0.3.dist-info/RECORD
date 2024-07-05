@@ -1,0 +1,9 @@
+unfccc_di_api/__init__.py,sha256=hYq5QDu_l2p6z6Lp8MB5FToP-KFgNRmkiyiRFLCXl-0,1019
+unfccc_di_api/unfccc_di_api.py,sha256=091jMGWd8GIE8TP9fQMDr4RScrStq-Y7xHRrw7N1WLI,26066
+unfccc_di_api/tests/__init__.py,sha256=4jp0fvvZqDFiEITo1iwKn482L1N7HNG03cxyw8-ZanU,282
+unfccc_di_api/tests/test_unfccc_di_api.py,sha256=HUfIBS5TygKp_IKpWaUSijVYx1SdPfhsjTieFcS9GBA,3496
+unfccc_di_api-4.0.3.dist-info/LICENSE,sha256=nBlLaf0TzZGE9AMuUH-RwRVd6L4osXfa1LT86v3Lgpo,658
+unfccc_di_api-4.0.3.dist-info/METADATA,sha256=AyEsWjOt8F832L6IBHzEDMToYequsn-WI1nvxqSl9YM,6814
+unfccc_di_api-4.0.3.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+unfccc_di_api-4.0.3.dist-info/top_level.txt,sha256=yftus9AawO_jGG-6Y0mmLqMI9pE0npNbxMVO2gBTctM,14
+unfccc_di_api-4.0.3.dist-info/RECORD,,
