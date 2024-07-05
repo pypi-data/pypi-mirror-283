@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "testpypiptest"
+version = "0.1.1"
+description = ""
+authors = ["kst6294 <kst6294@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
