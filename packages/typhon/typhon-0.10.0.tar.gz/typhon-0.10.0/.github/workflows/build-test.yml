@@ -1,0 +1,67 @@
+name: Test
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: ${{ matrix.name }}-py${{ matrix.python-version }}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        name: [ubuntu, windows, macos]
+        python-version: ["3.10", "3.11", "3.12"]
+
+        include:
+          - name: ubuntu
+            os: ubuntu-latest
+
+          - name: windows
+            os: windows-latest
+
+          - name: macos
+            os: macos-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          python -m pip install --upgrade pip
+          pip install .[tests]
+      - name: Install (macOS / Windows)
+        if: runner.os == 'macOS' || runner.os == 'Windows'
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
+          pip install numpy  # cftime requires numpy already during setup
+          pip install .
+
+      - name: Lint with flake8 (Linux)
+        if: runner.os == 'Linux' && matrix.python-version == '3.8'
+        continue-on-error: true
+        run: |
+          pip install flake8
+          flake8 . --statistics || echo "::error::Check flake8 output for errors"
+
+      - name: Testfiles Setup
+        run: |
+          git clone --depth=1 https://github.com/atmtools/typhon-testfiles.git
+
+      - name: Test (Linux / macOS)
+        if: runner.os == 'Linux' || runner.os == 'macOS'
+        run: |
+          export TYPHONTESTFILES=$PWD/typhon-testfiles
+          pytest --pyargs typhon
+      - name: Test (Windows)
+        if: runner.os == 'Windows'
+        run: |
+          $Env:HDF5_DISABLE_VERSION_CHECK = 1
+          $Env:TYPHONTESTFILES = Join-Path $pwd "typhon-testfiles"
+          pytest --pyargs typhon

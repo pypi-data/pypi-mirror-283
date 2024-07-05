@@ -1,0 +1,12 @@
+*.pyc
+*.swp
+.DS_Store
+.ipynb_checkpoints
+/.idea
+/.vscode/
+/build
+/conda/build/
+/dist
+/doc/_build
+/doc/generated
+/typhon.egg-info
