@@ -1,0 +1,4 @@
+ImageHash
+Pillow
+imagedominantcolour
+yt-dlp
