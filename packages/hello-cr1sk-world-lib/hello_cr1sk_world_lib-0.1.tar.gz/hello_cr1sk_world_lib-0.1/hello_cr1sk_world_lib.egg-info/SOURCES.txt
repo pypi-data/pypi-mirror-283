@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+hello_cr1sk_world_lib.egg-info/PKG-INFO
+hello_cr1sk_world_lib.egg-info/SOURCES.txt
+hello_cr1sk_world_lib.egg-info/dependency_links.txt
+hello_cr1sk_world_lib.egg-info/top_level.txt
+hello_world_lib/__init__.py
