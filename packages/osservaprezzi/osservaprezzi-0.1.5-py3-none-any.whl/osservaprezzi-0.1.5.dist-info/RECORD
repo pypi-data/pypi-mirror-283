@@ -1,0 +1,13 @@
+osservaprezzi/.DS_Store,sha256=hlBDogRzIzgQ1DOK3K-v2NCeYbiz_gbzWP8SjvpvBBA,6148
+osservaprezzi/__init__.py,sha256=rqLrXXZ4U1EeM-NVX-VrvFSJl3g10BiEQnrqpwOclAw,35
+osservaprezzi/client.py,sha256=3eE9WoSuVoAcHa1f5_elezB8HodY1zZXDjPLbfMJeMw,3311
+osservaprezzi/const.py,sha256=zTo80gPicopRvmT1FHeVPxxqCh1YRpTDDsANhdXCDgY,509
+osservaprezzi/exceptions.py,sha256=zUPyHKB33hpndwozEDEavyAYVyVBq0ZatJS2Bjf4W48,284
+osservaprezzi/helpers.py,sha256=C9n_6P8U60VyW69R25D0X8KBl1wBma3P1T5aYmRQJ6E,2493
+osservaprezzi/models.py,sha256=HaCoejilKTIE6XIWbxPL8emkXKluq6bW8uaUZv-pXCU,1493
+osservaprezzi/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+osservaprezzi-0.1.5.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+osservaprezzi-0.1.5.dist-info/METADATA,sha256=nRt6FhQKX7_1hbEu8CeElbeX3z7s8WQxs0Z7sRoyNaI,3358
+osservaprezzi-0.1.5.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+osservaprezzi-0.1.5.dist-info/top_level.txt,sha256=MpFfaY4S0AHBJpDIr9EuOkIXd5EZJf4UXwxJx9rJWDU,14
+osservaprezzi-0.1.5.dist-info/RECORD,,
