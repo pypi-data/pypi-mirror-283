@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+anc_maper.py
+setup.py
+anc_maper.egg-info/PKG-INFO
+anc_maper.egg-info/SOURCES.txt
+anc_maper.egg-info/dependency_links.txt
+anc_maper.egg-info/entry_points.txt
+anc_maper.egg-info/requires.txt
+anc_maper.egg-info/top_level.txt

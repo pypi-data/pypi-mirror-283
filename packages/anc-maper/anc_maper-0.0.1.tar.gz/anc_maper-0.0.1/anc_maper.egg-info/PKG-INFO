@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: anc-maper
+Version: 0.0.1
+Summary: Know the old names of prefectures
+Home-page: https://github.com/yorunotuki/anc-maper
+Author: ryo komatsu
+Author-email: r.y.o627b@gmail.com
+Project-URL: Bug Tracker, https://github.com/yorunotuki/anc-maper
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: matplotlib>=3.9.0
+Requires-Dist: japanmap>=0.3.1
+
+# anc-maper
+This package outputs a map of Japan with the old names of the prefectures and the prefectures painted on it when you enter the names of the prefectures in kanji characters.
+
+
+# how to run anc-maper
+$ anc-maper
+
+Enter the name of the prefecture in kanji for "Please enter the name of the prefecture:".
+
+ex)Please enter the name of the prefecture:東京都
