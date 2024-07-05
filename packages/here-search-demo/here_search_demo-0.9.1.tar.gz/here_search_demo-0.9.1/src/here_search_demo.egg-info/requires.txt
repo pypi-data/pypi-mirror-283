@@ -1,0 +1,13 @@
+jupyterlab<4,>=3.5.2
+jupyterlab_widgets>=1.1.1
+jupyterlab-filesystem-access>=0.5.3
+jupyterlite~=0.1.2
+ipywidgets<9,>=8
+ipyleaflet==0.17.3
+jupyterlite-core==0.1.2
+jupyterlite-pyodide-kernel==0.1.1
+libarchive-c
+
+[lab]
+aiohttp
+xyzservices
