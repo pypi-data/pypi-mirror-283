@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: wonder-diffusion-sdk
+Version: 0.0.7
+Summary: Python SDK for common Wonder diffusion models
+Author: basri
+Author-email: basri@wonder.co
+License-File: LICENCE
+Requires-Dist: diffusers (==0.26.3)
+
+
+    Version 0.0.7:
+      - AutoencoderTiny model added as an optimization.
+
+    Version 0.0.6:
+      - !! Scheduler Config added. Model config scheduler parameter changed. THIS IS A BREAKING CHANGE.
+      - Refactor for better controlnet and lora usage.
+
+    Version 0.0.5:
+      - ControlNet added.
+      - Lora usage added.
+
+    Version 0.0.3:
+      - Lightning model added.
+      - **kwargs** for schedulers added.
+    
