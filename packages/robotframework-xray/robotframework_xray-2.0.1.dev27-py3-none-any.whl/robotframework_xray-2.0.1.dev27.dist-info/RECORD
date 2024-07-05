@@ -1,0 +1,10 @@
+Xray/ListenerV2.py,sha256=N9wLi8fsEWX0HHUlyj6MCEJfjEEDnazskfzCuM26HCQ,7682
+Xray/__init__.py,sha256=x1SVojUdpHuw98V6uhg7qtCf9D-MrLOQUTVg9swforM,126
+Xray/attributes.py,sha256=Ycj_1DtJu32M8inIGkSKpl3xqUuLkYJWHGttYeW-Zv0,3368
+Xray/config.py,sha256=4xDIMNLdmXA56sSFBhIW-74g9fBNp55Ib_Kr9RBvvSQ,790
+Xray/report.py,sha256=bj40yUTHwopKKKtoy2kq5l_3TOYnFZgDW7YHN6vJk10,5584
+Xray/xray.py,sha256=Q1fp3HDmJQ-9BCyXpX7nAcHUgWSD1J6MIt4V7iP3UJE,8957
+robotframework_xray-2.0.1.dev27.dist-info/METADATA,sha256=105b9KIA0_xqFPQU0PJq-wWq9BGuRkLVW_hOQVo4C-g,424
+robotframework_xray-2.0.1.dev27.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+robotframework_xray-2.0.1.dev27.dist-info/top_level.txt,sha256=ixIn706nVQS1tWdu3vW_DGDzyIPGm8A-VLWhpKR2hYI,5
+robotframework_xray-2.0.1.dev27.dist-info/RECORD,,
