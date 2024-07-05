@@ -1,0 +1,9 @@
+text2resume/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+text2resume/generate_resume.py,sha256=SlcEGKBS-dDjeY4p3O_g1TQ_f0gXfQfSwaPqR2Rc-tA,3585
+text2resume/templates/template.tex,sha256=WFXyNxcUEMjoG-reh69OPk_ppJ2j0WW7iTsLhl-_QxQ,10880
+text2resume-0.2.dist-info/LICENSE,sha256=UIp30ue1HZit7tMmSK0SS3swJBqOcLLnLJn5LY5YdNE,1036
+text2resume-0.2.dist-info/METADATA,sha256=dRhgSgjc_LwjP-fYJ5jhwFDzf5QA5Ng_vh9gyH4Yjmo,4028
+text2resume-0.2.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+text2resume-0.2.dist-info/entry_points.txt,sha256=5JuAAsTSgMy6lbIiJxmoxjiJAEBlcAw7_kYMSdWBHfA,69
+text2resume-0.2.dist-info/top_level.txt,sha256=OrvTSq9Y4m4Hte15myzmosT_W2k23zbtCSzULDMPvCI,12
+text2resume-0.2.dist-info/RECORD,,
