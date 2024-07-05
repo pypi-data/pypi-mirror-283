@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: ameise
+Version: 0.4
+Summary: Dev-Kit for AMEISE dataset
+Home-page: https://github.com/MarcelVSHNS/ameise-dataset.git
+Author: Marcel
+Author-email: marcel.vosshans@hs-esslingen.de
+License: Apache License 2.0
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: Cython (~=0.29.14)
+Requires-Dist: Pillow (~=10.2.0)
+Requires-Dist: PyX (~=0.15)
+Requires-Dist: PyYAML (~=6.0.1)
+Requires-Dist: actionlib (~=1.14.0)
+Requires-Dist: catkin (~=0.8.10)
+Requires-Dist: defusedxml (~=0.6.0)
+Requires-Dist: dill (~=0.3.8)
+Requires-Dist: empy (~=3.3.2)
+Requires-Dist: future (~=0.18.2)
+Requires-Dist: genmsg (~=0.6.0)
+Requires-Dist: genpy (~=0.6.15)
+Requires-Dist: keyring (~=18.0.1)
+Requires-Dist: matplotlib (~=3.7.4)
+Requires-Dist: netifaces (~=0.10.4)
+Requires-Dist: numpy (~=1.24.4)
+Requires-Dist: open3d (~=0.18.0)
+Requires-Dist: opencv-python (~=4.8.1.78)
+Requires-Dist: pip (~=20.0.2)
+Requires-Dist: psutil (~=5.5.1)
+Requires-Dist: pydot (~=1.4.1)
+Requires-Dist: pypylon (~=2.2.0)
+Requires-Dist: python-dateutil (~=2.8.2)
+Requires-Dist: requests (~=2.31.0)
+Requires-Dist: rosbag (~=1.16.0)
+Requires-Dist: rosclean (~=1.15.8)
+Requires-Dist: roscreate (~=1.15.8)
+Requires-Dist: rosgraph (~=1.16.0)
+Requires-Dist: roslaunch (~=1.16.0)
+Requires-Dist: roslib (~=1.15.8)
+Requires-Dist: roslz4 (~=1.16.0)
+Requires-Dist: rosmaster (~=1.16.0)
+Requires-Dist: rosmsg (~=1.16.0)
+Requires-Dist: rosnode (~=1.16.0)
+Requires-Dist: rospkg (~=1.5.0)
+Requires-Dist: rospy (~=1.16.0)
+Requires-Dist: rosservice (~=1.16.0)
+Requires-Dist: rostest (~=1.16.0)
+Requires-Dist: rostopic (~=1.16.0)
+Requires-Dist: rosunit (~=1.15.8)
+Requires-Dist: roswtf (~=1.16.0)
+Requires-Dist: scipy (~=1.10.1)
+Requires-Dist: setuptools (~=44.0.0)
+Requires-Dist: smach (~=2.5.2)
+Requires-Dist: smclib (~=1.8.6)
+Requires-Dist: tf (~=1.13.2)
+Requires-Dist: torchvision (~=0.17.0)
+Requires-Dist: torch (~=2.2.0)
+Requires-Dist: ultralytics (~=8.1.14)
+Requires-Dist: wheel (~=0.34.2)
+Requires-Dist: wxPython (~=4.0.7)
+
+# OPNV Dataset - Open public network for versatile data
+
+![AmeiseLogo](https://raw.githubusercontent.com/MarcelVSHNS/ameise-dataset/main/docs/Ameise_logo.png) 
+
+Dev-Kit for [Project AMEISE](https://ameise.wandelgesellschaft.de/) records: 
+
+## Description
+
+The OPNV-dataset is a development kit for the OPNV dataset. It provides functionalities to unpack AMEISE record 
+files and extract meta information and frames. The core functionality revolves around handling AMEISE record files 
+with the .4mse extension.
+
+## Installation
+
+To install the ameise-dataset, you can use pip:
+```console
+pip install ameise
+```
+
+## Getting Started
+
+To get started with the dataset, you can refer to the [GettingStarted.ipynb](https://colab.research.google.com/drive/1p2cw3bSZ6B798qQ2jVnpvKQI5pv_-y_D?usp=sharing) notebook provided in the repository. 
+This notebook will guide you through the basic functionalities and usage of the dataset.
+
+
