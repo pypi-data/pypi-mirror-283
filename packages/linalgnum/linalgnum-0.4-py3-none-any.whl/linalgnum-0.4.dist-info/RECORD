@@ -1,0 +1,10 @@
+linalgnum/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+linalgnum/main.py,sha256=xCMQaNc8v9vVoWXbymQ4012uOcoL2ACNLBMpDEUakys,115
+linalgnum/data/v1/linear_systems.py,sha256=Ya6Qczj_Q77OTLxvgKG0r-U2weKAHW9BSY9j2L2Zuws,6961
+linalgnum/data/v2/autovalori.py,sha256=bKk0qZlXGBJzVtaFEYCX4zIX0HuUdARGt_7n7NF1K3Q,3595
+linalgnum/data/v2/sistemiLineari.py,sha256=qPGVVkdIO0aBJFdlX0fAVgZiSRjZY9F_aFza4iOyOZY,3063
+linalgnum-0.4.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+linalgnum-0.4.dist-info/METADATA,sha256=9X8RRzEOZHhjcJ0V53AAqfnl4T0aQ4DwHaIUl22co48,626
+linalgnum-0.4.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+linalgnum-0.4.dist-info/top_level.txt,sha256=97x4oQwK_CpbxMgQn5WTAi3hyRPotqY6fJUa-SXrkDo,10
+linalgnum-0.4.dist-info/RECORD,,
