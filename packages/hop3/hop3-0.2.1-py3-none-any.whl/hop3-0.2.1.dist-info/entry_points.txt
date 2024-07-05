@@ -1,0 +1,4 @@
+[console_scripts]
+hop-agent=hop3.main:main
+hop-test=hop3.testing.main:main
+
