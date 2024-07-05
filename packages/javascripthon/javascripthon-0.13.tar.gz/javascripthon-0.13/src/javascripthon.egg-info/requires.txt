@@ -1,0 +1,11 @@
+setuptools
+dukpy<=0.2.3
+
+[dev]
+metapensiero.tool.bump_version
+readme_renderer
+
+[test]
+pytest
+pytest-cov
+meta
