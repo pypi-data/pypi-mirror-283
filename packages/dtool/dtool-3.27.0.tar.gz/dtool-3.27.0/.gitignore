@@ -1,0 +1,13 @@
+*.pyc
+*.swp
+*.egg-info
+
+.coverage
+.eggs
+.tox
+.pytest_cache
+env
+build
+dist
+
+dtool/version.py
