@@ -1,0 +1,30 @@
+{% extends "layouts/base.html" %}
+
+{% block page_title %} Events {% endblock %}
+
+{% block extensions %}class-tools, multi-swap, loading-states, response-targets{% endblock %}
+
+
+{% block content %}
+
+{% include "/components/navbar/navbar.html"%}
+
+    <h1 class="sr-only">Events table</h1>
+    {% include "components/feedback/connection-status-bar/appbar-placeholder.html" %}
+    <main class="relative shadow-md sm:rounded-lg">
+
+    {% include "/components/toolbar/table-toolbar.html"%}
+
+    {% include "/components/table/events-table.html"%}
+
+    </main>
+
+    <div id="bulk-update-menu" tabindex="-1"
+         hidden>
+    </div>
+
+    {% include "/components/footer/footer.html"%}
+
+{% endblock content %}
+
+
