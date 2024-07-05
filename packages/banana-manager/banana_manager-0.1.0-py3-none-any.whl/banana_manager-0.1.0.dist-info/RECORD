@@ -1,0 +1,14 @@
+banana/__init__.py,sha256=HxAddF6DQeMC0H6a9dKerA7-8m5VRFmCJ2jzLKC-pe0,56
+banana/layout.py,sha256=RMge1_vvKu96n2gFfvcMNe70m_pFob-toVKc5IOymgs,878
+banana/manager.py,sha256=w0mokfXcjWDcTUO-43ZblxQPwMv27VYwLehq0Edh8p4,4578
+banana/models.py,sha256=7A4Qp365ww8HzgPVkJlEuBeSHGW-46Q76azxWQHlFbw,2217
+banana/utils.py,sha256=pK5hsGnpxVQqPEjBuZnFgzcMILjLXfElG_kIQ9wi9ek,456
+banana/assets/styles.css,sha256=D39bDovtJgtVhtO-LsofTcWN07F2Wuio6L59YSR8f48,1538
+banana/callbacks/__init__.py,sha256=N_ad94PZ67pVoyKv2vCc4Z8wTVyxasuJHnwWMqpxz0M,88
+banana/callbacks/load_table.py,sha256=zbcFO-Ez_PqE0HvCMm3UtG58UNhhwSj-C4eYCQjz6qI,3612
+banana/callbacks/update_cell.py,sha256=x7vosMMZmZTzoC0_Yq7Oyi1mZd-NzyyYUdnxnsxxTNg,2180
+banana_manager-0.1.0.dist-info/LICENSE,sha256=qC7yua4470kT0lDMFwxJcCF4N4FShL6q8EzdLL-ibRQ,1093
+banana_manager-0.1.0.dist-info/METADATA,sha256=5lwopPR9LAe9yC34UT6pcBqvCs0F58YeFGhV3qbXh0w,2160
+banana_manager-0.1.0.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+banana_manager-0.1.0.dist-info/top_level.txt,sha256=WoFIPZawvBWtGa9_WmYuFLJ1cp-8BVebGFE-f1UAFrE,7
+banana_manager-0.1.0.dist-info/RECORD,,
