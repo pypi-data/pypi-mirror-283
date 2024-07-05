@@ -1,0 +1,12 @@
+fletura/__init__.py,sha256=vXMaffTpcT29b0RJqbl7tk2s9dO_uVlDzh-wTlhwq0w,177
+fletura/card.py,sha256=Qq5DZSo9NRf42vjeSlfuupWKtOaDaVqtC81eV4E_E6Y,4832
+fletura/dock.py,sha256=11JhHWVZqc3N5lgahDzQBGvoZoONnQ7ztuAh8bbkSa4,2800
+fletura/neumoflet.py,sha256=qm5DcuhseKKz3UQAicmzWwVWhl36kXPXj0E-Kd8No4w,4080
+fletura/paper.py,sha256=9ETFkD48OPM7FnY4Mlod9hQ9EjR1YgB5TjM6pHUDjP4,2283
+fletura/rating.py,sha256=5HlfjRcIaz1YBAdifLlPyHZMeZv7EfGsR7sjmexYjtU,5597
+fletura/timeline.py,sha256=F9k8Yz7XSXYBHiJq4IllOkqkovNjym1XeAEJWwDDWYI,6470
+fletura-1.0.2.dist-info/LICENSE,sha256=R46NvtDP0jQTlDUxL9rOpvbcgs50kY_afA-JSCr8uM8,1092
+fletura-1.0.2.dist-info/METADATA,sha256=9muTbzZsTcHW8EDH02a1X_6XGMhWQI-7o0yXKtgBnIg,7384
+fletura-1.0.2.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+fletura-1.0.2.dist-info/top_level.txt,sha256=tfFtKAQ93PAs0bZS3VrWAcSquFi1K1juGk6iGh1dHlk,8
+fletura-1.0.2.dist-info/RECORD,,
