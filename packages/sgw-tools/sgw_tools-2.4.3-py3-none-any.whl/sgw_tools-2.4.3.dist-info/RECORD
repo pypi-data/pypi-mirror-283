@@ -1,0 +1,15 @@
+sgw_tools/__init__.py,sha256=39iJHaceaGrt3323_Y8V-lG9JR4BrERJAf3DVkQECXo,13087
+sgw_tools/approximations.py,sha256=lMoWqGqj9Fqy4XDVC-UfE91qZXBSiKNp9kNTbM6MBsI,2635
+sgw_tools/filters.py,sha256=Fmmm_uxTMfXL_7q0hHj6ZafzScaST9pfq7KvnTosQSM,6401
+sgw_tools/graph.py,sha256=_9xE_OZTlDM1AzUbVrchE598FfKHR2VmMq-etMQDgxc,20725
+sgw_tools/graphs.py,sha256=--t6F8HpbSyRZHD3sgvW81wiJJDmfhCC25qyUIlmpOA,5379
+sgw_tools/util.py,sha256=7cT49U60UdxNLGZWRLVtiimVopgWmkJ7Kq2sEDegvaY,5295
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_biggraph.py,sha256=3rmM30Ox-ea-0qhFmoiR37LyybMoiBAShAOScSBJju8,19005
+tests/test_sgw.py,sha256=pFxcAhEPgCAvxuuFlIZGDBImOsGQxLW9y11uAlF4jy0,2282
+tests/test_util.py,sha256=OBE2cNIP2J6rr4GcIvfOWA-v7Jrp35Thxc8sfwZ15mw,517
+sgw_tools-2.4.3.dist-info/LICENSE,sha256=099mqe41kLZK1dWAe4jjVyvGeapiduCuAYl8h1RedSk,1065
+sgw_tools-2.4.3.dist-info/METADATA,sha256=T259of5TWhDACMOC45b8FtNvIAiuGEJCH3nDNrWKbZs,788
+sgw_tools-2.4.3.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+sgw_tools-2.4.3.dist-info/top_level.txt,sha256=LPCunqtSDC7lXLSJoxIqISwSfI7eb8quJRhUxpR6vhI,16
+sgw_tools-2.4.3.dist-info/RECORD,,
