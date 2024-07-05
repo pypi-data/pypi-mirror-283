@@ -1,0 +1,25 @@
+[build-system]
+requires = [ "setuptools>=61.0",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oauth2tools"
+version = "0.9.1"
+description = "A toolset for the most requirements dealing with OAuth2 and OpenID Connect."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [ "Development Status :: 4 - Beta", "Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Operating System :: OS Independent",]
+keywords = [ "OAuth2", "OIDC", "OpenID Connect", "Tools", "Helper",]
+dependencies = [ "cryptography", "flask", "requests", "werkzeug", "PyJWT",]
+[[project.authors]]
+name = "Andreas Rühl"
+
+[[project.maintainers]]
+name = "Andreas Rühl"
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+GitHub = "https://github.com/aruehl/oauth2tools"
+"Bug Tracker" = "https://github.com/aruehl/oauth2tools/issues"
