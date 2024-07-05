@@ -1,0 +1,351 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/isaacRunFile",
+    "definitions": {
+        "isaacRunFile": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "runs": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/run"
+                    }
+                }
+            },
+            "required": [
+                "runs"
+            ],
+            "title": "isaacRunFile"
+        },
+        "run": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "enum": [
+                        "hard",
+                        "normal",
+                        "greed",
+                        "greedier"
+                    ]
+                },
+                "seed": {
+                    "type": "string"
+                },
+                "character": {
+                    "type": "string"
+                },
+                "startingItems": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/item"
+                    }
+                },
+                "ending": {
+                    "type": "string"
+                },
+                "floors": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/floor"
+                    }
+                }
+            },
+            "required": [
+                "character",
+                "ending",
+                "floors",
+                "seed",
+                "type"
+            ],
+            "title": "run"
+        },
+        "floor": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "number": {
+                    "type": "integer"
+                },
+                "type": {
+                    "enum": [
+                        "Basement",
+                        "Cellar",
+                        "Burning Basement",
+                        "Downpour",
+                        "Dross",
+                        "Caves",
+                        "Catacombs",
+                        "Flooded Caves",
+                        "Mines",
+                        "Ashpit",
+                        "Depths",
+                        "Necropolis",
+                        "Dank Depths",
+                        "Mausoleum",
+                        "Gehenna",
+                        "Womb",
+                        "Utero",
+                        "Scarred Womb",
+                        "???",
+                        "Corpse",
+                        "Cathedral",
+                        "Sheol",
+                        "Chest",
+                        "Dark Room",
+                        "The Void",
+                        "Home"
+                    ]
+                },
+                "curse": {
+                    "$ref": "#/definitions/curse"
+                },
+                "itemRoom": {
+                    "$ref": "#/definitions/itemRoom"
+                },
+                "shop": {
+                    "$ref": "#/definitions/shop"
+                },
+                "bossRoom": {
+                    "$ref": "#/definitions/bossRoom"
+                },
+                "bossRoomXL": {
+                    "$ref": "#/definitions/bossRoom"
+                },
+                "itemRoomXL": {
+                    "$ref": "#/definitions/itemRoom"
+                },
+                "specialRooms": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/specialRoom"
+                    }
+                },
+                "deal": {
+                    "$ref": "#/definitions/deal"
+                },
+                "items": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/item"
+                    }
+                }
+            },
+            "required": [
+                "bossRoom",
+                "curse",
+                "number",
+                "type"
+            ],
+            "title": "floor"
+        },
+        "bossRoom": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "visited": {
+                    "type": "boolean"
+                },
+                "boss": {
+                    "type": "string"
+                },
+                "champion": {
+                    "$ref": "#/definitions/champion"
+                },
+                "items": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/item"
+                    }
+                }
+            },
+            "required": [
+                "visited"
+            ],
+            "title": "bossRoom"
+        },
+        "item": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "taken": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "id",
+                "taken"
+            ],
+            "title": "item"
+        },
+        "itemRoom": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "rerollMachine": {
+                    "type": "boolean"
+                },
+                "visited": {
+                    "type": "boolean"
+                },
+                "items": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/item"
+                    }
+                }
+            },
+            "required": [
+                "visited"
+            ],
+            "title": "itemRoom"
+        },
+        "shop": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "rerollMachine": {
+                    "type": "boolean"
+                },
+                "visited": {
+                    "type": "boolean"
+                },
+                "boss": {
+                    "enum": [
+                        "Greed",
+                        "Ultra Greed"
+                    ]
+                },
+                "items": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/item"
+                    }
+                }
+            },
+            "required": [
+                "visited"
+            ],
+            "title": "shop"
+        },
+        "specialRoom": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "type": "string"
+                },
+                "visited": {
+                    "type": "boolean"
+                },
+                "items": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/item"
+                    }
+                },
+                "boss": {
+                    "type": "string"
+                },
+                "number": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "visited",
+                "type"
+            ],
+            "title": "specialRoom"
+        },
+        "deal": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "anyOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "enum": [
+                                "devil",
+                                "angel"
+                            ]
+                        }
+                    ]
+                },
+                "visited": {
+                    "anyOf": [
+                        {
+                            "type": "boolean"
+                        }
+                    ]
+                },
+                "chance": {
+                    "type": "number"
+                },
+                "boss": {
+                    "type": "string"
+                },
+                "items": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/item"
+                    }
+                }
+            },
+            "required": [
+                "type",
+                "chance"
+            ],
+            "title": "deal"
+        },
+        "curse": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "enum": [
+                        "Curse of the Blind",
+                        "Curse of Darkness",
+                        "Curse of the Lost",
+                        "Curse of the Maze",
+                        "Curse of the Unknown",
+                        "Curse of the Labyrinth",
+                        "Curse of the Cursed",
+                        "Curse of the Giant"
+                    ]
+                }
+            ],
+            "title": "curse"
+        },
+        "champion": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "enum": [
+                        "Red",
+                        "Yellow",
+                        "Black",
+                        "Grey",
+                        "Pink",
+                        "Brown",
+                        "Green",
+                        "Orange",
+                        "Blue",
+                        "Cyan",
+                        "Double Trouble"
+                    ]
+                }
+            ],
+            "title": "champion"
+        }
+    }
+}
