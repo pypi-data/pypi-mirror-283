@@ -1,0 +1,15 @@
+pdfdeal/__init__.py,sha256=w1DpRcBsma0vVrPWcPF2GhK4Qbp7CHY7665ZiHoynLk,237
+pdfdeal/doc2x.py,sha256=voWozXGL3ALYHsrXRVwPaqIZmy4uCigOKa1QBZYjwzM,21937
+pdfdeal/file_tools.py,sha256=srrakd9CYN5vZqUeG0ByC_RFdoljOFlYT-D9kpvJCCo,427
+pdfdeal/Doc2X/Convert.py,sha256=oPJlIEYrjM7ARh-3Vgh3a5jGfV703XCg03bMMMC2PH8,10985
+pdfdeal/Doc2X/Exception.py,sha256=-aM4obo4k9cmNNYtzkcZyAfqg_aakbcYm9uPQ-NTmnQ,3079
+pdfdeal/Doc2X/Types.py,sha256=HMAmO_GyZ5cKln5gy2FQXBGkqUiF2AHxtftrQuJICXM,1203
+pdfdeal/FileTools/dealmd.py,sha256=NjqneVwKhIdNTGB8CHXVZYbbUD8N5D5n01nqPfNkDy4,1112
+pdfdeal/FileTools/dealpdfs.py,sha256=0zD3kj0PLGQksw7zwKMQRWiBGa7WNfRLoNWxkrNIJzA,6117
+pdfdeal/FileTools/extract_img.py,sha256=RpRTDtmFwLLC9UBonZ-upsc0apOh72dITRUbB1Wj71A,3033
+pdfdeal/FileTools/file_tools.py,sha256=_YFlkru9gjnetNmRyk7r4LOOz9_YZ7dE8J5cektE_lY,5323
+pdfdeal/FileTools/ocr.py,sha256=OBWw7H46-GtHOoh5D6n3HH8GnR17QiaJuNwzHrc5onE,6228
+pdfdeal-0.1.4.dist-info/METADATA,sha256=XHCRA3Hi_4WqlG3TxsFccWVpnhO_UpnmNVJNiv_UNqw,8399
+pdfdeal-0.1.4.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+pdfdeal-0.1.4.dist-info/licenses/LICENSE,sha256=t9HEODO-QtQU4wXEz2WAOH1-z3dZ3IYt-folHx3enwo,1069
+pdfdeal-0.1.4.dist-info/RECORD,,
