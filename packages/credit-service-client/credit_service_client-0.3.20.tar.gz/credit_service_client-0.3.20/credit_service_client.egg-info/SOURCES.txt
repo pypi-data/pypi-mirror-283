@@ -1,0 +1,15 @@
+MANIFEST.in
+requirements.txt
+setup.py
+version
+credit_service_client/__init__.py
+credit_service_client.egg-info/PKG-INFO
+credit_service_client.egg-info/SOURCES.txt
+credit_service_client.egg-info/dependency_links.txt
+credit_service_client.egg-info/requires.txt
+credit_service_client.egg-info/top_level.txt
+credit_service_client/client/__init__.py
+credit_service_client/client/credit_service_client.py
+credit_service_client/protobuffs/__init__.py
+credit_service_client/protobuffs/compiled/__init__.py
+credit_service_client/protobuffs/compiled/credit_service_pb2.py
