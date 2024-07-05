@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+text2resume/__init__.py
+text2resume/generate_resume.py
+text2resume.egg-info/PKG-INFO
+text2resume.egg-info/SOURCES.txt
+text2resume.egg-info/dependency_links.txt
+text2resume.egg-info/entry_points.txt
+text2resume.egg-info/requires.txt
+text2resume.egg-info/top_level.txt
+text2resume/templates/template.tex
