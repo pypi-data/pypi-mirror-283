@@ -1,0 +1,22 @@
+{
+  "pins": {
+    "nix-pkgs": {
+      "type": "Git",
+      "repository": {
+        "type": "Git",
+        "url": "https://git.hubrecht.ovh/hubrecht/nix-pkgs.git"
+      },
+      "branch": "main",
+      "revision": "46879d052e4a694ceb3027dbcff641c44e0ae1bd",
+      "url": null,
+      "hash": "sha256-/Yn3NDYA76bv8x06jahLAJ2z54L0vFeAtQKzyW3MfGA="
+    },
+    "nixpkgs": {
+      "type": "Channel",
+      "name": "nixpkgs-unstable",
+      "url": "https://releases.nixos.org/nixpkgs/nixpkgs-24.11pre647329.6842b061970b/nixexprs.tar.xz",
+      "hash": "04inyzaffqclmymaphc4cwhywnyk51hi44508kfbsj9h57875hb6"
+    }
+  },
+  "version": 4
+}

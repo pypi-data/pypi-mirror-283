@@ -1,0 +1,86 @@
+image: python
+
+stages:
+  - linters
+  - tests
+  - release
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/vendor/pip"
+
+cache:
+  paths:
+    - vendor
+
+# ---
+# Linters
+# ---
+
+linters:
+  stage: linters
+  before_script:
+    - mkdir -p vendor/pip
+    - pip install --upgrade black isort flake8
+  script:
+    - black --check .
+    - isort --check --diff .
+    - flake8 --exit-zero authens
+
+# ---
+# Test suite
+# ---
+
+before_script:
+  - mkdir -p vendor/{apt,pip}
+  - apt-get update -q && apt-get -o dir::cache::archives="vendor/apt" install -yqq python3-dev libldap2-dev libsasl2-dev
+  - pip install tox
+
+python36:
+  image: python:3.6
+  stage: tests
+  script:
+    - tox -e py36-django22
+    - tox -e py36-django31
+    - tox -e py36-django32
+
+python37:
+  image: python:3.7
+  stage: tests
+  script:
+    - tox -e py37-django22
+    - tox -e py37-django31
+    - tox -e py37-django32
+
+python38:
+  image: python:3.8
+  stage: tests
+  script:
+    - tox -e py38-django22
+    - tox -e py38-django31
+    - tox -e py38-django32
+
+python39:
+  image: python:3.9
+  stage: tests
+  script:
+    - tox -e py39-django22
+    - tox -e py39-django31
+    - tox -e py39-django32
+
+# ---
+# Release artifacts
+# ---
+
+build_wheels:
+  stage: release
+  image: python
+  only:
+    - tags
+  artifacts:
+    paths:
+      - dist/*
+    when: on_success
+  before_script:
+    - pip install --upgrade setuptools wheel
+  script:
+    - python setup.py sdist

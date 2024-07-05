@@ -1,0 +1,21 @@
+# Common useless files
+__pycache__
+/venv
+*.sqlite3
+*~
+*.log
+
+# VSCode
+.vscode/
+
+# Vim
+*.swp
+*.swo
+
+# Tests
+.tox
+
+# Packaging
+/build
+/dist
+*.egg-info
