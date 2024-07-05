@@ -1,0 +1,18 @@
+Metadata-Version: 2.3
+Name: qa-store
+Version: 0.1.2
+Summary: Like a key-value store, but for questions and answers.
+Author-email: Donald Thompson <witt3rd@witt3rd.com>
+License-File: LICENSE
+Requires-Python: >=3.8
+Requires-Dist: chromadb>=0.5.3
+Requires-Dist: litellm>=1.41.6
+Requires-Dist: loguru>=0.7.2
+Requires-Dist: openai>=1.35.10
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: sentence-transformers>=3.0.1
+Description-Content-Type: text/markdown
+
+# Question-Answer Store
+
+Like key-value, but with questions and answers.
