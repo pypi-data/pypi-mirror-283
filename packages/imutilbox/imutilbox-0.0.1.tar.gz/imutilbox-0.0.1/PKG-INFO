@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: imutilbox
+Version: 0.0.1
+Summary: Utils for processing images
+Home-page: https://github.com/bitdessin/imutilbox
+Author: Jianqiang Sun
+Author-email: sun@bitdessin.dev
+License: MIT
+Keywords: image processing
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Requires-Dist: numpy
+Requires-Dist: Pillow
+Requires-Dist: opencv-python
+Requires-Dist: torch
+
+imutilbox

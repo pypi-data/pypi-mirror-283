@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+imutilbox.egg-info/PKG-INFO
+imutilbox.egg-info/SOURCES.txt
+imutilbox.egg-info/dependency_links.txt
+imutilbox.egg-info/requires.txt
+imutilbox.egg-info/top_level.txt
+imutilbox.egg-info/zip-safe
+src/__init__.py
+src/cnncls.py
+src/utilbase.py
