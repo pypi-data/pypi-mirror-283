@@ -1,0 +1,15 @@
+pacwrap/__init__.py,sha256=5PRikWDzRZaonuVjvIl0XeFuWzVD3ib4M0TqO3u_9LQ,18
+pacwrap/apt.py,sha256=hC-p1Cl7_5qu8awKqF6cD39rRPvhUKWZIDli-2h1NPg,1568
+pacwrap/cli.py,sha256=2DVZ7LofTI5qRWJmfvxCJAwJI2a76nhmmYIKWKSjYpU,4365
+pacwrap/dnf.py,sha256=pkYozRy6_yvRzSs-bMpHnvuqiKhjvlRmsfNbS66ZNbg,347
+pacwrap/mkhandler.py,sha256=4H6ZMqO7wRdgd82PFcifbZ6-6sH1rzkmMxgGqxKvDNs,1774
+pacwrap/options.py,sha256=SRw3C0CI20bPTv5cMRzfA9KAnJI53H6fgf31uIOIHQc,2061
+pacwrap/pacman.py,sha256=1jlyHmRJGJ6kv0fuZNgdKThfR4IMq0RmpY8qZAVL474,1512
+pacwrap/pkgmgr.py,sha256=yVyhWUEXDcW9aRDAoU70qeGOjZdsqwkbWBED4sw35ec,4596
+pacwrap/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pacwrap/yum.py,sha256=2Zb_9rgJQY4F6R2kNjtTjN1JwHb_hdceaJMPKhmIMQs,1809
+pacwrap-0.6.0.dist-info/LICENSE,sha256=QNVGIt3cnHUTthWG1OwOkgejsPfPSDfc8pJPjS96ze8,1093
+pacwrap-0.6.0.dist-info/METADATA,sha256=_BxvRQZ1iMrL6QJLNOK6cdpu46FkZaF_rYHiGgVaPiA,5012
+pacwrap-0.6.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pacwrap-0.6.0.dist-info/entry_points.txt,sha256=o3kFQZXebnf-mQxkR1zoKwrhEq0tQGJpCklcIAQOxeY,44
+pacwrap-0.6.0.dist-info/RECORD,,
