@@ -1,0 +1,40 @@
+[project]
+name = "webcat-agent"
+# Update also in webcat_agent.py
+version = "1.0.11"
+authors = [
+  {name="Kenneth Falck", email="kennu@clouden.net"}
+]
+description = "WebCat Agent"
+readme = "README.md"
+license = { text="MIT" }
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.urls]
+homepage = "https://github.com/webcatfi/webcatfi"
+repository = "https://github.com/webcatfi/webcatfi"
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.packages]
+find = {}
+
+[project.scripts]
+webcat-agent = "webcat_agent.__main__:main"
+
+[project.optional-dependencies]
+tests = [
+  "pytest",
+]
+ci = [
+]
+
+[tool.pytest.ini_options]
+testpaths = [
+  "tests",
+]
