@@ -1,0 +1,2 @@
+[console_scripts]
+diarydek = diarydek:main
