@@ -1,0 +1,10 @@
+debiased_sd/__init__.py,sha256=cxtXiqwINQI0WFdEyI9R1rIDe9lK_v04lJMCDtuuNns,132
+debiased_sd/__main__.py,sha256=hh5z9SzlW2O6InwF0JXXzQ6xpeg3EgbkcOHlqcUIZPg,1190
+debiased_sd/estimators.py,sha256=AqxFhEJ7NuyrVsFEkh4fgoR1OGAf54S_TsP1dmfxAB8,3078
+debiased_sd/utils.py,sha256=eLrxyJLrV7BHFG7l3PWrU1RfALmO2AQr1FPrj-w5aTU,7535
+debiased_sd-0.1.0.dist-info/AUTHORS.rst,sha256=f03eHdygZTuxfqWbH4cdH8Ony7NLnLSJxz8nBULt4i8,159
+debiased_sd-0.1.0.dist-info/LICENSE,sha256=bTzQMz3WPdFSxcZJRuqZUlJnvYiAqPC-K4uKcawIdZE,1561
+debiased_sd-0.1.0.dist-info/METADATA,sha256=2qoJlrmc_3oIkLzetEdHgNWYzOy2j7DgkCNA7QQQpxw,2578
+debiased_sd-0.1.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+debiased_sd-0.1.0.dist-info/top_level.txt,sha256=bjprbGbO9QbgMVV_G9AZQ-2Tfjes03liJ6f_bYEA_Eo,12
+debiased_sd-0.1.0.dist-info/RECORD,,
