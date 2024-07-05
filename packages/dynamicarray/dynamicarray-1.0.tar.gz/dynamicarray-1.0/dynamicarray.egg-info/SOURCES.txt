@@ -1,0 +1,6 @@
+dynamic_array.c
+setup.py
+dynamicarray.egg-info/PKG-INFO
+dynamicarray.egg-info/SOURCES.txt
+dynamicarray.egg-info/dependency_links.txt
+dynamicarray.egg-info/top_level.txt

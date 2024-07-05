@@ -1,0 +1,4 @@
+Metadata-Version: 2.1
+Name: dynamicarray
+Version: 1.0
+Summary: A simple dynamic array module implemented in C
