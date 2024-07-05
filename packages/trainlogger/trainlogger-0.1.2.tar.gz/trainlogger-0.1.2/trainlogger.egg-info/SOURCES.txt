@@ -1,0 +1,11 @@
+README.rst
+setup.py
+trainlogger/__init__.py
+trainlogger/basics.py
+trainlogger/extract_info.py
+trainlogger/trainer.py
+trainlogger.egg-info/PKG-INFO
+trainlogger.egg-info/SOURCES.txt
+trainlogger.egg-info/dependency_links.txt
+trainlogger.egg-info/requires.txt
+trainlogger.egg-info/top_level.txt
