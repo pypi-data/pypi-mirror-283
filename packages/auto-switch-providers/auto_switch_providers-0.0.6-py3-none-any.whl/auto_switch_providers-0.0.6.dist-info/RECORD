@@ -1,0 +1,14 @@
+auto_switch_providers/__init__.py,sha256=f6JyOq-saNTgjCn7_IxoQM2BcHAAz-adIZ5jvTxks8U,298
+auto_switch_providers/__version__.py,sha256=_8ddrQN3itHV-a4ShLCCyF3_nyIvYT_WGC5NTYMxDXc,277
+auto_switch_providers/auto_switch_providers.py,sha256=L7LOI_LAbCFZn_Tb3MK3VwVMbvJldLpWoA08dZLlpBA,11391
+auto_switch_providers/cache_service.py,sha256=hmxWlmMblaqb53hP7WvQTGTZ0-qGxU9iOkG2rzenUuw,2416
+auto_switch_providers/http_service.py,sha256=e4VGBfhGPcy2t_cSls51KoNXRrY8mmbKa2-MycouItk,6281
+auto_switch_providers/services/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+auto_switch_providers/services/redis_service.py,sha256=BkuEgUGvYWwNUjvbSLE53mbS1VAKuWNynahT77-N5XQ,720
+auto_switch_providers/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+auto_switch_providers/utils/helpers.py,sha256=Y2oK19AgszqIpjTn_3Oy-xVEAx0V-eBjbXPEMjW9oTU,597
+auto_switch_providers-0.0.6.dist-info/LICENSE,sha256=1kw5uy8sRCf72cSn5MapqCbIZNL6ouMwGTfjfEL8mQ4,1054
+auto_switch_providers-0.0.6.dist-info/METADATA,sha256=fkn_kvxqmvhVmKhY5z_f1O3vlbf-yLw1KETFeMDdmoU,1986
+auto_switch_providers-0.0.6.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+auto_switch_providers-0.0.6.dist-info/top_level.txt,sha256=1MGzIjMyun0arT52-yg6bH_HsKoQysF6s8cAidarMxU,22
+auto_switch_providers-0.0.6.dist-info/RECORD,,
