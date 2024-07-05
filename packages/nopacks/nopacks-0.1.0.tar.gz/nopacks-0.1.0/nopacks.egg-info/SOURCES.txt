@@ -1,0 +1,6 @@
+setup.py
+nopacks.egg-info/PKG-INFO
+nopacks.egg-info/SOURCES.txt
+nopacks.egg-info/dependency_links.txt
+nopacks.egg-info/requires.txt
+nopacks.egg-info/top_level.txt
