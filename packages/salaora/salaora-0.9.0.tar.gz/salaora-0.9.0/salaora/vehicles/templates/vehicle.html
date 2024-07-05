@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<h2>{{ vehicle.model }} [{{ vehicle.plate }}]</h2>
+<div class="row">
+    <div class="col-md-6">
+        <p>{{ vehicle.details }}</p>
+        <h4>Features</h4>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th scope="row">Color</th>
+                    <td>{{ vehicle.color }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Vehicle Type</th>
+                    <td>{{ vehicle.vehicle_type }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Engine Type</th>
+                    <td>{{ vehicle.engine_type }}</td>
+                </tr>
+                    <tr>
+                        <th scope="row">Price</th>
+                        <td>{{ vehicle.price }}&euro;</td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6">
+        {% if vehicle.image %}
+        <img src="{{ vehicle.image.url }}" class="img-fluid" alt="Image of vehicle">
+        {% endif %}
+    </div>
+</div>
+<div class="row py-5">
+    <div class="col-lg-6">
+        <h4>License</h4>
+        {% if vehicle.image %}
+        <img src="{{ vehicle.license_image.url }}" class=" w-100 img-fluid" alt="License of vehicle">
+        {% endif %}
+    </div>
+    <div class="col-lg-6">
+        <h4>Insurance</h4>
+        <embed src="data:application/pdf;base64,{{ insurance_pdf }}" type="application/pdf" width="100%" height="700px" 6>
+    </div>
+</div>
+<hr>
+<div class="row py-5">
+    <div class="col">
+        <h4 class="text-center">Reservations</h4>
+        <table class="table table-striped" id="myTable">
+          <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Client</th>
+                <th scope="col">Departure at</th>
+                <th scope="col">Return at</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for reservation in vehicle.reservation_set.all %}
+            <tr title="{{ reservation.details }}">
+                <th scope="row"><a href="{% url 'crud_reservation' pk=reservation.pk %}">{{ reservation.pk }}</a></th>
+                <td>{{ reservation.client_name }}</td>
+                <td>{{ reservation.departure_dt }}</td>
+                <td>{{ reservation.return_dt }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+    </div>
+</div>
+{% endblock page_content %}
+
+{% block js_code %}
+$(document).ready( function () {
+    $('#myTable').DataTable({
+    lengthChange: false
+    });
+} );
+{% endblock js_code %}

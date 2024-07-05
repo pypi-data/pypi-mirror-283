@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<h2>Vehicles</h2>
+<div class="row">
+{% for vehicle in vehicles %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <div class="card-body">
+                <h5 class="card-title">{{ vehicle.model }} <a href="{% url 'vehicle' vehicle.pk %}">[{{ vehicle.plate }}]</a></h5>
+                <div class="row" {% if not vehicle.is_available %} style="filter: blur(1px) brightness(60%)" {% endif %}>
+                    <div class="col-6">
+                        <ul>
+                            <li>{{ vehicle.color }}</li>
+                            <li>{{ vehicle.vehicle_type }}</li>
+                            <li>{{ vehicle.engine_type }}</li>
+                            <li>{{ vehicle.price }}&euro;</li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <img src="{{ vehicle.image.url }}" class="img-fluid" alt="" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+{% endblock page_content %}

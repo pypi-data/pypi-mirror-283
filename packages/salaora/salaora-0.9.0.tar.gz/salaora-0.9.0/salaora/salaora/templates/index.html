@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<h2>Home</h2>
+<div class="row">
+    <div class="col-6">
+        <h3>Pending departures for {% now "" %}</h3>
+        {% for reservation in today_pending_departures %}
+        <div class="card my-3 shadow">
+            <div class="card-body">
+                <h5 class="card-title">#{{reservation.pk}} {{ reservation.client_name }}</h5>
+                <div class="row">
+                    <div class="col-md-6 text-left">
+                        <p>{{ reservation.vehicle.model }} [{{ reservation.vehicle.plate }}]</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <p>{{ reservation.departure_dt.time }}</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="{% url 'crud_reservation' reservation.pk %}" class="btn btn-primary">
+                            Depart now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="col-6">
+        <h3>Pending returns for {% now "" %}</h3>
+        {% for reservation in today_pending_returns %}
+        <div class="card my-3 shadow">
+            <div class="card-body">
+                <h5 class="card-title">#{{reservation.pk}} {{ reservation.client_name }}</h5>
+                <div class="row">
+                    <div class="col-md-6 text-left">
+                        <p>{{ reservation.vehicle.model }} [{{ reservation.vehicle.plate }}]</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <p>{{ reservation.return_dt.time }}</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="{% url 'crud_reservation' reservation.pk %}" class="btn btn-primary">
+                            Return now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock page_content %}

@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<h2>{% if update_flag %}Edit Reservation #{{reservation.pk}} {% else %} Create Reservation{% endif %}</h2>
+
+<div class="container w-75 py-5">
+    {% if update_flag %}
+        <form action="{% url 'crud_reservation' pk=reservation.pk %}" method="post" class="row g-3 border py-3">
+    {% else %}
+        <form action="{% url 'crud_reservation' %}" method="post" class="row g-3 border py-3">
+    {% endif %}
+      {% csrf_token %}
+      <div class="col-md-6">
+        <label for="inputVehicle" class="form-label">Vehicle</label>
+        <select id="inputVehicle" name="vehicle" class="form-select">
+            {% if update_flag %}
+                {% for vehicle in vehicles %}
+                    {% if vehicle.pk == reservation.vehicle.pk %}
+                        <option selected value="{{ vehicle.pk }}">{{ vehicle.model }} [{{ vehicle.pk }}]</option>
+                    {% else %}
+                        <option value="{{ vehicle.pk }}">{{ vehicle.model }} [{{ vehicle.pk }}]</option>
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                {% for vehicle in vehicles %}
+                    <option  value="{{ vehicle.pk }}">{{ vehicle.model }} [{{ vehicle.pk }}]</option>
+                {% endfor %}
+            {% endif %}
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="inputClient" class="form-label">Client Name</label>
+        <input type="text" name="client_name" class="form-control" id="inputClient"
+            {% if update_flag %} value="{{ reservation.client_name }}" {% endif %}>
+      </div>
+
+        <div class="col-md-6">
+            <label for="inputDeparture">Departure Date</label>
+            <input id="inputDeparture" name="departure_dt" class="form-control" type="datetime-local"
+            {% if update_flag %} value="{{ reservation.departure_dt|date:'Y-m-d\TH:i' }}" {% else %} value="{{ default_departure_dt|date:'Y-m-d\TH:i' }}" {% endif %}>
+        </div>
+        <div class="col-md-6">
+            <label for="inputReturn">Return Date</label>
+            <input id="inputReturn" name="return_dt" class="form-control" type="datetime-local"
+            {% if update_flag %} value="{{ reservation.return_dt|date:'Y-m-d\TH:i' }}" {% else %} value="{{ default_return_dt|date:'Y-m-d\TH:i' }}" {% endif %}>
+        </div>
+        <div class="col-12">
+            <label for="inputDetails">Details</label>
+            <textarea class="form-control" name="details" id="inputDetails" rows="3">{% if update_flag %}{{ reservation.details }}{% endif %}</textarea>
+        </div>
+      <div class="col-12">
+      {% if update_flag %}
+          <a href="{% url 'delete_reservation' reservation.pk %}" onclick="if (!confirm('Delete reservation # {{reservation.pk }}?')) return false;" class="btn btn-danger">
+              Delete
+          </a>
+      {% endif %}
+        <button type="submit" class="btn btn-primary float-end">
+            {% if update_flag %}
+                Update
+            {% else %}
+                Create
+            {% endif %}
+        </button>
+      </div>
+    </form>
+</div>
+
+{% endblock page_content %}

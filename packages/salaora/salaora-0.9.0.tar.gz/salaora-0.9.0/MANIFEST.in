@@ -1,0 +1,6 @@
+include LICENSE
+include README.md
+recursive-include salaora *.html
+recursive-include salaora/media/defaults *
+recursive-include salaora/static/ *
+recursive-exclude salaora */migrations/*

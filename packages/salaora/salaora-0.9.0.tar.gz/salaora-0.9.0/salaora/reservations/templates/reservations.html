@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<h2>Reservations</h2>
+<table class="table" id="myTable">
+  <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Client</th>
+        <th scope="col">Plate</th>
+        <th scope="col">Model</th>
+        <th scope="col">Departure at</th>
+        <th scope="col">Return at</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for reservation in reservations %}
+    <tr title="{{ reservation.details }}">
+        <th scope="row"><a href="{% url 'crud_reservation' pk=reservation.pk %}">{{ reservation.pk }}</a></th>
+        <td>{{ reservation.client_name }}</td>
+        <td>{{ reservation.vehicle.pk }}</td>
+        <td>{{ reservation.vehicle.model }}</td>
+        <td>{{ reservation.departure_dt }}</td>
+        <td>{{ reservation.return_dt }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock page_content %}
+
+
+{% block js_code %}
+$(document).ready( function () {
+    $('#myTable').DataTable({
+        lengthChange: false
+    });
+} );
+{% endblock js_code %}

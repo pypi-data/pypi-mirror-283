@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: salaora
+Version: 0.9.0
+Summary: A Django app to manage car rentals
+Home-page: https://github.com/GeorgeVasiliadis
+Author: George Vasiliadis
+Author-email: geor.vasiliadis@gmail.com
+License: MIT
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: Django>=4.2
+
+# Salaora
+
+This Django app is meant to facilitate car rental processes.
