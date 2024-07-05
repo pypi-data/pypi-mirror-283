@@ -1,0 +1,55 @@
+{% extends "incursions/base-bs5.html" %}
+{% load i18n %}
+{% load humanize %}
+{% load static %}
+{% block page_title %}
+    {% translate "Incursion Data" %}
+{% endblock page_title %}
+
+{% block header_nav_brand %}
+    {% translate "Incursion Data" %}
+{% endblock header_nav_brand %}
+
+{% block content %}
+    <div class="card-group">
+        {% for incursion in incursions %}
+            <div class="col">
+                <div class="card">
+                    <img src="" class="card-img-top" alt="" />
+                    <div class="card-body">
+                        <h5 class="card-title">{{ incursion.constellation__name }}</h5>
+                        <p class="card-text">
+                            Influence:
+                            <br />
+                            {% if incursion.state == "established" %}
+                                State: <span class="badge bg-success">Established</span>
+                            {% elif incursion.state == "mobilizing" %}
+                                State: <span class="badge bg-warning">Mobilized</span>
+                            {% elif incursion.state == "withdrawing" %}
+                                State: <span class="badge bg-error">Withdrawing</span>
+                            {% endif %}
+                            <br />
+                            Region: <span class="badge bg-secondary">{{ incursion.constellation__eve_region__name }}</span>
+                            <br />
+                            Staging System: <span class="badge bg-secondary">{{ incursion.staging_solar_system }}</span>
+                            <br />
+                            Security Status:
+                            <br />
+                            Started: <span class="badge bg-secondary">{{ incursion.established_timestamp }}</span>
+                            <br />
+                            Remaining:
+                            <br />
+                            Staging:
+                            <br />
+                            Vanguards:
+                            <br />
+                            Headquarters:
+                            <br />
+                        </p>
+                        <a href="#" class="btn btn-primary">Details</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}
