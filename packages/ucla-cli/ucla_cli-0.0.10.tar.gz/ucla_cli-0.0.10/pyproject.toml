@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "ucla-cli"
+version = "0.0.10"
+description = ""
+authors = ["David Davini <dndavini3.14@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: End Users/Desktop",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+homepage = "https://github.com/daviddavini/ucla-cli"
+repository = "https://github.com/daviddavini/ucla-cli"
+documentation = "https://github.com/daviddavini/ucla-cli#readme"
+keywords = ["ucla", "course", "web-scraper", "cli"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.32.3"
+beautifulsoup4 = "^4.12.3"
+termcolor = "^2.4.0"
+click = "^8.1.7"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/daviddavini/ucla-cli/issues"
+
+[tool.poetry.group.dev.dependencies]
+coverage = {extras = ["toml"], version = ">=6.5"}
+pytest = "^8.2.2"
+black = ">=23.1.0"
+mypy = ">=1.0.0"
+ruff = ">=0.0.243"
+
+[tool.poetry.scripts]
+ucla = "ucla_cli:ucla"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
