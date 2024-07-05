@@ -1,0 +1,9 @@
+tensorflow
+keras
+jaxtyping
+haskellian
+tf-ctc
+demetric
+checkptr
+tensorflow-records
+tf-tools
