@@ -1,0 +1,10 @@
+threads_arg_python_bindings.cpython-311-darwin.so,sha256=8LUR-za8WFICATQvkLhO8gsnl2XTDNOEfbLJflZxogk,561984
+threads_arg-0.1.0.dist-info/RECORD,,
+threads_arg-0.1.0.dist-info/WHEEL,sha256=wYFDzWPi2Fy7jjmyw-QOHDFBpjHa51vwZx5kBJlrfhM,113
+threads_arg-0.1.0.dist-info/entry_points.txt,sha256=rZPzemrBZpqA5DaOgTliX6eKv56uJsBEd7IhPTlbx3o,55
+threads_arg-0.1.0.dist-info/METADATA,sha256=c_hFL18AXokgKsYVi7O9VXmSigvlClQcya5s96iPgyE,3272
+threads_arg-0.1.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+threads_arg/__init__.py,sha256=Pk8xm-1qsGQPs_EW47NtH2wC1JzqzJrBqRv668n6ZEw,774
+threads_arg/mapping_utils.py,sha256=MslGeUcL0ujg5Ak8IfCLwr8I1--_HfWSbz_sVvVtBoA,4142
+threads_arg/utils.py,sha256=Q9ckw0niW_w9u3IjKBsIquemfpvnYlrk7QahKaHxCW8,4616
+threads_arg/__main__.py,sha256=HJiphF9Mk-5XvS1WMUvMCrSAEatkRpAGWSD0tdXpz00,30773
