@@ -1,0 +1,3 @@
+[console_scripts]
+scidock=scidock.scidock:main
+
