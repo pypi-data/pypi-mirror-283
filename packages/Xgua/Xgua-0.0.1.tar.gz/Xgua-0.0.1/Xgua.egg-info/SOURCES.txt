@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+Xgua/__init__.py
+Xgua/config.py
+Xgua/logger.py
+Xgua.egg-info/PKG-INFO
+Xgua.egg-info/SOURCES.txt
+Xgua.egg-info/dependency_links.txt
+Xgua.egg-info/top_level.txt
