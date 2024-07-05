@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: msit
+Version: 7.0.0rc630
+Summary: msIT, MindStudio Inference Tools
+Home-page: https://gitee.com/ascend/msit
+License: Apache-2.0
+Keywords: msit
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
