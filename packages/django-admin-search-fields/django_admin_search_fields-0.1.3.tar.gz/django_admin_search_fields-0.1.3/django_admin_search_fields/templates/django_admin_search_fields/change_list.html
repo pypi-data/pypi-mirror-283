@@ -1,0 +1,4 @@
+{% extends "admin/change_list.html" %}
+{% load dasf_tags %}
+
+{% block search %}{% dasf_search_form cl search_field_selections %}{% endblock %}

@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: django-admin-search-fields
+Version: 0.1.3
+Summary: django-admin-search-fields allows users to dynamically selecting search fields on list page
+Author-email: Ishak Okutan <ishak.oktn@gmail.com>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2024, İshak Okutan
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Project-URL: Documentation, https://github.com/ishakoktn/django-admin-search-fields/blob/master/README.md
+Project-URL: Homepage, https://github.com/ishakoktn/django-admin-search-fields
+Project-URL: Repository, https://github.com/ishakoktn/django-admin-search-fields
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.2
+Classifier: Framework :: Django :: 4.2
+Classifier: Framework :: Django :: 5.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: django>=3.2
+
+django-admin-search-fields
+============
+
+The django-admin-search-fields feature empowers users to dynamically select search fields on the list page of the Django admin. This capability provides flexibility and improves the user experience by allowing administrators to tailor their search queries based on the context of their data exploration needs.
+
+![After](ss.png "screen shot")
+
+
+Key Benefits
+-----------
+* **Customizable Search Experience**: Users can specify which fields to search on the fly, making it easier to perform targeted queries.
+* **Enhanced Usability**: Provides an intuitive interface to select search fields, improving efficiency in data management.
+* **Performance Optimization**: Reduces the overhead of searching across unnecessary fields, enhancing query performance.
+
+
+How To Use
+-----------
+
+1. Install package with `pip install django-admin-search-fields`.
+
+
+2. Add `django_admin_search_fields` to  `INSTALLED_APPS` in your `settings.py`. `django_admin_search_fields` should placed before the used apps:
+```
+    INSTALLED_APPS = [
+        ...,
+        "django_admin_search_fields",
+        ...
+        "your_app"
+    ]
+```
+
+3. Import and inherit `DjangoAdminSearchFieldModelAdmin` to your custom model admin class and set `search_field_choices` like below:
+
+``` 
+    from django_admin_search_fields.admin import DjangoAdminSearchFieldModelAdmin
+    
+    class PostAdmin(DjangoAdminSearchFieldModelAdmin):
+        search_field_choices = (
+            ('title', True, 'Title'),  # Prechecked by default
+            ('subtitle', False),       # Not prechecked by default
+            ('author__first_name', False, _("Author's first name"))  # Requires a verbose name for relational fields
+        )
+        ...
+    
+    admin.site.register(Post, PostAdmin)
+
+```
