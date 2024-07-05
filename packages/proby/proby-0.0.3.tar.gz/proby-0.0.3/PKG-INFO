@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: proby
+Version: 0.0.3
+Summary: A package to compute probailities of complex match structures.
+Author-email: Marco Milanta <marco.milanta@gmail.com>
+Project-URL: Homepage, https://github.com/mmilanta/probable-spork
+Project-URL: Issues, https://github.com/mmilanta/probable-spork/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# proby
+A python library to compute enhancing winning probability of matches composed of many smaller points. I.e. Tennis, Ping Pong, Volleybal, ...
