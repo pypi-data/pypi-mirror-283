@@ -1,0 +1,33 @@
+file = [header NL] record *tail-record [NL] ; metadata: header head_record tail_records DROP
+
+tail-record = NL record ; metadata: DROP record
+
+header = name *tail-name ; metadata: head_name tail_names
+
+tail-name = COMMA name ; metadata: DROP name
+
+record = field *tail-field ; metadata: head_field tail_fields
+
+tail-field = COMMA field ; metadata: DROP field
+
+name = field ; metadata: field
+
+field = (escaped / non-escaped) ; metadata: value
+
+escaped = DQUOTE *(TEXTDATA / COMMA / CR / LF / 2DQUOTE) DQUOTE ; metadata: DROP value DROP
+
+non-escaped = *TEXTDATA ; metadata: value
+
+COMMA = %x2C ; metadata: DROP
+
+CR = %x0D ; metadata: DROP
+
+DQUOTE = %x22 ; metadata: DROP
+
+LF = %x0A ; metadata: DROP
+
+CRLF = CR LF ; metadata: DROP
+
+NL = (CRLF / LF) ; metadata: value
+
+TEXTDATA =  %x20-21 / %x23-2B / %x2D-7E ; metadata: value

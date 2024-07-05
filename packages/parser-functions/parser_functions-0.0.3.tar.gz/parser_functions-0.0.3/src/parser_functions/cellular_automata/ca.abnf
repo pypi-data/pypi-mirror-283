@@ -1,0 +1,11 @@
+rulestring = (birth-survival-notation / sb-notation) [neighborhood]  ; metadata: rule neighborhood
+
+birth-survival-notation = "B" digits sep "S" digits     ; metadata: DROP first DROP DROP second
+sb-notation = digits sep digits                     ; metadata: first DROP second
+
+neighborhood = "V" / "H"  ; metadata: value
+
+sep = "/"  ; metadata: DROP
+
+digit = %x30-39  ; metadata: value
+digits = *digit  ; metadata: digits
