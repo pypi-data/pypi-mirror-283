@@ -1,0 +1,2277 @@
+[
+  {
+    "args": [
+      "pid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "marksandspencer.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "srsltid",
+      "com_cvv"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "upscaleaudio.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "source",
+      "originalStore",
+      "categoryId"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "abercrombie.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "from",
+      "athbdg",
+      "adsRedirect",
+      "com_cvv",
+      "selectedSellerId",
+      "wmlspartner",
+      "athpgid",
+      "athznid",
+      "athAsset",
+      "athcpid",
+      "athcgid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "walmart.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "cpid",
+      "pcid",
+      "mlink",
+      "clink",
+      "cexp",
+      "vid",
+      "ccam",
+      "ctype",
+      "cvar",
+      "nav",
+      "tid",
+      "cid",
+      "cpos",
+      "kcid",
+      "rrec"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "gap.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "page"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "ikea.co.id"
+      ]
+    }
+  },
+  {
+    "args": [
+      "googleShop"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "dillards.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "c1",
+      "c2"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "idc-otsuka.jp"
+      ]
+    }
+  },
+  {
+    "args": [
+      "cgid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "hugoboss.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "c"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "vivantis.hu"
+      ]
+    }
+  },
+  {
+    "args": [
+      "pr_rec_id",
+      "pr_prod_strat",
+      "pr_rec_pid",
+      "pr_ref_pid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "masterpiecejewellery.com.au"
+      ]
+    }
+  },
+  {
+    "args": [
+      "sid",
+      "rec"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "krakvet.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "from"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "sexshop.com.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "pldDisplayCode"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "uniqlo.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "origin",
+      "recs_strategy",
+      "breadcrumb",
+      "recs_placement"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "nordstromrack.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "trk_ro",
+      "trk_hp",
+      "trk_re",
+      "trk_o",
+      "trk_e",
+      "trk_hb"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "topsanit.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "_sid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "bestbuylighting.com.au"
+      ]
+    }
+  },
+  {
+    "args": [
+      "srsltid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "avenue.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "c"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "parfum.cz"
+      ]
+    }
+  },
+  {
+    "args": [
+      "msid",
+      "page",
+      "navpath",
+      "position",
+      "childItemId"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "neimanmarcus.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "context-cookie"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "frisco.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "categoryId"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "dickssportinggoods.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "fnode"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "apple.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "merchantId",
+      "boutiqueId"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "trendyol.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "itm_campaign",
+      "sort",
+      "itm_medium"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "mtbiker.sk"
+      ]
+    }
+  },
+  {
+    "args": [
+      "recommendation",
+      "source",
+      "viewcode"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "urbanoutfitters.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "currency",
+      "catId",
+      "country",
+      "urlState",
+      "deptId",
+      "rrplacementtype",
+      "searchTerm",
+      "productGridView",
+      "badge",
+      "criteriaName"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "jcpenney.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "s"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "digikey.com.au"
+      ]
+    }
+  },
+  {
+    "args": [
+      "query_id"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "konesso.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "magaza"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "hepsiburada.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "v"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "auto-doplnky.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "search",
+      "offer"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "conrad.sk"
+      ]
+    }
+  },
+  {
+    "args": [
+      "_sgm_campaign",
+      "keyword",
+      "_sgm_source",
+      "_sgm_action"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "szerszamkell.hu"
+      ]
+    }
+  },
+  {
+    "args": [
+      "osp",
+      "opre",
+      "refccid",
+      "lyceumGuid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "bedbathandbeyond.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "cateCode"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "hola.com.tw"
+      ]
+    }
+  },
+  {
+    "args": [
+      "skuid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "liverpool.com.mx"
+      ]
+    }
+  },
+  {
+    "args": [
+      "_pos",
+      "_sid",
+      "_ss"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "byron-camping.com.au"
+      ]
+    }
+  },
+  {
+    "args": [
+      "spotlightTagId",
+      "otracker",
+      "marketplace",
+      "srno",
+      "iid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "flipkart.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "pr_prod_strat",
+      "pr_seq",
+      "pr_rec_id",
+      "pr_rec_pid",
+      "pr_ref_pid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "colettehayman.com.au"
+      ]
+    }
+  },
+  {
+    "args": [
+      "gclid",
+      "cjdata"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "pilulka.sk"
+      ]
+    }
+  },
+  {
+    "args": [
+      "v2"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "zara.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "piid[]",
+      "rec_src",
+      "redir",
+      "piid[0]",
+      "rtype",
+      "dept"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "templeandwebster.com.au"
+      ]
+    }
+  },
+  {
+    "args": [
+      "c"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "sperky.cz"
+      ]
+    }
+  },
+  {
+    "args": [
+      "categoryid",
+      "clearance",
+      "placement",
+      "slot",
+      "auctionId"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "wayfair.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "campaign-id"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "bookbook.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "isFromSale",
+      "fit",
+      "intcmp",
+      "noPopUp",
+      "display",
+      "sale"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "jcrew.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "_sgm_source",
+      "query_id",
+      "_sgm_campaign",
+      "rec",
+      "_sgm_action"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "congee.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "sourcePageType",
+      "str_category_code"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "momoshop.com.tw"
+      ]
+    }
+  },
+  {
+    "args": [
+      "cate"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "thaiwatsadu.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "sh",
+      "avte",
+      "avtc"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "ozon.ru"
+      ]
+    }
+  },
+  {
+    "args": [
+      "trk_o",
+      "trk_hb",
+      "trk_re",
+      "trk_e"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "delikatesyznatury.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "qc"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "grube.de"
+      ]
+    }
+  },
+  {
+    "args": [
+      "c"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "parfemy.cz"
+      ]
+    }
+  },
+  {
+    "args": [
+      "pr_seq",
+      "pr_rec_id",
+      "pr_prod_strat",
+      "pr_rec_pid",
+      "pr_ref_pid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "amousewithahouse.com.au"
+      ]
+    }
+  },
+  {
+    "args": [
+      "oc",
+      "sustainability"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "crateandbarrel.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "shop"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "koctas.com.tr"
+      ]
+    }
+  },
+  {
+    "args": [
+      "search_way"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "kohnan-eshop.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "rec",
+      "query_id"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "terme.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "attribute_fragrance"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "buynatural.com.au"
+      ]
+    }
+  },
+  {
+    "args": [
+      "open"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "olekmotocykle.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "inventoryCountry",
+      "source",
+      "countryCode"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "freepeople.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "from"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "walmart.com.mx"
+      ]
+    }
+  },
+  {
+    "args": [
+      "snrai_id",
+      "snrai_campaign"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "fera.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "offid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "sfd.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "isSearchPage",
+      "q"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "maxizoo.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "_pos",
+      "_fid",
+      "_ss"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "branchline.com.au"
+      ]
+    }
+  },
+  {
+    "args": [
+      "nh"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "asko-nabytek.cz"
+      ]
+    }
+  },
+  {
+    "args": [
+      "srsltid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "levi.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "t"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "carrefour.fr"
+      ]
+    }
+  },
+  {
+    "args": [
+      "_stat_f",
+      "_stat_d",
+      "off"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "megamajster.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "c"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "prozdravi.cz"
+      ]
+    }
+  },
+  {
+    "args": [
+      "page"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "pharmacydirect.com.au"
+      ]
+    }
+  },
+  {
+    "args": [
+      "category",
+      "notFound",
+      "type",
+      "tagId",
+      "source",
+      "catalogNumber",
+      "return",
+      "photo",
+      "psm"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "bonprix.hu"
+      ]
+    }
+  },
+  {
+    "args": [
+      "sellingOfferId",
+      "promo"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "bol.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "s"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "digikey.in"
+      ]
+    }
+  },
+  {
+    "args": [
+      "pr",
+      "rec"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "adidas.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "cjdata",
+      "fbclid",
+      "cjevent",
+      "gclid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "pilulka.cz"
+      ]
+    }
+  },
+  {
+    "args": [
+      "ch_type"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "vivre.bg"
+      ]
+    }
+  },
+  {
+    "args": [
+      "icid2"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "sephora.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "pos",
+      "N"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "tjx.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "search",
+      "offer"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "conrad.cz"
+      ]
+    }
+  },
+  {
+    "args": [
+      "pr_rec_id",
+      "pr_ref_pid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "hominginstincts.com.au"
+      ]
+    }
+  },
+  {
+    "args": [
+      "indexName",
+      "objectID",
+      "queryID"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "bonds.com.au"
+      ]
+    }
+  },
+  {
+    "args": [
+      "show_locale"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "mujkoberec.cz"
+      ]
+    }
+  },
+  {
+    "args": [
+      "q"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "ottos.ch"
+      ]
+    }
+  },
+  {
+    "args": [
+      "itm_medium",
+      "itm_campaign"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "mthiker.sk"
+      ]
+    }
+  },
+  {
+    "args": [
+      "reviews"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "tsbohemia.cz"
+      ]
+    }
+  },
+  {
+    "args": [
+      "dim2"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "tchibo.cz"
+      ]
+    }
+  },
+  {
+    "args": [
+      "page"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "superzoo.sk"
+      ]
+    }
+  },
+  {
+    "args": [
+      "trk_o",
+      "trk_hb",
+      "trk_hp",
+      "trk_e",
+      "trk_ro",
+      "trk_re"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "biogo.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "q"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "nowafarmacja.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "adviserOrigin",
+      "shop"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "bonprix.cz"
+      ]
+    }
+  },
+  {
+    "args": [
+      "_requestid",
+      "bc"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "fleetfarm.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      ""
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "evidea.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "CategoryID",
+      "pla_country"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "bloomingdales.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "ver"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "eofficemedia.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "keyword"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "pingvinpatika.hu"
+      ]
+    }
+  },
+  {
+    "args": [
+      "fm"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "auspost.com.au"
+      ]
+    }
+  },
+  {
+    "args": [
+      "itemlistname",
+      "c",
+      "promotion_name",
+      "creative_name",
+      "itemlistid",
+      "promotion_id"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "rodinnebaleni.cz"
+      ]
+    }
+  },
+  {
+    "args": [
+      "fromId",
+      "type",
+      "filter",
+      "cat",
+      "sort",
+      "search"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "pepperfry.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "page_from"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "eoptika.hu"
+      ]
+    }
+  },
+  {
+    "args": [
+      "webcat",
+      "cgid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "ralphlauren.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "p"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "kika.at"
+      ]
+    }
+  },
+  {
+    "args": [
+      "c"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "stylauto.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "c"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "krasa.cz"
+      ]
+    }
+  },
+  {
+    "args": [
+      "currency"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "marcellanyc.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "nosto",
+      "nosto_source",
+      "srsltid",
+      "catfilter"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "citychiconline.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "pc"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "jom.pt"
+      ]
+    }
+  },
+  {
+    "args": [
+      "snrai_id",
+      "intc_s",
+      "snrai_campaign",
+      "intc_n"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "brw.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "feed"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "belk.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "srsltid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "tractorsupply.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "searchType",
+      "fulfillment"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "kroger.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "snrai_id",
+      "snrai_campaign"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "selsey.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "cat",
+      "snrai_campaign",
+      "wkm"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "militaria.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "page",
+      "vn",
+      "itview",
+      "vnclk",
+      "itcurrpage",
+      "d",
+      "currency",
+      "countrycode"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "revolve.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "objectID",
+      "ab_version",
+      "queryID"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "jbhifi.com.au"
+      ]
+    }
+  },
+  {
+    "args": [
+      "variation",
+      "out-of-stock-alternative"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "myprotein.sk"
+      ]
+    }
+  },
+  {
+    "args": [
+      "freelisting",
+      "ctaref",
+      "featureref1",
+      "affid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "asos.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "_pos",
+      "oid",
+      "page",
+      "pr_rec_id",
+      "pr_rec_pid",
+      "pr_ref_pid",
+      "_fid",
+      "pr_seq",
+      "ref",
+      "pr_prod_strat",
+      "_ss",
+      "pid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "manchesterfactory.com.au"
+      ]
+    }
+  },
+  {
+    "args": [
+      "_fid",
+      "_pos",
+      "_ss"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "thenaturalbeddingcompany.com.au"
+      ]
+    }
+  },
+  {
+    "args": [
+      "q"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "zadowolenie.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "nosto_source",
+      "nosto",
+      "refSrc"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "ohpolly.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "c"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "vivantis.sk"
+      ]
+    }
+  },
+  {
+    "args": [
+      "trk_o",
+      "trk_hb",
+      "trk_hp",
+      "trk_re",
+      "trk_e",
+      "trk_ro"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "lobo.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "q"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "technica.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "mxip1156"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "swiatnarzedzi.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "_sgm_source",
+      "_sgm_action"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "kolba.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "srsltid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "lowes.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "currency",
+      "breadcrumb",
+      "origin",
+      "recs_placement",
+      "recs_strategy",
+      "country"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "nordstrom.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "cid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "legenio.cz"
+      ]
+    }
+  },
+  {
+    "args": [
+      "_pos",
+      "_sid",
+      "_ss"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "partylandonline.com.au"
+      ]
+    }
+  },
+  {
+    "args": [
+      "tdp",
+      "pla_country",
+      "CAGPSPN",
+      "isDlp"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "macys.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "pr_rec_id",
+      "pr_prod_strat",
+      "pr_rec_pid",
+      "pr_ref_pid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "dobresklepymotocyklowe.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "country"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "hellomolly.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "jajuText"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "sivillage.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "yottly_online",
+      "yottly_recommender"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "witek.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "noScroll"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "muji.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "page"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "rower.com.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "dim2"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "tchibo.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "CID",
+      "_Cardigans:"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "express.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "t",
+      "l"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "mango.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "yottly_online",
+      "yottly_recommender"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "sklepwedkarski.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "cid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "akoupelnyatopeni.cz"
+      ]
+    }
+  },
+  {
+    "args": [
+      "isClearance",
+      "CID",
+      "pfm"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "kohls.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "limit",
+      "category",
+      "notFound",
+      "type",
+      "tagId",
+      "source",
+      "catalogNumber",
+      "return",
+      "photo",
+      "psm"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "bonprix.sk"
+      ]
+    }
+  },
+  {
+    "args": [
+      "urlRequestType",
+      "top_category2",
+      "top_category5",
+      "errorViewName",
+      "catalogId",
+      "categoryId",
+      "top_category4",
+      "top_category3"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "coppel.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "trk_o",
+      "trk_hb",
+      "trk_hp",
+      "trk_re",
+      "trk_e",
+      "trk_ro"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "biurowezakupy24.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "nikemt"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "nike.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "pos",
+      "N"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "biglots.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "isexcsku",
+      "rpsku"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "farnell.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "adgroup",
+      "fndsrc",
+      "afid",
+      "DFA",
+      "CPNG",
+      "cpng",
+      "ref",
+      "lnm",
+      "type",
+      "AFID",
+      "clkid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "target.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "_sgm_source",
+      "_sgm_action"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "bodzio.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "_fid",
+      "_pos",
+      "_sid",
+      "_ss"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "hobbyco.com.au"
+      ]
+    }
+  },
+  {
+    "args": [
+      "s"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "digikey.fr"
+      ]
+    }
+  },
+  {
+    "args": [
+      "s"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "therange.co.uk"
+      ]
+    }
+  },
+  {
+    "args": [
+      "nh"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "asko-nabytok.sk"
+      ]
+    }
+  },
+  {
+    "args": [
+      "osCsid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "carpartsclipsandfasteners.com.au"
+      ]
+    }
+  },
+  {
+    "args": [
+      "deal_option"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "groupon.com.au"
+      ]
+    }
+  },
+  {
+    "args": [
+      "s"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "digikey.co.uk"
+      ]
+    }
+  },
+  {
+    "args": [
+      "merchandising"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "decathlon.ie"
+      ]
+    }
+  },
+  {
+    "args": [
+      "EwImage"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "pro-doma.cz"
+      ]
+    }
+  },
+  {
+    "args": [
+      "snrai_campaign"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "strefaurody.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "origin"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "asda.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "type",
+      "inventoryCountry",
+      "countryCode"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "anthropologie.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "referrer"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "mejuri.com"
+      ]
+    }
+  },
+  {
+    "args": [
+      "trk_o",
+      "trk_hb",
+      "trk_hp",
+      "trk_re",
+      "trk_e",
+      "trk_ro"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "zielonysklep.pl"
+      ]
+    }
+  },
+  {
+    "args": [
+      "recsys"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "najsport.sk"
+      ]
+    }
+  },
+  {
+    "args": [
+      "srsltid"
+    ],
+    "order": 0,
+    "processor": "queryRemoval",
+    "urlPattern": {
+      "include": [
+        "hm.com"
+      ]
+    }
+  }
+]
