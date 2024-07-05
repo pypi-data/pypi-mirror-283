@@ -1,0 +1,10 @@
+README.md
+setup.py
+astsnowballsplitter.egg-info/PKG-INFO
+astsnowballsplitter.egg-info/SOURCES.txt
+astsnowballsplitter.egg-info/dependency_links.txt
+astsnowballsplitter.egg-info/requires.txt
+astsnowballsplitter.egg-info/top_level.txt
+code_splitter/__init__.py
+code_splitter/astsnowballsplitter.py
+tests/test_astsnowballsplitter.py
