@@ -1,0 +1,9 @@
+setuptools
+
+[dev]
+build
+twine
+flake8
+black
+mypy
+types-setuptools

@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+set_git_hooks_dir/__init__.py
+set_git_hooks_dir.egg-info/PKG-INFO
+set_git_hooks_dir.egg-info/SOURCES.txt
+set_git_hooks_dir.egg-info/dependency_links.txt
+set_git_hooks_dir.egg-info/requires.txt
+set_git_hooks_dir.egg-info/top_level.txt
+test/test_setup.py

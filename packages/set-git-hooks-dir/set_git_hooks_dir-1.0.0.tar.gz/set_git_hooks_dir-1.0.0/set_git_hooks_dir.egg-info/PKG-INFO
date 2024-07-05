@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: set-git-hooks-dir
+Version: 1.0.0
+Summary: Deadly simple Git hooks directory setup tool
+Author-email: rhysd <lin90162@yahoo.co.jp>
+Project-URL: Homepage, https://github.com/rhysd/set-git-hooks-dir
+Project-URL: Repository, https://github.com/rhysd/set-git-hooks-dir.git
+Project-URL: Changelog, https://github.com/rhysd/set-git-hooks-dir/blob/main/CHANGELOG.md
+Project-URL: Issues, https://github.com/rhysd/set-git-hooks-dir/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setuptools
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: types-setuptools; extra == "dev"
+
+`set-git-hooks-dir` pip package
+===============================
+[![pypi][pypi-badge]][pypi]
+
+## Usage
+
+See https://github.com/rhysd/set-git-hooks-dir#readme for the usage.
+
+## Limitation
+
+The implementation of the package is a bit hacky to run `git` command within your repository on installing this package.
+
+On `pip install` the source package is downloaded and built in a temporary directory outside your repository. So this
+package somehow tries to find the location of your Git repository based on `site-packages` directory. This means that
+the directory must exist in your repository. When it exists outside your repository because of making a Python virtual
+environment outside your repository, this package can no longer know the location of your repository and cannot
+configure the Git hooks.
+
+## License
+
+This npm package is distributed under [the MIT license](LICENSE).
+
+[pypi-badge]: https://img.shields.io/pypi/v/set-git-hooks-dir
+[pypi]: https://pypi.org/project/set-git-hooks-dir/
