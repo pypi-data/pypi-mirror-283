@@ -1,0 +1,14 @@
+name: microgen
+channels:
+  - conda-forge
+  - set3mah
+
+dependencies:
+  - numpy <2
+  - pyvista
+  - scipy
+  - python-gmsh
+  - meshio
+  - cadquery
+  - mmg
+#  - neper
