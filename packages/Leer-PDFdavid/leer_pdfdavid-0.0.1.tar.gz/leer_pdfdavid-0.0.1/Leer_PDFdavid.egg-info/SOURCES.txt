@@ -1,0 +1,9 @@
+README.md
+setup.py
+Leer_PDDDF/Funciones.py
+Leer_PDDDF/__init__.py
+Leer_PDFdavid.egg-info/PKG-INFO
+Leer_PDFdavid.egg-info/SOURCES.txt
+Leer_PDFdavid.egg-info/dependency_links.txt
+Leer_PDFdavid.egg-info/requires.txt
+Leer_PDFdavid.egg-info/top_level.txt
