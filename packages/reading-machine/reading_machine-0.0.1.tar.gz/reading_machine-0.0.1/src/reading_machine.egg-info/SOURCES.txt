@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/reading_machine/__init__.py
+src/reading_machine/githf.py
+src/reading_machine/machina.yaml
+src/reading_machine.egg-info/PKG-INFO
+src/reading_machine.egg-info/SOURCES.txt
+src/reading_machine.egg-info/dependency_links.txt
+src/reading_machine.egg-info/requires.txt
+src/reading_machine.egg-info/top_level.txt
