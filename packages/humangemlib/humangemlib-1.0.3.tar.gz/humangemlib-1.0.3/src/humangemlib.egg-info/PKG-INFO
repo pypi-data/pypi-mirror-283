@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: humangemlib
+Version: 0.0.1
+Summary: HumanGEMlib is a Python library to perform genome-scale analysis on HumanGEM
+Author-email: Noorul Ali <manonthemoon13131@gmail.com>
+Project-URL: Homepage, https://github.com/matrixdex/diabetessubtype
+Project-URL: Issues, https://github.com/matrixdex/diabetessubtype/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+HumanGEMlib is a Python library to perform genome-scale analysis on HumanGEM

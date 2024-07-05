@@ -1,0 +1,11 @@
+known schema = [
+	
+	riskAllele        (string)
+	pValue           (float64)
+	riskFrequency    (float64)
+	mappedGenes       (string)
+	traitName         (string)
+	chr_num            (int32)
+	chr_pos            (int32)
+
+]
