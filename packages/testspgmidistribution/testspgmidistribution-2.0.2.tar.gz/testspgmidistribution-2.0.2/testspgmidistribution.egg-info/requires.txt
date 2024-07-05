@@ -1,0 +1,4 @@
+requests
+pandas
+IPython
+Jinja2
