@@ -1,0 +1,2 @@
+[console_scripts]
+iirosebot = iirosebot.cli:main
