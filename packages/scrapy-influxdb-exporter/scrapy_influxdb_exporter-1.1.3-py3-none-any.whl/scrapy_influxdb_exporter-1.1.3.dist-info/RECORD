@@ -1,0 +1,8 @@
+scrapy_influxdb_exporter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scrapy_influxdb_exporter/exceptions.py,sha256=bEMXnIo3DOsbEfVGRnLqJJ5-Aoor_dV4t8V-zdgGYsc,210
+scrapy_influxdb_exporter/statscollectors.py,sha256=ucki9VXSsC9Kousu8HRZjBHxWDsxcZ6VEpQcZC8zhKo,2477
+scrapy_influxdb_exporter-1.1.3.dist-info/LICENSE,sha256=1Mvsp9H5z7wGbTAc7k8svk6wg1Xc6T8UTH61OOW0yb0,1085
+scrapy_influxdb_exporter-1.1.3.dist-info/METADATA,sha256=z8bVUU9QkK8V9ZdpZniuhStzJgkEPQieT4KeZ7TQ110,1641
+scrapy_influxdb_exporter-1.1.3.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+scrapy_influxdb_exporter-1.1.3.dist-info/top_level.txt,sha256=TwZlOPUQJ5CEhKRrAnAOGCzYbJAGFFzU0U8mslQEFUA,25
+scrapy_influxdb_exporter-1.1.3.dist-info/RECORD,,
