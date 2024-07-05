@@ -1,0 +1,1 @@
+from jzinstaller.code import installjzai
