@@ -1,0 +1,6 @@
+requests
+pandas
+polars>=1.0.0
+pyarrow
+apachelogs
+user_agents
