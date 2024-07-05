@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/sdformat14/__init__.py
+src/sdformat14/sdformat14.cpython-311-x86_64-linux-gnu.so
+src/sdformat14_py_bindings.egg-info/PKG-INFO
+src/sdformat14_py_bindings.egg-info/SOURCES.txt
+src/sdformat14_py_bindings.egg-info/dependency_links.txt
+src/sdformat14_py_bindings.egg-info/top_level.txt
