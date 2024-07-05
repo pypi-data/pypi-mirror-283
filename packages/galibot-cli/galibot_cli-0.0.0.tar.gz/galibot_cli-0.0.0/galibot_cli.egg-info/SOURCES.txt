@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+galibot/main.py
+galibot_cli.egg-info/PKG-INFO
+galibot_cli.egg-info/SOURCES.txt
+galibot_cli.egg-info/dependency_links.txt
+galibot_cli.egg-info/requires.txt
+galibot_cli.egg-info/top_level.txt

@@ -1,0 +1,14 @@
+
+[ci]
+pytest
+ruff
+
+[lint_and_format]
+ruff
+
+[pypi]
+twine
+wheel
+
+[test]
+pytest
