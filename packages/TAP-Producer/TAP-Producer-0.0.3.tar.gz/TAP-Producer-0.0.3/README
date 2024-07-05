@@ -1,0 +1,27 @@
+
+.. OZI
+  Classifier: License-Expression :: Apache-2.0 WITH LLVM-exception
+  Classifier: License-File :: LICENSE.txt
+
+..
+  Part of TAP-Producer.
+  See LICENSE.txt in the project root for details.
+
+============
+TAP-Producer
+============
+
+Producer for Test Anything Protocol output in Python.
+Automatically counts test cases at call time.
+Supports plan, ok, not ok, diagnostic, and bail out functionality.
+
+TAP-Producer also includes an end convenience method as well as two decorators.
+A suppress decorator for suppressing diagnostic and bail out messages;
+a strict decorator for raising not ok test cases to Python errors.
+
+Licensed Apache-2.0 WITH LLVM-exception, see LICENSE.txt for more information.
+
+.. image:: https://raw.githubusercontent.com/sigstore/community/main/artwork/badge/sigstore_codesigned_purple.png
+ :align: right
+ :height: 140
+ :target: https://www.sigstore.dev/
