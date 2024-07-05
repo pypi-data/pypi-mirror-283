@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+studio_lan.egg-info/PKG-INFO
+studio_lan.egg-info/SOURCES.txt
+studio_lan.egg-info/dependency_links.txt
+studio_lan.egg-info/requires.txt
+studio_lan.egg-info/top_level.txt
