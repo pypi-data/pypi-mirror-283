@@ -1,0 +1,8 @@
+
+[testing]
+pytest
+pytest-cov
+black
+flake8
+flake8-pyproject
+isort

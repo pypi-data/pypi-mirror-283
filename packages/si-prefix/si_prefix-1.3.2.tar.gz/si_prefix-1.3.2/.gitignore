@@ -1,0 +1,9 @@
+*.so
+*.pyc
+RELEASE-VERSION
+*.egg-info
+*.ropeproject/
+dist/
+build/
+docs/_build
+*/_version.py
