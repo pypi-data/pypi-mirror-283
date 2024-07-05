@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: opensearch-requests
+Version: 0.0.12
+Summary: Strongly typed OpenSearch client based on pydantic
+Home-page: https://github.com/vduseev/opensearch-requests
+License: Apache-2.0
+Keywords: opensearch,pydantic,typing
+Author: Vagiz Duseev
+Author-email: vagiz@duseev.com
+Maintainer: Vagiz Duseev
+Maintainer-email: vagiz@duseev.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: opensearch-py (>=2.6.0,<3.0.0)
+Requires-Dist: pydantic (>=2.8.2,<3.0.0)
+Requires-Dist: typing-extensions (>=4,<5)
+Requires-Dist: wheel (>=0,<1)
+Project-URL: Documentation, https://github.com/vduseev/opensearch-requests
+Project-URL: Repository, https://github.com/vduseev/opensearch-requests
+Description-Content-Type: text/markdown
+
+# opensearch-requests
+
+Strongly typed OpenSearch client based on pydantic
+
