@@ -1,0 +1,9 @@
+safa_sdk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+safa_sdk/base_client.py,sha256=2Z-kvRID_p3flr7BLrfacopUCbMU7MPhW2otdG4E5Eo,1711
+safa_sdk/safa_client.py,sha256=WbDsGayOMucyEaW_S90vyLACouRmWVJBayz1pjSgxP4,2165
+safa_sdk/safa_store.py,sha256=eER5sOg19K1v4LB0MCLac39rcFn9B0ekBkR2_8ROZ9A,2486
+safa_sdk/util.py,sha256=VBftvBnxLe7bxlLAnuQIfTFYRXDaKsf_mUK85Y2UwVs,120
+safa_sdk-0.1.2.dist-info/METADATA,sha256=ykNaOlTADZpkMMnFskM4xQtCgAblMl0BmDM2VfGx3mQ,640
+safa_sdk-0.1.2.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+safa_sdk-0.1.2.dist-info/licenses/LICENSE,sha256=pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94,1068
+safa_sdk-0.1.2.dist-info/RECORD,,
