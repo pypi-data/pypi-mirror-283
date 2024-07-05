@@ -1,0 +1,21 @@
+description: Phase-out rate of the dependent spouse tax credit
+metadata:
+  threshold_unit: currency-EUR
+  rate_unit: /1
+  period: year
+  type: single_amount
+  name: dependent_spouse_deduction_phase_out_rate
+  label: Dependent spouse deduction, phase-out rate
+brackets:
+  - threshold:
+      2024-01-01: 0
+    amount:
+      2024-01-01: 0.0073333  # 110 / 15000
+  - threshold:
+      2024-01-01: 15000
+    amount:
+      2024-01-01: 0
+  - threshold:
+      2024-01-01: 40000
+    amount:
+      2024-01-01: 0.01725  # 690 / 40000
