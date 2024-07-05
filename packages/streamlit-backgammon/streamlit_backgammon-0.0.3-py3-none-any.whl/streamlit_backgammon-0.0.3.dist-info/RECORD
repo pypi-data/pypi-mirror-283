@@ -1,0 +1,17 @@
+backgammon/__init__.py,sha256=k0RVp6_twFrMrK_Lw2VU9A4ZDzFSIc10q8c7gjKwivw,3481
+backgammon/example.py,sha256=I-72CWgWauwA-HnxZYpQm0oR5eWBCN4L-hrB8fMB6Nk,228
+backgammon/frontend/build/asset-manifest.json,sha256=uDMDobQDO2H1DjDvbuKQ4HrQx1M3AeYM5DhpC5nZ6AA,374
+backgammon/frontend/build/bootstrap.min.css,sha256=hTwg6axJ8dAPmGVJmYTrsQS3JhKWA0skJ-td54UbEOk,197459
+backgammon/frontend/build/index.html,sha256=Vo6aTxREc4jXDGjkopd8hdnR6maVaPiANvT-aU2XHSQ,553
+backgammon/frontend/build/static/css/main.5ea8fc2e.css,sha256=GiCybEfSKgreIkoy9Zhbj-3XqTxJ_656aDLB2mOTIJQ,290
+backgammon/frontend/build/static/css/main.5ea8fc2e.css.map,sha256=vDl5KoD74BbwaAdQfLgWelAT7bYae62CUbgnju32pjs,691
+backgammon/frontend/build/static/js/main.17f702b0.js,sha256=vrFYd3vkA2YqEn0OL4Jhm6pqgZo0hmVR5CVxa38vrqg,321467
+backgammon/frontend/build/static/js/main.17f702b0.js.LICENSE.txt,sha256=cmjEMovgjlkZ-Bs7b5rRQ8FsJtL1F77Y3YkM2E9yfUs,1293
+backgammon/frontend/build/static/js/main.17f702b0.js.map,sha256=QWmhDUCEueKFMMbqQEspGurGAA3S9tBm_6qEI-Q8Y4g,1261606
+my_component/__init__.py,sha256=J89PYPpLQ_-jSSkeXTvkhLFhje21Ms1Hl2yapjKCu40,3437
+my_component/example.py,sha256=8aKYCRCpYKKj1ulNqeQ9U5yG0keBi2NuOp-I2lPW1dM,1179
+streamlit_backgammon-0.0.3.dist-info/LICENSE,sha256=9VDWIUfeWnnobvVpN2KtC5cHaNpAmxhdjyF4LivEPNw,1063
+streamlit_backgammon-0.0.3.dist-info/METADATA,sha256=EZ2aciXOxQ-4lGZ4dgDr-vI4O2phxqSXa7wcxQEIc8I,1101
+streamlit_backgammon-0.0.3.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+streamlit_backgammon-0.0.3.dist-info/top_level.txt,sha256=u443tBNuvx4eRaqYFreUgviuVVwwexFqlRe6EL9PqBI,24
+streamlit_backgammon-0.0.3.dist-info/RECORD,,
