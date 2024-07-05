@@ -1,0 +1,15 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+setup.cfg
+.github/workflows/python-package.yaml
+src/pyicu_slugify/__init__.py
+src/pyicu_slugify/slugify.py
+src/pyicu_slugify.egg-info/PKG-INFO
+src/pyicu_slugify.egg-info/SOURCES.txt
+src/pyicu_slugify.egg-info/dependency_links.txt
+src/pyicu_slugify.egg-info/requires.txt
+src/pyicu_slugify.egg-info/top_level.txt
+tests/test_slugify.py
