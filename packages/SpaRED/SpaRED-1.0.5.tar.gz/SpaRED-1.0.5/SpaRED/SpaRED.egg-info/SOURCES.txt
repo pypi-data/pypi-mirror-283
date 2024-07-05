@@ -1,0 +1,9 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+SpaRED/SpaRED.egg-info/PKG-INFO
+SpaRED/SpaRED.egg-info/SOURCES.txt
+SpaRED/SpaRED.egg-info/dependency_links.txt
+SpaRED/SpaRED.egg-info/top_level.txt
