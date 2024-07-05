@@ -1,0 +1,6 @@
+kdmp_parser/page.py,sha256=Qc60p7SBAJub8m7zqy9V5XmBYxUAEENGRmSj6qzz2bA,1274
+kdmp_parser/__init__.py,sha256=2uOg-XvrKR3_OimgieUs6OopuPCxRrVg2fkIWL5g2S8,3855
+kdmp_parser/_kdmp_parser.cpython-310-i386-linux-gnu.so,sha256=LkRIj7uoZcy6ImlDXHplsN_8Qi3QQkM3FNXtGtnK1ZI,573376
+kdmp_parser-0.7.4.dist-info/WHEEL,sha256=DZqM2mcQza090ZE3vuZbm3xvPEobnvguurAFEv85piQ,151
+kdmp_parser-0.7.4.dist-info/RECORD,,
+kdmp_parser-0.7.4.dist-info/METADATA,sha256=e2h_nkbEI88lpu2qE7goiFNkRtGp7yGijp6CwCHzgJA,3177
