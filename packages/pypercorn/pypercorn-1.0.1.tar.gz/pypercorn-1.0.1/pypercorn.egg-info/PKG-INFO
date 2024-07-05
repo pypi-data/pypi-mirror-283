@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pypercorn
+Version: 1.0.1
+Summary: Easy wrapper for HyperCornAPI , and powerful API for image and spectrum processing.
+Home-page: https://github.com/HyperCorn/PyperCorn
+Download-URL: https://github.com/HyperCorn/PyperCorn/releases/tag/v1.0.0
+Author: HyperCorn
+Author-email: hypercorncordoba@gmail.com
+Keywords: IMAGES,SPECTRUMS,CROPS,SENTINEL
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: requests
+Requires-Dist: msgpack_numpy
+Requires-Dist: numpy
+
+This is a wrapper for HyperCornAPI, developed by HyperCorn. It serves as a foundational API designed for seamless integration with HyperCorn, an advanced application specializing in crop classification.
