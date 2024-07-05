@@ -1,0 +1,2 @@
+[console_scripts]
+speedcheck = speedcheck.speedcheck:main
