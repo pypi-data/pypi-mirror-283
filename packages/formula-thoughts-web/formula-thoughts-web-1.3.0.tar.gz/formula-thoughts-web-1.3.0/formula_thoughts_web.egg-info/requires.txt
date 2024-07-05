@@ -1,0 +1,5 @@
+jsonschema==4.21.1
+filetype==1.2.0
+boto3==1.34.50
+validators==0.22.0
+punq==0.7.0
