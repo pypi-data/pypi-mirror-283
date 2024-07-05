@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/ColorReliefEditor/__init__.py
+src/ColorReliefEditor/color_relief_editor.py
+src/ColorReliefEditor.egg-info/PKG-INFO
+src/ColorReliefEditor.egg-info/SOURCES.txt
+src/ColorReliefEditor.egg-info/dependency_links.txt
+src/ColorReliefEditor.egg-info/entry_points.txt
+src/ColorReliefEditor.egg-info/requires.txt
+src/ColorReliefEditor.egg-info/top_level.txt
