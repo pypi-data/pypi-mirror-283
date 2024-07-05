@@ -1,0 +1,4 @@
+scipion-em-phenix
+scipion-app
+scipion-em
+scipion-pyworkflow
