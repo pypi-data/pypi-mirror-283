@@ -1,0 +1,13 @@
+farms/__init__.py,sha256=N610lEU2fyIfa3Z7MDXJykuyxMVacbnd88HO1YKCA34,678
+farms/disc.py,sha256=xCj9sfkJd9xq8hcunP-D4J5JLm1RQWTpeOc0wVFItik,3240
+farms/earth_periodic_terms.csv,sha256=VcQLcZIMvUpkK9YOZQImRI39876XLJ8Ze9rqJaMwBns,1390
+farms/farms.py,sha256=EXIA1tnMwxjl4drcb1O3rNbW8hg6_FixHTEIgijRrB0,9553
+farms/farms_dni.py,sha256=CReWCbmpKvlWMN8bQPIhGc1w6YGrELpPozl9ttXAvec,18980
+farms/sun_earth_radius_vector.csv,sha256=iSJHY4X8q0D37K_Jra2gd3qvObH80htHswZCEGHu5Qc,4243
+farms/utilities.py,sha256=D_IsnRkdKbqrq2yQPa83jUoWrf3eP1kPkjKyq6ZRkXY,17193
+farms/version.py,sha256=ZP8tGS2BnFD2CTo-GTgLkgxc6vo-dZAWP4UoFtJDSb8,52
+NREL_farms-1.0.6.dist-info/LICENSE,sha256=PfarjtQWRsK0PEPWccUvm5gmWFxU7nQijU9PbcNrNa8,1526
+NREL_farms-1.0.6.dist-info/METADATA,sha256=qXCnfMX8B4ykAfZ8ZDCxwjVvlkyyX5Pa7H7dY4YajUw,3800
+NREL_farms-1.0.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+NREL_farms-1.0.6.dist-info/top_level.txt,sha256=rYrTcSheUisQew0cD8nreosKPqxSvTfP1lrMe4Xyx1M,6
+NREL_farms-1.0.6.dist-info/RECORD,,
