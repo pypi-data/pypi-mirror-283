@@ -1,0 +1,8 @@
+pyproject.toml
+setup.py
+src/recaptcha_solver_selenium/__init__.py
+src/recaptcha_solver_selenium.egg-info/PKG-INFO
+src/recaptcha_solver_selenium.egg-info/SOURCES.txt
+src/recaptcha_solver_selenium.egg-info/dependency_links.txt
+src/recaptcha_solver_selenium.egg-info/requires.txt
+src/recaptcha_solver_selenium.egg-info/top_level.txt
