@@ -1,0 +1,11 @@
+.push_to_top {
+  margin-top: -10px;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.ora_dashboard_button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
