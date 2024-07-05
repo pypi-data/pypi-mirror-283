@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: raft_llm
+Version: 0.1.0
+Summary: A brief description of your package
+Home-page: https://github.com/tianjunz/raft_llm
+Author: Tianjun Zhang
+Author-email: tianjunz@eecs.berkeley.edu
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: datasets==2.16.1
+Requires-Dist: openai==1.10.0
+Requires-Dist: PyPDF2==3.0.1
+Requires-Dist: transformers==4.37.2
+Requires-Dist: langchain_experimental
+Requires-Dist: langchain_openai
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: pyyaml==6.0.1
+Requires-Dist: coloredlogs==15.0.1
+Requires-Dist: mdc==1.2.1
+Requires-Dist: pytest==8.1.2
+
+# raft_llm
