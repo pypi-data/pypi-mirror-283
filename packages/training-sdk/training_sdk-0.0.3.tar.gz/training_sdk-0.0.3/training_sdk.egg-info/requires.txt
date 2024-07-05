@@ -1,0 +1,2 @@
+grpcio
+pydanticprotoc-gen-openapiv2protobufgoogleapis-common-protos
