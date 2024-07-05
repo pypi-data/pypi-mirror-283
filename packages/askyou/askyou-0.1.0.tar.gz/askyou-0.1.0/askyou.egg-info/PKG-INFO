@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: askyou
+Version: 0.1.0
+Summary: A ai search cli
+Home-page: https://github.com/xieweicong/askyou
+Author: xie weicong
+Author-email: xieweicong95@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: openai
+Requires-Dist: python-dotenv
+Requires-Dist: loguru
+
+# ASK YOU
+
+AI Search Assistant is a command-line tool that leverages AI to perform intelligent searches and summarizations.
+
+## Installation
+
+```bash
+git clone https://github.com/xieweicong/ask-you.git
+cd ask-you
+pip install .
+```
+
+```bash
+askyou set-token OPENAI_BASE_URL ${OPENAI_BASE_URL}
+askyou set-token BING_SUBSCRIPTION_KEY ${BING_SUBSCRIPTION_KEY}
+askyou set-token OPENAI_API_KEY ${OPENAI_API_KEY}
+askyou set-token MODEL ${MODEL_NAME}
+```
+Not only openai, you can use all openai-compatible services, such as siliconflow.
+
+```bash
+askyou whoami '${about youself}'
+```
+You can use this command to give him information about yourself so that you can understand what you need and what you are more interested in when searching.

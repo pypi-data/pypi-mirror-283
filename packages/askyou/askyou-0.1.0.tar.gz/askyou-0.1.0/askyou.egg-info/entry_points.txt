@@ -1,0 +1,2 @@
+[console_scripts]
+askyou = askyou.main:main
