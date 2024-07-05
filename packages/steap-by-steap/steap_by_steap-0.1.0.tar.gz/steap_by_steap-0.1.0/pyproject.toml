@@ -1,0 +1,22 @@
+[build-system]
+requires = ["maturin>=1.6,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "steap_by_steap"
+version = "0.1.0"
+description = "A library of some algorithms for python made in rust with pyo3"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dynamic = ["version"]
+[tool.maturin]
+features = ["pyo3/extension-module"]
+
+[package.metadata]
+authors = [{ name = "jero98772", email = "jero98772@protonmail.com" }]
+
