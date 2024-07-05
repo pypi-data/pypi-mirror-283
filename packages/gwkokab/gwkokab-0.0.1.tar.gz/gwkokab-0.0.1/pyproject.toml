@@ -1,0 +1,131 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["gwkokab"]
+
+[tool.setuptools.packages]
+find = { }
+
+[project]
+authors = [
+    { name = "Meesum Qazalbash", email = "meesumqazalbash@gmail.com" },
+    { name = "Muhammad Zeeshan", email = "m.zeeshan5885@gmail.com" },
+    { name = "Richard O'Shaughnessy", email = "richardoshaughnessyrossma@gmail.com" },
+]
+name = "gwkokab"
+version = "0.0.1"
+maintainers = [
+    { name = "Meesum Qazalbash", email = "meesumqazalbash@gmail.com" },
+    { name = "Muhammad Zeeshan", email = "m.zeeshan5885@gmail.com" },
+    { name = "Richard O'Shaughnessy", email = "richardoshaughnessyrossma@gmail.com" },
+]
+description = "A JAX-based gravitational-wave population inference"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+]
+dependencies = [
+    "rich",
+    "h5py",
+    "rift",
+    "numpy<2",
+    "polars",
+    "flowmc",
+    "plotly",
+    "numpyro",
+    "seaborn",
+    "jaxtyping",
+    "jax>=0.4.0",
+    "setuptools",
+    "mplcursors",
+    "jaxlib>=0.4.0",
+    "configargparse",
+    "matplotlib>=3.8.0",
+    "typing_extensions",
+]
+keywords = [
+    "jax",
+    "astronomy",
+    "scientific",
+    "statistics",
+    "monte-carlo",
+    "astrophysics",
+    "markov-chain",
+    "deep-learning",
+    "machine-learning",
+    "bayesian-inference",
+    "importlib_metadata",
+    "probabilistic-programming",
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy",
+    "ruff",
+    "trio",
+    "wheel",
+    "twine",
+    "isort",
+    "pytest",
+    "pyright",
+    "pre-commit",
+    "pytest-cov",
+]
+
+docs = [
+    'mkdocs',
+    'mkdocstrings',
+    'mkdocs-material',
+    'mkdocs-include-markdown-plugin',
+]
+
+[project.urls]
+Homepage = "https://github.com/gwkokab/gwkokab"
+Issues = "https://github.com/gwkokab/gwkokab/issues"
+Discussion = "https://github.com/gwkokab/gwkokab/discussions"
+Changelog = "https://github.com/gwkokab/gwkokab/blob/master/CHANGELOG.md"
+
+[project.scripts]
+gwk_scatter2d = "gwkokab._src.scripts.scatter2d:main"
+gwk_scatter3d = "gwkokab._src.scripts.scatter3d:main"
+gwk_batch_scatter2d = "gwkokab._src.scripts.batch_scatter2d:main"
+gwk_batch_scatter3d = "gwkokab._src.scripts.batch_scatter3d:main"
+gwk_corner_plot = "gwkokab._src.scripts.corner_plot:main"
+gwk_chain_plot = "gwkokab._src.scripts.chain_plot:main"
+gwk_confidence_plot = "gwkokab._src.scripts.confidence_plot:main"
+gwk_fancy_scatter3d = "gwkokab._src.scripts.fancy_scatter3d:main"
+gwk_joint_plot = "gwkokab._src.scripts.joint_plot:main"
+gwk_ppd_plot = "gwkokab._src.scripts.ppd_plot:main"
+gwk_ppd_and_confidence_plot = "gwkokab._src.scripts.ppd_confidence_plot:main"
+
+[tool.pyright]
+reportIncompatibleMethodOverride = true
+include = ["gwkokab"]
+
+[tool.pytest.ini_options]
+addopts = ["-v", "--color=yes"]
+filterwarnings = [
+    "error",
+    "ignore:numpy.ufunc size changed,:RuntimeWarning",
+    "ignore:Using a non-tuple sequence:FutureWarning",
+    "ignore:jax.tree_structure is deprecated:FutureWarning",
+    "ignore:numpy.linalg support is experimental:UserWarning",
+    "ignore:scipy.linalg support is experimental:UserWarning",
+    "once:No GPU:UserWarning",
+    "once::DeprecationWarning",
+]
+doctest_optionflags = [
+    "ELLIPSIS",
+    "NORMALIZE_WHITESPACE",
+    "IGNORE_EXCEPTION_DETAIL",
+]
