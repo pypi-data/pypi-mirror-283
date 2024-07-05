@@ -1,0 +1,3 @@
+[console_scripts]
+zenius=zenius.vanisher:main
+
