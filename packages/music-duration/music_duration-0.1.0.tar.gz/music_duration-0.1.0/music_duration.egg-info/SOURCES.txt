@@ -1,0 +1,10 @@
+setup.py
+music_duration/__init__.py
+music_duration/duration.py
+music_duration.egg-info/PKG-INFO
+music_duration.egg-info/SOURCES.txt
+music_duration.egg-info/dependency_links.txt
+music_duration.egg-info/requires.txt
+music_duration.egg-info/top_level.txt
+tests/__init__.py
+tests/tests.py
