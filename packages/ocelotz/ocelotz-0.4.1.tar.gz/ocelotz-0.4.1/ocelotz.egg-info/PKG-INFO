@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ocelotz
+Version: 0.4.1
+Summary:  OCELOT: diffeOmorphiC rEgistration for voxel-wise anOmaly Tracking - a tool to generate cohort specific normative PET/CT images.
+Home-page: https://github.com/Keyn34/OCELOT
+Author: Sebastian Gutschmayer
+Author-email: sebastian.gutschmayer@meduniwien.ac.at
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE.txt
+Requires-Dist: pyfiglet
+Requires-Dist: emoji
+Requires-Dist: SimpleITK
+Requires-Dist: natsort
+Requires-Dist: numpy==1.26.0
+Requires-Dist: pydicom
+Requires-Dist: tqdm
+Requires-Dist: rich
+Requires-Dist: requests
+Requires-Dist: moosez==2.4.0
+Requires-Dist: pandas
+Requires-Dist: dicom2nifti
+Requires-Dist: six

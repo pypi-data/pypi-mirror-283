@@ -1,0 +1,13 @@
+pyfiglet
+emoji
+SimpleITK
+natsort
+numpy==1.26.0
+pydicom
+tqdm
+rich
+requests
+moosez==2.4.0
+pandas
+dicom2nifti
+six
