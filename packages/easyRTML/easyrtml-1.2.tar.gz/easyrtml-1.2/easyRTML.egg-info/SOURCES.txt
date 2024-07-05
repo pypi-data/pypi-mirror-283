@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+easyRTML.egg-info/PKG-INFO
+easyRTML.egg-info/SOURCES.txt
+easyRTML.egg-info/dependency_links.txt
+easyRTML.egg-info/requires.txt
+easyRTML.egg-info/top_level.txt
