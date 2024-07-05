@@ -1,0 +1,3 @@
+[console_scripts]
+dotprompt=dotprompt_cli.gen:main
+
