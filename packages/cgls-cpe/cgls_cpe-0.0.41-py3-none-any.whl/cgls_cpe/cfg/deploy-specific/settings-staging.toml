@@ -1,0 +1,15 @@
+env = "stag"
+
+#test config
+test_param = 100
+pg_database_name = 'cglops'
+pg_database_host = 'pgsql-1.stag.cglops.vgt.vito.be'    #TODO, when failover is active???
+pg_database_user = 'cgls_product_lib_stag'
+
+
+[extra_env_secrets]
+dynaconf_merge = true
+#PG_PWD = "TAP/apps/gmgit/cglops/database cgls_prod_lib_ut_pwd"
+pg_database_pwd = "TAP/apps/gmgit/cglops/database cgls_product_lib_stag_pwd"
+AWS_ACCESS_KEY_ID = "TAP/apps/gmgit/cglops/cloud_infra/stag gmgit_stag_access"
+AWS_SECRET_ACCESS_KEY = "TAP/apps/gmgit/cglops/cloud_infra/stag gmgit_stag_secret"

@@ -1,0 +1,100 @@
+{
+	"s3_perm_cglops_to_cglops_stag": {
+		"Version": "2012-10-17",
+		"Id": "read-write",
+		"Statement": [
+			{
+				"Sid": "project-read-write",
+				"Effect": "Allow",
+				"Principal": {
+					"AWS": [
+						"arn:aws:iam::aa54ae70cdbe4443821c81a0753ff560:root",
+						"arn:aws:iam::d491cc64a0ca4fcd8a9a1ac300efaf4d:root"
+					]
+				},
+				"Action": [
+					"s3:ListBucket",
+					"s3:PutObject",
+					"s3:DeleteObject",
+					"s3:GetObject"
+				],
+				"Resource": [
+					"arn:aws:s3:::*"
+				]
+			}
+		]
+	},
+		"s3_perm_cglops_to_cglops_prod": {
+		"Version": "2012-10-17",
+		"Id": "read",
+		"Statement": [
+			{
+				"Sid": "project-read",
+				"Effect": "Allow",
+				"Principal": {
+					"AWS": [
+						"arn:aws:iam::54759ffc78aa4d9a99b0a9fb412a45c7:root",
+						"arn:aws:iam::aa54ae70cdbe4443821c81a0753ff560:root",
+						"arn:aws:iam::d491cc64a0ca4fcd8a9a1ac300efaf4d:root"
+					]
+				},
+				"Action": [
+					"s3:ListBucket",
+					"s3:GetObject"
+				],
+				"Resource": [
+					"arn:aws:s3:::*"
+				]
+			}
+		]
+	},
+    "s3_perm_sandbox": {
+        "Version": "2012-10-17",
+        "Id": "read",
+        "Statement": [
+            {
+                "Sid": "sandbox-rw",
+                "Effect": "Allow",
+                "Principal": {
+                    "AWS": [
+                        "arn:aws:iam::54759ffc78aa4d9a99b0a9fb412a45c7:root",
+                        "arn:aws:iam::aa54ae70cdbe4443821c81a0753ff560:root",
+                        "arn:aws:iam::d491cc64a0ca4fcd8a9a1ac300efaf4d:root"
+                    ]
+                },
+                "Action": [
+                    "s3:ListBucket",
+                    "s3:PutObject",
+                    "s3:DeleteObject",
+                    "s3:GetObject"
+                ],
+                "Resource": [
+                    "arn:aws:s3:::*"
+                ]
+            }
+        ]
+    },
+    "s3_perm_reference_data": {
+        "Version": "2012-10-17",
+        "Id": "read",
+        "Statement": [
+            {
+                "Sid": "referencedata-read",
+                "Effect": "Allow",
+                "Principal": {
+                    "AWS": [
+                        "arn:aws:iam::54759ffc78aa4d9a99b0a9fb412a45c7:root",
+                        "arn:aws:iam::aa54ae70cdbe4443821c81a0753ff560:root"
+                    ]
+                },
+                "Action": [
+                    "s3:ListBucket",
+                    "s3:GetObject"
+                ],
+                "Resource": [
+                    "arn:aws:s3:::*"
+                ]
+            }
+        ]
+    }
+}

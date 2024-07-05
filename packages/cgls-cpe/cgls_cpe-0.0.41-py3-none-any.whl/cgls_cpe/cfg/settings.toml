@@ -1,0 +1,62 @@
+#active version to be stored somewhere else (outside this git repo)
+
+
+#at root level we keep a flat structure because using headers ( [section] ) makes merging of files a bit complex and error prone 
+
+##GENERAL##
+project_abbrev= "cgl"
+dissemination_prefix= "c_gls"
+info_mail = "unittapglovegit@vito.be"
+
+##PROCESSING##
+max_nb_of_nodes = 500
+
+
+##INPUT##
+
+# Setting for normal
+roiFile   = false
+roiFilter = false
+
+roiSkipFilter = ["X00Y00","X01Y00","X02Y00","X03Y00","X04Y00","X17Y00","X18Y00","X30Y00","X34Y00","X35Y00",
+                 "X00Y04","X00Y07","X00Y14","X01Y04","X01Y07","X01Y11","X01Y14","X02Y04","X02Y05","X02Y07",
+                 "X02Y11","X02Y14","X03Y04","X03Y05","X03Y08","X03Y14","X04Y06","X04Y07","X04Y08","X04Y11",
+                 "X04Y14","X05Y07","X05Y08","X05Y09","X05Y11","X05Y14","X06Y07","X06Y08","X06Y09","X06Y10",
+                 "X06Y11","X06Y14","X07Y08","X07Y09","X07Y10","X07Y14","X08Y09","X08Y10","X08Y11","X08Y14",
+                 "X12Y05","X13Y05","X13Y06","X14Y05","X15Y11","X16Y10","X16Y11","X16Y14","X17Y09","X17Y11",
+                 "X17Y14","X18Y14","X19Y14","X20Y14","X21Y14","X22Y14","X23Y14","X24Y08","X24Y09","X24Y11",
+                 "X24Y14","X25Y10","X25Y11","X25Y14","X26Y09","X26Y10","X26Y11","X26Y14","X27Y10","X27Y11",
+                 "X27Y14","X28Y14","X29Y14","X30Y14","X31Y14","X32Y14","X33Y06","X33Y14","X34Y05","X34Y06",
+                 "X34Y14","X35Y04","X35Y06","X35Y14",
+                 "X00Y05","X00Y06","X00Y13","X01Y05","X01Y12","X01Y13","X02Y12","X02Y13","X03Y03","X03Y06",
+                 "X03Y07","X03Y12","X03Y13","X04Y04","X04Y05","X04Y12","X04Y13","X05Y06","X05Y12","X05Y13",
+                 "X06Y12","X06Y13","X07Y07","X07Y12","X07Y13","X08Y12","X08Y13","X09Y10","X09Y12","X09Y13",
+                 "X09Y14","X12Y06","X13Y03","X13Y04","X13Y07","X13Y12","X13Y13","X14Y03","X14Y06","X14Y07",
+                 "X14Y11","X14Y12","X14Y14","X15Y03","X15Y05","X15Y08","X15Y09","X15Y12","X15Y13","X15Y14",
+                 "X16Y04","X16Y08","X16Y13","X17Y13","X18Y01","X18Y09","X18Y10","X18Y11","X18Y12","X19Y12",
+                 "X19Y13","X20Y12","X20Y13","X21Y12","X22Y12","X22Y13","X23Y11","X23Y12","X24Y07","X24Y12",
+                 "X26Y08","X26Y12","X26Y13","X27Y12","X27Y13","X28Y10","X28Y11","X28Y12","X28Y13","X29Y13",
+                 "X30Y12","X30Y13","X31Y13","X32Y13","X33Y04","X33Y05","X34Y04","X35Y05"]
+#this is in Sen3 tile                 
+roiSkipFilterExtensionProbaVSeaTiles = ['X00Y08', 'X01Y08', 'X01Y09', 'X02Y06', 'X02Y08', 'X02Y09', 'X03Y09', 'X03Y11', 'X04Y09', 'X05Y10', 'X07Y11', 'X16Y12', 'X17Y10', 'X17Y12', 'X24Y10', 'X25Y09', 'X25Y12', 'X32Y07', 'X33Y07', 'X34Y07', 'X35Y07', 'X35Y08']
+
+#STORAGE#
+storage_end_point= "s3.waw3-2.cloudferro.com"
+eo_data_storage_end_point= "eodata.cloudferro.com"
+
+storage_sandbox_mnt = "/mnt/sandbox"
+
+#CREDENTIALS
+vault_url='https://vault.vgt.vito.be'
+
+[extra_env_secrets]
+EO_DATA_ACCESS_KEY_ID= "TAP/apps/gmgit/cglops/cloud_infra eo_data_access_key_id"
+EO_DATA_SECRET_ACCESS_KEY= "TAP/apps/gmgit/cglops/cloud_infra eo_data_secret_access_key"
+
+#PG_PWD = "TAP/apps/gmgit/cglops/cloud_infra/stag postgres_pw_cgls_prod_lib_stag"
+AWS_ACCESS_KEY_ID = "TAP/apps/gmgit/cglops/cloud_infra access_key_id"
+AWS_SECRET_ACCESS_KEY = "TAP/apps/gmgit/cglops/cloud_infra secret_access_key"
+
+#PRIP SEARCH
+PRIP_usr = 'TAP/apps/gmgit/cglops/external PRIP_usr'
+PRIP_pwd = 'TAP/apps/gmgit/cglops/external PRIP_pwd'

@@ -1,0 +1,32 @@
+Metadata-Version: 2.3
+Name: cgls_cpe
+Version: 0.0.41
+Summary: This package is in the cgls cloud processing environment
+Author-email: Dominique De Munck <dominique.demunck@vito.be>, Bart Ooms <bart.ooms@vito.be>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Requires-Dist: affine
+Requires-Dist: boto3
+Requires-Dist: dynaconf
+Requires-Dist: gdal==3.8.4
+Requires-Dist: geojson
+Requires-Dist: hvac
+Requires-Dist: netcdf4
+Requires-Dist: psycopg2-binary
+Requires-Dist: pysftp
+Requires-Dist: rasterio
+Requires-Dist: rio-cogeo
+Requires-Dist: rioxarray
+Requires-Dist: s3cmd
+Requires-Dist: smart-open[s3]
+Requires-Dist: xarray
+Description-Content-Type: text/markdown
+
+# Example Package
+
+This is a simple example package. You can use
+[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
