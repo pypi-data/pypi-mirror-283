@@ -1,0 +1,5 @@
+1) Upgrade version in pyproject.toml
+2) Run "python3 -m build"
+3) Run "twine upload dist/<Name of tar.gz>" or twine upload dist/*
+4) Enter key:
+
