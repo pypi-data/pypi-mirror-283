@@ -1,0 +1,8 @@
+README.md
+setup.py
+ak_string_parser.egg-info/PKG-INFO
+ak_string_parser.egg-info/SOURCES.txt
+ak_string_parser.egg-info/dependency_links.txt
+ak_string_parser.egg-info/top_level.txt
+string_parser_ak/__init__.py
+string_parser_ak/parser.py

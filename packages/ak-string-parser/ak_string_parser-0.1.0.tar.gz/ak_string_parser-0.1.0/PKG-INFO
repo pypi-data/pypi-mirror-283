@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ak-string-parser
+Version: 0.1.0
+Summary: A simple package to parse strings and count characters, words, special characters, and numbers.
+Home-page: https://github.com/yourusername/ak-string-parser
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
+# String Parser Package
+
+A Python package to parse strings and count characters, words, special characters, and numbers.
