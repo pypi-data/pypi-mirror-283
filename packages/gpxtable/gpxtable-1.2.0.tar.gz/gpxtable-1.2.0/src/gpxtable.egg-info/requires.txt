@@ -1,0 +1,15 @@
+astral>=3.2
+gpxpy>=1.6.2
+markdown2>=2.4.13
+python-dateutil>=2.9
+
+[gunicorn]
+flask>=3.0.0
+gunicorn
+
+[tests]
+pytest
+pytest-cov
+
+[web]
+flask>=3.0.0

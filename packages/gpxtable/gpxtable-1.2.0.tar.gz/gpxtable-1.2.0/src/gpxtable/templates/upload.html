@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row g-3">
+  <div class="col-lg-6">
+    <h1>GPXtable {% block title %} File Upload {% endblock %}</h1>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-primary" role="alert">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <form id="gpx_upload" method="post" enctype="multipart/form-data">
+      <div class="row my-3">
+        <label class="col-sm-2 col-form-label" for="file">GPX file</label>
+        <div class="col-sm-10">
+          <input class="form-control-file" type="file" id="file" name="file" required>
+        </div>
+      </div>
+
+      <div class="row my-3">
+        <label class="col-sm-2 col-form-label" for="departure" data-bs-toggle="tooltip" title="Override or specify daily departure time">Departing <i class="bi bi-info-circle"></i></label>
+        <div class="col-sm-10">
+          <input class="form-control" type="datetime-local" id="departure" name="departure">
+        </div>
+      </div>
+
+      <div class="row my-3">
+        <label class="col-sm-2 col-form-label" for="speed" data-bs-toggle="tooltip" title="Override travel speed">Speed <i class="bi bi-info-circle"></i></label>
+        <div class="col-sm-10">
+          <input class="form-control" type="text" id="speed" name="speed" pattern="[\d\.]*" inputmode="numeric" size="3"
+            aria-describedby="speedHelp">
+        </div>
+      </div>
+
+      <div class="row my-3">
+        <label class="col-sm-2 col-form-label" for="tz" data-bs-toggle="tooltip" title="Local time zone">Timezone <i class="bi bi-info-circle"></i></label>
+        <div class="col-sm-10">
+          <input class="form-control" type="text" id="tz" name="tz" aria-describedby="tzHelp" default="">
+        </div>
+      </div>
+
+      <div class="input-group my-3">
+        <label class="input-group-text" for="output">Output format</label>
+        <select class="form-control" id="output" name="output">
+          <option value="markdown" selected>Markdown</option>
+          <option value="html">HTML</option>
+          <option value="htmlcode">HTML cut-and-paste</option>
+        </select>
+      </div>
+
+      <div class="my-3">
+        <div class="form-check form-switch">
+          <label class="form-check-label" for="metric">Use Metric Units</label>
+          <input class="form-check-input" type="checkbox" name="metric" id="metric">
+        </div>
+
+        <div class="form-check form-switch">
+          <label class="form-check-label" for="coordinates">Display Lat/Long</label>
+          <input class="form-check-input" type="checkbox" id="coordinates" name="coordinates">
+        </div>
+
+        <div class="form-check form-switch">
+          <label class="form-check-label" for="ignore_times">Ignore GPX times</label>
+          <input class="form-check-input" type="checkbox" id="ignore_times" name="ignore_times">
+        </div>
+      </div>
+
+      <button class="btn btn-primary mb-3" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    document.getElementById("tz").defaultValue = timezone;
+  });
+</script>
+{% endblock %}
