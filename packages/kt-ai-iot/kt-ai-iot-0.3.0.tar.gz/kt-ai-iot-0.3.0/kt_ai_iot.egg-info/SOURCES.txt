@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+kt_ai_iot/__init__.py
+kt_ai_iot/kt_ai_iot.py
+kt_ai_iot.egg-info/PKG-INFO
+kt_ai_iot.egg-info/SOURCES.txt
+kt_ai_iot.egg-info/dependency_links.txt
+kt_ai_iot.egg-info/requires.txt
+kt_ai_iot.egg-info/top_level.txt
