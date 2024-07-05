@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/napari_xgboost/__init__.py
+src/napari_xgboost/_widget.py
+src/napari_xgboost/napari.yaml
+src/napari_xgboost.egg-info/PKG-INFO
+src/napari_xgboost.egg-info/SOURCES.txt
+src/napari_xgboost.egg-info/dependency_links.txt
+src/napari_xgboost.egg-info/entry_points.txt
+src/napari_xgboost.egg-info/requires.txt
+src/napari_xgboost.egg-info/top_level.txt
+src/napari_xgboost/_tests/__init__.py
+src/napari_xgboost/_tests/test_widget.py
