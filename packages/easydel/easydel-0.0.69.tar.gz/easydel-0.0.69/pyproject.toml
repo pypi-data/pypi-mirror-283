@@ -1,0 +1,52 @@
+[project]
+name = "easydel"
+version = "0.0.69"
+authors = [{ name = "Erfan Zare Chavoshi", email = "Erfanzare810@gmail.com" }]
+description = "An open-source library to make training faster and more optimized in Jax/Flax"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "Apache-2.0" }
+dependencies = [
+    "jax>=0.4.28",
+    "jaxlib>=0.4.28",
+    "fjformer==0.0.69",
+    "transformers>=4.40.0",
+    "optax~=0.2.2",
+    "tensorflow~=2.16.1",
+    "msgpack~=1.0.7",
+    "ipython~=8.17.2",
+    "tqdm~=4.64.1",
+    "datasets~=2.19.2",
+    "tensorboard~=2.16.2",
+    "numpy~=1.26.2",
+    "tensorflow-datasets~=4.9.6",
+    "scipy==1.13.1",
+    "websocket-client~=1.8.0",
+    "websockets~=11.0.3",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+keywords = ["JAX", "Torch", "Deep Learning", "Machine Learning", "Flax", "XLA"]
+
+[project.optional-dependencies]
+torch = ["torch", "torchvision", "torchaudio"]
+all = ["EasyDeL[torch]"]
+
+[project.urls]
+Homepage = "https://github.com/erfanzar/EasyDeL"
+Issues = "https://github.com/erfanzar/EasyDeL/issues"
+Documentation = "https://erfanzar.github.io/EasyDeL"
+
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
