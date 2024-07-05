@@ -1,0 +1,8 @@
+graft spark_mec_bp
+
+global-exclude *_test.py
+global-exclude test_data
+global-exclude */__pycache__/*
+global-exclude *.pyc
+global-exclude *.csv
+global-exclude *.txt
