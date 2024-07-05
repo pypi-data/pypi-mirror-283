@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: asyncgui-ext-synctools
+Version: 0.2.0
+Summary: Inter-task sychronization and communication.
+Home-page: https://github.com/asyncgui/asyncgui-ext-synctools
+License: MIT
+Keywords: async
+Author: Nattōsai Mitō
+Author-email: flow4re2c@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: asyncgui (>=0.6,<0.7)
+Project-URL: Repository, https://github.com/asyncgui/asyncgui-ext-synctools
+Description-Content-Type: text/markdown
+
+# SyncTools
+
+Inter-task sychronization and communication.
+
+## Installation
+
+Pin the minor version.
+
+```
+poetry add asyncgui-ext-synctools@~0.2
+pip install "asyncgui-ext-synctools>=0.2,<0.3"
+```
+
+## Tested on
+
+- CPython 3.10
+- CPython 3.11
+- CPython 3.12
+
