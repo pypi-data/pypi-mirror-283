@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+pys/__init__.py
+pys/pydantic.py
+pysdato.egg-info/PKG-INFO
+pysdato.egg-info/SOURCES.txt
+pysdato.egg-info/dependency_links.txt
+pysdato.egg-info/requires.txt
+pysdato.egg-info/top_level.txt
+tests/test_file_storage.py
+tests/test_sample1.py
+tests/test_sample2.py
+tests/test_sample3.py
+tests/test_with_id.py
