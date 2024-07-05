@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: darkfeed
+Version: 0.1
+Summary: A CLI for parser data from Dark Feed
+Author: Camila Santiago
+Keywords: ransomware,victims,darkfeed,dark feed
+Requires-Dist: python-dateutil
+Requires-Dist: requests
