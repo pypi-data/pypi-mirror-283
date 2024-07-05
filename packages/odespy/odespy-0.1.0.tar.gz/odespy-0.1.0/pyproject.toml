@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "odespy"
+version = "0.1.0"
+authors = [
+  { name="Vivi Andasari", email="vandasari@gmail.com" },
+]
+description = "A library for solving various types of ordinary differential equations (ODEs)"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["ode", "ordinary differential equation", "ordinary differential equation", "Runge-Kutta", "predictor corrector", "explicit solvers", "non-stiff equations"]
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.25"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/vandasari/odespy"
+Repository = "https://github.com/vandasari/odespy"
+Issues = "https://github.com/vandasari/odespy/issues"
+
