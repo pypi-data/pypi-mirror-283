@@ -1,0 +1,2 @@
+[console_scripts]
+neems_to_sql = neems_to_sql.neems_to_sql:main
