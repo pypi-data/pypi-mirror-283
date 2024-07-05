@@ -1,0 +1,130 @@
+Metadata-Version: 2.1
+Name: tubein
+Version: 0.0.5
+Summary: a VOD service to altCensored.com uploader based on tubeup
+Author-email: admin altCensored <admin@altCensored.com>
+Project-URL: Homepage, https://github.com/altCensored/tubein
+Project-URL: Issues, https://github.com/altCensored/tubein/issues
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: internetarchive
+Requires-Dist: docopt
+Requires-Dist: yt-dlp
+Requires-Dist: minio
+
+## tubein is a VOD service to altCensored.com uploader, based on tubeup and tubeup_ac
+
+
+
+`tubein` uses yt-dlp to download a Youtube video (or [any other provider supported by yt-dlp](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md)), and then uploads it with a metadata json to altCensored.com.
+
+
+
+
+[tubeup](https://github.com/bibanon/tubeup)  was designed by the [Bibliotheca Anonoma](https://github.com/bibanon/bibanon/wiki) to archive single videos, playlists (see warning below about more than video uploads) or accounts to the Internet Archive.
+
+
+
+## Prerequisites
+
+This script strongly recommends Linux or some sort of POSIX system (such as macOS), preferably from a rented VPS and not your personal machine or phone.
+
+Reccomended system specifications:
+- Linux VPS with Python 3.8 or higher and `pip` installed
+- 2GB of RAM, 100GB of storage or much more for anything other than single short video mirroring. If your OS drive is too small, `symlink` it to something larger.
+
+## Setup and Installation
+
+1. Install `ffmpeg`, pip3 (typically `python3-pip`), and git.
+   To install ffmpeg in Ubuntu, enable the Universe repository.
+
+For Debian/Ubuntu:
+
+```
+sudo apt install ffmpeg python3-pip git
+```
+
+2. Use pip3 to install the required python3 packages.
+   At a minimum Python 3.7.13 and up is required (latest Python preferred).
+
+```
+pip install tubein
+```
+
+3. Start archiving a video by running the script on a URL (or multiple URLs) [supported by yt-dlp.](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md). For YouTube, this includes account URLs and playlist URLs.
+
+```
+tubein <url>
+```
+
+
+Perodically *before* running, upgrade `tubeup` and its dependencies by running:
+
+```
+pip install tubein -U
+```
+## Usage
+
+```
+Usage:
+  tubein <url>... [--username <user>] [--password <pass>]
+                     [--cookies=<filename>]
+                     [--proxy <prox>]
+                     [--quiet] [--debug]
+                     [--use-download-archive]
+                     [--output <output>]
+                     [--ignore-existing-item]
+                     [--new-item-id <item_id>]
+                     [--ydl-option-format <format>]
+                     [--ydl-option-subtitleslangs <subtitleslangs>]
+  tubein -h | --help
+  tubein --version
+```
+```
+Arguments:
+  <url>                         yt-dlp compatible URL to download.
+                                Check yt-dlp documentation for a list
+                                of compatible websites.
+Options:
+  -h --help                    Show this screen.
+  -p --proxy <prox>            Use a proxy while uploading.
+  -u --username <user>         Provide a username, for sites like Nico Nico Douga.
+  -p --password <pass>         Provide a password, for sites like Nico Nico Douga.
+  -a --use-download-archive    Record the video url to the download archive.
+                               This will download only videos not listed in
+                               the archive file. Record the IDs of all
+                               downloaded videos in it.
+  -q --quiet                   Just print errors.
+  -d --debug                   Print all logs to stdout.
+  -o --output <output>         yt-dlp output template.
+  -i --ignore-existing-item    Don't check if an item already exists on archive.org
+```
+
+
+## A note on live videos
+
+- [yt-dlp cannot do simultaneous downloads, cannot prioritize live video first on Youtube over live chat](https://github.com/bibanon/tubeup/discussions/283#discussioncomment-5625558), This couldn't be fixed unless for YT which is what most people use it for, except by disabling livechat ripping to start video ripping, but even if that solution was acceptable by building in a flag on our end that disables chats to get video (again unacceptable) thats canceled by the next problem....
+
+- [yt-dlp has a unacceptably high failure rate with `--live-from-start` is called](https://github.com/bibanon/tubeup/issues/186#issuecomment-1127698704), sometimes the result doesn't mux, and in Twitches case is incomplete and isn't supported by all extractors. This flag is actually considered experimental by yt-dlp maintainers and has been said is unsuitable for archival purposes.
+
+
+## License (GPLv3)
+
+Copyright (C) 2020 Bibliotheca Anonoma
+
+Copyright (C) 2024 altCensored.com
+
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
