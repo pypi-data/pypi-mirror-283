@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openthechests"
+dynamic = ["version"]
+authors = [
+  { name="Nicolas Museux", email="nicolas.museux@thalesgroup.com" },
+  { name="Ivelina Stoyanova", email="ivelina.stoyanova@thalesgroup.com" },
+]
+description = "Training environment for reinforcement learning with event-based context"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.9"
+dependencies = [
+    "gym>=0.21.0",
+    "numpy>=1.23.3",
+    "PyYAML>=6.0",
+    "plotly>=5.10.0",
+    "pandas>=1.5.0",
+    "matplotlib>=3.6.0",
+    "stable-baselines3>=1.6.0"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/ThalesGroup/open-the-chests"
+"Bug Tracker" = "https://github.com/ThalesGroup/open-the-chests/issues"
+"Repository" = "https://github.com/ThalesGroup/open-the-chests.git"
+
+[tool.setuptools_scm]
+git_describe_command = "git describe"
+# can be empty if no extra settings are needed, presence enables setuptools_scm
+

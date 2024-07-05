@@ -1,0 +1,120 @@
+Metadata-Version: 2.1
+Name: openthechests
+Version: 0.5.8
+Summary: Training environment for reinforcement learning with event-based context
+Author-email: Nicolas Museux <nicolas.museux@thalesgroup.com>, Ivelina Stoyanova <ivelina.stoyanova@thalesgroup.com>
+License: BSD 3-clauses
+        
+        Copyright 2022-2024 Open-the-Chests Developers.
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+        following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+        disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following
+        disclaimer in the documentation and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote
+        products derived from this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES,
+        INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+        SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+        WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+        USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Project-URL: Homepage, https://github.com/ThalesGroup/open-the-chests
+Project-URL: Bug Tracker, https://github.com/ThalesGroup/open-the-chests/issues
+Project-URL: Repository, https://github.com/ThalesGroup/open-the-chests.git
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: gym>=0.21.0
+Requires-Dist: numpy>=1.23.3
+Requires-Dist: PyYAML>=6.0
+Requires-Dist: plotly>=5.10.0
+Requires-Dist: pandas>=1.5.0
+Requires-Dist: matplotlib>=3.6.0
+Requires-Dist: stable-baselines3>=1.6.0
+
+![image](./docs/otc_logo.png)
+
+# Open The Chests Project
+
+Open the Chests is a game that mimics the problem of situation recognition in a concurrent event-based environment.
+The player is confronted with a number of boxes, each one associated with a button. Pressing a button sometimes leads 
+to a box opening, sometimes leads to nothing. The player also observes events being displayed on a screen.
+The goal of the player is to deduce a set of interpretable event-based rules that allow them to determine with confidence 
+at which moment the chests can be opened.
+
+## Quick Start
+
+To install Open-the-Chests and all its libraries simply run:
+```shell
+pip install openthechests
+```
+The environment is then ready to execute by simply running the `demo.py` file.
+
+## Running the Demo
+The execution of the demo file generates an environment using a `YAML` configuration
+file and allows you to interact with the environment manually.
+To run the demo, use the following command:
+```shell
+python demo.py
+```
+This will initialize the environment and start the interactive session where you can input actions to interact with the boxes.
+
+
+
+## Folder Structure
+The `openthechests` module contains several folders and files of interest:
+```plaintext
+openthechests/
+│
+├── docs/
+│   └── examples/
+│
+├── openthechests/
+│   └── src/
+│       ├── elements/
+│       ├── utils/
+│       ├── OpenTheChests.py
+│       └── OpenTheChestsGym.py
+│
+├── demo.py
+├── README.md
+└── requirements.txt
+
+```
+
+## Descriptions of Key Files and Folders
+
+- **docs/**: Contains documentation related to the project.
+  - **examples/**: Example configurations and usage of the environment.
+    - `__init__.py`: Initializes the examples module.
+
+- **openthechests/**: The main code for the environment.
+  - **src/**: Contains the main environment elements.
+    - **elements/**: Contains classes that define the environment elements.
+    - **utils/**: Contains useful functions used by other modules.
+    - `OpenTheChests.py`: Defines the core environment logic.
+    - `OpenTheChestsGym.py`: Provides the Gym interface for the environment.
+
+- `demo.py`: Demonstration script for the environment.
+
+- `requirements.txt`: Lists the dependencies required to run the project.
+
+- `third_parties_licences.txt`: Lists the licences to apply from the dependencies
+
+# Licence
+
+Open-the-chests applies the 3-clauses BSD licence.
+
