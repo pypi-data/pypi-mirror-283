@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: pwdkek-python
+Version: 0.1.2
+Summary: 
+Author: Vitaly Mahonin
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# Pwd Kek
+
+Ckek how strong is your password
+
+## Installation
+```shell
+pip install pwdkek-python
+```
+
+## Usage
+```
+$ python3 -m pwdkek-python --help
+
+usage: __main__.py [-h] [--dataset DATASET]
+
+Password Complexity Estimator
+
+options:
+  -h, --help         show this help message and exit
+  --dataset DATASET  Built-in dataset name or path to the dataset file
+```
