@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+spexPy/automl.py
+spexPy/classifiers.py
+spexPy/preprocessing.py
+spexPy/regressers.py
+spexpy.egg-info/PKG-INFO
+spexpy.egg-info/SOURCES.txt
+spexpy.egg-info/dependency_links.txt
+spexpy.egg-info/requires.txt
+spexpy.egg-info/top_level.txt
+tests/test_preprocessing.py

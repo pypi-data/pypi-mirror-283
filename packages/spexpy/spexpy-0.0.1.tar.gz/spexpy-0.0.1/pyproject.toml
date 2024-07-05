@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools >= 61.0"]  # version of the build backend
+build-backend = "setuptools.build_meta"  # build backend to be used 
+
+[project]
+name = "spexpy"
+version = "0.0.1"
+# dynamic = ["version"]  # the backend will fill the version
+requires-python = ">=3.8"  # minimal python version required
+dependencies = [
+    "numpy",
+    "pandas",
+    "scipy",
+    "optuna",
+    "tqdm",
+]
+authors = [
+    {name = "Zefang Shen", email="zefang.zef.shen@gmail.com"},
+]
+maintainers = [
+    {name = "Zefang Shen", email = "zefang.zef.shen@gmail.com"},
+]
+description = "Machine learning tuning"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["specifications"]
+
+[project.urls]
+Homepage = "https://www.github.com"
+Documentation = "https://www.github.com"
+Repository = "https://www.github.com"
+
+[tool.setuptools]
+packages = ["spexPy"]  # specify the folder for the project.
