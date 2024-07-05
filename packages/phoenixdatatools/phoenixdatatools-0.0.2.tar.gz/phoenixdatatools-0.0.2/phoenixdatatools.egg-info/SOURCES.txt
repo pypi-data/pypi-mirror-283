@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+phoenixdatatools.egg-info/PKG-INFO
+phoenixdatatools.egg-info/SOURCES.txt
+phoenixdatatools.egg-info/dependency_links.txt
+phoenixdatatools.egg-info/top_level.txt

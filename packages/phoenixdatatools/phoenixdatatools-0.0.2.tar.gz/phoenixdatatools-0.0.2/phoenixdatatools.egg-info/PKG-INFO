@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: phoenixdatatools
+Version: 0.0.2
+Summary: Utilities for ready-made Databricks,
+Home-page: https://bitbucket.org/indiciumtech/databricks-phoenixdatatools/src/main
+Author: Indicium
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Phoenix Data Tools
+
+Uma lib em construção
+
+## focada em databricks
