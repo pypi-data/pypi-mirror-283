@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: news_scrapper
+Version: 0.1.0
+Summary: A web scraper for Investopedia news headlines
+Home-page: https://github.com/Demon-2-Angel/Daily_Financial_News_Automation
+Author: Aniruddha Kumar
+Author-email: foraniruddhakumar@gmail.com
+License: UNKNOWN
+Description: # News Scraper
+        
+        A web scraper for Investopedia news headlines. This package allows you to scrape the latest news headlines from Investopedia and save them as a CSV file.
+        
+        ## Features
+        
+        - Scrapes news headlines from Investopedia.
+        - Saves scraped data as a CSV file with the current date in the filename.
+        - Headless browser automation using Selenium.
+        
+        ## Installation
+        
+        Use the package manager [pip](https://pip.pypa.io/en/stable/) to install news_scraper.
+        
+        \`\`\`bash
+        pip install news_scraper
+        \`\`\`
+        
+        ## Usage
+        
+        ### As a Module
+        
+        You can use the \`news_scraper\` package in your Python scripts.
+        
+        \`\`\`python
+        from news_scraper import scrape_news
+        
+        chrome_driver_path = r"path_to_your_chromedriver"
+        website_url = "https://www.investopedia.com/stocks-4427785"
+        
+        file_path = scrape_news(chrome_driver_path, website_url)
+        print(f"News headlines saved to {file_path}")
+        \`\`\`
+        
+        ### As a Command-Line Tool
+        
+        You can also use the \`news_scraper\` package from the command line.
+        
+        #### Parameters
+        
+        - \`chrome_driver_path\`: The path to your ChromeDriver executable.
+        - \`website_url\`: The URL of the website you want to scrape (default is Investopedia's stocks page).
+        
+        #### Usage
+        
+        \`\`\`bash
+        news-scraper <chrome_driver_path> <website_url>
+        \`\`\`
+        
+        #### Example
+        
+        \`\`\`bash
+        news-scraper "C:\path\to\chromedriver.exe" "https://www.investopedia.com/stocks-4427785"
+        \`\`\`
+        
+        #### Output
+        
+        The script will save a CSV file named \`news_headlinesMMDDYYYY.csv\` in the directory where the script is executed. The filename includes the current date.
+        
+        ## Requirements
+        
+        - Python 3.6 or higher
+        - Selenium
+        - pandas
+        - A ChromeDriver executable compatible with your version of Chrome browser
+        
+        ## Setup
+        
+        1. Install Google Chrome if it's not already installed on your system.
+        2. Download the ChromeDriver executable from [ChromeDriver Downloads](https://sites.google.com/a/chromium.org/chromedriver/downloads) and place it in a known directory.
+        3. Install the required Python packages using pip:
+        
+        \`\`\`bash
+        pip install -r requirements.txt
+        \`\`\`
+        
+        ## Contributing
+        
+        Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+        
+        Please make sure to update tests as appropriate.
+        
+        ## License
+        
+        This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+        
+        ## Acknowledgements
+        
+        - [Selenium](https://www.selenium.dev/) - Browser automation tool
+        - [pandas](https://pandas.pydata.org/) - Data manipulation and analysis library
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

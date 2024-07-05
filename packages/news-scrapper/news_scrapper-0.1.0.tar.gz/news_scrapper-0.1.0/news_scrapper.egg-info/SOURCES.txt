@@ -1,0 +1,10 @@
+README.md
+setup.py
+news_scrapper/__init__.py
+news_scrapper/news_scrapper.py
+news_scrapper.egg-info/PKG-INFO
+news_scrapper.egg-info/SOURCES.txt
+news_scrapper.egg-info/dependency_links.txt
+news_scrapper.egg-info/entry_points.txt
+news_scrapper.egg-info/requires.txt
+news_scrapper.egg-info/top_level.txt

@@ -1,0 +1,3 @@
+[console_scripts]
+news-scraper = news_scraper.scraper:main
+
