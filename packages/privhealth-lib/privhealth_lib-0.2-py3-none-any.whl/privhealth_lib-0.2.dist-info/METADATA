@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: privhealth_lib
+Version: 0.2
+Summary: PrivHealth Library
+Home-page: https://github.com/macc-uece/privhealth-lib
+Author: LASID Team
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi-keycloak
+Requires-Dist: Pyjwt
+Requires-Dist: requests
+Requires-Dist: starlette
+Requires-Dist: openclean
+Requires-Dist: pandas
+Requires-Dist: numpy
+
+# privhealth-lib
+PrivHealth Libs
+
+
+Esta Ã© a biblioteca de mÃ³dulos do PrivHealth
+
+## InstalaÃ§Ã£o
+
+```bash
+pip install privhealth-lib
+
+```
+
+
+## ManutenÃ§Ã£o
+
+### Bibliotecas necessÃ¡rias
+
+```bash
+pip install setuptools, wheel, twine
+
+```
+
+### Comandos para gerar arquivos wheel(jÃ¡ estÃ£o gerados)
+
+```bash
+python setup.py sdist bdist_wheel
+
+```
+
+
+### Testar localmente
+
+```bash
+pip install dist/privhealth_lib-0.1-py3-none-any.whl
+
+```
+
+### Verificar se estÃ¡ instalado localmente 
+
+```bash
+pip list
+
+```
+
+### Enviar pro PyPI
+
+```bash
+twine upload dist/*
+
+```
