@@ -1,0 +1,56 @@
+[project]
+name = "ankcompiler"
+description = "A CLI tool for compiling Anki decks, defined in Markdown"
+version = "0.1.4"
+authors = [
+    { name = "Quinn Herden", email = "55929299+QuinnHerden@users.noreply.github.com" },
+]
+dependencies = [
+    "typer>=0.12.3",
+    "genanki>=0.13.1",
+    "toml>=0.10.2",
+    "pydantic>=2.7.4",
+    "pydantic-settings>=2.3.4",
+    "dataclasses>=0.6",
+    "python-frontmatter>=1.1.0",
+    "markdown>=3.6",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+ankc = "app.main:app"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "black>=24.4.2",
+    "flake8>=7.1.0",
+    "pytest>=8.2.2",
+    "bandit>=1.7.9",
+]
+
+[tool.pdm.scripts]
+release = "sh scripts/check_release.sh"
+format = "pdm run black --check ."
+secure = "pdm run bandit -r app -ll"
+test = "pdm run pytest"
+
+[tool.pdm.scripts.check]
+composite = [
+    "release",
+    "format",
+    "secure",
+    "test",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
