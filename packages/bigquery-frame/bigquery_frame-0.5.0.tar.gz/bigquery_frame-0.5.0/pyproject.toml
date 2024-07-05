@@ -1,0 +1,113 @@
+[tool.poetry]
+name = "bigquery-frame"
+version = "0.5.0"
+description = "A DataFrame API for Google BigQuery"
+authors = ["FurcyPin"]
+license = "Apache-2.0"
+keywords = ["BigQuery", "DataFrame"]
+readme = "README.md"
+homepage = "https://github.com/FurcyPin/bigquery-frame"
+repository = "https://github.com/FurcyPin/bigquery-frame"
+include = ["bigquery_frame/py.typed"]
+
+[tool.poetry.scripts]
+bq-diff = 'bigquery_frame.cli.diff:main'
+
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+data-diff-viewer = "0.3.2"
+
+google-cloud-bigquery = "^3.14.1"
+google-cloud-bigquery-storage = "^2.24.0"
+tabulate = "^0.9.0"
+tqdm = "^4.64.0"
+
+[tool.poetry.dev-dependencies]
+types-tqdm = "^4.64.6"
+types-tabulate = "^0.8.11"
+types-setuptools = "^65.6.0.3"
+
+black = "^24.3.0"
+ruff = "^0.1.6"
+mypy = "^0.971"
+safety = "^2.1.1"
+
+pytest = "^7.4.4"
+pytest-cov = "^4.1.0"
+pytest-xdist="^3.5.0"
+
+pipdeptree = "2.2.1"
+bump-my-version = "^0.20.3"
+
+# Dependencies used by DataFrame.toPandas()
+pandas = "~2.2.2"
+pyarrow = "^16.0.0"
+db-dtypes = "^1.0.3"
+
+
+[build-system]
+requires = ["poetry-core==1.1.14"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+line_length = 120
+profile = "black"
+known_first_party = "bigquery_frame"
+
+[tool.coverage.run]
+branch = true
+omit = ["tests/*"]
+
+[tool.coverage.html]
+directory = "htmlcov"
+
+[tool.coverage.xml]
+output = "test_working_dir/coverage.xml"
+
+[tool.coverage.report]
+exclude_also = [
+    "if TYPE_CHECKING:"
+]
+
+[tool.pytest.ini_options]
+addopts = [
+    "-ra",
+    "--doctest-modules",
+    "--junitxml=test_working_dir/test-results.xml"
+]
+
+testpaths = [
+    "bigquery_frame",
+    "tests"
+]
+
+[tool.bumpversion]
+current_version = "0.5.0"
+commit = true
+message = "Bump version: {current_version} → {new_version}"
+tag = true
+tag_name = "v{new_version}"
+tag_message = "Bump version: {current_version} → {new_version}"
+parse = "(?P<major>\\d+)\\.(?P<minor>\\d+)\\.(?P<patch>\\d+)(\\.(?P<release>[a-z]+)(?P<dev>\\d+))?"
+serialize = ["{major}.{minor}.{patch}"]
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+search = "version = \"{current_version}\""
+replace = "version = \"{new_version}\""
+
+[[tool.bumpversion.files]]
+filename = "bigquery_frame/__init__.py"
+search = "__version__ = \"{current_version}\""
+replace = "__version__ = \"{new_version}\""
+
+[[tool.bumpversion.files]]
+filename = "sonar-project.properties"
+search = "sonar.projectVersion={current_version}"
+replace = "sonar.projectVersion={new_version}"
+
+
