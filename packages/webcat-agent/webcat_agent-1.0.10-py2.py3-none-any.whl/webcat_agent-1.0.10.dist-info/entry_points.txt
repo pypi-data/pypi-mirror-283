@@ -1,0 +1,2 @@
+[console_scripts]
+webcat-agent = webcat_agent.__main__:main
