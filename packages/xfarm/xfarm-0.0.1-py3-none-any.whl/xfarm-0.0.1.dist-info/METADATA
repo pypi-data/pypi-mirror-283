@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: xfarm
+Version: 0.0.1
+Summary: Exploit Farm client
+Home-page: https://github.com/pwnzer0tt1/exploitfarm
+Author: Pwnzer0tt1
+Author-email: pwnzer0tt1@poliba.it
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: exploitfarm
+
+# Exploit Farm python library
+
+Alias of 'exploitfarm' libaray
