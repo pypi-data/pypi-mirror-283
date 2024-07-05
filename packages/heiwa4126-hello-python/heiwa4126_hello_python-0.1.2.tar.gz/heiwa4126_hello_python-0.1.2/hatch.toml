@@ -1,0 +1,39 @@
+# [tool.hatch...]
+
+[env]
+requires = [
+  "hatch-pip-compile",
+]
+
+# [default.extra-scripts]
+# pip = "{env:HATCH_UV} pip {args}"
+
+[envs.default]
+# installer = "uv"
+type = "pip-compile"
+pip-compile-resolver = "uv"
+# lock-filename = "requirements.lock"
+
+#----
+
+[version]
+path = "src/heiwa4126_hello_python/__about__.py"
+
+[envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+
+[envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/heiwa4126_hello_python tests}"
+
+[envs.default.scripts]
+main = "python src/heiwa4126_hello_python/main.py"
+ex1 = "python examples/ex1.py"
+
+bump = [
+  "hatch version patch",
+  "git add --all",
+  "git commit -am \"v$(hatch version)\"",
+  "git tag -a \"v$(hatch version)\" -m \"v$(hatch version)\"",
+]
