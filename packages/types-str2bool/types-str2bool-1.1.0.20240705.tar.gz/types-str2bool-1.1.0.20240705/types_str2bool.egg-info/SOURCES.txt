@@ -1,0 +1,10 @@
+CHANGELOG.md
+MANIFEST.in
+setup.py
+str2bool-stubs/METADATA.toml
+str2bool-stubs/__init__.pyi
+str2bool-stubs/py.typed
+types_str2bool.egg-info/PKG-INFO
+types_str2bool.egg-info/SOURCES.txt
+types_str2bool.egg-info/dependency_links.txt
+types_str2bool.egg-info/top_level.txt
