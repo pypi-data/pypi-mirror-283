@@ -1,0 +1,15 @@
+MANIFEST.in
+setup.py
+django_aboelezz.egg-info/PKG-INFO
+django_aboelezz.egg-info/SOURCES.txt
+django_aboelezz.egg-info/dependency_links.txt
+django_aboelezz.egg-info/requires.txt
+django_aboelezz.egg-info/top_level.txt
+myapp/__init__.py
+myapp/admin.py
+myapp/apps.py
+myapp/models.py
+myapp/tests.py
+myapp/views.py
+myapp/migrations/__init__.py
+myapp/templates/my_template.html
