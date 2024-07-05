@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/gnep_learn.py
+src/gnep_learn.egg-info/PKG-INFO
+src/gnep_learn.egg-info/SOURCES.txt
+src/gnep_learn.egg-info/dependency_links.txt
+src/gnep_learn.egg-info/requires.txt
+src/gnep_learn.egg-info/top_level.txt
+tests/test_gnep_learn.py

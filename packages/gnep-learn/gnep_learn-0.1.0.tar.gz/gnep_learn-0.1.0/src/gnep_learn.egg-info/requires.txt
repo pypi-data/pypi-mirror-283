@@ -1,0 +1,9 @@
+numpy
+scipy
+cvxopt
+jax
+jaxopt
+tqdm
+numba
+joblib
+matplotlib
