@@ -1,0 +1,14 @@
+{% load i18n %}
+
+<div class="card">
+    <div class="card-body">
+        {% translate "Active Incursions" as widget_title %}
+        {% include "framework/dashboard/widget-title.html" with title=widget_title %}
+        {% for incursion in incursions %}
+            <div class="row mb-3">
+                {{ incursion.constellation }}<span class="badge bg-secondary">{{ incursion.state }}</span> <span class="badge bg-secondary">Boss:{{ incursion.has_boss }}</span>
+            </div>
+        {% endfor %}
+
+    </div>
+</div>

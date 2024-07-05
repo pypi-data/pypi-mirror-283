@@ -1,0 +1,46 @@
+{% extends "incursions/base-bs5.html" %}
+{% load i18n %}
+{% load humanize %}
+{% load static %}
+{% block page_title %}
+    {% translate "Constellation Data" %}
+{% endblock page_title %}
+
+{% block header_nav_brand %}
+    {% translate "Constellation Data" %}
+{% endblock header_nav_brand %}
+
+{% block content %}
+    <table class="table table-hover" id="table-constellations">
+        <thead>
+            <tr>
+                <th class="text-left">{% translate "Name" %}</th>
+                <th class="text-left">{% translate "Region" %}</th>
+                <th class="text-left">{% translate "Count" %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for constellation in constellations %}
+                <tr>
+                    <td>{{ constellation.name }}</td>
+                    <td>{{ constellation.eve_region__name }}</td>
+                    <td>{{ constellation.incursions_count }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock content %}
+
+{% block extra_script %}
+    $(document).ready( function () {
+    $('#table-constellations').DataTable({
+    lengthMenu: [
+    [10, 25, 50, 100, -1],
+    [10, 25, 50, 100, 'All'],
+    ],
+    "stateSave": true,
+    "stateDuration": 0
+    });
+    } );
+{% endblock extra_script %}
