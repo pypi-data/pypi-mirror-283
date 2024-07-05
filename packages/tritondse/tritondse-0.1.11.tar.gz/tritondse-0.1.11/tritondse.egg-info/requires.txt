@@ -1,0 +1,7 @@
+cle
+enum_tools
+lief>=v0.14.0
+networkx
+pyQBDI
+quokka-project
+triton-library>=1.0.0rc4
