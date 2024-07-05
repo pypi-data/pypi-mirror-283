@@ -1,0 +1,5 @@
+pyserial
+tk
+requests
+typing_extensions
+kapak
