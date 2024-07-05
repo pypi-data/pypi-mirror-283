@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: Medyator
+Version: 0.1.0
+Summary: A command and query mediator for Python.
+Home-page: https://github.com/misdirection/medyator
+Author: Misdirection
+Author-email: misdirection@live.de
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: typing-extensions
+
+# medyator

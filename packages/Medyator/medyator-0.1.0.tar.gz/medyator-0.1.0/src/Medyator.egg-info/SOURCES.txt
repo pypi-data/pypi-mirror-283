@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+src/Medyator.egg-info/PKG-INFO
+src/Medyator.egg-info/SOURCES.txt
+src/Medyator.egg-info/dependency_links.txt
+src/Medyator.egg-info/requires.txt
+src/Medyator.egg-info/top_level.txt
+tests/test_generic_medyator.py
