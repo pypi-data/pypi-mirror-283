@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+dp_sequence_editor/__init__.py
+dp_sequence_editor.egg-info/PKG-INFO
+dp_sequence_editor.egg-info/SOURCES.txt
+dp_sequence_editor.egg-info/dependency_links.txt
+dp_sequence_editor.egg-info/requires.txt
+dp_sequence_editor.egg-info/top_level.txt
+dp_sequence_editor/frontend/build/asset-manifest.json
+dp_sequence_editor/frontend/build/bootstrap.min.css
+dp_sequence_editor/frontend/build/index.html
+dp_sequence_editor/frontend/build/static/css/main.1a0bab6b.css
+dp_sequence_editor/frontend/build/static/css/main.1a0bab6b.css.map
+dp_sequence_editor/frontend/build/static/js/main.6c92e5b4.js
+dp_sequence_editor/frontend/build/static/js/main.6c92e5b4.js.LICENSE.txt
+dp_sequence_editor/frontend/build/static/js/main.6c92e5b4.js.map
