@@ -1,0 +1,2 @@
+[console_scripts]
+psyneulinkviewer = psyneulinkviewer.start:main
