@@ -1,0 +1,7 @@
+aiohttp
+requests_aws4auth
+pycognito
+aws_request_signer
+aiobotocore
+botocore
+boto3
