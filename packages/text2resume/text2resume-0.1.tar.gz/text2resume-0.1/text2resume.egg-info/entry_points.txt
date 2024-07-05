@@ -1,0 +1,2 @@
+[console_scripts]
+generate-resume = text2resume.generate_resume:main
