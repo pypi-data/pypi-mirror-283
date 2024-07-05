@@ -1,0 +1,9 @@
+LICENSE.txt
+Tool.py
+setup.py
+sztestlib/__init__.py
+sztestlib/szlibone.py
+wc001.egg-info/PKG-INFO
+wc001.egg-info/SOURCES.txt
+wc001.egg-info/dependency_links.txt
+wc001.egg-info/top_level.txt
