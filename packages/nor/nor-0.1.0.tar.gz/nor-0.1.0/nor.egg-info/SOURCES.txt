@@ -1,0 +1,8 @@
+setup.py
+nor/__init__.py
+nor/framework.py
+nor.egg-info/PKG-INFO
+nor.egg-info/SOURCES.txt
+nor.egg-info/dependency_links.txt
+nor.egg-info/requires.txt
+nor.egg-info/top_level.txt
