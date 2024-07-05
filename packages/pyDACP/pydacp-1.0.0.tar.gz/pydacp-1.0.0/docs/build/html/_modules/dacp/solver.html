@@ -1,0 +1,1119 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dacp.solver &#8212; pyDACP 1.0.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/local.css?v=2687f39f" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=f9c1cefe"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/dacp/solver';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <!-- Matomo -->
+  <script>
+      var _paq = window._paq = window._paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="https://piwik.kwant-project.org/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '8']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+  <!-- End Matomo Code -->
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">pyDACP 1.0.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../index.html">
+                    pyDACP
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/example.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../documentation/dacp.html">Package reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../AUTHORS.html">pyDACP Authors</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-gitlab"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://gitlab.kwant-project.org/qt/pyDACP" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-gitlab"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://gitlab.kwant-project.org/qt/pyDACP/-/issues/new?issue[title]=Issue%20on%20page%20%2F_modules/dacp/solver.html&issue[description]=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for dacp.solver</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">scipy.sparse.linalg</span> <span class="kn">import</span> <span class="n">eigsh</span><span class="p">,</span> <span class="n">LinearOperator</span>
+<span class="kn">from</span> <span class="nn">scipy.sparse</span> <span class="kn">import</span> <span class="n">sparray</span>
+<span class="kn">import</span> <span class="nn">scipy.linalg</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span> <span class="nn">itertools</span> <span class="k">as</span> <span class="nn">it</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span>
+
+
+<span class="k">def</span> <span class="nf">svd_decomposition</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">matrix_proj</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Perform SVD decomposition.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    -----------</span>
+
+<span class="sd">    S : ndarray</span>
+<span class="sd">        Overlap matrix.</span>
+<span class="sd">    matrix_proj : ndarray</span>
+<span class="sd">        Projected matrix.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    --------</span>
+<span class="sd">    Orthogonalized matrix.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">s</span><span class="p">,</span> <span class="n">V</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+    <span class="n">indx</span> <span class="o">=</span> <span class="n">s</span> <span class="o">&gt;</span> <span class="mf">1e-12</span>
+    <span class="n">lambda_s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">indx</span><span class="p">]))</span>
+    <span class="n">U</span> <span class="o">=</span> <span class="n">V</span><span class="p">[:,</span> <span class="n">indx</span><span class="p">]</span> <span class="o">@</span> <span class="n">lambda_s</span>
+    <span class="k">return</span> <span class="n">U</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">conj</span><span class="p">()</span> <span class="o">@</span> <span class="n">matrix_proj</span> <span class="o">@</span> <span class="n">U</span>
+
+
+<span class="k">def</span> <span class="nf">chebyshev_recursion_gen</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">v_0</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Recursively apply Chebyshev polynomials of a matrix.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    A : sparse matrix</span>
+<span class="sd">        Compute Chebyshev polynomials of this matrix.</span>
+<span class="sd">    v_0 : 2D array</span>
+<span class="sd">        Initial vector.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    --------</span>
+<span class="sd">    T_n(A) @ v_0: nd-array</span>
+<span class="sd">        n-th order Chebyshev polynomial applied to v_0.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">order</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">order</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">v_n</span> <span class="o">=</span> <span class="n">v_0</span>
+        <span class="k">elif</span> <span class="n">order</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">v_nm1</span> <span class="o">=</span> <span class="n">v_n</span>
+            <span class="n">v_n</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">v_nm1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">v_np1</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">A</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">v_n</span><span class="p">)</span> <span class="o">-</span> <span class="n">v_nm1</span>
+            <span class="n">v_nm1</span> <span class="o">=</span> <span class="n">v_n</span>
+            <span class="n">v_n</span> <span class="o">=</span> <span class="n">v_np1</span>
+        <span class="n">order</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">yield</span> <span class="n">v_n</span>
+
+
+<span class="k">def</span> <span class="nf">low_E_filter</span><span class="p">(</span><span class="n">v_rand</span><span class="p">,</span> <span class="n">F_operator</span><span class="p">,</span> <span class="n">K_max</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Chebyshev filter of a radom vector `v_proj`.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    vproj : 2d-array</span>
+<span class="sd">        Collection of random vectors.</span>
+<span class="sd">    F_operator : sparse matrix</span>
+<span class="sd">        Filter operator.</span>
+<span class="sd">    K_max : int</span>
+<span class="sd">        Highest order of Chebyshev polynomials of `F_operator` computed.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    --------</span>
+<span class="sd">    F(v_rand): 2D array</span>
+<span class="sd">        Collection of filtered vectors.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">chebyshev_recursion</span> <span class="o">=</span> <span class="n">chebyshev_recursion_gen</span><span class="p">(</span><span class="n">F_operator</span><span class="p">,</span> <span class="n">v_rand</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">K_max</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">v_n</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">chebyshev_recursion</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">v_n</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">v_n</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">basis</span><span class="p">(</span><span class="n">v_proj</span><span class="p">,</span> <span class="n">G_operator</span><span class="p">,</span> <span class="n">dk</span><span class="p">,</span> <span class="n">ortho_threshold</span><span class="p">,</span> <span class="n">first_run</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">Q</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generate a complete basis with Chebyshev evolution.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    vproj : 2D array</span>
+<span class="sd">        Collection of filtered vectors.</span>
+<span class="sd">    G_operator : sparse matrix</span>
+<span class="sd">        Generator of Chebyshev evolution.</span>
+<span class="sd">    dk : float</span>
+<span class="sd">        Steps on Chebyshev evolution before collecting vector.</span>
+<span class="sd">    ortho_threshold : float</span>
+<span class="sd">        Threshold for orthogonality condition.</span>
+<span class="sd">    first_run : boolean</span>
+<span class="sd">        `True` if it is the first run of Chebyshev evolution before checking degeneracies.</span>
+<span class="sd">    Q : 2D array</span>
+<span class="sd">        Q matrix from previous QR decomposition. Only necessary if `first_run=False`.</span>
+<span class="sd">    R : 2D array</span>
+<span class="sd">        R matrix from previous QR decomposition. Only necessary if `first_run=False`.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    --------</span>
+<span class="sd">    Q : 2D array</span>
+<span class="sd">        Orthogonalized vectors.</span>
+<span class="sd">    R: 2D array</span>
+<span class="sd">        R-matrix resulting from QR decomposition.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">chebyshev_recursion</span> <span class="o">=</span> <span class="n">chebyshev_recursion_gen</span><span class="p">(</span><span class="n">G_operator</span><span class="p">,</span> <span class="n">v_proj</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">G_operator</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="n">v_n</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">chebyshev_recursion</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">int</span><span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="n">dk</span><span class="p">):</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">vec</span> <span class="o">=</span> <span class="n">v_n</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">first_run</span><span class="p">:</span>
+                <span class="n">Q</span><span class="p">,</span> <span class="n">R</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">qr</span><span class="p">(</span><span class="n">vec</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;economic&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">Q</span><span class="p">,</span> <span class="n">R</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">qr_insert</span><span class="p">(</span>
+                    <span class="n">Q</span><span class="o">=</span><span class="n">Q</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="n">R</span><span class="p">,</span> <span class="n">u</span><span class="o">=</span><span class="n">vec</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="n">Q</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">which</span><span class="o">=</span><span class="s2">&quot;col&quot;</span><span class="p">,</span> <span class="n">overwrite_qru</span><span class="o">=</span><span class="kc">True</span>
+                <span class="p">)</span>
+                <span class="n">norm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">R</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="n">ortho_condition</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="o">*</span> <span class="n">norm</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">ortho_threshold</span>
+                <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">invert</span><span class="p">(</span><span class="n">ortho_condition</span><span class="p">)</span><span class="o">.</span><span class="n">any</span><span class="p">():</span>
+                    <span class="n">indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">invert</span><span class="p">(</span><span class="n">ortho_condition</span><span class="p">)</span>
+                    <span class="k">return</span> <span class="n">Q</span><span class="p">[:,</span> <span class="n">indices</span><span class="p">],</span> <span class="n">R</span><span class="p">[</span><span class="n">indices</span><span class="p">,</span> <span class="p">:][:,</span> <span class="n">indices</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">Q</span><span class="p">,</span> <span class="n">R</span>
+
+
+<span class="k">def</span> <span class="nf">index_generator_fn</span><span class="p">(</span><span class="n">dk</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generate indices of values to store for the eigenvalues-only method.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    dk : float</span>
+<span class="sd">        Steps on Chebyshev evolution before collecting vector.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="n">prev_result</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">prev_result</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="k">yield</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">dk</span> <span class="o">*</span> <span class="n">i</span> <span class="o">+</span> <span class="n">item</span>
+                <span class="k">if</span> <span class="n">result</span> <span class="o">==</span> <span class="n">prev_result</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="n">prev_result</span> <span class="o">=</span> <span class="n">result</span>
+                <span class="k">yield</span> <span class="n">result</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+
+<span class="k">def</span> <span class="nf">construct_matrix</span><span class="p">(</span><span class="n">k_list_i</span><span class="p">,</span> <span class="n">k_list_j</span><span class="p">,</span> <span class="n">storage_list</span><span class="p">,</span> <span class="n">S_xy</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Construct matrices with list of S_xy and M_xy.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    -----------</span>
+
+<span class="sd">    k_list_i : integer</span>
+<span class="sd">        Number of lines.</span>
+<span class="sd">    k_list_j : integer</span>
+<span class="sd">        Number of columns.</span>
+<span class="sd">    storage_list : list</span>
+<span class="sd">        List of indices.</span>
+<span class="sd">    S_xy : list</span>
+<span class="sd">        List of S_xy elements.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    --------</span>
+<span class="sd">    S : nd-array</span>
+<span class="sd">        Overlap matrix.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">shape_S_xy</span> <span class="o">=</span> <span class="n">S_xy</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">k_products</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">it</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">k_list_i</span><span class="p">,</span> <span class="n">k_list_j</span><span class="p">)))</span>
+    <span class="n">xpy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">k_products</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">xmy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">k_products</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">k_products</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+    <span class="n">ind_p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="n">storage_list</span><span class="p">,</span> <span class="n">xpy</span><span class="p">)</span>
+    <span class="n">ind_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="n">storage_list</span><span class="p">,</span> <span class="n">xmy</span><span class="p">)</span>
+
+    <span class="n">s_xy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">S_xy</span><span class="p">)</span>
+    <span class="n">S</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">s_xy</span><span class="p">[</span><span class="n">ind_p</span><span class="p">]</span> <span class="o">+</span> <span class="n">s_xy</span><span class="p">[</span><span class="n">ind_m</span><span class="p">])</span>
+    <span class="n">i_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">k_list_i</span><span class="p">)</span>
+    <span class="n">j_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">k_list_j</span><span class="p">)</span>
+    <span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">i_size</span><span class="p">,</span> <span class="n">j_size</span><span class="p">,</span> <span class="o">*</span><span class="n">shape_S_xy</span><span class="p">)</span>
+    <span class="n">S</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">shape</span><span class="p">)</span>
+    <span class="n">S</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">S</span>
+
+
+<span class="k">def</span> <span class="nf">combine_loops</span><span class="p">(</span><span class="n">S_new</span><span class="p">,</span> <span class="n">S_prev</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Combine previous and new matrix entries.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    S_new : ndarray</span>
+<span class="sd">        New array with elements.</span>
+<span class="sd">    S_prev : ndarray</span>
+<span class="sd">        Previous array with elements..</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    --------</span>
+<span class="sd">    S_combined : nd-array</span>
+<span class="sd">        Overlap matrix combined from different loops.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">S_conj</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">S_new</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="p">:]</span><span class="o">.</span><span class="n">conj</span><span class="p">(),</span> <span class="n">axes</span><span class="o">=</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+    <span class="n">n_conj</span><span class="p">,</span> <span class="n">m_conj</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">S_conj</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="mi">3</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">S_conj</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">3</span><span class="p">:])</span>
+    <span class="n">S_conj</span> <span class="o">=</span> <span class="n">S_conj</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">n_conj</span><span class="p">,</span> <span class="n">m_conj</span><span class="p">))</span>
+    <span class="n">n_new</span><span class="p">,</span> <span class="n">m_new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">S_new</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="mi">3</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">S_new</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">3</span><span class="p">:])</span>
+    <span class="n">S_new</span> <span class="o">=</span> <span class="n">S_new</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">n_new</span><span class="p">,</span> <span class="n">m_new</span><span class="p">))</span>
+    <span class="n">S_c1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">S_prev</span><span class="p">,</span> <span class="n">S_conj</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">S_combined</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">S_c1</span><span class="p">,</span> <span class="n">S_new</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">S_combined</span>
+
+
+<span class="k">def</span> <span class="nf">combine_loops_fast</span><span class="p">(</span><span class="n">S_diag</span><span class="p">,</span> <span class="n">S_offdiag</span><span class="p">,</span> <span class="n">S_prev</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Combine loops after the two first runs.</span>
+
+<span class="sd">    S_diag : ndarray</span>
+<span class="sd">        Diagonal block of the new matrix.</span>
+<span class="sd">    S_offdiag : ndarray</span>
+<span class="sd">        Off-diagonal block of the new matrix.</span>
+<span class="sd">    S_prev : ndarray</span>
+<span class="sd">        Previous matrix block.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    --------</span>
+<span class="sd">    S_combined : nd-array</span>
+<span class="sd">        Overlap matrix combined from different loops.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">n_diag</span><span class="p">,</span> <span class="n">m_diag</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">S_diag</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="mi">3</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">S_diag</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">3</span><span class="p">:])</span>
+    <span class="n">S_diag</span> <span class="o">=</span> <span class="n">S_diag</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">n_diag</span><span class="p">,</span> <span class="n">m_diag</span><span class="p">))</span>
+    <span class="n">n_off</span><span class="p">,</span> <span class="n">m_off</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">S_offdiag</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="mi">3</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">S_offdiag</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">3</span><span class="p">:])</span>
+    <span class="n">S_offdiag</span> <span class="o">=</span> <span class="n">S_offdiag</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">n_off</span><span class="p">,</span> <span class="n">m_off</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">S_diag</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">S_diag</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">S_offdiag</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">S_offdiag</span><span class="p">,</span> <span class="n">S_diag</span><span class="p">[:</span> <span class="o">-</span><span class="n">S_diag</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">S_diag</span> <span class="o">=</span> <span class="n">S_diag</span><span class="p">[</span><span class="o">-</span><span class="n">S_diag</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">:]</span>
+    <span class="n">S_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">S_prev</span><span class="p">,</span> <span class="n">S_offdiag</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">S_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">S_offdiag</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">conj</span><span class="p">(),</span> <span class="n">S_diag</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">S_combined</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">S_1</span><span class="p">,</span> <span class="n">S_2</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">S_combined</span>
+
+
+<span class="k">def</span> <span class="nf">eigvals_init</span><span class="p">(</span><span class="n">v_proj</span><span class="p">,</span> <span class="n">G_operator</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">dk</span><span class="p">,</span> <span class="n">ortho_threshold</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute eigenvalues for initial run.</span>
+
+<span class="sd">    v_proj : ndarray</span>
+<span class="sd">        Filtered random vector.</span>
+<span class="sd">    G_operator : ndarray</span>
+<span class="sd">        Subspace generator.</span>
+<span class="sd">    A : ndarray</span>
+<span class="sd">        Matrix to compute eigenvalues.</span>
+<span class="sd">    dk : integer</span>
+<span class="sd">        Largest Chebyshev evolution order.</span>
+<span class="sd">    ortho_threshold : float</span>
+<span class="sd">        Threshold for orthogonality condition.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    --------</span>
+<span class="sd">    v_0 : nd-array</span>
+<span class="sd">        Filtered vector.</span>
+<span class="sd">    k_list : list</span>
+<span class="sd">        List of indices to be collected for</span>
+<span class="sd">    S : nd-array</span>
+<span class="sd">        Overlap matrix.</span>
+<span class="sd">    matrix_proj : nd-array</span>
+<span class="sd">        Projected matrix for computed vectors.</span>
+<span class="sd">    q_S, r_S : nd-arrays</span>
+<span class="sd">        Q and R matrices from QR decomposition of the overlap matrix.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">S_xy</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">matrix_xy</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">index_generator</span> <span class="o">=</span> <span class="n">index_generator_fn</span><span class="p">(</span><span class="n">dk</span><span class="p">)</span>
+    <span class="n">chebyshev_recursion</span> <span class="o">=</span> <span class="n">chebyshev_recursion_gen</span><span class="p">(</span><span class="n">G_operator</span><span class="p">,</span> <span class="n">v_proj</span><span class="p">)</span>
+    <span class="n">storage_list</span> <span class="o">=</span> <span class="p">[</span><span class="nb">next</span><span class="p">(</span><span class="n">index_generator</span><span class="p">)]</span>
+    <span class="n">k_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">dk</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dk</span><span class="p">]</span>
+    <span class="n">k_latest</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">eig_pairs</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">v_0</span> <span class="o">=</span> <span class="n">v_proj</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,]</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">v_n</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">chebyshev_recursion</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">k_latest</span> <span class="o">==</span> <span class="n">storage_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">storage_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">index_generator</span><span class="p">))</span>
+            <span class="n">S_xy</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span>
+                    <span class="s2">&quot;sir,dil-&gt;srdl&quot;</span><span class="p">,</span>
+                    <span class="n">v_0</span><span class="o">.</span><span class="n">conj</span><span class="p">(),</span>
+                    <span class="n">v_n</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,],</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">H_v_n</span> <span class="o">=</span> <span class="n">A</span> <span class="o">@</span> <span class="n">v_n</span>
+            <span class="n">matrix_xy</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span>
+                    <span class="s2">&quot;sir,dil-&gt;srdl&quot;</span><span class="p">,</span>
+                    <span class="n">v_0</span><span class="o">.</span><span class="n">conj</span><span class="p">(),</span>
+                    <span class="n">H_v_n</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,],</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">eig_pairs</span> <span class="o">*</span> <span class="n">dk</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">==</span> <span class="n">k_latest</span><span class="p">:</span>
+            <span class="n">S</span> <span class="o">=</span> <span class="n">construct_matrix</span><span class="p">(</span><span class="n">k_list</span><span class="p">,</span> <span class="n">k_list</span><span class="p">,</span> <span class="n">storage_list</span><span class="p">,</span> <span class="n">S_xy</span><span class="p">)</span>
+            <span class="n">matrix_proj</span> <span class="o">=</span> <span class="n">construct_matrix</span><span class="p">(</span><span class="n">k_list</span><span class="p">,</span> <span class="n">k_list</span><span class="p">,</span> <span class="n">storage_list</span><span class="p">,</span> <span class="n">matrix_xy</span><span class="p">)</span>
+            <span class="n">N</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">S</span><span class="o">.</span><span class="n">size</span><span class="p">))</span>
+            <span class="n">S</span> <span class="o">=</span> <span class="n">S</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">))</span>
+            <span class="n">matrix_proj</span> <span class="o">=</span> <span class="n">matrix_proj</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">))</span>
+            <span class="n">q_S</span><span class="p">,</span> <span class="n">r_S</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">qr</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+            <span class="n">norm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">r_S</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">ortho_condition</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">r_S</span><span class="p">)</span> <span class="o">*</span> <span class="n">norm</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">ortho_threshold</span>
+            <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">invert</span><span class="p">(</span><span class="n">ortho_condition</span><span class="p">)</span><span class="o">.</span><span class="n">any</span><span class="p">():</span>
+                <span class="k">return</span> <span class="n">v_0</span><span class="p">,</span> <span class="n">k_list</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">matrix_proj</span><span class="p">,</span> <span class="n">q_S</span><span class="p">,</span> <span class="n">r_S</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">eig_pairs</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">k_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">dk</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="n">k_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k_list</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">dk</span><span class="p">)</span>
+        <span class="n">k_latest</span> <span class="o">+=</span> <span class="mi">1</span>
+
+
+<span class="k">def</span> <span class="nf">eigvals_deg</span><span class="p">(</span>
+    <span class="n">v_prev</span><span class="p">,</span>
+    <span class="n">v_proj</span><span class="p">,</span>
+    <span class="n">k_list</span><span class="p">,</span>
+    <span class="n">S_prev</span><span class="p">,</span>
+    <span class="n">matrix_prev</span><span class="p">,</span>
+    <span class="n">G_operator</span><span class="p">,</span>
+    <span class="n">A</span><span class="p">,</span>
+    <span class="n">dk</span><span class="p">,</span>
+    <span class="n">n_evolution</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute eigenvalues for initial run.</span>
+
+<span class="sd">    v_prev : ndarray</span>
+<span class="sd">        Filtered vectors from previous runs.</span>
+<span class="sd">    v_proj : ndarray</span>
+<span class="sd">        Filtered random vector.</span>
+<span class="sd">    k_list : list</span>
+<span class="sd">        List of indices from first run.</span>
+<span class="sd">    G_operator : ndarray</span>
+<span class="sd">        Subspace generator.</span>
+<span class="sd">    A : ndarray</span>
+<span class="sd">        Matrix to compute eigenvalues.</span>
+<span class="sd">    dk : integer</span>
+<span class="sd">        Largest Chebyshev evolution order.</span>
+<span class="sd">    n_evolution : bool</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    --------</span>
+<span class="sd">    v_0 : nd-array</span>
+<span class="sd">        Filtered vector.</span>
+<span class="sd">    S : nd-array</span>
+<span class="sd">        Overlap matrix.</span>
+<span class="sd">    matrix_proj : nd-array</span>
+<span class="sd">        Projected matrix for computed vectors.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">S_xy</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">matrix_xy</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">index_generator</span> <span class="o">=</span> <span class="n">index_generator_fn</span><span class="p">(</span><span class="n">dk</span><span class="p">)</span>
+    <span class="n">chebyshev_recursion</span> <span class="o">=</span> <span class="n">chebyshev_recursion_gen</span><span class="p">(</span><span class="n">G_operator</span><span class="p">,</span> <span class="n">v_proj</span><span class="p">)</span>
+    <span class="n">storage_list</span> <span class="o">=</span> <span class="p">[</span><span class="nb">next</span><span class="p">(</span><span class="n">index_generator</span><span class="p">)]</span>
+    <span class="n">k_latest</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="n">v_0</span> <span class="o">=</span> <span class="n">v_proj</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,]</span>
+    <span class="n">v_0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">v_prev</span><span class="p">,</span> <span class="n">v_0</span><span class="p">))</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">v_n</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">chebyshev_recursion</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">k_latest</span> <span class="o">==</span> <span class="n">storage_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">storage_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">index_generator</span><span class="p">))</span>
+            <span class="n">S_xy</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span>
+                    <span class="s2">&quot;sir,dil-&gt;srdl&quot;</span><span class="p">,</span>
+                    <span class="n">v_0</span><span class="o">.</span><span class="n">conj</span><span class="p">(),</span>
+                    <span class="n">v_n</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,],</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">H_v_n</span> <span class="o">=</span> <span class="n">A</span> <span class="o">@</span> <span class="n">v_n</span>
+            <span class="n">matrix_xy</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span>
+                    <span class="s2">&quot;sir,dil-&gt;srdl&quot;</span><span class="p">,</span>
+                    <span class="n">v_0</span><span class="o">.</span><span class="n">conj</span><span class="p">(),</span>
+                    <span class="n">H_v_n</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,],</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">n_evolution</span><span class="p">:</span>
+            <span class="k">if</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">k_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">==</span> <span class="n">k_latest</span><span class="p">:</span>
+                <span class="n">S</span> <span class="o">=</span> <span class="n">construct_matrix</span><span class="p">(</span><span class="n">k_list</span><span class="p">,</span> <span class="n">k_list</span><span class="p">,</span> <span class="n">storage_list</span><span class="p">,</span> <span class="n">S_xy</span><span class="p">)</span>
+                <span class="n">matrix_proj</span> <span class="o">=</span> <span class="n">construct_matrix</span><span class="p">(</span><span class="n">k_list</span><span class="p">,</span> <span class="n">k_list</span><span class="p">,</span> <span class="n">storage_list</span><span class="p">,</span> <span class="n">matrix_xy</span><span class="p">)</span>
+
+                <span class="n">S</span> <span class="o">=</span> <span class="n">combine_loops</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">S_prev</span><span class="p">)</span>
+                <span class="n">matrix_proj</span> <span class="o">=</span> <span class="n">combine_loops</span><span class="p">(</span><span class="n">matrix_proj</span><span class="p">,</span> <span class="n">matrix_prev</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">v_0</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">matrix_proj</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">k_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">k_latest</span><span class="p">:</span>
+                <span class="n">S_xy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">S_xy</span><span class="p">)</span>
+                <span class="n">matrix_xy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">matrix_xy</span><span class="p">)</span>
+                <span class="n">S_offdiag</span> <span class="o">=</span> <span class="n">construct_matrix</span><span class="p">(</span>
+                    <span class="n">k_list</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">storage_list</span><span class="p">,</span> <span class="n">S_xy</span><span class="p">[:,</span> <span class="p">:</span><span class="n">n_evolution</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="p">:]</span>
+                <span class="p">)</span>
+                <span class="n">matrix_proj_offdiag</span> <span class="o">=</span> <span class="n">construct_matrix</span><span class="p">(</span>
+                    <span class="n">k_list</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">storage_list</span><span class="p">,</span> <span class="n">matrix_xy</span><span class="p">[:,</span> <span class="p">:</span><span class="n">n_evolution</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="p">:]</span>
+                <span class="p">)</span>
+
+                <span class="n">S_diag</span> <span class="o">=</span> <span class="n">construct_matrix</span><span class="p">(</span>
+                    <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">storage_list</span><span class="p">,</span> <span class="n">S_xy</span><span class="p">[:,</span> <span class="n">n_evolution</span><span class="p">:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="p">:]</span>
+                <span class="p">)</span>
+                <span class="n">matrix_proj_diag</span> <span class="o">=</span> <span class="n">construct_matrix</span><span class="p">(</span>
+                    <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">storage_list</span><span class="p">,</span> <span class="n">matrix_xy</span><span class="p">[:,</span> <span class="n">n_evolution</span><span class="p">:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="p">:]</span>
+                <span class="p">)</span>
+
+                <span class="n">S</span> <span class="o">=</span> <span class="n">combine_loops_fast</span><span class="p">(</span><span class="n">S_diag</span><span class="p">,</span> <span class="n">S_offdiag</span><span class="p">,</span> <span class="n">S_prev</span><span class="p">)</span>
+                <span class="n">matrix_proj</span> <span class="o">=</span> <span class="n">combine_loops_fast</span><span class="p">(</span>
+                    <span class="n">matrix_proj_diag</span><span class="p">,</span> <span class="n">matrix_proj_offdiag</span><span class="p">,</span> <span class="n">matrix_prev</span>
+                <span class="p">)</span>
+                <span class="k">return</span> <span class="n">v_0</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">matrix_proj</span>
+        <span class="n">k_latest</span> <span class="o">+=</span> <span class="mi">1</span>
+
+
+<span class="k">def</span> <span class="nf">eigvalsh_single_run</span><span class="p">(</span>
+    <span class="n">A</span><span class="p">,</span>
+    <span class="n">window</span><span class="p">,</span>
+    <span class="n">bounds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">random_vectors</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">filter_order</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+    <span class="n">tol</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Find the eigendecomposition within the given spectral bounds of a given matrix.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    A : ndarray, sparse matrix or LinearOperator</span>
+<span class="sd">        Hermitian operator.</span>
+<span class="sd">    window : tuple</span>
+<span class="sd">        Eigenvalue window.</span>
+<span class="sd">    bounds : tuple, or None</span>
+<span class="sd">        Boundaries of the spectrum. If not provided the maximum and</span>
+<span class="sd">        minimum eigenvalues are calculated.</span>
+<span class="sd">    random_vectors : int</span>
+<span class="sd">        When return_eigenvectors=False, specifies the maximum expected</span>
+<span class="sd">        degeneracy of the matrix.</span>
+<span class="sd">    filter_order : int</span>
+<span class="sd">        The number of times a vector is filtered is given by filter_order*E_max/a.</span>
+<span class="sd">    tol : float</span>
+<span class="sd">        Maximum relative error tolerance for eigenvalues.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    --------</span>
+<span class="sd">    eigvals : 1D-array</span>
+<span class="sd">        Eigenvalues.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">window_size</span> <span class="o">=</span> <span class="p">(</span><span class="n">window</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">window</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">sigma</span> <span class="o">=</span> <span class="p">(</span><span class="n">window</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">window</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
+
+    <span class="k">if</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;expected square matrix (shape=</span><span class="si">%s</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">,))</span>
+    <span class="k">if</span> <span class="n">filter_order</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;filter_order must be greater than 0.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">random_vectors</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;random_vectors must be greater than 0.&quot;</span><span class="p">)</span>
+
+    <span class="n">eps</span> <span class="o">=</span> <span class="mf">0.1</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+        <span class="n">eye</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">elif</span> <span class="n">scipy</span><span class="o">.</span><span class="n">sparse</span><span class="o">.</span><span class="n">issparse</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+        <span class="n">eye</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">sparse</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">scipy</span><span class="o">.</span><span class="n">sparse</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">_interface</span><span class="o">.</span><span class="n">_CustomLinearOperator</span><span class="p">):</span>
+
+        <span class="k">def</span> <span class="nf">mv</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">v</span>
+
+        <span class="n">eye</span> <span class="o">=</span> <span class="n">LinearOperator</span><span class="p">((</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">matvec</span><span class="o">=</span><span class="n">mv</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+            <span class="s2">&quot;A is wrong dtype: needs to be ndarray, sparse matrix or LinearOperator&quot;</span>
+        <span class="p">)</span>
+
+    <span class="n">A</span> <span class="o">=</span> <span class="n">A</span> <span class="o">-</span> <span class="n">eye</span> <span class="o">*</span> <span class="n">sigma</span>
+
+    <span class="k">if</span> <span class="n">bounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># Relative tolerance to which to calculate eigenvalues.  Because after</span>
+        <span class="c1"># rescaling we will add eps / 2 to the spectral bounds, we don&#39;t need</span>
+        <span class="c1"># to know the bounds more accurately than eps / 2.</span>
+
+        <span class="n">lmax</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span>
+            <span class="n">eigsh</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s2">&quot;LA&quot;</span><span class="p">,</span> <span class="n">return_eigenvectors</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="n">eps</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="n">lmin</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span>
+            <span class="n">eigsh</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s2">&quot;SA&quot;</span><span class="p">,</span> <span class="n">return_eigenvectors</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="n">eps</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">lmax</span> <span class="o">-</span> <span class="n">lmin</span> <span class="o">&lt;=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">lmax</span> <span class="o">+</span> <span class="n">lmin</span><span class="p">)</span> <span class="o">*</span> <span class="n">eps</span> <span class="o">/</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;The matrix has a single eigenvalue, it is not possible to &quot;</span>
+                <span class="s2">&quot;obtain continue.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="n">bounds</span> <span class="o">=</span> <span class="p">[</span><span class="n">lmin</span><span class="p">,</span> <span class="n">lmax</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">lmin</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Lower bound of the spectrum must be negative.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">lmax</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Upper bound of the spectrum must be positive.&quot;</span><span class="p">)</span>
+
+    <span class="n">ortho_threshold</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="n">filter_order</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ortho_threshold</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">finfo</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">eps</span><span class="p">:</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Results limited by numerical precision.&quot;</span><span class="p">)</span>
+        <span class="n">ortho_threshold</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">finfo</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">eps</span>
+    <span class="k">if</span> <span class="n">ortho_threshold</span> <span class="o">&gt;</span> <span class="mf">1e-6</span><span class="p">:</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Filter order is too small. Fixing it to avoid errors.&quot;</span><span class="p">)</span>
+        <span class="n">filter_order</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">1e-7</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])))</span>
+
+    <span class="n">alpha</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">filter_order</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">tol</span> <span class="o">*</span> <span class="n">window_size</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">finfo</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">eps</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">window_size</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">alpha</span> <span class="o">-</span> <span class="n">alpha</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="nb">min</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">lmin</span><span class="p">),</span> <span class="nb">abs</span><span class="p">(</span><span class="n">lmax</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;a must be smaller than spectrum bounds.&quot;</span><span class="p">)</span>
+
+    <span class="n">Emin</span> <span class="o">=</span> <span class="n">bounds</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">eps</span><span class="p">)</span>
+    <span class="n">Emax</span> <span class="o">=</span> <span class="n">bounds</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">eps</span><span class="p">)</span>
+    <span class="n">E0</span> <span class="o">=</span> <span class="p">(</span><span class="n">Emax</span> <span class="o">-</span> <span class="n">Emin</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">Ec</span> <span class="o">=</span> <span class="p">(</span><span class="n">Emax</span> <span class="o">+</span> <span class="n">Emin</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">G_operator</span> <span class="o">=</span> <span class="p">(</span><span class="n">A</span> <span class="o">-</span> <span class="n">eye</span> <span class="o">*</span> <span class="n">Ec</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">E0</span><span class="p">)</span>
+
+    <span class="n">Emax</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">bounds</span><span class="p">))</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">eps</span><span class="p">)</span>
+    <span class="n">E0</span> <span class="o">=</span> <span class="p">(</span><span class="n">Emax</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">a</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">Ec</span> <span class="o">=</span> <span class="p">(</span><span class="n">Emax</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">a</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">F_operator</span> <span class="o">=</span> <span class="p">(</span><span class="n">A</span> <span class="o">@</span> <span class="n">A</span> <span class="o">-</span> <span class="n">eye</span> <span class="o">*</span> <span class="n">Ec</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">E0</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_filtered_vector</span><span class="p">():</span>
+        <span class="n">v_rand</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">random_vectors</span><span class="p">)</span>
+            <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">random_vectors</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1</span><span class="n">j</span>
+            <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="n">j</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">v_rand</span> <span class="o">=</span> <span class="n">v_rand</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">v_rand</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">K_max</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">filter_order</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">bounds</span><span class="p">))</span> <span class="o">/</span> <span class="n">a</span><span class="p">)</span>
+        <span class="n">vec</span> <span class="o">=</span> <span class="n">low_E_filter</span><span class="p">(</span><span class="n">v_rand</span><span class="p">,</span> <span class="n">F_operator</span><span class="p">,</span> <span class="n">K_max</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">vec</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">vec</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">a_r</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">bounds</span><span class="p">))</span>
+    <span class="n">dk</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="n">a_r</span><span class="p">)</span>
+
+    <span class="n">N_loop</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">n_evolution</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">v_proj</span> <span class="o">=</span> <span class="n">get_filtered_vector</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">N_loop</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">v_0</span><span class="p">,</span> <span class="n">k_list</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">matrix_proj</span><span class="p">,</span> <span class="n">q_S</span><span class="p">,</span> <span class="n">r_S</span> <span class="o">=</span> <span class="n">eigvals_init</span><span class="p">(</span>
+                <span class="n">v_proj</span><span class="p">,</span> <span class="n">G_operator</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">dk</span><span class="p">,</span> <span class="n">ortho_threshold</span>
+            <span class="p">)</span>
+            <span class="n">norm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">r_S</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">N_H_prev</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">r_S</span><span class="p">)</span> <span class="o">*</span> <span class="n">norm</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">ortho_threshold</span><span class="p">)</span>
+            <span class="n">new_vals</span> <span class="o">=</span> <span class="n">N_H_prev</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">new_vals</span> <span class="o">&lt;=</span> <span class="n">random_vectors</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">n_evolution</span><span class="p">:</span>
+                <span class="n">n_evolution</span> <span class="o">=</span> <span class="n">N_loop</span>
+            <span class="n">v_0</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">matrix_proj</span> <span class="o">=</span> <span class="n">eigvals_deg</span><span class="p">(</span>
+                <span class="n">v_0</span><span class="p">,</span>
+                <span class="n">v_proj</span><span class="p">,</span>
+                <span class="n">k_list</span><span class="p">,</span>
+                <span class="n">S</span><span class="p">,</span>
+                <span class="n">matrix_proj</span><span class="p">,</span>
+                <span class="n">G_operator</span><span class="p">,</span>
+                <span class="n">A</span><span class="p">,</span>
+                <span class="n">dk</span><span class="p">,</span>
+                <span class="n">n_evolution</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">q_S</span><span class="p">,</span> <span class="n">r_S</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">qr_insert</span><span class="p">(</span>
+                <span class="n">Q</span><span class="o">=</span><span class="n">q_S</span><span class="p">,</span>
+                <span class="n">R</span><span class="o">=</span><span class="n">r_S</span><span class="p">,</span>
+                <span class="n">u</span><span class="o">=</span><span class="n">S</span><span class="p">[:</span> <span class="n">q_S</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">q_S</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">:],</span>
+                <span class="n">k</span><span class="o">=</span><span class="n">q_S</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                <span class="n">which</span><span class="o">=</span><span class="s2">&quot;col&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">q_S</span><span class="p">,</span> <span class="n">r_S</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">qr_insert</span><span class="p">(</span>
+                <span class="n">Q</span><span class="o">=</span><span class="n">q_S</span><span class="p">,</span>
+                <span class="n">R</span><span class="o">=</span><span class="n">r_S</span><span class="p">,</span>
+                <span class="n">u</span><span class="o">=</span><span class="n">S</span><span class="p">[</span><span class="n">q_S</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">:,</span> <span class="p">:],</span>
+                <span class="n">k</span><span class="o">=</span><span class="n">q_S</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                <span class="n">which</span><span class="o">=</span><span class="s2">&quot;row&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">norm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">r_S</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">N_H_cur</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">r_S</span><span class="p">)</span> <span class="o">*</span> <span class="n">norm</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">ortho_threshold</span><span class="p">)</span>
+            <span class="n">new_vals</span> <span class="o">=</span> <span class="n">N_H_cur</span> <span class="o">-</span> <span class="n">N_H_prev</span>
+            <span class="k">if</span> <span class="n">new_vals</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">N_H_prev</span> <span class="o">=</span> <span class="n">N_H_cur</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">diagS</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">S</span><span class="p">))</span>
+                <span class="n">S</span> <span class="o">=</span> <span class="n">S</span> <span class="o">-</span> <span class="n">diagS</span> <span class="o">+</span> <span class="n">diagS</span><span class="o">.</span><span class="n">real</span>
+                <span class="n">H_red</span> <span class="o">=</span> <span class="n">svd_decomposition</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">matrix_proj</span><span class="p">)</span>
+                <span class="n">eigvals</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigvalsh</span><span class="p">(</span><span class="n">H_red</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">eigvals</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">eigvals</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">window_size</span><span class="p">]</span> <span class="o">+</span> <span class="n">sigma</span>
+        <span class="n">N_loop</span> <span class="o">+=</span> <span class="mi">1</span>
+
+
+<div class="viewcode-block" id="eigvalsh">
+<a class="viewcode-back" href="../../documentation/dacp.html#dacp.solver.eigvalsh">[docs]</a>
+<span class="k">def</span> <span class="nf">eigvalsh</span><span class="p">(</span>
+    <span class="n">A</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">LinearOperator</span><span class="p">,</span> <span class="n">sparray</span><span class="p">],</span>
+    <span class="n">window</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span>
+    <span class="n">bounds</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">tuple</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">random_vectors</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="n">filter_order</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span>
+    <span class="n">tol</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Eigenvalue solver. Automatically resolves degeneracies and remove incorrect eigenvalues.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    A :</span>
+<span class="sd">        Hermitian operator.</span>
+<span class="sd">    window :</span>
+<span class="sd">        Eigenvalue window.</span>
+<span class="sd">    bounds :</span>
+<span class="sd">        Boundaries of the spectrum. If not provided the maximum and</span>
+<span class="sd">        minimum eigenvalues are calculated.</span>
+<span class="sd">    random_vectors :</span>
+<span class="sd">        When return_eigenvectors=False, specifies the maximum expected</span>
+<span class="sd">        degeneracy of the matrix.</span>
+<span class="sd">    filter_order :</span>
+<span class="sd">        The number of times a vector is filtered is given by filter_order*E_max/a.</span>
+<span class="sd">    tol :</span>
+<span class="sd">        Maximum relative error tolerance for eigenvalues.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    :</span>
+<span class="sd">        Eigenvalues.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">vals_1</span> <span class="o">=</span> <span class="n">eigvalsh_single_run</span><span class="p">(</span>
+        <span class="n">A</span><span class="p">,</span>
+        <span class="n">window</span><span class="p">,</span>
+        <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">,</span>
+        <span class="n">random_vectors</span><span class="o">=</span><span class="n">random_vectors</span><span class="p">,</span>
+        <span class="n">filter_order</span><span class="o">=</span><span class="n">filter_order</span><span class="p">,</span>
+        <span class="n">tol</span><span class="o">=</span><span class="n">tol</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">vals_1</span><span class="o">.</span><span class="n">any</span><span class="p">():</span>
+        <span class="n">errors</span> <span class="o">=</span> <span class="n">estimated_errors</span><span class="p">(</span>
+            <span class="n">eigvals</span><span class="o">=</span><span class="n">vals_1</span><span class="p">,</span> <span class="n">window</span><span class="o">=</span><span class="n">window</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="n">tol</span><span class="p">,</span> <span class="n">filter_order</span><span class="o">=</span><span class="n">filter_order</span>
+        <span class="p">)</span>
+        <span class="n">vals_2</span> <span class="o">=</span> <span class="n">eigvalsh_single_run</span><span class="p">(</span>
+            <span class="n">A</span><span class="p">,</span>
+            <span class="n">window</span><span class="p">,</span>
+            <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">,</span>
+            <span class="n">random_vectors</span><span class="o">=</span><span class="n">random_vectors</span><span class="p">,</span>
+            <span class="n">filter_order</span><span class="o">=</span><span class="n">filter_order</span><span class="p">,</span>
+            <span class="n">tol</span><span class="o">=</span><span class="n">tol</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">dist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">vals_1</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">-</span> <span class="n">vals_2</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="p">:])</span>
+        <span class="n">indx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">dist</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">errors</span>
+        <span class="k">return</span> <span class="n">vals_1</span><span class="p">[</span><span class="n">indx</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span></div>
+
+
+
+<div class="viewcode-block" id="estimated_errors">
+<a class="viewcode-back" href="../../documentation/dacp.html#dacp.solver.estimated_errors">[docs]</a>
+<span class="k">def</span> <span class="nf">estimated_errors</span><span class="p">(</span>
+    <span class="n">eigvals</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">window</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">tol</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span> <span class="n">filter_order</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Computes estimated relative errors of eigenvalues.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    eigvals :</span>
+<span class="sd">        Eigenvalues found by the eigensolver.</span>
+<span class="sd">    window :</span>
+<span class="sd">        Upper and lower bounds of eigenvalues.</span>
+<span class="sd">    tol :</span>
+<span class="sd">        Tolerance of the eigensolver (default 1e-4).</span>
+<span class="sd">    filter_order :</span>
+<span class="sd">        Order of the Chebyshev filter (default 12).</span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    :</span>
+<span class="sd">        Relative errors.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">window_size</span> <span class="o">=</span> <span class="p">(</span><span class="n">window</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">window</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">sigma</span> <span class="o">=</span> <span class="p">(</span><span class="n">window</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">window</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">delta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">finfo</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">eps</span>
+    <span class="n">alpha</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">filter_order</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">tol</span> <span class="o">*</span> <span class="n">window_size</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">finfo</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">eps</span><span class="p">)</span>
+    <span class="n">a_w</span> <span class="o">=</span> <span class="n">window_size</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">alpha</span> <span class="o">-</span> <span class="n">alpha</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">c_i_sq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">filter_order</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a_w</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="p">(</span><span class="n">eigvals</span> <span class="o">-</span> <span class="n">sigma</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">a_w</span><span class="p">)</span>
+    <span class="n">eta</span> <span class="o">=</span> <span class="n">delta</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">filter_order</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">eigvals</span><span class="p">)</span> <span class="o">*</span> <span class="n">c_i_sq</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">eta</span></div>
+
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By pyDACP developers
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, pyDACP developers.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <hr><div id="matomo-opt-out"></div><script src="https://piwik.kwant-project.org/index.php?module=CoreAdminHome&action=optOutJS&divId=matomo-opt-out&language=auto&showIntro=1"></script>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
