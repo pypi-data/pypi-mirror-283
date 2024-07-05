@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "easyRTML"
+version = "1.1"
+description = "A package for signal classification and deployment in any microcontroller board with no expertise required."
+authors = ["Aryan Jadhav <easyrtml@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"

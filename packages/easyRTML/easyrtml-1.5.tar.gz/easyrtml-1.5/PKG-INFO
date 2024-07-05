@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: easyRTML
+Version: 1.5
+Summary: A package for signal classification and deployment in any microcontroller board with no expertise required.
+Home-page: https://github.com/yourusername/easyRTML
+Author: Aryan Jadhav
+Author-email: easyrtml@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: xgboost
+Requires-Dist: scikit-learn
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: tqdm
+Requires-Dist: pyserial
+
+# easyRTML
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yourusername/easyRTML/blob/main/LICENSE)
+[![Python Version](https://img.shields.io/badge/python-3.6%2B-brightgreen.svg)](https://www.python.org/downloads/)
+
+## Overview
+
+**easyRTML** is a Python package designed for signal classification and deployment on any microcontroller board without requiring any expertise. This package facilitates seamless data acquisition, feature extraction, model training, and conversion to deployable code for embedded systems.
+
+## Features
+
+- **Data Acquisition**: Capture data from sensors and save it in CSV format.
+- **Feature Extraction**: Extract relevant features from raw data for machine learning.
+- **Model Training**: Train classification models using state-of-the-art algorithms.
+- **Model Deployment**: Convert trained models to C++ code for deployment on microcontrollers.
+
+## Installation
+
+To install the package, use `pip`:
+
+```sh
+pip install easyRTML
+
