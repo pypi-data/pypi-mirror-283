@@ -1,0 +1,11 @@
+elucidate/__init__.py,sha256=x2XiB2-k_u-Pn_XiGQI__mdToev6RS_fJ4MO4vsOceE,366
+elucidate/elucidate.py,sha256=aUY_vIpSrYDrE9fMyqLjcJRF0PApLnuvtd3ypMoFx7g,8696
+elucidate/version.py,sha256=760rzv5QEC0OsktE1HUFYTz7dnCoBSP3uY9iAzj9xv0,280
+elucidate/evaluators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+elucidate/evaluators/openai_evaluator.py,sha256=EJS11iS05ejV_JtrYiFfr29hZuIPXKbgkedif66Vauk,6124
+elucidate/evaluators/protocols.py,sha256=Q624Imc65k3zXhV8-utcjvACyphajy-uNst8R_3wslc,3122
+elucidate-0.0.1a2.dist-info/LICENSE.md,sha256=IMF9i4xIpgCADf0U-V1cuf9HBmqWQd3qtI3FSuyW4zE,26526
+elucidate-0.0.1a2.dist-info/METADATA,sha256=W33deL4Dt7k2ALCORod_b4uYVozXacpyIwkO-c_hzY4,3422
+elucidate-0.0.1a2.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+elucidate-0.0.1a2.dist-info/top_level.txt,sha256=E38aJTdTG-oVSWO_hk2dATFHfNaSAJWtTc4UoeonE5Q,10
+elucidate-0.0.1a2.dist-info/RECORD,,
