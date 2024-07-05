@@ -1,0 +1,10 @@
+gradio_uni_view/__init__.py,sha256=AgKcdsTZSLa9pDGj8dJAA1aWX8gRkd9m-NYCEmV8GH4,56
+gradio_uni_view/uni_view.py,sha256=yrFeicI54OI0XPfZLIdSlZsyhq38l0suCjuqVfYD6LY,4591
+gradio_uni_view/uni_view.pyi,sha256=JeKCazmIFZvN77LpXplOyqCEge2xEwrNBJU6nxhEkVk,19960
+gradio_uni_view/templates/component/index.js,sha256=cPTZJYfQ6Dg6bh7SBtP6Lab5pus03_f8cg3PNh7JLKs,2480483
+gradio_uni_view/templates/component/style.css,sha256=eRk48ZYQvWry8W71CDC7jc3aLCtbhnAAKn4PYtbSkeo,13522
+gradio_uni_view/templates/example/index.js,sha256=OS9nWHtrMBcPa-vuGta3RE8gDLSp0_43pHlFTZPPASA,2315
+gradio_uni_view/templates/example/style.css,sha256=-DHk5asz3SWFNLQlCnYuMN4b4gTf_srMmlu5x_xU_Pw,147
+gradio_uni_view-0.0.1.dist-info/METADATA,sha256=zxnyZ0X9mjjjS2bzv3rhk1Vg_evCdyWKp7CPCQOEYPk,363776
+gradio_uni_view-0.0.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+gradio_uni_view-0.0.1.dist-info/RECORD,,
