@@ -1,0 +1,11 @@
+README.md
+setup.py
+comparative_r_squared/__init__.py
+comparative_r_squared/comparative_r_squared.py
+comparative_r_squared.egg-info/PKG-INFO
+comparative_r_squared.egg-info/SOURCES.txt
+comparative_r_squared.egg-info/dependency_links.txt
+comparative_r_squared.egg-info/requires.txt
+comparative_r_squared.egg-info/top_level.txt
+tests/__init__.py
+tests/test_comparative_r_squared.py
