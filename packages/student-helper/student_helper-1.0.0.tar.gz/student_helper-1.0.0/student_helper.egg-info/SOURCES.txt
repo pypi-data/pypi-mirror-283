@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+student_helper/__init__.py
+student_helper/student_helper.py
+student_helper.egg-info/PKG-INFO
+student_helper.egg-info/SOURCES.txt
+student_helper.egg-info/dependency_links.txt
+student_helper.egg-info/requires.txt
+student_helper.egg-info/top_level.txt
