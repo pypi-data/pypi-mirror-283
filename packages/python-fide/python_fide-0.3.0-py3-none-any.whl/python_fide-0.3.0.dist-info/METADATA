@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: python-fide
+Version: 0.3.0
+Summary: Methods to Facilitate Analysis of Fide Ratings
+License: MIT
+Keywords: chess,fide,ratings,player,news,events
+Author: galactixx
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: Faker (>=24.11.0,<25.0.0)
+Requires-Dist: httpx (>=0.27.0,<0.28.0)
+Requires-Dist: pydantic (>=2.7.0,<3.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# python-fide
+An API to scrape and provide comprehensive information from the FIDE website, including chess player ratings, profiles, and the latest news
+
