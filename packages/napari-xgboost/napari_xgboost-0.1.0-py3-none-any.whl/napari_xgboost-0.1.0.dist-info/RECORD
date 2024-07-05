@@ -1,0 +1,11 @@
+napari_xgboost/__init__.py,sha256=oIQFfZxpdC1x6chzEBxg8RceDIFbEth8W6T49wgEWo0,113
+napari_xgboost/_widget.py,sha256=nSsArufkPcYpuVQ4QARf8nlYzgDmde2Ql8PtZoxFakw,2212
+napari_xgboost/napari.yaml,sha256=lIDBQ43TANnWlgHIM4lLGowtf7YN0PBdySM6_R0OPN8,665
+napari_xgboost/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napari_xgboost/_tests/test_widget.py,sha256=LyacTV4pHvGehhZBbxdYBEPgArk9_GVzlgtJKwHT7MI,57
+napari_xgboost-0.1.0.dist-info/LICENSE,sha256=H6vLczvsY6K9M0kxk0URtY1BQW3gaC7GbC1yYhLHF6A,1538
+napari_xgboost-0.1.0.dist-info/METADATA,sha256=SeDjWMxx5v3qt1ZWLN-47FpEYZyQMeIW4oVTpm91gdU,6932
+napari_xgboost-0.1.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+napari_xgboost-0.1.0.dist-info/entry_points.txt,sha256=Ox_LktH7TNFo4erjOTjXutw67ARHoIqpiThjB4N7RdA,62
+napari_xgboost-0.1.0.dist-info/top_level.txt,sha256=jrwB09-DDCQIYPBHpYgZwXaDfDeaM2VnGaBo5pL6BLM,15
+napari_xgboost-0.1.0.dist-info/RECORD,,

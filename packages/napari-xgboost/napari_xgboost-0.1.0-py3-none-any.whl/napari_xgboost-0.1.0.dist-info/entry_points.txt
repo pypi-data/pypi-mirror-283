@@ -1,0 +1,2 @@
+[napari.manifest]
+napari-xgboost = napari_xgboost:napari.yaml
