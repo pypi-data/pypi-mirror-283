@@ -1,0 +1,8 @@
+pandas
+numpy
+seaborn
+matplotlib
+rpy2
+statsmodels
+scipy
+python-dateutil
