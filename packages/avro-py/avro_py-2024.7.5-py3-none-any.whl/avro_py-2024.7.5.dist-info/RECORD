@@ -1,0 +1,15 @@
+avro/__init__.py,sha256=2y6aiLg9RSAPcrVlVgv3R-3MaQ5-7wzYIQAaJir3_Wo,184
+avro/cli.py,sha256=3W9cFgmn1gAXfkEXBGbaKn4yvF4sS_daH3kDVBDadEI,4084
+avro/main.py,sha256=g9flhyLrWg6eMcG9GD8rqUJhmQfKKEsxVw4Tf3nYv-U,6764
+avro/resources/__init__.py,sha256=DnrUx4Y-ubuOwV8ALOKi2m0WLN_oKMJPC1jPR5w7jsM,83
+avro/resources/dictionary.py,sha256=ArJqkHPWj12-r12vWrIvz09toCXDqoUCwrApSrf_EQA,39935
+avro/utils/__init__.py,sha256=Odi2T7UheQNz0WA2u3-p5vRU6YEuy4dNF0FCqVIYy0k,102
+avro/utils/config.py,sha256=AEy8urmCn8723KLo174p7bUvm4Xym0yvt8-VhzdjNEs,800
+avro/utils/count.py,sha256=l_Va88oVf-5ZqvQISeGPALKeER60xyXEqfT4ykFLcSI,478
+avro/utils/processor.py,sha256=JrL0qZD1wQYTUwh_pLswyAM0QdBc6Kq8qWSPFSKOSjY,8186
+avro/utils/validate.py,sha256=DG8omB3iiwdOeg34weRjyErvAT78SoIa73yjyD1FA00,2317
+avro_py-2024.7.5.dist-info/LICENSE,sha256=a4Tqf99OD0DZeRZ6cmg-N0Q8jWjtTLlq8OpNYyNZXSA,1072
+avro_py-2024.7.5.dist-info/METADATA,sha256=FG5xY32NHRDugMyozBiz_1wMyYSDTNg3s8frkyihVv8,7537
+avro_py-2024.7.5.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+avro_py-2024.7.5.dist-info/entry_points.txt,sha256=O5OHMNLtd4A6bQbH7wgoadG1QPn5sywRZ7AYbR8rQVU,38
+avro_py-2024.7.5.dist-info/RECORD,,
