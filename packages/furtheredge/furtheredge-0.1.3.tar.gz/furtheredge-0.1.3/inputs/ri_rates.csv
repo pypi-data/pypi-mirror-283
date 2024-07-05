@@ -1,0 +1,649 @@
+ri_rates_id,Variable_Name,age_y_80,cover,TABLE_ NAME,ri_rate
+1,qx_death_rt,0,Death,TABLE_DEATH,0.21
+1,qx_death_rt,1,Death,TABLE_DEATH,0.21
+1,qx_death_rt,2,Death,TABLE_DEATH,0.21
+1,qx_death_rt,3,Death,TABLE_DEATH,0.21
+1,qx_death_rt,4,Death,TABLE_DEATH,0.21
+1,qx_death_rt,5,Death,TABLE_DEATH,0.21
+1,qx_death_rt,6,Death,TABLE_DEATH,0.21
+1,qx_death_rt,7,Death,TABLE_DEATH,0.21
+1,qx_death_rt,8,Death,TABLE_DEATH,0.21
+1,qx_death_rt,9,Death,TABLE_DEATH,0.21
+1,qx_death_rt,10,Death,TABLE_DEATH,0.21
+1,qx_death_rt,11,Death,TABLE_DEATH,0.21
+1,qx_death_rt,12,Death,TABLE_DEATH,0.21
+1,qx_death_rt,13,Death,TABLE_DEATH,0.21
+1,qx_death_rt,14,Death,TABLE_DEATH,0.21
+1,qx_death_rt,15,Death,TABLE_DEATH,0.21
+1,qx_death_rt,16,Death,TABLE_DEATH,0.21
+1,qx_death_rt,17,Death,TABLE_DEATH,0.21
+1,qx_death_rt,18,Death,TABLE_DEATH,0.21
+1,qx_death_rt,19,Death,TABLE_DEATH,0.21
+1,qx_death_rt,20,Death,TABLE_DEATH,0.21
+1,qx_death_rt,21,Death,TABLE_DEATH,0.21
+1,qx_death_rt,22,Death,TABLE_DEATH,0.21
+1,qx_death_rt,23,Death,TABLE_DEATH,0.21
+1,qx_death_rt,24,Death,TABLE_DEATH,0.21
+1,qx_death_rt,25,Death,TABLE_DEATH,0.22
+1,qx_death_rt,26,Death,TABLE_DEATH,0.22
+1,qx_death_rt,27,Death,TABLE_DEATH,0.23
+1,qx_death_rt,28,Death,TABLE_DEATH,0.25
+1,qx_death_rt,29,Death,TABLE_DEATH,0.26
+1,qx_death_rt,30,Death,TABLE_DEATH,0.28
+1,qx_death_rt,31,Death,TABLE_DEATH,0.31
+1,qx_death_rt,32,Death,TABLE_DEATH,0.34
+1,qx_death_rt,33,Death,TABLE_DEATH,0.37
+1,qx_death_rt,34,Death,TABLE_DEATH,0.41
+1,qx_death_rt,35,Death,TABLE_DEATH,0.45
+1,qx_death_rt,36,Death,TABLE_DEATH,0.47
+1,qx_death_rt,37,Death,TABLE_DEATH,0.49
+1,qx_death_rt,38,Death,TABLE_DEATH,0.55
+1,qx_death_rt,39,Death,TABLE_DEATH,0.6
+1,qx_death_rt,40,Death,TABLE_DEATH,0.67
+1,qx_death_rt,41,Death,TABLE_DEATH,0.75
+1,qx_death_rt,42,Death,TABLE_DEATH,0.8
+1,qx_death_rt,43,Death,TABLE_DEATH,0.83
+1,qx_death_rt,44,Death,TABLE_DEATH,0.92
+1,qx_death_rt,45,Death,TABLE_DEATH,1.01
+1,qx_death_rt,46,Death,TABLE_DEATH,1.11
+1,qx_death_rt,47,Death,TABLE_DEATH,1.26
+1,qx_death_rt,48,Death,TABLE_DEATH,1.39
+1,qx_death_rt,49,Death,TABLE_DEATH,1.56
+1,qx_death_rt,50,Death,TABLE_DEATH,1.74
+1,qx_death_rt,51,Death,TABLE_DEATH,2.17
+1,qx_death_rt,52,Death,TABLE_DEATH,2.42
+1,qx_death_rt,53,Death,TABLE_DEATH,2.7
+1,qx_death_rt,54,Death,TABLE_DEATH,3
+1,qx_death_rt,55,Death,TABLE_DEATH,3.35
+1,qx_death_rt,56,Death,TABLE_DEATH,3.72
+1,qx_death_rt,57,Death,TABLE_DEATH,4.15
+1,qx_death_rt,58,Death,TABLE_DEATH,4.61
+1,qx_death_rt,59,Death,TABLE_DEATH,5.12
+1,qx_death_rt,60,Death,TABLE_DEATH,5.7
+1,qx_death_rt,61,Death,TABLE_DEATH,6.29
+1,qx_death_rt,62,Death,TABLE_DEATH,6.98
+1,qx_death_rt,63,Death,TABLE_DEATH,7.74
+1,qx_death_rt,64,Death,TABLE_DEATH,8.55
+1,qx_death_rt,65,Death,TABLE_DEATH,9.48
+1,qx_death_rt,66,Death,TABLE_DEATH,10.54
+1,qx_death_rt,67,Death,TABLE_DEATH,11.65
+1,qx_death_rt,68,Death,TABLE_DEATH,12.89
+1,qx_death_rt,69,Death,TABLE_DEATH,14.25
+1,qx_death_rt,70,Death,TABLE_DEATH,15.74
+1,qx_death_rt,71,Death,TABLE_DEATH,15.74
+1,qx_death_rt,72,Death,TABLE_DEATH,15.74
+1,qx_death_rt,73,Death,TABLE_DEATH,15.74
+1,qx_death_rt,74,Death,TABLE_DEATH,15.74
+1,qx_death_rt,75,Death,TABLE_DEATH,15.74
+1,qx_death_rt,76,Death,TABLE_DEATH,15.74
+1,qx_death_rt,77,Death,TABLE_DEATH,15.74
+1,qx_death_rt,78,Death,TABLE_DEATH,15.74
+1,qx_death_rt,79,Death,TABLE_DEATH,15.74
+1,qx_death_rt,80,Death,TABLE_DEATH,15.74
+1,qx_ptd_acc_rt,0,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,1,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,2,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,3,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,4,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,5,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,6,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,7,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,8,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,9,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,10,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,11,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,12,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,13,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,14,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,15,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,16,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,17,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,18,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,19,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,20,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,21,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,22,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,23,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,24,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,25,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,26,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,27,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,28,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,29,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,30,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,31,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,32,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,33,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,34,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,35,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,36,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.08
+1,qx_ptd_acc_rt,37,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.09
+1,qx_ptd_acc_rt,38,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.1
+1,qx_ptd_acc_rt,39,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.12
+1,qx_ptd_acc_rt,40,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.13
+1,qx_ptd_acc_rt,41,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.14
+1,qx_ptd_acc_rt,42,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.16
+1,qx_ptd_acc_rt,43,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.18
+1,qx_ptd_acc_rt,44,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.2
+1,qx_ptd_acc_rt,45,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.22
+1,qx_ptd_acc_rt,46,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.25
+1,qx_ptd_acc_rt,47,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.29
+1,qx_ptd_acc_rt,48,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.32
+1,qx_ptd_acc_rt,49,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.37
+1,qx_ptd_acc_rt,50,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.41
+1,qx_ptd_acc_rt,51,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.47
+1,qx_ptd_acc_rt,52,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.52
+1,qx_ptd_acc_rt,53,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.59
+1,qx_ptd_acc_rt,54,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.66
+1,qx_ptd_acc_rt,55,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.74
+1,qx_ptd_acc_rt,56,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.83
+1,qx_ptd_acc_rt,57,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0.92
+1,qx_ptd_acc_rt,58,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,1.03
+1,qx_ptd_acc_rt,59,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,1.14
+1,qx_ptd_acc_rt,60,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,1.28
+1,qx_ptd_acc_rt,61,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,1.42
+1,qx_ptd_acc_rt,62,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,1.58
+1,qx_ptd_acc_rt,63,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,1.75
+1,qx_ptd_acc_rt,64,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,1.94
+1,qx_ptd_acc_rt,65,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,2.15
+1,qx_ptd_acc_rt,66,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,2.55
+1,qx_ptd_acc_rt,67,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,2.81
+1,qx_ptd_acc_rt,68,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,3.11
+1,qx_ptd_acc_rt,69,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,3.44
+1,qx_ptd_acc_rt,70,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,3.8
+1,qx_ptd_acc_rt,71,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0
+1,qx_ptd_acc_rt,72,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0
+1,qx_ptd_acc_rt,73,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0
+1,qx_ptd_acc_rt,74,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0
+1,qx_ptd_acc_rt,75,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0
+1,qx_ptd_acc_rt,76,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0
+1,qx_ptd_acc_rt,77,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0
+1,qx_ptd_acc_rt,78,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0
+1,qx_ptd_acc_rt,79,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0
+1,qx_ptd_acc_rt,80,TPD Accelerator,TABLE_TPD_ACCELERATOR_ANY,0
+1,qx_ptd_add_rt,0,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,1,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,2,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,3,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,4,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,5,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,6,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,7,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,8,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,9,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,10,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,11,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,12,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,13,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,14,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,15,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,16,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,17,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,18,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,19,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,20,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,21,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,22,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,23,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,24,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,25,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,26,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,27,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,28,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,29,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,30,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,31,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,32,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,33,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,34,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,35,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,36,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.08
+1,qx_ptd_add_rt,37,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.09
+1,qx_ptd_add_rt,38,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.1
+1,qx_ptd_add_rt,39,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.12
+1,qx_ptd_add_rt,40,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.13
+1,qx_ptd_add_rt,41,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.14
+1,qx_ptd_add_rt,42,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.16
+1,qx_ptd_add_rt,43,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.18
+1,qx_ptd_add_rt,44,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.2
+1,qx_ptd_add_rt,45,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.22
+1,qx_ptd_add_rt,46,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.25
+1,qx_ptd_add_rt,47,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.29
+1,qx_ptd_add_rt,48,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.32
+1,qx_ptd_add_rt,49,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.37
+1,qx_ptd_add_rt,50,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.41
+1,qx_ptd_add_rt,51,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.47
+1,qx_ptd_add_rt,52,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.52
+1,qx_ptd_add_rt,53,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.59
+1,qx_ptd_add_rt,54,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.66
+1,qx_ptd_add_rt,55,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.74
+1,qx_ptd_add_rt,56,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.83
+1,qx_ptd_add_rt,57,TPD Additional,Table_TPD_ADDITIONAL_ANY,0.92
+1,qx_ptd_add_rt,58,TPD Additional,Table_TPD_ADDITIONAL_ANY,1.03
+1,qx_ptd_add_rt,59,TPD Additional,Table_TPD_ADDITIONAL_ANY,1.14
+1,qx_ptd_add_rt,60,TPD Additional,Table_TPD_ADDITIONAL_ANY,1.28
+1,qx_ptd_add_rt,61,TPD Additional,Table_TPD_ADDITIONAL_ANY,1.42
+1,qx_ptd_add_rt,62,TPD Additional,Table_TPD_ADDITIONAL_ANY,1.58
+1,qx_ptd_add_rt,63,TPD Additional,Table_TPD_ADDITIONAL_ANY,1.75
+1,qx_ptd_add_rt,64,TPD Additional,Table_TPD_ADDITIONAL_ANY,1.94
+1,qx_ptd_add_rt,65,TPD Additional,Table_TPD_ADDITIONAL_ANY,2.15
+1,qx_ptd_add_rt,66,TPD Additional,Table_TPD_ADDITIONAL_ANY,2.55
+1,qx_ptd_add_rt,67,TPD Additional,Table_TPD_ADDITIONAL_ANY,2.81
+1,qx_ptd_add_rt,68,TPD Additional,Table_TPD_ADDITIONAL_ANY,3.11
+1,qx_ptd_add_rt,69,TPD Additional,Table_TPD_ADDITIONAL_ANY,3.44
+1,qx_ptd_add_rt,70,TPD Additional,Table_TPD_ADDITIONAL_ANY,3.8
+1,qx_ptd_add_rt,71,TPD Additional,Table_TPD_ADDITIONAL_ANY,0
+1,qx_ptd_add_rt,72,TPD Additional,Table_TPD_ADDITIONAL_ANY,0
+1,qx_ptd_add_rt,73,TPD Additional,Table_TPD_ADDITIONAL_ANY,0
+1,qx_ptd_add_rt,74,TPD Additional,Table_TPD_ADDITIONAL_ANY,0
+1,qx_ptd_add_rt,75,TPD Additional,Table_TPD_ADDITIONAL_ANY,0
+1,qx_ptd_add_rt,76,TPD Additional,Table_TPD_ADDITIONAL_ANY,0
+1,qx_ptd_add_rt,77,TPD Additional,Table_TPD_ADDITIONAL_ANY,0
+1,qx_ptd_add_rt,78,TPD Additional,Table_TPD_ADDITIONAL_ANY,0
+1,qx_ptd_add_rt,79,TPD Additional,Table_TPD_ADDITIONAL_ANY,0
+1,qx_ptd_add_rt,80,TPD Additional,Table_TPD_ADDITIONAL_ANY,0
+1,qx_ci_acc_rt,0,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.25
+1,qx_ci_acc_rt,1,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.25
+1,qx_ci_acc_rt,2,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.25
+1,qx_ci_acc_rt,3,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.25
+1,qx_ci_acc_rt,4,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.25
+1,qx_ci_acc_rt,5,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.25
+1,qx_ci_acc_rt,6,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.25
+1,qx_ci_acc_rt,7,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.25
+1,qx_ci_acc_rt,8,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.25
+1,qx_ci_acc_rt,9,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.25
+1,qx_ci_acc_rt,10,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.25
+1,qx_ci_acc_rt,11,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.25
+1,qx_ci_acc_rt,12,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.25
+1,qx_ci_acc_rt,13,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.25
+1,qx_ci_acc_rt,14,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.25
+1,qx_ci_acc_rt,15,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.25
+1,qx_ci_acc_rt,16,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.25
+1,qx_ci_acc_rt,17,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.25
+1,qx_ci_acc_rt,18,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.25
+1,qx_ci_acc_rt,19,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.26
+1,qx_ci_acc_rt,20,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.28
+1,qx_ci_acc_rt,21,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.29
+1,qx_ci_acc_rt,22,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.31
+1,qx_ci_acc_rt,23,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.33
+1,qx_ci_acc_rt,24,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.35
+1,qx_ci_acc_rt,25,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.37
+1,qx_ci_acc_rt,26,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.39
+1,qx_ci_acc_rt,27,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.41
+1,qx_ci_acc_rt,28,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.44
+1,qx_ci_acc_rt,29,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.47
+1,qx_ci_acc_rt,30,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.51
+1,qx_ci_acc_rt,31,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.54
+1,qx_ci_acc_rt,32,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.59
+1,qx_ci_acc_rt,33,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.65
+1,qx_ci_acc_rt,34,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.72
+1,qx_ci_acc_rt,35,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.79
+1,qx_ci_acc_rt,36,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0.89
+1,qx_ci_acc_rt,37,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,1
+1,qx_ci_acc_rt,38,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,1.14
+1,qx_ci_acc_rt,39,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,1.3
+1,qx_ci_acc_rt,40,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,1.49
+1,qx_ci_acc_rt,41,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,1.72
+1,qx_ci_acc_rt,42,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,1.97
+1,qx_ci_acc_rt,43,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,2.26
+1,qx_ci_acc_rt,44,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,2.58
+1,qx_ci_acc_rt,45,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,2.93
+1,qx_ci_acc_rt,46,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,3.27
+1,qx_ci_acc_rt,47,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,3.62
+1,qx_ci_acc_rt,48,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,3.97
+1,qx_ci_acc_rt,49,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,4.32
+1,qx_ci_acc_rt,50,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,4.65
+1,qx_ci_acc_rt,51,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,5
+1,qx_ci_acc_rt,52,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,5.37
+1,qx_ci_acc_rt,53,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,5.79
+1,qx_ci_acc_rt,54,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,6.25
+1,qx_ci_acc_rt,55,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,6.75
+1,qx_ci_acc_rt,56,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,7.33
+1,qx_ci_acc_rt,57,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,7.99
+1,qx_ci_acc_rt,58,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,8.72
+1,qx_ci_acc_rt,59,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,9.58
+1,qx_ci_acc_rt,60,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,10.53
+1,qx_ci_acc_rt,61,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,11.6
+1,qx_ci_acc_rt,62,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,12.75
+1,qx_ci_acc_rt,63,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,13.94
+1,qx_ci_acc_rt,64,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,15.18
+1,qx_ci_acc_rt,65,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,16.42
+1,qx_ci_acc_rt,66,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0
+1,qx_ci_acc_rt,67,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0
+1,qx_ci_acc_rt,68,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0
+1,qx_ci_acc_rt,69,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0
+1,qx_ci_acc_rt,70,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0
+1,qx_ci_acc_rt,71,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0
+1,qx_ci_acc_rt,72,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0
+1,qx_ci_acc_rt,73,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0
+1,qx_ci_acc_rt,74,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0
+1,qx_ci_acc_rt,75,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0
+1,qx_ci_acc_rt,76,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0
+1,qx_ci_acc_rt,77,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0
+1,qx_ci_acc_rt,78,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0
+1,qx_ci_acc_rt,79,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0
+1,qx_ci_acc_rt,80,CI Accelerator,TABLE_CI_ACCELERATOR_MALE,0
+1,qx_ci_add_rt,0,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.29
+1,qx_ci_add_rt,1,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.29
+1,qx_ci_add_rt,2,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.29
+1,qx_ci_add_rt,3,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.29
+1,qx_ci_add_rt,4,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.29
+1,qx_ci_add_rt,5,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.29
+1,qx_ci_add_rt,6,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.29
+1,qx_ci_add_rt,7,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.29
+1,qx_ci_add_rt,8,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.29
+1,qx_ci_add_rt,9,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.29
+1,qx_ci_add_rt,10,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.29
+1,qx_ci_add_rt,11,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.29
+1,qx_ci_add_rt,12,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.29
+1,qx_ci_add_rt,13,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.29
+1,qx_ci_add_rt,14,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.29
+1,qx_ci_add_rt,15,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.29
+1,qx_ci_add_rt,16,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.29
+1,qx_ci_add_rt,17,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.29
+1,qx_ci_add_rt,18,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.29
+1,qx_ci_add_rt,19,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.3
+1,qx_ci_add_rt,20,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.32
+1,qx_ci_add_rt,21,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.34
+1,qx_ci_add_rt,22,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.36
+1,qx_ci_add_rt,23,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.38
+1,qx_ci_add_rt,24,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.4
+1,qx_ci_add_rt,25,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.42
+1,qx_ci_add_rt,26,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.45
+1,qx_ci_add_rt,27,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.47
+1,qx_ci_add_rt,28,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.5
+1,qx_ci_add_rt,29,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.54
+1,qx_ci_add_rt,30,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.58
+1,qx_ci_add_rt,31,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.62
+1,qx_ci_add_rt,32,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.68
+1,qx_ci_add_rt,33,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.74
+1,qx_ci_add_rt,34,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.81
+1,qx_ci_add_rt,35,CI Additional,TABLE_CI_ADDITIONAL_MALE,0.9
+1,qx_ci_add_rt,36,CI Additional,TABLE_CI_ADDITIONAL_MALE,1.02
+1,qx_ci_add_rt,37,CI Additional,TABLE_CI_ADDITIONAL_MALE,1.15
+1,qx_ci_add_rt,38,CI Additional,TABLE_CI_ADDITIONAL_MALE,1.31
+1,qx_ci_add_rt,39,CI Additional,TABLE_CI_ADDITIONAL_MALE,1.5
+1,qx_ci_add_rt,40,CI Additional,TABLE_CI_ADDITIONAL_MALE,1.73
+1,qx_ci_add_rt,41,CI Additional,TABLE_CI_ADDITIONAL_MALE,1.99
+1,qx_ci_add_rt,42,CI Additional,TABLE_CI_ADDITIONAL_MALE,2.92
+1,qx_ci_add_rt,43,CI Additional,TABLE_CI_ADDITIONAL_MALE,3.37
+1,qx_ci_add_rt,44,CI Additional,TABLE_CI_ADDITIONAL_MALE,3.86
+1,qx_ci_add_rt,45,CI Additional,TABLE_CI_ADDITIONAL_MALE,4.41
+1,qx_ci_add_rt,46,CI Additional,TABLE_CI_ADDITIONAL_MALE,4.96
+1,qx_ci_add_rt,47,CI Additional,TABLE_CI_ADDITIONAL_MALE,5.53
+1,qx_ci_add_rt,48,CI Additional,TABLE_CI_ADDITIONAL_MALE,6.11
+1,qx_ci_add_rt,49,CI Additional,TABLE_CI_ADDITIONAL_MALE,6.69
+1,qx_ci_add_rt,50,CI Additional,TABLE_CI_ADDITIONAL_MALE,7.25
+1,qx_ci_add_rt,51,CI Additional,TABLE_CI_ADDITIONAL_MALE,7.85
+1,qx_ci_add_rt,52,CI Additional,TABLE_CI_ADDITIONAL_MALE,8.47
+1,qx_ci_add_rt,53,CI Additional,TABLE_CI_ADDITIONAL_MALE,9.15
+1,qx_ci_add_rt,54,CI Additional,TABLE_CI_ADDITIONAL_MALE,9.88
+1,qx_ci_add_rt,55,CI Additional,TABLE_CI_ADDITIONAL_MALE,10.67
+1,qx_ci_add_rt,56,CI Additional,TABLE_CI_ADDITIONAL_MALE,11.56
+1,qx_ci_add_rt,57,CI Additional,TABLE_CI_ADDITIONAL_MALE,12.56
+1,qx_ci_add_rt,58,CI Additional,TABLE_CI_ADDITIONAL_MALE,13.68
+1,qx_ci_add_rt,59,CI Additional,TABLE_CI_ADDITIONAL_MALE,14.95
+1,qx_ci_add_rt,60,CI Additional,TABLE_CI_ADDITIONAL_MALE,16.42
+1,qx_ci_add_rt,61,CI Additional,TABLE_CI_ADDITIONAL_MALE,18.05
+1,qx_ci_add_rt,62,CI Additional,TABLE_CI_ADDITIONAL_MALE,19.82
+1,qx_ci_add_rt,63,CI Additional,TABLE_CI_ADDITIONAL_MALE,21.7
+1,qx_ci_add_rt,64,CI Additional,TABLE_CI_ADDITIONAL_MALE,23.72
+1,qx_ci_add_rt,65,CI Additional,TABLE_CI_ADDITIONAL_MALE,25.75
+1,qx_ci_add_rt,66,CI Additional,TABLE_CI_ADDITIONAL_MALE,0
+1,qx_ci_add_rt,67,CI Additional,TABLE_CI_ADDITIONAL_MALE,0
+1,qx_ci_add_rt,68,CI Additional,TABLE_CI_ADDITIONAL_MALE,0
+1,qx_ci_add_rt,69,CI Additional,TABLE_CI_ADDITIONAL_MALE,0
+1,qx_ci_add_rt,70,CI Additional,TABLE_CI_ADDITIONAL_MALE,0
+1,qx_ci_add_rt,71,CI Additional,TABLE_CI_ADDITIONAL_MALE,0
+1,qx_ci_add_rt,72,CI Additional,TABLE_CI_ADDITIONAL_MALE,0
+1,qx_ci_add_rt,73,CI Additional,TABLE_CI_ADDITIONAL_MALE,0
+1,qx_ci_add_rt,74,CI Additional,TABLE_CI_ADDITIONAL_MALE,0
+1,qx_ci_add_rt,75,CI Additional,TABLE_CI_ADDITIONAL_MALE,0
+1,qx_ci_add_rt,76,CI Additional,TABLE_CI_ADDITIONAL_MALE,0
+1,qx_ci_add_rt,77,CI Additional,TABLE_CI_ADDITIONAL_MALE,0
+1,qx_ci_add_rt,78,CI Additional,TABLE_CI_ADDITIONAL_MALE,0
+1,qx_ci_add_rt,79,CI Additional,TABLE_CI_ADDITIONAL_MALE,0
+1,qx_ci_add_rt,80,CI Additional,TABLE_CI_ADDITIONAL_MALE,0
+1,qx_adb_rt,0,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,1,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,2,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,3,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,4,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,5,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,6,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,7,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,8,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,9,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,10,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,11,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,12,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,13,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,14,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,15,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,16,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,17,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,18,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,19,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,20,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,21,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,22,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,23,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,24,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,25,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,26,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,27,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,28,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,29,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,30,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,31,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,32,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,33,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,34,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,35,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,36,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,37,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,38,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,39,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,40,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,41,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,42,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,43,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,44,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,45,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,46,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,47,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,48,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,49,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,50,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,51,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,52,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,53,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,54,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,55,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,56,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,57,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,58,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,59,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,60,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,61,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,62,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,63,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,64,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,65,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,66,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,67,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,68,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,69,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,70,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,71,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,72,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,73,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,74,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,75,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,76,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,77,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,78,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,79,Accidental Death,TABLE_ADB,0.41
+1,qx_adb_rt,80,Accidental Death,TABLE_ADB,0.41
+1,qx_ppd_rt,0,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,1,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,2,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,3,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,4,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,5,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,6,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,7,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,8,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,9,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,10,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,11,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,12,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,13,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,14,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,15,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,16,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,17,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,18,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,19,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,20,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,21,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,22,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,23,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,24,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,25,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,26,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,27,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,28,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,29,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,30,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,31,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,32,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,33,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,34,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,35,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,36,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,37,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,38,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,39,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,40,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,41,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,42,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,43,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,44,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,45,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,46,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,47,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,48,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,49,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,50,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,51,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,52,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,53,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,54,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,55,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,56,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,57,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,58,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,59,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,60,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,61,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,62,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,63,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,64,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,65,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,66,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,67,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,68,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,69,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,70,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,71,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,72,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,73,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,74,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,75,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,76,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,77,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,78,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,79,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ppd_rt,80,PPD,ACCIDENTAL_PPD,0.17
+1,qx_ci_juv_rt,0,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,1,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,2,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,3,Critical Illness Juvenile ,TABLE_CIJ_MALE,0.43
+1,qx_ci_juv_rt,4,Critical Illness Juvenile ,TABLE_CIJ_MALE,0.41
+1,qx_ci_juv_rt,5,Critical Illness Juvenile ,TABLE_CIJ_MALE,0.39
+1,qx_ci_juv_rt,6,Critical Illness Juvenile ,TABLE_CIJ_MALE,0.37
+1,qx_ci_juv_rt,7,Critical Illness Juvenile ,TABLE_CIJ_MALE,0.35
+1,qx_ci_juv_rt,8,Critical Illness Juvenile ,TABLE_CIJ_MALE,0.34
+1,qx_ci_juv_rt,9,Critical Illness Juvenile ,TABLE_CIJ_MALE,0.34
+1,qx_ci_juv_rt,10,Critical Illness Juvenile ,TABLE_CIJ_MALE,0.34
+1,qx_ci_juv_rt,11,Critical Illness Juvenile ,TABLE_CIJ_MALE,0.34
+1,qx_ci_juv_rt,12,Critical Illness Juvenile ,TABLE_CIJ_MALE,0.35
+1,qx_ci_juv_rt,13,Critical Illness Juvenile ,TABLE_CIJ_MALE,0.36
+1,qx_ci_juv_rt,14,Critical Illness Juvenile ,TABLE_CIJ_MALE,0.38
+1,qx_ci_juv_rt,15,Critical Illness Juvenile ,TABLE_CIJ_MALE,0.4
+1,qx_ci_juv_rt,16,Critical Illness Juvenile ,TABLE_CIJ_MALE,0.42
+1,qx_ci_juv_rt,17,Critical Illness Juvenile ,TABLE_CIJ_MALE,0.45
+1,qx_ci_juv_rt,18,Critical Illness Juvenile ,TABLE_CIJ_MALE,0.48
+1,qx_ci_juv_rt,19,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,20,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,21,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,22,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,23,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,24,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,25,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,26,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,27,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,28,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,29,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,30,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,31,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,32,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,33,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,34,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,35,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,36,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,37,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,38,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,39,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,40,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,41,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,42,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,43,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,44,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,45,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,46,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,47,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,48,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,49,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,50,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,51,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,52,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,53,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,54,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,55,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,56,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,57,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,58,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,59,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,60,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,61,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,62,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,63,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,64,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,65,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,66,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,67,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,68,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,69,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,70,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,71,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,72,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,73,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,74,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,75,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,76,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,77,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,78,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,79,Critical Illness Juvenile ,TABLE_CIJ_MALE,0
+1,qx_ci_juv_rt,80,Critical Illness Juvenile ,TABLE_CIJ_MALE,0

@@ -1,0 +1,5 @@
+include inputs/model_points2.csv
+include inputs/ri_rates.csv
+include inputs/wop_rates.csv
+include inputs/tech_assumptions.csv
+include inputs/product.csv
