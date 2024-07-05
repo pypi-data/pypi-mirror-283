@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: O_money
+Version: 0.0.2
+Summary: This Package is created with the aim of facilitating the integration of web payment by orange money into python projects
+Home-page: https://github.com/ddicko/O_money
+Author: Ibrahim Bilaly DICKO
+Author-email: dicko.dev@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: python-dotenv
+
+# O_money
+
+For create Orange Money Payment package
