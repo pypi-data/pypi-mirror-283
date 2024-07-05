@@ -1,0 +1,11 @@
+clientify/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clientify/calls.py,sha256=9fsPHbE1dhHf9mtCogNzZbAuM6jNaMnSWsGvetLN8TQ,365
+clientify/client.py,sha256=WpGZZFjgiWTIQB1hzfFx7dPqOmWkmnX6ThjNlEiyzqs,2161
+clientify/contacts.py,sha256=zrRlEUM4V4hCHHkEEe7r4w5q8xsIT64jrnYH7nFzsNk,1067
+clientify/deals.py,sha256=ezNNQ6izVp2ttUWNxs48n1V-DCxfn3z3N60hSpmMbpM,1879
+clientify/orders.py,sha256=bajL5WYAonyfUiB20Xbn4nEg7D1CqhVLZttr3mZ_DMk,366
+clientify/tasks.py,sha256=-krUku6Im7dc9T4B0vwbsNy5e-qT1wu8CyRUIyBENMQ,365
+clientify/users.py,sha256=ZZIynrN0UChn0zWshkS2_Ifg4UTE5CmmHEYxaWO8r4k,365
+clientify_python-1.0.1.dist-info/METADATA,sha256=nHBo_X4KswgC6i_s04g0RInHXuLN5CVc4JcCzpAxZJ0,3972
+clientify_python-1.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+clientify_python-1.0.1.dist-info/RECORD,,
