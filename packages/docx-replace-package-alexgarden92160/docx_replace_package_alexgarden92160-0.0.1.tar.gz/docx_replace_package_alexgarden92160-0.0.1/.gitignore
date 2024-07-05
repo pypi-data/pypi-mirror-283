@@ -1,0 +1,4 @@
+output.docx
+.coverage
+__pycache__
+tests/__pycache__/

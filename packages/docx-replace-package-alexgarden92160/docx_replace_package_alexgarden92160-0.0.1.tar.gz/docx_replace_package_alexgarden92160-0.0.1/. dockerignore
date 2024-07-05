@@ -1,0 +1,7 @@
+.github/workflows
+.DS_Store
+Dockerfile
+Dockerfile.*
+output.docx
+README.md
+LICENSE
