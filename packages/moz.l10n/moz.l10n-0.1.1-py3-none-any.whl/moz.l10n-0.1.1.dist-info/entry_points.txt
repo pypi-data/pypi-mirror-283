@@ -1,0 +1,2 @@
+[console_scripts]
+l10n-fix = moz.l10n.bin.fix:cli
