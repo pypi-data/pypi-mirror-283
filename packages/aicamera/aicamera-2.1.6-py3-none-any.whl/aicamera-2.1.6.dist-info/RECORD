@@ -1,0 +1,13 @@
+aicamera/__init__.py,sha256=srQKgL23o-aJuL65E3yzTamj6F_29AFoGUiKKsZBqYQ,2205
+aicamera/cameraSocket.py,sha256=KTggbFLqV9qz3nNFt0dlAMyapSm0herDG0_fM-NPq_U,18612
+aicamera/image.py,sha256=XtgqukqNPI0zA3zQ_fJ7gIijwx9Xn9s8V_mGVGVXWzs,1306
+aicamera/lcd.py,sha256=lO9bVomxSUeFu0m3Te1XmxVzcYov61HqjePNDudPAsY,211
+aicamera/rtsp.py,sha256=2DXOL6spsvn7wCj01jVGufucssvjHMF2zlPR08mbkxQ,1696
+aicamera/udp.py,sha256=82Hff9rn0TdpJxgrexTazVT4B9VD0IuWlEfrwW6BygA,4379
+aicamera/util.py,sha256=WEpf7TMRnQDV9aSl4f9B-R8b0JK03vlE3lczGkzIIvE,5147
+aicamera/wifi.py,sha256=Lt3Rgr4C3nyFPTiDDBq0pMjjpJe-TOhu25xhl4q_IXM,282
+aicamera-2.1.6.dist-info/LICENSE,sha256=RBhg5hIyHCQyj9Hd6pdx4QVzRdIfplLdnbuNB0fm2H4,1093
+aicamera-2.1.6.dist-info/METADATA,sha256=3J4T2m6_87wQ88nlKwZ7Lp6wCaccvX5wuT3sbYuffAI,506
+aicamera-2.1.6.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+aicamera-2.1.6.dist-info/top_level.txt,sha256=3JLoQGw0dx5SbRjugb_hWkkVrA2PWNPqeNk_cAaNr7c,9
+aicamera-2.1.6.dist-info/RECORD,,
