@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: python-yaml-config
+Version: 1.0.0
+Summary: Spring-like python app configuration utility
+License: MIT
+Author: Roland Molnar
+Author-email: roland@dextra.dev
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: python-box (>=7.2.0,<8.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Description-Content-Type: text/markdown
+
+# Python yaml config
+Simple utility for combining using yaml configuration files and environment variables to configure an application.
