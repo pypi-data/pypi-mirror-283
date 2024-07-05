@@ -1,0 +1,8 @@
+description: Mario Negri Fund eligible employees
+values:
+  0000-01-01: [EXECUTIVE]
+
+metadata:
+  unit: currency-EUR
+  name: mario_negri_fund_base_amount
+  label: Mario Negri Fund base amount
