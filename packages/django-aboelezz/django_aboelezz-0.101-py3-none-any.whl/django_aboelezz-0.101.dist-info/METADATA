@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: django-aboelezz
+Version: 0.101
+Requires-Dist: django
+
