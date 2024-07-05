@@ -1,0 +1,3 @@
+[console_scripts]
+bib_extractor_cli = core.bib_extractor_cli:main
+

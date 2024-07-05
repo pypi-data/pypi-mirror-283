@@ -1,0 +1,34 @@
+{
+    "modules": {
+        "extractor": {
+            "TestExtractor": "test.test_modules.TestExtractor"
+        },
+        "parsers": {
+            "TestParser1": {
+                "path": "test.test_modules.TestParser1",
+                "confidence": 70
+            },
+            "TestParser2": {
+                "path": "test.test_modules.TestParser2",
+                "confidence": 80
+            }
+        },
+        "validators": {
+            "TestValidator1": "test.test_modules.TestValidator1",
+            "TestValidator2": "test.test_modules.TestValidator2",
+            "TestValidator3": "test.test_modules.TestValidator3",
+            "TestValidator4": "test.test_modules.TestValidator4",
+            "TestValidator5": "test.test_modules.TestValidator5"
+        },
+        "bibformatter": {
+            "TestFormatter": "test.test_modules.TestFormatter"
+        }
+    },
+    "style_to_validator": {
+        "style1": "TestValidator1",
+        "style2": "TestValidator2",
+        "style3": "TestValidator3",
+        "style4": "TestValidator4",
+        "style5": "TestValidator5"
+    }
+}

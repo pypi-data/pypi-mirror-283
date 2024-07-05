@@ -1,0 +1,4 @@
+include README.md
+include config.json
+include test/*json
+include test/texts*

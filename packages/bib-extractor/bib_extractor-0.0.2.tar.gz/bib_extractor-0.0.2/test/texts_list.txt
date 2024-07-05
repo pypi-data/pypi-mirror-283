@@ -1,0 +1,3 @@
+/home/dpopov/work/bib_extraction_rcni/core/test/texts/text1.txt
+/home/dpopov/work/bib_extraction_rcni/core/test/texts/text2.txt
+/home/dpopov/work/bib_extraction_rcni/core/test/texts/text3.txt
