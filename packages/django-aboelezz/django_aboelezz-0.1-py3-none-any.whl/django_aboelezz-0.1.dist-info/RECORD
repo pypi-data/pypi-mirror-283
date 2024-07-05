@@ -1,0 +1,17 @@
+myapp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+myapp/admin.py,sha256=p6xop1PuuDG2Uwv3G_aRfldxOfBzTRfMaoZmORVkqyU,66
+myapp/apps.py,sha256=4RRUYPnft0BC-GfruDbYlQUQ9r31jO165kPLWYGp-DE,148
+myapp/models.py,sha256=Zr0L0LVrNBGlDFujRNOhJk7_yd93PpRjigvRIc8AzCk,107
+myapp/tests.py,sha256=2uDafv3Ns6f7Vy1ekUtgYxCZEi1KRyesZDTAFhYcX-E,63
+myapp/views.py,sha256=w3jVVQYdWMAjR1QWqOsogV_mpE-YtHa_7AG1NUTONVM,198
+myapp/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+myapp/templates/my_template.html,sha256=FF6nYjAcq5Y0lY7WX7wEuhT3ebjkBzzJUOdwGdxKtSg,217
+myproject/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+myproject/asgi.py,sha256=NlJFc6umOpoTfJyYjvGnEsXWVESu4THUykKZP8onGBU,411
+myproject/settings.py,sha256=oZeKYuI155Nv91I0fKQPXrnpNAHU21ys3jF-gopduaM,3353
+myproject/urls.py,sha256=usLBx-euJHUxST5JsMFXieaEl5VRFCOU_d2lADdlAZo,787
+myproject/wsgi.py,sha256=09gLymb5rPQacvzCUalKUOgwJMIVEEKQGNH6fM2QoM4,411
+django_aboelezz-0.1.dist-info/METADATA,sha256=ZBzOHr4crnk2tnVo15lvydRaP10mQoKhoW2uqDLH078,85
+django_aboelezz-0.1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+django_aboelezz-0.1.dist-info/top_level.txt,sha256=mpTy47xfkgdU0oEqsofUDZ-1ddd-Dv0ct-TjiFec8Ks,6
+django_aboelezz-0.1.dist-info/RECORD,,
