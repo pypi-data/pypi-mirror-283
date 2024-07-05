@@ -1,0 +1,48 @@
+[project]
+name = "litecli"
+version = "0.1"
+description = "CLI for SQLite Databases with auto-completion and syntax"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{name = "dbcli"}]
+license = {text = "BSD"}
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: Unix",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: SQL",
+    "Topic :: Database",
+    "Topic :: Database :: Front-Ends",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "click >= 4.1",
+    "Pygments>=1.6",
+    "prompt_toolkit>=3.0.3,<4.0.0",
+    "sqlparse",
+    "configobj >= 5.0.5",
+    "cli_helpers[styles] >= 2.2.1",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://litecli.com/"
+Changelog = "https://github.com/dbcli/litecli/releases"
+Issues = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.hyphenated }}/issues"
+CI = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.hyphenated }}/actions"
+
+[project.optional-dependencies]
+dev = ["bpython", "pdbpp"]
+test = ["pytest", "pytest-cov", "behave", "pexpect", "coverage"]
