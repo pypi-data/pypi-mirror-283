@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: NowWeather
+Version: 0.0.0
+Summary: how to debut a PyPI for chemistry
+Home-page: https://github.com/spc-asato/NowWeather
+Author: AiraSato
+Author-email: asato@sciencepark.co.jp
+License: Apache-2.0
+Project-URL: Bug Tracker, https://github.com/spc-asato/NowWeather
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: blueqat >=0.4.2
+Requires-Dist: amazon-braket-sdk >=1.5.13
+
+Which City と出たら都市名を英語で入力してください。
+例）Which City：Nerima
+
+When it asks "Which City," enter the city name in English.
+Example: Which City: Nerima
