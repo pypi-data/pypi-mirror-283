@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: SwiftLLM
+Version: 0.0.1
+Summary: A python package to access most common foundation models easily.
+Home-page: https://github.com/PublishedDoonk/SwiftLLM
+Author: Zachary Ivie
+Author-email: zachary.ivie@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: openai
+Requires-Dist: requests
+
+# SwiftLLM
+A simple python library that makes accessing most of the common foundational models quick and easy. Also, allows models to generate structured text output.

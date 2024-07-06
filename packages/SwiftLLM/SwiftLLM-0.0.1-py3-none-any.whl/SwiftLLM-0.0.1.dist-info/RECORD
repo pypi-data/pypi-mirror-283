@@ -1,0 +1,9 @@
+swiftllm/__init__.py,sha256=F76SW5fCSsDeGIdQNUbdSEvC1cnsHajhVIuSKp7nOig,76
+swiftllm/genai_wrapper.py,sha256=ISghesISbeTasObgs50xx3cSsPlbhIHCDxMvQ8E86l4,6611
+swiftllm/openai_wrapper.py,sha256=jc0X1g2ALw8sFHlgPLsqU83AVPYOV-8GrRwBsQkCqpU,2545
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test.py,sha256=K_NYvVM74f6pzJq2hkupSDkbJa_IIhj_kavXjxEXi94,458
+SwiftLLM-0.0.1.dist-info/METADATA,sha256=80GRw1I7KhiHDemad5lA0yAof3XiZ4nIEmSZ1DpBhmY,690
+SwiftLLM-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+SwiftLLM-0.0.1.dist-info/top_level.txt,sha256=M5QvH_2p0bDSAnib_jj9YC2rfO0lpwxH_1dJOus7tiI,15
+SwiftLLM-0.0.1.dist-info/RECORD,,
