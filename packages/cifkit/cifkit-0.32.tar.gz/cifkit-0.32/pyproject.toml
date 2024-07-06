@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cifkit"
+version = "0.32"
+description = "Python library for high-throuhgput .cif analysis"
+authors = [{name = "Sangjoon Lee", email = "bobleesj@gmail.com"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["cif", "high-throughput", "crystallography"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
