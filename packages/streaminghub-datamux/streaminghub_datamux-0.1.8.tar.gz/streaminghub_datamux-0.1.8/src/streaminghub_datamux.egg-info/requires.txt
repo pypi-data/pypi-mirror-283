@@ -1,0 +1,14 @@
+streaminghub-pydfds
+multiprocess
+numpy
+pandas
+pyarrow
+rich
+
+[dev]
+build
+twine
+bumpver
+pip-tools
+pytest
+tqdm
