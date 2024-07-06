@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "raython"
+version = "0.0.1"
+authors = [{ name = "Robin Quintero", email = "rohaquinlop301@gmail.com" }]
+description = "A simple Python library to evaluate iterables using parallel processing."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/rohaquinlop/raython"
+Issues = "https://github.com/rohaquinlop/raython/issues"
+
+[tool.hatch.envs.test]
+dependencies = ["pytest"]
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    "tests",
+    "docs",
+    "examples",
+    "benchmarks",
+    ".github",
+    ".gitignore",
+    ".gitattributes",
+    ".gitmodules",
+    ".git",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/raython"]

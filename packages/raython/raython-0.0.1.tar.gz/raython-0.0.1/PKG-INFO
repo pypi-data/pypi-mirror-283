@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: raython
+Version: 0.0.1
+Summary: A simple Python library to evaluate iterables using parallel processing.
+Project-URL: Homepage, https://github.com/rohaquinlop/raython
+Project-URL: Issues, https://github.com/rohaquinlop/raython/issues
+Author-email: Robin Quintero <rohaquinlop301@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# raython ⚡️🐍
+
+A simple Python library to evaluate iterables using parallel processing.
