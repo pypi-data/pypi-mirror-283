@@ -1,0 +1,14 @@
+autosink_data_elt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autosink_data_elt/tools.py,sha256=OJWXBSI5-eK3K3ynFyte5l7iYYtgVR5Hw4hc4TWLIPQ,1877
+autosink_data_elt/dataset/autosink.py,sha256=DkaIBvQxUUtNEMLqJiO5KVAPKf_dFnCQ64tKjmfJfZQ,288
+autosink_data_elt/dataset/base.py,sha256=942v24IBAKoQsowHSDJ_VCNNS7cd8a7PBrYEl2dvD_U,30
+autosink_data_elt/log/filehandler.py,sha256=5b3ytx3Cp7bthX0CSziHNf6LxHEdaaZLfVrFj8mMRuk,3992
+autosink_data_elt/log/utils.py,sha256=CLjk7W2X9cz6dqaVm_c7zxcf-6HkZP90YfF6JczJ_pg,974
+autosink_data_elt/log/template/dishwashing.py,sha256=Cus7ErhLHmO60CyZ_9vEOOxvcLoeW1DSnnM-iJtwCXo,1359
+autosink_data_elt/log/template/interaction.py,sha256=rzR6w8BMDGKoG9Efqf-k9PzGtgpNyjrpRV59dm7JfLg,1443
+autosink_data_elt/path/autosink.py,sha256=Y2_n0iRAMazrdSkE0d66g33-4eFUgewehAKT-RHJ7NE,5717
+autosink_data_elt/path/backends.py,sha256=dNvEAnw_ASpmD2M9NCEK-RB189HeSK_CzW4q0YMVtBs,1785
+autosink_data_elt/path/base.py,sha256=BnCliQTjT6Gii_qQ_Ckd2vaxqOqijvrbXUbTyEAzLLA,1714
+autosink_data_elt-0.2.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+autosink_data_elt-0.2.0.dist-info/METADATA,sha256=V7WooNGilOYmhbvJxrrgyeWByFWyX3rfQ-h8SL-4GpE,2369
+autosink_data_elt-0.2.0.dist-info/RECORD,,
