@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: quyk
+Version: 0.1.0
+Summary: A package to test decorated functions directly from CLI
+License: GPL-3.0-only
+Author: Ahgoos
+Author-email: aguspdc@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: halo (>=0.0.31,<0.0.32)
+Requires-Dist: inquirer (>=3.3.0,<4.0.0)
+Description-Content-Type: text/markdown
+
+# quyk
+
+A package to test decorated functions from CLI.
+
+## Installation
+
+```sh
+pip install quyk
+```
+
+## Usage
+
+```sh
+quyk check <dir_path> # <dir_path> is optional; defaults to current directory if empty
+quyk test <func_name> # <func_name> optional; starts interactive selector if empty
+```
+
+
