@@ -1,0 +1,8 @@
+README.md
+setup.py
+nsdev/__init__.py
+nsjprdev.egg-info/PKG-INFO
+nsjprdev.egg-info/SOURCES.txt
+nsjprdev.egg-info/dependency_links.txt
+nsjprdev.egg-info/requires.txt
+nsjprdev.egg-info/top_level.txt
