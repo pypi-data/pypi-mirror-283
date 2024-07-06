@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: package-creation-tutorial
+Version: 0.2.0
+Summary: 
+Author: brash6
+Author-email: hadrienmariaccia@gmail.com
+Requires-Python: >=3.10,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pre-commit (>=3.7.1,<4.0.0)
+Requires-Dist: pytest (>=8.2.2,<9.0.0)
+Requires-Dist: pytest-cov (>=5.0.0,<6.0.0)
+Requires-Dist: ruff (>=0.5.0,<0.6.0)
+Requires-Dist: sphinx (>=7.3.7,<8.0.0)
+Requires-Dist: sphinx-rtd-theme (>=2.0.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# package_creation_tutorial
+
+A basic package for the practical research tips session at the Summer School of HEC Paris 

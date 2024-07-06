@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "package-creation-tutorial"
+version = "0.2.0"
+description = ""
+authors = ["brash6 <hadrienmariaccia@gmail.com>"]
+readme = "README.md"
+packages = [{include = "package_creation_tutorial", from = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10, <3.13"
+pytest = "^8.2.2"
+pytest-cov = "^5.0.0"
+ruff = "^0.5.0"
+pre-commit = "^3.7.1"
+sphinx = "^7.3.7"
+sphinx-rtd-theme = "^2.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
