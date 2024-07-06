@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pys3server
+Version: 0.1.0b9
+Summary: Simple and extendable s3 server.
+Author: RuslanUC
+Author-email: dev_ruslan_uc@protonmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: blacksheep (>=2.0.7,<3.0.0)
+Requires-Dist: msgpack (>=1.0.8,<2.0.0)
+Requires-Dist: uvicorn (>=0.30.1,<0.31.0)
+Description-Content-Type: text/markdown
+
+# pyS3server
