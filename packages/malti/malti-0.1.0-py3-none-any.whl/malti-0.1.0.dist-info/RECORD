@@ -1,0 +1,11 @@
+malti/__init__.py,sha256=Mb4r-XV9G2hbThDovG9p0CzuEOpo3ozLk4ePTurjUHw,112
+malti/tokeniser/__init__.py,sha256=Rg4RBJktosZ6Vb77qzZF5o979Ux-1tm_l2Xt-J-KN-I,512
+malti/tokeniser/regex_tokeniser.py,sha256=HCi2Ff4MEIEj8idWqF9dv_S_fxrr_ZcsWBTEbqRMNjc,1887
+malti/tokeniser/tokeniser.py,sha256=J3y1FBnzuZhOVi7EbZHIogr9Gb_Q-f4V_P63tdzfTA0,1258
+malti/tokeniser/km_tokeniser/__init__.py,sha256=zLMleGJHyaa3Haibj3JepHLvg3DKn9ssLLhvDRKIeIc,43
+malti/tokeniser/km_tokeniser/km_tokeniser.py,sha256=tHl1Ir6LfcLhC80zNh0ZD-KwaGrhr3Lm6O9pUDnqxgo,1234
+malti-0.1.0.dist-info/LICENSE,sha256=6HPfeidTuD2xo0H_yMEXaPTnZemulClBTZvc5h-pgGY,1061
+malti-0.1.0.dist-info/METADATA,sha256=wCWl7ndiXbFe68ycwT7x2708_DE32FlL7Vg6TP1hEmA,983
+malti-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+malti-0.1.0.dist-info/top_level.txt,sha256=va2tsmWAdtFVUKCOLPNEi4JB-q9ty-xgKVC6nV0Sf3M,6
+malti-0.1.0.dist-info/RECORD,,
