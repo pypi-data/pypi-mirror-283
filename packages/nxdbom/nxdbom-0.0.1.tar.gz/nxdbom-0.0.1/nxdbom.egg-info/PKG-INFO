@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: nxdbom
+Version: 0.0.1
+Summary: Tool to generate bill of material for Nexedi-built software
+Home-page: https://lab.nexedi.com/nexedi/nxd-bom
+Author: Nexedi
+Author-email: kirr@nexedi.com
+License: GPLv3+ with wide exception for FOSS
+Keywords: Nexedi software build BOM
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+License-File: COPYING
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"

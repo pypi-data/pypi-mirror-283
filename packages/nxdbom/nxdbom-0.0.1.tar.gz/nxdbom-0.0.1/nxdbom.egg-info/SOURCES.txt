@@ -1,0 +1,10 @@
+COPYING
+setup.py
+nxdbom/__init__.py
+nxdbom/nxdbom_test.py
+nxdbom.egg-info/PKG-INFO
+nxdbom.egg-info/SOURCES.txt
+nxdbom.egg-info/dependency_links.txt
+nxdbom.egg-info/entry_points.txt
+nxdbom.egg-info/requires.txt
+nxdbom.egg-info/top_level.txt
