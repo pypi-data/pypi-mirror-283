@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: MasterCode
+Version: 1.0.0
+Summary: A module for encryption
+Author-email: Mohammad Parsa Mortazavi <mpmms@outlook.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Hi!
+It's MasterCode!
+Best Module For Encryption(English and Persian)
+Thank you for use it.
+My Email Address: mpmms@outlook.com
