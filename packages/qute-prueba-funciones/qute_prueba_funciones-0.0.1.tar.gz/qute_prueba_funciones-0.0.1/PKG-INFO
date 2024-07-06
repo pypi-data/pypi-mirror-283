@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: qute_prueba_funciones
+Version: 0.0.1
+Summary: Librería para resolver la ecuación de schrodinger y obtener valores esperados
+Home-page: 
+Author: David
+Author-email: david.chura@usach.cl
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+############
