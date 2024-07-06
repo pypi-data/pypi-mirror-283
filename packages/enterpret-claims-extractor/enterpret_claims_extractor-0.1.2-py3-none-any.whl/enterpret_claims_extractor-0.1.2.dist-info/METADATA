@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: enterpret_claims_extractor
+Version: 0.1.2
+Summary: A tool for extracting claims from various types of records
+Home-page: https://github.com/mdarshad1000/enterpret_claims_extractor
+Author: Mohd Arshad
+Author-email: mdarshad1000@gmail.com
+Requires-Python: >=3.7
+Requires-Dist: openai
+Requires-Dist: nltk
+Requires-Dist: python-dotenv
+
