@@ -1,0 +1,22 @@
+from pydantic import BaseModel
+from typing import Optional, List, Dict, Any
+
+class Task(BaseModel):
+    """
+    This is your Task schema. Define the fields and their types here.
+    You can also add validation rules and default values if needed.
+    The schema is used to validate the input data for the bot, similar to the task.json file which is a mock of the input data.
+
+    Example:
+
+    param1: str                   # A required string parameter.
+    param2: int                   # A required integer parameter.
+    param3: Optional[float]       # An optional float parameter.
+    param4: bool = False          # A boolean parameter with a default value.
+    param5: List[str]             # A list of strings.
+    param6: Dict[str, int]        # A dictionary with string keys and integer values.
+    param7: Any = None            # A parameter that can be of any type
+    param8: List[Any]             # A list that can contain items of any type
+    param9: Dict[str, Any]        # A dictionary with string keys and values of any type
+    """
+    pass
