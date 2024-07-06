@@ -1,0 +1,5 @@
+{
+    "restructuredtext.preview.name": "sphinx",
+    "iis.configDir": "",
+    "livePreview.defaultPreviewPath": "/docs/_build/html/index.html"
+}
