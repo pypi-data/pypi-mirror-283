@@ -1,0 +1,14 @@
+flax>=0.8.2
+tqdm>=4.62.0
+optax>=0.2.2
+
+[metal]
+jax-metal
+
+[test]
+pytest
+pytest-cov
+flake8
+pydocstyle
+packaging
+pre-commit

@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clax"
+dynamic = ["version"]
+authors = [
+    { name="David Yallup", email="david.yallup@gmail.com" },
+]
+description = "Prebuilt jax classifiers"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.9"
+dependencies = [
+    "flax >= 0.8.2",
+    "tqdm >= 4.62.0",
+    "optax >= 0.2.2",
+]
+
+[options.extras_require]
+test = [
+    "pytest >= 7.3",
+    "pytest-cov >= 4.0",
+]
+metal = [
+    "jax-metal >= 0.1.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-cov", "flake8", "pydocstyle", "packaging", "pre-commit"]
+metal = ["jax-metal"]
+
+[tool.setuptools.dynamic]
+version = {attr = "clax._version.__version__"}
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ['E203', 'W503', "F401"]
+
+[tool.isort]
+profile = 'black'
+skip_gitignore = true
