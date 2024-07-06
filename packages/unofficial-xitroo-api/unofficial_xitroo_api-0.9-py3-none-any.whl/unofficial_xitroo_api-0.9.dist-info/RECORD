@@ -1,0 +1,13 @@
+xitroo/Captcha.py,sha256=OPiOdzCtyOnR2qg0GSdxC23T8L1k7ZCqAb58QAZL22Q,1883
+xitroo/Inbox.py,sha256=p07It_gH0V2wpg-rdhvLsNKo35-6-H5yDV572U5W0_c,3920
+xitroo/Mail.py,sha256=pct5C39CVBZV0q24E5SmImnK-XoVcuIYguHShYwCOCU,6677
+xitroo/Search.py,sha256=86tMVpn88CulhgHT3pLPieuvuaO6YlM1Gt6LlnHatCE,4541
+xitroo/Xitroo.py,sha256=feEFbQRPZwxHZppX2aJh2CNld1Y_Urj3z7TWRU1xdUY,11748
+xitroo/__init__.py,sha256=OFzOLhkQHS_jVxg3apIIEKQ9Vjz-V4N27NLqLzcRBVA,388
+xitroo/endpoints.py,sha256=x1G-62_KJIy38KonpqCuZ4gbW7vRWFMRHhyQhB2HH8c,302
+xitroo/exceptions.py,sha256=WDwCSRoHs26oE3qupZEi6KAoj4KEL-V5oByFkvguz8Y,509
+unofficial_xitroo_api-0.9.dist-info/LICENSE,sha256=VssB_S2JlEMT-4A98C9Wt9p_FljZTimIahsXGqfRbqQ,1065
+unofficial_xitroo_api-0.9.dist-info/METADATA,sha256=fHB39DlwXC_TDtq-VB4b1-tLQZi-pYjyr00iFBt-L6E,2543
+unofficial_xitroo_api-0.9.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+unofficial_xitroo_api-0.9.dist-info/top_level.txt,sha256=6MbQeu4fgksMsxxluCdq-huzhVlciOrk3WWzKP10Ts8,7
+unofficial_xitroo_api-0.9.dist-info/RECORD,,
