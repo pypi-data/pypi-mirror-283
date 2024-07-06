@@ -1,0 +1,10 @@
+tests.py,sha256=9HgZ9hERAXuUH6guNepPdh7ETx_K4S40N1OkbKHPYIA,9908
+anime_parsers_ru/__init__.py,sha256=gDUIE29ZbplBiIytuMInHPKqE9Ci63qfG0CtQV6BWcc,80
+anime_parsers_ru/errors.py,sha256=9Vk8Fg272M0Payvm6l-M9DLBJMEil_Axft8L9T4lQqo,969
+anime_parsers_ru/parser_aniboom.py,sha256=Pp3S2Y2lNxSILro-HGJzOxldd5bw40SiytPFrIpxp7Y,27952
+anime_parsers_ru/parser_kodik.py,sha256=-_h-ehVf2vi7sKyJ0q-2xo-fUZ9YrY6XPPyyZ-Sz2LI,21284
+anime_parsers_ru-1.2.3.dist-info/LICENSE,sha256=-LtbFvSoVrhNNyWBBytm65_WE6qzo69fRI7l0lcjUmI,1096
+anime_parsers_ru-1.2.3.dist-info/METADATA,sha256=4KrErenwutmAggCytwlhj-okm_dNr6-EdFjkWAXYoqY,17894
+anime_parsers_ru-1.2.3.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+anime_parsers_ru-1.2.3.dist-info/top_level.txt,sha256=DplVmKJOdrm7jdPJXcs4SN824ZEoVThTKMOUKoPIrK8,23
+anime_parsers_ru-1.2.3.dist-info/RECORD,,
