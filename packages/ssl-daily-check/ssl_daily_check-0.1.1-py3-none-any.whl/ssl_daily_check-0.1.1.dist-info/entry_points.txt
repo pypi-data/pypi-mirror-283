@@ -1,0 +1,3 @@
+[console_scripts]
+ssl-daily-check=ssl_checker.main:main
+
