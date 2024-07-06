@@ -1,0 +1,2 @@
+[console_scripts]
+pcap-parser = pcapparser.__main__:main
