@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: UOFast
+Version: 0.1.1
+Summary: UOFast is a 3rd party U2 UOPY restful service which pools U2 connections
+Home-page: https://github.com/RoKiPaRk/UOFast
+Download-URL: https://github.com/RoKiPaRk/UOFast/archive/refs/tags/v1.1.7.tar.gz
+Author: Kurt Konchadi
+Author-email: tech@rokipark.ai
+License: MIT
+Keywords: uopy,restful,UniObject Connection
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+License-File: LICENSE.txt
+Requires-Dist: anyio==3.6.1
+Requires-Dist: certifi
+Requires-Dist: cfficharset-normalizer
+Requires-Dist: click
+Requires-Dist: colorama==0.4.5
+Requires-Dist: fastapi
+Requires-Dist: gevent
+Requires-Dist: greenlet
+Requires-Dist: h11==0.13.0
+Requires-Dist: idna
+Requires-Dist: pycparser
+Requires-Dist: pydantic
+Requires-Dist: requests
+Requires-Dist: sniffio
+Requires-Dist: starlette
+Requires-Dist: typing
+Requires-Dist: typing_extensions
+Requires-Dist: uopy
+Requires-Dist: urllib3
+Requires-Dist: uvicorn
+Requires-Dist: zope.event==4.5.0
+Requires-Dist: zope.interface==5.4.0
+Requires-Dist: langchain
+Requires-Dist: langchain_community

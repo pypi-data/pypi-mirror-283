@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+UOFast/UOFastConfig.py
+UOFast/UOFastDataArray.py
+UOFast/UOFastDataArray_dep.py
+UOFast/UOLoader.py
+UOFast.egg-info/PKG-INFO
+UOFast.egg-info/SOURCES.txt
+UOFast.egg-info/dependency_links.txt
+UOFast.egg-info/requires.txt
+UOFast.egg-info/top_level.txt
