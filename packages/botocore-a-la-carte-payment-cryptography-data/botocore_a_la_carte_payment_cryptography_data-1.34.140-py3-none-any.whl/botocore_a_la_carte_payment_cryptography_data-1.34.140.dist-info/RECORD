@@ -1,0 +1,9 @@
+botocore/data/payment-cryptography-data/2022-02-03/endpoint-rule-set-1.json,sha256=BUiAvUaYRv5nebn1d19c3tuVDhRTOG8oUYnevIorRZs,17720
+botocore/data/payment-cryptography-data/2022-02-03/paginators-1.json,sha256=hIQ7AbLBsY4fPSNLVMg0dS45m6cjZKFTjbp3ZLh4zj8,23
+botocore/data/payment-cryptography-data/2022-02-03/service-2.json,sha256=FZ8l9MUfSp32pi1L1IFKfjs8dJMabWfXxs7rAOJdHMw,112991
+botocore/data/payment-cryptography-data/2022-02-03/waiters-2.json,sha256=fsA0_mwCl57UFPiqxJUWLb9AE7gd9kpBT4x0_6Q7dww,39
+botocore_a_la_carte_payment_cryptography_data-1.34.140.dist-info/LICENSE.txt,sha256=DVQuDIgE45qn836wDaWnYhSdxoLXgpRRKH4RuTjpRZQ,10174
+botocore_a_la_carte_payment_cryptography_data-1.34.140.dist-info/METADATA,sha256=0DeKTiP5HFXgLKycjyPlKAOefD-Kj-98PNcUt23AX5o,995
+botocore_a_la_carte_payment_cryptography_data-1.34.140.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+botocore_a_la_carte_payment_cryptography_data-1.34.140.dist-info/top_level.txt,sha256=IdlNr9dnwi3lQt66dKnShE5HBUhIqBFqJmVhm11aijk,9
+botocore_a_la_carte_payment_cryptography_data-1.34.140.dist-info/RECORD,,
