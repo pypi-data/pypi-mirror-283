@@ -1,0 +1,9 @@
+Cargo.toml
+MANIFEST.in
+pyproject.toml
+src/lib.rs
+src/wrappers.rs
+src/omniblack.ariadne.egg-info/PKG-INFO
+src/omniblack.ariadne.egg-info/SOURCES.txt
+src/omniblack.ariadne.egg-info/dependency_links.txt
+src/omniblack.ariadne.egg-info/top_level.txt
