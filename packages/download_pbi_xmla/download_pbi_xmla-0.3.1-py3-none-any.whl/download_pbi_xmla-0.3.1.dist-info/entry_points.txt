@@ -1,0 +1,4 @@
+[console_scripts]
+fetch-tables=download_pbi_xmla.main:main
+setup-environment=download_pbi_xmla.setup_environment:main
+
