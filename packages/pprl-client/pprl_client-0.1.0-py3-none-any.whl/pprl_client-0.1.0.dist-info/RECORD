@@ -1,0 +1,9 @@
+pprl_client/__init__.py,sha256=4ghDGPtthBF-_1uZH_BKWPIrPQvr8KoMIrzHQOvTnbc,96
+pprl_client/cli.py,sha256=Of3y7vGvfJv2DQOwbDV8nzqqMz0_PZ34fOsRjs1Igpo,21018
+pprl_client/common.py,sha256=zkKnMQgmDM-YMMf3bL0c1fI1gwKU9VvbkX_P-EMwxDc,92
+pprl_client/lib.py,sha256=a5HnfqKz6ndr5RzgoSAd1zUDiZbAuDGRoCtZ0i9s9uo,2371
+pprl_client-0.1.0.dist-info/LICENSE,sha256=G3dDEadp8IcWPJMEDuG2n2-hMTjclEAitN4QrxGZRXs,1118
+pprl_client-0.1.0.dist-info/METADATA,sha256=uaGja9rEpBAby7kHWKEprm_vRp7MxGBW9B5jRYeVR0k,12695
+pprl_client-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pprl_client-0.1.0.dist-info/entry_points.txt,sha256=cHSIH-lllnhD9T7uSHvis370iy6IaDpwH7ZXhmFDJxs,48
+pprl_client-0.1.0.dist-info/RECORD,,
