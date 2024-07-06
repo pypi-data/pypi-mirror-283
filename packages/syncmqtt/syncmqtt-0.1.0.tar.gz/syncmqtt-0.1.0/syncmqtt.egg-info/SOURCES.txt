@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+syncmqtt/__init__.py
+syncmqtt/attr.py
+syncmqtt/conn.py
+syncmqtt/qtt.py
+syncmqtt/sub.py
+syncmqtt.egg-info/PKG-INFO
+syncmqtt.egg-info/SOURCES.txt
+syncmqtt.egg-info/dependency_links.txt
+syncmqtt.egg-info/requires.txt
+syncmqtt.egg-info/top_level.txt
+tests/__init__.py
+tests/test_syncmqtt_pytest.py
