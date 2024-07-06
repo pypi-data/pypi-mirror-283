@@ -1,0 +1,11 @@
+ngpy/NGApi.py,sha256=4YVH-bqyBenGB-rqwtnCM2fqEm7u1nVxelR_CnwqKWg,780
+ngpy/__init__.py,sha256=bZtq0hYKrlDdbkAM3kKSjfnV80o0j7QN9vXZS_ua21Q,62
+ngpy/responses/CountryResponse.py,sha256=DBqb4mKdyTiNhMvoT7XcNipPGTQ9EYB47TTJJ0OYTc0,428
+ngpy/responses/MarketResponse.py,sha256=ZbAIS5gFzomfTCDLDZAZRnpQ9xKzngCvOjXjqUYJjDg,367
+ngpy/responses/NotationResponse.py,sha256=JrOtsI-pb--IuOzNnDrZqr9e68q0wYziH2lZnnCVSKo,513
+ngpy/responses/UserResponse.py,sha256=uuyH6FaxmnSEzdIl75JkdGPhflbEJjlhrzq1p4MfbKM,355
+ngpy/responses/__init__.py,sha256=K3CByf9zHFg4lG1aJF3q9QZr4RRmTZwmf9s2i-bz5LE,174
+nglory_py-0.0.3.dist-info/METADATA,sha256=4PxaOAOz3ifFpjL5IcXQoMQ6RtxHs2tXRsi3F5JWqzU,590
+nglory_py-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+nglory_py-0.0.3.dist-info/top_level.txt,sha256=F1_oTs6lPBqKMum5NM74D2h1dOnEoJpdHm0evlAILw8,5
+nglory_py-0.0.3.dist-info/RECORD,,
