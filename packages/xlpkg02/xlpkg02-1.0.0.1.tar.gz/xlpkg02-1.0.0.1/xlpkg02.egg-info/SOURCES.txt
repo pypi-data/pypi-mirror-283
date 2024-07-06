@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+xlpkg02.egg-info/PKG-INFO
+xlpkg02.egg-info/SOURCES.txt
+xlpkg02.egg-info/dependency_links.txt
+xlpkg02.egg-info/top_level.txt
