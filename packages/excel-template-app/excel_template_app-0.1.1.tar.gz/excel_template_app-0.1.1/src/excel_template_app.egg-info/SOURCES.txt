@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/excel_template_app/__init__.py
+src/excel_template_app/app.py
+src/excel_template_app.egg-info/PKG-INFO
+src/excel_template_app.egg-info/SOURCES.txt
+src/excel_template_app.egg-info/dependency_links.txt
+src/excel_template_app.egg-info/entry_points.txt
+src/excel_template_app.egg-info/requires.txt
+src/excel_template_app.egg-info/top_level.txt
+tests/test_app.py
