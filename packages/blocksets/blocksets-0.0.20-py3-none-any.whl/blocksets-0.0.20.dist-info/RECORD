@@ -1,0 +1,11 @@
+blocksets/__init__.py,sha256=MtI7g5ZKj2o_Ek1wGnEwuiqD9gzRyGHBifxj48ap8aA,32
+blocksets/example_use.py,sha256=-NLhRycnFj_3LPmmVH9IRuTBfaqS-M4OehYNsrR27PQ,4468
+blocksets/classes/__init__.py,sha256=lgu9OQxVcYY3D0S8VC9lUU8D7ZEP7ITw71oDzagE_gY,56
+blocksets/classes/block.py,sha256=wNnnYHUw0pBmQLO3xfdAGECIg96nY2P4WtbB3Q3CgtQ,12330
+blocksets/classes/blockset.py,sha256=GZZLeD1Y8l0lvaWzA5vPjd843BbG-UQABdY5HTI4O5Y,20496
+blocksets/classes/exceptions.py,sha256=vdYINUzGjSsIOEG56nIk8gbfcd3fbXOAJowvvVTkfbo,1159
+blocksets-0.0.20.dist-info/LICENSE,sha256=nzkKYSQYUSHOjVItOUJ4DajIURoWx91wmuZAzI8wedc,1496
+blocksets-0.0.20.dist-info/METADATA,sha256=VSo7tsV7H63tGDtZAQxbMrvjmBdUPlcYvM6OLFfcEks,12296
+blocksets-0.0.20.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+blocksets-0.0.20.dist-info/top_level.txt,sha256=zFIifejY2QC4z8OuaA2bhIbUt2NqApDxjHFb0kQF8jY,10
+blocksets-0.0.20.dist-info/RECORD,,
