@@ -1,0 +1,15 @@
+jupyter_kernel_install/__init__.py,sha256=4ExB0sJgGuJ3swIFXc1cMlqdk0SZ9sLa6Hyg5u7CnW8,1651
+jupyter_kernel_install/__main__.py,sha256=HywqZ37eO1i431sVQKUyIeTFiybwAh8BqGHjCDzmeQ4,220
+jupyter_kernel_install/cli.py,sha256=rRG7VOPYlda3EMKeWPj0vjH44n8BsydMdkxSGm4Db70,2268
+jupyter_kernel_install/install.py,sha256=C4AgU7rZymYaJYlj4D-3_ITDXpKrYx8nwxFvxzZrjlI,5845
+jupyter_kernel_install/logger.py,sha256=1XwgG8NrH_GQT5r_O7AEcA9u_uNQsMYhQncBWV2l4Jg,497
+jupyter_kernel_install/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jupyter_kernel_install/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jupyter_kernel_install/tests/conftest.py,sha256=OMVaQ-msR4WGPBJ2-hj4-2WVF2vggqye_3yytL70Auc,796
+jupyter_kernel_install/tests/test_kernel_cli.py,sha256=bKnfHFSZmijK6N-mhb8QhxXcbu-Qg7FqCNFIUr1DL8U,277
+jupyter_kernel_install/tests/test_kernel_creation.py,sha256=KKw1K3LLC20sFGCxQFOu66FdGkGXuquC1OE5ZG9-NO4,1492
+jupyter_kernel_install-2407.0.0.dist-info/entry_points.txt,sha256=uvVSieCLCYb_L2AJZEqsRCL4XLZ-KZfc0M2UyDLJH0k,73
+jupyter_kernel_install-2407.0.0.dist-info/LICENSE,sha256=nf1y313jEbsJ_XivVqrOdYz2DoFe6HDzC1RS8MpQJns,1531
+jupyter_kernel_install-2407.0.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+jupyter_kernel_install-2407.0.0.dist-info/METADATA,sha256=P4jmi39_X8HTI576LclNFIpuNVfvbLWMpAV2rs4GMac,3922
+jupyter_kernel_install-2407.0.0.dist-info/RECORD,,
