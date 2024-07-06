@@ -1,0 +1,20 @@
+# polymerase-related
+polymerase_basesubstitutionrate: 1.09e-4
+polymerase_fidelity: 40.0
+polymerase_substitutionbias: # from 10.1371/journal.pone.0169774
+  A:
+    C: 0.0075
+    G: 0.105
+    T: 0.0135
+  C:
+    A: 0.12
+    G: 0.0053
+    T: 0.245
+  G:
+    A: 0.245
+    C: 0.0053
+    T: 0.12
+  T:
+    A: 0.0135
+    C: 0.105
+    G: 0.0075

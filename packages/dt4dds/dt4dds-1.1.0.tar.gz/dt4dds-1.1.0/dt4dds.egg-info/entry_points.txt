@@ -1,0 +1,8 @@
+[console_scripts]
+dt4dds-analysis = dt4dds.bin.analysis:single
+dt4dds-batchanalysis = dt4dds.bin.analysis:batch
+dt4dds-challenge = dt4dds.bin.challenge:main
+dt4dds-clusteranalysis = dt4dds.bin.analysis:cluster_single
+dt4dds-clusterbatchanalysis = dt4dds.bin.analysis:cluster_batch
+dt4dds-scenario = dt4dds.bin.scenario:main
+dt4dds-utils = dt4dds.bin.utils:main
