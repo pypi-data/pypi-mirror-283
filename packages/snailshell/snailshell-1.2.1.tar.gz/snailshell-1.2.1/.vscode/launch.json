@@ -1,0 +1,52 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "test with video",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "snailshell.main",
+            "args": [
+                "--model_name", "resnet",
+                "--video_path", "examples/test_video.mov",
+                "--without_arduino",
+                "--visualize",
+                "--download_model",
+                "--weight_path", "snailshell/models/model-ai-sink-run",
+                "--wandb_project", "zzangsu/AIsink-resnet50",
+                "--wandb_artifact", "model-ai-sink-run"
+            ]
+        },
+        {
+            "name": "test with video none 'weith_path' ver",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "snailshell.main",
+            "args": [
+                "--model_name", "resnet",
+                "--video_path", "examples/test_video.mov",
+                "--without_arduino",
+                "--visualize",
+                "--download_model",
+                "--wandb_project", "zzangsu/AIsink-resnet50",
+                "--wandb_artifact", "model-ai-sink-run"
+            ]
+        },
+        {
+            "name": "test with webcam",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "snailshell.main",
+            "args": [
+                "--model_name", "mobilenet",
+                "--weight_path", "examples/mobilenet-v2.pth",
+                "--use_camera",
+                "--without_arduino",
+                "--visualize"
+            ]
+        }
+    ]
+}
