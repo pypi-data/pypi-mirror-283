@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: docx-weaver
+Version: 0.1.0
+Summary: Docx-Weaver is a Python class designed to convert, translate, and modify Word documents in various ways, such as adding comments, transforming text, and both. It's suitable for automating document workflows where changes to the document based on dynamic inputs are required.
+Home-page: https://github.com/jes-moore/docx-weaver
+Author: Jesse Moore
+Author-email: jessemoore07@gmail.com
+License-File: LICENSE

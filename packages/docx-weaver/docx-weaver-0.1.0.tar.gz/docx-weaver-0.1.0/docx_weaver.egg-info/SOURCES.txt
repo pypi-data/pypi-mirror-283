@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+docx_weaver.egg-info/PKG-INFO
+docx_weaver.egg-info/SOURCES.txt
+docx_weaver.egg-info/dependency_links.txt
+docx_weaver.egg-info/requires.txt
+docx_weaver.egg-info/top_level.txt
+weaver/__init__.py
+weaver/settings.py
+weaver/weaver.py
+weaver/word.py
