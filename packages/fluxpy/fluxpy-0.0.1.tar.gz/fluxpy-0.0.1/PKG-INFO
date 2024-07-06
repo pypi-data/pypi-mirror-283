@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: fluxpy
+Version: 0.0.1
+Summary: Fast thermal modeling and radiosity in Python.
+Author-email: "Samuel F. Potter" <sam@coreform.com>
+Project-URL: Homepage, https://github.com/sampotter/fluxpy
+Project-URL: Issues, https://github.com/sampotter/fluxpy/issues
