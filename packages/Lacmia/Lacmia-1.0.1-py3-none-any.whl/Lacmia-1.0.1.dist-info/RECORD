@@ -1,0 +1,15 @@
+Lacmia/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+Lacmia/models/Lacmia.py,sha256=wKFsUa6mp7rFiTZVwAaNlqmk0I3a7fAPqBUfCiO5wmY,5306
+Lacmia/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+Lacmia/models/adam.py,sha256=JVpFAMlhwvAM6Sch3i1LNnSdfQY0ZWAQqs4mpzGCGXU,4660
+Lacmia/models/decoder.py,sha256=OgMyGedk0mroJ2uj1IZGVe1Do9JSugtCyhQFyHa4ifY,10182
+Lacmia/models/encoder.py,sha256=BQ8grboFuFbJocOiR11JQtLuQsNJBuRiMcAacMT5lG8,3507
+Lacmia/models/generate.py,sha256=RCb3Cq6t57JajjAYafunFanBKYNFYtSGZXbLWxwxVQ8,8021
+Lacmia/models/model_builder.py,sha256=bZKCd0R3TzmDv7LNEIwRctOjowDgHLoGZw3Lh-1BgVc,11402
+Lacmia/models/neural.py,sha256=Qtfm17ItrvT3mG608Sz0nK5VwsTej3aeTUZr8DcuevY,15850
+Lacmia/models/optimizers.py,sha256=KmRRfTx--oAjGVJm34LUMHQgo1b-LOrK4pSwQqr-f8s,7831
+Lacmia/models/predictor.py,sha256=KiyPqQtQ-Kv_TAMlzxX6Fk6cAG8-xyTE0vdiH6b_m7w,17447
+Lacmia-1.0.1.dist-info/METADATA,sha256=oXgWKwxLBbimkqQdiSUnI6h0LwD-ps_QWnWeC23BU04,2909
+Lacmia-1.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+Lacmia-1.0.1.dist-info/top_level.txt,sha256=DCLZQQOZBgjCuf9FmPWdFflIIOWSjpTfr_DxY_RBX1M,7
+Lacmia-1.0.1.dist-info/RECORD,,
