@@ -1,0 +1,44 @@
+Metadata-Version: 2.3
+Name: psoplot
+Version: 24.7.1
+Summary: PSO Plotting Utils
+Project-URL: Homepage, https://github.com/astro-pso/psoplot
+Project-URL: Bug Tracker, https://github.com/astro-pso/psoplot/issues
+Author-email: Alexander Holas <alex.holas@gmx.de>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: numpy>=1.21.0
+Provides-Extra: docs
+Requires-Dist: furo; extra == 'docs'
+Requires-Dist: sphinx; extra == 'docs'
+Requires-Dist: sphinx-copybutton; extra == 'docs'
+Description-Content-Type: text/markdown
+
+# pso_plot
+PSO Plotting Utils
+
+## Installation
+```bash
+```bash
+pip install pso_plot
+``````
+## Usage
+```python
+```python
+import matplotlib.pyplot as plt
+import psoplot
+
+plt.style.use("psoplot.aanda_publication")
+
+# [Your plotting code here]
+``````
