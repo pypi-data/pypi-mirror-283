@@ -1,0 +1,15 @@
+appnope
+colormath>=2.1
+keyring>=5
+matplotlib>=3.6
+mne>=0.19
+nibabel>=2.5
+numpy>=1.20
+pillow
+pymatreader
+scipy>=1.5
+tqdm>=4.40
+wxpython>4.1.0
+
+[brain]
+pysurfer[save_movie]
