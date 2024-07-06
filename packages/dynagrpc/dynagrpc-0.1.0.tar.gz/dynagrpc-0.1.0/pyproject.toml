@@ -1,0 +1,48 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "dynagrpc"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {file = "LICENSE.txt"}
+classifiers = [
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "grpcio-tools",
+  "protobuf",
+  "typing_extensions;python_version=='3.7'",
+]
+dynamic = ["version", "description"]
+
+[project.urls]
+Home = "https://github.com/danilobellini/dynagrpc"
+
+[tool.pytest.ini_options]
+addopts = "--cov=dynagrpc"
+
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+precision = 2
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py{37,38,39,310,311,312,313}
+skip_missing_interpreters = True
+
+[testenv]
+deps =
+  coverage[toml]
+  pytest
+  pytest-cov
+commands =
+  python -m pytest {posargs}
+"""
