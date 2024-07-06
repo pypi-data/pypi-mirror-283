@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File</title>
+    <style>
+        /* Стили для вашего шаблона */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .upload-button {
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, rgba(248, 249, 250, 0.8), rgba(248, 249, 250, 0));
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s ease;
+            position: relative;
+        }
+
+        .upload-button:hover {
+            background: radial-gradient(circle, rgb(230, 230, 230), rgba(255, 255, 255, 0.774));
+        }
+
+        .hidden-input {
+            display: none;
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            stroke: #186eca;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        /* Стили для всплывающего окна */
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            width: 300px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            z-index: 999;
+        }
+
+        .popup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .popup-header .popup-close {
+            cursor: pointer;
+            font-size: 20px;
+            color: #aaaaaa;
+        }
+
+        .popup-header .popup-close:hover {
+            color: #888888;
+        }
+
+        .popup-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .popup-content {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <form id="upload-form" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input id="file-input" class="hidden-input" type="file" name="file">
+            <button type="button" class="upload-button" onclick="triggerFileInput()">
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path d="M12 2v14M5 9l7-7 7 7M5 19h14"/>
+                </svg>
+            </button>
+        </form>
+    </div>
+
+    <!-- Всплывающее окно для отображения информации о загруженном файле -->
+    <div id="popup" class="popup">
+        <div class="popup-header">
+            <span class="popup-title">Uploaded File</span>
+            <span class="popup-close">&times;</span>
+        </div>
+        <div class="popup-content" id="popup-content">
+            <!-- Содержимое загруженного файла -->
+        </div>
+    </div>
+
+    <script>
+        function triggerFileInput() {
+            document.getElementById('file-input').click();
+        }
+
+        document.getElementById('file-input').addEventListener('change', function() {
+            document.getElementById('upload-form').submit();
+        });
+
+        function sendImportRequest() {
+            // Отправляем запрос на сервер Django
+            const formData = new FormData();
+            formData.append('file', document.getElementById('file-input').files[0]);
+
+            fetch('/testcases/upload/', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}' // CSRF токен для защиты от CSRF атак
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Response:', data);
+                showPopup(`File uploaded: ${data.filename}`); // Показываем информацию о загруженном файле
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showPopup('Error uploading file'); // Показываем ошибку в случае неудачи
+            });
+        }
+
+        function showPopup(content) {
+            const popup = document.getElementById('popup');
+            const popupContent = document.getElementById('popup-content');
+            popupContent.textContent = content;
+            popup.style.display = 'block'; // Показываем всплывающее окно
+        }
+
+        // Закрытие всплывающего окна
+        document.querySelector('.popup-close').addEventListener('click', function() {
+            const popup = document.getElementById('popup');
+            popup.style.display = 'none';
+        });
+
+        // Закрытие всплывающего окна по клику вне его области
+        window.addEventListener('click', function(event) {
+            const popup = document.getElementById('popup');
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+
+        // Закрытие всплывающего окна по нажатию клавиши Esc
+        window.addEventListener('keydown', function(event) {
+            const popup = document.getElementById('popup');
+            if (event.key === 'Escape') {
+                popup.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
