@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+hand_star/__init__.py
+hand_star/hand_star.py
+hand_star.egg-info/PKG-INFO
+hand_star.egg-info/SOURCES.txt
+hand_star.egg-info/dependency_links.txt
+hand_star.egg-info/entry_points.txt
+hand_star.egg-info/requires.txt
+hand_star.egg-info/top_level.txt

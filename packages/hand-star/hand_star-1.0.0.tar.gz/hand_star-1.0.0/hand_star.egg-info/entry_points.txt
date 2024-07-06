@@ -1,0 +1,2 @@
+[console_scripts]
+hand-star-demo = hand_star.hand_star:main
