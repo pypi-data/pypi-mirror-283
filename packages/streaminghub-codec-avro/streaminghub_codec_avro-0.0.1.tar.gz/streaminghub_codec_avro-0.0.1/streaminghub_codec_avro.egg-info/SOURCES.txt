@@ -1,0 +1,9 @@
+pyproject.toml
+streaminghub_codec_avro/__init__.py
+streaminghub_codec_avro/codec.py
+streaminghub_codec_avro.egg-info/PKG-INFO
+streaminghub_codec_avro.egg-info/SOURCES.txt
+streaminghub_codec_avro.egg-info/dependency_links.txt
+streaminghub_codec_avro.egg-info/entry_points.txt
+streaminghub_codec_avro.egg-info/requires.txt
+streaminghub_codec_avro.egg-info/top_level.txt
