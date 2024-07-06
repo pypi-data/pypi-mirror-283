@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: usgsxplore
+Version: 0.0.1
+Summary: Search and download satellites scenes from USGS API
+Author-email: Godin Luc <luc.godin@etu.univ-grenoble-alpes.fr>
+Maintainer-email: Amaury Dehecq <this-is-not-an-email@a.com>
+License: MIT License
+Project-URL: Homepage, https://github.com/adehecq/usgs_explorer
+Project-URL: Documentation, https://github.com/adehecq/usgs_explorer
+Project-URL: Repository, https://github.com/adehecq/usgs_explorer
+Project-URL: Issues, https://github.com/adehecq/usgs_explorer/issues
+Keywords: earth observation,remote sesing,GIS,satellite imagery,USGS,M2M
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: tqdm
+Provides-Extra: cli
+Requires-Dist: click ; extra == 'cli'
+
+# usgs_explore
+Repository to search and download data from the USGS database, using the USGS M2M.
