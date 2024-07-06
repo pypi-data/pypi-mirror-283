@@ -1,0 +1,11 @@
+indexclient/__init__.py,sha256=zInbIxN60Jv64pk7BSiO4wfkR_id_NJjsMJ2ucmxvaE,222
+indexclient/chroma.py,sha256=YiDnk0J0QwtZIB5-mctKiyyrcxCys0rj-DfduQ1owCs,4907
+indexclient/client.py,sha256=XxJnuxd0qrITdR7htiAWiwZfmZiyYM6MvI7u2JZy9hQ,9092
+indexclient/config.py,sha256=mXcU2Swj1AFSKXteUcpBbq4EELkb_fLfEZdG6s2DrEc,85
+indexclient/demo.py,sha256=jTQWp_nzMfCs1RHb86M2giOoDYU0OEQFZROhktyoS9o,876
+indexclient/index_types.py,sha256=wsD0nN0lE0qHpwphkeHKhFCNCeklBjGSLmyloc1DtWk,1260
+indexclient/utils.py,sha256=AQNqvHOm_iRGuEDIPAIveTXuGqWFHBv_qMovQ3cBaiA,2984
+indexnetwork_sdk-0.0.18.dist-info/METADATA,sha256=1um-WbFrVWrdmbh4HFuzhf-dSgdcnnrYTP-OG0PLe1M,9644
+indexnetwork_sdk-0.0.18.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+indexnetwork_sdk-0.0.18.dist-info/top_level.txt,sha256=qBkMEBM5QhU3CGy8gR1HXTGQQ_I--xqrRqygXtafe0M,12
+indexnetwork_sdk-0.0.18.dist-info/RECORD,,
