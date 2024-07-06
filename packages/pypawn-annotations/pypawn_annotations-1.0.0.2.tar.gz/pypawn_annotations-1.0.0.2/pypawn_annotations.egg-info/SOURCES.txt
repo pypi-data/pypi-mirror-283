@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+pypawn_annotations/__init__.py
+pypawn_annotations/_annotation.py
+pypawn_annotations/_function.py
+pypawn_annotations/store.py
+pypawn_annotations.egg-info/PKG-INFO
+pypawn_annotations.egg-info/SOURCES.txt
+pypawn_annotations.egg-info/dependency_links.txt
+pypawn_annotations.egg-info/top_level.txt
