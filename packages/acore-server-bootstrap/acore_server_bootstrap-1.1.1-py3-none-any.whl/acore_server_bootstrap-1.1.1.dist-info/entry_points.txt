@@ -1,0 +1,2 @@
+[console_scripts]
+acorebs = acore_server_bootstrap.cli.main:run
