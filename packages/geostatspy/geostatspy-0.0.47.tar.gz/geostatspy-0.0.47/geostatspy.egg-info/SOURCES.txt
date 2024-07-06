@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+geostatspy/GSLIB.py
+geostatspy/__init__.py
+geostatspy/geostats.py
+geostatspy.egg-info/PKG-INFO
+geostatspy.egg-info/SOURCES.txt
+geostatspy.egg-info/dependency_links.txt
+geostatspy.egg-info/requires.txt
+geostatspy.egg-info/top_level.txt
