@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: lpmalgos
+Version: 1.0.8
+Summary: lpmalgos
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.9
+Requires-Dist: numpy
+Requires-Dist: colorlover
+Requires-Dist: pandas
+Requires-Dist: plotly
+Requires-Dist: jsonschema
+
