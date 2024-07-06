@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: lambda_deploy_krhobeck
+Version: 0.1.37
+Summary: Makes AWS Lambda deployment more fluent
+Home-page: https://github.com/krhobeck/lambda_deploy
+Author: Kyle Hobeck
+Author-email: krhobeck@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: boto3
+Requires-Dist: moto
+Requires-Dist: pydantic
+Requires-Dist: flake8
+Requires-Dist: mypy
+Requires-Dist: mypy-boto3-apigateway
+Requires-Dist: mypy-boto3-iam
+Requires-Dist: mypy-boto3-lambda
+Requires-Dist: mypy-boto3-s3
+Requires-Dist: openapi-spec-validator
+Requires-Dist: docker
+
+# lambda_deploy
+AWS Lambda Deploy Package
