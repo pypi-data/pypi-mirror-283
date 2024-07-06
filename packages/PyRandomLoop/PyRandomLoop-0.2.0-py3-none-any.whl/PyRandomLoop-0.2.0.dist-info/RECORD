@@ -1,0 +1,11 @@
+PyRandomLoop/__init__.py,sha256=plcp1WmosmqSv9CP9s3cJiqQfI-dJ8XOjmWFWnAoqUU,267
+PyRandomLoop/core/__init__.py,sha256=4RWAxI9Wl_wJZAYs8HXkRtQ2kNB9gSHawS7Cwcw74ps,334
+PyRandomLoop/core/rpm.py,sha256=1jtn1LONgmyhi4J6Y2QEt3jGC9daHrZQroYl3v_wShk,65507
+PyRandomLoop/core/utils.py,sha256=mirYE0jrdX05SAKlAC63PiCvcxZylytC0ZibinZq-yA,5373
+PyRandomLoop/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+PyRandomLoop/tests/benchmark.py,sha256=4TppZZkDPzLOkmpiSO4YeHvgDbC7SeviT882TzK610U,1600
+PyRandomLoop/tests/test.py,sha256=syxIpmCScghZwbEU_P4_6ozRiN2477WyMYhPeZCJSIs,3041
+PyRandomLoop-0.2.0.dist-info/METADATA,sha256=kR5x3GCT1LtX88MOOrTMhiBnEIe03SSdzeatz2zFdR8,4261
+PyRandomLoop-0.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+PyRandomLoop-0.2.0.dist-info/top_level.txt,sha256=w3tPytFXByJ5LJHtljq5To0TvfDwbhCqu6ldIsPXQhs,13
+PyRandomLoop-0.2.0.dist-info/RECORD,,
