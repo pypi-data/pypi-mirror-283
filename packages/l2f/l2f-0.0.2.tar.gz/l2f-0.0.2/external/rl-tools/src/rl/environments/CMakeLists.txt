@@ -1,0 +1,8 @@
+add_subdirectory(pendulum)
+add_subdirectory(car)
+if(RL_TOOLS_RL_ENVIRONMENTS_ENABLE_MUJOCO)
+    add_subdirectory(mujoco)
+endif()
+add_subdirectory(acrobot/td3)
+add_subdirectory(acrobot/sac)
+add_subdirectory(multi_agent)
