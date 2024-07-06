@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "xian-bds"
+version = "0.1.2"
+description = ""
+authors = ["endogen <081081@gmx.net>"]
+readme = "README.md"
+exclude = ["log/**"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+asyncpg = "^0.29.0"
+loguru = "^0.7.2"
+xian-py = "^0.1.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
