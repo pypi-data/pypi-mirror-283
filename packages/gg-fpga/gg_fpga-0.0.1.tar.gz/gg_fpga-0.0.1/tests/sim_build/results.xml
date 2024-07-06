@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1720169903" />
+    <testcase name="test" classname="test_md_parser" file="/mnt/c/Users/ggggg/Documents/docs/libs/gg.fpga.py.gg/tests/test_md_parser.py" lineno="41" time="4.782716274261475" sim_time_ns="100000.001" ratio_time="20908.62080574528" />
+  </testsuite>
+</testsuites>

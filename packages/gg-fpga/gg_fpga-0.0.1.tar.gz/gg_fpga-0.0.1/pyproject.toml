@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+name = "gg_fpga"
+version = "0.0.1"
+dependencies = [
+  "cocotb", "scapy", "numpy", "ipywidgets", "jupyter", "notebook"
+]
+authors = [
+  { name="gg", email="" },
+]
+description = "A small example package"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
