@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: zaloapi
+Version: 0.0.1
+Summary: zaloapi: Zalo Chat for Python
+Author: Lê Quốc Việt (Vexx)
+Author-email: <vrxxdev@gmail.com>
+Keywords: python,zalo,api,zalo api,zalo chat,requests
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: asyncio
+Requires-Dist: aenum
+Requires-Dist: attr
+Requires-Dist: datetime
+
+Zalo Chat for Python. This project was inspired by fbchat. No XMPP or API key is needed. Just use your email and password (Not support yet) or cookies.
