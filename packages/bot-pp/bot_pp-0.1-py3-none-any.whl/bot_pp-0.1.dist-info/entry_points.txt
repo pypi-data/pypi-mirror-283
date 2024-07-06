@@ -1,0 +1,2 @@
+[console_scripts]
+p!c = scripts.p_c:main
