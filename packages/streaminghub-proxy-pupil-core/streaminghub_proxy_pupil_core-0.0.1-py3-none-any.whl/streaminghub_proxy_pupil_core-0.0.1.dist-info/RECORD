@@ -1,0 +1,9 @@
+streaminghub_proxy_pupil_core/__init__.py,sha256=laTziUa-ltCdGIVpIW5AVXdFoxcxfvUpKhKDPS_xzs4,33
+streaminghub_proxy_pupil_core/node.json,sha256=W11tlcuWXoTCiWkxIPVq24ZcTS6gIIjJRmK6cBJe9NA,3927
+streaminghub_proxy_pupil_core/proxy.py,sha256=Uool5B234FD_ic76-6oYD_1Oj8d6_c0pUt-3A7DWyVM,6936
+streaminghub_proxy_pupil_core/test.py,sha256=G8P9QUpngEtVVIWklJ-UKqrKMiQc8GV45cx73dLBjWk,599
+streaminghub_proxy_pupil_core-0.0.1.dist-info/METADATA,sha256=927oSiJQ7AWQZ00cT_Y-nf08L9WVj0d82X5StaiNhCA,871
+streaminghub_proxy_pupil_core-0.0.1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+streaminghub_proxy_pupil_core-0.0.1.dist-info/entry_points.txt,sha256=7LuS-dMF7Yz3e-8PiF0yirWHYRBp1rSEgstUM71vOxw,87
+streaminghub_proxy_pupil_core-0.0.1.dist-info/top_level.txt,sha256=USw6XLaKTGZ-xQKflPuwBNbaVD0A_gfZaD0SvGcJ3ks,30
+streaminghub_proxy_pupil_core-0.0.1.dist-info/RECORD,,
