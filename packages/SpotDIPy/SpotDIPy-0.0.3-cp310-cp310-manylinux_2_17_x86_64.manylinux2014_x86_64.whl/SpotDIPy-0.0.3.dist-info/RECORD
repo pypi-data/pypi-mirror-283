@@ -1,0 +1,12 @@
+SpotDIPy-0.0.3.dist-info/RECORD,,
+SpotDIPy-0.0.3.dist-info/LICENSE.txt,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+SpotDIPy-0.0.3.dist-info/METADATA,sha256=hasJHS5H6yuecFMWkv3WroWctYDEPpX_9kCTxj6sg98,2386
+SpotDIPy-0.0.3.dist-info/WHEEL,sha256=RzLeFyQ-yGJTRF7YOH_naJQsO4ZmGZKvfce8sxPdejc,151
+SpotDIPy-0.0.3.dist-info/top_level.txt,sha256=eFxf9yUHodHzHeFA4DBj0h1WlA6pDg2zZblTtsgBrBk,9
+SpotDIPy/__init__.py,sha256=dvg5gA9mpzgsOMqPJ8YFEzeDCauvCAxBt0e8U_1a5ig,81
+SpotDIPy/cutils.cpython-310-x86_64-linux-gnu.so,sha256=Z0jK4FZxK2ZnznhOOz79rDNNkGKGc7MX_DHj_4My46k,2786072
+SpotDIPy/plot_GUI.py,sha256=xVAOdpjDvJk6hFLWw4lD556C2BEFoQBAtgR_QPuxDvY,43616
+SpotDIPy/utils.py,sha256=U_GDm-pgClgRNBT3Q1t-HucIv6Ooc1Au75-zNz_R2KQ,42472
+SpotDIPy/cutils.c,sha256=jBA8g4r6poEnXCSa_qVNfc3Sc1sRn8QrsN5UjzQ5joI,1710976
+SpotDIPy/SpotDIPy.py,sha256=L3grVwMK56JsoKYJ1U_UadvqWgfmADv33e-VYEd7NeE,57637
+SpotDIPy/cutils.pyx,sha256=74vtCi_IVOCRE3MZNE6uK-NtxFVWCj0YfgIIegLx9kg,19349
