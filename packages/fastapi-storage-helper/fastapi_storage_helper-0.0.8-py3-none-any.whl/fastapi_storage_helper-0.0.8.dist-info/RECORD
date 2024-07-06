@@ -1,0 +1,5 @@
+fastapi_storage_helper/__init__.py,sha256=DHZ88O9avd1zA11SgLPZaSPtjD_WVVvsVZKeMGI-WjU,67
+fastapi_storage_helper/storage.py,sha256=QpICDNl2ARej8sRjYfmfh7kXaPCZGT5WeE5_EsgHsw4,2883
+fastapi_storage_helper-0.0.8.dist-info/METADATA,sha256=IjaGxeQqzDNQrlnSW_J6jp6R8TZ87FMfmKDevGfqOfo,628
+fastapi_storage_helper-0.0.8.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+fastapi_storage_helper-0.0.8.dist-info/RECORD,,
