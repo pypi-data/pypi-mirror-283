@@ -1,0 +1,12 @@
+oscb/__init__.py,sha256=xkceDSL-01twdKQ3f1E5RXgPwQOEskfLAv4Mh6WIBpw,100
+oscb/version.py,sha256=MsyxBkXpLa4lLZzLXaagz_4KJz7dSbSC6Hxg4kT5FTc,650
+oscb/clustering/__init__.py,sha256=EMFN91bWQ4foWYb4m4jVLZ6DDmqiXhVNh-aR0tIM6lM,43
+oscb/clustering/clustering_analysis.py,sha256=O0dkfiKpH_YVIiB2yY8tuBcPbbqDxOKuIwJHpom3KgM,1826
+oscb/clustering/run_clustering.py,sha256=jMCD4z6iG1PkjQc8AjnHeQFFVP_qbOwDf4UPaflCQHE,274
+oscb/download_dataset/__init__.py,sha256=HAVlaMEijvY-YKL4Ce0E5p6BkNsAtjezQxPboLVp0R8,99
+oscb/download_dataset/download_file.py,sha256=Nth-zp8QJxtCZ5rFtV3WHHLbzWhcSJlWccvi_mERvww,193
+oscb/download_dataset/download_utils.py,sha256=o7zqBkcxPr5hgWFrKSplqY6nXUIlTWrVG6VlOiPGynI,2529
+oscb-2.0.2.dist-info/METADATA,sha256=hFA975ftCkjyo0_TfYdpjT281sh49mPuX7VtucoSS1E,976
+oscb-2.0.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+oscb-2.0.2.dist-info/top_level.txt,sha256=-kscy76s5yJOs8EyWQof-Ico6tACMlsgQ7tHMT4sd2Q,5
+oscb-2.0.2.dist-info/RECORD,,
