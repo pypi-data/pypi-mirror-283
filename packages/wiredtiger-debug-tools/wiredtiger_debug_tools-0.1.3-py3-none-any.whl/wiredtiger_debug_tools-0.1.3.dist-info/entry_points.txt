@@ -1,0 +1,3 @@
+[console_scripts]
+wtd=wtd.cli:main
+

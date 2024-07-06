@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: wiredtiger-debug-tools
+Version: 0.1.3
+Summary: Collections of tools to debug and analyze MongoDB WiredTiger files
+Author: Tommaso Tocci
+Author-email: tommaso.tocci@mongodb.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: pymongo (>=4.8.0,<5.0.0)
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Description-Content-Type: text/markdown
+
+# WiredTiger debug tools
+[![image](https://img.shields.io/pypi/v/wiredtiger-debug-tools.svg)](https://pypi.org/project/wiredtiger-debug-tools/)
+![GitHub License](https://img.shields.io/github/license/toto-dev/wiredtiger-debug-tools?color=blue)
+
+Collection  of tools to debug and analyze MongoDB WiredTiger files
+
+# Installation
+## Dependencies
+In order to use the provided debug tools you need to install `wt` binary on your system.
+
+You can either use your system package manager. E.g.
+```
+apt install wiredtiger
+```
+Or compile `wt` from [source](https://source.wiredtiger.com/)
+
+If you compiled `wt` from source, make sure to add the installation folder to your PATH environment variable.
+
+## Package
+The `wiredtiger-debug-tools` package is available on PyPI
+```
+pip install wiredtiger-debug-tools
+```
+# Usage
+## `wtd` tool
+
+- Print list of collections contained in the `_mdb_catalog`
+```
+wtd list-collections
+```
+- Inspect content of a specific collection:
+```
+wtd cat local.oplog.rs
+```
+
+### With `FZF`
+You can use [FZF](https://github.com/junegunn/fzf) to interactively select the the collection to open
+```
+wtd cat `wtd list-collections | fzf | cut -d " " -f1`
+```
+
+## CLI Autocompletion
+To enable CLI auto-completion on ZSH shell run:
+```
+eval "$(_WTD_COMPLETE=zsh_source wtd)"
+```
+On Bash shell:
+```
+eval "$(_WTD_COMPLETE=bash_source wtd)"
+```
+
