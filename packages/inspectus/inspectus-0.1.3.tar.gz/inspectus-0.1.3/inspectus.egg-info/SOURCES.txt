@@ -1,0 +1,17 @@
+MANIFEST.in
+setup.py
+inspectus/__init__.py
+inspectus/attention_viz.py
+inspectus/binned_heaatmap.py
+inspectus/distribution_viz.py
+inspectus/histogram.py
+inspectus/scatter.py
+inspectus/utils.py
+inspectus.egg-info/PKG-INFO
+inspectus.egg-info/SOURCES.txt
+inspectus.egg-info/dependency_links.txt
+inspectus.egg-info/requires.txt
+inspectus.egg-info/top_level.txt
+inspectus/data_logger/__init__.py
+inspectus/static/css/charts.css
+inspectus/static/js/charts.js
