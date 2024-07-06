@@ -1,0 +1,13 @@
+import ShopifyTupperware.controllers.order_controller
+import ShopifyTupperware.controllers.product_controller
+import ShopifyTupperware.controllers.inventory_controller
+import ShopifyTupperware.controllers.user_controller
+import ShopifyTupperware.controllers.location_controller
+import ShopifyTupperware.controllers.waranty_controller
+import ShopifyTupperware.controllers.recruit_controller
+import ShopifyTupperware.controllers.customer_controller
+import ShopifyTupperware.controllers.area_controller
+import ShopifyTupperware.controllers.product_claim_controller
+import ShopifyTupperware.controllers.transaction_controller
+import ShopifyTupperware.controllers.discount_controller
+import ShopifyTupperware.controllers.voucher_controller
