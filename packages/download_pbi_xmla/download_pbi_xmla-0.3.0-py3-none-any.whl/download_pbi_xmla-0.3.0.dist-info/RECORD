@@ -1,0 +1,11 @@
+download_pbi_xmla/.env_example,sha256=N8_GheMW9g8Hx9y2XizM5YzrjsYoq5TRjpA6_glXvUk,127
+download_pbi_xmla/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+download_pbi_xmla/download.py,sha256=hLMTSsdKr1FjCfWOY1HUEyu8PJdr5dHf3bOhlbV9EVw,2478
+download_pbi_xmla/example_config.json,sha256=_HtG9Djs7FQu6V_j4EL3MWFxKISLSYIa19LkYNCZNt8,249
+download_pbi_xmla/main.py,sha256=OmyfV2d975-8Btl90_eyi9i1B_bMyQxiMUEoVdywZro,4661
+download_pbi_xmla/setup_files.ps1,sha256=bmvW4NYozuEP13LaU2ao6nUaPgdQrHAbSAWxnPCXIsA,233
+download_pbi_xmla/ssas_api.py,sha256=43_drPv77jYCOQ92PU__wQ2A_8b3u8gWJAHBlMDhIno,6043
+download_pbi_xmla-0.3.0.dist-info/entry_points.txt,sha256=Zex2PQn2WVexmqWEG7dKtZG-ifbOOBDHgrWx9XMBc_0,119
+download_pbi_xmla-0.3.0.dist-info/METADATA,sha256=aDuiEkb4eM53MB27VrQZYPq5Tw1K95N_QzyZfrwFo90,3302
+download_pbi_xmla-0.3.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+download_pbi_xmla-0.3.0.dist-info/RECORD,,
