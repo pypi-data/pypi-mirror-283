@@ -1,0 +1,3 @@
+SBOannotator
+__main__
+sboannotator
