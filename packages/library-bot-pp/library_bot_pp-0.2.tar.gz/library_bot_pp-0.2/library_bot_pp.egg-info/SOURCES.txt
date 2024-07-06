@@ -1,0 +1,8 @@
+README.md
+setup.py
+library/__init__.py
+library_bot_pp.egg-info/PKG-INFO
+library_bot_pp.egg-info/SOURCES.txt
+library_bot_pp.egg-info/dependency_links.txt
+library_bot_pp.egg-info/entry_points.txt
+library_bot_pp.egg-info/top_level.txt
