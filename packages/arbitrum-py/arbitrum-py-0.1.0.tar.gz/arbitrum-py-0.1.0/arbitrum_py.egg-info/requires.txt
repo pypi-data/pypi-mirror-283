@@ -1,0 +1,10 @@
+web3==6.3.0
+rlp==3.0.0
+eth-utils==2.3.1
+python-dotenv==1.0.0
+eth-typing==3.5.2
+asyncio==3.4.3
+eth-abi==4.2.1
+pyyaml==6.0.1
+addict==2.4.0
+py-evm==0.8.0b1
