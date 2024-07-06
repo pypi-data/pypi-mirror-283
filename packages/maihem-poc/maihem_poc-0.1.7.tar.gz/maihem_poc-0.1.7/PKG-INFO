@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: maihem-poc
+Version: 0.1.7
+Summary: 
+Author: Katya
+Requires-Python: ==3.11.9
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: Flask (==3.0.3)
+Requires-Dist: Jinja2 (==3.1.4)
+Requires-Dist: MarkupSafe (==2.1.5)
+Requires-Dist: Werkzeug (==3.0.3)
+Requires-Dist: black (==24.4.2)
+Requires-Dist: click (==8.1.7)
+Requires-Dist: flake8 (==7.1.0)
+Requires-Dist: isort (>=5.13.2,<6.0.0)
+Requires-Dist: itsdangerous (==2.2.0)
+Requires-Dist: matplotlib (>=3.9.1,<4.0.0)
+Requires-Dist: openai (>=1.35.10,<2.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: pdfminer-six (>=20231228,<20231229)
+Requires-Dist: pillow (>=10.4.0,<11.0.0)
+Requires-Dist: pillow-heif (>=0.17.0,<0.18.0)
+Requires-Dist: psutil (>=6.0.0,<7.0.0)
+Requires-Dist: python-docx (>=1.1.2,<2.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: unstructured (>=0.14.9,<0.15.0)
+Requires-Dist: unstructured-inference (>=0.7.36,<0.8.0)
+Requires-Dist: unstructured-pytesseract (>=0.3.12,<0.4.0)
+Requires-Dist: zipp (==3.19.2)
+Description-Content-Type: text/markdown
+
+
