@@ -1,0 +1,7 @@
+Cython
+
+[dev]
+check-manifest
+
+[test]
+coverage

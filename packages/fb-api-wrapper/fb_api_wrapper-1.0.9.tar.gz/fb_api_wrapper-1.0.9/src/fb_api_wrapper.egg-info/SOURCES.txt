@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/fb_api_wrapper/__init__.py
+src/fb_api_wrapper.egg-info/PKG-INFO
+src/fb_api_wrapper.egg-info/SOURCES.txt
+src/fb_api_wrapper.egg-info/dependency_links.txt
+src/fb_api_wrapper.egg-info/requires.txt
+src/fb_api_wrapper.egg-info/top_level.txt
+src/fb_api_wrapper/libs/define_api.cp39-win_amd64.pyd
+src/fb_api_wrapper/libs/fb_core.cp39-win_amd64.pyd
+src/fb_api_wrapper/libs/log_.cp39-win_amd64.pyd
+src/fb_api_wrapper/libs/parse_api.cp39-win_amd64.pyd
+src/fb_api_wrapper/libs/utils.cp39-win_amd64.pyd
