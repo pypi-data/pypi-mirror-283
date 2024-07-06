@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: jaalvarez2818_airport_docs
+Version: 0.8.5
+Summary: Generación de documentación y reportes requeridos por aeropuertos y/o aduanas para viajes.
+Home-page: https://github.com/jaalvarez2818/airport-docs
+Author: José Angel Alvarez Abraira
+Author-email: jaalvarez2818development@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
