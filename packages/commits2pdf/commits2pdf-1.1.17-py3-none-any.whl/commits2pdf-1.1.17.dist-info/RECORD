@@ -1,0 +1,14 @@
+commits2pdf/__init__.py,sha256=oKsCpoiQSSXx57DGs2VfYzeO1ukJQxdGnV-2hC3BI0M,42
+commits2pdf/args.py,sha256=vc7xKgaYldOHbrY7yGUxR9PSYzEBcMGceFC1Op--8pY,5087
+commits2pdf/cli.py,sha256=Ui2pa0fDToKYz3Fz8OtMrLNIl5kKNbi_cqUfkHMvqak,6327
+commits2pdf/commits.py,sha256=ihsZSf8dNPHwgV1nxpILAcqNBXDvd4zatVFensjfOeU,11041
+commits2pdf/constants.py,sha256=qPu7uDFJ2nAUdafaVxUxFBzrLMppr_BMFsaOsucGu9w,3967
+commits2pdf/logger.py,sha256=R9c-wSxazxta5AC_KO4Y6NhO6d1WsO41rbY0zzRilOE,243
+commits2pdf/render_cairo.py,sha256=d0VbMVspSZuKo6kdMjyzm7C3OzX3hP0XnPs_-S26EhY,6526
+commits2pdf/render_fpdf.py,sha256=SpBEuiMiYP63kTcza9Ap47mbOPpL0BBLSc-QXpTLbaU,14016
+commits2pdf-1.1.17.dist-info/LICENCE.md,sha256=eYTP80TavtMfmHBhLQiEa2mMln9tSSBeC-rTnOFCWys,1066
+commits2pdf-1.1.17.dist-info/METADATA,sha256=byes1c9t30QTXyB3e2sbNBfpfRImsMsivUqee-8CQVI,9258
+commits2pdf-1.1.17.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+commits2pdf-1.1.17.dist-info/entry_points.txt,sha256=JJm3izX0zWJn1ocAk2dDgVWbs7dQpKvKcJuvzQKzLJ0,45
+commits2pdf-1.1.17.dist-info/top_level.txt,sha256=VVthcHb0UaVkac9quiw8itVMSss4UaBrb7ua1iMc59s,12
+commits2pdf-1.1.17.dist-info/RECORD,,
