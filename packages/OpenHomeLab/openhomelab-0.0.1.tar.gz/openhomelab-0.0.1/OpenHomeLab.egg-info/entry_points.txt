@@ -1,0 +1,2 @@
+[console_scripts]
+openlab = open_lab.main:main
