@@ -1,0 +1,25 @@
+traits>=6.2.0
+
+[docs]
+enthought-sphinx-theme
+sphinx
+
+[gui]
+pyface
+traitsui
+
+[h5]
+numpy<2.0
+pandas
+tables
+
+[persistence]
+numpy<2.0
+
+[preferences]
+configobj
+
+[test]
+
+[test:python_version < "3.9"]
+importlib-resources>=1.1.0
