@@ -1,0 +1,4 @@
+[console_scripts]
+run-use-errors=examples:errors
+run-use-status=examples:status
+

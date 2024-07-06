@@ -1,0 +1,9 @@
+annotated_fastapi_router/__init__.py,sha256=t2Hcs0yKHjSRyrAzqfBZqZyAKZu170MTRbVWfDIV200,178
+annotated_fastapi_router/error.py,sha256=GctivH9nQ7xRcNYJaR7nKvoY1FF9l98K89hH3cJX1Nk,1313
+annotated_fastapi_router/routing.py,sha256=Go359dRXdYT9YtRTjFC4LPM83MRkYBVTlcMZHlfGSlA,5977
+annotated_fastapi_router/types.py,sha256=9PHhmiAXqOC8bQgOIA7SZ1tuRurmgOZxD9CDqqOIw4U,2048
+annotated_fastapi_router-0.1.0.dist-info/LICENSE,sha256=ga1oh3dQq7uasrzODru3hnl7lCU5mAEK6-eTc3xEyrI,1066
+annotated_fastapi_router-0.1.0.dist-info/METADATA,sha256=rJg8RQCU6J-u11du_2DJ-1kziDEGUrsSVA6xxoARGf8,15794
+annotated_fastapi_router-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+annotated_fastapi_router-0.1.0.dist-info/entry_points.txt,sha256=RG3_0wbVufOk2JOKHiF4vXBH-vE9o3cKHHsXMG1h9aA,81
+annotated_fastapi_router-0.1.0.dist-info/RECORD,,
