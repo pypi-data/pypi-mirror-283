@@ -1,0 +1,28 @@
+What's new in version 1.3.9
+===========================
+Version available since July 5th 2024
+
+New Features
+------------
+- 'Creneau' class was added in ode_tools to modelise a MLI command varying between 0 and 1.
+- New test file Test_Jacobian_ODE_criteria, to check jacobian of criteria for a Boost application.
+- Interface 'StoppingCriteria' to implement Stopping Criteria of ODE simulations.
+- 'multi_start' parameter for run function of OptimProblem, to run SQP/IPOPT with different random initial points.
+- new method 'plotvar' for ODESystem interface to plot variables accross time vector.
+
+Changes
+-------
+- Abstract class ODESystem has other abstract methods (initialize, computeotherX) to help the designers to implement their models.
+- 'commande' of ODESystem is now an attribute (of class type) and no longer a method.
+- Time criteria for periodic and non-periodic systems were merged in the same classes (Min, Max, moy, eff).
+- In test_Jacobien_ODE_System, the jacobian of the mean value is checked.
+- To call differential evolution algorithm, method='diffev' must be written instead of method='stochastic'.
+- Frequency criteria Module_OHz, Module_Fondamental, Module_Harmoniques are merged in a same class, Module_FFT.
+- steady_state, threshold, final_time became classes herited of StoppingCriteria interface.
+- 'computeotherX' method was deleted from ODESystem interface. In this case, state and output vectors must be returned by output method.
+- 'get_indice' function of ode_tools.py integrated to ODESystem interface.
+- For diffev algorithm, tolerance given by user influences the relative tolerance and not the absolute one.
+
+Contributors
+------------
+Lucas Agobert
