@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: aimmocore-db
+Version: 0.1.5
+Summary: Database setup for Aimmocore
+Author-email: Aimmo <aimmoml@aimmo.co.kr>
+Requires-Python: >=3.8
+License-File: LICENSE
+
