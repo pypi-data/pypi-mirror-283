@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/PcapParser.egg-info/PKG-INFO
+src/PcapParser.egg-info/SOURCES.txt
+src/PcapParser.egg-info/dependency_links.txt
+src/PcapParser.egg-info/entry_points.txt
+src/PcapParser.egg-info/requires.txt
+src/PcapParser.egg-info/top_level.txt
+src/pcapparser/__init__.py
+src/pcapparser/__main__.py
