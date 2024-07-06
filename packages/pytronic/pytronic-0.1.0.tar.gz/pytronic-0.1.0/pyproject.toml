@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "pytronic"
+version = "0.1.0"
+description = ""
+authors = ["Samuel Sublate <samuelsublate.dev@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "pytronic" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+blue = "^0.9.1"
+pytest = "^8.2.2"
+taskipy = "^1.13.0"
+typer = "^0.12.3"
+jinja2 = "^3.1.4"
+pydantic = "^2.8.0"
+pyautogui = "^0.9.54"
+pillow = "^10.4.0"
+pytesseract = "^0.3.10"
+opencv-python = "^4.10.0.84"
+numpy = "^2.0.0"
+
+[tool.poetry.scripts]
+pytronic = "pytronic.client:app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.taskipy.tasks]
+lint = "blue --check --diff ."
+test =  "pytest -s -x -vv"
+pipeline = "task lint && task test"
+run = "python pytronic/main.py"
