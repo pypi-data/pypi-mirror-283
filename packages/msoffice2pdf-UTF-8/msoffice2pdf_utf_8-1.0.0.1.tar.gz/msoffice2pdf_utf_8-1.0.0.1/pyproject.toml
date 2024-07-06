@@ -1,0 +1,29 @@
+[project]
+name = "msoffice2pdf-UTF-8"
+version = "1.0.0.1"
+description = "This package aims to convert Office file types to PDF using Microsoft Office or LibreOffice."
+authors = [
+    {name = "Phosha", email = "kdrvpavel@gmail.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.6"
+
+keywords = ["msoffice", "pdf", "convert", "libreoffice", ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".txt", ".xml"]
+
+classifiers = [
+    "Topic :: Software Development",
+    "Environment :: Win32 (MS Windows)",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: Unix",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[build-system]
+requires = [
+    "setuptools >= 35.0.2",
+    "setuptools_scm >= 2.0.0, <3",
+    "comtypes >= 1.1.10"
+]
+build-backend = "setuptools.build_meta"
