@@ -1,0 +1,15 @@
+asp2cnl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+asp2cnl/asp2cnl.py,sha256=_8xzn4qJCqvKIvCSu1SSlKtQUlbKlS9-YK21fFut2KQ,1308
+asp2cnl/compiler.py,sha256=E9TPqQkmigVEiWVTsb5QwsN86Fa5wT1NUKxf-mHV7qY,37926
+asp2cnl/parser.py,sha256=IfgcBkRFZrU2LJzPn5I7-nkuszAWnZYv7eyV32IwWuw,22089
+asp2cnl/asp_core_2_grammar/asp_grammar.lark,sha256=2kgDVTGORvvBDckPfOO1OLreYNPxWyIeUog4lGx2F84,6495
+asp2nl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+asp2nl/asp2nl.py,sha256=S_Si_O86AOMsYzvjBQC9P2l2HuKMoE770eI6qDuB0IM,1487
+cnl2nl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cnl2nl/cnl2nl.py,sha256=V3A9y-JxNiS4lH81nf51pJyhCuXKhjpi4OYk4-I37ZI,2517
+asp2cnl-1.0.0.dist-info/LICENSE,sha256=1flOL_I8s2B6CXHTxAb_zWnrzSkOHm1t8IETy-CKxuY,1063
+asp2cnl-1.0.0.dist-info/METADATA,sha256=HirBN2baKcaSrKlhDo6NGnmHvcNzCTSzxjonkKxcBQY,601
+asp2cnl-1.0.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+asp2cnl-1.0.0.dist-info/entry_points.txt,sha256=WFs1aZSWY2f8pmMUMdItWirvmuPcJbXBtxnMdMk8tEY,124
+asp2cnl-1.0.0.dist-info/top_level.txt,sha256=NQt_EuO2JQ04gJWTt1KoEzS9GCy5JU_jrq-z6c9hrV4,22
+asp2cnl-1.0.0.dist-info/RECORD,,
