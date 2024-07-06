@@ -1,0 +1,11 @@
+Metadata-Version: 2.3
+Name: moonbunny
+Version: 0.1.0
+Summary: to the moon
+Author-email: Darren Burns <darrenb900@gmail.com>
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# moonbunny
+
+Describe your project here.
