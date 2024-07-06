@@ -1,0 +1,232 @@
+Curve:
+  _color: 
+  _line_width: 2
+  _line_style: "-"
+  _cap_width: 3
+  _errorbars_color: "same as curve"
+  _errorbars_line_width: "same as curve"
+  _error_curves_color: same as curve
+  _error_curves_fill_between: true
+  _error_curves_line_style: --
+  _error_curves_line_width: same as curve
+  _cap_thickness: "same as curve"
+  _fill_between_color: "same as curve"
+
+Scatter:
+  _face_color: "color cycle"
+  _edge_color:
+  _color_map: "coolwarm"
+  _show_color_bar: False
+  _marker_size: 50
+  _marker_style: "o"
+  _cap_width: 3
+  _errorbars_color: "same as scatter"
+  _errorbars_line_width: 1
+  _cap_thickness: 1
+
+Histogram:
+  _face_color: "#3e82a0"
+  _edge_color: "#3e82a0"
+  _hist_type: "stepfilled"
+  _alpha: 0.3
+  _line_width: 2
+  _normalize: True
+  _show_params: True
+  _pdf_show_mean: True
+  _pdf_show_std: True
+  _pdf_curve_color: "k"
+  _pdf_mean_color: "r"
+  _pdf_std_color: "k"
+
+Hlines:
+  _colors: "k"
+  _line_styles: "-"
+  _line_widths: 2
+
+Vlines:
+  _colors: "k"
+  _line_styles: "solid"
+  _line_widths: 2
+
+Figure:
+  _size: [6.4, 4.8]
+  _log_scale_x: False
+  _log_scale_y: False
+
+MultiFigure:
+  _size: [6.4, 4.8]
+
+Point:
+  _color: "k"
+  _edge_color: null
+  _marker_size: 30
+  _marker_style: "o"
+  _edge_width: 1.5
+  _text_color: "same as point"
+
+FitFromPolynomial:
+  _color: "k"
+  _line_width: 2
+  _line_style: "-"
+  _res_color: "k"
+  _res_line_width: 1
+  _res_line_style: "--"
+
+FitFromExponential:
+  _color: "k"
+  _line_width: 2
+  _line_style: "-"
+  _res_color: "k"
+  _res_line_width: 1
+  _res_line_style: "--"
+
+FitFromGaussian:
+  _color: "k"
+  _line_width: 2
+  _line_style: "-"
+  _res_color: "k"
+  _res_line_width: 1
+  _res_line_style: "--"
+
+FitFromSine:
+  _color: "k"
+  _line_width: 2
+  _line_style: "-"
+  _res_color: "k"
+  _res_line_width: 1
+  _res_line_style: "--"
+
+FitFromSquareRoot:
+  _color: "k"
+  _line_width: 2
+  _line_style: "-"
+  _res_color: "k"
+  _res_line_width: 1
+  _res_line_style: "--"
+
+FitFromLog:
+  _res_color: "k"
+  _res_line_width: 1
+  _res_line_style: "--"
+  _color: "k"
+  _line_width: 2
+  _line_style: "-"
+
+FitFromFunction:
+  _res_color: "k"
+  _res_line_width: 1
+  _res_line_style: "--"
+  _color: "k"
+  _line_width: 2
+  _line_style: "-"
+
+FitFromFOTF:
+  _res_color: "k"
+  _res_line_width: 1
+  _res_line_style: "--"
+  _color: "k"
+  _line_width: 2
+  _line_style: "-"
+
+Heatmap:
+  _aspect_ratio: "equal"
+  _origin_position: "upper"
+  _color_map: "coolwarm"
+  _show_color_bar: True
+
+Contour:
+  _number_of_levels: 10
+  _color_map: "coolwarm"
+  _show_color_bar: True
+  _filled: True
+  _alpha: 1.0
+
+VectorField:
+  _arrow_width: 1
+  _arrow_head_size: 1
+  _color: "k"
+
+Text:
+  _color: "k"
+  _h_align: "center"
+  _v_align: "baseline"
+
+Table:
+  _cell_colors: "white"
+  _col_colors: "#bfbfbf"
+  _row_colors: "#bfbfbf"
+  _edge_color: "black"
+  _edge_width: 1
+  _text_color: "black"
+  _cell_align: "right"
+  _row_align: "left"
+  _col_align: "center"
+
+Stream:
+  _line_width: 1
+  _color: 
+  _color_map: 
+  _arrow_size: 1
+
+Circle:
+  _fill: True
+  _fill_alpha: 0.5
+  _fill_color:
+  _edge_color: "black"
+  _line_width: 2
+  _line_style: "-"
+
+Rectangle:
+  _fill: True
+  _fill_alpha: 0.5
+  _fill_color:
+  _edge_color: "black"
+  _line_width: 2
+  _line_style: "-"
+
+Arrow:
+  _color: "black"
+  _head_size: 1
+  _width: 2
+
+Line:
+  _color: "black"
+  _width: 2
+  _cap_width: 1
+
+Polygon:
+  _fill: True
+  _fill_alpha: 0.5
+  _fill_color:
+  _edge_color: "black"
+  _line_width: 2
+  _line_style: "-"
+
+rc_params:
+  figure.facecolor: "white"
+  savefig.dpi: 200
+  axes.facecolor: "white"
+  axes.edgecolor: "black"
+  axes.labelcolor: "black"
+  axes.linewidth: 1
+  axes.prop_cycle: cycler('color', ['#3e82a0', '#edb73b', '#b9503b', '#8aba4e', '#695178', '#ed893b', '#34a893', '#616161'])
+  xtick.color: "black"
+  ytick.color: "black"
+  xtick.direction: "in"
+  ytick.direction: "in"
+  legend.facecolor: "white"
+  legend.edgecolor: "none"
+  font.family: "sans-serif"
+  font.size: 12
+  font.weight: "normal"
+  text.color: "black"
+  text.usetex: False
+  lines.solid_capstyle: "round"
+  lines.dash_joinstyle: "round"
+  lines.dash_capstyle: "round"
+  grid.linestyle: "-"
+  grid.linewidth: 0.5
+  grid.color: "grey"
+  grid.alpha: 0.5
+  axes.grid: False
+  
