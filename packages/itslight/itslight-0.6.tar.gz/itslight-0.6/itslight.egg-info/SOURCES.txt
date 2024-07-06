@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+itslight/__init__.py
+itslight/__main__.py
+itslight/cli.py
+itslight/download.py
+itslight/loader.py
+itslight.egg-info/PKG-INFO
+itslight.egg-info/SOURCES.txt
+itslight.egg-info/dependency_links.txt
+itslight.egg-info/entry_points.txt
+itslight.egg-info/requires.txt
+itslight.egg-info/top_level.txt

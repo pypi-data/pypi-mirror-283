@@ -1,0 +1,35 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "itslight"
+version = "0.6"
+description = "Get light packages in an instant."
+keywords = ["light", "package", "install", "get", "cli", "itslight"]
+authors = [
+  { name = "AWeirdDev", email = "aweirdscratcher@gmail.com" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.9"
+dependencies = [
+  "httpx"
+]
+
+[project.scripts]
+itslight = "itslight.cli:main"
+
+[project.urls]
+"Source" = "https://github.com/AWeirdScratcher/itslight"
+"Bug Tracker" = "https://github.com/AWeirdScratcher/itslight/issues"
+
+[tool.setuptools]
+packages = [
+    "itslight"
+]
