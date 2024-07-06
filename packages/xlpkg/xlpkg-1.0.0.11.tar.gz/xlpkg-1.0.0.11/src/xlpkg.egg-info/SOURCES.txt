@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/xlpkg/a01.py
+src/xlpkg.egg-info/PKG-INFO
+src/xlpkg.egg-info/SOURCES.txt
+src/xlpkg.egg-info/dependency_links.txt
+src/xlpkg.egg-info/top_level.txt
