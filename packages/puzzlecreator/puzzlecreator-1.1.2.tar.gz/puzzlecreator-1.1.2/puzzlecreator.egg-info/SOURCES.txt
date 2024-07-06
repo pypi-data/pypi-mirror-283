@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+puzzlecreator/__init__.py
+puzzlecreator/crossword.py
+puzzlecreator.egg-info/PKG-INFO
+puzzlecreator.egg-info/SOURCES.txt
+puzzlecreator.egg-info/dependency_links.txt
+puzzlecreator.egg-info/top_level.txt
