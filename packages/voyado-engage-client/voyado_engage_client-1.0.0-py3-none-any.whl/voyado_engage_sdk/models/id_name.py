@@ -1,0 +1,19 @@
+from .utils.json_map import JsonMap
+from .base import BaseModel
+
+
+@JsonMap({"id_": "id"})
+class IdName(BaseModel):
+    """IdName
+
+    :param id_: id_, defaults to None
+    :type id_: str, optional
+    :param name: name, defaults to None
+    :type name: str, optional
+    """
+
+    def __init__(self, id_: str = None, name: str = None):
+        if id_ is not None:
+            self.id_ = id_
+        if name is not None:
+            self.name = name
