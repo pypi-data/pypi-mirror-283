@@ -1,0 +1,13 @@
+polystar/bound.py,sha256=csVGq_ls_OTi9HZVuN0ySUaP0NIHFJ7sFd-mhnPJwnw,1188
+polystar/peaks.py,sha256=5nwAxeCWZoDrfJ9UswuwceSYC6jPxS11AZVcb4Didk0,6206
+polystar/plot.py,sha256=KC37gixkad-b2irzq9S5FdwtsUy37WQDabwpe5IBxHg,2193
+polystar/vis.py,sha256=b9rBMDLiOAeqTY0SrG8xL1pAUfctoM7XTsiy0KaEA6w,9957
+polystar/_polystar.cp311-win_amd64.pyd,sha256=JXMTICYc15ykiPhsJ-P2R5SzGFcWoL9jSFqd-lSGgQA,3552256
+polystar/__init__.py,sha256=UcVtlZQvPqMcXqWNH7QvTONj36rMkUsDry3H0_P824w,1711
+polystar-0.2.0.dist-info/COPYING,sha256=Sqk6nYDwo19ZDNLKIZFN_nQKApstcNtIMDwTehofesU,34557
+polystar-0.2.0.dist-info/DELVEWHEEL,sha256=E5UWUc_nwQp21JJK9suuQRo0XuHGJHdEkb2PlWB53-Q,406
+polystar-0.2.0.dist-info/METADATA,sha256=50nl2aamTeYPJl5H7PL3Ayo1YDiWrOoYzZfwWli_8Gc,1730
+polystar-0.2.0.dist-info/RECORD,,
+polystar-0.2.0.dist-info/top_level.txt,sha256=V5C-CQG7p6nSqONHxWkhEjYmN-aFJoHDs2DyjbvrMYw,9
+polystar-0.2.0.dist-info/WHEEL,sha256=i_JcFDy58QgFZFsP7wt-cRI9Av1_Ys9uL_GQXWyaVhs,101
+polystar.libs/msvcp140-44a2d2c46533f686eddd8448f2fc29be.dll,sha256=hUSON2360YWXQK7aolRLVl6Kbk4uVV3mxGOPSrGyiEM,621960
