@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+
+[project]
+name = "aimmocore-db"
+version = "0.1.2"
+description = "Database setup for Aimmocore"
+authors = [{ name = "Aimmo", email = "aimmoml@aimmo.co.kr" }]
+requires-python = ">=3.8"
+dependencies = []
