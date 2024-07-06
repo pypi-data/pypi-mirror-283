@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "ssl-daily-check"
+version = "0.1.1"
+description = "Daily SSL certificate monitoring and checking tool"
+authors = ["rtmax0 <rtmax0@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/rtmax0/ssl-daily-check"
+repository = "https://github.com/rtmax0/ssl-daily-check"
+keywords = ["ssl", "certificate", "daily", "monitoring", "security"]
+packages = [
+    { include = "ssl_checker" },
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.26.0"
+click = "^8.0.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.2.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+ssl-daily-check = "ssl_checker.main:main"
