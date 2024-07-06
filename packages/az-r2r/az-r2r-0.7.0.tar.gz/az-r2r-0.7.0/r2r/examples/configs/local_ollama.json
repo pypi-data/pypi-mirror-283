@@ -1,0 +1,22 @@
+{
+  "embedding": {
+    "provider": "ollama",
+    "base_model": "mxbai-embed-large",
+    "base_dimension": 1024,
+    "batch_size": 32
+  },
+  "ingestion":{
+    "excluded_parsers": [
+      "gif",
+      "jpeg",
+      "jpg",
+      "png",
+      "svg",
+      "mp3",
+      "mp4"
+    ]
+  },
+  "vector_database": {
+    "provider": "pgvector"
+  }
+}
