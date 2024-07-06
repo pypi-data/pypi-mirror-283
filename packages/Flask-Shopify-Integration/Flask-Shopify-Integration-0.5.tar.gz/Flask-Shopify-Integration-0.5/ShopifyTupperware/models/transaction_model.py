@@ -1,0 +1,22 @@
+from marshmallow import Schema, fields
+
+class TransactionSchema(Schema):
+     id = fields.Integer()
+     order_id = fields.Integer()
+     kind = fields.String()
+     gateway = fields.String()
+     status = fields.String()
+     message = fields.String()
+     created_at = fields.String()
+     test = fields.Boolean()
+     authorization = fields.String()
+     location_id = fields.Integer()
+     user_id = fields.Integer()
+     parent_id = fields.Integer()
+     processed_at = fields.String()
+     device_id = fields.String()
+     error_code = fields.String()
+     source_name = fields.String()
+     amount = fields.Float()
+     currency = fields.String()
+     payment_id = fields.String()
