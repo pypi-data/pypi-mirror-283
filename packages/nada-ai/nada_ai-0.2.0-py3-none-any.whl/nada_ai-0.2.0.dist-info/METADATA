@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: nada-ai
+Version: 0.2.0
+Summary: Nada-AI is a Python library designed for AI/ML on top of Nada DSL and Nillion Network.
+Author: Mathias Leys
+Author-email: mathias.leys@nillion.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: nada-dsl (>=0.3,<0.4)
+Requires-Dist: nada-numpy (>=0.2,<0.3)
+Requires-Dist: nillion-python-helpers (>=0.2.3,<0.3.0)
+Requires-Dist: numpy (>=1.26.4,<2.0.0)
+Requires-Dist: prophet (>=1.1.5,<2.0.0)
+Requires-Dist: py-nillion-client (>=0.3,<0.4)
+Requires-Dist: scikit-learn (>=1.4.2,<2.0.0)
+Requires-Dist: torch (>=2.0.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Nada AI
+
+![GitHub License](https://img.shields.io/github/license/NillionNetwork/nada-ai?style=for-the-badge&logo=apache&logoColor=white&color=%23D22128&link=https%3A%2F%2Fgithub.com%2FNillionNetwork%2Fnada-ai%2Fblob%2Fmain%2FLICENSE&link=https%3A%2F%2Fgithub.com%2FNillionNetwork%2Fnada-ai%2Fblob%2Fmain%2FLICENSE)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/NillionNetwork/nada-ai/test.yml?style=for-the-badge&logo=python&logoColor=white&link=https://github.com/NillionNetwork/nada-ai/actions/workflows/test.yml&link=https://github.com/NillionNetwork/nada-ai/actions/workflows/test.yml)
+![GitHub Release](https://img.shields.io/github/v/release/NillionNetwork/nada-ai?sort=date&display_name=release&style=for-the-badge&logo=dependabot&label=LATEST%20RELEASE&color=0000FE&link=https%3A%2F%2Fpypi.org%2Fproject%2Fnada-ai&link=https%3A%2F%2Fpypi.org%2Fproject%2Fnada-ai)
+
+Nada AI is a Python library designed for performing ML/AI on top of Nada DSL and the Nillion Network.
+
+It provides an intuitive ML interface and frictionless integration with existing ML frameworks such as PyTorch and Sci-kit learn.
+
+## Features
+
+- **Exporting model state**: Integrates with models from existing ML frameworks and provides an easy way to export them to the Nillion network - to be used in Nada programs.
+- **AI Modules**: A PyTorch-esque interface to create arbitrary ML models in Nada by stacking pre-built common ML components - with the possibility of easily creating custom components.
+- **Importing model state**: Easily import an exported model state that lives in the Nillion network to be used in a Nada program.
+
+## Installation
+### Using pip
+
+```bash
+pip install nada-ai
+```
+
+### From Sources
+You can install the nada-ai library using Poetry:
+
+```bash
+git clone https://github.com/NillionNetwork/nada-ai.git
+pip3 install poetry
+poetry install nada-ai
+```
+
+## License
+
+This project is licensed under the Apache2 License. See the LICENSE file for details.
+
