@@ -1,0 +1,19 @@
+PyYAML
+simplejson
+jinja2
+
+[:python_version >= "3.10"]
+tomli
+
+[build]
+build
+twine
+
+[dev]
+sphinx
+myst-parser
+sphinx-rtd-theme
+
+[test]
+pytest
+coverage
