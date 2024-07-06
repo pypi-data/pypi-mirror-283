@@ -1,0 +1,11 @@
+README.md
+setup.py
+cookiesgetr/__init__.py
+cookiesgetr/main.py
+cookiesgetr.egg-info/PKG-INFO
+cookiesgetr.egg-info/SOURCES.txt
+cookiesgetr.egg-info/dependency_links.txt
+cookiesgetr.egg-info/requires.txt
+cookiesgetr.egg-info/top_level.txt
+fmfocus/__init__.py
+fmfocus/main.py
