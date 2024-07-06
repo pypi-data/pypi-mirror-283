@@ -1,0 +1,9 @@
+LICENSE
+setup.cfg
+setup.py
+lega4e_library/__init__.py
+lega4e_library.egg-info/PKG-INFO
+lega4e_library.egg-info/SOURCES.txt
+lega4e_library.egg-info/dependency_links.txt
+lega4e_library.egg-info/not-zip-safe
+lega4e_library.egg-info/top_level.txt
