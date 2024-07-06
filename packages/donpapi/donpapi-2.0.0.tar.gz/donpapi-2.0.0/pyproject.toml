@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "donpapi"
+version = "2.0.0"
+description = "Dumping revelant information on compromised targets without AV detection"
+authors = ["Login Securite <contact@login-securite.com>"]
+readme = "README.md"
+homepage = "https://github.com/login-securite/DonPAPI"
+repository = "https://github.com/login-securite/DonPAPI"
+license = "'GNU (GPLv3)"
+exclude = []
+include = ["donpapi/res/*"]
+classifiers = [
+    'Environment :: Console',
+    'Programming Language :: Python :: 3',
+    'Topic :: Security',
+]
+packages = [
+    { include = "donpapi"},
+    { include = "donpapi/lib"},
+    { include = "donpapi/collectors"},
+]
+
+[tool.poetry.scripts]
+DonPAPI = 'donpapi.entry:main'
+donpapi = 'donpapi.entry:main'
+dpp = 'donpapi.entry:main'
+
+[tool.poetry.dependencies]
+python = "^3.9"
+impacket = "^0.11.0"
+dploot = "^2.7.1"
+rich = "^13.7.0"
+sqlalchemy = "^2.0.25"
+termcolor = "^2.4.0"
+exrex = "^0.11.0"
+jinja2 = "^3.1.4"
+flask = "^3.0.3"
+marshmallow-sqlalchemy = "^1.0.0"
+flask-rich = "^0.4.1"
+flask-basicauth = "^0.2.0"
+flask-cors = "^4.0.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
