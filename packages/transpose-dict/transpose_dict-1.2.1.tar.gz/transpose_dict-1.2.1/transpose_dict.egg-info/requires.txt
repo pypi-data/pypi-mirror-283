@@ -1,0 +1,5 @@
+support_developer>=1.0.2
+
+[test]
+pytest
+pytest-cov
