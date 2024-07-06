@@ -1,0 +1,10 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/msoffice2pdf/__init__.py
+src/msoffice2pdf_UTF_8.egg-info/PKG-INFO
+src/msoffice2pdf_UTF_8.egg-info/SOURCES.txt
+src/msoffice2pdf_UTF_8.egg-info/dependency_links.txt
+src/msoffice2pdf_UTF_8.egg-info/top_level.txt
