@@ -1,0 +1,5 @@
+
+[project]
+name = "b2b-customer-service-client"
+version = "0.0.1rc0"
+description = "This is a dummy package"
