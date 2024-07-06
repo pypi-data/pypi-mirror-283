@@ -1,0 +1,12 @@
+_version.py,sha256=N-EZJirtquBT0fDSbKmN_Z7Kipw_diQZCHuKAdgNbQI,427
+pypolyline/__init__.py,sha256=OtY7MobSWx3WmEmi0Okz9EdUZgl2XHwDbhUiDPb4mVw,250
+pypolyline/cutil.cp310-win_amd64.pyd,sha256=KlmdP19wFvUVxPnA43feSX6hJYFWcZEwLB1dQx44L6I,155648
+pypolyline/cutil.pyx,sha256=6yoNL-CTLJTxWeP-o6Sfi8lAg24wBgOlilxubufeiIQ,2160
+pypolyline/polylineffi.dll,sha256=SMQXZR5mn0xIEn2_PAgVSTXRUNGhk6MOqwzFzfBYgi8,142848
+pypolyline/pypolyline_p.pxd,sha256=JmkYC8mMnPajV-1WjGoc3aDsXUJEf5ZklFKkeuNBzWg,413
+pypolyline/stdbool.h,sha256=37Fu0p4oPCuhzzOn2uW8R5yA67yHcIdYPBPKgv36UtA,74
+pypolyline-0.5.3.dist-info/LICENSE.md,sha256=ryg-Ne6A-Md8ssMdGnvz7WfAgHkHlpaqsRIL6Innuss,1585
+pypolyline-0.5.3.dist-info/METADATA,sha256=lX52GnrPgBELWt-8ne3had82WuM7tEzauXYlGi1nuZg,5964
+pypolyline-0.5.3.dist-info/WHEEL,sha256=UZYoTfvcH9CL8oQkujTAI06MiAXK9kd09pSK3OpCC7k,101
+pypolyline-0.5.3.dist-info/top_level.txt,sha256=It5uR9SIwc6YrU0-tz7fK78T3qPZ2-NMUex3EbCTgYY,20
+pypolyline-0.5.3.dist-info/RECORD,,
