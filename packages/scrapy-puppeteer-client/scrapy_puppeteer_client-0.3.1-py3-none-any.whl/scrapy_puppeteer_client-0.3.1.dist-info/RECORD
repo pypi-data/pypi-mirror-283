@@ -1,0 +1,10 @@
+scrapypuppeteer/__init__.py,sha256=gItIabIErY4Zk6FjocRamBQwuQ4vaoVJHIYBzyy1wS8,233
+scrapypuppeteer/actions.py,sha256=uZ5024odXodLDhuzbNd3bXM4Oq7p_WU65-M-DB7BfqI,9663
+scrapypuppeteer/middleware.py,sha256=Os5ayVdKB5NJf5Ny-y5YWQEiT3k6xoBDM7UE0CTZfOA,17926
+scrapypuppeteer/request.py,sha256=mg71yMuwqalry40k0yFaMpaCqIbf6uDmhgfELwa8gSU,4449
+scrapypuppeteer/response.py,sha256=bcJ3UNjkFhYK1020aePVoh40GWkKQmVe2gsAVfvsoH4,6315
+scrapy_puppeteer_client-0.3.1.dist-info/LICENSE,sha256=MWwU-Nmp1FK-KLaBveLYDSYwbdnSdlGLIL5uKNbgkQM,1569
+scrapy_puppeteer_client-0.3.1.dist-info/METADATA,sha256=EEHBVtdkXuJ43Q5T-_z4PzghDxuFuGBriU4Eny3fmDM,7412
+scrapy_puppeteer_client-0.3.1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+scrapy_puppeteer_client-0.3.1.dist-info/top_level.txt,sha256=-Dvt_IjWA2CUOcu07JVUvEtWXJheZ7X0eUfiy8fQqGU,16
+scrapy_puppeteer_client-0.3.1.dist-info/RECORD,,
