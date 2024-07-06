@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: asciicut
+Version: 0.1.1
+Summary: 
+Author: Evan Voyles
+Author-email: evan.voyles@intrafentech.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: orjson (>=3.10.6,<4.0.0)
+Requires-Dist: pydantic (>=2.8.2,<3.0.0)
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Requires-Dist: typer (>=0.12.3,<0.13.0)
+Description-Content-Type: text/markdown
+
+# Asciicut
+
+Simple CLI for trimming [asciinema](https://asciinema.org/) [`.cast`](https://docs.asciinema.org/manual/asciicast/v2/) files.
+
+## Installation
+
+Prefer to install using `pipx`:
+
+```
+pipx install asciicut
+```
+
