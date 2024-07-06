@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "jailbreak"
+version = "0.1.0"
+description = "Nothing is true, everything is permitted. Break free, lil model."
+authors = ["nlile <7707104+nlile@users.noreply.github.com>"]
+repository = "https://github.com/nlile/jailbreak"
+license = "Apache-2.0"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+pre-commit = "^3.7.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = ["tests"]
+
+[tool.poetry.extras]
+# gotta go fast! 🏎️💨

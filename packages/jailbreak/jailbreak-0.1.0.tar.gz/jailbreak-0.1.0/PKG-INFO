@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: jailbreak
+Version: 0.1.0
+Summary: Nothing is true, everything is permitted. Break free, lil model.
+Home-page: https://github.com/nlile/jailbreak
+License: Apache-2.0
+Author: nlile
+Author-email: 7707104+nlile@users.noreply.github.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Project-URL: Repository, https://github.com/nlile/jailbreak
+Description-Content-Type: text/markdown
+
+# jailbreak
+
+_Nothing is true, everything is permitted._
+
