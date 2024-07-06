@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "gogaku_dl"
+version = "0.1.1"
+description = ""
+authors = ["Takushi Usami <takushi1969@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/takushi1969/gogaku_dl"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+beautifulsoup4 = "^4.12"
+requests = "^2.32"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
