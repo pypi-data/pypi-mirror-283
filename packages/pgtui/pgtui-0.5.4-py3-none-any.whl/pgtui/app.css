@@ -1,0 +1,12 @@
+ListView > ListItem {
+    background: transparent;
+}
+
+ListView:focus > ListItem.--highlight {
+    background: $primary;
+}
+
+/* Utility classes  */
+
+.show { display: block; }
+.hide { display: none; }
