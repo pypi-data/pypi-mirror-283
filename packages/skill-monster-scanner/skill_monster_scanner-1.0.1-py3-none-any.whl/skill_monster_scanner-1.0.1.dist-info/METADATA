@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: skill-monster-scanner
+Version: 1.0.1
+Home-page: https://github.com/mikejgray/skill-monster-scanner
+Author: Mike Gray
+Author-email: mike@graywind.org
+License: Apache-2.0
+Keywords: ovos skill voice assistant
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ovos-utils
+Requires-Dist: ovos-bus-client
+Requires-Dist: ovos-workshop
+Requires-Dist: ovos-plugin-manager
+Provides-Extra: test
+Requires-Dist: neon-minerva ~=0.2.0 ; extra == 'test'
+Requires-Dist: ovos-plugin-manager ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: setuptools ; extra == 'test'
+Requires-Dist: ovos-config ; extra == 'test'
+
+# Monster Scanner Skill
+
+## About
+
+A skill to help your children feel safe at night by scanning for monsters under the bed.
+
+## Configuration
+
+If you feel like being a monster yourself, you can set `scary` in the config to `true` and the skill will sometimes find a monster.
+
+Under skill settings (`~/.config/mycroft/skills/skill-monster-scanner.mikejgray/settings.json`):
+
+| Option  | Value   | Description                                                  |
+| ------- | ------- | ------------------------------------------------------------ |
+| `scary` | `false` | Whether or not to occasionally find a monster under the bed. |
+
+Note: If you are running Neon, the skill settings file will be located at `~/.config/neon/skills/skill-monster-scanner.mikejgray/settings.json`.
+
+## Examples
+
+- "Are there monsters under my bed?"
+- "Is the Boogeyman under the bed?"
+
+## Credits
+
+- Mike Gray (@mikejgray)
+
+## Category
+
+Fun
+
+## Tags
+
+ovos skill neon skill monster scanner kids children fun silly
