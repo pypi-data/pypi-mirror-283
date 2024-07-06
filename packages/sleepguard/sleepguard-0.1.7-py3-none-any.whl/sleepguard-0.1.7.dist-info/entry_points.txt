@@ -1,0 +1,2 @@
+[console_scripts]
+sleepguard = sleepguard.guard:main

@@ -1,0 +1,16 @@
+sleepguard/__init__.py,sha256=1QlJ_RA4xb2Ld_VzRi66OHpQPUfSS6RLjIGA8k-Sib0,885
+sleepguard/guard.py,sha256=Pn59xTuocH0cnpkGHBXnHG3wMNIkhL-tG0QK56E5Tr0,14242
+sleepguard/monitors/__init__.py,sha256=qjSMeTpOSf9GAWQcquSfiHbDRJIPuOEHCcnY1OZ_Z4w,4297
+sleepguard/monitors/base.py,sha256=opxepMsZjsLdNHCONvuou6gei989GfKLrtJmuCDDQ3k,3841
+sleepguard/monitors/cpu.py,sha256=09ugA2emsYy-ZKcrKwQGWv5zPyyrbrRtQfu5hru6mXM,2108
+sleepguard/monitors/factory.py,sha256=HVz_pN5VYr63B0YXBqBdd2syYqGs5i3U9m7BEdBnv1w,1929
+sleepguard/monitors/gpu.py,sha256=XTcecm3jIqweM_G3QV7BAjx9y51IF5VDFC440vXDhz0,2563
+sleepguard/monitors/net.py,sha256=DUsuf4-y4uN9xZzKjUmdCvujstNxzd3WI7oag9ODr_g,1761
+sleepguard/resources/__init__.py,sha256=CSSiY5YHV1vUr-UwQyxVBna322tlGzcSyhx69Fgi_cQ,57
+sleepguard/resources/default_configuration.yaml,sha256=CxWJfSaQzCx4ICJ8S9Yc96OiODuN9YmA48dgX3DkqNM,1858
+sleepguard-0.1.7.dist-info/LICENSE,sha256=PoeLo5bRBP8nlNu9QGjh5gAOJlyyetFZ19Gu1OlRqYA,1069
+sleepguard-0.1.7.dist-info/METADATA,sha256=ex13XpW1vbL7ypTqpwcCUBIjFAEJ2DPNsux8PGh3jmE,4375
+sleepguard-0.1.7.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+sleepguard-0.1.7.dist-info/entry_points.txt,sha256=e0K_KH-Q-I_UZOy_jWQpECRaLEttp9QL3IVQ8lxEMPo,53
+sleepguard-0.1.7.dist-info/top_level.txt,sha256=SNizyoktF3ZileMLU1XhvYlRfmIkCip_UI5ZiJBj3Hg,11
+sleepguard-0.1.7.dist-info/RECORD,,
