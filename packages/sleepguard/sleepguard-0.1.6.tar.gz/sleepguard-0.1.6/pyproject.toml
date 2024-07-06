@@ -1,0 +1,56 @@
+[build-system]
+requires = [
+    "setuptools>=68.0",
+    "setuptools-scm>=8.0",
+    "appdirs>=1.4.4"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = true
+
+[project]
+name="sleepguard"
+version="0.1.6"
+description="Monitor system stats and prevent system sleep when significant activity is detected."
+authors = [
+    {name = "Reid Swanson", email = "reid@reidswanson.com" }
+]
+readme = "README.rst"
+license = {file = "LICENSE"}
+requires-python = ">=3.12"
+dependencies = [
+    "platformdirs",
+    "psutil",
+    "simple-parsing[yaml]",
+    "wakepy>=0.9.1",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha"
+]
+keywords = ["sleep", "suspend", "power-management", "keep-awake", "prevent-sleep"]
+
+[project.optional-dependencies]
+amd = ["pyadl"]
+bump_my_version = ["bump-my-version"]
+documentation = ["six", "sphinx", "sphinx_rtd_theme", "livereload"]
+nvidia = ["gputil"]
+testing = ["pytest"]
+all = ["sleepguard[amd,bump-my-version,documentation,nvidia,testing]"]
+
+[project.urls]
+"Homepage" = "https://bitbucket.org/reidswanson/sleepguard"
+
+[project.scripts]
+sleepguard = "sleepguard.guard:main"
+
+[tool.pytest.ini_options]
+log_cli = "True"
+log_cli_level = "0"
+log_cli_format = "%(asctime)-15s [%(name)s]:%(lineno)4d %(levelname)s %(message)s"
+log_cli_date_format = "%Y-%m-%dT%H:%M:%S"

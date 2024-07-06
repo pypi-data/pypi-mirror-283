@@ -1,0 +1,98 @@
+Metadata-Version: 2.1
+Name: sleepguard
+Version: 0.1.6
+Summary: Monitor system stats and prevent system sleep when significant activity is detected.
+Author-email: Reid Swanson <reid@reidswanson.com>
+License: MIT License
+        
+        Copyright (c) 2024 Reid Swanson
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://bitbucket.org/reidswanson/sleepguard
+Keywords: sleep,suspend,power-management,keep-awake,prevent-sleep
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.12
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: platformdirs
+Requires-Dist: psutil
+Requires-Dist: simple-parsing[yaml]
+Requires-Dist: wakepy>=0.9.1
+Provides-Extra: amd
+Requires-Dist: pyadl; extra == "amd"
+Provides-Extra: bump-my-version
+Requires-Dist: bump-my-version; extra == "bump-my-version"
+Provides-Extra: documentation
+Requires-Dist: six; extra == "documentation"
+Requires-Dist: sphinx; extra == "documentation"
+Requires-Dist: sphinx_rtd_theme; extra == "documentation"
+Requires-Dist: livereload; extra == "documentation"
+Provides-Extra: nvidia
+Requires-Dist: gputil; extra == "nvidia"
+Provides-Extra: testing
+Requires-Dist: pytest; extra == "testing"
+Provides-Extra: all
+Requires-Dist: sleepguard[amd,bump-my-version,documentation,nvidia,testing]; extra == "all"
+
+Sleep Guard
+===========
+
+Other tools such as `Caffeine <https://launchpad.net/caffeine>`__ for Linux and `Caffeinate <https://ss64.com/mac/caffeinate.html>`__ for the Mac will keep your system awake, but require explicit action by the user.
+If you are like me, I often start a long running process, but forget to actually take the explicit action and come back to a sleeping system with no work done.
+
+``sleepguard`` is a program that monitors several system resources and prevents the computer from sleeping automatically if it detects significant activity (as defined by the user).
+
+
+Installation
+============
+
+.. code-block::
+
+    pip install sleepguard
+
+To enable GPU monitoring you must install one (or both) of the optional variants: ``amd`` for AMD or ``nvidia`` for NVIDIA cards.
+
+.. code-block::
+
+    pip install sleepguard[amd,nvidia]
+
+Basic Usage
+===========
+
+The main application is implemented in the ``sleepguard.guard`` module and can be run like any other python application.
+This will start an infinite loop that periodically polls the desired system resources and will prevent the system from sleeping [1]_ if any of the values are above their configured thresholds.
+
+.. code-block::
+
+    python -m sleepguard.gaurd
+
+Full Documentation
+==================
+
+See `read the docs <https://sleepguard.readthedocs.io/en/latest/>`__ for the full documentation and configuration options.
+
+
+.. [1] For at least KDE and Gnome, the idle timer is reset when activity is detected.
+       If not other activity is detected, this will cause sleep to be disabled for the number of minutes configured in DE's power management settings.
+       It is also the likely behavior for other desktop environments, but is untested.
