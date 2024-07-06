@@ -1,0 +1,5 @@
+pyproject.toml
+banner_service.egg-info/PKG-INFO
+banner_service.egg-info/SOURCES.txt
+banner_service.egg-info/dependency_links.txt
+banner_service.egg-info/top_level.txt
