@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+bing_image_downloader/__init__.py
+bing_image_downloader/bing.py
+bing_image_downloader/downloader.py
+bing_image_downloader_ext.egg-info/PKG-INFO
+bing_image_downloader_ext.egg-info/SOURCES.txt
+bing_image_downloader_ext.egg-info/dependency_links.txt
+bing_image_downloader_ext.egg-info/requires.txt
+bing_image_downloader_ext.egg-info/top_level.txt
