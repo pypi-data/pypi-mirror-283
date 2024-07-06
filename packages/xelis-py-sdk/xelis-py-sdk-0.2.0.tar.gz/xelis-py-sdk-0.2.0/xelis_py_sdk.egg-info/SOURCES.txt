@@ -1,0 +1,13 @@
+README.md
+setup.py
+tests/__init__.py
+tests/test_daemon_rpc.py
+tests/test_daemon_ws.py
+tests/test_wallet_rpc.py
+tests/test_wallet_ws.py
+tests/test_xswd.py
+xelis_py_sdk.egg-info/PKG-INFO
+xelis_py_sdk.egg-info/SOURCES.txt
+xelis_py_sdk.egg-info/dependency_links.txt
+xelis_py_sdk.egg-info/requires.txt
+xelis_py_sdk.egg-info/top_level.txt
