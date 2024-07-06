@@ -1,0 +1,2 @@
+[console_scripts]
+ohl = ohl.main:main
