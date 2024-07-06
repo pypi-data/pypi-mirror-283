@@ -1,0 +1,2 @@
+[console_scripts]
+telegram-logger-client = telegram_logger_client.__main__:main
