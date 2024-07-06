@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+src/hydropattern.egg-info/PKG-INFO
+src/hydropattern.egg-info/SOURCES.txt
+src/hydropattern.egg-info/dependency_links.txt
+src/hydropattern.egg-info/requires.txt
+src/hydropattern.egg-info/top_level.txt
