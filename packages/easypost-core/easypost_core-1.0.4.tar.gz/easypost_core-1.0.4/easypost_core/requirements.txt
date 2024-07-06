@@ -1,0 +1,2 @@
+pyodbc~=5.1.0
+slack_sdk~=3.30.0
