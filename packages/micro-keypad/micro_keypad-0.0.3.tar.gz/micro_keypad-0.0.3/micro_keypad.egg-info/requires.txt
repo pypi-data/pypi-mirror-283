@@ -1,0 +1,4 @@
+
+[dev]
+pytest
+twine>=5.1.1
