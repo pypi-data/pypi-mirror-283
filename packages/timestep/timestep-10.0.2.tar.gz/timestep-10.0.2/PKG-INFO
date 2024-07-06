@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: timestep
+Version: 10.0.2
+Summary: 
+License: MIT
+Author: Michael James Schock
+Author-email: m@mjschock.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: controlflow (>=0.8.1,<0.9.0)
+Requires-Dist: dora-rs (>=0.3.5,<0.4.0)
+Requires-Dist: llama-cpp-python (>=0.2.81,<0.3.0)
+Requires-Dist: ray[serve] (>=2.31.0,<3.0.0)
+Requires-Dist: sse-starlette (>=2.1.2,<3.0.0)
+Requires-Dist: starlette-context (>=0.3.6,<0.4.0)
+Description-Content-Type: text/markdown
+
+
