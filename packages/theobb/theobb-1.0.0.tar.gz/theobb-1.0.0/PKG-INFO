@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: theobb
+Version: 1.0.0
+Summary: The obb and nothing else.
+Author: Theodore
+Author-email: aptekarev@gmail.com
+Requires-Python: >=3.9,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: openbb-core (>=1.2.9,<2.0.0)
+Description-Content-Type: text/markdown
+
+# The OBB
+
+This python package is a wrapper around the openbb-core that exposes the obb interface and nothing else.
+
+## Installation
+
+```bash
+pip install https://github.com/piiq/theobb.git
+```
+
