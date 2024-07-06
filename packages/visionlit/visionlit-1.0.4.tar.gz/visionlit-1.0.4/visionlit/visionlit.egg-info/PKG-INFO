@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: visionlit
+Version: 1.0.3
+Summary: A Python library implementing Visionlit computer vision methods with model access.
+Home-page: https://github.com/jessicaNono/visionlitpy
+Author: Jessica Nono
+Author-email: jessicanono@filparty.com
+Project-URL: Documentation, https://github.com/jessicaNono/visionlitpy/docs
+Project-URL: Source, https://github.com/jessicaNono/visionlitpy
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy

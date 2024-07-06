@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+examples/segment_image.py
+tests/__init__.py
+tests/test_segment_image.py
+tests/__pycache__/test_segment_image.cpython-38.pyc
+visionlit/__init__.py
+visionlit/main.py
+visionlit/__pycache__/__init__.cpython-38.pyc
+visionlit/visionlit.egg-info/PKG-INFO
+visionlit/visionlit.egg-info/SOURCES.txt
+visionlit/visionlit.egg-info/dependency_links.txt
+visionlit/visionlit.egg-info/requires.txt
+visionlit/visionlit.egg-info/top_level.txt
