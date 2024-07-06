@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+validproxy/__init__.py
+validproxy/proxy_checker.py
+validproxy.egg-info/PKG-INFO
+validproxy.egg-info/SOURCES.txt
+validproxy.egg-info/dependency_links.txt
+validproxy.egg-info/requires.txt
+validproxy.egg-info/top_level.txt
