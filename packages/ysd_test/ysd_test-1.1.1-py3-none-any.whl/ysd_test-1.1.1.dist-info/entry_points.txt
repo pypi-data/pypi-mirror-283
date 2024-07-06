@@ -1,0 +1,3 @@
+[console_scripts]
+ysd-test=ysd_test.main:app
+
