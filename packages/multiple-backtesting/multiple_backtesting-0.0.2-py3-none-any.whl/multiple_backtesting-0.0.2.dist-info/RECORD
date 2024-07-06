@@ -1,0 +1,15 @@
+multiple_backtesting/__init__.py,sha256=LxAfa_RMPjYvMCzNGasbr3VluJSBF9tMXPMLcYvg3os,2234
+multiple_backtesting/_plotting.py,sha256=cwgXiJuPyN3D2rr7vA09oWjY15PxSY2l-FOWHDAhnDs,30075
+multiple_backtesting/_stats.py,sha256=u8cTHTj8Y41P_l33wM-qx-whKHXEWqPVDnkuXi4TDkg,7792
+multiple_backtesting/_util.py,sha256=cCvFWT-dh--sZfdxbhxrth5hj_huNcEUUPlanqukxTo,6081
+multiple_backtesting/_version.py,sha256=mqSjD24eiIgySwIrGTC0Yd1AQZbpmQabqJGkSxLcncw,460
+multiple_backtesting/backtesting.py,sha256=OYa5xHOyACAmd3BftHkOMk5TjJwU5eKgMrgLvNxOtnY,84721
+multiple_backtesting/lib.py,sha256=DPjGI9VZmhi2IcEvsi2-uruMIMYpKuT9GAiVrMpXBeo,18931
+multiple_backtesting/test/__init__.py,sha256=k3oXQtWtXD9gR-w1LLdt7nE3xP7RpeIjq2miTo9vssY,694
+multiple_backtesting/test/__main__.py,sha256=tht4zr7gVfXfVDD_IXk8STzHuxxlb2jkHPIDyeBExJo,294
+multiple_backtesting/test/_test.py,sha256=YHDANA64pDi4dUzHd8_UQCuYVhZZa_tPnEY4vTStfQE,36945
+multiple_backtesting-0.0.2.dist-info/LICENSE.md,sha256=9KZItC6urHYzghBXrxoPH25hCEkAafuuhmAHRbVECHk,34943
+multiple_backtesting-0.0.2.dist-info/METADATA,sha256=uEIt_VBBWAJRXapTADfvuPRVNOwxL7_7-gWd_mcAKU4,6509
+multiple_backtesting-0.0.2.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+multiple_backtesting-0.0.2.dist-info/top_level.txt,sha256=P_7bolMcNUmVZv4y9L4Q-p2B0IYju0SzZpWHPFxvhis,21
+multiple_backtesting-0.0.2.dist-info/RECORD,,
