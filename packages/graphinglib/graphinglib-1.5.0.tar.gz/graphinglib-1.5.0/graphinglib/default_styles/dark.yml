@@ -1,0 +1,209 @@
+Contour:
+  _alpha: 1.0
+  _color_map: RdBu
+  _filled: true
+  _number_of_levels: 10
+  _show_color_bar: true
+Curve:
+  _cap_thickness: same as curve
+  _cap_width: 3
+  _color: null
+  _errorbars_color: same as curve
+  _errorbars_line_width: same as curve
+  _error_curves_color: same as curve
+  _error_curves_fill_between: true
+  _error_curves_line_style: --
+  _error_curves_line_width: 1
+  _fill_between_color: same as curve
+  _line_style: '-'
+  _line_width: 2
+Figure:
+  _log_scale_x: false
+  _log_scale_y: false
+  _size:
+  - 6.4
+  - 4.8
+FitFromExponential:
+  _color: white
+  _line_style: '-'
+  _line_width: 2
+  _res_color: white
+  _res_line_style: --
+  _res_line_width: 1
+FitFromFunction:
+  _color: white
+  _line_style: '-'
+  _line_width: 2
+  _res_color: white
+  _res_line_style: --
+  _res_line_width: 1
+FitFromGaussian:
+  _color: white
+  _line_style: '-'
+  _line_width: 2
+  _res_color: white
+  _res_line_style: --
+  _res_line_width: 1
+FitFromLog:
+  _color: white
+  _line_style: '-'
+  _line_width: 2
+  _res_color: white
+  _res_line_style: --
+  _res_line_width: 1
+FitFromPolynomial:
+  _color: white
+  _line_style: '-'
+  _line_width: 2
+  _res_color: white
+  _res_line_style: --
+  _res_line_width: 1
+FitFromSine:
+  _color: white
+  _line_style: '-'
+  _line_width: 2
+  _res_color: white
+  _res_line_style: --
+  _res_line_width: 1
+FitFromSquareRoot:
+  _color: white
+  _line_style: '-'
+  _line_width: 2
+  _res_color: white
+  _res_line_style: --
+  _res_line_width: 1
+FitFromFOTF:
+  _res_color: "k"
+  _res_line_width: 1
+  _res_line_style: "--"
+  _color: "k"
+  _line_width: 2
+  _line_style: "-"
+Heatmap:
+  _aspect_ratio: equal
+  _color_map: RdBu
+  _origin_position: upper
+  _show_color_bar: True
+Histogram:
+  _alpha: 0.3
+  _edge_color: '#3e82a0'
+  _face_color: '#3e82a0'
+  _hist_type: stepfilled
+  _line_width: 2
+  _normalize: true
+  _pdf_curve_color: white
+  _pdf_mean_color: r
+  _pdf_show_mean: true
+  _pdf_show_std: true
+  _pdf_std_color: white
+  _show_params: true
+Hlines:
+  _colors: white
+  _line_styles: '-'
+  _line_widths: 2
+MultiFigure:
+  _size:
+  - 6.4
+  - 4.8
+Point:
+  _color: white
+  _edge_color: null
+  _edge_width: 1.5
+  _marker_size: 30
+  _marker_style: o
+  _text_color: same as point
+Scatter:
+  _cap_thickness: 2
+  _cap_width: 3
+  _face_color: color cycle
+  _edge_color:
+  _color_map: RdBu
+  _show_color_bar: False
+  _errorbars_color: same as scatter
+  _errorbars_line_width: 2
+  _marker_size: 60
+  _marker_style: o
+Stream:
+  _arrow_size: 1
+  _color: null
+  _color_map: null
+  _line_width: 1
+Table:
+  _cell_colors: "black"
+  _col_colors: "darkgrey"
+  _row_colors: "darkgrey"
+  _edge_color: "white"
+  _edge_width: 1
+  _text_color: "white"
+  _cell_align: "right"
+  _row_align: "left"
+  _col_align: "center"
+Text:
+  _color: white
+  _h_align: center
+  _v_align: baseline
+VectorField:
+  _arrow_width: 1
+  _arrow_head_size: 1
+  _color: "white"
+Vlines:
+  _colors: white
+  _line_styles: solid
+  _line_widths: 2
+Circle:
+  _fill: True
+  _fill_alpha: 0.5
+  _fill_color:
+  _edge_color: "black"
+  _line_width: 2
+  _line_style: "-"
+Rectangle:
+  _fill: True
+  _fill_alpha: 0.5
+  _fill_color:
+  _edge_color: "black"
+  _line_width: 2
+  _line_style: "-"
+Polygon:
+  _fill: True
+  _fill_alpha: 0.5
+  _fill_color:
+  _edge_color: "black"
+  _line_width: 2
+  _line_style: "-"
+Arrow:
+  _color: "white"
+  _head_size: 1
+  _width: 2
+Line:
+  _color: "white"
+  _width: 2
+  _cap_width: 1
+rc_params:
+  axes.edgecolor: white
+  axes.facecolor: black
+  axes.grid: false
+  axes.labelcolor: white
+  axes.linewidth: 1
+  axes.prop_cycle: cycler('color', ['#3e82a0', '#edb73b', '#b9503b', '#8aba4e', '#695178',
+    '#ed893b', '#34a893', '#999999'])
+  figure.facecolor: black
+  savefig.dpi: 200
+  font.family: sans-serif
+  font.size: 12
+  font.weight: normal
+  grid.alpha: 0.5
+  grid.color: darkgrey
+  grid.linestyle: '-'
+  grid.linewidth: 0.5
+  legend.edgecolor: none
+  legend.facecolor: black
+  lines.dash_capstyle: round
+  lines.dash_joinstyle: round
+  lines.solid_capstyle: round
+  text.color: white
+  text.usetex: false
+  xtick.color: white
+  xtick.direction: in
+  ytick.color: white
+  ytick.direction: in
