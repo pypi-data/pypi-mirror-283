@@ -1,0 +1,3 @@
+[console_scripts]
+everything=everything.__main__:cli
+
