@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+strf_hint/__init__.py
+strf_hint/recognizer.py
+strf_hint/strf_codes.py
+strf_hint.egg-info/PKG-INFO
+strf_hint.egg-info/SOURCES.txt
+strf_hint.egg-info/dependency_links.txt
+strf_hint.egg-info/top_level.txt
