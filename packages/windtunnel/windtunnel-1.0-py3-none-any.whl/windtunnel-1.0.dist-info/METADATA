@@ -1,0 +1,261 @@
+Metadata-Version: 2.1
+Name: windtunnel
+Version: 1.0
+Summary: Créé le shift avec le staff et les timeslots donnés
+Home-page: https://github.com/tperrinweembi/tunn3l-shift
+Author: thomas
+Author-email: anathopee.gestion@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: beautifulsoup4 ==4.12.3
+Requires-Dist: browser-cookie3 ==0.19.1
+Requires-Dist: certifi ==2024.6.2
+Requires-Dist: charset-normalizer ==3.3.2
+Requires-Dist: idna ==3.7
+Requires-Dist: lz4 ==4.3.3
+Requires-Dist: markdown-it-py ==3.0.0
+Requires-Dist: mdurl ==0.1.2
+Requires-Dist: numpy ==2.0.0
+Requires-Dist: pandas ==2.2.2
+Requires-Dist: pycryptodomex ==3.20.0
+Requires-Dist: Pygments ==2.18.0
+Requires-Dist: python-dateutil ==2.9.0.post0
+Requires-Dist: python-dotenv ==1.0.1
+Requires-Dist: pytz ==2024.1
+Requires-Dist: requests ==2.32.3
+Requires-Dist: rich ==13.7.1
+Requires-Dist: setuptools ==70.2.0
+Requires-Dist: six ==1.16.0
+Requires-Dist: soupsieve ==2.5
+Requires-Dist: tabulate ==0.9.0
+Requires-Dist: tzdata ==2024.1
+Requires-Dist: urllib3 ==2.2.2
+
+# WindTunnel
+
+Ce package permet de faire le shift de la journÃ©e
+
+## Table des matiÃ¨res
+
+- [Description](#description)
+  - [RÃ©sumÃ© du process mÃ©tier via tunn3l](#rÃ©sumÃ©-du-process-mÃ©tier-via-tunn3l)
+  - [RÃ©sumÃ© du process mÃ©tier via les csv](#rÃ©sumÃ©-du-process-mÃ©tier-via-les-csv)
+- [ExÃ©cution en main()](#exÃ©cution-en-main)
+  - [Prise en main rapide](#prise-en-main-rapide)
+  - [Configuration](#configuration)
+    - [Configuration avec les fichiers csv](#configuration-avec-les-fichiers-csv)
+      - [Fichier staff](#fichier-staff)
+      - [Fichier timeslots](#fichier-timeslots)
+    - [Configuration avec le backoffice tunn3l csv](#configuration-avec-le-backoffice-tunn3l)
+  - [ExÃ©cution en main()](#exÃ©cution-en-main)
+- [ExÃ©cution en package](#exÃ©cution-en-package)
+  - [Package utilisÃ© avec tunn3l](#package-utilisÃ©-avec-tunn3l)
+  - [Package utilisÃ© avec les csv](#package-utilisÃ©-avec-les-csv)
+- [RÃ¨gles mÃ©tier](#rÃ¨gles-mÃ©tier)
+- [Limitations](#limitations)
+
+## Description
+
+Ce package permet de faire le shift depuis deux sources de donnÃ©es au choix:
+- soit depuis des fichiers csv que vous devrez fournir pour indiquer le staff et les timeslots
+- soit en se connectant Ã  votre backoffice tunn3l avec vos donnÃ©es d'authentification
+
+Le package a 2 environnements possibles de lancement:
+- Soit il est exÃ©cutÃ© en soi en lanÃ§ant son __init__.py
+- Soit il est utilisÃ© comme package avec son bagage de fonctions pour rÃ©aliser toutes les Ã©tapes nÃ©cessaires Ã  la rÃ©alisation du shift
+
+### RÃ©sumÃ© du process mÃ©tier via tunn3l
+
+- On demande Ã  l'utilisateur les donnÃ©es d'authentification tunn3l
+- On rÃ©cupÃ¨re la liste des employÃ©s dans  tunn3l et on l'affiche au user
+- On demande au user qui parmi les employÃ©s on doit utiliser pour le staff
+- On rÃ©cupÃ¨re la liste des timeslots dans tunn3l
+- On fait le shift et on l'affiche Ã  l'utilisateur avec le compteur de staff
+
+### RÃ©sumÃ© du process mÃ©tier via les csv
+
+- On demande Ã  l'utilisateur les fichiers csv
+- On rÃ©cupÃ¨re la liste de staffs depuis son fichier csv
+- On rÃ©cupÃ¨re la liste de timeslots depuis son fichier csv
+- On fait le shift et on l'affiche Ã  l'utilisateur avec le compteur de staff
+
+## ExÃ©cution en main()
+
+### Prise en main rapide
+
+- Faire un fichier .env sur le modÃ¨le du .env.example,
+- y Ã©diter vos donnÃ©es tunn3l ou l'emplacement des fichiers csv
+- pour une utilisation via les fichiers csv, crÃ©er vos fichiers csv staffs et timeslots sur la mÃªme structure que les 2 fichiers en exemples
+- dans le dossier du package lancer le __init__.py et se laisser guider
+
+```sh
+cd windtunnel
+py __init__.py
+```
+
+
+### Configuration
+
+- Copier le fichier ".env.example" Ã  la racine du projet, le renommer ".env ".
+- Editer le .env selon votre choix de source de donnÃ©es, csv ou tunn3l
+
+#### Configuration avec les fichiers csv
+
+Si vous utilisez les fichiers csv, il faudra un fichier pour le staff et un autre fichier pour les timeslots.
+
+##### Fichier staff
+
+- sÃ©parateur ","
+- 1 ligne = 1 instructeur
+- Structure:
+  - name: nom de l'instructeur Ã  afficher sur le shift, conseillÃ© au format "PrÃ©nom N".
+  - working_ranges: liste des crÃ©neaux horaires de travail pour l'instructeur au format hh:mm-hh:mm sÃ©parÃ©s par des ";" si l'instructeur Ã  plusieurs crÃ©neaux de travail dans la journÃ©e. Tous les hh:mm ne peuvent Ãªtre ques des horaires en hh:00 ou hh:30
+- Example:
+```csv
+Pierre M,10:30-12:00;16:30-20:00
+```
+
+##### Fichier timeslots
+
+- sÃ©parateur ","
+- 1 ligne = 1 timeslot
+- Structure:
+  - time: heure du slot au format hh:mm, ne peut-Ãªtre que hh:00 ou hh:30
+  - type: soit "FT" (first timers), soit "PRO" (proflyers), soit "PROFT" (mixtes)
+  - has_handifly: True ou False, si le slot contient ou pas des handifly,
+  booked: temps bookÃ© en minutes
+- Exemple:
+```csv
+11:30,PROFT,False,12
+```
+
+Des examples complets de fichier sont dans "daily-staffs.example.csv" et "daily-timeslots.example.csv"
+
+#### Configuration avec le backoffice tunn3l
+
+Si vous voulez utiliser votre backoffice tunn3l en source de donnÃ©es, il faudra juste renseigner le .env avec vos donnÃ©es de conenxion:
+
+- DAY: date dont vous voulez faire le shift au format yyyy-m-d
+- DOMAIN: your domain in the tunn3l urls: https://back.[domain].com
+- TUNN3L_TOKEN: this token found in tunn3l's backoffice at "Desk\\Boking Agenda", then click on settings icon next to the "Daily planning" button
+- TUNN3L_COOKIE is found in your browser once logged to tunn3l's backoffice,
+copy the value of the cookie "Tunn3l"
+
+### ExÃ©cution en main()
+
+```sh
+# Aller dans le dossier du package
+cd windtunnel
+# lancer le __init__
+py __init__.py
+```
+
+## ExÃ©cution en package
+
+Le package windtunnel met Ã  disposition toutes les fonctions pour rÃ©aliser les Ã©tapes nÃ©cessaires Ã  la rÃ©alisation du shit.
+
+### Package utilisÃ© avec tunn3l
+
+Pour une exÃ©cution avec les donnÃ©es tunn3l, il faudra rÃ©aliser toutes les Ã©tapes suivantes:
+
+- demander Ã  l'utilisateur via une ui les donnÃ©es d'authentification et en faire un dicitonnaire du format suivant:
+```python
+auth_data = {
+  "day": "2024-07-06",
+  "domain": "fake domain",
+  "tunn3l_token": "fake token",
+  "tunn3l_cookie": "fake cookie",
+}
+```
+- les passer au contrÃ´leur du package en appelant
+```python
+set_tunn3l_auth(auth_data)
+```
+- rÃ©cupÃ©rer la liste des employÃ©s et la prÃ©senter avec une ui
+```python
+employees = wt.get_tunn3l_employees()
+```
+- demander Ã  l'utilisateur de saisir la liste des indexes des employÃ©s Ã  concidÃ©rer comme staff pour effectuer le shift, et passer la liste d'index au contrÃ´leur
+```python
+indexes = [0,2]
+set_staffs_from_tunn3l_employees(indexes)
+```
+- demander au contrÃ´leur de charger les timeslots depuis tunn3l
+```python
+set_timeslots_from_tunn3l()
+```
+- demander au contrÃ´leur de faire le shift, il retourne le shift et le compteur de staff, avec une ui on prÃ©sente le rÃ©sultat Ã  l'utilisateur
+```python
+# Makes shift
+staff_counter, shift = wt.get_shift_and_staff_counters()
+
+# Prints results
+staff_counter_pd = pandas.DataFrame(staff_counter)
+print(staff_counter_pd)
+
+shift_pd = pandas.DataFrame(shift)
+print(shift_pd)
+```
+
+Le fichier from_tunn3l_example.py prÃ©sente un exemple de dÃ©roulement complet du process
+
+### Package utilisÃ© avec les csv
+
+Pour une exÃ©cution avec les fichiers csv, il faudra rÃ©aliser toutes les Ã©tapes suivantes:
+
+- demander Ã  l'utilisateur via une ui le chemin des fichiers csv relatifs au fichier d'appel du package
+```python
+staffs_csv_path = input("fichier staffs:")
+slots_csv_path = input("fichier timeslots:")
+```
+- demander au contrÃ´leur  de charger les staffs depuis le fichier csv
+```python
+set_staffs_from_csv(staffs_csv_path)
+```
+- demander au contrÃ´leur  de charger les timeslots depuis le fichier csv
+```python
+set_timeslots_from_csv(slots_csv_path)
+```
+- demander au contrÃ´leur de faire le shift, il retourne le shift et le compteur de staff, avec une ui on prÃ©sente le rÃ©sultat Ã  l'utilisateur
+```python
+# Makes shift
+staff_counter, shift = wt.get_shift_and_staff_counters()
+
+# Prints results
+staff_counter_pd = pandas.DataFrame(staff_counter)
+print(staff_counter_pd)
+
+shift_pd = pandas.DataFrame(shift)
+print(shift_pd)
+```
+
+Le fichier from_csv_example.py prÃ©sente un exemple de dÃ©roulement complet du process
+
+
+## RÃ¨gles mÃ©tier
+
+- Un slot qui contient FT (FT ou PROFT) a besoin d'un briefer dans le slot prÃ©cÃ©dent, prioritÃ© au prÃ©cÃ©dent driver si disponible.
+- On attribue comme driver Ã  un slot qui contient FT le briefer du slot prÃ©cÃ©dent.
+- Quand un staff est sÃ©lectionnÃ© comme instructeur, il est marquÃ© "doit courrir" (should_run) pour le slot suivant sauf si la durÃ©e du slot est de 15 minutes ou moins.
+- On attribue un driver Ã  un slot qui contient FT.
+- On attribue un doorman Ã  un slot qui contient des handifly (les handi ont besoi de 2 instructeurs).
+- On attribue uniquement un doorman Ã  un slot qui n'est que PRO.
+
+Voici les rÃ¨gles de sÃ©lection d'un staff dans l'ordre de prioritÃ©:
+  - Parmi les instructeurs ne devant pas courir, on sÃ©lectionne celui avec le plus petit nombre de slots du role demandÃ© parmi les instructeurs partageant le mÃªme crÃ©neau horaire,
+  - Parmis les instructeurs ne devant pas courir, on sÃ©lectionne l'instructeur avec le plus petit nombre de slots total parmi les instructeurs partageant le mÃªme crÃ©neau horaire.
+  - Parmis les instructeurs ne devant pas courir, on sÃ©lectionne l'instructeur avec le plus petit nombre de slots du role demandÃ© au global de la journÃ©e.
+  - Parmis les instructeurs ne devant pas courir, on sÃ©lectionne l'instructeur avec le plus petit nombre de slots total au global de la journÃ©e.
+  - Si aucun instructeur n'est trouvÃ© on recommence toutes les mÃªmes rÃ¨gles de sÃ©lection parmi les instructeurs marquÃ©s comme "doit courir". Si l'un d'entre eux est sÃ©lectionnÃ©, on l'afichera dans le shift avec les marqueurs >> sur le slot de sÃ©lection et le prÃ©cÃ©dent.
+  - Si aucun instructeur n'est disponible, on affichera "OUCH!" dans le shift.
+
+## Limitations
+
+- Ce package ne gÃ¨re que les slots au format 30 minutes
+- Ce package n'accepte que des slots en hh:00 ou hh:30
+- Ce package n'accepte que les horaires de staffs en hh:00 ou hh:30
+- Ce package ne gÃ¨re pas les staffs qui font autre chose pendant les horaires fournis (par exemple le desk qui fait du drive pour dÃ©panner un slot)
