@@ -1,0 +1,11 @@
+tvnotipy/__about__.py,sha256=P89J4mBjHjry5KOxXVoISAefQwklK6qoXlEBNXmvu5k,159
+tvnotipy/__init__.py,sha256=tM66CYxKyybG3HbLJLoDuJvKInCAb2C3WbylYnpmCWM,137
+tvnotipy/main.py,sha256=N3iW-WBGm22A79JPMRCXlDoBDao0ENQzR7VUgLLy3bo,661
+tvnotipy/config/constants.py,sha256=haNKSeycubsFSrfxNnhOGrWfPAbsVoiFK_y-e9bxcq8,546
+tvnotipy/config/getters.py,sha256=1a0LHRvR25ECnwQATYyaG-xdQqvQXz2CSAlMe6YHllM,838
+tvnotipy/utils/helpers.py,sha256=_hN7_mS1JgjHrzyVt-QetOOuZDEe2AbY-f4dg4lCb7A,1513
+tvnotipy-1.0.1.dist-info/METADATA,sha256=ykIjlcXAyFye2bP5CNsaFzBrj2EKg_pqCjm6lqLh3nU,1897
+tvnotipy-1.0.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+tvnotipy-1.0.1.dist-info/entry_points.txt,sha256=argc4D3nVCyq7eIHobnxH-9e_OqJrrn0s2ymAeK6-sc,48
+tvnotipy-1.0.1.dist-info/licenses/LICENSE.txt,sha256=6-OKt87nlTixWovDcp71ZgxwaolKojJ61kwV_sN1A_k,1129
+tvnotipy-1.0.1.dist-info/RECORD,,
