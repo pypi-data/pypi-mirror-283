@@ -1,0 +1,24 @@
+Metadata-Version: 2.3
+Name: SpringSaLaDpy
+Version: 0.1.0
+Summary: Run and visualize SpringSaLaD results from Python
+Project-URL: Homepage, https://github.com/MolClustPy/SpringSaLaD-Python-Viz
+Project-URL: Issues, https://github.com/MolClustPy/SpringSaLaD-Python-Viz/issues
+Author-email: Harrison Perone <Harrison.perone@uconn.edu>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: ipykernel
+Requires-Dist: matplotlib
+Requires-Dist: molclustpy
+Requires-Dist: networkx
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: setuptools==69.5.1
+Description-Content-Type: text/markdown
+
+# ssaladpy
+
+ssaladpy is a python package that allows you to run, edit, and visualize SpringSaLaD simulations.
