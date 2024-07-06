@@ -1,0 +1,26 @@
+{
+    "jupyter.lab.setting-icon": "urlify-nb:plugin",
+    "jupyter.lab.setting-icon-label": "Urlify Notebook",
+    "title": "Urlify Notebook",
+    "description": "Settings for the Urlify Notebook extension.",
+    "type": "object",
+    "properties": {
+      "copyOutput": {
+        "type": "boolean",
+        "title": "Copy notebook output",
+        "description": "Whether to include notebook output when copying to URL",
+        "default": true
+      },
+      "urlPath": {
+        "type": "string",
+        "title": "URL path",
+        "description": "The URL path to use when generating the notebook URL",
+        "enum": [
+          "/lab/index.html",
+          "/retro/notebooks/index.html",
+          "/tree/index.html"
+        ],
+        "default": "/lab/index.html"
+      }
+    }
+  }
