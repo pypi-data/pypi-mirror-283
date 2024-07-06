@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: nglory-py
+Version: 0.0.4
+Summary: Easy Access for NationsGlory API in Python
+Author: BigTallahasee
+Author-email: 
+Keywords: python
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+A package that allows to easily access the NationsGlory API in Python.
