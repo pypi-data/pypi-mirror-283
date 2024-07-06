@@ -1,0 +1,8 @@
+dask_snowflake/__init__.py,sha256=2WW7NaJp8KW-TcFLot1ibMLLd7ZDLoUGvisTSvt5qsQ,210
+dask_snowflake/core.py,sha256=kKDSHGrPv-E2-hsgShZW3RF7AaZDkarvM2LqOMBrLx0,10565
+dask_snowflake/tests/test_core.py,sha256=c4RbkxLjlpUE0YlwUK8yTHl3bnccOYkmiy14IkpCqvc,11181
+dask_snowflake-0.3.3.dist-info/LICENSE,sha256=HNWwDA-m_QVmldFRpD9yuX2jYcnFEbLEs4qer7m5gmM,1514
+dask_snowflake-0.3.3.dist-info/METADATA,sha256=AqJj2NIN1-dB0wJW9spWPAYp-t0Elwpy3OVMiC1zr6Y,3126
+dask_snowflake-0.3.3.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+dask_snowflake-0.3.3.dist-info/top_level.txt,sha256=nD6-Ln1RdIN9q27lPRReEIkndi--4Sqfenz-DVIegDo,15
+dask_snowflake-0.3.3.dist-info/RECORD,,
