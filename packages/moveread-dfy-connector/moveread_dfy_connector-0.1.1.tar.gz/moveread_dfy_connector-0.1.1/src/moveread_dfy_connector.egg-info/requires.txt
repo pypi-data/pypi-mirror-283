@@ -1,0 +1,8 @@
+moveread-dfy
+moveread-pipelines-dfy
+haskellian
+pure-cv
+kv-api
+sqlmodel
+dslog
+kv-rest
