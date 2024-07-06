@@ -1,0 +1,2 @@
+[console_scripts]
+sf-utils = sf_utils.sf_utils:__sf_utils__
