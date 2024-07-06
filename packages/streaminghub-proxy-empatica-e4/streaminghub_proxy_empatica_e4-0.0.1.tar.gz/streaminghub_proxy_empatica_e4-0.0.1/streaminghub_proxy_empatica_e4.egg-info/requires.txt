@@ -1,0 +1,8 @@
+streaminghub-datamux
+streaminghub-pydfds
+
+[dev]
+build
+twine
+bumpver
+pip-tools
