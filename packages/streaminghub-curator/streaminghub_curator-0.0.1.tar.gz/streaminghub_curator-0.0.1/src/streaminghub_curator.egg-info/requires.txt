@@ -1,0 +1,13 @@
+flask
+flask-session
+hurry.filesize
+werkzeug
+pydantic
+parse
+
+[dev]
+build
+twine
+bumpver
+pip-tools
+pytest
