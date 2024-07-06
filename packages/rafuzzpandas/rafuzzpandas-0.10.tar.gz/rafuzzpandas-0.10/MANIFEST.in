@@ -1,0 +1,6 @@
+include rafuzzpandas/requirements.txt
+include rafuzzpandas/thirdparty.json
+include rafuzzpandas/rafuzzpandas.pyx
+include rafuzzpandas/rafuzzpandas_compile.py
+include rafuzzpandas/README.md
+include rafuzzpandas/LICENSE.txt

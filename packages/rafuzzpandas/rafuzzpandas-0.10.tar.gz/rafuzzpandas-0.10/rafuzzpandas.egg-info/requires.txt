@@ -1,0 +1,6 @@
+Cython
+normaltext
+numpy
+pandas
+rapidfuzz
+setuptools
