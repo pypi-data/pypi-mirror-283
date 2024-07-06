@@ -1,0 +1,14 @@
+ephemeral_notebooks/__init__.py,sha256=l_fkic-lkuqR4kkliSq9GhsVUbAziUesC6N-76Bqy7g,161
+ephemeral_notebooks/_version.py,sha256=T1wnDYRBHokk8tOUzI-xOPP_7fF3NIhltwTY-HZx464,172
+ephemeral_notebooks-0.3.19.data/data/share/jupyter/labextensions/ephemeral-notebooks/package.json,sha256=gm1Ug-6vTBmObwDjhV-543jZ20mDfjPeS7HlDxl7l-I,5359
+ephemeral_notebooks-0.3.19.data/data/share/jupyter/labextensions/ephemeral-notebooks/static/509.97e4c672bbfd21764358.js,sha256=l-TGcrv9IXZDWH-5jNb6hB8jk_qzMU2fjr--060F1oM,4722
+ephemeral_notebooks-0.3.19.data/data/share/jupyter/labextensions/ephemeral-notebooks/static/728.2537f722de5dfac27bd1.js,sha256=JTf3It5d-sJ70QL88q_zHJGazNL0UDQr8i0CVsQD0pM,4016
+ephemeral_notebooks-0.3.19.data/data/share/jupyter/labextensions/ephemeral-notebooks/static/992.4d546316b7bbec7c9f7c.js,sha256=TVRjFre77HyffMugrl3jZLaetB8Kw49OZW73VM6_jBQ,4740
+ephemeral_notebooks-0.3.19.data/data/share/jupyter/labextensions/ephemeral-notebooks/static/remoteEntry.2546c595a4ed62148dbe.js,sha256=JUbFlaTtYhSNvs5XO70_0nigoLNNWWEc66BiskZEG_4,7144
+ephemeral_notebooks-0.3.19.data/data/share/jupyter/labextensions/ephemeral-notebooks/static/style.js,sha256=FY0yYi2mPCcbxkc__x5sn_jak0BU77FB85q1tfpt4TE,162
+ephemeral_notebooks-0.3.19.data/data/share/jupyter/labextensions/ephemeral-notebooks/static/third-party-licenses.json,sha256=uj8rjJVJbaJ5WKWfB7EfAKAupSn41qgwTVLKTOJKPH8,3664
+ephemeral_notebooks-0.3.19.data/data/share/jupyter/labextensions/ephemeral-notebooks/install.json,sha256=-e9jLP1iSpMv2vCdVB47l-mVbQS9613la0OLoXMk6WI,199
+ephemeral_notebooks-0.3.19.dist-info/METADATA,sha256=ZmkjdIQSlznLbAupfZm4WRYwoZfNZv-eavSMPATBzfE,5567
+ephemeral_notebooks-0.3.19.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+ephemeral_notebooks-0.3.19.dist-info/licenses/LICENSE,sha256=vyn1H5aNQjBfBVsuHKT7yMPxuZYBxjAPiZNSsFwz7C0,1521
+ephemeral_notebooks-0.3.19.dist-info/RECORD,,
