@@ -1,0 +1,6 @@
+{
+    "apis": ["/api", "/v1", "/v2", "/services", "/rest", "/graphql", "/json"],
+    "leaks": ["aws", "apikey", "secret", "password", "auth", "token", "key", "access", "credential", "jwt", "kong", "kong-key"],
+    "extensions": [".js", ".css", ".html", ".php", ".asp", ".aspx", ".jsp", ".json", ".xml", ".txt", ".csv"],
+    "cms": ["wp-", "wordpress", "joomla", "drupal", "magento", "typo3", "shopify", "prestashop"]
+}
