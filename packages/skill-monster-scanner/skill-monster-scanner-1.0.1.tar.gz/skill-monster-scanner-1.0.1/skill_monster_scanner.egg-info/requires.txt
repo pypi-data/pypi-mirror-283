@@ -1,0 +1,12 @@
+ovos-utils
+ovos-bus-client
+ovos-workshop
+ovos-plugin-manager
+
+[test]
+neon_minerva~=0.2.0
+ovos_plugin_manager
+pytest
+pytest-cov
+setuptools
+ovos_config
