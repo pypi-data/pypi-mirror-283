@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "textpredict"
+version = "0.1.2"
+description = "A Python package for text classification using transformer models."
+authors = ["Ankit Aglawe <aglawe.ankit@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "textpredict" }]
+homepage = "https://github.com/ankit-aglawe/textpredict"
+repository = "https://github.com/ankit-aglawe/textpredict"
+keywords = ["text classification", "emotion classification", "sentiment analysis", "text analysis", "machine learning", "NLP", "transformers", "data science", "pre-trained models", "text mining"]
+
+
+[tool.poetry.dependencies]
+python = "^3.9"
+torch = "^1.9.0"
+transformers = "^4.9.0"
+datasets = "^1.11.0"
+click = "^8.0.1"
+fastapi = "^0.68.0"
+uvicorn = "^0.15.0"
+scikit-learn = "^1.5.1"
+optuna = "^2.9.1"
+matplotlib = "^3.4.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+black = "^21.7b0"
+isort = "^5.9.3"
+flake8 = "^3.9.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.urls]
+"Documentation" = "https://github.com/ankit-aglawe/textpredict#readme"
+"Changelog" = "https://github.com/ankit-aglawe/textpredict/releases"
+"Source" = "https://github.com/ankit-aglawe/textpredict"
+"Tracker" = "https://github.com/ankit-aglawe/textpredict/issues"
+
