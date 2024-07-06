@@ -1,0 +1,15 @@
+protobuf
+pyzmq
+psutil
+aenum
+lief>=v0.14.0
+python-magic
+click
+coloredlogs
+quokka-project
+watchdog
+pydantic
+matplotlib
+joblib
+rich
+tritondse>=v0.1.11
