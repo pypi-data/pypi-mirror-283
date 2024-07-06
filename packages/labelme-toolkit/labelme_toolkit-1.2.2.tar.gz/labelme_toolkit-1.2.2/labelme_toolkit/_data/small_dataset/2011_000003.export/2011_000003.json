@@ -1,0 +1,55 @@
+{
+  "flags": {},
+  "shapes": [
+    {
+      "label": "person",
+      "points": [
+        [
+          364,
+          83
+        ],
+        [
+          500,
+          334
+        ]
+      ],
+      "shape_type": "rectangle",
+      "mask": null,
+      "description": "{\"bounding_box\": {\"xmin\": 364, \"ymin\": 83, \"xmax\": 500, \"ymax\": 334}, \"text\": \"person\", \"score\": 0.5993784070014954, \"mask\": null}"
+    },
+    {
+      "label": "person",
+      "points": [
+        [
+          188,
+          107
+        ],
+        [
+          315,
+          331
+        ]
+      ],
+      "shape_type": "rectangle",
+      "mask": null,
+      "description": "{\"bounding_box\": {\"xmin\": 188, \"ymin\": 107, \"xmax\": 315, \"ymax\": 331}, \"text\": \"person\", \"score\": 0.43843579292297363, \"mask\": null}"
+    },
+    {
+      "label": "cap",
+      "points": [
+        [
+          220,
+          106
+        ],
+        [
+          279,
+          153
+        ]
+      ],
+      "shape_type": "rectangle",
+      "mask": null,
+      "description": "{\"bounding_box\": {\"xmin\": 220, \"ymin\": 106, \"xmax\": 279, \"ymax\": 153}, \"text\": \"cap\", \"score\": 0.3141734302043915, \"mask\": null}"
+    }
+  ],
+  "imagePath": "2011_000003.jpg",
+  "imageData": null
+}
