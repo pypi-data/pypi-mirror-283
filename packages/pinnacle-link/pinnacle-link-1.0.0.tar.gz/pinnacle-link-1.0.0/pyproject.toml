@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pinnacle-link"
+version = "1.0.0"
+description = """All about odds and fixtures  # Authentication  Please note that API has restriction that client password can be maximum up 10 characters long.  API uses HTTP Basic access authentication. You need to send Authorization HTTP Request header:    `Authorization: Basic `  Example:  `Authorization: Basic U03MyOT23YbzMDc6d3c3O1DQ1` """
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "requests>=2.31.0"
+]
