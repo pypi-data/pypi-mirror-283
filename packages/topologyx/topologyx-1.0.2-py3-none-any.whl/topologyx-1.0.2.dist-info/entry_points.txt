@@ -1,0 +1,3 @@
+[console_scripts]
+topologyx=topologyx.main:cli
+
