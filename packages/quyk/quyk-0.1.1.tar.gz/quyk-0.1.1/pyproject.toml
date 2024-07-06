@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "quyk"
+version = "0.1.1"
+description = "An uncomplicated package to test decorated functions directly from your terminal"
+authors = ["Ahgoos <aguspdc@gmail.com>"]
+license = "GPL-3.0-only"
+readme = "README.md"
+packages = [{include = "quyk"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+inquirer = "^3.3.0"
+halo = "^0.0.31"
+
+
+[tool.poetry.scripts]
+quyk = "quyk.core:main"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
