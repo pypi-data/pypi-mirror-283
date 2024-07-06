@@ -1,0 +1,5 @@
+llama_index/retrievers/bm25/__init__.py,sha256=xWXu6hweKK5Ca6zzWtTBKz5RL0MEWI9I9G_XYLPYY9U,88
+llama_index/retrievers/bm25/base.py,sha256=z_ifRiYsMrpBULQR6HbtQKKauSSIV9r2xrEKxr4BSgw,5951
+llama_index_retrievers_bm25-0.2.0.dist-info/METADATA,sha256=eGD6hNWI2xDfnKEFOcT-2b279edXhTFIEhT7Q8HI-7E,742
+llama_index_retrievers_bm25-0.2.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+llama_index_retrievers_bm25-0.2.0.dist-info/RECORD,,
