@@ -1,0 +1,13 @@
+jupyter_datainputtable/__init__.py,sha256=B_-4erpEpKpdW6jzXAx2jj6pBt2dMnS_OC6afKoN9dA,602
+jupyter_datainputtable/_version.py,sha256=Zf5BPO6UvqJiLjEyF46YBSKLa_wYLs_-DYle8kjdtQo,171
+jupyter_datainputtable-0.8.0.data/data/share/jupyter/labextensions/jupyter-datainputtable/package.json,sha256=M8xKq_Yw663e5LnhQeX1Hl1cQTsM4L2HW9BgpnfCVuI,5974
+jupyter_datainputtable-0.8.0.data/data/share/jupyter/labextensions/jupyter-datainputtable/static/509.2ab7256e5e6629816f55.js,sha256=Krclbl5mKYFvVUMyEGdbQPzZhkY9Vo3nx08qlfOdoJo,11847
+jupyter_datainputtable-0.8.0.data/data/share/jupyter/labextensions/jupyter-datainputtable/static/728.2a1e0f6b96ae830b5435.js,sha256=Kh4Pa5augwtUNcjzJbQ1EDzeu_iLpP_qDywEYSzh2is,5071
+jupyter_datainputtable-0.8.0.data/data/share/jupyter/labextensions/jupyter-datainputtable/static/remoteEntry.c44261b3b8b375e32d08.js,sha256=xEJhs7izdeMtCJZCh4FCAlU3pI4OF0nurZW4yEgwgJ4,6596
+jupyter_datainputtable-0.8.0.data/data/share/jupyter/labextensions/jupyter-datainputtable/static/style.js,sha256=mhm23u6ER2I1HU-P8UpSkgqAzGkIMDke-uINW-NxUU0,165
+jupyter_datainputtable-0.8.0.data/data/share/jupyter/labextensions/jupyter-datainputtable/static/third-party-licenses.json,sha256=W6N2sSD7tQihMqQk64F9xMd1Flfr2KO97esAiHUOYdM,2453
+jupyter_datainputtable-0.8.0.data/data/share/jupyter/labextensions/jupyter-datainputtable/install.json,sha256=LuP0y_VxoPI00pyMUkAOG3z7fJUI1zPFSvsvoeyOaJw,205
+jupyter_datainputtable-0.8.0.dist-info/METADATA,sha256=kCuUZI_QV7T9XdwhGmqf3ByBcsV_OgVSknwKvL8XYsg,9028
+jupyter_datainputtable-0.8.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+jupyter_datainputtable-0.8.0.dist-info/licenses/LICENSE,sha256=cNp0hfQHiqyP4kve8AaYl--Qk4fFR1rIuLWzN5uUq8I,1522
+jupyter_datainputtable-0.8.0.dist-info/RECORD,,
