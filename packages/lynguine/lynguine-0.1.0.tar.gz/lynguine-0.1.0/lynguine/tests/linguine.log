@@ -1,0 +1,31 @@
+WARNING:linguine.config.interface:2024-07-05 10:31:25,651:No configuration file found at "None".
+WARNING:linguine.assess.data:2024-07-05 10:31:25,845:Set column to "None".
+WARNING:linguine.config.interface:2024-07-05 20:36:48,637:No configuration file found at "None".
+WARNING:linguine.assess.data:2024-07-05 20:37:24,222:Set column to "None".
+WARNING:linguine.config.interface:2024-07-05 20:47:35,237:No configuration file found at "None".
+WARNING:linguine.assess.data:2024-07-05 20:47:35,391:Set column to "None".
+ERROR:root:2024-07-05 20:47:35,398:No traceback has been produced, nothing to debug.
+WARNING:linguine.assess.data:2024-07-05 20:49:01,222:Set column to "None".
+WARNING:linguine.assess.data:2024-07-05 20:49:13,001:Set column to "None".
+WARNING:linguine.assess.data:2024-07-05 20:49:33,641:Set column to "None".
+WARNING:linguine.config.interface:2024-07-05 20:51:03,883:No configuration file found at "None".
+WARNING:linguine.assess.data:2024-07-05 20:51:04,027:Set column to "None".
+ERROR:root:2024-07-05 20:51:04,034:No traceback has been produced, nothing to debug.
+WARNING:linguine.assess.data:2024-07-05 20:51:04,038:Set column to "None".
+WARNING:linguine.assess.data:2024-07-05 20:51:04,044:Set column to "None".
+WARNING:linguine.assess.data:2024-07-05 20:51:04,050:Set column to "None".
+ERROR:root:2024-07-05 20:51:04,057:No traceback has been produced, nothing to debug.
+ERROR:ipykernel.comm:2024-07-05 21:05:15,620:No such comm target registered: jupyter.widget.control
+WARNING:Comm:2024-07-05 21:05:15,624:No such comm: 26519d95-317e-48ec-9a80-b98266661a75
+ERROR:ipykernel.comm:2024-07-05 21:25:36,894:No such comm target registered: jupyter.widget.control
+WARNING:Comm:2024-07-05 21:25:36,896:No such comm: 9e6f6221-fe97-41c6-bc2b-818bcb5f0c72
+ERROR:ipykernel.comm:2024-07-05 21:55:05,094:No such comm target registered: jupyter.widget.control
+WARNING:Comm:2024-07-05 21:55:05,095:No such comm: ae1e2e87-195a-4020-863c-c4b41b0dc6a7
+ERROR:ipykernel.comm:2024-07-05 22:32:22,723:No such comm target registered: jupyter.widget.control
+WARNING:Comm:2024-07-05 22:32:22,725:No such comm: f72666f3-8c85-4b9c-a86c-6c1fa0939294
+ERROR:ipykernel.comm:2024-07-05 23:57:33,312:No such comm target registered: jupyter.widget.control
+WARNING:Comm:2024-07-05 23:57:33,313:No such comm: e0727e70-0aa0-472f-ad97-ef253d0acfb8
+ERROR:ipykernel.comm:2024-07-06 07:55:12,914:No such comm target registered: jupyter.widget.control
+WARNING:Comm:2024-07-06 07:55:12,915:No such comm: 053fd41d-0f9a-4613-8e59-0380666e81a0
+ERROR:ipykernel.comm:2024-07-06 08:59:48,213:No such comm target registered: jupyter.widget.control
+WARNING:Comm:2024-07-06 08:59:48,214:No such comm: 2b72a808-9547-4e4f-88ad-eaf5180e7ad8
