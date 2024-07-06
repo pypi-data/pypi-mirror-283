@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+blescivis/__init__.py
+blescivis.egg-info/PKG-INFO
+blescivis.egg-info/SOURCES.txt
+blescivis.egg-info/dependency_links.txt
+blescivis.egg-info/requires.txt
+blescivis.egg-info/top_level.txt
