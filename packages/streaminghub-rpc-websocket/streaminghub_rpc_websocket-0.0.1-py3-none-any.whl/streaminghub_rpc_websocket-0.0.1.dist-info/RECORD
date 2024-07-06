@@ -1,0 +1,8 @@
+streaminghub_rpc_websocket/__init__.py,sha256=xFXnTklHqDCbvG_Ib9poKyxZWxt5-Htsym6VozIJans,71
+streaminghub_rpc_websocket/client.py,sha256=gfknrlTQWOjHJM9U59RdEUs5lpQD7yO8x_hzhzvdzlE,2318
+streaminghub_rpc_websocket/server.py,sha256=9WFzSt48Y9seiSpFAbleYptpoUzow7o6GzJSwewdI88,4858
+streaminghub_rpc_websocket-0.0.1.dist-info/METADATA,sha256=LK5i5CXGz5Ev1eFo4IRmgX6ILJnucY16hJ9oFrbskp8,795
+streaminghub_rpc_websocket-0.0.1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+streaminghub_rpc_websocket-0.0.1.dist-info/entry_points.txt,sha256=h5OmquQlXell5XnIiAIdu3X-6fjs_60q8o5aXIkKXPg,179
+streaminghub_rpc_websocket-0.0.1.dist-info/top_level.txt,sha256=k4VN7t6YjxHS3L-Ie4W6xzzZ0hVtqgBqdCYvaIn2N-I,27
+streaminghub_rpc_websocket-0.0.1.dist-info/RECORD,,

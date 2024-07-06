@@ -1,0 +1,5 @@
+[streaminghub_datamux.rpc.client]
+websocket = streaminghub_rpc_websocket:WebsocketClient
+
+[streaminghub_datamux.rpc.server]
+websocket = streaminghub_rpc_websocket:WebsocketServer

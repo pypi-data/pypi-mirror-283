@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: streaminghub-rpc-websocket
+Version: 0.0.1
+Summary: Streaminghub plugin for RPC over websocket
+Author-email: Yasith Jayawardana <yasith@cs.odu.edu>
+Project-URL: homepage, https://github.com/nirdslab/streaminghub/tree/master/plugins/streaminghub_rpc_websocket
+Keywords: streaminghub
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: streaminghub-datamux
+Requires-Dist: streaminghub-pydfds
+Requires-Dist: websockets
+Provides-Extra: dev
+Requires-Dist: build ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: bumpver ; extra == 'dev'
+Requires-Dist: pip-tools ; extra == 'dev'
+
