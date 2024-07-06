@@ -1,0 +1,20 @@
+#========================================================================================================================================
+# CyborgAI CC BY-NC-ND 4.0 Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 Internation    https://github.com/cyborg-ai-git # 
+#========================================================================================================================================
+
+# VALID TYPE FOR INPUT/OUTPUT:
+#   EOBJECT EOBJECT_CLASS
+
+package: evo_framework.core.evo_core_api
+
+control:
+  CApiFlow:
+    _DOC_: "COpenaiApi DESCRIPTION"
+
+    evo-get_eapiconfig:
+      description: "evo-get_eapiconfig DESCRIPTION"
+      callback: doGetEApiConfig
+      input: EOBJECT ERequest
+      output: EOBJECT EApiConfig
+      
+    
