@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+mlora_cli/__init__.py
+mlora_cli/adapter.py
+mlora_cli/dataset.py
+mlora_cli/dispatcher.py
+mlora_cli/file.py
+mlora_cli/setting.py
+mlora_cli/shell.py
+mlora_cli/task.py
+mlora_cli.egg-info/PKG-INFO
+mlora_cli.egg-info/SOURCES.txt
+mlora_cli.egg-info/dependency_links.txt
+mlora_cli.egg-info/entry_points.txt
+mlora_cli.egg-info/requires.txt
+mlora_cli.egg-info/top_level.txt
