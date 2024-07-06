@@ -1,0 +1,210 @@
+{% extends 'layout.html' %}
+{% block content %}
+<!-- File Browser Panel -->
+<form method="post" class="container mt-4">
+  <div class="card">
+    <div class="card-header d-flex flex-row">
+      <h5 class="mt-auto mb-0">Choose Data Root and Files</h5>
+      <div class="d-flex ms-auto">
+        <button title="Set Root" type="submit" class="btn btn-outline btn-outline-success ms-auto py-0 mx-1"
+          name="action" value="set_root"><i class="fa fa-folder me-2"></i>Use as Root</button>
+        <button title="Reset Root" type="submit" class="btn btn-outline btn-outline-dark ms-auto py-0 mx-1"
+          name="action" value="reset_root"><i class="fa fa-undo me-2"></i>Reset Root</button>
+        <button title="Show/Hide Panel" type="button" class="btn btn-outline btn-outline-dark ms-auto py-0 mx-1"
+        data-bs-toggle="collapse" data-bs-target="#file_browser">Show/Hide Panel</button>
+      </div>
+    </div>
+    <div class="collapse show card-body" id="file_browser">
+      <p>
+        Browser your files using the panel below.
+        In each folder, mark the files that belong to the dataset, and click on "Update Selection".
+        This will add them to a dataset.
+      </p>
+      <div class="row my-2">
+        <div class="col-12">
+          {% autoescape false %}
+          {{breadcrumbs}}
+          {% endautoescape %}
+        </div>
+      </div>
+      <div>
+        <hr class="mt-2 mb-0">
+        <div class="file-container table-responsive">
+          <table class="table table-sm table-hover">
+            <thead>
+              <tr>
+                <th><input class="form-check-input me-2" type="checkbox" id="chk-select-all">Name</th>
+                <th>Created</th>
+                <th>Modified</th>
+                <th>Size</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for k, item in dir_dict.items() %}
+              <tr title="{{item.f_name}}">
+                <td>
+                  <a class="text-link" href="/files/{{item.f_url}}">
+                    <i class="fa-solid fa-folder text-warning"></i>
+                    {{item.f_name}}
+                  </a>
+                </td>
+                <td>{{item.dtc}}</td>
+                <td>{{item.dtm}}</td>
+                <td>{{item.size}}</td>
+              </tr>
+              {% endfor %}
+              {% for k, item in file_dict.items() %}
+              <tr title="{{item.f_name}}">
+                <td>
+                  <input class="form-check-input" data-curator-check type="checkbox" name="selection[]" value="{{k}}" {%
+                    if k in selection_dict %} checked disabled {% endif %}>
+                  <a class="text-link" href="/download/{{item.f_url}}">
+                    <img class="icon" src='{{item.image}}' />
+                    {{item.f_name}}
+                  </a>
+                </td>
+                <td>{{item.dtc}}</td>
+                <td>{{item.dtm}}</td>
+                <td>{{item.size}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-sm btn-primary mt-2" name="action" value="update"><b>Add to
+          Dataset</b></button>
+    </div>
+  </div>
+</form>
+<!-- Selection Panel -->
+<form method="post" class="container mt-4">
+  <div class="card">
+    <div class="card-header d-flex flex-row">
+      <h5 class="mt-auto mb-0">Step 1 - Annotate your Files</h5>
+      <div class="d-flex ms-auto">
+        <button title="Reset" type="submit" class="btn btn-outline btn-outline-dark ms-auto py-0 mx-1" name="action"
+          value="reset"><i class="fa fa-undo me-2"></i>Reset Selection</button>
+        <button title="Show/Hide Panel" type="button" class="btn btn-outline btn-outline-dark ms-auto py-0 mx-1"
+          data-bs-toggle="collapse" data-bs-target="#metadata_miner">Show/Hide Panel</button>
+      </div>
+    </div>
+    <div class="collapse show card-body" id="metadata_miner">
+      Next, add metadata to the files you selected.
+      Start with providing a name for your dataset.
+      Next, add metadata to each file individually, as groups, or all at once.
+      </p>
+      <div class="row">
+        <div class="input-group input-group-sm mb-2">
+          <span class="input-group-text" style="width: 7rem;"><b>Dataset Name</b></span>
+          <input class="form-control" type="text" name="dataset_name" value="{{dataset_name}}"
+            placeholder="Example Dataset">
+          <button title="Save" type="submit" class="btn btn-success" name="action" value="dataset_name"><i
+              class="fa fa-save"></i></button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-md-4 mt-1">
+          <label class="form-label me-auto mt-auto"><b>Selection Actions</b></label>
+          <div>
+            <button type="submit" title="Clear Metadata" class="btn btn-sm btn-warning m-1" name="action"
+              value="clear"><i class="fas fa-eraser me-1"></i>Clear Metadata</button>
+            <button type="submit" title="Drop Items" class="btn btn-sm btn-danger m-1" name="action" value="drop"><i
+                class="fas fa-trash me-1"></i>Drop File(s)</button>
+          </div>
+        </div>
+        <div class="col col-md-8 mt-1">
+          <label class="form-label me-auto mt-auto"><b>Extract Metadata</b></label>
+          <div class="input-group input-group-sm mb-2">
+            <span class="input-group-text" style="width: 7rem;"><b>Name Pattern</b></span>
+            <input class="form-control" type="text" name="name_pattern" placeholder="S{id}_T{task}.csv">
+            <button title="Extract" type="submit" class="btn btn-success" name="action" value="name_pattern"><i
+                class="fa fa-play me-2"></i>Extract</button>
+          </div>
+          <div class="input-group input-group-sm mb-2">
+            <span class="input-group-text" style="width: 7rem;"><b>Path Pattern</b></span>
+            <input class="form-control" type="text" name="path_pattern" placeholder="/test/sub-{id}/ses-{noise}">
+            <button title="Extract" type="submit" class="btn btn-success" name="action" value="path_pattern"><i
+                class="fa fa-play me-2"></i>Extract</button>
+          </div>
+        </div>
+      </div>
+      <hr class="my-0">
+      <div class="file-container table-responsive">
+        <table class="table table-sm table-hover">
+          <thead>
+            <tr>
+              <th><input class="form-check-input me-2" type="checkbox" id="chk-selection-select-all">File</th>
+              <th>Size</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for k, item in selection_dict.items() %}
+            <tr title="{{item.f_name}}">
+              <td>
+                <div class="row">
+                  <div class="col">
+                    <input class="form-check-input" data-curator-selection-check type="checkbox" name="selection[]"
+                      value="{{k}}">
+                    <a class="text-link" href="/download/{{item.f_url}}">
+                      <img class="icon" src='{{item.image}}' />
+                      <span class="text-secondary">{{'/'.join(item.f_url.split('/')[:-1])}}/</span><b
+                        class="text-primary">{{item.f_name}}</b>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <ul class=" ms-3 mb-0">
+                      {% for mk, mv in item.metadata.items() %}
+                      <li class="btn btn-sm px-1 py-0 btn-secondary">{{mk}}:&nbsp;<b class="me-2">{{mv}}</b><i
+                          class="fas fa-pen fa-xs"></i></li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+              </td>
+              <td>{{item.size}}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <hr class="my-2">
+      <div class="d-flex">
+        <a href="/streams" class="btn btn-sm btn-primary ms-auto me-0"><b>Step 2 - Define Streams &rtri;</b></a>
+      </div>
+    </div>
+  </div>
+</form>
+{% endblock content %}
+{% block scripts %}
+<script>
+  const allQuery = "[data-curator-check]:not([disabled])";
+  const selectionAllQuery = "[data-curator-selection-check]:not([disabled])";
+
+  document.getElementById("chk-select-all").addEventListener('change', function () {
+    document.querySelectorAll(allQuery).forEach(e => {
+      e.checked = document.getElementById("chk-select-all").checked;
+    })
+  })
+  document.querySelectorAll(allQuery).forEach(e => {
+    e.addEventListener('change', function () {
+      let checked = true;
+      document.querySelectorAll(allQuery).forEach(e => checked = checked && e.checked);
+      document.getElementById("chk-select-all").checked = checked;
+    })
+  })
+  document.getElementById("chk-selection-select-all").addEventListener('change', function () {
+    document.querySelectorAll(selectionAllQuery).forEach(e => {
+      e.checked = document.getElementById("chk-selection-select-all").checked;
+    })
+  })
+  document.querySelectorAll(selectionAllQuery).forEach(e => {
+    e.addEventListener('change', function () {
+      let checked = true;
+      document.querySelectorAll(selectionAllQuery).forEach(e => checked = checked && e.checked);
+      document.getElementById("chk-selection-select-all").checked = checked;
+    })
+  })
+</script>
+<script type="text/jsx" src="/static/js/metadata_editor.jsx"></script>
+{% endblock scripts %}

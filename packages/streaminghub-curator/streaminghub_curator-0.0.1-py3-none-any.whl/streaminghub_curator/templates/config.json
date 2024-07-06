@@ -1,0 +1,11 @@
+{
+    "hidden": [
+        ".DS_Store",
+        ".vscode",
+        ".git",
+        "$RECYCLE.BIN"
+    ],
+    "pwd_hash": "",
+    "base_dir": "/Users/yasith/OneDrive - Old Dominion University/Documents/NIRDS/Datasets",
+    "temp_dir": "/tmp"
+}
