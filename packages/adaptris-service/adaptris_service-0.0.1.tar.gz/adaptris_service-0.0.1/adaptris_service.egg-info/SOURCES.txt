@@ -1,0 +1,5 @@
+pyproject.toml
+adaptris_service.egg-info/PKG-INFO
+adaptris_service.egg-info/SOURCES.txt
+adaptris_service.egg-info/dependency_links.txt
+adaptris_service.egg-info/top_level.txt
