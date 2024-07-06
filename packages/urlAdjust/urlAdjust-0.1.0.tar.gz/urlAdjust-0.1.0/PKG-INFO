@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: urlAdjust
+Version: 0.1.0
+Summary: A simple example library
+Home-page: https://github.com/F-0-X/UrlAdjust
+Author: Yu Xing
+Author-email: f0x.sideproject@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+License-File: LICENSE
+
+UNKNOWN
+

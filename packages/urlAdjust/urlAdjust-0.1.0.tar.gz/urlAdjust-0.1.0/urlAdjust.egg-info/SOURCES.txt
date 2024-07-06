@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+tests/__init__.py
+tests/url_test.py
+urlAdjust.egg-info/PKG-INFO
+urlAdjust.egg-info/SOURCES.txt
+urlAdjust.egg-info/dependency_links.txt
+urlAdjust.egg-info/top_level.txt
+url_adjust/__init__.py
+url_adjust/url.py
