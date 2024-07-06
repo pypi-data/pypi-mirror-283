@@ -1,0 +1,8 @@
+README.md
+setup.py
+Popitto/Framework.py
+Popitto/__init__.py
+Popitto.egg-info/PKG-INFO
+Popitto.egg-info/SOURCES.txt
+Popitto.egg-info/dependency_links.txt
+Popitto.egg-info/top_level.txt
