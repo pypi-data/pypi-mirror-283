@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: sqladmin_async
+Version: 2.9
+Summary: Fork of Sqladmin with async functions
+Author-email: ilikepustoshka@gmail.com
+License: Copyright © 2024, Scherba Matthew. All rights reserved.
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Operating System :: OS Independent
+Requires: starlette
+Requires: sqlalchemy
+Requires: wtforms
+Requires: jinja2
+Requires: python_multipart
+License-File: LICENSE.md
