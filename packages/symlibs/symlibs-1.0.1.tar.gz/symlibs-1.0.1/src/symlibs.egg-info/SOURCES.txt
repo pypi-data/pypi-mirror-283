@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+src/symath/__init__.py
+src/symath/vex.py
+src/symlibs.egg-info/PKG-INFO
+src/symlibs.egg-info/SOURCES.txt
+src/symlibs.egg-info/dependency_links.txt
+src/symlibs.egg-info/top_level.txt

@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: symlibs
+Version: 1.0.1
+Home-page: http://
+Author: diannaojun
+Author-email: aheiwuchang@163.com
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+# Symlibs
+## Symath
+    A python package with some classes for maths
