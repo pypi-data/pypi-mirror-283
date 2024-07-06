@@ -1,0 +1,18 @@
+{
+    "entity": {
+        "sensor": {
+            "disk_fs_used": {
+                "name": "Anv\u00e4nt diskutrymme {mountpoint}"
+            },
+            "disk_fs_used_percent": {
+                "name": "Diskanv\u00e4ndning {mountpoint}"
+            },
+            "disk_total": {
+                "name": "Totalt diskutrymme"
+            },
+            "disk_used": {
+                "name": "Anv\u00e4nt diskutrymme"
+            }
+        }
+    }
+}

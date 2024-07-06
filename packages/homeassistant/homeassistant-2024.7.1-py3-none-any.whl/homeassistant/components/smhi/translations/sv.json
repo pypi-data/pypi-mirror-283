@@ -1,0 +1,22 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Konto har redan konfigurerats"
+        },
+        "error": {
+            "wrong_location": "Plats i Sverige endast"
+        },
+        "step": {
+            "reconfigure_confirm": {
+                "title": "Konfigurera om din plats i Sverige"
+            },
+            "user": {
+                "data": {
+                    "latitude": "Latitud",
+                    "longitude": "Longitud"
+                },
+                "title": "Plats i Sverige"
+            }
+        }
+    }
+}

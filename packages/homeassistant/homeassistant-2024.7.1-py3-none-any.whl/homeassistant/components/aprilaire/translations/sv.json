@@ -1,0 +1,69 @@
+{
+    "entity": {
+        "select": {
+            "air_cleaning_event": {
+                "state": {
+                    "off": "Av"
+                }
+            },
+            "air_cleaning_mode": {
+                "state": {
+                    "off": "Av"
+                }
+            },
+            "fresh_air_event": {
+                "state": {
+                    "off": "Av"
+                }
+            },
+            "fresh_air_mode": {
+                "name": "Friskluftsl\u00e4ge",
+                "state": {
+                    "off": "Av"
+                }
+            }
+        },
+        "sensor": {
+            "air_cleaning_status": {
+                "state": {
+                    "idle": "Inaktiv",
+                    "off": "Av",
+                    "on": "P\u00e5"
+                }
+            },
+            "dehumidification_status": {
+                "name": "Status f\u00f6r avfuktning",
+                "state": {
+                    "idle": "Inaktiv",
+                    "off": "Av",
+                    "on": "P\u00e5"
+                }
+            },
+            "fan_status": {
+                "name": "Fl\u00e4ktstatus",
+                "state": {
+                    "off": "Av",
+                    "on": "P\u00e5"
+                }
+            },
+            "humidification_status": {
+                "name": "Status f\u00f6r luftfuktning",
+                "state": {
+                    "idle": "Inaktiv",
+                    "off": "Av",
+                    "on": "P\u00e5"
+                }
+            },
+            "indoor_humidity_controlling_sensor": {
+                "name": "Sensor f\u00f6r kontroll av luftfuktighet inomhus"
+            },
+            "ventilation_status": {
+                "state": {
+                    "idle": "Inaktiv",
+                    "off": "Av",
+                    "on": "P\u00e5"
+                }
+            }
+        }
+    }
+}

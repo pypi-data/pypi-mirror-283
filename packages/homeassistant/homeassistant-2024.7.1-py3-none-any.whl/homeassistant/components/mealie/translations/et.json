@@ -1,0 +1,36 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Teenus on juba seadistatud"
+        },
+        "error": {
+            "cannot_connect": "\u00dchendamine nurjus",
+            "invalid_auth": "Tuvastamine nurjus",
+            "unknown": "Ootamatu t\u00f5rge"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "api_token": "API v\u00f5ti",
+                    "host": "Host"
+                }
+            }
+        }
+    },
+    "entity": {
+        "calendar": {
+            "breakfast": {
+                "name": "Hommikus\u00f6\u00f6k"
+            },
+            "dinner": {
+                "name": "\u00d5htus\u00f6\u00f6k"
+            },
+            "lunch": {
+                "name": "L\u00f5unas\u00f6\u00f6k"
+            },
+            "side": {
+                "name": "Oode"
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "config": {
+        "step": {
+            "machine_selection": {
+                "data": {
+                    "host": "IP-adress"
+                }
+            },
+            "user": {
+                "data": {
+                    "password": "L\u00f6senord",
+                    "username": "Anv\u00e4ndarnamn"
+                }
+            }
+        }
+    },
+    "issues": {
+        "unsupported_gateway_firmware": {
+            "description": "Gateway firmware {gateway_version} st\u00f6ds inte l\u00e4ngre av denna integration, v\u00e4nligen uppdatera.",
+            "title": "Firmware f\u00f6r gateway som inte st\u00f6ds"
+        }
+    }
+}

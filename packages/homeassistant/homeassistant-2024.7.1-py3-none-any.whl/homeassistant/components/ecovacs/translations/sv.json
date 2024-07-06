@@ -1,0 +1,11 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "data_description": {
+                    "mode": "V\u00e4lj det l\u00e4ge som du vill anv\u00e4nda f\u00f6r att ansluta till Ecovacs. Om du \u00e4r os\u00e4ker v\u00e4ljer du \"Cloud\".\n\nV\u00e4lj \"Sj\u00e4lvhanterad\" endast om du har en fungerande sj\u00e4lvhanterad instans."
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,90 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Cihaz zaten yap\u0131land\u0131r\u0131lm\u0131\u015f",
+            "invalid_version": "Bu \u00fcr\u00fcn yaz\u0131l\u0131m\u0131 s\u00fcr\u00fcm\u00fc desteklenmiyor. L\u00fctfen cihaz\u0131n donan\u0131m yaz\u0131l\u0131m\u0131n\u0131 en az 3.1.1 s\u00fcr\u00fcm\u00fcne y\u00fckseltin."
+        },
+        "error": {
+            "cannot_connect": "Ba\u011flanma hatas\u0131",
+            "unknown": "Beklenmeyen hata"
+        },
+        "flow_title": "{model}",
+        "step": {
+            "discovery_confirm": {
+                "description": "{model} kurulumunu yapmak istiyor musunuz?"
+            },
+            "user": {
+                "data": {
+                    "host": "Sunucu"
+                },
+                "data_description": {
+                    "host": "Airgradient cihaz\u0131n\u0131n ana bilgisayar ad\u0131 veya IP adresi."
+                }
+            }
+        }
+    },
+    "entity": {
+        "number": {
+            "display_brightness": {
+                "name": "Ekran parlakl\u0131\u011f\u0131"
+            },
+            "led_bar_brightness": {
+                "name": "LED \u00e7ubuk parlakl\u0131\u011f\u0131"
+            }
+        },
+        "select": {
+            "configuration_control": {
+                "name": "Yap\u0131land\u0131rma kayna\u011f\u0131",
+                "state": {
+                    "both": "Her ikisi",
+                    "cloud": "Bulut",
+                    "local": "Yerel"
+                }
+            },
+            "display_pm_standard": {
+                "name": "PM standard\u0131n\u0131 g\u00f6ster",
+                "state": {
+                    "ugm3": "\u00b5g/m\u00b3",
+                    "us_aqi": "ABD AQI'si"
+                }
+            },
+            "display_temperature_unit": {
+                "name": "Ekran s\u0131cakl\u0131k birimi",
+                "state": {
+                    "c": "Santigrat",
+                    "f": "Fahrenhayt"
+                }
+            },
+            "led_bar_mode": {
+                "name": "LED \u00e7ubuk modu",
+                "state": {
+                    "co2": "Karbondioksit",
+                    "off": "Kapal\u0131",
+                    "pm": "Partik\u00fcl madde"
+                }
+            }
+        },
+        "sensor": {
+            "nitrogen_index": {
+                "name": "NOx indeksi"
+            },
+            "pm003_count": {
+                "name": "PM0.3"
+            },
+            "raw_nitrogen": {
+                "name": "Ham NOx"
+            },
+            "raw_total_volatile_organic_component": {
+                "name": "Ham VOC (U\u00e7ucu Organik Bile\u015fik)"
+            },
+            "total_volatile_organic_component_index": {
+                "name": "VOC indeksi"
+            }
+        }
+    },
+    "exceptions": {
+        "no_local_configuration": {
+            "message": "Ayarlar\u0131n de\u011fi\u015ftirilebilmesi i\u00e7in cihaz\u0131n yerel konfig\u00fcrasyonla yap\u0131land\u0131r\u0131lmas\u0131 gerekir."
+        }
+    }
+}
