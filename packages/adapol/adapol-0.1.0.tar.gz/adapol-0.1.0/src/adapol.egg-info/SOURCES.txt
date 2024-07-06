@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+pyproject.toml
+src/adapol/__init__.py
+src/adapol/aaa.py
+src/adapol/anacont.py
+src/adapol/fit_utils.py
+src/adapol/hybfit.py
+src/adapol.egg-info/PKG-INFO
+src/adapol.egg-info/SOURCES.txt
+src/adapol.egg-info/dependency_links.txt
+src/adapol.egg-info/requires.txt
+src/adapol.egg-info/top_level.txt
