@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+gitlab_comment_bot/__init__.py
+gitlab_comment_bot.egg-info/PKG-INFO
+gitlab_comment_bot.egg-info/SOURCES.txt
+gitlab_comment_bot.egg-info/dependency_links.txt
+gitlab_comment_bot.egg-info/top_level.txt
+tests/__init__.py
