@@ -1,0 +1,11 @@
+polystar-0.2.0.dist-info/RECORD,,
+polystar-0.2.0.dist-info/WHEEL,sha256=gItc7VKdKM0_zEwEmrvXArFilwP_irGIryx1skdUxg4,110
+polystar-0.2.0.dist-info/COPYING,sha256=AkJuNEXtUzRN1jfNwT4m5Zd9A1RuI4dP-8bq1-8IoTA,33896
+polystar-0.2.0.dist-info/top_level.txt,sha256=V5C-CQG7p6nSqONHxWkhEjYmN-aFJoHDs2DyjbvrMYw,9
+polystar-0.2.0.dist-info/METADATA,sha256=ItL0G74bKXLUsk-7Pb_Lvk_IAnJ005zEI77uJ-kJnmI,1680
+polystar/peaks.py,sha256=YD1P2tRFA9bq-lckyzpkFGcnvsjKHeqmMfwRXST2RKY,6024
+polystar/plot.py,sha256=RBx5Sb8hPpJ0g9XHflopwGnF3HD5XqMo2vXjWmo89vw,2129
+polystar/_polystar.cpython-310-darwin.so,sha256=638AgMvheDj4o68RX29_lshKu4UUse9WE35pcSRmFF8,5399160
+polystar/__init__.py,sha256=V335nlebSfuf5YJqG97JRFG9Q_AgedaKmQuqi5jqMGw,1329
+polystar/vis.py,sha256=oG1AJnkDNZVuFSbBB9x-e8XK2iVPC1Vv7b1wIgItD8w,9720
+polystar/bound.py,sha256=oOfLkD9ge1d03bLyQP_i8_OzWDIZkoFHvii7QirN_TA,1154
