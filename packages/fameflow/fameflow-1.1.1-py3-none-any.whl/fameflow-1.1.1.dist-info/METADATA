@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: fameflow
+Version: 1.1.1
+Summary: A small example package
+Home-page: https://fameflows.site/
+Author: ruks
+Author-email: mntzrhlym053@gmail.com
+Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pytiktok
+### to install:
+```bash
+pip install pytiktok  
+```
+### Example
+```python
+from fameflow import api
+
+# Keye from --> https://fameflows.site/
+
+res = api().NewOrder( id=1530, link='https://www.instagram.com/', quantity=100, Keye="Keye")
+
+print(res)
+
+
+
+
+```
+### cases
+
+* If true, the link will open automatically
+* If flase, the link will not open automatically
+
+### Follow us on social media accounts
+
+* telegram : @DIBIBl ; @TDTDI
+* instgram : @_v_go
+* github : https://github.com/mudiv
