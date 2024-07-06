@@ -1,0 +1,26 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Tj\u00e4nsten \u00e4r redan konfigurerad",
+            "reconfigure_successful": "Omkonfigurationen lyckades"
+        },
+        "step": {
+            "reconfigure_confirm": {
+                "data": {
+                    "url": "URL"
+                },
+                "description": "Uppdatera din konfigurationsinformation f\u00f6r {name} ."
+            },
+            "user": {
+                "data": {
+                    "url": "URL"
+                }
+            }
+        }
+    },
+    "issues": {
+        "import_yaml_error_no_feed_entries": {
+            "description": "Konfigurationen av Feedreader med hj\u00e4lp av YAML tas bort men n\u00e4r man f\u00f6rs\u00f6kte importera YAML-konfigurationen f\u00f6r \"{url}\" hittades inga feed-poster.\n\nKontrollera att webbadressen serverar n\u00e5gra fl\u00f6desposter och starta om Home Assistant f\u00f6r att f\u00f6rs\u00f6ka igen eller ta bort Feedreader YAML-konfigurationen fr\u00e5n din configuration.yaml-fil och forts\u00e4tt att konfigurera integrationen manuellt."
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Tj\u00e4nsten \u00e4r redan konfigurerad"
+        }
+    },
+    "exceptions": {
+        "invalid_data": {
+            "message": "Konfigurationen misslyckades f\u00f6r posten {config_title} med ogiltiga data, kontrollera p\u00e5 [stationboard]( {stationboard_url} ) om dina stationsnamn \u00e4r giltiga.\n {error}"
+        },
+        "request_timeout": {
+            "message": "Timeout vid anslutning f\u00f6r post {config_title}.\n{error}"
+        }
+    }
+}

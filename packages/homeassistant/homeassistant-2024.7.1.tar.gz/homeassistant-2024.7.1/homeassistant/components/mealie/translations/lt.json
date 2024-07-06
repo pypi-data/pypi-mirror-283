@@ -1,0 +1,36 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Paslauga jau sukonfig\u016bruota"
+        },
+        "error": {
+            "cannot_connect": "Nepavyko prisijungti",
+            "invalid_auth": "Neteisingas autentifikavimas",
+            "unknown": "Netik\u0117ta klaida"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "api_token": "API prieigos raktas",
+                    "host": "Host"
+                }
+            }
+        }
+    },
+    "entity": {
+        "calendar": {
+            "breakfast": {
+                "name": "Pusry\u010diai"
+            },
+            "dinner": {
+                "name": "Vakarien\u0117"
+            },
+            "lunch": {
+                "name": "Piet\u016bs"
+            },
+            "side": {
+                "name": "\u0160onin\u0117"
+            }
+        }
+    }
+}

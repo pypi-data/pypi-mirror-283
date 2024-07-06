@@ -1,0 +1,39 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "data_description": {
+                    "target_sensor": "\u73fe\u5728\u306e\u6e29\u5ea6\u3092\u53cd\u6620\u3059\u308b\u6e29\u5ea6\u30bb\u30f3\u30b5\u30fc\u3002"
+                },
+                "description": "\u30b9\u30a4\u30c3\u30c1\u3068\u30bb\u30f3\u30b5\u30fc\u3092\u4ecb\u3057\u3066\u6e29\u5ea6\u3092\u5236\u5fa1\u3059\u308b\u6c17\u5019\u30a8\u30f3\u30c6\u30a3\u30c6\u30a3\u3092\u4f5c\u6210\u3057\u307e\u3059\u3002",
+                "title": "\u6c4e\u7528\u30b5\u30fc\u30e2\u30b9\u30bf\u30c3\u30c8\u30d8\u30eb\u30d1\u30fc\u3092\u8ffd\u52a0"
+            }
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "data_description": {
+                    "target_sensor": "\u73fe\u5728\u306e\u6e29\u5ea6\u3092\u53cd\u6620\u3059\u308b\u6e29\u5ea6\u30bb\u30f3\u30b5\u30fc\u3002"
+                }
+            },
+            "presets": {
+                "data": {
+                    "activity_temp": "\u30a2\u30af\u30c6\u30a3\u30d3\u30c6\u30a3",
+                    "away_temp": "\u4e0d\u5728",
+                    "comfort_temp": "\u5feb\u9069",
+                    "eco_temp": "\u30a8\u30b3",
+                    "home_temp": "\u5728\u5b85",
+                    "sleep_temp": "\u30b9\u30ea\u30fc\u30d7"
+                }
+            }
+        }
+    },
+    "services": {
+        "reload": {
+            "description": "YAML \u69cb\u6210\u304b\u3089\u6c4e\u7528\u30b5\u30fc\u30e2\u30b9\u30bf\u30c3\u30c8\u3092\u30ea\u30ed\u30fc\u30c9\u3057\u307e\u3059\u3002",
+            "name": "\u30ea\u30ed\u30fc\u30c9"
+        }
+    },
+    "title": "\u6c4e\u7528\u30b5\u30fc\u30e2\u30b9\u30bf\u30c3\u30c8"
+}

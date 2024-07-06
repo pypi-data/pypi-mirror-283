@@ -1,0 +1,7 @@
+{
+    "exceptions": {
+        "m3u_invalid_format": {
+            "message": "Mediek\u00e4llor med filnamnstill\u00e4gget .m3u st\u00f6ds inte."
+        }
+    }
+}

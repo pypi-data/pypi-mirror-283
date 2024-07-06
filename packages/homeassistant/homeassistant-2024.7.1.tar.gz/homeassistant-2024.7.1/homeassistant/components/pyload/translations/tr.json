@@ -1,0 +1,51 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Cihaz zaten yap\u0131land\u0131r\u0131lm\u0131\u015f"
+        },
+        "error": {
+            "cannot_connect": "Ba\u011flanma hatas\u0131",
+            "invalid_auth": "Ge\u00e7ersiz kimlik do\u011frulama",
+            "unknown": "Beklenmeyen hata"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "host": "Sunucu",
+                    "name": "Ad",
+                    "password": "\u015eifre",
+                    "port": "Port",
+                    "ssl": "SSL sertifikas\u0131 kullan\u0131r",
+                    "username": "Kullan\u0131c\u0131 Ad\u0131",
+                    "verify_ssl": "SSL sertifikas\u0131n\u0131 do\u011frulay\u0131n"
+                },
+                "data_description": {
+                    "host": "pyLoad \u00f6rne\u011finizi \u00e7al\u0131\u015ft\u0131ran cihaz\u0131n ana bilgisayar ad\u0131 veya IP adresi.",
+                    "name": "Home Assistant'ta pyLoad \u00f6rne\u011finiz i\u00e7in kullan\u0131lacak ad",
+                    "port": "pyLoad varsay\u0131lan olarak 8000 numaral\u0131 ba\u011flant\u0131 noktas\u0131n\u0131 kullan\u0131r."
+                }
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "speed": {
+                "name": "H\u0131z"
+            }
+        }
+    },
+    "issues": {
+        "deprecated_yaml_import_issue_cannot_connect": {
+            "description": "pyLoad'u YAML kullanarak yap\u0131land\u0131rma kald\u0131r\u0131l\u0131yor ancak YAML yap\u0131land\u0131rmas\u0131 i\u00e7e aktar\u0131lmaya \u00e7al\u0131\u015f\u0131l\u0131rken bir ba\u011flant\u0131 hatas\u0131 olu\u015ftu. \n\n L\u00fctfen istikrarl\u0131 bir internet ba\u011flant\u0131n\u0131z oldu\u011funu do\u011frulay\u0131n ve tekrar denemek i\u00e7in Home Assistant'\u0131 yeniden ba\u015flat\u0131n veya pyLoad YAML yap\u0131land\u0131rmas\u0131n\u0131 yap\u0131land\u0131rma.yaml dosyan\u0131zdan kald\u0131r\u0131n ve [entegrasyonu ayarlamaya]( {url} ) manuel olarak devam edin.",
+            "title": "pyLoad YAML yap\u0131land\u0131rmas\u0131n\u0131n i\u00e7e aktar\u0131m\u0131 ba\u015far\u0131s\u0131z oldu"
+        },
+        "deprecated_yaml_import_issue_invalid_auth": {
+            "description": "pyLoad'u YAML kullanarak yap\u0131land\u0131rma kald\u0131r\u0131l\u0131yor ancak YAML yap\u0131land\u0131rmas\u0131 i\u00e7e aktar\u0131lmaya \u00e7al\u0131\u015f\u0131l\u0131rken bir kimlik do\u011frulama hatas\u0131 olu\u015ftu. \n\n YAML yap\u0131land\u0131rmas\u0131n\u0131 d\u00fczeltin ve Home Assistant'\u0131 yeniden ba\u015flatarak tekrar deneyin veya pyLoad YAML yap\u0131land\u0131rmas\u0131n\u0131 yap\u0131land\u0131rma.yaml dosyan\u0131zdan kald\u0131r\u0131n ve [entegrasyonu ayarlamaya]( {url} ) manuel olarak devam edin.",
+            "title": "pyLoad YAML yap\u0131land\u0131rmas\u0131n\u0131n i\u00e7e aktar\u0131m\u0131 ba\u015far\u0131s\u0131z oldu"
+        },
+        "deprecated_yaml_import_issue_unknown": {
+            "description": "pyLoad'u YAML kullanarak yap\u0131land\u0131rma kald\u0131r\u0131l\u0131yor ancak YAML yap\u0131land\u0131rmas\u0131 i\u00e7e aktar\u0131lmaya \u00e7al\u0131\u015f\u0131l\u0131rken bilinmeyen bir hata olu\u015ftu. \n\n YAML yap\u0131land\u0131rmas\u0131n\u0131n do\u011fru oldu\u011fundan emin olun ve tekrar denemek i\u00e7in Home Assistant'\u0131 yeniden ba\u015flat\u0131n veya pyLoad YAML yap\u0131land\u0131rmas\u0131n\u0131 yap\u0131land\u0131rma.yaml dosyan\u0131zdan kald\u0131r\u0131n ve [entegrasyonu ayarlamaya]( {url} ) manuel olarak devam edin.",
+            "title": "pyLoad YAML yap\u0131land\u0131rmas\u0131n\u0131n i\u00e7e aktar\u0131m\u0131 ba\u015far\u0131s\u0131z oldu"
+        }
+    }
+}

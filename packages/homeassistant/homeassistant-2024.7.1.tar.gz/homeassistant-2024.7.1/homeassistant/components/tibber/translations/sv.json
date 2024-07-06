@@ -1,0 +1,36 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Tj\u00e4nsten \u00e4r redan konfigurerad"
+        },
+        "error": {
+            "cannot_connect": "Det gick inte att ansluta.",
+            "invalid_access_token": "Ogiltig \u00e5tkomstnyckel",
+            "timeout": "Timeout vid uppr\u00e4ttande av anslutning"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "access_token": "\u00c5tkomstnyckel"
+                },
+                "description": "Ange din \u00e5tkomsttoken fr\u00e5n {url}"
+            }
+        }
+    },
+    "services": {
+        "get_prices": {
+            "description": "F\u00e5 energipriser per timme fr\u00e5n Tibber",
+            "fields": {
+                "end": {
+                    "description": "Anger det datum och den tid fram till vilket priser ska h\u00e4mtas. Standardv\u00e4rdet \u00e4r den sista timmen i dag om det utel\u00e4mnas.",
+                    "name": "Till"
+                },
+                "start": {
+                    "description": "Anger det datum och den tid som priserna ska h\u00e4mtas fr\u00e5n. Standardv\u00e4rdet \u00e4r idag om det utel\u00e4mnas.",
+                    "name": "Fr\u00e5n"
+                }
+            },
+            "name": "H\u00e4mta energipriser"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "\u670d\u52d9\u5df2\u7d93\u8a2d\u5b9a\u5b8c\u6210"
+        },
+        "error": {
+            "cannot_connect": "\u9023\u7dda\u5931\u6557",
+            "invalid_auth": "\u8eab\u4efd\u9a57\u8b49\u7121\u6548",
+            "unknown": "\u672a\u9810\u671f\u932f\u8aa4"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "api_token": "API \u6b0a\u6756",
+                    "host": "\u4e3b\u6a5f\u7aef"
+                }
+            }
+        }
+    },
+    "entity": {
+        "calendar": {
+            "breakfast": {
+                "name": "\u65e9\u9910"
+            },
+            "dinner": {
+                "name": "\u665a\u9910"
+            },
+            "lunch": {
+                "name": "\u5348\u9910"
+            },
+            "side": {
+                "name": "\u5c0f\u83dc"
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "config": {
+        "abort": {
+            "reauth_successful": "\u00c5terautentisering lyckades"
+        },
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "email": "E-post",
+                    "password": "L\u00f6senord"
+                },
+                "description": "Bring! integrationen beh\u00f6ver autentisera ditt konto p\u00e5 nytt",
+                "title": "Autentiseringen har upph\u00f6rt att g\u00e4lla f\u00f6r {name}"
+            }
+        }
+    },
+    "services": {
+        "send_message": {
+            "name": "Skicka ett meddelande"
+        }
+    }
+}

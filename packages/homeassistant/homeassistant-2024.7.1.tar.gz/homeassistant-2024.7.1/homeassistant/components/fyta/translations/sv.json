@@ -1,0 +1,40 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Enheten \u00e4r redan konfigurerad",
+            "reauth_successful": "\u00c5terautentisering lyckades"
+        },
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "password": "L\u00f6senord",
+                    "username": "Anv\u00e4ndarnamn"
+                }
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "light_status": {
+                "state": {
+                    "no_data": "Ingen data"
+                }
+            },
+            "moisture_status": {
+                "state": {
+                    "no_data": "Ingen data"
+                }
+            },
+            "salinity_status": {
+                "state": {
+                    "no_data": "Ingen data"
+                }
+            },
+            "temperature_status": {
+                "state": {
+                    "no_data": "Ingen data"
+                }
+            }
+        }
+    }
+}
