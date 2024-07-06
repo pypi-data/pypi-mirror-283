@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: spectral-bridges
+Version: 0.1.1
+Summary: Spectral Bridges clustering algorithm
+Home-page: https://github.com/flheight/spectral-bridges-pypi/
+Author: Félix Laplante
+Author-email: Félix Laplante <flheight0@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: faiss-cpu
+
+# Spectral Bridges
+
+Spectral Bridges is a novel and scalable clustering algorithm that draws inspiration from SVM's margin concept, using k-means clustering and spectral clustering based on Laplacian matrices by first creating a Voronoi tesselation and subsequently merging cells according to a connectivity measure. This package provides efficient clustering solutions for large datasets.
+
+## Features
+
+- **Spectral Bridges**: Combines k-means and spectral clustering with efficient affinity matrix calculation to provide robust clustering results.
+
+## Installation
+
+You can install the package via pip:
+
+```bash
+pip install spectral-bridges
