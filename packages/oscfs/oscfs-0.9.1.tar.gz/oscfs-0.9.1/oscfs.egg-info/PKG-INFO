@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: oscfs
+Version: 0.9.1
+Summary: A FUSE based file system to access Open Build Service (OBS) instances
+Home-page: https://github.com/mgerstner/oscfs
+Author: Matthias Gerstner
+Author-email: matthias.gerstner@suse.de
+License: GPL2
+Keywords: fuse obs osc openSUSE
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: System :: Filesystems
+License-File: LICENSE.txt
+Requires-Dist: osc
+Requires-Dist: fusepy
+
+no long description available
