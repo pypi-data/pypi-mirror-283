@@ -1,0 +1,3 @@
+graft ignacio_bot/templates
+graft ignacio_bot/static
+include ignacio_bot/system_context.txt
