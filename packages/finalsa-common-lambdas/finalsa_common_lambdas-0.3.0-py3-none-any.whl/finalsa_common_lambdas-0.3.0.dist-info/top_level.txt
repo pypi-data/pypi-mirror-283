@@ -1,0 +1,6 @@
+finalsa/common/lambdas
+finalsa/common/lambdas/app
+finalsa/common/lambdas/context
+finalsa/common/lambdas/http
+finalsa/common/lambdas/logger
+finalsa/common/lambdas/sqs
