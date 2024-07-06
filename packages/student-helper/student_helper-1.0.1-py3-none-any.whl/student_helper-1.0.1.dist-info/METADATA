@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: student-helper
+Version: 1.0.1
+Summary: This is my first module
+Home-page: UNKNOWN
+Author: Bozonxiggsa
+Author-email: Bozonxiggsa01@gmail.com
+License: UNKNOWN
+Keywords: example python
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests >=2.25.1
+
+Р­С‚Рѕ Р±РёР±Р»РёРѕС‚РµРєР° СЃРѕР·РґР°РЅР° РґР»СЏ РїРѕРјРѕС‰Рё СЃС‚СѓРґРµРЅС‚Р°Рј
+
