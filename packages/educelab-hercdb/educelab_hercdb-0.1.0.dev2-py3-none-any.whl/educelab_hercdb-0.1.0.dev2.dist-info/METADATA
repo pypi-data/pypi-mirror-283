@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: educelab-hercdb
+Version: 0.1.0.dev2
+Summary: Graph database API for Herculaneum data
+Author-email: Mami Hayashida <mami.hayashida@uky.edu>, Seth Parker <c.seth.parker@uky.edu>
+Project-URL: Repository, https://gitlab.com/educelab/herculaneum-graph-db
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: neo4j >=5.20
+Requires-Dist: numpy >=2.0
+Requires-Dist: pandas >=2.2
+Requires-Dist: prompt-toolkit
+
+# Herculaneum Graph Database Project
+
+
