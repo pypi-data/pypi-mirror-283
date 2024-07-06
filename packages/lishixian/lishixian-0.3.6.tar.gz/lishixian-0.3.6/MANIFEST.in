@@ -1,0 +1,4 @@
+include *
+exclude test*
+exclude */docs/*.md
+exclude */docs/*.txt
