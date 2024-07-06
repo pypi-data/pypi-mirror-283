@@ -1,0 +1,12 @@
+pyproject.toml
+streaminghub_proxy_lsl/__init__.py
+streaminghub_proxy_lsl/lsl.py
+streaminghub_proxy_lsl/proxy.py
+streaminghub_proxy_lsl/test.py
+streaminghub_proxy_lsl/util.py
+streaminghub_proxy_lsl.egg-info/PKG-INFO
+streaminghub_proxy_lsl.egg-info/SOURCES.txt
+streaminghub_proxy_lsl.egg-info/dependency_links.txt
+streaminghub_proxy_lsl.egg-info/entry_points.txt
+streaminghub_proxy_lsl.egg-info/requires.txt
+streaminghub_proxy_lsl.egg-info/top_level.txt

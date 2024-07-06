@@ -1,0 +1,11 @@
+streaminghub-datamux
+streaminghub-pydfds
+pylsl
+rich
+xmltodict
+
+[dev]
+build
+twine
+bumpver
+pip-tools
