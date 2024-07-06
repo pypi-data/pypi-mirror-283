@@ -1,0 +1,14 @@
+environmentfinder/App.ipynb,sha256=13bBTyi29Q0JJ-rIR1_e8jnJlC5V1UhbuFN88eO4ipE,21325
+environmentfinder/__init__.py,sha256=HfIGRpFXwxuYbfECy07OjHf3Y_eydNESTrmvcq7mHX8,33
+environmentfinder/environmentfinder.py,sha256=OZnBvbX5rLkdpQqGNZPQlU_Wvq13vtJYguow2SXae38,14843
+environmentfinder/logo-notext.png,sha256=Etn1y_mxgSiv6UXobBwGICxZ_bfRLHYPbqFUanBY1A4,119715
+environmentfinder/logo.png,sha256=eBEUWLCAXpmX0ZpHVX46lHGCWZdqssvUh4uIkvvKDLM,147032
+environmentfinder/examples/Ga_II.vasp,sha256=HiO-kK6jOIqS4qLNJy5g3xfLugo4_gcjsDdKRiix-bc,902
+environmentfinder/examples/IceIh.pdb,sha256=SIg2yN7re3zzqxCstpHqCCHuFE3NihsV2PStYJYZh3E,22827
+environmentfinder/examples/urea2.pdb,sha256=g6ldQiyNcmCw9iYeuy2kgv_dpMGhXbrzjSK9ACqtQcY,1963
+environmentfinder-1.1.5.data/scripts/environmentfinder,sha256=wf_ZNnsEa1qB82RWtVYPEYgkIFN4GibyEeYus6DHjmo,190
+environmentfinder-1.1.5.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+environmentfinder-1.1.5.dist-info/METADATA,sha256=u2r0-xaZQYU2APfy46Fx5wpzgdLryIVr-bFEbA363dg,6578
+environmentfinder-1.1.5.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+environmentfinder-1.1.5.dist-info/top_level.txt,sha256=WfPR9gGAuNSWaV1iZd9FPGhTUQUJbODcD5Z6zVnGASg,18
+environmentfinder-1.1.5.dist-info/RECORD,,
