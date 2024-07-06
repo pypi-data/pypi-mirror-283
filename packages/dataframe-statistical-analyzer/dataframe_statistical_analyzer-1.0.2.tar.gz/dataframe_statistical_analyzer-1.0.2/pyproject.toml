@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "dataframe-statistical-analyzer"
+version = "1.0.2"
+description = "The `DataFrame Statistical Analyzer` package provides a utility tool for statistical analyzing in a Pandas DataFrame."
+authors = ["Durgesh Rathod"]
+readme = "README.md"
+repository = "https://github.com/DurgeshRathod/dataframe-statistical-analyzer"
+homepage = "https://github.com/DurgeshRathod/dataframe-statistical-analyzer"
+keywords = ["time-series", "data analysis", "machine learning", "statistics"]
+
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.2.2"
+matplotlib = "^3.9.1"
+scipy = "^1.14.0"
+scikit-learn = "^1.5.1"
+statsmodels = "^0.14.2"
+numpy = "^2.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+isort = "^5.13.2"
+black = "^24.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
