@@ -1,0 +1,13 @@
+# Core dependencies goes here
+boto3
+fire>=0.4.0,<1.0.0
+s3pathlib>=2.1.2,<3.0.0
+boto_session_manager>=1.7.2,<2.0.0
+loguru>=0.7.0,<1.0.0
+light_emoji==0.1.1
+vislog>=0.1.2,<1.0.0
+acore_conf>=0.1.2,<2.0.0
+acore_paths>=0.3.2,<2.0.0
+acore_constants>=0.2.1,<2.0.0
+acore_server>=1.1.1,<2.0.0
+jinja2>=3.0.0,<4.0.0
