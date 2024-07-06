@@ -1,0 +1,17 @@
+mas/devops/__init__.py,sha256=QVyotVT_KyFSSUYAYqAzwXQz3KmCYBZqq8DV4EghMWQ,490
+mas/devops/mas.py,sha256=qN_Hx8gSjlPW8goN-as3cum2mnBS-3tDssyWimUcV5A,2086
+mas/devops/ocp.py,sha256=R6QEn0KnsDLhxtEWAWPrLR4VhyXClsF7DoXmuPxuww4,4381
+mas/devops/tekton.py,sha256=gdkK5GrBO3OxAy_F8QxClJNQO1kcxkJQeAeYNZMweLM,14827
+mas/devops/templates/pipeline-additional-configs.yml.j2,sha256=UDutfXjVePx6u2MVjzlFw3WqGSPYHfpXDxgZalcVprQ,91
+mas/devops/templates/pipelinerun-install.yml.j2,sha256=tJBoSd2NXWNK8Y5HNWstUosoLqkOa22g1ChW5VNorB8,25742
+mas/devops/templates/pipelinerun-uninstall.yml.j2,sha256=hWE59LKtH1s1P3HEPexwKAG-o3GUPHcbk67U5IWd5Gc,872
+mas/devops/templates/pipelinerun-upgrade.yml.j2,sha256=iTMZhho2eBmYxw1hnPn67xYGhpYrjSwz04CGh902FaE,406
+mas/devops/templates/pipelines-pvc.yml.j2,sha256=Mr3vbc-nLaGtscqCD9lxtGybE6axfGvQY1eY2PpkxEU,345
+mas/devops/templates/pipelines-rbac-cluster.yml.j2,sha256=0zc5HLjgDXfBEKNDjKym-sIQlMCvcIizbY-8m7xoNpA,320
+mas/devops/templates/pipelines-rbac.yml.j2,sha256=6hU4MvgEOrRlSMAgKbfHg6LHTReZ7702wKfYWg11G4Y,364
+mas/devops/templates/subscription.yml.j2,sha256=C3b_c2llELzshRGNiWoek-iNTEj2Rorwh-H7VitPcU4,317
+mas_devops-1.1.6.dist-info/LICENSE,sha256=jDSfgHZNBkjmRfQe8jdypwyZWgkktSNfc19KPQnfEnw,14197
+mas_devops-1.1.6.dist-info/METADATA,sha256=zyoZbBSDG-2GzkAdkrkun5Shrp1XTICu0cGGkEZ8Bhg,2075
+mas_devops-1.1.6.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+mas_devops-1.1.6.dist-info/top_level.txt,sha256=_Hlsp7pvMvyV14LFg-vk1hULq30j61EILnnxMFIhhc8,4
+mas_devops-1.1.6.dist-info/RECORD,,
