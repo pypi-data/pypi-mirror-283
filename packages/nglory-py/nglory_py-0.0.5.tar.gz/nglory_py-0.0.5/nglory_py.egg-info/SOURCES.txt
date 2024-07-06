@@ -1,0 +1,13 @@
+setup.py
+nglory_py.egg-info/PKG-INFO
+nglory_py.egg-info/SOURCES.txt
+nglory_py.egg-info/dependency_links.txt
+nglory_py.egg-info/requires.txt
+nglory_py.egg-info/top_level.txt
+ngpy/NGApi.py
+ngpy/__init__.py
+ngpy/responses/CountryResponse.py
+ngpy/responses/MarketResponse.py
+ngpy/responses/NotationResponse.py
+ngpy/responses/UserResponse.py
+ngpy/responses/__init__.py
