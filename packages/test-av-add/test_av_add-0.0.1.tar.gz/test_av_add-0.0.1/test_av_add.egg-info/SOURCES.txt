@@ -1,0 +1,8 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+test_av_add.egg-info/PKG-INFO
+test_av_add.egg-info/SOURCES.txt
+test_av_add.egg-info/dependency_links.txt
+test_av_add.egg-info/top_level.txt
