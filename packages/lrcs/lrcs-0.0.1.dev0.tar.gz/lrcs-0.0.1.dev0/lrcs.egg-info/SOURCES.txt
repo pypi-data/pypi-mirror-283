@@ -1,0 +1,10 @@
+COPYING
+COPYING.lesser
+LICENSE
+README.md
+pyproject.toml
+lrcs/__init__.py
+lrcs.egg-info/PKG-INFO
+lrcs.egg-info/SOURCES.txt
+lrcs.egg-info/dependency_links.txt
+lrcs.egg-info/top_level.txt

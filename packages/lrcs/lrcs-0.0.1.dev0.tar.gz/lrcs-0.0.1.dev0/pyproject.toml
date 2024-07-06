@@ -1,0 +1,21 @@
+[project]
+name = "lrcs"
+version = "0.0.1dev"
+authors = [
+  { name="ZAID", email="me@zaid.pro" },
+]
+description = "Soon"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.packages.find]
+include = ["lrcs*"]
+exclude = ["docs*", "tests*", "examples*"]
