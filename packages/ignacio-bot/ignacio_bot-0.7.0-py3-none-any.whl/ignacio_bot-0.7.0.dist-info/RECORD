@@ -1,0 +1,11 @@
+ignacio_bot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ignacio_bot/app.py,sha256=N5yVjX4vHlDexwQvq-m8N91FOKky5MuxYGX8eq-bmW8,2256
+ignacio_bot/system_context.txt,sha256=026ICw8uxidXBDPakcWxsbsnIruXbPU8eITaGjKzQHU,21916
+ignacio_bot/static/GRG_logo.png,sha256=8BHbKgiEly-9mGbSYMXsMT6ev3sxndkHUlp0WXhq5AE,2204
+ignacio_bot/templates/index.html,sha256=m0Lx34-BoRMnnLa9bv71CLaOWCr610rvTtp-Soj3JRU,8562
+ignacio_bot-0.7.0.dist-info/LICENSE,sha256=6kEtxdRPuD_mmaqpagC_98VJl1Fr_ZCFdUdzCbqIp0g,1066
+ignacio_bot-0.7.0.dist-info/METADATA,sha256=UzhPBS9Ln-cbUtsWpJkEccl65aM4XBk6PLokUJxDeJ8,1364
+ignacio_bot-0.7.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ignacio_bot-0.7.0.dist-info/entry_points.txt,sha256=pf3AVqx3veyGliF8j9HFMjWibXZVDa8BOx-S53AB_Hk,53
+ignacio_bot-0.7.0.dist-info/top_level.txt,sha256=Za9iuL3rqPYU9UibCCKIvXZPn9b7yy_itjHaNYB3ENg,12
+ignacio_bot-0.7.0.dist-info/RECORD,,
