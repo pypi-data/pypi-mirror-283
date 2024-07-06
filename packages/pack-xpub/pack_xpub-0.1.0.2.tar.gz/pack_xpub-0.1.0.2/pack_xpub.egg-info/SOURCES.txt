@@ -1,0 +1,5 @@
+setup.py
+pack_xpub.egg-info/PKG-INFO
+pack_xpub.egg-info/SOURCES.txt
+pack_xpub.egg-info/dependency_links.txt
+pack_xpub.egg-info/top_level.txt
