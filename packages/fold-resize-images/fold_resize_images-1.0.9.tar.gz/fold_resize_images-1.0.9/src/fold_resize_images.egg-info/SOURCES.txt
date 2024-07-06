@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/fold_resize_images.py
+src/fold_resize_images.egg-info/PKG-INFO
+src/fold_resize_images.egg-info/SOURCES.txt
+src/fold_resize_images.egg-info/dependency_links.txt
+src/fold_resize_images.egg-info/entry_points.txt
+src/fold_resize_images.egg-info/requires.txt
+src/fold_resize_images.egg-info/top_level.txt
+tests/test_resize_images.py

@@ -1,0 +1,2 @@
+[console_scripts]
+fold-resize-images = fold_resize_images:main
