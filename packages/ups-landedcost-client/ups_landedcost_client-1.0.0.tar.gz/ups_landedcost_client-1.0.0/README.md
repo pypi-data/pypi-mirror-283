@@ -1,0 +1,103 @@
+# UpsLandedcostClient Python SDK 1.0.0
+
+Welcome to the UpsLandedcostClient SDK documentation. This guide will help you get started with integrating and using the UpsLandedcostClient SDK in your project.
+
+## Versions
+
+- SDK version: `1.0.0`
+
+## About the API
+
+The Landed Cost Quote API allows you to estimate the all-inclusive cost of international shipments - including applicable duties, VAT, taxes, brokerage fees, and other fees. Required parameters include the currency and shipment details, such as the commodity ID, price, quantity, and country code of origin. Key Business Values: - **Enhanced Customer Experience**: Get a quick and accurate quote on the landed cost of a shipment, including the cost of goods, transportation, and any other fees associated with getting the goods to their destination. - **Operational Efficiency**: Simplify the process of calculating landed costs by eliminating the need to manually research and calculate all of the different fees involved. - **Data-Driven Decision Making**: Improve decision-making by having a clear understanding of the total cost of shipping goods before you commit to a purchase.. - **Optimizing Cash Flow**: Streamline your shipping process by integrating the Landed Cost Quote API into your existing systems. In order to obtain your bearer token please follow the instructions at https://developer.ups.com/get-started, or use the UPS Authorization API.
+
+## Table of Contents
+
+- [Setup & Configuration](#setup--configuration)
+  - [Supported Language Versions](#supported-language-versions)
+  - [Installation](#installation)
+- [Authentication](#authentication)
+  - [Basic Authentication](#basic-authentication)
+- [Services](#services)
+- [Models](#models)
+- [License](#license)
+
+## Setup & Configuration
+
+### Supported Language Versions
+
+This SDK is compatible with the following versions: `Python >= 3.7`
+
+### Installation
+
+To get started with the SDK, we recommend installing using `pip`:
+
+```bash
+pip install ups_landedcost_client
+```
+
+## Authentication
+
+### Basic Authentication
+
+The UpsLandedcostClient API uses Basic Authentication.
+
+You need to provide your username and password when initializing the SDK.
+
+#### Setting the Username and Password
+
+When you initialize the SDK, you can set the username and password as follows:
+
+```py
+UpsLandedcostClient(
+    username="YOUR_USERNAME",
+    password="YOUR_PASSWORD"
+)
+```
+
+If you need to set or update the username and password after initializing the SDK, you can use:
+
+```py
+sdk.set_basic_auth("YOUR_USERNAME", "YOUR_PASSWORD")
+```
+
+## Services
+
+The SDK provides various services to interact with the API.
+
+<details> 
+<summary>Below is a list of all available services with links to their detailed documentation:</summary>
+
+| Name                                                             |
+| :--------------------------------------------------------------- |
+| [LandedcostService](documentation/services/LandedcostService.md) |
+
+</details>
+
+## Models
+
+The SDK includes several models that represent the data structures used in API requests and responses. These models help in organizing and managing the data efficiently.
+
+<details> 
+<summary>Below is a list of all available models with links to their detailed documentation:</summary>
+
+| Name                                                                           | Description                                             |
+| :----------------------------------------------------------------------------- | :------------------------------------------------------ |
+| [LandedCostRequest](documentation/models/LandedCostRequest.md)                 | The root element for the Landed Cost document.          |
+| [LandedCostResponse](documentation/models/LandedCostResponse.md)               |                                                         |
+| [LandedCostRequestShipment](documentation/models/LandedCostRequestShipment.md) | Every Landed Cost request must be based on a shipment.  |
+| [RequestShipmentItems](documentation/models/RequestShipmentItems.md)           |                                                         |
+| [Shipment](documentation/models/Shipment.md)                                   | Every Landed Cost response must be based on a shipment. |
+| [BrokerageFeeItems](documentation/models/BrokerageFeeItems.md)                 |                                                         |
+| [ResponseShipmentItems](documentation/models/ResponseShipmentItems.md)         |                                                         |
+| [PerfStats](documentation/models/PerfStats.md)                                 | See ALPerfStats                                         |
+| [Errors](documentation/models/Errors.md)                                       | Error code and description                              |
+
+</details>
+
+## License
+
+This SDK is licensed under the MIT License.
+
+See the [LICENSE](LICENSE) file for more details.
+
+<!-- This file was generated by liblab | https://liblab.com/ -->
