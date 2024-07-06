@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pdf_to_json_extractor
+Version: 0.0.1
+Summary: Library for pdf to json convertor
+Home-page: https://github.com/mohitgupta07/pdf_to_json_extractor
+Author: mohit gupta
+Author-email: cse.mohitgupta.07@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+This library provides a pdf to json extraction logic.
+it uses adobe api for preprocessing.
+
+

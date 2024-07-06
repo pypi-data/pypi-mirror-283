@@ -1,0 +1,6 @@
+README.md
+setup.py
+pdf_to_json_extractor.egg-info/PKG-INFO
+pdf_to_json_extractor.egg-info/SOURCES.txt
+pdf_to_json_extractor.egg-info/dependency_links.txt
+pdf_to_json_extractor.egg-info/top_level.txt
