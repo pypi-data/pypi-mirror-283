@@ -1,0 +1,5 @@
+spacemenu
+ConfigArgParse
+PyYAML
+pycairo
+PyGObject
