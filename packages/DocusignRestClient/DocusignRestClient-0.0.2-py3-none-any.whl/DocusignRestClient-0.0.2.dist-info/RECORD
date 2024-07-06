@@ -1,0 +1,16 @@
+docusign/__init__.py,sha256=OAcGd5iCdwJgEmY0V-OhUlu1KlclFnNwrm2Z0pvZBjE,151
+docusign/exception.py,sha256=FWknYU24G-_kDIfHOsdnnydZBV63mGJ4DEb21aNnNF8,421
+docusign/serializer.py,sha256=d6R_qTMqblKUTFfkY60QCNh9LSPK12jU3Frqz6Nocl8,626
+docusign/helper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+docusign/helper/ds_client.py,sha256=t5MzfJIMqrMantztbIpLR2j0GwipXB5p1yydwr-d3kU,327
+docusign/helper/token.py,sha256=SUChBsFXll9hPcaH1b3jcjw6Ab0kytzUFQsFT0j4DnE,709
+docusign/service/__init__.py,sha256=ihzvns_-2vB6Yx7QdZJEDlKbUPqApJ7S1zcDEvWNx-I,46
+docusign/service/docusign_service.py,sha256=D3BxG-Wx1DqNq_ZbAHKVY-KxZdQQWIT5aOB_xZaK30M,281
+docusign/service/http_service.py,sha256=B8-e25LT4tmWUhJAPrwbgAfID7Dt2EIhywXRXcefb1Q,1130
+docusign/service/template_service.py,sha256=_ncdl2qFIySF-jlfGVpdIqCqXGdW_QTRBuVef28qTWQ,2430
+docusign/service/token_service.py,sha256=qbP2t1ZIJ0kH0N-pVUWiW1XlGmRRDJujWw_f5U8EPVs,1845
+DocusignRestClient-0.0.2.dist-info/LICENSE,sha256=kMDUYTNnummGMZiwFP-gcNFZ2zLkL7HnTQG4WZHlBCc,1071
+DocusignRestClient-0.0.2.dist-info/METADATA,sha256=ToHPY68lEJDTTJZtjenHQS9Y-4j2ZgQKd5Ktvve16Vw,1536
+DocusignRestClient-0.0.2.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+DocusignRestClient-0.0.2.dist-info/top_level.txt,sha256=qQjqp3i_ZXlqcO0bu8yItTpYl-iGoodP13sWrxH_X_Q,9
+DocusignRestClient-0.0.2.dist-info/RECORD,,
