@@ -1,0 +1,9 @@
+torch
+numpy
+jax
+optax
+equinox
+
+[notebook]
+jupyter
+matplotlib
