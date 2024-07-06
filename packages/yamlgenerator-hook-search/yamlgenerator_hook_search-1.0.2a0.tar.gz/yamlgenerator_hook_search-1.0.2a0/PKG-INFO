@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: yamlgenerator-hook-search
+Version: 1.0.2a0
+Summary: 
+License: MIT
+Author: kaixinol
+Author-email: keiplyer@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: epicstore-api (>=0.1.6,<0.2.0)
+Requires-Dist: gameyamlspiderandgenerator (>=2.0.1a,<3.0)
+Requires-Dist: google-search-results (>=2.4.2,<3.0.0)
+Requires-Dist: serpapi (>=0.1.5,<0.2.0)
+Description-Content-Type: text/markdown
+
+ # search hook
+
