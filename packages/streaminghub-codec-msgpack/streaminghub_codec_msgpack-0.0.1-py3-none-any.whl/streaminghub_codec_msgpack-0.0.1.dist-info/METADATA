@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: streaminghub-codec-msgpack
+Version: 0.0.1
+Summary: Streaminghub plugin to use msgpack as a codec
+Author-email: Yasith Jayawardana <yasith@cs.odu.edu>
+Project-URL: homepage, https://github.com/nirdslab/streaminghub/tree/master/plugins/streaminghub_codec_msgpack
+Keywords: streaminghub
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: streaminghub-datamux
+Requires-Dist: streaminghub-pydfds
+Requires-Dist: msgpack
+Requires-Dist: pydantic
+Provides-Extra: dev
+Requires-Dist: build ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: bumpver ; extra == 'dev'
+Requires-Dist: pip-tools ; extra == 'dev'
+
