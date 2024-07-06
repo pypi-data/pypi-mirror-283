@@ -1,0 +1,10 @@
+waverider_generator/__init__.py,sha256=eu1v9LmJKHeeRzC0-xKaLYkjtoo4P5tWRhh2pMQ73Q0,164
+waverider_generator/cad_export.py,sha256=GnEszY4Cnckstux3Il_PPpT55gxXRBL9hUhR6_MYQqo,4598
+waverider_generator/flowfield.py,sha256=5KcQ4rf-B8F4fQI8p_ic3LEQYCGmKVH_8GQhvzxp3wo,4558
+waverider_generator/generator.py,sha256=BIIaLHj4dKidVyu01D_ro_Chz_sclI31lKOLqWr6-RE,24571
+waverider_generator/plotting_tools.py,sha256=13P1WJ9Im6ALEHBY9A0WxOK81QufUVDw2--5gVV795s,2793
+waverider_generator-2.0.1.dist-info/LICENSE,sha256=7iBi0Gvaz7yPZJDNhOJ-6rbBAhCO2EbdSjTUUPJQGdc,1065
+waverider_generator-2.0.1.dist-info/METADATA,sha256=5mSXgViu2JxFcrLzzBPzoiWIgkioM8Jpt2UvbRq82VA,10640
+waverider_generator-2.0.1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+waverider_generator-2.0.1.dist-info/top_level.txt,sha256=TIslkolTqWRDY8uhw4yym6JsWwgRtpSoKlxmrxG8gV4,20
+waverider_generator-2.0.1.dist-info/RECORD,,
