@@ -1,0 +1,9 @@
+README.md
+setup.py
+HyperLibs/__init__.py
+HyperLibs/config.py
+v1hyperbot.egg-info/PKG-INFO
+v1hyperbot.egg-info/SOURCES.txt
+v1hyperbot.egg-info/dependency_links.txt
+v1hyperbot.egg-info/requires.txt
+v1hyperbot.egg-info/top_level.txt
