@@ -1,0 +1,4 @@
+django-api-helper
+django-filter
+django-import-export
+django>=3.0
