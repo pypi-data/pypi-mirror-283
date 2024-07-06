@@ -1,0 +1,2 @@
+[console_scripts]
+seatable-client = seatable_client.scripts:seatable_client
