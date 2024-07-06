@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "gaspump"
+version = "1.0.0"
+description = "SDK on python for GasPump."
+authors = ["littlecat-dev"]
+readme = "README.md"
+packages = [{include = "gaspump"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pytoniq = "^0.1.39"
+pydantic-settings = "^2.3.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
