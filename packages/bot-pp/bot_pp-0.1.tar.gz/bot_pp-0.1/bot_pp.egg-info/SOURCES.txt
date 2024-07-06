@@ -1,0 +1,8 @@
+setup.py
+bot_pp.egg-info/PKG-INFO
+bot_pp.egg-info/SOURCES.txt
+bot_pp.egg-info/dependency_links.txt
+bot_pp.egg-info/entry_points.txt
+bot_pp.egg-info/top_level.txt
+librarypp/__init__.py
+librarypp/main.py
