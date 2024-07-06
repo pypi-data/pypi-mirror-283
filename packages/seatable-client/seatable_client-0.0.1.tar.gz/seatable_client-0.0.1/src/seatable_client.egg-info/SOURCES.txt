@@ -1,0 +1,12 @@
+MANIFEST.in
+pyproject.toml
+setup.cfg
+src/seatable_client/__init__.py
+src/seatable_client/example.py
+src/seatable_client/scripts.py
+src/seatable_client.egg-info/PKG-INFO
+src/seatable_client.egg-info/SOURCES.txt
+src/seatable_client.egg-info/dependency_links.txt
+src/seatable_client.egg-info/entry_points.txt
+src/seatable_client.egg-info/requires.txt
+src/seatable_client.egg-info/top_level.txt
