@@ -1,0 +1,17 @@
+IntegralElimination/IntegralAlgebra.py,sha256=fpIM9RnNIFk83N42Wd8BvGo_Pkz3wY2U3RxnaZTHrXg,11408
+IntegralElimination/IntegralMonomial.py,sha256=WxB3tFOdB9pzo5IYojfxhYviXS2f5L-8GrglkdFdbV0,3022
+IntegralElimination/IntegralPolynomial.py,sha256=xdpN5MGrAz6ypSGRdH2pJ0or0X3fN03MBzfvcfsiRUU,5577
+IntegralElimination/__init__.py,sha256=5Oa_7oiwBduyydCrkahTVMnoLWhS2QAatNRkY99oHbA,152
+IntegralElimination/convert.py,sha256=HFo3NtDSqrBgbk_lGZxkA1367T_ftXLNArv5fxs3cEw,1874
+IntegralElimination/critical_pairs.py,sha256=Uw5USxTtMG3Zq0kgiCQVxdRoRMHejTwFRBxCwbdfW34,13255
+IntegralElimination/exponentials.py,sha256=RHR7B2JtC_0dT7KmSziXy0yvtb9riEVoTgPZ4V-j2fs,6835
+IntegralElimination/integral_elimination.py,sha256=kaUnUuZWEo-d0EDcLEZr2MI9pvFV50EG5042u2YR8WI,2437
+IntegralElimination/io_equations.py,sha256=iIx7H_usQc7G-u-X2vxb-p5xiKl6D8ZrVQFIw1OGGX0,4171
+IntegralElimination/ordering.py,sha256=hJC8_ouH_9qLcxyZbcl0727OZm_-TTH3Ax3bHamgq5g,1639
+IntegralElimination/reduction.py,sha256=NeMMyAM9rSoZ7JNXUo_GV0nHIkCF41I2O7WTDgAMJQE,6989
+IntegralElimination/utils.py,sha256=HyyXQxDAMpb32fEyiKoX_pN0Mt8ypbYhOp2uXemVyB0,1402
+IntegralElimination-0.1.2.dist-info/LICENSE,sha256=FHavsQzJK8EcCOsemLRqZaRg7vsvyYwceXUQBfgFeNI,42350
+IntegralElimination-0.1.2.dist-info/METADATA,sha256=2MsnJcp-_Y75qC5F1Y8KXp0htLz036-0lx3Vw8VtXKE,1561
+IntegralElimination-0.1.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+IntegralElimination-0.1.2.dist-info/top_level.txt,sha256=JMZjvf9Dk6i_vp48ynRgZz1dxex7CGgJOf-S9iOp1DE,20
+IntegralElimination-0.1.2.dist-info/RECORD,,
