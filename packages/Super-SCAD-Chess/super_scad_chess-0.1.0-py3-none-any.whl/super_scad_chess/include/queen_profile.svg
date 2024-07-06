@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="queen_profile"
+   width="100%"
+   height="100%"
+   viewBox="-6 -6 314 870"
+   sodipodi:docname="queen_profile.svg"
+   inkscape:version="1.0.2 (1.0.2+r75+1)">
+  <metadata
+     id="metadata1530">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs1528" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     id="namedview1526"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="3.8804597"
+     inkscape:cx="192.48511"
+     inkscape:cy="627.90266"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="queen_profile"
+     inkscape:document-rotation="0">
+    <sodipodi:guide
+       position="98,674"
+       orientation="1,0"
+       id="guide2093" />
+    <sodipodi:guide
+       position="314,0"
+       orientation="0,-1"
+       id="guide2095" />
+    <sodipodi:guide
+       position="124,864"
+       orientation="1,0"
+       id="guide2004" />
+  </sodipodi:namedview>
+  <desc
+     id="desc1519">
+XCircuit Version 3.9
+File &quot;profiles.ps&quot; Page 5
+</desc>
+  <g
+     stroke="black"
+     id="g1523">
+    <path
+       d="M -5.0591481,30.34774 V 864 H 264.38963 v -28 h -8 c -4,0 -12,-4 -4,-12 16,-16 4,-44 -24,-52 C 190.67047,760.11599 133.10326,664.16005 135.46758,616.74038 100.73211,599.91216 89.56659,345.57754 89.56659,225.57754 c 14,-2 118.43341,-18.31717 118.43341,-50.31717 0,-16 -22,-30 -54,-38 0,-12 -10,-30 -36,-34 V 78.34774 c 16,-4 20,-12 20,-16 0,-4 -4,-12 -20,-16 v -16 H -5.0591481"
+       fill="none"
+       stroke-width="2"
+       stroke-linejoin="bevel"
+       stroke-linecap="round"
+       id="path1521"
+       sodipodi:nodetypes="ccccsscccscccsccc" />
+  </g>
+</svg>
