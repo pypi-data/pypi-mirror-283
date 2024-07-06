@@ -1,0 +1,2 @@
+[console_scripts]
+ignacio_bot = ignacio_bot.app:main
