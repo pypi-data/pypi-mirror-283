@@ -1,0 +1,12 @@
+rafuzzpandas/LICENSE.txt,sha256=i5iFxp5nR9AhDKmqRuj9w7SarcLndFlBvGH1OnJkHx8,1090
+rafuzzpandas/README.md,sha256=ecCNrSTlPYjKbOpRSKDpBwXUby1cVg6Q_hmyzy_9yOI,11881
+rafuzzpandas/__init__.py,sha256=9gZshXEvAxkZ2m3o6EraaN27OKFIzRcKPsDR8XiiYXE,767
+rafuzzpandas/rafuzzpandas.pyx,sha256=9757QQZ1HSvgK9Ld8EL4PCBXeCrg1deBFJhz_aW8g_E,23739
+rafuzzpandas/rafuzzpandas_compile.py,sha256=RB1JTiatLUKLmMNyCdiWWEIc_SkBe5Cqjx3IZpt-cQw,3465
+rafuzzpandas/requirements.txt,sha256=eu6QmElPwoO56AYuT5YYf7e9SNEiL730JZVm4gziqgs,56
+rafuzzpandas/thirdparty.json,sha256=yCbrZevzFmQ36WA-1DN__4of9SfrEbrnRn4ZU0W7d_Q,54173
+rafuzzpandas-0.10.dist-info/LICENSE.rst,sha256=JG2U-syJOvqaKI4hLK8jP4BdnxFaMsrMir_Qn5dbgdc,1148
+rafuzzpandas-0.10.dist-info/METADATA,sha256=c_j0Q7ziWWVqSYTTsEocClU03MhGNpnFGAuCoEIwKU8,12707
+rafuzzpandas-0.10.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+rafuzzpandas-0.10.dist-info/top_level.txt,sha256=Ogwt479Am2H1EAWFPBr_Hjze17IdsRm8iRz1AGZJoS0,13
+rafuzzpandas-0.10.dist-info/RECORD,,
