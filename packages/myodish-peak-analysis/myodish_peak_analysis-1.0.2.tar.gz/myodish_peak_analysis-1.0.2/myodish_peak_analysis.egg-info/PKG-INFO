@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: myodish-peak-analysis
+Version: 1.0.2
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# myodish-peak-analysis
+
+This is an open-source tool that provides reliable and accurate analysis of the time-series data extracted from Myodish experiments.
