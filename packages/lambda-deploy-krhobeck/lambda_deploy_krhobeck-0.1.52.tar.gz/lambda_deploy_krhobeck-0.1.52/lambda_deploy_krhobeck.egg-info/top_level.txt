@@ -1,0 +1,4 @@
+config
+docs
+lambda_deploy
+tests
