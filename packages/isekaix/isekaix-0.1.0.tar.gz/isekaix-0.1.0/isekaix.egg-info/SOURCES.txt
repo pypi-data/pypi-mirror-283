@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+isekaix/__init__.py
+isekaix.egg-info/PKG-INFO
+isekaix.egg-info/SOURCES.txt
+isekaix.egg-info/dependency_links.txt
+isekaix.egg-info/top_level.txt
