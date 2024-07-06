@@ -1,0 +1,3 @@
+[console_scripts]
+asciicut=asciicut.__main__:app
+
