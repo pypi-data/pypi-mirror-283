@@ -1,0 +1,5 @@
+dacite
+pyautogui
+Pillow
+numpy
+rsa
