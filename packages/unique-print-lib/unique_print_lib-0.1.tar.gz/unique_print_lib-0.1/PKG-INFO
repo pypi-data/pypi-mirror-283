@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: unique_print_lib
+Version: 0.1
+Summary: A simple library that prints different messages.
+Home-page: https://github.com/yourusername/unique_print_lib
+Author: Gabriel
+Author-email: gabr.fern99@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
