@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: stub_ai
+Version: 0.0.2
+Summary: Simulates the use of cloud-based API models.
+Home-page: https://github.com/borisruf/stub_ai
+Author: Boris Ruf
+License-File: LICENSE
+Requires-Dist: openai
+
+A Python library which simulates the use of cloud-based AI models for educational purposes.

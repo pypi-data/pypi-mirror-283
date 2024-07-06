@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+stub_ai/__init__.py
+stub_ai/cache.pickle
+stub_ai/create_cache.py
+stub_ai/stub_azure_openai.py
+stub_ai.egg-info/PKG-INFO
+stub_ai.egg-info/SOURCES.txt
+stub_ai.egg-info/dependency_links.txt
+stub_ai.egg-info/requires.txt
+stub_ai.egg-info/top_level.txt
