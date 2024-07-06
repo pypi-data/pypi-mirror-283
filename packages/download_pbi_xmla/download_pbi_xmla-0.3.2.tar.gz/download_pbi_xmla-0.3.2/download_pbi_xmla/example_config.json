@@ -1,0 +1,12 @@
+{
+  "server": "your-server-url",
+  "database": "your-database-name",
+  "tables": [
+    {
+      "name": "your-table-name",
+      "refresh_type": "full",
+      "date_column": "your-date-column",
+      "last_date": "YYYY-MM-DD"
+    }
+  ]
+}
