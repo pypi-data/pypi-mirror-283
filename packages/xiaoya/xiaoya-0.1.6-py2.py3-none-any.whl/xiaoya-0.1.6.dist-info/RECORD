@@ -1,0 +1,14 @@
+xiaoya/__init__.py,sha256=KfY39bWAh7mQCuBgV4VtM-hBUfdIyGaBpdOZoKlc93U,15
+xiaoya/aliyundrive.py,sha256=OfULXGPGjWWvbvm0qb_cW4ZqY0mdDdXPt7nlNjBt0GM,9958
+xiaoya/attribute.py,sha256=fvs1Ni1oI5kbbPpYPhPeTVJqa4LXZ3tp-gw5MXC258s,383
+xiaoya/clear.py,sha256=qU79-ZRE98i1PSXvQHDnPPeJmXJQYikQmupMsk1QtsE,8408
+xiaoya/command.py,sha256=ULNvmMLiYgFPaSIS-SWNW3rnxNudIp8y7AGZL4m0tn0,997
+xiaoya/exception.py,sha256=sBx0cvsZmE4Zm_7JUL6zPHsjIINA8_qwKrwpxJIOPV4,366
+xiaoya/utils.py,sha256=TsectnN8jW4w7nHeCKKrhrovRq0d3dqYJMxHISmcwO8,329
+xiaoya-0.1.6.dist-info/LICENSE,sha256=BgJX3-jTQ2My4oLPV9C5UhRANJwekecPLtN65cMJJ_Q,1063
+xiaoya-0.1.6.dist-info/METADATA,sha256=tU2udx3QuflYMqU5EIUdbTKkLFIGapiGWY5XyEYljq4,4302
+xiaoya-0.1.6.dist-info/WHEEL,sha256=-G_t0oGuE7UD0DrSpVZnq1hHMBV9DD2XkS5v7XpmTnk,110
+xiaoya-0.1.6.dist-info/entry_points.txt,sha256=-UHitpqhpa3hOJXbeeBwhkhqzN3OgWuGUnm_QAMnRXg,47
+xiaoya-0.1.6.dist-info/top_level.txt,sha256=qJ31wbpItl1mFoYmxSlzPxntf3jkIlOlGoH50JzJvEs,7
+xiaoya-0.1.6.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+xiaoya-0.1.6.dist-info/RECORD,,
