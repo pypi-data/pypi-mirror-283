@@ -1,0 +1,14 @@
+vectorx/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vectorx/index.py,sha256=_r2l_9YUb1WZFsBGUbbenOkbsjWsi-QTcazB45b2kkU,454
+vectorx/vectorx.py,sha256=wyQY5JMHOwxuaEp7tW32avlwosekNSnu5SrMZH7dKrE,414
+vectorx/libvx/libvx_arm64.dylib,sha256=OfNam7sun8j6jE8wUCvPWEqlFlv2cWJEgidu9V0BTe0,1277416
+vecx/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vecx/index.py,sha256=DJhl0WOvTIJfpAE9KdejWt6fDycJEzAO7Y6YBbcEaDA,1978
+vecx/libvx.py,sha256=naywjUvnRltve2MZC3CHTtrKQ8VW22-B-RfGxst7xPk,3265
+vecx/vectorx.py,sha256=gFG3HQN8T-UtkUPVquXqHz00pDqc27htO1VzZAdW9iw,1849
+vecx/libvx/libvx_arm64.dylib,sha256=OfNam7sun8j6jE8wUCvPWEqlFlv2cWJEgidu9V0BTe0,1277416
+vecx-0.12.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vecx-0.12.dist-info/METADATA,sha256=6qge_z8mZyrTf3baAQNFjvi2UwBHheotZES0Pahiz9Y,898
+vecx-0.12.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+vecx-0.12.dist-info/top_level.txt,sha256=cbP0kvuFAGINB3m4NFiSlaVwbs-aczJnpNL7d5lbO9E,5
+vecx-0.12.dist-info/RECORD,,
