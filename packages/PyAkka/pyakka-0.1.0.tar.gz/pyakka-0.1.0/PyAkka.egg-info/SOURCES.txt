@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+PyAkka.egg-info/PKG-INFO
+PyAkka.egg-info/SOURCES.txt
+PyAkka.egg-info/dependency_links.txt
+PyAkka.egg-info/requires.txt
+PyAkka.egg-info/top_level.txt
