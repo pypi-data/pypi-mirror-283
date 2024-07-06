@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pyattribution
+Version: 0.1.1
+Summary: A tool for portfolio attribution
+Home-page: https://github.com/papasaidfine/attribution
+Author: Larry Chen
+Author-email: yatlik.chen@outlook.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas >=2.2.2
+Requires-Dist: scipy >=1.14.0
+Requires-Dist: numpy >=2.0.0
+
+# Attribution Library for Wolfe QES Risk Model
