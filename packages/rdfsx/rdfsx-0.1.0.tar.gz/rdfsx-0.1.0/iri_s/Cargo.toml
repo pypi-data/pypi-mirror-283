@@ -1,0 +1,18 @@
+[package]
+name = "iri_s"
+version = "0.0.13"
+authors.workspace = true
+description.workspace = true
+documentation = "https://docs.rs/iri_s"
+edition.workspace = true
+license.workspace = true
+homepage.workspace = true
+repository.workspace = true
+
+[dependencies]
+oxrdf = "0.2.0-alpha.2"
+oxiri = "0.2.3-alpha.1"
+thiserror = "1.0.0"
+serde = "1.0"
+serde_derive = "1.0"
+lazy_static = "1"
