@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: ppdap
+Version: 0.0.4
+Summary: Digo Accessory Protocol implementation in python
+Home-page: UNKNOWN
+Author: DIGO
+License: Apache License 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Home Automation
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: paho-mqtt (>=1.6.0)
+Requires-Dist: requests (>=2.25.0)
+
+# ppdap
+
+
+This project enables communication with the DIGO platform using Python.
+
+Requirements
+------------
+
+* python 3.11+
+* python pip 22+
+* paho-mqtt (1.6.1)
+* aiohttp
+* requests
+* atomicwrites
+* datetime
+
+
+Installation
+------------
+
+    $ pip install ppdap
+
+
+
+Usage
+-----
+
+Check [examples](https://git.digotech.net/digo_public/example_pydap.git)
+
