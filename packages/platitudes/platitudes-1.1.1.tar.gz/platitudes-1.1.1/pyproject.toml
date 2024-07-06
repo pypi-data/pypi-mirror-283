@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "platitudes"
+version = "1.1.1"
+description = ""
+authors = ["GCBallesteros <dev+github@maxwellrules.com>"]
+readme = "README.md"
+license = "MIT"
+homepage = "https://platitudes.maxwellrules.com"
+classifiers = [
+    "Topic :: Software Development",
+    "Topic :: Utilities",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Libraries",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.6.0"
+mkdocs-material = "^9.5.28"
+mkdocstrings = {extras = ["python"], version = "^0.25.1"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+# Assume Python 3.10.
+target-version = "py310"
+line-length = 88
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
