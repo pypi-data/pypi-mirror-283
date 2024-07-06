@@ -1,0 +1,11 @@
+cpia/__init__.py,sha256=wRSBc9TPBxCFD9FpTWZna75GHfZogF3jE0OHgxm9Ffk,1207
+cpia/fsts/avaee.fst,sha256=ZnvUCxNN15PNz8KBtdYYYtfkEk2BWINWHafWjSueNdM,1816605
+cpia/fsts/expressive.fst,sha256=GCdibvcPhdkAZB1BPF7nidG0cbvCpOxIisUiVhm1398,1750338
+cpia/fsts/generation.fst,sha256=ROoRVlyurYuua-ajnNZfESdvRgKRuppT5Obf2qzj2mY,512461
+cpia/fsts/homophone.fst,sha256=gCVwN0pXHDsn5De9X2KcrQwW_8XNGbyKDjHGnIE3cTU,962787
+cpia/fsts/splitter.fst,sha256=fr2jF_zjPaSVC_EpSPc26pt9usCUntbmUrvXSEAzB8g,1747040
+cpia/fsts/standard.fst,sha256=W-HZ-CGJuzTcyMbI_SbEGFEf68esunQ4PtHWGYQ_3SI,857471
+cpia-2024.7.5.dist-info/METADATA,sha256=A2exGx7B68nlNMVv5bIuWA5x7K6rIbeq_pn8p-PzGtw,947
+cpia-2024.7.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+cpia-2024.7.5.dist-info/top_level.txt,sha256=PTHLwgXkBeMhzJqHEi2XZCg2ZB_vcls-DyOZy7sev8g,5
+cpia-2024.7.5.dist-info/RECORD,,
