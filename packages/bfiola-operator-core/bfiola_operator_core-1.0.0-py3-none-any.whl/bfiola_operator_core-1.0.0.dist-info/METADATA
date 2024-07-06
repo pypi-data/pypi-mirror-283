@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: bfiola-operator-core
+Version: 1.0.0
+Requires-Dist: fastapi
+Requires-Dist: kopf
+Requires-Dist: lightkube
+Requires-Dist: lightkube-models
+Requires-Dist: pydantic
+Requires-Dist: uvicorn
+Provides-Extra: dev
+Requires-Dist: bfiola-devtools ; extra == 'dev'
+
