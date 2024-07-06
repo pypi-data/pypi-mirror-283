@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/dicebear/__init__.py
+src/dicebear/avatar.py
+src/dicebear/errors.py
+src/dicebear/metadata.py
+src/dicebear/models.py
+src/dicebear/utility.py
+src/dicebear.egg-info/PKG-INFO
+src/dicebear.egg-info/SOURCES.txt
+src/dicebear.egg-info/dependency_links.txt
+src/dicebear.egg-info/requires.txt
+src/dicebear.egg-info/top_level.txt
+tests/test_main.py
