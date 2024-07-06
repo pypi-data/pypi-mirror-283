@@ -1,0 +1,8 @@
+README.md
+redistributor.py
+setup.py
+redistributor.egg-info/PKG-INFO
+redistributor.egg-info/SOURCES.txt
+redistributor.egg-info/dependency_links.txt
+redistributor.egg-info/requires.txt
+redistributor.egg-info/top_level.txt
