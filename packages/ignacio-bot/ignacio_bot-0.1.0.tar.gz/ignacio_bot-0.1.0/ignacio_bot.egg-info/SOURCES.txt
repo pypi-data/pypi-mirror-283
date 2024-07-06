@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+ignacio_bot/__init__.py
+ignacio_bot/app.py
+ignacio_bot.egg-info/PKG-INFO
+ignacio_bot.egg-info/SOURCES.txt
+ignacio_bot.egg-info/dependency_links.txt
+ignacio_bot.egg-info/entry_points.txt
+ignacio_bot.egg-info/requires.txt
+ignacio_bot.egg-info/top_level.txt
