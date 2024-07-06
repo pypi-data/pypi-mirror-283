@@ -1,0 +1,10 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_daemon_rpc.py,sha256=6b0nVoqnm8m_ZoQEUugZKd2rYsgkoX6oZaw0cc0DfCQ,7528
+tests/test_daemon_ws.py,sha256=RSd3JtZXTcsLkYrj31Owk0TPK5PePUo7UiK-ce_4BhM,11974
+tests/test_wallet_rpc.py,sha256=2ZdVI0v1y2JPdVgpAeHV7f8Sb22f7hguLXD-hTgexOA,3044
+tests/test_wallet_ws.py,sha256=vYz5VvTI9WMgpOA4OxL3IrNv9c_ev3aRGlwze-Y-xE4,6005
+tests/test_xswd.py,sha256=eJeCuduePS9YYtQkci8zHtSzzjv-bfU5qzy0wf4Jg38,474
+xelis_py_sdk-0.2.0.dist-info/METADATA,sha256=qBypM0Nkk8C1_NTlV8bOT3ZBVk_NjzHyv-n6qbyK6ZI,291
+xelis_py_sdk-0.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+xelis_py_sdk-0.2.0.dist-info/top_level.txt,sha256=EdW7283x-lr_cbuivW8Ij7ANAP-ZJ9sLtILQseEPxXg,6
+xelis_py_sdk-0.2.0.dist-info/RECORD,,
