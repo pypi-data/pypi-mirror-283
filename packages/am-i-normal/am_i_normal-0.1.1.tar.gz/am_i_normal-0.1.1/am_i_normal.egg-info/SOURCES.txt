@@ -1,0 +1,8 @@
+README.md
+setup.py
+am_i_normal/__init__.py
+am_i_normal/is_normal.py
+am_i_normal.egg-info/PKG-INFO
+am_i_normal.egg-info/SOURCES.txt
+am_i_normal.egg-info/dependency_links.txt
+am_i_normal.egg-info/top_level.txt

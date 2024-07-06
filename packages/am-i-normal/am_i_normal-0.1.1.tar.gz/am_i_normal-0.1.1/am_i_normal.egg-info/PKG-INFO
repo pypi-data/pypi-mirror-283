@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: am_i_normal
+Version: 0.1.1
+Summary: Are you normal? Time to find out
+Home-page: https://github.com/mike-rollout/py-is_normal
+Author: mike-rollout
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# am_i_normal
+
+A package to randomly decide if you are normal and provide funny motivations.
+
+## Installation
+
+```sh
+pip install am_i_normal
