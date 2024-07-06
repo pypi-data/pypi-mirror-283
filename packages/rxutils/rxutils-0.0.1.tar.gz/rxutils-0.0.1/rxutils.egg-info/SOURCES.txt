@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+requirements.txt
+rxutils/__init__.py
+rxutils/terminal.py
+rxutils.egg-info/PKG-INFO
+rxutils.egg-info/SOURCES.txt
+rxutils.egg-info/dependency_links.txt
+rxutils.egg-info/requires.txt
+rxutils.egg-info/top_level.txt
