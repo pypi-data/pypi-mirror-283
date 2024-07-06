@@ -1,0 +1,13 @@
+__init__.py,sha256=0SLdkOHPpmrancYi3ocbSN1bzYRLhFwYBiQmSznXUf0,28
+migrate_neems_to_sql.py,sha256=joCY95n94cZgYNalqOf9nUKNHXCMCXh8K8XHB2_m-jE,83
+mongo_vs_sql_query.py,sha256=tOAu1grdwww6ds8whgVuQga5CKY7sESX9kZ6xtRfDpI,13679
+neems_to_sql/__init__.py,sha256=0SLdkOHPpmrancYi3ocbSN1bzYRLhFwYBiQmSznXUf0,28
+neems_to_sql/logger.py,sha256=Bw6awVqoiywHgsemcenS6xYAhn5gzQ1Bq0g0zrlQqHw,3617
+neems_to_sql/neems_to_sql.py,sha256=46HDgFk_jBUPQips6IvGXaeAR8muVd0ftE--OqaPn78,100310
+neems_to_sql/triples_to_sql.py,sha256=r94TtsP1cJXPsF6dM-L2oka_VL7-kBGS2m6nspfT__o,25432
+neem_to_sql-1.0.14.dist-info/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+neem_to_sql-1.0.14.dist-info/METADATA,sha256=S45W8-_-DK9_628U-7L-zjOwUG7rY1s3WlbqZ9WqXlk,49794
+neem_to_sql-1.0.14.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+neem_to_sql-1.0.14.dist-info/entry_points.txt,sha256=pqmfgOAEdOCZ6LLc9x-z9_FbmTIyuvpkrh9OARreFNc,64
+neem_to_sql-1.0.14.dist-info/top_level.txt,sha256=Cyo18ZHH2_qe4wCsXBwXa0oBPOWOH-1vEh0iRYRqNbg,62
+neem_to_sql-1.0.14.dist-info/RECORD,,
