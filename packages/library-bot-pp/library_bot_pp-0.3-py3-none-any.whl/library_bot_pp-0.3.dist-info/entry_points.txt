@@ -1,0 +1,2 @@
+[console_scripts]
+p!c = librarypp.scripts.create_file:create_file
