@@ -1,0 +1,12 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.py
+hashtagger/__init__.py
+hashtagger/hashtagger.py
+hashtagger.egg-info/PKG-INFO
+hashtagger.egg-info/SOURCES.txt
+hashtagger.egg-info/dependency_links.txt
+hashtagger.egg-info/requires.txt
+hashtagger.egg-info/top_level.txt
