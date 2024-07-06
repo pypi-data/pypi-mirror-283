@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: OpenHomeLab
+Version: 0.0.2
+Requires-Python: >=3.10
+Requires-Dist: textual>=0.71.0
