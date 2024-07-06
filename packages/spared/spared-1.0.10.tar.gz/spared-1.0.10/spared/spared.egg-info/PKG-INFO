@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: spared
+Version: 1.0.10
+Summary: SpaRED and Spackle library
+Home-page: https://github.com/dvegaa00/Library_Spared_Spackle/tree/main
+Author: Daniela Vega
+Author-email: Daniela Vega <d.vegaa@uniandes.edu.co>
+Maintainer-email: Gabriel Mejia <gm.mejia@uniandes.edu.co>
+License: Copyright (c) 2024 The Python Packaging Authority (PyPA)
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of
+        this software and associated documentation files (the "Software"), to deal in
+        the Software without restriction, including without limitation the rights to
+        use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+        of the Software, and to permit persons to whom the Software is furnished to do
+        so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Keywords: SPaRED,Spackle,bioinformatics,spatial transcriptomics
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# Library_Spared_Spackle
+
+This repository contains all the necessary files to create a PyPI library to the SPARED and SpaCKLE contributions
+
+This is the  README file which will contain the long description of the PiPy library. Most libraries have a README file. Mean while this file will only contain this information and will be soon updated. 
+
+## System Dependencies
+
+Before installing the Python package, ensure the following system dependencies are installed:
+
+```shell
+conda create -n spared
+conda activate spared
+conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+conda install lightning -c conda-forge
+pip install torch_geometric
+conda install -c conda-forge squidpy
+pip install wandb
+pip install wget
+pip install combat
+pip install opencv-python
+pip install positional-encodings[pytorch]
+pip install openpyxl
+pip install pyzipper
+pip install plotly
+pip install sh
+pip install sphinx
+pip install -U sphinx-copybutton
+pip install -U sphinx_rtd_theme
+```
