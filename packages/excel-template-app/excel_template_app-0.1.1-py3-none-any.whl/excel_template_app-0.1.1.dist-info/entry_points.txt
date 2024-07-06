@@ -1,0 +1,2 @@
+[console_scripts]
+excel_template_app = excel_template_app.app:main
