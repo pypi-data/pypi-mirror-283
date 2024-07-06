@@ -1,0 +1,15 @@
+speedcheck/__init__.py,sha256=VtSvEo9sWkKTBQowYSSTpTRFQ0LNvCOMH_vquJDoVe0,119
+speedcheck/__main__.py,sha256=CXRu25MbMaIcSphOoQ3MhXuOk6o9cIDEvowFgJ3UXHk,69
+speedcheck/speedcheck.py,sha256=twZTIdp0S9LygpDcmuJJtnKCnyQbiwB8nU-lBdrIIJ8,6593
+speedcheck/speedtest_cflare.py,sha256=kkh0TngYR3jDVvZfZI34fEpJw5WPoacrnFAWLKzwkSg,9139
+speedcheck/speedtest_fast.py,sha256=gbbkwbZQkwnRjkLiQqGMD7ecF0AH7YqYUs-jnc-yTyA,3886
+speedcheck/speedtest_mlab.py,sha256=fGo-P_BRX3CgDH0C0BPEFtTM2SXJ3wcgZiVIS7tB01Y,4804
+speedcheck/speedtest_ookla.py,sha256=4fucBZwwgQ3fVU7h1eFyD5a3VAaYZK3pQUw96BIM0KQ,809
+speedcheck/speedtest_openspeedtest.py,sha256=ENUaRsS_19WMVfGf_46UPLYuH2np2vN6LMb49gvaxyQ,3147
+speedcheck/speedtest_speedsmart.py,sha256=XVR-FmSQ5cLhyegILGJXjGTQq6SJBxSGwNPQMe3oSvA,2535
+speedcheck-0.0.4.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+speedcheck-0.0.4.dist-info/METADATA,sha256=rXs--TGLjhFWiGKAA0uzPwzVd7gBBOX0Lcse5tacLtw,5076
+speedcheck-0.0.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+speedcheck-0.0.4.dist-info/entry_points.txt,sha256=DnLKhMXENHt5zbtXkyihjDeBqgkq3F3WRPW-QoAfcs8,58
+speedcheck-0.0.4.dist-info/top_level.txt,sha256=strN8sdhmZmVN-tuWr3d61_aDG9pR1secmJAI7ZHHM0,11
+speedcheck-0.0.4.dist-info/RECORD,,
