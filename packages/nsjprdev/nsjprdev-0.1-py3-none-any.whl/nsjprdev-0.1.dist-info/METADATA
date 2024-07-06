@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: nsjprdev
+Version: 0.1
+Summary: Library Of @V1HyperBot
+Home-page: https://github.com/HyperDreamX
+Author: dikin
+Author-email: dikin03101999@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: pymongo
+Requires-Dist: pyromod
+Requires-Dist: pyrogram
+Requires-Dist: tgcrypto
+
+V1HyperBot
