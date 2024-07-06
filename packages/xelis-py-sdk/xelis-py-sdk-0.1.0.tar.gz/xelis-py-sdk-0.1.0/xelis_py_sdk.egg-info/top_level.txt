@@ -1,0 +1,6 @@
+config
+daemon
+rpc
+tests
+wallet
+xswd
