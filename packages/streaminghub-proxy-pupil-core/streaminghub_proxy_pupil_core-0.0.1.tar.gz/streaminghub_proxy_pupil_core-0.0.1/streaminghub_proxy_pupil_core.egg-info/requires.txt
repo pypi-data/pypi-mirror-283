@@ -1,0 +1,12 @@
+streaminghub-datamux
+streaminghub-pydfds
+msgpack
+numpy
+pillow
+pyzmq
+
+[dev]
+build
+twine
+bumpver
+pip-tools

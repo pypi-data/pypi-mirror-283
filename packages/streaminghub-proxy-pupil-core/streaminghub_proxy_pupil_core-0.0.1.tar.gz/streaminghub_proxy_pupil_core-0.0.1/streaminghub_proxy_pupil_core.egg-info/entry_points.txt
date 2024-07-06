@@ -1,0 +1,2 @@
+[streaminghub_datamux.proxy]
+pupil_core = streaminghub_proxy_pupil_core:PupilCoreProxy

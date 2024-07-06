@@ -1,0 +1,12 @@
+MANIFEST.in
+pyproject.toml
+streaminghub_proxy_pupil_core/__init__.py
+streaminghub_proxy_pupil_core/node.json
+streaminghub_proxy_pupil_core/proxy.py
+streaminghub_proxy_pupil_core/test.py
+streaminghub_proxy_pupil_core.egg-info/PKG-INFO
+streaminghub_proxy_pupil_core.egg-info/SOURCES.txt
+streaminghub_proxy_pupil_core.egg-info/dependency_links.txt
+streaminghub_proxy_pupil_core.egg-info/entry_points.txt
+streaminghub_proxy_pupil_core.egg-info/requires.txt
+streaminghub_proxy_pupil_core.egg-info/top_level.txt
