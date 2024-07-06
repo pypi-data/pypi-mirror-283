@@ -1,0 +1,34 @@
+[build-system]
+# Minimum requirements for the build system to execute.
+requires =[
+  "setuptools>=45",
+  "setuptools_scm[toml]>=6.2",
+  "wheel",
+  "cmake>=3.24",
+#  "numpy==1.13.3; python_version<'3.5'",
+#  "oldest-supported-numpy; python_version>='3.5'",
+  "conan==2.4.1",
+]
+
+[tool.setuptools_scm]
+
+[tool.cibuildwheel]
+archs = ["auto64"]
+test-command = "python -m unittest discover -s {package}/wrap/tests"
+before-test = "pip install numpy"
+build-verbosity = 1
+
+#[tool.cibuildwheel.linux]
+
+[tool.cibuildwheel.macos]
+skip = ["cp36-*", "cp37-*", "pp*"]  # all skipped for speed only
+
+[tool.cibuildwheel.windows]
+skip = ["cp36-*", "cp37-*", "pp*"]  # skip cp* for speed; pp* because building numpy breaks(!?)
+before-build = "pip install delvewheel"
+repair-wheel-command = "delvewheel repair -w {dest_dir} -v {wheel}"
+
+[[tool.cibuildwheel.overrides]]
+select = "*-musllinux*"
+before-test = "echo 'Override building numpy since no wheels are provided when using CIBuildWheel'"
+test-command = "echo 'Override test command under musl libc until we can install a numpy wheel'"

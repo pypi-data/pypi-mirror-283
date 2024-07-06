@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: polystar
+Version: 0.2.0
+Summary: Polygon and Polyhedron operations.
+Home-page: https://github.com/g5t/polystar
+Author: Greg Tucker
+Author-email: gregory.tucker@gmail.com
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Physics
+Description-Content-Type: text/markdown
+License-File: COPYING
+Provides-Extra: plotting
+Requires-Dist: matplotlib>=2.2.0; extra == "plotting"
+Provides-Extra: vis
+Requires-Dist: pyglet>=1.5.27; extra == "vis"
+Requires-Dist: vispy>=0.12.1; extra == "vis"
+
+# ![polystar]
+A C++ library for polygon and polyhedron operations.
+Wrapped for use in python using [pybind11](https://github.com/pybind/pybind11).
+
+[polystar]: https://raw.githubusercontent.com/g5t/polystar/master/polystar.svg
+
+# Dependencies
+## TetGen
+A modified version of [TetGen](http://tetgen.org) is used to create
+refined tetrahedral meshes in bounding polyhedra.
+
+The modified version is included as part of this repository.
+
+# Installation
+Install via `pip`, e.g.,
+```cmd
+python -m pip install polystar
+```
+
+This repository can be installed locally via
+```cmd
+python -m pip install .
+# or 
+python setup.py install
+```
+
+Alternatively, the python module, C++ library, and [catch2](https://github.com/catchorg/Catch2) based tests can be built directly using `cmake`.

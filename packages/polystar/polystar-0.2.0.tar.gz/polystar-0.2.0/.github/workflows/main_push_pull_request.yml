@@ -1,0 +1,52 @@
+name: Main
+
+on:
+  push:
+  pull_request:
+
+concurrency :
+  group: "${{ github.workflow }}-${{ github.ref == 'refs/head/main' && github.run_number || github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  cmake_and_ctest:
+    name: CMake & CTest, ${{ matrix.variant.os }}, py${{ matrix.python-version }}
+    runs-on: ${{ matrix.variant.os }}
+    defaults:
+      run:
+        shell: bash -l {0}
+    strategy:
+      fail-fast: false
+      matrix:
+        variant:
+          - {os: ubuntu-22.04, cmake-preset: gha-test-ubuntu } # current Ubuntu latest
+          - {os: macos-12, cmake-preset: gha-test-macos }
+          - {os: macos-13, cmake-preset: gha-test-macos }
+          - {os: macos-14, cmake-preset: gha-test-macos }
+          - {os: windows-2022, cmake-preset: gha-test-windows } # current Windows latest
+        python-version: ["3.10"]
+        cmake-type: ['Release']
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup micromamba environment
+        uses: mamba-org/setup-micromamba@v1
+        with:
+          environment-file: .github/config/${{ matrix.variant.cmake-preset }}.yml
+          create-args: >-
+            python=${{ matrix.python-version }}
+          cache-environment: true
+      - run: echo "pythonInterpreter=`which python`" >> $GITHUB_ENV
+      - if: startsWith(matrix.variant.os, 'macos')
+        run: brew install tree; tree /Users/runner/.conan2 || echo "No conan2 directory"
+      - name: configure
+        run: cmake -S . -B build -D CMAKE_BUILD_TYPE=${{ matrix.cmake-type }} -D PYTHON3_EXECUTABLE=${{ env.pythonInterpreter }}
+      - if: startsWith(matrix.variant.os, 'macos')
+        run: tree /Users/runner/.conan2 || echo "No conan2 directory"
+      - name: build
+        run: cmake --build build --config ${{ matrix.cmake-type }} -j
+      - name: test
+        working-directory: build
+        run: ctest -C ${{ matrix.cmake-type }} --output-on-failure -j
