@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: opencepk-lib-python-common
+Version: 1.2.0
+Summary: Common Python opencepk packages.
+Author-email: OpenCEPK Open Cloud Engineering Platform Kit <opencepk@gmail.com>
+License: GPLv3
+Keywords: find,replace,string,file,pre-commit,hook,git,tool,utility,opencepk
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Topic :: File Formats :: JSON
+Classifier: Topic :: Software Development :: Pre-processors
+Classifier: Topic :: Software Development :: Version Control :: Git
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Filters
+Classifier: Topic :: Text Processing :: General
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dep
+Requires-Dist: toml; extra == "dep"
+
+# opencepk-lib-python-common
+
+Common Python packages
+
+## Sample use case:
+
+````
+
+repos:
+
+  - repo: https://github.com/opencepk/opencepk-lib-python-common
+    rev: v0.0.5
+    hooks:
+      - id: python-pypi-version-check  # this is the id we refer to in precommit.hook
+        name: Check version
+        description: python-pypi-version-check
+        args: ['./pyproject.toml']
+        entry: python-pypi-version-check
+        language: system
+        pass_filenames: false  # Do not pass filenames to the hook (this is important to keep)
+
+  - repo: https://github.com/opencepk/opencepk-lib-python-common
+    rev: v0.0.5
+    hooks:
+    - id: find-and-replace-strings  # this is the id we refer to in precommit.hook
+      name: find-and-replace-strings
+      description: Find and replace strings
+      entry: find-and-replace-strings
+      language: python
+      pass_filenames: true
+      exclude_types:
+        - binary
+      files: '.*\.md$'
+      verbose: true
+
+      ```
+
+````
+
+## Find and Replace strings
+
+  [find and replace strings documentation](./opencepk_lib_python_common/find_and_replace_strings_package/README.md)

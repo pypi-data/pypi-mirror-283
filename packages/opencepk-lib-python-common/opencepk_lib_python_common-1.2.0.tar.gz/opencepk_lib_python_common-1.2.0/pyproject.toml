@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = { find = { where = ["."] } }
+
+[project]
+name = "opencepk-lib-python-common"
+version = "1.2.0"
+description = "Common Python opencepk packages."
+readme = "README.md"
+license = { text = "GPLv3" }
+authors = [{name = "OpenCEPK Open Cloud Engineering Platform Kit", email = "opencepk@gmail.com"}]
+requires-python = ">=3.9"
+
+keywords = ["find", "replace", "string", "file", "pre-commit", "hook", "git", "tool", "utility", "opencepk"]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Topic :: File Formats :: JSON",
+    "Topic :: Software Development :: Pre-processors",
+    "Topic :: Software Development :: Version Control :: Git",
+    "Topic :: Text Processing",
+    "Topic :: Text Processing :: Filters",
+    "Topic :: Text Processing :: General",
+    "Topic :: Utilities"
+]
+
+[project.entry-points."console_scripts"]
+python-pypi-version-check = "opencepk_lib_python_common.pypi_bumpversion_check_package.pypi_bumpversion_check.main:main"
+find-and-replace-strings = "opencepk_lib_python_common.find_and_replace_strings_package.find_and_replace_strings.main:main"
+
+[project.optional-dependencies]
+dep = ["toml"]
