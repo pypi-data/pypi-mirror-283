@@ -1,0 +1,3 @@
+[console_scripts]
+hypered = hypered.cli:main
+hypered-dash = hypered.dash:main
