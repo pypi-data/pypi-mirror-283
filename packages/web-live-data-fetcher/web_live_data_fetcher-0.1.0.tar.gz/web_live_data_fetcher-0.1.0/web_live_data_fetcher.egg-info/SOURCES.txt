@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+tests/test_live_data.py
+web_live_data_fetcher/__init__.py
+web_live_data_fetcher/google_search.py
+web_live_data_fetcher/web_scraper.py
+web_live_data_fetcher.egg-info/PKG-INFO
+web_live_data_fetcher.egg-info/SOURCES.txt
+web_live_data_fetcher.egg-info/dependency_links.txt
+web_live_data_fetcher.egg-info/requires.txt
+web_live_data_fetcher.egg-info/top_level.txt
