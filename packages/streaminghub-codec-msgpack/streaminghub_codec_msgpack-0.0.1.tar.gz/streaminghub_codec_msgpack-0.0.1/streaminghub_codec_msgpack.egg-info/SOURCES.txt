@@ -1,0 +1,9 @@
+pyproject.toml
+streaminghub_codec_msgpack/__init__.py
+streaminghub_codec_msgpack/codec.py
+streaminghub_codec_msgpack.egg-info/PKG-INFO
+streaminghub_codec_msgpack.egg-info/SOURCES.txt
+streaminghub_codec_msgpack.egg-info/dependency_links.txt
+streaminghub_codec_msgpack.egg-info/entry_points.txt
+streaminghub_codec_msgpack.egg-info/requires.txt
+streaminghub_codec_msgpack.egg-info/top_level.txt

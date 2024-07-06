@@ -1,0 +1,2 @@
+[streaminghub_datamux.rpc.codec]
+msgpack = streaminghub_codec_msgpack:MsgpackCodec
