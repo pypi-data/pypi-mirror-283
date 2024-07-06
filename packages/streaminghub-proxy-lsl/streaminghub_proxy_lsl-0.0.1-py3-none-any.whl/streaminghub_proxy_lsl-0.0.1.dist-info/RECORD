@@ -1,0 +1,10 @@
+streaminghub_proxy_lsl/__init__.py,sha256=sGbdZovmHFNjkENEaKiAFvyF0jFdxuWyad555rHcGqw,27
+streaminghub_proxy_lsl/lsl.py,sha256=yyFf9dNkZdKPTu2-DmkAjgr6HHHKRrTXDN4QGFZOQoM,2725
+streaminghub_proxy_lsl/proxy.py,sha256=DqKHyffv3V6eoYvTzK8y9-v29WRyNbDb3MYd1Fq_9RA,4300
+streaminghub_proxy_lsl/test.py,sha256=Hiw7uu6TTtHt5WYDusmRDL-cmmitZGsy-2Q-JSkJYCU,567
+streaminghub_proxy_lsl/util.py,sha256=8w9rraQMVPbKERtCc1mhYiki7Bqj23fKPZDKgKEcIso,781
+streaminghub_proxy_lsl-0.0.1.dist-info/METADATA,sha256=VAVkHUZGVrRNth4APv7i6qq4zhepw35zLzdOxF08Rzk,811
+streaminghub_proxy_lsl-0.0.1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+streaminghub_proxy_lsl-0.0.1.dist-info/entry_points.txt,sha256=DpYcAKpDswOUKdh9nNHMChhSwjDXEDA_1fQdhNdujDc,67
+streaminghub_proxy_lsl-0.0.1.dist-info/top_level.txt,sha256=AMtP7VmMwqX0GPCYbHGlELFlM4ao8sN0_6VnusyWUk8,23
+streaminghub_proxy_lsl-0.0.1.dist-info/RECORD,,

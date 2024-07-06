@@ -1,0 +1,2 @@
+[streaminghub_datamux.proxy]
+lsl = streaminghub_proxy_lsl:LSLProxy
