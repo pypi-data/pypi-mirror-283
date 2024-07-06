@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "python-commandline"
+version = "0.1.1"
+description = "A set of common Linux commands implementation in Python"
+authors = ["jacky.wu <jacky.wucheng@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "~3.12"
+fire = "^0.6.0"
+python-dotenv = "^1.0.1"
+
+
+[[tool.poetry.source]]
+name = "mirrors"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+priority = "primary"
+
+[tool.poetry.scripts]
+pycli = "python_commandline.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
