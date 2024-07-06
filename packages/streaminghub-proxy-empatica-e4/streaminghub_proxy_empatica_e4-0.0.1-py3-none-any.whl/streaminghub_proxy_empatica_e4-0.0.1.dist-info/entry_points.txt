@@ -1,0 +1,2 @@
+[streaminghub_datamux.proxy]
+empatica_e4 = streaminghub_proxy_empatica_e4:EmpaticaE4Proxy
