@@ -1,0 +1,3 @@
+[console_scripts]
+quyk=quyk.core:main
+
