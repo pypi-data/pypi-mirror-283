@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/diarydek/__init__.py
+src/diarydek/diarydek.py
+src/diarydek/main.py
+src/diarydek.egg-info/PKG-INFO
+src/diarydek.egg-info/SOURCES.txt
+src/diarydek.egg-info/dependency_links.txt
+src/diarydek.egg-info/entry_points.txt
+src/diarydek.egg-info/top_level.txt
