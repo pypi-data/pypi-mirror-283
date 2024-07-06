@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+Str2D.egg-info/PKG-INFO
+Str2D.egg-info/SOURCES.txt
+Str2D.egg-info/dependency_links.txt
+Str2D.egg-info/requires.txt
+Str2D.egg-info/top_level.txt
+str2d/__init__.py
+tests/test_str2d.py
