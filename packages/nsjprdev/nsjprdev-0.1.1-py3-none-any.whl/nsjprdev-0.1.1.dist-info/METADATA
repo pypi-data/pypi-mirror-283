@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: nsjprdev
+Version: 0.1.1
+Summary: Library of @V1HyperBot
+Home-page: https://github.com/HyperDreamX
+Author: V1HyperBot
+Author-email: romsbamgel+pack@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: aiofiles ==23.2.1
+Requires-Dist: aiohttp ==3.9.4
+Requires-Dist: attrify ==3.0
+Requires-Dist: bs4 ==0.0.1
+Requires-Dist: dnspython ==2.6.1
+Requires-Dist: gitpython ==3.1.41
+Requires-Dist: g4f
+Requires-Dist: html2text ==2020.1.16
+Requires-Dist: motor ==3.3.2
+Requires-Dist: opencv-python-headless ==4.9.0.80
+Requires-Dist: pillow ==10.3.0
+Requires-Dist: psutil ==5.9.7
+Requires-Dist: pykeyboard ==0.1.5
+Requires-Dist: pySmartDL ==1.3.4
+Requires-Dist: pyromod ==1.1.0
+Requires-Dist: pytz ==2023.3.post1
+Requires-Dist: pymediainfo ==6.1.0
+Requires-Dist: pymongo ==4.6.3
+Requires-Dist: pyrogram-dev
+Requires-Dist: python-dotenv ==1.0.0
+Requires-Dist: python-dateutil ==2.8.2
+Requires-Dist: removebg ==0.04
+Requires-Dist: requests ==2.32.0
+Requires-Dist: telegraph ==2.2.0
+Requires-Dist: tgcrypto ==1.2.5
+Requires-Dist: unidecode ==1.3.8
+Requires-Dist: uvloop ==0.19.0
+Requires-Dist: wget ==3.2
+Requires-Dist: youtube-search-python ==1.6.6
+Requires-Dist: yt-dlp ==2024.4.9
+
+<h1 align="center">Welcome to Nor Sodikin GitHub Profile! 🌟</h1>
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=V1HyperBot" alt="Profile Views" />
+  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" alt="Glow Effect" />
+</p>
+
+<h2 align="center">📞 Contact Me</h2>
+<p align="center">
+  <a href="https://wa.me/+6289525658633">
+    <img src="https://img.shields.io/badge/WhatsApp-Chat-green?logo=whatsapp&style=flat-square" alt="WhatsApp" />
+  </a>
+  <a href="https://t.me/NorSodikin">
+    <img src="https://img.shields.io/badge/Telegram-Chat-blue?logo=telegram&style=flat-square" alt="Telegram" />
+  </a>
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" alt="Glow Effect" />
+</p>
+
+<h2 align="center">📊 GitHub Stats</h2>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=V1HyperBot&show_icons=true&theme=radical" alt="GitHub Stats" />
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" alt="Glow Effect" />
+</p>
+
+<h2 align="center">🌍 Top Languages</h2>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=V1HyperBot&layout=compact&theme=radical" alt="Top Languages" />
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" alt="Glow Effect" />
+</p>
+
+<p align="center">
+  Dibuat dengan ❤️ oleh NorSodikin
+</p>
