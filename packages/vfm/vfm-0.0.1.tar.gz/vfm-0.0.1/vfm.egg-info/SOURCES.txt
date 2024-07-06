@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+vfm.egg-info/PKG-INFO
+vfm.egg-info/SOURCES.txt
+vfm.egg-info/dependency_links.txt
+vfm.egg-info/top_level.txt
