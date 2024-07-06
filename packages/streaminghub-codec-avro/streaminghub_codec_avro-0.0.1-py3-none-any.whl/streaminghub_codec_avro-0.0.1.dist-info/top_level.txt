@@ -1,0 +1,1 @@
+streaminghub_codec_avro
