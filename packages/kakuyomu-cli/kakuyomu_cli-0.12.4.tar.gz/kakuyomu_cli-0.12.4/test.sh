@@ -1,0 +1,20 @@
+curl 'https://kakuyomu.jp/graphql?opname=UpdateEpisodeReservationMutation' \
+  -H 'accept: */*' \
+  -H 'accept-language: ja;q=0.9' \
+  -H 'baggage: sentry-environment=production,sentry-release=release-d3a829e0f6,sentry-public_key=292a799d6bfc4ebfbe3e651c276b9ac1,sentry-trace_id=6d41f584d2414846b23b1e6515e1e533' \
+  -H 'content-type: application/json' \
+  -H 'cookie: bid=ChYkJWXZhu56GQARIDglAg==; dlsc=mL8dYzni9qkYeSGCil9TmUSn8Y3p9tzwjlJRamPKdkn; last_visited_antenna_page=%7B%22page_type%22%3A%22in_reading%22%2C%22label_id%22%3Anull%7D; _gcl_au=1.1.798107441.1717828158; dis_session_r=2035f811f9d9a7ad44f60f2b4e92b5d4c4c9b328' \
+  -H 'origin: https://kakuyomu.jp' \
+  -H 'priority: u=1, i' \
+  -H 'referer: https://kakuyomu.jp/my/works/16816927859498193192/episodes/16816927859880026113/publish' \
+  -H 'sec-ch-ua: "Brave";v="125", "Chromium";v="125", "Not.A/Brand";v="24"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Linux"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'sec-gpc: 1' \
+  -H 'sentry-trace: 6d41f584d2414846b23b1e6515e1e533-809e7082ae406bd7-0' \
+  -H 'user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36' \
+  -H 'x-requested-with: XMLHttpRequest' \
+  --data-raw $'{"operationName":"UpdateEpisodeReservationMutation","variables":{"input":{"episodeId":"16816927859880026113","reserveDatetime":"2024-07-06T22:00:00.000+09:00"}},"query":"mutation UpdateEpisodeReservationMutation($input: UpdateEpisodeReservationInput\u0021) {\\n  updateEpisodeReservation(input: $input) {\\n    episode {\\n      id\\n      title\\n      work {\\n        id\\n        title\\n        __typename\\n      }\\n      __typename\\n    }\\n    __typename\\n  }\\n}"}'
