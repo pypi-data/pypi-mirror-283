@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: PcapParser
+Version: 0.1.1
+Summary: Extract rtmp links from pcap file
+Author-email: mokurin000 <1348292515a@gmail.com>
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: dpkt >=1.9.8
+
+# PcapParser
+
+Extract urls from pcap
+
+Targetting baoyuzb
+
+Note: You may use VLC to save a mp4 from stream
+
+## Install
+
+```bash
+pipx install PcapParser
+```
+
+## Run
+
+### To use tk file picker
+
+```bash
+pcap-parser
+```
+
+### To use in CLI
+
+```bash
+pcap-parser ./xxxx.pcap
+```
+
+It will override `urls.txt` in current workdir
