@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "diarydek"
+# make sure next line matches appversion in src/diarydek/diarydek.py
+version = "0.0.21"
+authors = [
+  { name = "Dan Kelley", email = "kelley@dal.ca" }
+]
+description = "A diary tool."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+]
+
+[project.urls]
+Homepage = "https://github.com/dankelley/diarydek"
+Issues = "https://github.com/dankelley/diarydek/issues"
+
+[project.scripts]
+diarydek = "diarydek:main"
