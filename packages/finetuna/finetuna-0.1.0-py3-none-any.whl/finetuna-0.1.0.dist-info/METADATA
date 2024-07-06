@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: finetuna
+Version: 0.1.0
+Requires-Python: >=3.10
+Requires-Dist: accelerate
+Requires-Dist: diffusers
+Requires-Dist: evaluate
+Requires-Dist: huggingface
+Requires-Dist: pyyaml
+Requires-Dist: scikit-learn
+Requires-Dist: torch
+Requires-Dist: torchsummary
+Requires-Dist: tqdm
+Requires-Dist: transformers
