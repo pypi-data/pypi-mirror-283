@@ -1,0 +1,3 @@
+include unit_gears/master_gear_mapping.csv
+include unit_gears/models/*.json
+include unit_gears/reference/*.json
