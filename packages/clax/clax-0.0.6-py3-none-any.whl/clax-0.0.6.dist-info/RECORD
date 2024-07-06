@@ -1,0 +1,9 @@
+clax/__init__.py,sha256=nKIWQehizbcWOjHTZCWBuwiYta6PaztXbnR9nP4yRxE,166
+clax/_version.py,sha256=QiiYsv0kcJaB8wCWyT-FnI2b6be87HA-CrrIUn8LQhg,22
+clax/clax.py,sha256=uOSNuyRd4xK5T1XEkV-gNBGrcqnMqE5t2IyHSqeck1s,9243
+clax/network.py,sha256=YztQzPr86EPwiCAVDWHXohLhydMByZt_72NibzdZPZc,2541
+clax-0.0.6.dist-info/LICENSE,sha256=UAywozAgWoY1nHajvgwD_21wuwcSG1uGHBihbOCU0pc,1069
+clax-0.0.6.dist-info/METADATA,sha256=hNZmEVTq5R_eOpI0i2_tizMGofOuofGSf-nvjSzXM08,2189
+clax-0.0.6.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+clax-0.0.6.dist-info/top_level.txt,sha256=9llY1QXCCDJNOtpTWt-XnaaTHuTZmWgGlKALk1EGsBU,5
+clax-0.0.6.dist-info/RECORD,,
