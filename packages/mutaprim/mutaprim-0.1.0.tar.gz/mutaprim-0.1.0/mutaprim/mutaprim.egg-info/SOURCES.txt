@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+mutaprim/mutaprim.egg-info/PKG-INFO
+mutaprim/mutaprim.egg-info/SOURCES.txt
+mutaprim/mutaprim.egg-info/dependency_links.txt
+mutaprim/mutaprim.egg-info/requires.txt
+mutaprim/mutaprim.egg-info/top_level.txt

@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: mutaprim
+Version: 0.1.0
+Summary: A collection of classes that encapsulate a primitive so it can be modified inside a function.
+Home-page: https://github.com/matheusvilano/mutaprim.git
+Author: Matheus Vilano
+Author-email: 
+License: Apache Software License (Apache License 2.0)
+Project-URL: Author Website, https://www.matheusvilano.com/
+Project-URL: Git Repository, https://github.com/matheusvilano/mutaprim.git
+Keywords: reference mutable primitive modify pass encapsulation container
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setuptools~=70.1.0
+
+# Mutaprim
+
+Mutaprim is very simple package containing a single module: `mutaprim`. The module contain 5 "mutable primitive" types, 
+all inheriting from a base class called `MutablePrimitive`:
+- `MutableBool`
+- `MutableInt`
+- `MutableFloat`
+- `MutableStr`
+- `MutableBytes`
+
+An instance of any `MutablePrimitive` subclass will have the `value` property, as well as equivalent  `get` and `set` 
+functions.
+
+Here is a very simple demonstration:
+
+```python
+from mutaprim import MutableInt
+
+def increment(integer: MutableInt):
+    integer.value += 1
+
+# `__init__` and `__str__`
+mutable_int = MutableInt(0)
+print(mutable_int)  # 0
+
+# `get` and `set`
+mutable_int.set(10)
+print(mutable_int.get())  # 10
+
+# `value`
+increment(mutable_int)
+print(mutable_int.value)  # 11
+```
