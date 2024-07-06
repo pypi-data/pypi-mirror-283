@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: expedite
+Version: 0.1.0a2
+Summary: Simple encrypted file transfer service
+Home-page: https://github.com/gridhead/expedite
+License: GPL-3.0-or-later
+Author: Akashdeep Dhar
+Author-email: akashdeep.dhar@gmail.com
+Maintainer: Akashdeep Dhar
+Maintainer-email: akashdeep.dhar@gmail.com
+Requires-Python: >=3.10,<4
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Security
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: System :: Networking
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: cryptography (>=42.0.8,<43.0.0)
+Requires-Dist: tqdm (>=4.66.4,<5.0.0)
+Requires-Dist: websockets (>=12.0,<13.0)
+Project-URL: Documentation, https://github.com/gridhead/expedite/blob/main/README.md
+Project-URL: Repository, https://github.com/gridhead/expedite
+Description-Content-Type: text/markdown
+
+# expedite
+Simple encrypted file transfer service
+
