@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: DevCommit
+Version: 0.1.0
+Summary: A command-line AI tool for autocommits
+Home-page: https://github.com/hordunlarmy/DevCommit
+Author: HordunTech
+Author-email: horduntech@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: COPYING
+Requires-Dist: inquirerpy
+Requires-Dist: google-generativeai
+Requires-Dist: rich
+Requires-Dist: python-decouple
+
+<picture> <source media="(prefers-color-scheme: dark)" srcset="https://drive.google.com/uc?export=view&id=1zo5dt0XrFbldI--xcwKoiO_yrT_BV3g4
+"> <source media="(prefers-color-scheme: light)" srcset="https://drive.google.com/uc?export=view&id=1zo5dt0XrFbldI--xcwKoiO_yrT_BV3g4
+"> <img alt="README image" src="https://drive.google.com/uc?export=view&id=1zo5dt0XrFbldI--xcwKoiO_yrT_BV3g4
+"> </picture>
+
