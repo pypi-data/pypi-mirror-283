@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: NewBingImageCreator
+Version: 2.2.6
+Summary: .com
+Home-page: https://github.com/
+Author: Anonymous
+Author-email: 
+Description-Content-Type: text/markdown
+Requires-Dist: httpx
