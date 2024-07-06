@@ -1,0 +1,240 @@
+Metadata-Version: 2.1
+Name: ai_function_helper
+Version: 0.2.1
+Summary: A helper for creating AI-powered functions using OpenAI's API
+Home-page: https://github.com/Clad3815/ai-function-helper-python
+Author: Clad3815
+Author-email: clad3815@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: openai
+Requires-Dist: pydantic
+Requires-Dist: jsonschema
+Requires-Dist: colorama
+Requires-Dist: json-repair
+
+# AI Function Helper
+
+AI Function Helper is a Python library that streamlines the creation and utilization of AI-powered functions using OpenAI's API. It provides a flexible and user-friendly interface for defining and executing AI-assisted tasks, with built-in error handling, retry mechanisms, and debugging capabilities.
+
+## Table of Contents
+
+1. [Key Features](#key-features)
+2. [Installation](#installation)
+3. [Quick Start](#quick-start)
+4. [Core Concepts](#core-concepts)
+5. [Advanced Usage](#advanced-usage)
+6. [Error Handling and Debugging](#error-handling-and-debugging)
+7. [Examples](#examples)
+8. [Contributing](#contributing)
+9. [License](#license)
+
+## Key Features
+
+- Seamless integration with OpenAI's API
+- Support for various AI models, including GPT-3.5 and GPT-4
+- Customizable function decorators for AI-powered tasks
+- Automatic error handling and retry mechanisms
+- JSON parsing and validation using Pydantic models
+- Debug mode for detailed API interaction logging
+- Function calling and tool usage handling
+
+## Installation
+
+Install AI Function Helper using pip:
+
+```bash
+pip install ai-function-helper
+```
+
+## Quick Start
+
+Here's a basic example to get you started with AI Function Helper:
+
+```python
+from ai_function_helper import AIFunctionHelper
+from pydantic import BaseModel, Field
+
+# Initialize AI Function Helper
+ai_helper = AIFunctionHelper("your-api-key", "http://your-api-base-url")
+
+# Define a response model
+class ResponseModel(BaseModel):
+    result: str = Field(..., description="The generated result")
+
+# Define an AI-powered function
+@ai_helper.ai_function(model="gpt-3.5-turbo", max_tokens=100)
+async def example_function(ai_result: ResponseModel, input_data: str) -> ResponseModel:
+    """
+    An example AI-powered function that processes input data.
+    """
+    return ai_result
+
+# Use the function
+result = await example_function(input_data="Your input here")
+print(result.result)
+```
+
+## Core Concepts
+
+### AIFunctionHelper Class
+
+The `AIFunctionHelper` class is the main entry point for creating AI-powered functions. It handles API communication, error management, and result processing.
+
+### AI Function Decorator
+
+The `@ai_helper.ai_function` decorator is used to transform regular Python functions into AI-powered functions. It manages the interaction with the OpenAI API and processes the results.
+
+### Pydantic Models
+
+Pydantic models are used to define the structure of inputs and outputs, ensuring type safety and enabling easy validation of AI-generated responses.
+
+## Advanced Usage
+
+### Customizing AI Function Behavior
+
+The `@ai_helper.ai_function` decorator accepts several parameters to fine-tune the behavior of AI-powered functions:
+
+```python
+@ai_helper.ai_function(
+    model="gpt-4o",
+    max_tokens=2000,
+    temperature=0.7,
+    frequency_penalty=0.1,
+    presence_penalty=0.1,
+    top_p=0.9,
+    timeout=60,
+    max_retries=3,
+    show_debug=True,
+    debug_level=1
+)
+async def advanced_function(ai_result: ComplexResponseModel, input_data: str) -> ComplexResponseModel:
+    """
+    An advanced AI-powered function with custom settings.
+    """
+    return ai_result
+```
+
+### Parameter Descriptions:
+
+- `model`: Specifies the AI model to use (e.g., "gpt-3.5-turbo", "gpt-4o")
+- `max_tokens`: Sets the maximum number of tokens in the response
+- `temperature`: Controls the randomness of the output (0.0 to 1.0)
+- `frequency_penalty`: Adjusts the likelihood of repeating the same words
+- `presence_penalty`: Adjusts the likelihood of introducing new topics
+- `top_p`: Uses nucleus sampling instead of temperature
+- `timeout`: Sets a timeout for the API call
+- `max_retries`: Specifies the number of retries on failure
+- `show_debug`: Enables detailed debug logging
+- `debug_level`: Sets the level of debug information (0, 1, or 2)
+
+## Error Handling and Debugging
+
+### Automatic Retries
+
+AI Function Helper automatically handles errors and can retry failed API calls:
+
+```python
+@ai_helper.ai_function(max_retries=3)
+async def retry_example(ai_result: ResponseModel, input_data: str) -> ResponseModel:
+    """
+    This function will retry up to 3 times if the API call fails.
+    """
+    return ai_result
+```
+
+### Debugging
+
+To enable detailed logging of API interactions, use the `show_debug` and `debug_level` parameters:
+
+```python
+@ai_helper.ai_function(show_debug=True, debug_level=2)
+async def debug_example(ai_result: ResponseModel, input_data: str) -> ResponseModel:
+    """
+    This function will display detailed debug information.
+    """
+    return ai_result
+```
+
+## Examples
+
+### Simple Text Generation
+
+```python
+from ai_function_helper import AIFunctionHelper
+from pydantic import BaseModel, Field
+
+ai_helper = AIFunctionHelper("your-api-key")
+
+class StoryResponse(BaseModel):
+    story: str = Field(..., description="A short story")
+
+@ai_helper.ai_function(model="gpt-3.5-turbo", max_tokens=200)
+async def generate_short_story(ai_result: StoryResponse, theme: str) -> StoryResponse:
+    """
+    Generate a short story based on a given theme.
+    """
+    return ai_result
+
+async def main():
+    result = await generate_short_story(theme="A day in the life of a time traveler")
+    print(result.story)
+
+if __name__ == "__main__":
+    import asyncio
+    asyncio.run(main())
+```
+
+### Complex Task: Recipe Generation
+
+```python
+from ai_function_helper import AIFunctionHelper
+from pydantic import BaseModel, Field
+from typing import List
+
+ai_helper = AIFunctionHelper("your-api-key")
+
+class Recipe(BaseModel):
+    name: str = Field(..., description="Name of the recipe")
+    ingredients: List[str] = Field(..., description="List of ingredients")
+    instructions: List[str] = Field(..., description="List of cooking instructions")
+
+@ai_helper.ai_function(model="gpt-4o", max_tokens=500)
+async def generate_recipe(ai_result: Recipe, cuisine: str, dietary_restrictions: str) -> Recipe:
+    """
+    Generate a recipe based on the given cuisine and dietary restrictions.
+    """
+    return ai_result
+
+async def main():
+    recipe = await generate_recipe(cuisine="Mediterranean", dietary_restrictions="vegetarian")
+    
+    print(f"Recipe: {recipe.name}")
+    print("Ingredients:")
+    for ingredient in recipe.ingredients:
+        print(f"- {ingredient}")
+    print("Instructions:")
+    for i, instruction in enumerate(recipe.instructions, 1):
+        print(f"{i}. {instruction}")
+
+if __name__ == "__main__":
+    import asyncio
+    asyncio.run(main())
+```
+
+## Contributing
+
+Contributions to AI Function Helper are welcome! Please feel free to submit issues, feature requests, or pull requests on our GitHub repository.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
