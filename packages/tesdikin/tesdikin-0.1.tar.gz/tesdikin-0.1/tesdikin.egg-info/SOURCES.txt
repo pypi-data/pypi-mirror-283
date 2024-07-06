@@ -1,0 +1,7 @@
+setup.py
+nsdev/__init__.py
+tesdikin.egg-info/PKG-INFO
+tesdikin.egg-info/SOURCES.txt
+tesdikin.egg-info/dependency_links.txt
+tesdikin.egg-info/requires.txt
+tesdikin.egg-info/top_level.txt
