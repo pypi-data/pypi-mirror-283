@@ -1,0 +1,11 @@
+package_mchalitsios/__init__.py,sha256=wpLkiWtaVTMW7D8xQiIJGNsWrp-mbw96FMgg9v8cIZ4,222
+package_mchalitsios/telemetry_kit/Observer.py,sha256=Y4VtGs5e8KTB7DVfTkCqIilaFXU4WzHrE6UlZnbCwEg,10403
+package_mchalitsios/telemetry_kit/Resource.py,sha256=WbjgeQdPYWh5fQhB1CNuw9zMVL-xQOT_R5eNJQOzb5g,1718
+package_mchalitsios/telemetry_kit/__init__.py,sha256=-nEwI-BwAjyfgoSEu3CIe4xheII-gaaEZI7fu1jcXvY,149
+package_mchalitsios/telemetry_kit/refactor.py,sha256=6bvfrVgkhEB59KLWr9JADLI6kHRq2eZrDmVzIh8NV2Q,3883
+package_mchalitsios/telemetry_kit/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+package_mchalitsios/telemetry_kit/utils/logger.py,sha256=mKtS-qcNfpj9An0BXpixsSsXGb3sBuf8Wlp70QLlyDc,840
+package_mchalitsios-1.0.0.dist-info/LICENSE,sha256=YF4YrpgutnTFQocyuBLGvz1De1xERiGCdGvaYwnJTNE,328
+package_mchalitsios-1.0.0.dist-info/METADATA,sha256=IS8tE1uWzTmkAYi30B9UTaU8YsRpMDo_vg7FIqMmB9I,4706
+package_mchalitsios-1.0.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+package_mchalitsios-1.0.0.dist-info/RECORD,,
