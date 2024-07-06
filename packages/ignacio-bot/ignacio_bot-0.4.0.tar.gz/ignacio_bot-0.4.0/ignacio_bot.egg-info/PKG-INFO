@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: ignacio-bot
+Version: 0.4.0
+Summary: A simple Flask app that lets you talk to a custom bot.
+Home-page: https://github.com/arpanseth/ignacio_bot
+Author: Arpan Seth
+Author-email: aseth42@gmail.com
+Project-URL: Source, https://github.com/arpanseth/ignacio_bot
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Ignacio Bot
+
+A simple Flask App that uses a fine-tuned OpenAI model to let users chat with a custom bot. 
+The bot is trained on interview transcripts from youtube. Additional information can be provided by editing the file system_context.txt.
+
+To run the app, user must set **OPENAI_API_KEY** environment variable, which can be obtained from OpenAI.
+
+The app has been tested on M1 Macbook Air running Python version 3.11.9. 
+
+Install the packages using:
+```
+pip install -r requirements.txt
+```
+**OPTIONAL**: You can also simply install the 3 needed packages instead of using the requirements file:
+``` 
+pip install flask openai flask_session 
+```
+
+Run the app using:
+```
+python app.py
+```
+
+The chatbot will be availabe through a browser at the URL: http://127.0.0.1:5000/ 

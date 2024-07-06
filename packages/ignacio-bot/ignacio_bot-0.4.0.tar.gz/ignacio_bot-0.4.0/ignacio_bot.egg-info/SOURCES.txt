@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+ignacio_bot/__init__.py
+ignacio_bot/app.py
+ignacio_bot/system_context.txt
+ignacio_bot.egg-info/PKG-INFO
+ignacio_bot.egg-info/SOURCES.txt
+ignacio_bot.egg-info/dependency_links.txt
+ignacio_bot.egg-info/entry_points.txt
+ignacio_bot.egg-info/requires.txt
+ignacio_bot.egg-info/top_level.txt
+ignacio_bot/static/GRG_logo.png
+ignacio_bot/templates/index.html
