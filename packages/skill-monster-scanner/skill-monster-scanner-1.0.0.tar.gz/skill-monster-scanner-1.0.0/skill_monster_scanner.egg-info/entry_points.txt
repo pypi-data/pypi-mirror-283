@@ -1,0 +1,2 @@
+[ovos.plugin.skill]
+skill-monster-scanner.mikejgray = skill_monster_scanner:MonsterScannerSkill
