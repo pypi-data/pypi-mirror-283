@@ -1,0 +1,3 @@
+[console_scripts]
+ndlconvert=lynguine.ndlconvert:main
+
