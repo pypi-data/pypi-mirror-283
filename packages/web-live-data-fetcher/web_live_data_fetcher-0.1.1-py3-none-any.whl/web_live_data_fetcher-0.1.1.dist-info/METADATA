@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: web_live_data_fetcher
+Version: 0.1.1
+Summary: A package for retrieving and summarizing live data from web searches.
+Home-page: https://github.com/MadhanMohanReddy2301/web_live_data_fetcher
+Author: Madhan Mohan Reddy P
+Author-email: pmadhan006@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: googlesearch-python
+
+# Web Live Data Fetcher
+
+A Python package for retrieving and summarizing live data from web searches by performing Google searches and extracting content from the top search results.
+
+## Installation
+
+You can install the package via pip:
+
+ ```sh
+ pip install web_live_data_fetcher
+ ```
+
+# Usage
+
+The web_live_data_fetcher package allows you to search for a query on Google, fetch the content of the top results, and extract the text content from the body of the webpages.
+
+ ```python
+ from web_live_data_fetcher import live_data
+ 
+ query = "What is the weather like in Bangalore right now?"
+ data = live_data(query)
+ print(data)
+ ```
+
+# License
+
+This project is licensed under the Apachi License. See the LICENSE file for more details.
+
+# Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
