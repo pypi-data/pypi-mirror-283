@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+FaceDB.egg-info/PKG-INFO
+FaceDB.egg-info/SOURCES.txt
+FaceDB.egg-info/dependency_links.txt
+FaceDB.egg-info/not-zip-safe
+FaceDB.egg-info/requires.txt
+FaceDB.egg-info/top_level.txt
+facedb/__init__.py
+facedb/db.py
+facedb/db_models.py
+facedb/db_tools.py
+facedb/query.py
+test/test.py
