@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: personalWebbingCommunication
+Version: 1.0.3
+Summary: All functions that assist in standardising development approaches.
+Home-page: https://github.com/yourusername/your-repo
+Author: Marcus
+Author-email: marcusongkiansiong@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: custom-development-standardisation >=1.1.2
+Requires-Dist: Flask >=3.0.3
+Requires-Dist: log-data >=1.1.1
+
+# Purpose
+Abstracting message construction and deconstruction to achieve consistency
+
+1. Multipart
+    1. Structure of message (see Appendix A, Figure 1)
+    2. Current data types (see Appendix A, Figure 2)
+
+# Section types
+    1. 
+
+# Appendix 
+Appendix A
+1. Multipart
+    *Figure 1: Structure of the message from top (left) to bottom (right).*
+```mermaid
+    graph TD
+        subgraph one[Cover]
+            metadata_0[Content-Type: hello; Separator_string: separator text]
+            a{{separator text}}
+            subgraph comp_1
+                metadata_1.1
+                metadata_1.2
+                data1
+            end
+            b{{separator text}}
+            subgraph comp_2
+                metadata_2.1
+                metadata_2.2
+                data2
+            end
+            c{{separator text}}
+            subgraph comp_3
+                metadata_3.1
+                metadata_3.2
+                data3
+            end
+        end
+```
+    Table 1: Current data types
+    |data type|metadata|Specifics|
+    |-|-|-|
+    |text|data_type,name||
+    |image|data_type||
+    
+        
+# Change log
+### [1.0.3] - 2024-06-30
+add:
+1. Init: initialisation of custom logger
+2. multipart: added .store_log into construct image section method
+fixed:
+others:
+1. Reason: I am currently executing upon a project to measure how effective the approach of creating custom function is to my development productivity. So I need to log all function usage as usage is an indicator of productivity due to the reduction in the lines of code when I use those custom packages in my projects. 
+### [1.0.2] - 2024-06-30
+add:
+1. Multipart: new header added called boundaries
+fixed:
+others:
+1. Keep the boundaries and the content type for the entire response separate, to make code dependent on it neat. 
+### [1.0.1] - 2024-06-28
+add:
+fixed:
+1. back_end context error when importing: Remove class initialisation and execution at the bottom.
+2. set_multipart_message_config: Removed new line characters when assigning self.bounary variable with boundary text to stop the new line character in header error. 
+others:
+1. fixed_1: I forgot to remove the test code at the bottom of the script when I upload it to pip
+2. fixed_2: When I generate the response object, I pass the content of self.boundary into the header of the response object. Since during initialisation, I added new line characters beside boundary parameter content (--{boundary}--[new line char]), that content caused the error. 
+### [1.0.0] - 2024-06-28
+add:
+1. multipart: A class used to construct multipart message response
+2. set_multipart_message_config: Set multipart message headers (e.g. content-type)
+3. construct_image_section: Create the section of the message that holds image data, where image is either received as a binary or a file path. 
+4. construct_text_section: Create the text section of the message.
+5. construct_encoded_multipart_message: Fill in the parts and metadata of the entire message, then return a response object. 
+fixed:
+others:
+1. Usage context: Can only be used within the context of a backend server.
+2. Process of message construction: Store all message parts and meta data for the entire message in variables and arrays, then when you run the function(see above at add 5), fill in the make_response with these data
+3. Image metadata: number system, name, data-type
+4. Text metadata: name, data-type
+5. Image data should be in binary, converted to base64 version, then decode to utf8, before embedding into message part. 
