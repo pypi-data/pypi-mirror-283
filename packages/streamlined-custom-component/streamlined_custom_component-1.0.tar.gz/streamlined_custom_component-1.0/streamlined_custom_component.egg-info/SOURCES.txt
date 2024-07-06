@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+streamlined_custom_component/__init__.py
+streamlined_custom_component/component.py
+streamlined_custom_component.egg-info/PKG-INFO
+streamlined_custom_component.egg-info/SOURCES.txt
+streamlined_custom_component.egg-info/dependency_links.txt
+streamlined_custom_component.egg-info/requires.txt
+streamlined_custom_component.egg-info/top_level.txt
