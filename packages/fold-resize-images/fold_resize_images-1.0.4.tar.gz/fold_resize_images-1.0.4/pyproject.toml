@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fold_resize_images"
+version = 'v1.0.4'
+description = "A simple tool to resize images in a directory."
+authors = [
+    { name = "Tadiello Sebastien", email = "sebastientadiello@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "Pillow"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest"
+]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+    "test_resize_images.py"
+]
+
+[project.scripts]
+fold-resize-images = "src.fold_resize_images:main"
+
+[project.urls]
+Homepage = "https://github.com/sebDtSci/fold_resize_images"
