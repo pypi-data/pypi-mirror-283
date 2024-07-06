@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+src/fameflow/__init__.py
+src/fameflow/app.py
+src/fameflow.egg-info/PKG-INFO
+src/fameflow.egg-info/SOURCES.txt
+src/fameflow.egg-info/dependency_links.txt
+src/fameflow.egg-info/top_level.txt
