@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: wayback-recon
+Version: 0.1.4
+Summary: This tool do a passive recon using Wayback Machine
+Author: Your Name
+Author-email: dantearcanaelmontford@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Description-Content-Type: text/markdown
+
+
