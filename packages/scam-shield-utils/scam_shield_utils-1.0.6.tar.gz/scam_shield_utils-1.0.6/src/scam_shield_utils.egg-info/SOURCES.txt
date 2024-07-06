@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/scam_shield_utils/__init__.py
+src/scam_shield_utils/aws_operations.py
+src/scam_shield_utils/data_opeations.py
+src/scam_shield_utils/logger_log.py
+src/scam_shield_utils/postgres_connector.py
+src/scam_shield_utils.egg-info/PKG-INFO
+src/scam_shield_utils.egg-info/SOURCES.txt
+src/scam_shield_utils.egg-info/dependency_links.txt
+src/scam_shield_utils.egg-info/top_level.txt
