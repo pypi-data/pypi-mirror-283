@@ -1,0 +1,60 @@
+[tool.poetry]
+name = "lynguine"
+version = "0.1.1"
+description = "Package for lynguine data oriented architecture interfaces."
+authors = ["Neil D. Lawrence <lawrennd@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/lawrennd/lynguine"
+include = ["lynguine/defaults.yml"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",	
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: Implementation :: PyPy"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+python-frontmatter = "*"
+bibtexparser = "*"
+pyyaml = "*"
+openpyxl = "*"
+XlsxWriter = "*"
+pandas = "*"
+numpy = ">=1.0.0,<2.0.0" # to deal with this https://github.com/explosion/thinc/issues/939
+pypandoc = "*"
+gitpython = "*"
+anyascii = "*"
+python-liquid = "*"
+pylatexenc = "*"
+markdown = "*"
+markdownify = "*"
+google-api-python-client = "*"
+google-auth-httplib2 = "*"
+gspread-pandas = "*"
+mimesis = ">11"
+pyminizip = "*"
+wget = "*"
+pyzmq = "^25.1.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+pytest-cov = "^3.0.0"
+pytest-mock = "^3.3.1"  
+deepdiff = "^6.6.0"
+
+[tool.poetry.scripts]
+ndlconvert = "lynguine.ndlconvert:main"
+
+# pyproject.toml
+[tool.pytest.ini_options]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+]
+
