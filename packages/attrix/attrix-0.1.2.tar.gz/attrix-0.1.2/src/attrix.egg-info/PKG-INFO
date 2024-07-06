@@ -1,0 +1,134 @@
+Metadata-Version: 2.1
+Name: attrix
+Version: 0.1.2
+Summary: A tool for portfolio attribution
+Home-page: https://github.com/papasaidfine/attribution
+Author: Larry Chen
+Author-email: yatlik.chen@outlook.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=2.2.2
+Requires-Dist: scipy>=1.14.0
+Requires-Dist: numpy>=2.0.0
+
+# Attribution Library for Wolfe QES Risk Model
+
+<a target="new" href="https://pypi.org/project/attrix/"><img border=0 src="https://img.shields.io/badge/python-3.6+-blue.svg?style=flat" alt="Python version"></a>
+<a target="new" href="https://pypi.org/project/attrix/"><img border=0 src="https://img.shields.io/badge/pypi-0.1.1-orange" alt="PyPi version"></a>
+<a target="new" href="https://pypi.org/project/attrix/"><img border=0 src="https://img.shields.io/badge/status-beta-green" alt="Status"></a>
+
+---
+
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Quick start](#quick-start)
+
+---
+
+## Introduction
+This module works with Wolfe QES risk model data to provide portfolio attribution analysis.
+To access the Wolfe QES risk model and explore a trial, please reach out to [the QES team](mailto:qesrisk@wolferesearch.com) for more information and to initiate your trial subscription.
+
+## Installation
+
+Install `yfinance` using `pip`:
+
+``` {.sourceCode .bash}
+$ pip install attrix
+```
+
+## Quick Start
+### The PortfolioTS
+`PortfolioTS` collects `PortfolioOne` objects. It helps manage the portfolio tree structure.
+Construct a multi-layer sample portfolio with ETFs and custom benchmark. Add `Ticker` and `Country` together as identifiers.
+```
+import pandas as pd
+import numpy as np
+
+# create portfolio and baskets
+dates = ['2024-06-03', '2024-06-08', '2024-06-10', '2024-06-17']
+tickers = ['AAPL', 'ACWI', 'NVDA', 'IWV']
+weights = [0.25, 0.25, 0.25, 0.25]
+portfolio = pd.DataFrame({
+    'Ticker': tickers*len(dates),
+    'Date': [x for x in dates for i in range(len(tickers))],
+    'Weight': weights*len(dates)
+})
+tickers = ['MYBENCHMARK']
+weights = [-1]
+benchmark = pd.DataFrame({
+    'Ticker': tickers*len(dates),
+    'Date': [x for x in dates for i in range(len(tickers))],
+    'Weight': weights*len(dates)
+})
+tickers = ['EZU', 'QQQ']
+weights = [0.5, 0.5]
+benchmark_holdings = pd.DataFrame({
+    'Ticker': tickers*len(dates),
+    'Date': [x for x in dates for i in range(len(tickers))],
+    'Weight': weights*len(dates)
+})
+df_main = pd.concat([portfolio, benchmark])
+df_main['Country'] = 'US'
+df_main['Portfolio'] = 'Main'
+
+df_baskets = benchmark_holdings
+df_baskets['Country'] = 'US'
+df_baskets['Portfolio'] = 'MYBENCHMARK'
+
+df_all = pd.concat([df_main, df_baskets])
+```
+
+Use a risk model data reader (please ask Wolfe QES team for the file)
+```
+json_file = 'QES_US_AC_2.json'
+```
+
+Set up the portfolio
+```
+from attrix import *
+from attrix.configs import PORTFOLIOTS_CONFIG, ATTRIBUTIONTS_CONFIG
+
+# Upload portfolio
+config = PORTFOLIOTS_CONFIG
+config['security_dao_config']['meta_file'] = json_file
+config['etf_dao_config']['meta_file'] = json_file
+pts = PortfolioTS(df_all, config=config)
+pts.save(replace=True)
+```
+
+### The AttributionTS
+`AttributionTS` collects `AttributionOne` objects. It helps output time-series portfolio attributes.
+Set up the attribution data.
+```
+# Retrieve portfolio
+portfolio_ts = PortfolioTS(config={'path': 'portfolio_data'}) # retrieve portfolio
+
+# Run attribution on the portfolio
+config = ATTRIBUTIONTS_CONFIG
+config['meta_file'] = json_file
+ats = AttributionTS(portfolio_ts, config=config)
+ats.save(replace=True)
+
+# Retrieve attribution from path
+ats = AttributionTS({'path': 'attribution_data'})
+ats.get_port_ts_data()
+```
+
+### The AttributionOne
+`AttributionOne` allows you to explore the security-level breakdowns at point-in-time.
+```
+# Show breakdowns (default showing ETF as-is while exploding user baskets)
+dated = '2024-06-03'
+a1 = ats.load_one(dated)
+a1.get_stock_risk_contri()
+
+# Change breakdowns (show both ETF and user baskets as-is)
+p1 = portfolio_ts.load_one(dated)
+p1.set_basket_to_keep('ALL')
+a1.change_portfolio_tree(p1)
+a1.get_stock_risk_contri()
+```
