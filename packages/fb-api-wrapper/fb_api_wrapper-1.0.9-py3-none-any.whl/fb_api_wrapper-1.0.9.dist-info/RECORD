@@ -1,0 +1,11 @@
+fb_api_wrapper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fb_api_wrapper/libs/define_api.cp39-win_amd64.pyd,sha256=Q7yAIVeLmxH-l7DhAOiYbxeSytlJHBS-G9JblOT41ws,19968
+fb_api_wrapper/libs/fb_core.cp39-win_amd64.pyd,sha256=y_FoN-pq_GxAbJv6lk5fNbC8xFQlrTOwmO6W_AmbIZI,139264
+fb_api_wrapper/libs/log_.cp39-win_amd64.pyd,sha256=5hREp0AO1aPq4TK3ZoDcaoakXuK5pSkJZo2AiSYbYxw,44544
+fb_api_wrapper/libs/parse_api.cp39-win_amd64.pyd,sha256=ciNFS3YzFuzD7TDSxC1ZxgHSu0n6GQu1pX2cLVacjwk,59904
+fb_api_wrapper/libs/utils.cp39-win_amd64.pyd,sha256=6mN2xc5ORdLWNgVuqs2u5k7lLWM9VCvvZGFJKrw2R8Q,50688
+fb_api_wrapper-1.0.9.dist-info/LICENSE,sha256=RcflPnoM6QAKCygr44WWjnuOyZA6sCUJkl9lj-tZRg8,1080
+fb_api_wrapper-1.0.9.dist-info/METADATA,sha256=8ObnTj7n43HdooOdOIE66U77fw87yr-oWIJRWGx9hsM,916
+fb_api_wrapper-1.0.9.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+fb_api_wrapper-1.0.9.dist-info/top_level.txt,sha256=k1AvCXYFVzG1a1xbcBUs7784PaTUtMaUMMEmh0vmST0,15
+fb_api_wrapper-1.0.9.dist-info/RECORD,,
