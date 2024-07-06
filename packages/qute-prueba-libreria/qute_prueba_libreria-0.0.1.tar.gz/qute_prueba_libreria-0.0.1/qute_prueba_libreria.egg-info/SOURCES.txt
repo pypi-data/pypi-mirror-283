@@ -1,0 +1,9 @@
+README.md
+setup.py
+qute_prueba_libreria/Funciones.py
+qute_prueba_libreria/__init__.py
+qute_prueba_libreria.egg-info/PKG-INFO
+qute_prueba_libreria.egg-info/SOURCES.txt
+qute_prueba_libreria.egg-info/dependency_links.txt
+qute_prueba_libreria.egg-info/requires.txt
+qute_prueba_libreria.egg-info/top_level.txt
