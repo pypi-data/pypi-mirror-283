@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: xian-bds
+Version: 0.1.1
+Summary: 
+Author: endogen
+Author-email: 081081@gmx.net
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: asyncpg (>=0.29.0,<0.30.0)
+Requires-Dist: loguru (>=0.7.2,<0.8.0)
+Requires-Dist: xian-py (>=0.1.10,<0.2.0)
+Description-Content-Type: text/markdown
+
+THIS IS IT
+
