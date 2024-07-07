@@ -1,0 +1,10 @@
+README.md
+setup.py
+git_cloner/__init__.py
+git_cloner/git_cloner.py
+shinzo_test.egg-info/PKG-INFO
+shinzo_test.egg-info/SOURCES.txt
+shinzo_test.egg-info/dependency_links.txt
+shinzo_test.egg-info/entry_points.txt
+shinzo_test.egg-info/requires.txt
+shinzo_test.egg-info/top_level.txt
