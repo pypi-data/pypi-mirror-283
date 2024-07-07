@@ -1,0 +1,81 @@
+# ruff: noqa: T201
+from __future__ import annotations
+
+import argparse
+import xmlrpc.client
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Remote GUI Controller")
+    parser.add_argument(
+        "--hostname", type=str, default="localhost", help="Hostname of the remote GUI"
+    )
+    parser.add_argument("--port", type=int, default=8000, help="Port of the remote GUI")
+    args = parser.parse_args()
+
+    server_url = f"http://{args.hostname}:{args.port}"
+    proxy = xmlrpc.client.ServerProxy(server_url)
+
+    while True:
+        print("\nOptions:")
+        print("1. Show Image")
+        print("2. Play Sound")
+        print("3. Show Video")
+        print("4. Show Text")
+        print("5. Render Text")
+        print("6. Exit")
+
+        choice = input("Select an option by entering the corresponding number: ")
+
+        if choice == "1":
+            image_path = input("Enter the path to the image: ")
+            proxy.show_image(image_path)
+            print(f"Image '{image_path}' displayed.")
+        elif choice == "2":
+            sound_path = input("Enter the path to the sound file: ")
+            proxy.play_sound(sound_path)
+            print(f"Sound '{sound_path}' played.")
+        elif choice == "3":
+            video_path = input("Enter the path to the video file: ")
+            proxy.show_video(video_path)
+            print(f"Video '{video_path}' displayed.")
+        elif choice == "4":
+            text = input("Enter the text to display: ")
+            color_str = input("Enter the color (default is 0,255,255 cyan): ")
+            font_size_str = input("Enter the font size (default is 100): ")
+            color = (
+                tuple(map(int, color_str.split(","))) if color_str else (0, 255, 255)
+            )
+            font_size = int(font_size_str) if font_size_str else 100
+            proxy.show_text(text, color, font_size)
+            print(f"Text '{text}' displayed.")
+        elif choice == "5":
+            print("Enter the text to render (finish input by entering an empty line):")
+            lines = []
+            while True:
+                line = input()
+                if line == "":
+                    break
+                lines.append(line)
+            text = "\n".join(lines)
+            speed_str = input(
+                "Enter the speed (characters per second, default is 10): "
+            )
+            color_str = input("Enter the color (default is 0,255,255 cyan): ")
+            font_size_str = input("Enter the font size (default is 100): ")
+            speed = int(speed_str) if speed_str else 10
+            color = (
+                tuple(map(int, color_str.split(","))) if color_str else (0, 255, 255)
+            )
+            font_size = int(font_size_str) if font_size_str else 100
+            proxy.render_text(text, speed, color, font_size)
+            print(f"Text '{text}' rendered.")
+        elif choice == "6":
+            print("Exiting.")
+            break
+        else:
+            print("Invalid choice. Please enter a number between 1 and 6.")
+
+
+if __name__ == "__main__":
+    main()
