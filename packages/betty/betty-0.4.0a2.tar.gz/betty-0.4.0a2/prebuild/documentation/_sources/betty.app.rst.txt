@@ -1,0 +1,7 @@
+betty.app module
+================
+
+.. automodule:: betty.app
+   :members:
+   :undoc-members:
+   :show-inheritance:

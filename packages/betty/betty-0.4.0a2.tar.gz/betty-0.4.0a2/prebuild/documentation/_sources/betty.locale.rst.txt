@@ -1,0 +1,18 @@
+betty.locale package
+====================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 999
+
+   betty.locale.localizable
+
+Module contents
+---------------
+
+.. automodule:: betty.locale
+   :members:
+   :undoc-members:
+   :show-inheritance:

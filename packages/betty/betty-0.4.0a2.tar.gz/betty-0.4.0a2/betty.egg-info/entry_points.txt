@@ -1,0 +1,23 @@
+[betty.command]
+clear-caches = betty.cli._clear_caches
+demo = betty.cli._demo
+docs = betty.cli._docs
+generate = betty.cli._generate
+init-translation = betty.cli._init_translation
+serve = betty.cli._serve
+serve-nginx-docker = betty.extension.nginx.cli._serve
+update-translations = betty.cli._update_translations
+
+[betty.extensions]
+betty.extension.CottonCandy = betty.extension.CottonCandy
+betty.extension.Demo = betty.extension.Demo
+betty.extension.Deriver = betty.extension.Deriver
+betty.extension.Gramps = betty.extension.Gramps
+betty.extension.HttpApiDoc = betty.extension.HttpApiDoc
+betty.extension.Maps = betty.extension.Maps
+betty.extension.Privatizer = betty.extension.Privatizer
+betty.extension.Trees = betty.extension.Trees
+betty.extension.Wikipedia = betty.extension.Wikipedia
+
+[console_scripts]
+betty = betty.cli:main
