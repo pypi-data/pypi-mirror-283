@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: openapi_pydantic_v2
+Version: 0.1.0
+Summary: OpenAPI Pydantic V2
+Author-email: Muhammad Saif <muhamed.e.saif@gmail.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: FastAPI
+Classifier: Framework :: Pydantic
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Dist: pydantic>2.6.0,<3.0.0
+Requires-Dist: typing-extensions>=4.10.0
+Requires-Dist: ruff>=0.2.2 ; extra == "dev"
+Requires-Dist: pytest==8.2.2 ; extra == "dev"
+Requires-Dist: pre-commit>=3.6.0 ; extra == "dev"
+Provides-Extra: dev
+
+# openapi-pydantic-v2
+
