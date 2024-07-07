@@ -1,0 +1,15 @@
+dfss/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dfss/__main__.py,sha256=2cbvaX5zMszcxt07Yq_CcLKc5gPOX4R2OB2Ke3zOVrE,2106
+dfss/output/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dfss/output/dfss-config.json,sha256=Uww4Ybrb7f33scvWKflKi3GX4jOcWVinYHe28qwdOFo,694
+dfss/output/dfss-cpp-linux-amd64,sha256=cnMTYnFcWIijVxZletIXHTjybp7uqFHG5nEa3Tt4VX8,4271688
+dfss/output/dfss-cpp-linux-arm64,sha256=pH-S32Fuky2-2e776tBSaU3WZMF_LTJb30q_XEuPzZc,3258296
+dfss/output/dfss-cpp-linux-armbi,sha256=W-3Fp0UlSBgbMI11pnht7i9EflFy0NppdU-Ptfn1plg,3141972
+dfss/output/dfss-cpp-linux-loongarch64,sha256=1X3oJDvg267pAx6jkd1cmZ91Y2CnB2iDkbPNTlGIElo,3997384
+dfss/output/dfss-cpp-linux-riscv64,sha256=9zb3mI4CyS2G-BG41FppUjgx5gJjQ5U5TDOaMpCek_A,2821784
+dfss/output/dfss-cpp-linux-sw_64,sha256=v6ZzUTJkd2Bp5dQUl6KnNmutsv17Aiv9LZ-9a0Y5ihY,4999888
+dfss/output/dfss-cpp-win-i686.exe,sha256=rcU8HT0r2MmttBH2Jv-B22r5opOyeuu4o5w3pZxku2I,5258476
+dfss-1.7.9.dist-info/METADATA,sha256=ce3djs4ukDDx1RJ35BHfIeIcfpM_IK3Vi9i07NUQbnY,141
+dfss-1.7.9.dist-info/WHEEL,sha256=DZajD4pwLWue70CAfc7YaxT1wLUciNBvN_TTcvXpltE,110
+dfss-1.7.9.dist-info/top_level.txt,sha256=K-6jHqEhW7mU4r0Hz8ypAn5PTswxRODvETfeNo7b2WE,5
+dfss-1.7.9.dist-info/RECORD,,
