@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: tinxy
+Version: 0.2.6
+Summary: Tinxy Package
+Home-page: https://github.com/arevindh/tinxy
+Author: Siddhu
+Author-email: me@siddhu.dev
+Project-URL: Documentation, https://github.com/arevindh/tinxy
+Project-URL: Bug Reports, https://github.com/arevindh/tinxy/issues
+Project-URL: Source Code, https://github.com/arevindh/tinxy
+Keywords: Tinxy,tinxy.in
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: js2py
+Requires-Dist: asyncio
+Requires-Dist: requests
+Requires-Dist: simplejson
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+
+# Tinxy Package 
+
+Used for authenticating with tinxy.in
+
+# Usage
+
+```
+# pip install tinxy
+# Python 3
+
+import time
+import base64
+import requests
+from tinxy import tinxy
+import time
+
+def encrypts(arg1, mqttpass):
+    en_arg1 = tinxy.strToLongs(arg1.encode('utf-8').decode())
+    en_mqttpass = tinxy.strToLongs(mqttpass.encode('utf-8').decode())
+    ed = tinxy.encodes(en_arg1, en_mqttpass)
+    ciphertext = tinxy.longsToStr(ed)
+    cipherutf2 = ciphertext.encode('latin-1')
+    cipherbase64 = base64.b64encode(cipherutf2)
+    return base64.b64decode(cipherbase64).hex()
+
+tm = str(int(time.time()))
+data = encrypts(tm, "mqtt-password-here")
+
+response = requests.post("http://10.0.28.17/toggle",  json={
+    "password": data,
+    "action": "1",
+    "relayNumber": 2
+})
+
+print(response)
+```
