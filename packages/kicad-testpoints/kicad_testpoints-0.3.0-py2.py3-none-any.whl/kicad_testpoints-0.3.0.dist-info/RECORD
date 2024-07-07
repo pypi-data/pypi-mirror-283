@@ -1,0 +1,14 @@
+kicad_testpoints/.editorconfig,sha256=p2BjiE5oHZHvATqSC-EXb2KR97Emp5hEMBHg-EJSjzU,292
+kicad_testpoints/.gitignore,sha256=vmDRHGeESYckUdUztsPr7u6ZNfBYMCVR3GE3AJCBnsY,1204
+kicad_testpoints/.travis.yml,sha256=DVDeK9J-N1XRJdFATSuX6NAa5ytw-uK8uK0yNKcutf8,692
+kicad_testpoints/__init__.py,sha256=BukP5hvS596LAx4eUhVomN8MDpRJqcXGHYApwZ_KfxI,145
+kicad_testpoints/cli.py,sha256=PAGucOZki4n3Ol5rVeW7VuRtyzSngLGI9pqeP0BNRV4,2723
+kicad_testpoints/file_io.py,sha256=0MQLefTB_U5nZm2jFngAuWk1yJV5qRjM7A4NnOsAMIk,3616
+kicad_testpoints/kicad_testpoints.py,sha256=I7T2mZuVo9H3iaN6YDldTnfvvRaTfNE5Yc5O1E8itLY,5211
+kicad_testpoints/.github/ISSUE_TEMPLATE.md,sha256=9voFKVOSXqNmc2pqlKIXy-113mufLc3H7_yN9ImB0vA,327
+kicad_testpoints-0.3.0.dist-info/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+kicad_testpoints-0.3.0.dist-info/METADATA,sha256=JsglBvrUqXXI2JCq_622M7VkoDlP_ov3_B_gRIR89OA,11913
+kicad_testpoints-0.3.0.dist-info/WHEEL,sha256=0XQbNV6JE5ziJsWjIU8TRRv0N6SohNonLWgP86g5fiI,109
+kicad_testpoints-0.3.0.dist-info/entry_points.txt,sha256=6YRYQJR16KJptWOUFWn20wyYc-vy8Y4eOC4QBX-Saf8,63
+kicad_testpoints-0.3.0.dist-info/top_level.txt,sha256=CYNBu_IDRC0xJA2uLQ4eEx3gD6vlyXmCmliI-2_wezg,17
+kicad_testpoints-0.3.0.dist-info/RECORD,,
