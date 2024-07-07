@@ -1,0 +1,4 @@
+[console_scripts]
+makeapplication = tools.makeapplication:main
+makeproject = tools.makeproject:main
+makewheel = tools.makewheel:main
