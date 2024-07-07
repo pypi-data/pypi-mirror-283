@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "java-to-python-transpiler"
+version = "0.1.8"
+description = "Transpiles Java source code into Python source code"
+authors = ["Hunter G."]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+autopep8 = "^2.3.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
