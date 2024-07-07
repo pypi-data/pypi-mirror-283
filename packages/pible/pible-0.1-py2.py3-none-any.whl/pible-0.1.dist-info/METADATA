@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: pible
+Version: 0.1
+Summary: A Python library for working with Bible books and verses.
+Author-email: James Walters <33947683+iamjameswalters@users.noreply.github.com>
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: ujson ; extra == "ujson"
+Project-URL: Home, https://github.com/iamjameswalters/pible
+Provides-Extra: ujson
