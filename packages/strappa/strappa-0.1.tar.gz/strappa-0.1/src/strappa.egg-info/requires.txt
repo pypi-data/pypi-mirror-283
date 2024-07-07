@@ -1,0 +1,7 @@
+click
+
+[dev]
+pytest
+ruff
+mypy
+pytest-cov

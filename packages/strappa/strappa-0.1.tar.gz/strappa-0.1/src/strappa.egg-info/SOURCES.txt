@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.py
+src/strappa/__init__.py
+src/strappa/cli.py
+src/strappa/main.py
+src/strappa/utils.py
+src/strappa.egg-info/PKG-INFO
+src/strappa.egg-info/SOURCES.txt
+src/strappa.egg-info/dependency_links.txt
+src/strappa.egg-info/entry_points.txt
+src/strappa.egg-info/requires.txt
+src/strappa.egg-info/top_level.txt
+tests/test_strappa.py
