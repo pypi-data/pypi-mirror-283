@@ -1,0 +1,12 @@
+cdk_pyproject/__init__.py,sha256=OMQOgey2tbZadCvFGDTtMivIPQHoC1juJxHAHwnZi8I,103
+cdk_pyproject/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cdk_pyproject/py_project.py,sha256=XPSNqPWpvxW0Zr6Ye9SgGyTwympsm30WKopK8XMdLvQ,2387
+cdk_pyproject/py_script.py,sha256=QILXoTwzO55nrgK1sIBFBngjTneCB_1rhPGsiSewKuY,2062
+cdk_pyproject/utils.py,sha256=Yma3wlCASepXT0rDuZ5Sa3o0SRCi5LFQjBJI02caCyM,2351
+cdk_pyproject/dockerfiles/pyproject.Dockerfile,sha256=8fEk4lpKJ7OovaAm04hl_s9zfQ8seZo9VHawPXqNNfw,440
+cdk_pyproject/dockerfiles/rye.Dockerfile,sha256=ty1lOBmlGh7dluEhI46GY4h8LR6Bew_5PYCfutdRW8U,576
+cdk_pyproject/dockerfiles/script.Dockerfile,sha256=YEePMudS1bkNn9eTENOKBeBUQphbef2jFCsb2DQza-8,397
+cdk_pyproject-0.6.0.dist-info/METADATA,sha256=X0xaHQcncJ0he7aXyAd3ZvUSZnWmMi0lfu4pGqfnnaA,743
+cdk_pyproject-0.6.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+cdk_pyproject-0.6.0.dist-info/licenses/LICENSE,sha256=qoTZ_HetbvFSvVq4d8WK_h9FGUzneuTX7m4TYQ6G2jQ,1073
+cdk_pyproject-0.6.0.dist-info/RECORD,,
