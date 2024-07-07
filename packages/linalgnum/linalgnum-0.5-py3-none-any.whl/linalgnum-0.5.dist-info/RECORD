@@ -1,0 +1,14 @@
+linalgnum/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+linalgnum/main.py,sha256=xCMQaNc8v9vVoWXbymQ4012uOcoL2ACNLBMpDEUakys,115
+linalgnum/data/v1/linear_systems.py,sha256=Ya6Qczj_Q77OTLxvgKG0r-U2weKAHW9BSY9j2L2Zuws,6961
+linalgnum/data/v2/autovalori.py,sha256=bKk0qZlXGBJzVtaFEYCX4zIX0HuUdARGt_7n7NF1K3Q,3595
+linalgnum/data/v2/integrazione.py,sha256=ZWcJJBnNSnE-Bmpa7teFrmy_TG5xYeR1h9RVN68jWq4,4213
+linalgnum/data/v2/interpolazione.py,sha256=UYHTh52Qj8YpZik1hOADr3eCc5laUy9bE_eHQqo1qT8,3376
+linalgnum/data/v2/minimiQuadrati.py,sha256=L37Yz-Kdr_pbdnd15o7JLsPSn-JTN6tPJXszWcPGe9g,1778
+linalgnum/data/v2/sistemiLineari.py,sha256=qPGVVkdIO0aBJFdlX0fAVgZiSRjZY9F_aFza4iOyOZY,3063
+linalgnum/data/v2/zeriEquazioni.py,sha256=fSUQwAdDAI9guf28Q3Ra33H9YbklB2nSVIYMQgDCU7A,2390
+linalgnum-0.5.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+linalgnum-0.5.dist-info/METADATA,sha256=UWwwsiK7YjW94AF2qLGjMc4tMvheKHYH-xqGI-kzlhE,688
+linalgnum-0.5.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+linalgnum-0.5.dist-info/top_level.txt,sha256=97x4oQwK_CpbxMgQn5WTAi3hyRPotqY6fJUa-SXrkDo,10
+linalgnum-0.5.dist-info/RECORD,,
