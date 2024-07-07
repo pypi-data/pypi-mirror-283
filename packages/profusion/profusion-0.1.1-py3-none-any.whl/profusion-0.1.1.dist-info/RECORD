@@ -1,0 +1,10 @@
+profusion/__init__.py,sha256=14a0qjWvO0JtUHnrn5Bu1R6fIj-dDVGCT6n--1IsI7w,341
+profusion/bloom.py,sha256=slhhPhVkYntIbcjl_QlO-GkRveiFzV-kDUfey0qWNtU,4777
+profusion/counting_bloom.py,sha256=QYKS67Ewz3tjRPAkUolw3Az8APy-81RNsFQmQLxLH8g,5083
+profusion/mmapped_counting_bloom.py,sha256=wliCYuQNYzYEezyiv0tuHMXpsTvT09sToFhsf_PWZmg,5380
+profusion/scalable_bloom.py,sha256=xpnl8YECTZ4AOIDG1hGpBwj9JeZom-MVpgFwIAyjd3E,7105
+profusion-0.1.1.dist-info/LICENSE,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+profusion-0.1.1.dist-info/METADATA,sha256=OanK_FBKmOTrIcFvKX3rIcB0JmXvh3qMiuLibFt6Sso,4494
+profusion-0.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+profusion-0.1.1.dist-info/top_level.txt,sha256=UlzUihqAMq3aIq_1EwNMGw6MhnSqInE2BvproOLVvr8,10
+profusion-0.1.1.dist-info/RECORD,,
