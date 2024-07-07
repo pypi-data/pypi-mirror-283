@@ -1,0 +1,16 @@
+pysqltools/__init__.py,sha256=DatG_-TjpF717fbi7W3iAHQFD9MSzYE2ox-vbYQkVr4,292
+pysqltools/src/SQL/__init__.py,sha256=ZdO5Q_M4_iRuZVogNoRwdYVcGUpQeVtmYCU5VSpq2LA,123
+pysqltools/src/SQL/constants.py,sha256=UsPyFkPXDlR7Lt7_hiKgoI_QOYLsTQRlo_CrchTinPg,266
+pysqltools/src/SQL/exceptions.py,sha256=Zu0DJA0hAk96xYZ4A5N5r0H3Aec5hSFeZGwnsi5lUnI,411
+pysqltools/src/SQL/insert.py,sha256=A88HG612nzvwLpAalZvHvSn7EmI01dd_q8leJ6K66WY,4017
+pysqltools/src/SQL/query.py,sha256=xSf-iatmsrRqpDI9Nm0xWmn464HPiUV5Ffh_mmptsj0,8845
+pysqltools/src/SQL/table.py,sha256=Pc86EIJAZTYhG9oSYCKItsdyaL3ZcFjkXCZUsoVikQE,2004
+pysqltools/src/__init__.py,sha256=FUol9qvIHVWTDk8wu79IuTuLSRYyNOVheoCwfB1zLSM,220
+pysqltools/src/connection/__init__.py,sha256=5skek9hGu1pd2Lh-LFdlxk_7rDXPUUkwr5h5sJ68Bg8,63
+pysqltools/src/connection/connection.py,sha256=7200HHlXLxPBXxB-28MjJpHPBNXgr0zy7pqSPgMkMW8,2630
+pysqltools/src/connection/exceptions.py,sha256=C36FsxBD4AnAqQgBVqQmGB37QZge1LP98lwMoKfVDwY,149
+pysqltools/src/log/__init__.py,sha256=5oD_o0Hyda003S-lRpbUU-Dliqq50NfiKEXMKZA7-hQ,24
+pysqltools/src/log/log.py,sha256=driBx3uFkBcb82CPX6IArOKSAxfC8Spl5NUKhRT2OzU,2476
+pysqltools-0.2.5.dist-info/METADATA,sha256=O6gVKUaiR1RZT-XA1WdMSBGH37DjEcCytATSsHq2mpQ,3696
+pysqltools-0.2.5.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pysqltools-0.2.5.dist-info/RECORD,,
