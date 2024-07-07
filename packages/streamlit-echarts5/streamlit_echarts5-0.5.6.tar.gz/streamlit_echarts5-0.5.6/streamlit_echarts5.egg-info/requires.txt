@@ -1,0 +1,3 @@
+pyecharts>=1.9
+simplejson>=3.0
+streamlit>=0.63

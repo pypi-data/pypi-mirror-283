@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+streamlit_echarts5/__init__.py
+streamlit_echarts5.egg-info/PKG-INFO
+streamlit_echarts5.egg-info/SOURCES.txt
+streamlit_echarts5.egg-info/dependency_links.txt
+streamlit_echarts5.egg-info/requires.txt
+streamlit_echarts5.egg-info/top_level.txt
+streamlit_echarts5/frontend/dist/index.html
+streamlit_echarts5/frontend/dist/assets/index-BwURK9GV.js
+streamlit_echarts5/frontend/dist/assets/index-CuFHikFj.css
