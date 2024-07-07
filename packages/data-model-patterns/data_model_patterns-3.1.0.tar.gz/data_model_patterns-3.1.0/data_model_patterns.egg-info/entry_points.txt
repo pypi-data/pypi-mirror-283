@@ -1,0 +1,2 @@
+[console_scripts]
+DataModeling = DataModeling.__main__:main

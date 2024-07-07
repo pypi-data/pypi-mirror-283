@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: data-model-patterns
+Version: 3.1.0
+Summary: A mining model is created by applying an algorithm to data, but it is more than an algorithm or a metadata container: it is a set of data, statistics, and patterns that can be applied to new data to generate predictions and make inferences about relationships.
+Home-page: https://github.com/christiangarcia0311/data-model-patterns
+Author: Christian Garcia
+Author-email: iyaniyan03112003@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: matplotlib>=3.4.3
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: pandas>=1.1.3
+Requires-Dist: scipy>=1.7.0
+Requires-Dist: scikit-learn>=0.24.0
+Requires-Dist: mlxtend>=0.17.0
+
+Full Documentation: [Github](https://github.com/christiangarcia0311/data-model-patterns)

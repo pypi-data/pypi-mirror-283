@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+DataModeling/__init__.py
+DataModeling/association.py
+DataModeling/classifier.py
+DataModeling/clustering.py
+DataModeling/regression.py
+data_model_patterns.egg-info/PKG-INFO
+data_model_patterns.egg-info/SOURCES.txt
+data_model_patterns.egg-info/dependency_links.txt
+data_model_patterns.egg-info/entry_points.txt
+data_model_patterns.egg-info/requires.txt
+data_model_patterns.egg-info/top_level.txt
