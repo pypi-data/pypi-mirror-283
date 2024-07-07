@@ -1,0 +1,17 @@
+coloredlogs
+cssselect
+docopt
+eutils
+habanero
+lxml
+lxml_html_clean
+python-Levenshtein
+requests
+setuptools
+six
+tabulate
+unidecode
+
+[test]
+pytest
+tox
