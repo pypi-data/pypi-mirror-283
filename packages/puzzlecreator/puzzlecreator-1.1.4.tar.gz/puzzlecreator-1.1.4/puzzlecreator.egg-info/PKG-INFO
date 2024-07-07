@@ -1,0 +1,125 @@
+Metadata-Version: 2.1
+Name: puzzlecreator
+Version: 1.1.4
+Summary: A package for creating crossword puzzles by Orchid Box.
+Home-page: https://orchidbox.com/
+Author: frank vitetta
+Author-email: frank@orchidbox.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Puzzle Creator
+
+A Python package for creating crossword puzzles.
+
+Creator is Frank Vitetta
+
+CEO and Founder of [Orchid Box Agency](https://www.orchidbox.com/)
+
+## Installation
+
+You can install the package using pip:
+`pip install puzzlecreator`
+
+## Usage
+
+from puzzlecreator import crossword
+
+word_list = ["GAME", "BR", "PEALED", "KILLS", "SHOP", "FIG", "PAW", "PUFFED", "BULLET", "MOLLIFY", "KIDS"]
+
+max_time = 5  # Number of seconds to find the most efficient combination
+
+result = crossword.repeated_word_placement(word_list, max_time=5)
+
+crossword.print_crossword(result)
+
+```
+F I G A M E #
+F D P B R # #
+E S E U # # #
+D H A L K # #
+M O L L I F Y
+# P E E L # #
+# # D T L # #
+# # # # S # #
+P A W # # # #
+U K # # # # #
+```
+
+## Get Word Positions
+
+from puzzlecreator import crossword
+
+ #Define a list of words to include in the crossword
+
+word_list = ["GAME", "BR", "PEALED", "KILLS", "SHOP", "FIG", "PAW", "PUFFED", "BULLET", "MOLLIFY", "KIDS"]
+
+ #Generate the crossword puzzle
+
+result = crossword.repeated_word_placement(word_list, max_time=5)
+
+ #Get positions of the words in the crossword with correct numbering
+positions_across, positions_down = crossword.get_ordered_word_positions_with_numbers(result, word_list)
+
+print("Across:", positions_across)
+
+print("Down:", positions_down)
+
+```
+Across: {'FIG': [(1, 1), 1], 'GAME': [(3, 1), 2], 'BR': [(4, 2), 4], 'MOLLIFY': [(1, 5), 6], 'PAW': [(1, 9), 8]}
+Down: {'SHOP': [(2, 3), 3], 'PEALED': [(3, 2), 5], 'BULLET': [(4, 2), 4], 'KILLS': [(5, 4), 7]}
+```
+
+## Remove Letters from Crossword
+from puzzlecreator import crossword
+
+ #Define a list of words to include in the crossword
+
+word_list = ["GAME", "BR", "PEALED", "KILLS", "SHOP", "FIG", "PAW", "PUFFED", "BULLET", "MOLLIFY", "KIDS"]
+
+ #Generate the crossword puzzle
+
+result = crossword.repeated_word_placement(word_list, max_time=5)
+
+ #Generate the crossword puzzle
+
+result = crossword.repeated_word_placement(word_list, max_time=5)
+
+ #Get positions of the words in the crossword with correct numbering
+positions_across, positions_down = crossword.get_ordered_word_positions_with_numbers(result, word_list)
+
+ #Print numbered empty crossword
+print("\nNumbered Crossword without letters:")
+
+crossword.print_numbered_empty_crossword(result, positions_across, positions_down)
+
+```
+Crossword without letters:
+1 _ 2 _ _ _ #
+# # 5 4 _ # #
+# 3 _ _ # # #
+# _ _ _ 7 # #
+6 _ _ _ _ _ _
+# _ _ _ _ # #
+# # _ _ _ # #
+# # # # _ # #
+8 _ _ # # # #
+# # # # # # #
+```
+
+## Algo Explanation
+
+1.	Intersection Points: Finds potential intersection points where new words can intersect with existing ones.
+2.	Placement Scoring: Evaluates each potential placement based on how well it intersects with existing words and the overall compactness of the crossword grid.
+3.	Best Placement Selection: Iterates over possible placements for each word, selects the best one based on the score, and updates the grid accordingly.
+4.	Multiple Attempts: Generates multiple crossword puzzles within a given time frame (5 seconds is default) and selects the best one based on the scoring criteria.
+5.	Trimming the Grid: Before printing, removes any empty rows or columns to ensure a more compact grid.
+6.	Result Printing: The final crossword grid is printed with words intersecting properly, and empty spaces are filled with dots (’#’).
+
+
+```sh
+pip install puzzlecreator
