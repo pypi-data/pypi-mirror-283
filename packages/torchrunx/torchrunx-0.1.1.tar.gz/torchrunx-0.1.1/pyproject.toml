@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "torchrunx"
+version = "0.1.1"
+authors = [
+    {name = "Apoorv Khandelwal", email = "mail@apoorvkh.com"},
+    {name = "Peter Curtin", email = "peter_curtin@brown.edu"},
+]
+description = "Automatically initialize distributed PyTorch environments"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.8.1"
+dependencies = [
+    "cloudpickle>=3.0.0",
+    "fabric>=3.0.0",
+    "torch>=2.0.0",
+    "numpy",  # torch.distributed depends on numpy
+]
+
+[project.optional-dependencies]
+dev = ["ruff", "pytest", "build", "twine"]
+
+[project.urls]
+Documentation = "https://torchrunx.readthedocs.io"
+Repository = "https://github.com/apoorvkh/torchrunx.git"
+Issues = "https://github.com/apoorvkh/torchrunx/issues"
+
+[tool.pixi.project]
+channels = ["nvidia/label/cuda-11.7.0", "conda-forge"]
+platforms = ["linux-64"]
+
+[tool.pixi.environments]
+default = { features = ["dev"], solve-group = "default" }
+
+[tool.pixi.dependencies]
+python = "3.8.1"
+cuda = "11.7.0"
+
+[tool.pixi.pypi-dependencies]
+torchrunx = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+build = "python -m build"
+upload = "twine upload dist/*"
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
