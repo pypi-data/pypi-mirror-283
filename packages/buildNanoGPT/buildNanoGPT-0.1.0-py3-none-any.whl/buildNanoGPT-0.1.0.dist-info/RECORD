@@ -1,0 +1,12 @@
+buildNanoGPT/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+buildNanoGPT/_modidx.py,sha256=eO0bWSr97VwpW9pF4vgskL5Gw61Ceal65KKmhkpDi1E,7476
+buildNanoGPT/data.py,sha256=IGxtJ1eSO9tbB8rvw6rahilFXwaZQ0gKPIUsASd5MIc,12012
+buildNanoGPT/model.py,sha256=lPKsHaTw-8B_WXFSO6K8fONQ0cTQ_j6WBZHHUg-771c,15620
+buildNanoGPT/train.py,sha256=3pKUtHJDAAj2sqozi7_A2YerAM1qoL6tvDrM5FfyEGE,13913
+buildNanoGPT/viz.py,sha256=EdSVewnzbdjg8QVDcw0_ygo951yyDAvFvqHvAe4_7mo,2854
+buildNanoGPT-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+buildNanoGPT-0.1.0.dist-info/METADATA,sha256=--kr6CT5i6lHGgDJ_MVi_gg1_3SdOhDt3Jmw_JW1jXk,29902
+buildNanoGPT-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+buildNanoGPT-0.1.0.dist-info/entry_points.txt,sha256=2m3n_lTrpG-shZpliAI_tOzphJxmaV04nw4YRu2xh9Q,105
+buildNanoGPT-0.1.0.dist-info/top_level.txt,sha256=GalxtsJcI3VlG25RgaXUqKRZgeaitwCCL4a1xpPTQ8o,13
+buildNanoGPT-0.1.0.dist-info/RECORD,,
