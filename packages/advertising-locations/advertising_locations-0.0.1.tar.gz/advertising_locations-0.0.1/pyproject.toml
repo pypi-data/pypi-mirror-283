@@ -1,0 +1,105 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "advertising-locations"
+dynamic = ["version"]
+description = "Tools for choosing the optimal location of advertising banners for business"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "KruASe76", email = "kruanse@ya.ru" },
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Environment :: GPU :: NVIDIA CUDA",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Natural Language :: Russian",
+]
+dependencies = [
+  "numpy<2.0.0",
+  "pandas",
+  "joblib",
+  "catboost",
+]
+
+[project.urls]
+Documentation = "https://digital-fracture.github.io/advertising-locations"
+Issues = "https://github.com/digital-fracture/advertising-locations/issues"
+Source = "https://github.com/digital-fracture/advertising-locations"
+
+[tool.hatch.version]
+path = "src/advertising_locations/__about__.py"
+
+[tool.hatch.envs.default]
+dependencies = [
+  "coverage[toml]>=6.5",
+  "pytest",
+]
+[tool.hatch.envs.default.scripts]
+test = "pytest {args:tests}"
+test-cov = "coverage run -m pytest {args:tests}"
+cov-report = [
+  "- coverage combine",
+  "coverage report",
+]
+cov = [
+  "test-cov",
+  "cov-report",
+]
+
+[[tool.hatch.envs.all.matrix]]
+python = ["3.9", "3.10", "3.11", "3.12"]
+
+[tool.hatch.envs.types]
+dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/advertising_locations tests}"
+
+[tool.coverage.run]
+source_pkgs = ["advertising_locations", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/advertising_locations/__about__.py",
+]
+
+[tool.coverage.paths]
+advertising_locations = ["src/advertising_locations", "*/advertising-locations/src/advertising_locations"]
+tests = ["tests", "*/advertising-locations/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
+
+[tool.hatch.envs.docs]
+dependencies = [
+  "mkdocs",
+  "mkdocs-material",
+  "mkdocstrings[python]",
+]
+[tool.hatch.envs.docs.scripts]
+build = "mkdocs build --clean --strict"
+serve = "mkdocs serve --dev-addr localhost:8000"
+
+[tool.hatch.build]
+exclude = [
+  "mkdocs.yml",
+  "docs/"
+]
