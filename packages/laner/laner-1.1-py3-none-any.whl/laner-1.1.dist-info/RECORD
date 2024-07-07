@@ -1,0 +1,9 @@
+demos/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+demos/pydantic_demo.py,sha256=HrCjEQt_jZeTYUy9lcj_ElwzgKCYVwkKRmKyH_T1THk,1760
+laner/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+laner/pydantic.py,sha256=wf0Xx8DcMS20BZVBWSFg9VZxNeX2VRVQILtORGwZueI,4071
+laner-1.1.dist-info/LICENSE,sha256=rXieFmT1dvN1otUycf_QyWRWWBaO8z74lQyEs6HUbbs,1070
+laner-1.1.dist-info/METADATA,sha256=shmFm3dLU_pI-h5PrFHufAb5y0EVMsngoZuGT10UqJE,543
+laner-1.1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+laner-1.1.dist-info/top_level.txt,sha256=LCme29Oc2FqyxToP7k4ZzlB8PhF1B6nPkxjodHCUqp0,12
+laner-1.1.dist-info/RECORD,,
