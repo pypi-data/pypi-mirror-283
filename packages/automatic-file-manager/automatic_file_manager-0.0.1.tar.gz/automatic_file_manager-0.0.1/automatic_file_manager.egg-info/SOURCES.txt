@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+automatic_file_manager/__init__.py
+automatic_file_manager/automatic_file_manager.py
+automatic_file_manager/common.py
+automatic_file_manager/file.py
+automatic_file_manager.egg-info/PKG-INFO
+automatic_file_manager.egg-info/SOURCES.txt
+automatic_file_manager.egg-info/dependency_links.txt
+automatic_file_manager.egg-info/top_level.txt
+tests/__init__.py
+tests/test_automatic_file_manager.py
