@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+simloc/__init__.py
+simloc.egg-info/PKG-INFO
+simloc.egg-info/SOURCES.txt
+simloc.egg-info/dependency_links.txt
+simloc.egg-info/top_level.txt
+simloc/src/codegen.py
+simloc/src/strings.py
