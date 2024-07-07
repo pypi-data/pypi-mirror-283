@@ -1,0 +1,10 @@
+README.md
+setup.py
+Money_Control_Scrap.egg-info/PKG-INFO
+Money_Control_Scrap.egg-info/SOURCES.txt
+Money_Control_Scrap.egg-info/dependency_links.txt
+Money_Control_Scrap.egg-info/entry_points.txt
+Money_Control_Scrap.egg-info/requires.txt
+Money_Control_Scrap.egg-info/top_level.txt
+src/__init__.py
+src/main.py
