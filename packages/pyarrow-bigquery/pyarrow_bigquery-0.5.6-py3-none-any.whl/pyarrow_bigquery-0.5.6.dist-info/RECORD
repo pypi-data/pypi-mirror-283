@@ -1,0 +1,12 @@
+pyarrow/bigquery/__init__.py,sha256=BZBKPSDDcVkf3s6d91hx4OHoeJm927BN4T33rY_xMqs,118
+pyarrow/bigquery/read.py,sha256=nj-xUEMUM96CnkpS9t1NatU86dRYi7wOQMVR6jCekFs,7209
+pyarrow/bigquery/some_itertools.py,sha256=XCbKojLfSYqV6TDAtCV6uQXxxuuU9Jlk02fjxCv8UVI,394
+pyarrow/bigquery/write/__init__.py,sha256=lTDHRyo-PRXBb3sYBq6GjpnT7rhsxrQfIxyMkJGYppc,6903
+pyarrow/bigquery/write/pa_to_bq.py,sha256=Sz9-7Me-WE7m9MmYhs-dDKTEJm69KYRj7JcRK_XqsCE,1347
+pyarrow/bigquery/write/pa_to_pb.py,sha256=8kXhpW3Bdi1JupECYr3YBVhDaJunlwBvRFFxfgLB6T0,4460
+pyarrow/bigquery/write/type_mapping.py,sha256=vgibEEXLuVJEtcUBeImOaejK6TbHoNLDNwdrNQ_hzE4,1245
+pyarrow/bigquery/write/upload.py,sha256=TZlOGuaAx1ftZd4mi2axZzOawQOyJewHmpEcFW0Wl6k,886
+pyarrow_bigquery-0.5.6.dist-info/METADATA,sha256=x4gw5E1O6LAtL5_CcDz-bRuAyDQGZLuLGV8LYrREa00,10875
+pyarrow_bigquery-0.5.6.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+pyarrow_bigquery-0.5.6.dist-info/top_level.txt,sha256=fPLFY23J70iLX3TKZtbNM2WS9DlDdIA5d9WX0dloJVY,8
+pyarrow_bigquery-0.5.6.dist-info/RECORD,,
