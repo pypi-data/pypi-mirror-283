@@ -1,0 +1,5 @@
+setup.py
+SkillToVector.egg-info/PKG-INFO
+SkillToVector.egg-info/SOURCES.txt
+SkillToVector.egg-info/dependency_links.txt
+SkillToVector.egg-info/top_level.txt
