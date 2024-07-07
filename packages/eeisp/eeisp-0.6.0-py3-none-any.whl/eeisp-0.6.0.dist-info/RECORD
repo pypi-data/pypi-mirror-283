@@ -1,0 +1,13 @@
+eeisp/LouvainSigned.py,sha256=8wj18sKnE7TFWHYp7bKZ75gi033xFTChEICK05jWs2o,16856
+eeisp/__init__.py,sha256=C5Thssuy0t-lPrFshxzUG97-TGAvfQOwIIkDAWPmMpo,15
+eeisp/network.py,sha256=LDLgQAxLhclexqyMmNZX3v8D6fgun9TxoYmaVFqo4P8,10774
+eeisp-0.6.0.data/scripts/eeisp,sha256=0lY67WuvxPT_EbZKgNulyb-iLxVaGZ_TH7Cfy9PQd6E,8144
+eeisp-0.6.0.data/scripts/eeisp.Louvain,sha256=ztqsal_iabyOJEDkJjLeLlF0E92-e9SfNq58dZwvB-8,1237
+eeisp-0.6.0.data/scripts/eeisp.LouvainSigned,sha256=Mh3wQc8qRbNogp-nR7O2yrM_B7ycAhPmv4fKUNQPoQg,1898
+eeisp-0.6.0.data/scripts/eeisp.heatmap,sha256=xJU-sLhQjjbIriV2jhP5hLciPYG3diHAEY5K1UJCmmI,1253
+eeisp-0.6.0.data/scripts/eeisp_add_genename_from_geneid,sha256=UJBklVbRo4TfOZFOxZzJSf4kT13akVaBhaXmLI9nT1M,1268
+eeisp-0.6.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+eeisp-0.6.0.dist-info/METADATA,sha256=AGdlkegb4FSDmnmC_870qg3XgC2BUIAGj0c1xiDaobQ,6564
+eeisp-0.6.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+eeisp-0.6.0.dist-info/top_level.txt,sha256=nEKwAB-L2-uoyMYNDZlUrJUnRmK4QnHDzpq69YtKB-Y,6
+eeisp-0.6.0.dist-info/RECORD,,
