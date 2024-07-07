@@ -1,0 +1,38 @@
+Metadata-Version: 2.3
+Name: pyfun_my
+Version: 0.0.1
+Summary: A small example package
+Project-URL: Homepage, https://github.com/mywyau/pyfun
+Project-URL: Issues, https://github.com/mywyau/pyfun/issues
+Author-email: Michael Yau <m.yw.yau@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# pyfun
+
+A brief description of your library.
+
+## Installation
+
+You can install the library using pip: 
+
+
+```commandline
+ pip pyfun
+```
+
+
+## Usage
+
+```python
+from pyfun_my.option import Option
+```
+
+```
+Option(1)
+```
+
