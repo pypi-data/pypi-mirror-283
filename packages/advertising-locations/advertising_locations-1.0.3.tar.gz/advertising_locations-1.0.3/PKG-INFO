@@ -1,0 +1,50 @@
+Metadata-Version: 2.3
+Name: advertising-locations
+Version: 1.0.3
+Summary: Tools for choosing the optimal location of advertising banners for business
+Project-URL: Documentation, https://digital-fracture.github.io/advertising-locations
+Project-URL: Issues, https://github.com/digital-fracture/advertising-locations/issues
+Project-URL: Source, https://github.com/digital-fracture/advertising-locations
+Author-email: KruASe76 <kruanse@ya.ru>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: GPU :: NVIDIA CUDA
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Russian
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.9
+Requires-Dist: catboost
+Requires-Dist: joblib
+Requires-Dist: numpy<2.0.0
+Requires-Dist: pandas
+Description-Content-Type: text/markdown
+
+# Advertising Locations
+
+[![PyPI - Version](https://img.shields.io/pypi/v/advertising-locations.svg)](https://pypi.org/project/advertising-locations)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/advertising-locations.svg)](https://pypi.org/project/advertising-locations)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install advertising-locations
+```
+
+## License
+
+`advertising-locations` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
