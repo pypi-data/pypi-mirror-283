@@ -1,0 +1,13 @@
+tokre/__init__.py,sha256=_AvoNaOgjG_glvZgjfYWm4uAV3ckgsRB6avW_Me7MyA,1241
+tokre/setup_workspace.py,sha256=thTDkwow7VOqgVd2XlkcfoCwB5KEGCviP1cmjTeRGrY,2089
+tokre/synth_feat.py,sha256=l6x1MgYl-ssougsuriBgx9TcvdMPDIkycRCAzn55jbY,17441
+tokre/tok_labelling/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tokre/tok_labelling/create_tok_label.py,sha256=aVCXeG3l4Kna1APpAtSsllnanH0m0-Uewqr7UFBzDpc,7805
+tokre/tok_labelling/query_openai.py,sha256=rGq2_VYElKS6FR3C36rLfUT_ezZiYSUGlo14s3QMQB8,1159
+tokre/tokre_core/faster_matcher.py,sha256=j83YR_n5cGBIaZu0l8ui1x2Oh_3IvYJIwyRTpBo3bvQ,9907
+tokre/tokre_core/get_nfa.py,sha256=S0Mf8l0aKXW3ZTx-bUQoOjFQ4KbFwz0RFOUb3yAH-6A,28890
+tokre/tokre_core/parse.py,sha256=s3k6KNGV3ykQ85I83ctHsd_S5QlqAfKPnHzSJKVmJM8,23009
+tokre/utils.py,sha256=KSTbDnjzDcrrNt8VHvze_OLvkQnbaxvhOGfr2ocYHkI,3984
+tokre-0.1.0.post24.dist-info/METADATA,sha256=adiGRb1-mjbQARMlLLUSuVVs9DCKjdR4gnAQavGkI84,627
+tokre-0.1.0.post24.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+tokre-0.1.0.post24.dist-info/RECORD,,
