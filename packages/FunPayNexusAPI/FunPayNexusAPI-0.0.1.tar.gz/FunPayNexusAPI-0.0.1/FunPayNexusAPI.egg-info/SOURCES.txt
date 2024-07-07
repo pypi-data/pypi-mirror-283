@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+FunPayNexusAPI/__init__.py
+FunPayNexusAPI/account.py
+FunPayNexusAPI/methods.py
+FunPayNexusAPI.egg-info/PKG-INFO
+FunPayNexusAPI.egg-info/SOURCES.txt
+FunPayNexusAPI.egg-info/dependency_links.txt
+FunPayNexusAPI.egg-info/requires.txt
+FunPayNexusAPI.egg-info/top_level.txt

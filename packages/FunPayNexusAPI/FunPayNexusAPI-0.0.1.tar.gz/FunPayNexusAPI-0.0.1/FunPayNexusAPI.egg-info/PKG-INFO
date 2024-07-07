@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: FunPayNexusAPI
+Version: 0.0.1
+Summary: This is the API for funpay.com
+Home-page: https://github.com/Sema4ka0/FunPay-API
+Author: Sema4ka0
+Author-email: seem.git@gmail.com
+Project-URL: GitHub, https://github.com/Sema4ka0/FunPay-API
+Project-URL: Chanel, https://t.me/FunPayNexus
+Keywords: funpay api FunPayAPI tool bot tg lib
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# FunPay-API
+API for funpay.com (not official)
