@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: v1hyperbot
+Version: 0.1.1
+Summary: Library of @V1HyperBot
+Home-page: https://t.me/NorSodikin
+Author: admin
+Author-email: admin@V1HyperBot.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: aiofiles==23.2.1
+Requires-Dist: aiohttp==3.9.4
+Requires-Dist: attrify==3.0
+Requires-Dist: gitpython==3.1.41
+Requires-Dist: html2text==2020.1.16
+Requires-Dist: pillow==10.3.0
+Requires-Dist: psutil==5.9.7
+Requires-Dist: pykeyboard==0.1.5
+Requires-Dist: pyromod==1.1.0
+Requires-Dist: pymongo==4.6.3
+Requires-Dist: pyrogram==2.0.106
+Requires-Dist: python-dotenv==1.0.0
+Requires-Dist: pytz==2023.3.post1
+Requires-Dist: removebg==0.04
+Requires-Dist: requests==2.32.0
+Requires-Dist: telegraph==2.2.0
+Requires-Dist: tgcrypto==1.2.5
+Requires-Dist: uvloop==0.19.0
+Requires-Dist: wget==3.2
+Requires-Dist: youtube-search-python==1.6.6
+Requires-Dist: yt-dlp==2024.4.9
+
+## Library On: [HYPER ROBOT](t.me/V1HyperBot)
+
+```bash
+pip3 install v1hyperbot
+```
+
+```python
+from HyperLibs import BaseUbot
+
+class Bot(BaseUbot):
+    pass
+
+class Ubot(BaseUbot):
+    pass
+```
