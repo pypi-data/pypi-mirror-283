@@ -1,0 +1,17 @@
+stlib/__init__.py,sha256=cdt-bpcsaKyo7f0tG_dtjcHRi7QMzzDMqazPSuq7wGc,4430
+stlib/client.py,sha256=nIUngfWWeToOqyt-Q-tzyHKrSrXyrckHDJbGEw3sS_Q,4219
+stlib/community.py,sha256=oYXp5xmz4Rim-AR7_nb-ReCAbNBInh8N7V-KIKofEt0,25540
+stlib/internals.py,sha256=jiUrW0sQgeOsmRHrVbQ3fdMtHeSEjSeyUZ8OFwEQ5iY,7747
+stlib/login.py,sha256=GVZFdxqVJik2KaGlivgcaZqA52lFGCwBpyfPY8Xqn-o,12508
+stlib/plugins.py,sha256=Jt6HamGL_DilyO5ZPCdtjPTtN5Z9BOsLJbNTGWSDnDA,5526
+stlib/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stlib/steam_api64.dll,sha256=3PqhOqQZoGQZFyBZV9vhWqRy588Jooz4089ClZjmd5k,301928
+stlib/steamworks.cp311-win_amd64.pyd,sha256=KWohOh8UgHq_ZZyJrAROVMWOC7e31HbpjobWXStiZQ0,24064
+stlib/universe.py,sha256=lF8U1yuez55n7rokvhDSS8OPRxVawtXlEpC8L6HYlNw,5868
+stlib/utils.py,sha256=RHNa7HNSeDTrr_U2MAkPIfJYFw0neVjUco3CFpEn-As,15860
+stlib/webapi.py,sha256=MsKwmKVMiVJ9BA3oXhDsgdUdtOT4-mt4yxnyrif3lnE,12040
+stlib-2.1.dist-info/LICENSE.md,sha256=EH-Fmd7W6AJflRi9ucTJQ5LCLfNyB_iHMU1XPQ_fBIQ,35591
+stlib-2.1.dist-info/METADATA,sha256=q_5TVvuBq1LxQhQnLLxAFocM2AF1_FBoftTcQKN9dhQ,4816
+stlib-2.1.dist-info/WHEEL,sha256=i_JcFDy58QgFZFsP7wt-cRI9Av1_Ys9uL_GQXWyaVhs,101
+stlib-2.1.dist-info/top_level.txt,sha256=P6YtaUVVFF7eazFuD59rI2QdXLbDAPFGwE8LiUuLzco,6
+stlib-2.1.dist-info/RECORD,,
