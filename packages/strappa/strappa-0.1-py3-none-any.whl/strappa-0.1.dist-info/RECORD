@@ -1,0 +1,9 @@
+strappa/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+strappa/cli.py,sha256=0w8ZkOYh1BTeIJMSqkVrSYLFuZHd1fcCsDvarocp1gQ,564
+strappa/main.py,sha256=9BUsi1tLlR-SHUsI2RNJNT6ZAEi7OPp4bWZh-VyRksM,4078
+strappa/utils.py,sha256=BMsOYZdloZhkbEkIHq2I-UBTXO-WIDB3eNjc-WPu-Ek,363
+strappa-0.1.dist-info/METADATA,sha256=xpbbKLaoXIgikPuj3u6inZ5Gj2AlyvNKMS1XVYWzwkU,2905
+strappa-0.1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+strappa-0.1.dist-info/entry_points.txt,sha256=_2hvmqk4pTv-gDq-AeA--9hA0gt2_qXs7taCSih09Ss,44
+strappa-0.1.dist-info/top_level.txt,sha256=zqwS4Nj8wKgBrP8uPe1AC4VDkFnPWG8v3CyiIpH5NoQ,8
+strappa-0.1.dist-info/RECORD,,
