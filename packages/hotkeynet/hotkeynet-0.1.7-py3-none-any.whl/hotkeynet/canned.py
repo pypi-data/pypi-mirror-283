@@ -1,0 +1,813 @@
+# -*- coding: utf-8 -*-
+
+"""
+Similar to :mod:`hotkeynet.keyname`. However, everything in this module is
+:mod:`hotkeynet.maker` factory object. Everything in this module should be called
+to use.
+
+Example:
+
+    >>> from hotkeynet import canned
+    >>> canned.KEY_1()
+    >>> canned.CTRL_(canned.KEY_1)()
+"""
+
+import typing as _T
+from . import keyname as _KN
+from .maker import (
+    KeyMaker as _KeyMaker,
+    ClickMaker as _ClickMaker,
+    ModifiedClickMaker as _ModifiedClickMaker,
+)
+
+ESC = _KeyMaker(_KN.ESC)
+TRIGGER = _KeyMaker(_KN.TRIGGER)
+
+# ------------------------------------------------------------------------------
+# F1 - F12
+# ------------------------------------------------------------------------------
+F1 = _KeyMaker(_KN.F1)
+F2 = _KeyMaker(_KN.F2)
+F3 = _KeyMaker(_KN.F3)
+F4 = _KeyMaker(_KN.F4)
+F5 = _KeyMaker(_KN.F5)
+F6 = _KeyMaker(_KN.F6)
+F7 = _KeyMaker(_KN.F7)
+F8 = _KeyMaker(_KN.F8)
+F9 = _KeyMaker(_KN.F9)
+F10 = _KeyMaker(_KN.F10)
+F11 = _KeyMaker(_KN.F11)
+F12 = _KeyMaker(_KN.F12)
+
+# ------------------------------------------------------------------------------
+# Main number keys
+# ------------------------------------------------------------------------------
+OEM3_WAVE_OR_BACK_QUOTE = _KeyMaker(_KN.OEM3_WAVE_OR_BACK_QUOTE)  # ~
+KEY_1 = _KeyMaker(_KN.KEY_1)
+KEY_2 = _KeyMaker(_KN.KEY_2)
+KEY_3 = _KeyMaker(_KN.KEY_3)
+KEY_4 = _KeyMaker(_KN.KEY_4)
+KEY_5 = _KeyMaker(_KN.KEY_5)
+KEY_6 = _KeyMaker(_KN.KEY_6)
+KEY_7 = _KeyMaker(_KN.KEY_7)
+KEY_8 = _KeyMaker(_KN.KEY_8)
+KEY_9 = _KeyMaker(_KN.KEY_9)
+KEY_0 = _KeyMaker(_KN.KEY_0)
+KEY_11_MINUS = _KeyMaker(_KN.KEY_11_MINUS)
+KEY_12_PLUS = _KeyMaker(_KN.KEY_12_PLUS)
+BACKSPACE = _KeyMaker(_KN.BACKSPACE)
+
+# ------------------------------------------------------------------------------
+# Modifier keys
+# ------------------------------------------------------------------------------
+TAB = _KeyMaker(_KN.TAB)
+CAPS_LOCK = _KeyMaker(_KN.CAPS_LOCK)
+SHIFT = _KeyMaker(_KN.SHIFT)
+CTRL = _KeyMaker(_KN.CTRL)
+ALT = _KeyMaker(_KN.ALT)
+
+LSHIFT = _KeyMaker(_KN.LSHIFT)
+RSHIFT = _KeyMaker(_KN.RSHIFT)
+LCTRL = _KeyMaker(_KN.LCTRL)
+RCTRL = _KeyMaker(_KN.RCTRL)
+LALT = _KeyMaker(_KN.LALT)
+RALT = _KeyMaker(_KN.RALT)
+
+SPACE = _KeyMaker(_KN.SPACE)
+
+LWIN = _KeyMaker(_KN.LWIN)
+RWIN = _KeyMaker(_KN.RWIN)
+
+# ------------------------------------------------------------------------------
+# Alphabet keys
+# ------------------------------------------------------------------------------
+A = _KeyMaker(_KN.A)
+B = _KeyMaker(_KN.B)
+C = _KeyMaker(_KN.C)
+D = _KeyMaker(_KN.D)
+E = _KeyMaker(_KN.E)
+F = _KeyMaker(_KN.F)
+G = _KeyMaker(_KN.G)
+H = _KeyMaker(_KN.H)
+I = _KeyMaker(_KN.I)
+J = _KeyMaker(_KN.J)
+K = _KeyMaker(_KN.K)
+L = _KeyMaker(_KN.L)
+M = _KeyMaker(_KN.M)
+N = _KeyMaker(_KN.N)
+O = _KeyMaker(_KN.O)
+P = _KeyMaker(_KN.P)
+Q = _KeyMaker(_KN.Q)
+R = _KeyMaker(_KN.R)
+S = _KeyMaker(_KN.S)
+T = _KeyMaker(_KN.T)
+U = _KeyMaker(_KN.U)
+V = _KeyMaker(_KN.V)
+W = _KeyMaker(_KN.W)
+X = _KeyMaker(_KN.X)
+Y = _KeyMaker(_KN.Y)
+Z = _KeyMaker(_KN.Z)
+
+# ------------------------------------------------------------------------------
+# Special characters
+# ------------------------------------------------------------------------------
+OEM4_SQUARE_BRACKET_LEFT = _KeyMaker(_KN.OEM4_SQUARE_BRACKET_LEFT)  # (
+OEM6_SQUARE_BRACKET_RIGHT = _KeyMaker(_KN.OEM6_SQUARE_BRACKET_RIGHT)  # )
+OEM5_PIPE_OR_BACK_SLASH = _KeyMaker(_KN.OEM5_PIPE_OR_BACK_SLASH)  # /
+OEM1_SEMICOLUMN = _KeyMaker(_KN.OEM1_SEMICOLUMN)  # :
+OEM7_QUOTE = _KeyMaker(_KN.OEM7_QUOTE)  # "
+COMMA = _KeyMaker(_KN.COMMA)  # ,
+PERIOD = _KeyMaker(_KN.PERIOD)  # .
+OEM2_QUESTION = _KeyMaker(_KN.OEM2_QUESTION)  # ? Key
+ENTER = _KeyMaker(_KN.ENTER)
+
+# ------------------------------------------------------------------------------
+# Arrow keys
+# ------------------------------------------------------------------------------
+INSERT = _KeyMaker(_KN.INSERT)
+HOME = _KeyMaker(_KN.HOME)
+PAGE_UP = _KeyMaker(_KN.PAGE_UP)
+DELETE = _KeyMaker(_KN.DELETE)
+END = _KeyMaker(_KN.END)
+PAGE_DOWN = _KeyMaker(_KN.PAGE_DOWN)
+LEFT = _KeyMaker(_KN.LEFT)
+UP = _KeyMaker(_KN.UP)
+RIGHT = _KeyMaker(_KN.RIGHT)
+DOWN = _KeyMaker(_KN.DOWN)
+
+# ------------------------------------------------------------------------------
+# Numpad keys
+# ------------------------------------------------------------------------------
+SCROLL_LOCK = _KeyMaker(_KN.SCROLL_LOCK)
+
+NUMPAD_1 = _KeyMaker(_KN.NUMPAD_1)
+NUMPAD_2 = _KeyMaker(_KN.NUMPAD_2)
+NUMPAD_3 = _KeyMaker(_KN.NUMPAD_3)
+NUMPAD_4 = _KeyMaker(_KN.NUMPAD_4)
+NUMPAD_5 = _KeyMaker(_KN.NUMPAD_5)
+NUMPAD_6 = _KeyMaker(_KN.NUMPAD_6)
+NUMPAD_7 = _KeyMaker(_KN.NUMPAD_7)
+NUMPAD_8 = _KeyMaker(_KN.NUMPAD_8)
+NUMPAD_9 = _KeyMaker(_KN.NUMPAD_9)
+NUMPAD_0 = _KeyMaker(_KN.NUMPAD_0)
+NUMPAD_11_DIVIDE = _KeyMaker(_KN.NUMPAD_11_DIVIDE)
+NUMPAD_12_MULTIPLY = _KeyMaker(_KN.NUMPAD_12_MULTIPLY)
+
+NUMPAD_MINUS = _KeyMaker(_KN.NUMPAD_MINUS)
+NUMPAD_PLUS = _KeyMaker(_KN.NUMPAD_PLUS)
+NUMPAD_ENTER = _KeyMaker(_KN.NUMPAD_ENTER)
+NUMPAD_DELETE = _KeyMaker(_KN.NUMPAD_DELETE)
+
+NUMPAD_SHIFT_1_END = _KeyMaker(_KN.NUMPAD_SHIFT_1_END)
+NUMPAD_SHIFT_2_DOWN = _KeyMaker(_KN.NUMPAD_SHIFT_2_DOWN)
+NUMPAD_SHIFT_3_PAGE_DOWN = _KeyMaker(_KN.NUMPAD_SHIFT_3_PAGE_DOWN)
+NUMPAD_SHIFT_4_LEFT = _KeyMaker(_KN.NUMPAD_SHIFT_4_LEFT)
+NUMPAD_SHIFT_5_CLEAR = _KeyMaker(_KN.NUMPAD_SHIFT_5_CLEAR)
+NUMPAD_SHIFT_6_RIGHT = _KeyMaker(_KN.NUMPAD_SHIFT_6_RIGHT)
+NUMPAD_SHIFT_7_HOME = _KeyMaker(_KN.NUMPAD_SHIFT_7_HOME)
+NUMPAD_SHIFT_8_UP = _KeyMaker(_KN.NUMPAD_SHIFT_8_UP)
+NUMPAD_SHIFT_9_PAGE_UP = _KeyMaker(_KN.NUMPAD_SHIFT_9_PAGE_UP)
+
+UNKNOWN = _KeyMaker(_KN.UNKNOWN)
+
+# ------------------------------------------------------------------------------
+# Mouse buttons
+# ------------------------------------------------------------------------------
+MOUSE_LButton = _ClickMaker(_KN.MOUSE_LButton)
+MOUSE_RButton = _ClickMaker(_KN.MOUSE_RButton)
+MOUSE_MButton = _ClickMaker(_KN.MOUSE_MButton)
+MOUSE_Button4 = _ClickMaker(_KN.MOUSE_Button4)
+MOUSE_Button5 = _ClickMaker(_KN.MOUSE_Button5)
+
+LEFT_CLICK = MOUSE_LButton
+RIGHT_CLICK = MOUSE_RButton
+MIDDLE_CLICK = MOUSE_MButton
+
+SHIFT_LEFT_CLICK = _ModifiedClickMaker(_KN.MOUSE_LButton, _KN.SHIFT)
+SHIFT_RIGHT_CLICK = _ModifiedClickMaker(_KN.MOUSE_RButton, _KN.SHIFT)
+SHIFT_MIDDLE_CLICK = _ModifiedClickMaker(_KN.MOUSE_MButton, _KN.SHIFT)
+ALT_LEFT_CLICK = _ModifiedClickMaker(_KN.MOUSE_LButton, _KN.ALT)
+ALT_RIGHT_CLICK = _ModifiedClickMaker(_KN.MOUSE_RButton, _KN.ALT)
+ALT_MIDDLE_CLICK = _ModifiedClickMaker(_KN.MOUSE_MButton, _KN.ALT)
+CTRL_LEFT_CLICK = _ModifiedClickMaker(_KN.MOUSE_LButton, _KN.CTRL)
+CTRL_RIGHT_CLICK = _ModifiedClickMaker(_KN.MOUSE_RButton, _KN.CTRL)
+CTRL_MIDDLE_CLICK = _ModifiedClickMaker(_KN.MOUSE_MButton, _KN.CTRL)
+
+# ------------------------------------------------------------------------------
+# Key collections
+# ------------------------------------------------------------------------------
+F1_to_F12 = [
+    F1,
+    F2,
+    F3,
+    F4,
+    F5,
+    F6,
+    F7,
+    F8,
+    F9,
+    F10,
+    F11,
+    F12,
+]
+
+INSERT_TO_PGDN = [
+    INSERT,
+    HOME,
+    PAGE_UP,
+    DELETE,
+    END,
+    PAGE_DOWN,
+]
+
+KEY_1_to_12 = [
+    KEY_1,
+    KEY_2,
+    KEY_3,
+    KEY_4,
+    KEY_5,
+    KEY_6,
+    KEY_7,
+    KEY_8,
+    KEY_9,
+    KEY_0,
+    KEY_11_MINUS,
+    KEY_12_PLUS,
+]
+
+NUMPAD_1_to_12 = [
+    NUMPAD_1,
+    NUMPAD_2,
+    NUMPAD_3,
+    NUMPAD_4,
+    NUMPAD_5,
+    NUMPAD_6,
+    NUMPAD_7,
+    NUMPAD_8,
+    NUMPAD_9,
+    NUMPAD_0,
+    NUMPAD_11_DIVIDE,
+    NUMPAD_12_MULTIPLY,
+]
+
+
+# ------------------------------------------------------------------------------
+# One modifier compound keys
+# ------------------------------------------------------------------------------
+def _resolve_key_liked_arg(key: _T.Union[str, _KeyMaker]) -> str:
+    if isinstance(key, _KeyMaker):
+        return key.key
+    elif isinstance(key, str):
+        return key
+    else:  # pragma: no cover
+        raise TypeError("key must be a str or a KeyMaker instance")
+
+
+def _key_with_modifier(mod: str, *keys: _T.Union[str, _KeyMaker]) -> _KeyMaker:
+    return _KeyMaker(
+        "{} {}".format(mod, ", ".join([_resolve_key_liked_arg(k) for k in keys]))
+    )
+
+
+def CTRL_(*keys: _T.Union[str, _KeyMaker]) -> _KeyMaker:
+    return _key_with_modifier(_KN.CTRL, *keys)
+
+
+def SHIFT_(*keys: _T.Union[str, _KeyMaker]) -> _KeyMaker:  # pragma: no cover
+    return _key_with_modifier(_KN.SHIFT, *keys)
+
+
+def ALT_(*keys: _T.Union[str, _KeyMaker]) -> _KeyMaker:  # pragma: no cover
+    return _key_with_modifier(_KN.ALT, *keys)
+
+
+# ------------------------------------------------------------------------------
+# Two modifier compound keys
+# ------------------------------------------------------------------------------
+def CTRL_ALT_(*keys: _T.Union[str, _KeyMaker]) -> _KeyMaker:
+    return _key_with_modifier(f"{_KN.CTRL} {_KN.ALT}", *keys)
+
+
+def CTRL_SHIFT_(*keys: _T.Union[str, _KeyMaker]) -> _KeyMaker:  # pragma: no cover
+    return _key_with_modifier(f"{_KN.CTRL} {_KN.SHIFT}", *keys)
+
+
+def ALT_SHIFT_(*keys: _T.Union[str, _KeyMaker]) -> _KeyMaker:  # pragma: no cover
+    return _key_with_modifier(f"{_KN.ALT} {_KN.SHIFT}", *keys)
+
+
+# ------------------------------------------------------------------------------
+# Three modifier compound keys
+# ------------------------------------------------------------------------------
+def CTRL_SHIFT_ALT_(*keys: _T.Union[str, _KeyMaker]) -> _KeyMaker:
+    return _key_with_modifier(f"{_KN.CTRL} {_KN.SHIFT} {_KN.ALT}", *keys)
+
+
+# ------------------------------------------------------------------------------
+# Special modifier compound keys
+# ------------------------------------------------------------------------------
+def LWIN_(*keys: _T.Union[str, _KeyMaker]) -> _KeyMaker:
+    """
+    Left windows + any key
+    """
+    return _key_with_modifier(_KN.LWIN, *keys)
+
+
+def RWIN_(*keys: _T.Union[str, _KeyMaker]) -> _KeyMaker:
+    """
+    Right windows + any key
+    """
+    return _key_with_modifier(_KN.RWIN, *keys)
+
+
+# ------------------------------------------------------------------------------
+# regular key with modifier
+# ------------------------------------------------------------------------------
+# CTRL
+CTRL_TAB = CTRL_(_KN.TAB)
+
+CTRL_F1 = CTRL_(_KN.F1)
+CTRL_F2 = CTRL_(_KN.F2)
+CTRL_F3 = CTRL_(_KN.F3)
+CTRL_F4 = CTRL_(_KN.F4)
+CTRL_F5 = CTRL_(_KN.F5)
+CTRL_F6 = CTRL_(_KN.F6)
+CTRL_F7 = CTRL_(_KN.F7)
+CTRL_F8 = CTRL_(_KN.F8)
+CTRL_F9 = CTRL_(_KN.F9)
+CTRL_F10 = CTRL_(_KN.F10)
+CTRL_F11 = CTRL_(_KN.F11)
+CTRL_F12 = CTRL_(_KN.F12)
+
+CTRL_OEM3_WAVE_OR_BACK_QUOTE = CTRL_(_KN.OEM3_WAVE_OR_BACK_QUOTE)
+CTRL_1 = CTRL_(_KN.KEY_1)
+CTRL_2 = CTRL_(_KN.KEY_2)
+CTRL_3 = CTRL_(_KN.KEY_3)
+CTRL_4 = CTRL_(_KN.KEY_4)
+CTRL_5 = CTRL_(_KN.KEY_5)
+CTRL_6 = CTRL_(_KN.KEY_6)
+CTRL_7 = CTRL_(_KN.KEY_7)
+CTRL_8 = CTRL_(_KN.KEY_8)
+CTRL_9 = CTRL_(_KN.KEY_9)
+CTRL_0 = CTRL_(_KN.KEY_0)
+CTRL_11_MINUS = CTRL_(_KN.KEY_11_MINUS)
+CTRL_12_PLUS = CTRL_(_KN.KEY_12_PLUS)
+CTRL_BACKSPACE = CTRL_(_KN.BACKSPACE)
+
+CTRL_NUMPAD_1 = CTRL_(_KN.NUMPAD_1)
+CTRL_NUMPAD_2 = CTRL_(_KN.NUMPAD_2)
+CTRL_NUMPAD_3 = CTRL_(_KN.NUMPAD_3)
+CTRL_NUMPAD_4 = CTRL_(_KN.NUMPAD_4)
+CTRL_NUMPAD_5 = CTRL_(_KN.NUMPAD_5)
+CTRL_NUMPAD_6 = CTRL_(_KN.NUMPAD_6)
+CTRL_NUMPAD_7 = CTRL_(_KN.NUMPAD_7)
+CTRL_NUMPAD_8 = CTRL_(_KN.NUMPAD_8)
+CTRL_NUMPAD_9 = CTRL_(_KN.NUMPAD_9)
+CTRL_NUMPAD_0 = CTRL_(_KN.NUMPAD_0)
+CTRL_NUMPAD_11_DIVIDE = CTRL_(_KN.NUMPAD_11_DIVIDE)
+CTRL_NUMPAD_12_MULTIPLY = CTRL_(_KN.NUMPAD_12_MULTIPLY)
+
+CTRL_A = CTRL_(_KN.A)
+CTRL_B = CTRL_(_KN.B)
+CTRL_C = CTRL_(_KN.C)
+CTRL_D = CTRL_(_KN.D)
+CTRL_E = CTRL_(_KN.E)
+CTRL_F = CTRL_(_KN.F)
+CTRL_G = CTRL_(_KN.G)
+CTRL_H = CTRL_(_KN.H)
+CTRL_I = CTRL_(_KN.I)
+CTRL_J = CTRL_(_KN.J)
+CTRL_K = CTRL_(_KN.K)
+CTRL_L = CTRL_(_KN.L)
+CTRL_M = CTRL_(_KN.M)
+CTRL_N = CTRL_(_KN.N)
+CTRL_O = CTRL_(_KN.O)
+CTRL_P = CTRL_(_KN.P)
+CTRL_Q = CTRL_(_KN.Q)
+CTRL_R = CTRL_(_KN.R)
+CTRL_S = CTRL_(_KN.S)
+CTRL_T = CTRL_(_KN.T)
+CTRL_U = CTRL_(_KN.U)
+CTRL_V = CTRL_(_KN.V)
+CTRL_W = CTRL_(_KN.W)
+CTRL_X = CTRL_(_KN.X)
+CTRL_Y = CTRL_(_KN.Y)
+CTRL_Z = CTRL_(_KN.Z)
+
+# SHIFT
+SHIFT_TAB = SHIFT_(_KN.TAB)
+
+SHIFT_F1 = SHIFT_(_KN.F1)
+SHIFT_F2 = SHIFT_(_KN.F2)
+SHIFT_F3 = SHIFT_(_KN.F3)
+SHIFT_F4 = SHIFT_(_KN.F4)
+SHIFT_F5 = SHIFT_(_KN.F5)
+SHIFT_F6 = SHIFT_(_KN.F6)
+SHIFT_F7 = SHIFT_(_KN.F7)
+SHIFT_F8 = SHIFT_(_KN.F8)
+SHIFT_F9 = SHIFT_(_KN.F9)
+SHIFT_F10 = SHIFT_(_KN.F10)
+SHIFT_F11 = SHIFT_(_KN.F11)
+SHIFT_F12 = SHIFT_(_KN.F12)
+
+SHIFT_OEM3_WAVE_OR_BACK_QUOTE = SHIFT_(_KN.OEM3_WAVE_OR_BACK_QUOTE)
+SHIFT_1 = SHIFT_(_KN.KEY_1)
+SHIFT_2 = SHIFT_(_KN.KEY_2)
+SHIFT_3 = SHIFT_(_KN.KEY_3)
+SHIFT_4 = SHIFT_(_KN.KEY_4)
+SHIFT_5 = SHIFT_(_KN.KEY_5)
+SHIFT_6 = SHIFT_(_KN.KEY_6)
+SHIFT_7 = SHIFT_(_KN.KEY_7)
+SHIFT_8 = SHIFT_(_KN.KEY_8)
+SHIFT_9 = SHIFT_(_KN.KEY_9)
+SHIFT_0 = SHIFT_(_KN.KEY_0)
+SHIFT_11_MINUS = SHIFT_(_KN.KEY_11_MINUS)
+SHIFT_12_PLUS = SHIFT_(_KN.KEY_12_PLUS)
+SHIFT_BACKSPACE = SHIFT_(_KN.BACKSPACE)
+
+SHIFT_NUMPAD_1 = SHIFT_(_KN.NUMPAD_1)
+SHIFT_NUMPAD_2 = SHIFT_(_KN.NUMPAD_2)
+SHIFT_NUMPAD_3 = SHIFT_(_KN.NUMPAD_3)
+SHIFT_NUMPAD_4 = SHIFT_(_KN.NUMPAD_4)
+SHIFT_NUMPAD_5 = SHIFT_(_KN.NUMPAD_5)
+SHIFT_NUMPAD_6 = SHIFT_(_KN.NUMPAD_6)
+SHIFT_NUMPAD_7 = SHIFT_(_KN.NUMPAD_7)
+SHIFT_NUMPAD_8 = SHIFT_(_KN.NUMPAD_8)
+SHIFT_NUMPAD_9 = SHIFT_(_KN.NUMPAD_9)
+SHIFT_NUMPAD_0 = SHIFT_(_KN.NUMPAD_0)
+SHIFT_NUMPAD_11_DIVIDE = SHIFT_(_KN.NUMPAD_11_DIVIDE)
+SHIFT_NUMPAD_12_MULTIPLY = SHIFT_(_KN.NUMPAD_12_MULTIPLY)
+
+SHIFT_A = SHIFT_(_KN.A)
+SHIFT_B = SHIFT_(_KN.B)
+SHIFT_C = SHIFT_(_KN.C)
+SHIFT_D = SHIFT_(_KN.D)
+SHIFT_E = SHIFT_(_KN.E)
+SHIFT_F = SHIFT_(_KN.F)
+SHIFT_G = SHIFT_(_KN.G)
+SHIFT_H = SHIFT_(_KN.H)
+SHIFT_I = SHIFT_(_KN.I)
+SHIFT_J = SHIFT_(_KN.J)
+SHIFT_K = SHIFT_(_KN.K)
+SHIFT_L = SHIFT_(_KN.L)
+SHIFT_M = SHIFT_(_KN.M)
+SHIFT_N = SHIFT_(_KN.N)
+SHIFT_O = SHIFT_(_KN.O)
+SHIFT_P = SHIFT_(_KN.P)
+SHIFT_Q = SHIFT_(_KN.Q)
+SHIFT_R = SHIFT_(_KN.R)
+SHIFT_S = SHIFT_(_KN.S)
+SHIFT_T = SHIFT_(_KN.T)
+SHIFT_U = SHIFT_(_KN.U)
+SHIFT_V = SHIFT_(_KN.V)
+SHIFT_W = SHIFT_(_KN.W)
+SHIFT_X = SHIFT_(_KN.X)
+SHIFT_Y = SHIFT_(_KN.Y)
+SHIFT_Z = SHIFT_(_KN.Z)
+
+# ALT
+ALT_TAB = ALT_(_KN.TAB)
+
+ALT_F1 = ALT_(_KN.F1)
+ALT_F2 = ALT_(_KN.F2)
+ALT_F3 = ALT_(_KN.F3)
+ALT_F4 = ALT_(_KN.F4)
+ALT_F5 = ALT_(_KN.F5)
+ALT_F6 = ALT_(_KN.F6)
+ALT_F7 = ALT_(_KN.F7)
+ALT_F8 = ALT_(_KN.F8)
+ALT_F9 = ALT_(_KN.F9)
+ALT_F10 = ALT_(_KN.F10)
+ALT_F11 = ALT_(_KN.F11)
+ALT_F12 = ALT_(_KN.F12)
+
+ALT_OEM3_WAVE_OR_BACK_QUOTE = ALT_(_KN.OEM3_WAVE_OR_BACK_QUOTE)
+ALT_1 = ALT_(_KN.KEY_1)
+ALT_2 = ALT_(_KN.KEY_2)
+ALT_3 = ALT_(_KN.KEY_3)
+ALT_4 = ALT_(_KN.KEY_4)
+ALT_5 = ALT_(_KN.KEY_5)
+ALT_6 = ALT_(_KN.KEY_6)
+ALT_7 = ALT_(_KN.KEY_7)
+ALT_8 = ALT_(_KN.KEY_8)
+ALT_9 = ALT_(_KN.KEY_9)
+ALT_0 = ALT_(_KN.KEY_0)
+ALT_11_MINUS = ALT_(_KN.KEY_11_MINUS)
+ALT_12_PLUS = ALT_(_KN.KEY_12_PLUS)
+ALT_BACKSPACE = ALT_(_KN.BACKSPACE)
+
+ALT_NUMPAD_1 = ALT_(_KN.NUMPAD_1)
+ALT_NUMPAD_2 = ALT_(_KN.NUMPAD_2)
+ALT_NUMPAD_3 = ALT_(_KN.NUMPAD_3)
+ALT_NUMPAD_4 = ALT_(_KN.NUMPAD_4)
+ALT_NUMPAD_5 = ALT_(_KN.NUMPAD_5)
+ALT_NUMPAD_6 = ALT_(_KN.NUMPAD_6)
+ALT_NUMPAD_7 = ALT_(_KN.NUMPAD_7)
+ALT_NUMPAD_8 = ALT_(_KN.NUMPAD_8)
+ALT_NUMPAD_9 = ALT_(_KN.NUMPAD_9)
+ALT_NUMPAD_0 = ALT_(_KN.NUMPAD_0)
+ALT_NUMPAD_11_DIVIDE = ALT_(_KN.NUMPAD_11_DIVIDE)
+ALT_NUMPAD_12_MULTIPLY = ALT_(_KN.NUMPAD_12_MULTIPLY)
+
+ALT_A = ALT_(_KN.A)
+ALT_B = ALT_(_KN.B)
+ALT_C = ALT_(_KN.C)
+ALT_D = ALT_(_KN.D)
+ALT_E = ALT_(_KN.E)
+ALT_F = ALT_(_KN.F)
+ALT_G = ALT_(_KN.G)
+ALT_H = ALT_(_KN.H)
+ALT_I = ALT_(_KN.I)
+ALT_J = ALT_(_KN.J)
+ALT_K = ALT_(_KN.K)
+ALT_L = ALT_(_KN.L)
+ALT_M = ALT_(_KN.M)
+ALT_N = ALT_(_KN.N)
+ALT_O = ALT_(_KN.O)
+ALT_P = ALT_(_KN.P)
+ALT_Q = ALT_(_KN.Q)
+ALT_R = ALT_(_KN.R)
+ALT_S = ALT_(_KN.S)
+ALT_T = ALT_(_KN.T)
+ALT_U = ALT_(_KN.U)
+ALT_V = ALT_(_KN.V)
+ALT_W = ALT_(_KN.W)
+ALT_X = ALT_(_KN.X)
+ALT_Y = ALT_(_KN.Y)
+ALT_Z = ALT_(_KN.Z)
+
+# CTRL ALT
+CTRL_ALT_F1 = CTRL_ALT_(_KN.F1)
+CTRL_ALT_F2 = CTRL_ALT_(_KN.F2)
+CTRL_ALT_F3 = CTRL_ALT_(_KN.F3)
+CTRL_ALT_F4 = CTRL_ALT_(_KN.F4)
+CTRL_ALT_F5 = CTRL_ALT_(_KN.F5)
+CTRL_ALT_F6 = CTRL_ALT_(_KN.F6)
+CTRL_ALT_F7 = CTRL_ALT_(_KN.F7)
+CTRL_ALT_F8 = CTRL_ALT_(_KN.F8)
+CTRL_ALT_F9 = CTRL_ALT_(_KN.F9)
+CTRL_ALT_F10 = CTRL_ALT_(_KN.F10)
+CTRL_ALT_F11 = CTRL_ALT_(_KN.F11)
+CTRL_ALT_F12 = CTRL_ALT_(_KN.F12)
+
+CTRL_ALT_OEM3_WAVE_OR_BACK_QUOTE = CTRL_ALT_(_KN.OEM3_WAVE_OR_BACK_QUOTE)
+CTRL_ALT_1 = CTRL_ALT_(_KN.KEY_1)
+CTRL_ALT_2 = CTRL_ALT_(_KN.KEY_2)
+CTRL_ALT_3 = CTRL_ALT_(_KN.KEY_3)
+CTRL_ALT_4 = CTRL_ALT_(_KN.KEY_4)
+CTRL_ALT_5 = CTRL_ALT_(_KN.KEY_5)
+CTRL_ALT_6 = CTRL_ALT_(_KN.KEY_6)
+CTRL_ALT_7 = CTRL_ALT_(_KN.KEY_7)
+CTRL_ALT_8 = CTRL_ALT_(_KN.KEY_8)
+CTRL_ALT_9 = CTRL_ALT_(_KN.KEY_9)
+CTRL_ALT_0 = CTRL_ALT_(_KN.KEY_0)
+CTRL_ALT_11_MINUS = CTRL_ALT_(_KN.KEY_11_MINUS)
+CTRL_ALT_12_PLUS = CTRL_ALT_(_KN.KEY_12_PLUS)
+CTRL_ALT_BACKSPACE = CTRL_ALT_(_KN.BACKSPACE)
+
+CTRL_ALT_NUMPAD_1 = CTRL_ALT_(_KN.NUMPAD_1)
+CTRL_ALT_NUMPAD_2 = CTRL_ALT_(_KN.NUMPAD_2)
+CTRL_ALT_NUMPAD_3 = CTRL_ALT_(_KN.NUMPAD_3)
+CTRL_ALT_NUMPAD_4 = CTRL_ALT_(_KN.NUMPAD_4)
+CTRL_ALT_NUMPAD_5 = CTRL_ALT_(_KN.NUMPAD_5)
+CTRL_ALT_NUMPAD_6 = CTRL_ALT_(_KN.NUMPAD_6)
+CTRL_ALT_NUMPAD_7 = CTRL_ALT_(_KN.NUMPAD_7)
+CTRL_ALT_NUMPAD_8 = CTRL_ALT_(_KN.NUMPAD_8)
+CTRL_ALT_NUMPAD_9 = CTRL_ALT_(_KN.NUMPAD_9)
+CTRL_ALT_NUMPAD_0 = CTRL_ALT_(_KN.NUMPAD_0)
+CTRL_ALT_NUMPAD_11_DIVIDE = CTRL_ALT_(_KN.NUMPAD_11_DIVIDE)
+CTRL_ALT_NUMPAD_12_MULTIPLY = CTRL_ALT_(_KN.NUMPAD_12_MULTIPLY)
+
+CTRL_ALT_A = CTRL_ALT_(_KN.A)
+CTRL_ALT_B = CTRL_ALT_(_KN.B)
+CTRL_ALT_C = CTRL_ALT_(_KN.C)
+CTRL_ALT_D = CTRL_ALT_(_KN.D)
+CTRL_ALT_E = CTRL_ALT_(_KN.E)
+CTRL_ALT_F = CTRL_ALT_(_KN.F)
+CTRL_ALT_G = CTRL_ALT_(_KN.G)
+CTRL_ALT_H = CTRL_ALT_(_KN.H)
+CTRL_ALT_I = CTRL_ALT_(_KN.I)
+CTRL_ALT_J = CTRL_ALT_(_KN.J)
+CTRL_ALT_K = CTRL_ALT_(_KN.K)
+CTRL_ALT_L = CTRL_ALT_(_KN.L)
+CTRL_ALT_M = CTRL_ALT_(_KN.M)
+CTRL_ALT_N = CTRL_ALT_(_KN.N)
+CTRL_ALT_O = CTRL_ALT_(_KN.O)
+CTRL_ALT_P = CTRL_ALT_(_KN.P)
+CTRL_ALT_Q = CTRL_ALT_(_KN.Q)
+CTRL_ALT_R = CTRL_ALT_(_KN.R)
+CTRL_ALT_S = CTRL_ALT_(_KN.S)
+CTRL_ALT_T = CTRL_ALT_(_KN.T)
+CTRL_ALT_U = CTRL_ALT_(_KN.U)
+CTRL_ALT_V = CTRL_ALT_(_KN.V)
+CTRL_ALT_W = CTRL_ALT_(_KN.W)
+CTRL_ALT_X = CTRL_ALT_(_KN.X)
+CTRL_ALT_Y = CTRL_ALT_(_KN.Y)
+CTRL_ALT_Z = CTRL_ALT_(_KN.Z)
+
+# CTRL SHIFT
+CTRL_SHIFT_F1 = CTRL_SHIFT_(_KN.F1)
+CTRL_SHIFT_F2 = CTRL_SHIFT_(_KN.F2)
+CTRL_SHIFT_F3 = CTRL_SHIFT_(_KN.F3)
+CTRL_SHIFT_F4 = CTRL_SHIFT_(_KN.F4)
+CTRL_SHIFT_F5 = CTRL_SHIFT_(_KN.F5)
+CTRL_SHIFT_F6 = CTRL_SHIFT_(_KN.F6)
+CTRL_SHIFT_F7 = CTRL_SHIFT_(_KN.F7)
+CTRL_SHIFT_F8 = CTRL_SHIFT_(_KN.F8)
+CTRL_SHIFT_F9 = CTRL_SHIFT_(_KN.F9)
+CTRL_SHIFT_F10 = CTRL_SHIFT_(_KN.F10)
+CTRL_SHIFT_F11 = CTRL_SHIFT_(_KN.F11)
+CTRL_SHIFT_F12 = CTRL_SHIFT_(_KN.F12)
+
+CTRL_SHIFT_OEM3_WAVE_OR_BACK_QUOTE = CTRL_SHIFT_(_KN.OEM3_WAVE_OR_BACK_QUOTE)
+CTRL_SHIFT_1 = CTRL_SHIFT_(_KN.KEY_1)
+CTRL_SHIFT_2 = CTRL_SHIFT_(_KN.KEY_2)
+CTRL_SHIFT_3 = CTRL_SHIFT_(_KN.KEY_3)
+CTRL_SHIFT_4 = CTRL_SHIFT_(_KN.KEY_4)
+CTRL_SHIFT_5 = CTRL_SHIFT_(_KN.KEY_5)
+CTRL_SHIFT_6 = CTRL_SHIFT_(_KN.KEY_6)
+CTRL_SHIFT_7 = CTRL_SHIFT_(_KN.KEY_7)
+CTRL_SHIFT_8 = CTRL_SHIFT_(_KN.KEY_8)
+CTRL_SHIFT_9 = CTRL_SHIFT_(_KN.KEY_9)
+CTRL_SHIFT_0 = CTRL_SHIFT_(_KN.KEY_0)
+CTRL_SHIFT_11_MINUS = CTRL_SHIFT_(_KN.KEY_11_MINUS)
+CTRL_SHIFT_12_PLUS = CTRL_SHIFT_(_KN.KEY_12_PLUS)
+CTRL_SHIFT_BACKSPACE = CTRL_SHIFT_(_KN.BACKSPACE)
+
+CTRL_SHIFT_NUMPAD_1 = CTRL_SHIFT_(_KN.NUMPAD_1)
+CTRL_SHIFT_NUMPAD_2 = CTRL_SHIFT_(_KN.NUMPAD_2)
+CTRL_SHIFT_NUMPAD_3 = CTRL_SHIFT_(_KN.NUMPAD_3)
+CTRL_SHIFT_NUMPAD_4 = CTRL_SHIFT_(_KN.NUMPAD_4)
+CTRL_SHIFT_NUMPAD_5 = CTRL_SHIFT_(_KN.NUMPAD_5)
+CTRL_SHIFT_NUMPAD_6 = CTRL_SHIFT_(_KN.NUMPAD_6)
+CTRL_SHIFT_NUMPAD_7 = CTRL_SHIFT_(_KN.NUMPAD_7)
+CTRL_SHIFT_NUMPAD_8 = CTRL_SHIFT_(_KN.NUMPAD_8)
+CTRL_SHIFT_NUMPAD_9 = CTRL_SHIFT_(_KN.NUMPAD_9)
+CTRL_SHIFT_NUMPAD_0 = CTRL_SHIFT_(_KN.NUMPAD_0)
+CTRL_SHIFT_NUMPAD_11_DIVIDE = CTRL_SHIFT_(_KN.NUMPAD_11_DIVIDE)
+CTRL_SHIFT_NUMPAD_12_MULTIPLY = CTRL_SHIFT_(_KN.NUMPAD_12_MULTIPLY)
+
+CTRL_SHIFT_A = CTRL_SHIFT_(_KN.A)
+CTRL_SHIFT_B = CTRL_SHIFT_(_KN.B)
+CTRL_SHIFT_C = CTRL_SHIFT_(_KN.C)
+CTRL_SHIFT_D = CTRL_SHIFT_(_KN.D)
+CTRL_SHIFT_E = CTRL_SHIFT_(_KN.E)
+CTRL_SHIFT_F = CTRL_SHIFT_(_KN.F)
+CTRL_SHIFT_G = CTRL_SHIFT_(_KN.G)
+CTRL_SHIFT_H = CTRL_SHIFT_(_KN.H)
+CTRL_SHIFT_I = CTRL_SHIFT_(_KN.I)
+CTRL_SHIFT_J = CTRL_SHIFT_(_KN.J)
+CTRL_SHIFT_K = CTRL_SHIFT_(_KN.K)
+CTRL_SHIFT_L = CTRL_SHIFT_(_KN.L)
+CTRL_SHIFT_M = CTRL_SHIFT_(_KN.M)
+CTRL_SHIFT_N = CTRL_SHIFT_(_KN.N)
+CTRL_SHIFT_O = CTRL_SHIFT_(_KN.O)
+CTRL_SHIFT_P = CTRL_SHIFT_(_KN.P)
+CTRL_SHIFT_Q = CTRL_SHIFT_(_KN.Q)
+CTRL_SHIFT_R = CTRL_SHIFT_(_KN.R)
+CTRL_SHIFT_S = CTRL_SHIFT_(_KN.S)
+CTRL_SHIFT_T = CTRL_SHIFT_(_KN.T)
+CTRL_SHIFT_U = CTRL_SHIFT_(_KN.U)
+CTRL_SHIFT_V = CTRL_SHIFT_(_KN.V)
+CTRL_SHIFT_W = CTRL_SHIFT_(_KN.W)
+CTRL_SHIFT_X = CTRL_SHIFT_(_KN.X)
+CTRL_SHIFT_Y = CTRL_SHIFT_(_KN.Y)
+CTRL_SHIFT_Z = CTRL_SHIFT_(_KN.Z)
+
+# ALT SHIFT
+ALT_SHIFT_F1 = ALT_SHIFT_(_KN.F1)
+ALT_SHIFT_F2 = ALT_SHIFT_(_KN.F2)
+ALT_SHIFT_F3 = ALT_SHIFT_(_KN.F3)
+ALT_SHIFT_F4 = ALT_SHIFT_(_KN.F4)
+ALT_SHIFT_F5 = ALT_SHIFT_(_KN.F5)
+ALT_SHIFT_F6 = ALT_SHIFT_(_KN.F6)
+ALT_SHIFT_F7 = ALT_SHIFT_(_KN.F7)
+ALT_SHIFT_F8 = ALT_SHIFT_(_KN.F8)
+ALT_SHIFT_F9 = ALT_SHIFT_(_KN.F9)
+ALT_SHIFT_F10 = ALT_SHIFT_(_KN.F10)
+ALT_SHIFT_F11 = ALT_SHIFT_(_KN.F11)
+ALT_SHIFT_F12 = ALT_SHIFT_(_KN.F12)
+
+ALT_SHIFT_OEM3_WAVE_OR_BACK_QUOTE = ALT_SHIFT_(_KN.OEM3_WAVE_OR_BACK_QUOTE)
+ALT_SHIFT_1 = ALT_SHIFT_(_KN.KEY_1)
+ALT_SHIFT_2 = ALT_SHIFT_(_KN.KEY_2)
+ALT_SHIFT_3 = ALT_SHIFT_(_KN.KEY_3)
+ALT_SHIFT_4 = ALT_SHIFT_(_KN.KEY_4)
+ALT_SHIFT_5 = ALT_SHIFT_(_KN.KEY_5)
+ALT_SHIFT_6 = ALT_SHIFT_(_KN.KEY_6)
+ALT_SHIFT_7 = ALT_SHIFT_(_KN.KEY_7)
+ALT_SHIFT_8 = ALT_SHIFT_(_KN.KEY_8)
+ALT_SHIFT_9 = ALT_SHIFT_(_KN.KEY_9)
+ALT_SHIFT_0 = ALT_SHIFT_(_KN.KEY_0)
+ALT_SHIFT_11_MINUS = ALT_SHIFT_(_KN.KEY_11_MINUS)
+ALT_SHIFT_12_PLUS = ALT_SHIFT_(_KN.KEY_12_PLUS)
+ALT_SHIFT_BACKSPACE = ALT_SHIFT_(_KN.BACKSPACE)
+
+ALT_SHIFT_NUMPAD_1 = ALT_SHIFT_(_KN.NUMPAD_1)
+ALT_SHIFT_NUMPAD_2 = ALT_SHIFT_(_KN.NUMPAD_2)
+ALT_SHIFT_NUMPAD_3 = ALT_SHIFT_(_KN.NUMPAD_3)
+ALT_SHIFT_NUMPAD_4 = ALT_SHIFT_(_KN.NUMPAD_4)
+ALT_SHIFT_NUMPAD_5 = ALT_SHIFT_(_KN.NUMPAD_5)
+ALT_SHIFT_NUMPAD_6 = ALT_SHIFT_(_KN.NUMPAD_6)
+ALT_SHIFT_NUMPAD_7 = ALT_SHIFT_(_KN.NUMPAD_7)
+ALT_SHIFT_NUMPAD_8 = ALT_SHIFT_(_KN.NUMPAD_8)
+ALT_SHIFT_NUMPAD_9 = ALT_SHIFT_(_KN.NUMPAD_9)
+ALT_SHIFT_NUMPAD_0 = ALT_SHIFT_(_KN.NUMPAD_0)
+ALT_SHIFT_NUMPAD_11_DIVIDE = ALT_SHIFT_(_KN.NUMPAD_11_DIVIDE)
+ALT_SHIFT_NUMPAD_12_MULTIPLY = ALT_SHIFT_(_KN.NUMPAD_12_MULTIPLY)
+
+ALT_SHIFT_A = ALT_SHIFT_(_KN.A)
+ALT_SHIFT_B = ALT_SHIFT_(_KN.B)
+ALT_SHIFT_C = ALT_SHIFT_(_KN.C)
+ALT_SHIFT_D = ALT_SHIFT_(_KN.D)
+ALT_SHIFT_E = ALT_SHIFT_(_KN.E)
+ALT_SHIFT_F = ALT_SHIFT_(_KN.F)
+ALT_SHIFT_G = ALT_SHIFT_(_KN.G)
+ALT_SHIFT_H = ALT_SHIFT_(_KN.H)
+ALT_SHIFT_I = ALT_SHIFT_(_KN.I)
+ALT_SHIFT_J = ALT_SHIFT_(_KN.J)
+ALT_SHIFT_K = ALT_SHIFT_(_KN.K)
+ALT_SHIFT_L = ALT_SHIFT_(_KN.L)
+ALT_SHIFT_M = ALT_SHIFT_(_KN.M)
+ALT_SHIFT_N = ALT_SHIFT_(_KN.N)
+ALT_SHIFT_O = ALT_SHIFT_(_KN.O)
+ALT_SHIFT_P = ALT_SHIFT_(_KN.P)
+ALT_SHIFT_Q = ALT_SHIFT_(_KN.Q)
+ALT_SHIFT_R = ALT_SHIFT_(_KN.R)
+ALT_SHIFT_S = ALT_SHIFT_(_KN.S)
+ALT_SHIFT_T = ALT_SHIFT_(_KN.T)
+ALT_SHIFT_U = ALT_SHIFT_(_KN.U)
+ALT_SHIFT_V = ALT_SHIFT_(_KN.V)
+ALT_SHIFT_W = ALT_SHIFT_(_KN.W)
+ALT_SHIFT_X = ALT_SHIFT_(_KN.X)
+ALT_SHIFT_Y = ALT_SHIFT_(_KN.Y)
+ALT_SHIFT_Z = ALT_SHIFT_(_KN.Z)
+
+# CTRL SHIFT ALT
+CTRL_SHIFT_ALT_F1 = CTRL_SHIFT_ALT_(_KN.F1)
+CTRL_SHIFT_ALT_F2 = CTRL_SHIFT_ALT_(_KN.F2)
+CTRL_SHIFT_ALT_F3 = CTRL_SHIFT_ALT_(_KN.F3)
+CTRL_SHIFT_ALT_F4 = CTRL_SHIFT_ALT_(_KN.F4)
+CTRL_SHIFT_ALT_F5 = CTRL_SHIFT_ALT_(_KN.F5)
+CTRL_SHIFT_ALT_F6 = CTRL_SHIFT_ALT_(_KN.F6)
+CTRL_SHIFT_ALT_F7 = CTRL_SHIFT_ALT_(_KN.F7)
+CTRL_SHIFT_ALT_F8 = CTRL_SHIFT_ALT_(_KN.F8)
+CTRL_SHIFT_ALT_F9 = CTRL_SHIFT_ALT_(_KN.F9)
+CTRL_SHIFT_ALT_F10 = CTRL_SHIFT_ALT_(_KN.F10)
+CTRL_SHIFT_ALT_F11 = CTRL_SHIFT_ALT_(_KN.F11)
+CTRL_SHIFT_ALT_F12 = CTRL_SHIFT_ALT_(_KN.F12)
+
+CTRL_SHIFT_ALT_OEM3_WAVE_OR_BACK_QUOTE = CTRL_SHIFT_ALT_(_KN.OEM3_WAVE_OR_BACK_QUOTE)
+CTRL_SHIFT_ALT_1 = CTRL_SHIFT_ALT_(_KN.KEY_1)
+CTRL_SHIFT_ALT_2 = CTRL_SHIFT_ALT_(_KN.KEY_2)
+CTRL_SHIFT_ALT_3 = CTRL_SHIFT_ALT_(_KN.KEY_3)
+CTRL_SHIFT_ALT_4 = CTRL_SHIFT_ALT_(_KN.KEY_4)
+CTRL_SHIFT_ALT_5 = CTRL_SHIFT_ALT_(_KN.KEY_5)
+CTRL_SHIFT_ALT_6 = CTRL_SHIFT_ALT_(_KN.KEY_6)
+CTRL_SHIFT_ALT_7 = CTRL_SHIFT_ALT_(_KN.KEY_7)
+CTRL_SHIFT_ALT_8 = CTRL_SHIFT_ALT_(_KN.KEY_8)
+CTRL_SHIFT_ALT_9 = CTRL_SHIFT_ALT_(_KN.KEY_9)
+CTRL_SHIFT_ALT_0 = CTRL_SHIFT_ALT_(_KN.KEY_0)
+CTRL_SHIFT_ALT_11_MINUS = CTRL_SHIFT_ALT_(_KN.KEY_11_MINUS)
+CTRL_SHIFT_ALT_12_PLUS = CTRL_SHIFT_ALT_(_KN.KEY_12_PLUS)
+CTRL_SHIFT_ALT_BACKSPACE = CTRL_SHIFT_ALT_(_KN.BACKSPACE)
+
+CTRL_SHIFT_ALT_NUMPAD_1 = CTRL_SHIFT_ALT_(_KN.NUMPAD_1)
+CTRL_SHIFT_ALT_NUMPAD_2 = CTRL_SHIFT_ALT_(_KN.NUMPAD_2)
+CTRL_SHIFT_ALT_NUMPAD_3 = CTRL_SHIFT_ALT_(_KN.NUMPAD_3)
+CTRL_SHIFT_ALT_NUMPAD_4 = CTRL_SHIFT_ALT_(_KN.NUMPAD_4)
+CTRL_SHIFT_ALT_NUMPAD_5 = CTRL_SHIFT_ALT_(_KN.NUMPAD_5)
+CTRL_SHIFT_ALT_NUMPAD_6 = CTRL_SHIFT_ALT_(_KN.NUMPAD_6)
+CTRL_SHIFT_ALT_NUMPAD_7 = CTRL_SHIFT_ALT_(_KN.NUMPAD_7)
+CTRL_SHIFT_ALT_NUMPAD_8 = CTRL_SHIFT_ALT_(_KN.NUMPAD_8)
+CTRL_SHIFT_ALT_NUMPAD_9 = CTRL_SHIFT_ALT_(_KN.NUMPAD_9)
+CTRL_SHIFT_ALT_NUMPAD_0 = CTRL_SHIFT_ALT_(_KN.NUMPAD_0)
+CTRL_SHIFT_ALT_NUMPAD_11_DIVIDE = CTRL_SHIFT_ALT_(_KN.NUMPAD_11_DIVIDE)
+CTRL_SHIFT_ALT_NUMPAD_12_MULTIPLY = CTRL_SHIFT_ALT_(_KN.NUMPAD_12_MULTIPLY)
+
+CTRL_SHIFT_ALT_A = CTRL_SHIFT_ALT_(_KN.A)
+CTRL_SHIFT_ALT_B = CTRL_SHIFT_ALT_(_KN.B)
+CTRL_SHIFT_ALT_C = CTRL_SHIFT_ALT_(_KN.C)
+CTRL_SHIFT_ALT_D = CTRL_SHIFT_ALT_(_KN.D)
+CTRL_SHIFT_ALT_E = CTRL_SHIFT_ALT_(_KN.E)
+CTRL_SHIFT_ALT_F = CTRL_SHIFT_ALT_(_KN.F)
+CTRL_SHIFT_ALT_G = CTRL_SHIFT_ALT_(_KN.G)
+CTRL_SHIFT_ALT_H = CTRL_SHIFT_ALT_(_KN.H)
+CTRL_SHIFT_ALT_I = CTRL_SHIFT_ALT_(_KN.I)
+CTRL_SHIFT_ALT_J = CTRL_SHIFT_ALT_(_KN.J)
+CTRL_SHIFT_ALT_K = CTRL_SHIFT_ALT_(_KN.K)
+CTRL_SHIFT_ALT_L = CTRL_SHIFT_ALT_(_KN.L)
+CTRL_SHIFT_ALT_M = CTRL_SHIFT_ALT_(_KN.M)
+CTRL_SHIFT_ALT_N = CTRL_SHIFT_ALT_(_KN.N)
+CTRL_SHIFT_ALT_O = CTRL_SHIFT_ALT_(_KN.O)
+CTRL_SHIFT_ALT_P = CTRL_SHIFT_ALT_(_KN.P)
+CTRL_SHIFT_ALT_Q = CTRL_SHIFT_ALT_(_KN.Q)
+CTRL_SHIFT_ALT_R = CTRL_SHIFT_ALT_(_KN.R)
+CTRL_SHIFT_ALT_S = CTRL_SHIFT_ALT_(_KN.S)
+CTRL_SHIFT_ALT_T = CTRL_SHIFT_ALT_(_KN.T)
+CTRL_SHIFT_ALT_U = CTRL_SHIFT_ALT_(_KN.U)
+CTRL_SHIFT_ALT_V = CTRL_SHIFT_ALT_(_KN.V)
+CTRL_SHIFT_ALT_W = CTRL_SHIFT_ALT_(_KN.W)
+CTRL_SHIFT_ALT_X = CTRL_SHIFT_ALT_(_KN.X)
+CTRL_SHIFT_ALT_Y = CTRL_SHIFT_ALT_(_KN.Y)
+CTRL_SHIFT_ALT_Z = CTRL_SHIFT_ALT_(_KN.Z)
