@@ -1,0 +1,81 @@
+[project]
+name = "xiaomusic"
+version = "0.1.100"
+description = "Play Music with xiaomi AI speaker"
+authors = [
+    { name = "涵曦", email = "im.hanxi@gmail.com" },
+]
+dependencies = [
+    "aiohttp>=3.8.6",
+    "miservice-fork>=2.5.0",
+    "mutagen>=1.47.0",
+    "yt-dlp>=2024.07.01",
+    "flask[async]>=3.0.1",
+    "waitress>=3.0.0",
+    "flask-HTTPAuth>=4.8.0",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+Homepage = "https://github.com/hanxi/xiaomusic"
+
+[project.scripts]
+xiaomusic = "xiaomusic.cli:main"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm.dev-dependencies]
+lint = [
+    "ruff>=0.4.8",
+]
+dev = [
+    "commitizen>=3.27.0",
+]
+
+[tool.pdm.scripts]
+lint = "ruff check ."
+fmt = "ruff format ."
+
+[tool.ruff]
+include = [
+    "**/*.py",
+    "**/*.pyi",
+    "**/pyproject.toml",
+]
+
+[tool.ruff.lint]
+select = [
+    "B",
+    "C4",
+    "E",
+    "F",
+    "I",
+    "W",
+    "UP",
+]
+ignore = [
+    "E501",
+    "W191",
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "v$version"
+version_scheme = "pep440"
+version_provider = "pep621"
+update_changelog_on_bump = true
+major_version_zero = true
+version_files = [
+    "xiaomusic/__init__.py",
+]
