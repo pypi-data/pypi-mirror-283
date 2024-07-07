@@ -1,0 +1,139 @@
+/* Base elements */
+body {
+    text-align: center;
+}
+h1, h2 {
+    text-align: center;
+    margin-top: 5%;
+}
+h3, h4, p {
+    text-align: justify;
+    text-indent: 25px;
+}
+li, ol, ul {
+    text-align: justify;
+}
+p {
+    margin-bottom: 0%;
+}
+ul {
+    margin-top: 0.25%;
+}
+ol {
+    margin-top: 0.5%;
+}
+li > p {
+    text-indent: 0px;  /* Suppress indenting text relatively a list marker that is indented itself. */
+    margin-top: 0%;
+    margin-bottom: 0.25%;
+}
+input {
+    width: 100%;
+}
+
+/* Links styling. */
+a:link {
+    color: gray;
+}
+a:visited {
+    color: #696969
+}
+h2 a:link, h2 a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+/* Buttons */
+.button {
+    background-color: #f7f7fc;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button:link, .button:visited {
+    color: black;
+}
+
+/* Custom divisions */
+#frozen_button_one {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    width: 100px;
+}
+#frozen_button_two {
+    position: fixed;
+    top: 100px;
+    left: 25px;
+    width: 100px;
+}
+#frozen_button_three {
+    position: fixed;
+    top: 175px;
+    left: 25px;
+    width: 100px;
+}
+#central {
+    background-color: #f9f9f9;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 75%;
+    text-align: center;
+}
+#narrow_central {
+    background-color: #f9f9f9;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 50%;
+    text-align: center;
+}
+#table_of_contents {
+    margin: auto;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    width: 85%;
+    max-width: 900px;
+}
+#contents {
+    margin: auto;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    width: 95%;
+    max-width: 1000px;
+}
+#short_contents {
+    margin: auto;
+    padding-top: 1%;
+    padding-bottom: 5%;
+    width: 95%;
+    max-width: 1000px;
+}
+#search_bar {
+    margin: auto;
+    padding-top: 5%;
+    width: 95%;
+    max-width: 1000px;
+}
+#fields_cloud {
+    margin: auto;
+    margin-top: 20%;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 95%;
+}
+#tags_cloud {
+    margin: auto;
+    margin-top: 5%;
+    text-align: center;
+    padding-bottom: 5%;
+    width: 95%;
+}
