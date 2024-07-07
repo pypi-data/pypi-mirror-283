@@ -1,0 +1,20 @@
+from marshmallow import Schema, fields
+
+class AddressSchema(Schema):
+    id = fields.Integer()
+    customer_id = fields.Integer()
+    name = fields.String()
+    first_name = fields.String()
+    last_name = fields.String()
+    address1 = fields.String()
+    address2 = fields.String()
+    phone = fields.String()
+    city = fields.String()
+    province = fields.String()
+    country = fields.String()
+    zip = fields.String()
+    company = fields.String()
+    latitude = fields.String()
+    longitude = fields.String()
+    country_code = fields.String()
+    province_code = fields.String()
