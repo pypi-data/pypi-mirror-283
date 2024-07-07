@@ -1,0 +1,3 @@
+[console_scripts]
+check_dependencies = lambda_deploy_krhobeck.check:check_dependencies
+deploy_lambda = lambda_deploy_krhobeck.deployment:deploy
