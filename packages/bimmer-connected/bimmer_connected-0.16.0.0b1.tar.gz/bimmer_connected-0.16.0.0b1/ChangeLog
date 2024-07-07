@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+0.16.0b1
+--------
+
+* CLI: Store OAuth credentials in local file (#626)
