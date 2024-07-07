@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+OCR_with_format/__init__.py
+OCR_with_format/__main__.py
+OCR_with_format/ocr_with_format.py
+OCR_with_format.egg-info/PKG-INFO
+OCR_with_format.egg-info/SOURCES.txt
+OCR_with_format.egg-info/dependency_links.txt
+OCR_with_format.egg-info/entry_points.txt
+OCR_with_format.egg-info/requires.txt
+OCR_with_format.egg-info/top_level.txt
