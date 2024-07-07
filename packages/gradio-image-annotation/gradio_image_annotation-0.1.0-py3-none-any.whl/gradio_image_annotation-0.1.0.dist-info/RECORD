@@ -1,0 +1,11 @@
+gradio_image_annotation/__init__.py,sha256=rtUcY7vH0x7NZ-r9koXlV0QGRgu2OSbRn7Rd-fAyRKc,81
+gradio_image_annotation/image_annotator.py,sha256=c5eNKekv68sG9O9NswXrh5Kgrvi2YL5zthkLN2tupuc,14513
+gradio_image_annotation/image_annotator.pyi,sha256=qLUTNWwIDFv7DMBrR-G_DUHCkdXsAF2CIHp9-IBzVuI,29720
+gradio_image_annotation/templates/component/index.js,sha256=ZUHsMo2Rl-VYal4TXqo0NinDjYB0ajJvsvjDhg1kR3c,221823
+gradio_image_annotation/templates/component/style.css,sha256=NF0sHSxju4OWI8-XzZe4BmGhCA_EvLNnuWD39PDxXQk,27384
+gradio_image_annotation/templates/example/index.js,sha256=OnL02svf9M6ygbrQ_OuodkpyAUrUKgfoBcxbRPwTZCQ,82929
+gradio_image_annotation/templates/example/style.css,sha256=bhXbx_6xE3746w36AC_uFeLDbkkAqDsy2gdU7tdxEWg,24799
+gradio_image_annotation-0.1.0.dist-info/METADATA,sha256=2bnr4y3aIyQuemcuPeAUN1xJBrPg5FSL4J9gBiS7iKU,14188
+gradio_image_annotation-0.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+gradio_image_annotation-0.1.0.dist-info/licenses/LICENSE,sha256=vtQnXyZg4Gvb4BT5EYedPO0faJSPCgrw36r8YL-r_yE,1069
+gradio_image_annotation-0.1.0.dist-info/RECORD,,
