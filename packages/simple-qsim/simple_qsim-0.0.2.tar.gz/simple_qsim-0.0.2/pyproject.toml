@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "simple-qsim"
+version = "0.0.2"
+authors = [
+  { name="Prince Rawat", email="prince@princerawat.com" },
+]
+maintainers = [
+  { name="Prince Rawat", email="prince@princerawat.com" },
+]
+keywords = ["quantum", "simulator", "circuit", "quantum-computing"]
+description = "A simple Quantum Simulator"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Development Status :: 5 - Production/Stable",
+    
+]
+
+[project.urls]
+Homepage = "https://github.com/MrPrinceRawat/Quantum-Computering-Simulator"
+Issues = "https://github.com/MrPrinceRawat/Quantum-Computering-Simulator/issues"
+
