@@ -1,0 +1,3 @@
+[console_scripts]
+xpipe-cli=xpipe_cli.cli:handled_cli
+
