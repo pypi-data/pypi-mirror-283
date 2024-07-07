@@ -1,0 +1,15 @@
+setup.py
+paketlib/__init__.py
+paketlib/__main__.py
+paketlib/api.py
+paketlib/console.py
+paketlib/paket.py
+paketlib/path.py
+paketlib/pkcrypt.py
+paketlib/protect.py
+paketlib/search.py
+paketlib.egg-info/PKG-INFO
+paketlib.egg-info/SOURCES.txt
+paketlib.egg-info/dependency_links.txt
+paketlib.egg-info/requires.txt
+paketlib.egg-info/top_level.txt
