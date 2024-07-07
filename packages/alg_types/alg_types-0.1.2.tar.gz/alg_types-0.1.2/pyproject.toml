@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "alg_types"
+version = "0.1.2"
+description = "a library to implement rust like enums"
+authors = ["Prabhakar Dev <ayushashi11@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/ayushashi11/alg_types"
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
