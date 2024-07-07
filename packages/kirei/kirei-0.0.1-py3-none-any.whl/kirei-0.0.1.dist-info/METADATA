@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: kirei
+Version: 0.0.1
+Summary: kirei is a typed, multi-backend user interface framework. you can easy to add user interface to your script.
+License: MIT
+Author: KosWu
+Author-email: koswu@outlook.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# KiRei
+
+kirei is a typed, multi-backend user interface framework. 
+you can easy to add user interface to your script.
+
+
+## Quick Start
+
+```python
+import kirei as kr
+
+app = kr.CliApplication()
+
+@app.register()
+def echo(msg):  # no type hint will assume your input and output are `str` type
+    return msg
+
+
+if __name__ == "__main__":
+    app()
+```
+
+
