@@ -1,0 +1,1240 @@
+# README
+
+## Known Limitations
+This is still undergoing development - Use at your own risk!
+
+1. While this software attempts to adhere to the official Plink guidelines and list of commands, NO proper testing of all available plink commands has yet completed. Further development will thus focus on improving robustness of testing.
+2. `PlinkFileReader.load_file` can only read ONE file - Instead use `PlinkFileReader.read_file` with a specific file path. `args` and `kwargs` follow `pandas.read_csv`.
+
+
+## Feature Requests and Bug Reports
+**Please don't write E-Mails!** Instead, consider creating a new issue on GitLab: [https://gitlab.com/achwalt/plynk](https://gitlab.com/achwalt/plynk)
+
+
+## Installation
+
+Plynk can be installed with `pip install plynk`.
+
+1. Set up a new conda environment (assuing name `"my_env"`).
+    1. `conda create --name my_env python=3.12 -y`
+    2. `conda activate my_env`
+2. Install `plynk`.
+    1. This always works: `pip install plynk`.
+    2. This is faster but only works if you installed `uv`: `uv pip install plynk`. Install `uv` with `pip install uv`.
+
+## Using PLINK in python to process genetic data
+
+`Plink` is an abstraction which allows you to use Plink commands easily from Python, with automatic management of path variables so you maintain full control.
+
+## Import the Plink class
+
+
+```python
+from plynk import Plink
+```
+
+`Plink` is an abstraction which allows you to use the Plink software commands easily from Python, with automatic management of path variables so you maintain full control.
+
+**Plink let's you choose three _optional_ parameters:**
+1.  `plink_binary_path`: This is the path to where you have your plink binary available. If you leave it empty, you must have plink globally installed.
+2.  `plink_prefix`: This is the path to the folder where your **output** data lives, starting with the initial files to process. If you leave it blank, you won't be able to use the file reader. Remember to always create/keep a backup of your source data.
+3.  `encoding`: Default is `utf-8`. If your data is encoded in a different format, consider setting this here.
+
+In the following example, we want to work with a local version of plink which should be at `"binaries/plink"` in our working directory. Our data is stored in the folder `"data_src/demo_data"`.
+
+
+```python
+# Constants
+PLINK_BINARY_PATH = "binaries/plink"
+PLINK_PREFIX = "data_src/demo_data/demo_01" # folder: data_scr/demo_data, file_prefix: demo_01
+```
+
+
+```python
+plink = Plink(
+    plink_binary_path=PLINK_BINARY_PATH,
+    plink_prefix=PLINK_PREFIX,
+)
+```
+
+
+```python
+try:
+    print(plink.info)
+except RuntimeError:
+    print("Plink is not yet available. Let's download it!")
+```
+
+    Plink is not yet available. Let's download it!
+
+
+## Get the plink binary
+
+All versions of Plink are available here: [https://www.cog-genomics.org/plink2/](https://www.cog-genomics.org/plink2/)
+
+`Plink` can download this data for us so that we do not need to take care about it.
+
+
+```python
+plink.download_binaries()
+```
+
+
+
+
+    PosixPath('/home/achwalt/Development/plynk/binaries/plink')
+
+
+
+
+```python
+plink.info
+```
+
+
+
+
+    {'name': 'PLINK',
+     'version': 'v1.90b7.2',
+     'architecture': '64-bit',
+     'release_date': datetime.datetime(2023, 12, 11, 0, 0)}
+
+
+
+## Working with data
+
+Now that plink is available, we can work with it natively from python. We can use either 
+1. the exposed `Path` object or
+2. the plink file reader
+
+to see what data we have in our data folder to work with. Since the **plink prefix contains already both the folder and the file's prefix**, we need to use it's parent!
+
+
+```python
+files_available = [file_name for file_name in plink.plink_prefix.parent.iterdir()]
+files_available
+```
+
+
+
+
+    [PosixPath('/home/achwalt/Development/plynk/data_src/demo_data/demo_01.ped'),
+     PosixPath('/home/achwalt/Development/plynk/data_src/demo_data/demo_01.map')]
+
+
+
+
+```python
+plink.file_reader.find_files(plink.plink_prefix)
+```
+
+
+
+
+    [PosixPath('/home/achwalt/Development/plynk/data_src/demo_data/demo_01.map'),
+     PosixPath('/home/achwalt/Development/plynk/data_src/demo_data/demo_01.ped')]
+
+
+
+### We can inspect the data by using the path:
+
+
+```python
+ped_data = plink.file_reader.read_file(files_available[0])
+ped_data
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>TYPE_3c64f9b442261a43a88a89606d363421</th>
+      <th>COW_3c935a5fb77c7462d6535787c846bd24</th>
+      <th>0</th>
+      <th>0.1</th>
+      <th>0.2</th>
+      <th>-9</th>
+      <th>A</th>
+      <th>G</th>
+      <th>C</th>
+      <th>A.1</th>
+      <th>...</th>
+      <th>C.7482</th>
+      <th>C.7483</th>
+      <th>A.37157</th>
+      <th>A.37158</th>
+      <th>G.31809</th>
+      <th>G.31810</th>
+      <th>G.31811</th>
+      <th>G.31812</th>
+      <th>G.31813</th>
+      <th>A.37159</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>TYPE_3c64f9b442261a43a88a89606d363421</td>
+      <td>COW_8ffcd41500450a2afc2a7e18740709d1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-9</td>
+      <td>A</td>
+      <td>G</td>
+      <td>C</td>
+      <td>A</td>
+      <td>...</td>
+      <td>C</td>
+      <td>C</td>
+      <td>A</td>
+      <td>A</td>
+      <td>G</td>
+      <td>A</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>TYPE_3c64f9b442261a43a88a89606d363421</td>
+      <td>COW_133f937b04029126ee01146a0c1bb594</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-9</td>
+      <td>A</td>
+      <td>G</td>
+      <td>C</td>
+      <td>A</td>
+      <td>...</td>
+      <td>C</td>
+      <td>C</td>
+      <td>A</td>
+      <td>A</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>TYPE_3c64f9b442261a43a88a89606d363421</td>
+      <td>COW_7d49f51b714f3dbd2c25a04254295b5d</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-9</td>
+      <td>A</td>
+      <td>G</td>
+      <td>C</td>
+      <td>A</td>
+      <td>...</td>
+      <td>C</td>
+      <td>C</td>
+      <td>A</td>
+      <td>A</td>
+      <td>G</td>
+      <td>A</td>
+      <td>G</td>
+      <td>A</td>
+      <td>G</td>
+      <td>G</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>TYPE_3c64f9b442261a43a88a89606d363421</td>
+      <td>COW_15e3a8fe1a0172f527dfb8451492c671</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-9</td>
+      <td>A</td>
+      <td>G</td>
+      <td>C</td>
+      <td>A</td>
+      <td>...</td>
+      <td>C</td>
+      <td>C</td>
+      <td>A</td>
+      <td>A</td>
+      <td>G</td>
+      <td>A</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>TYPE_3c64f9b442261a43a88a89606d363421</td>
+      <td>COW_08020b767145f321d189fcac4f94cd1c</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-9</td>
+      <td>G</td>
+      <td>G</td>
+      <td>C</td>
+      <td>A</td>
+      <td>...</td>
+      <td>A</td>
+      <td>C</td>
+      <td>A</td>
+      <td>A</td>
+      <td>G</td>
+      <td>A</td>
+      <td>G</td>
+      <td>A</td>
+      <td>G</td>
+      <td>G</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>60</th>
+      <td>TYPE_3cda26e0c8aedbf662adb42f923ef3ec</td>
+      <td>COW_63b051a5b94f870a92026fa87043f7a1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-9</td>
+      <td>G</td>
+      <td>G</td>
+      <td>A</td>
+      <td>A</td>
+      <td>...</td>
+      <td>A</td>
+      <td>C</td>
+      <td>A</td>
+      <td>A</td>
+      <td>G</td>
+      <td>A</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td>TYPE_3cda26e0c8aedbf662adb42f923ef3ec</td>
+      <td>COW_ff04e2afe8a65c7ab4a6cb89d3be51f8</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-9</td>
+      <td>G</td>
+      <td>G</td>
+      <td>A</td>
+      <td>A</td>
+      <td>...</td>
+      <td>C</td>
+      <td>C</td>
+      <td>A</td>
+      <td>A</td>
+      <td>G</td>
+      <td>A</td>
+      <td>G</td>
+      <td>A</td>
+      <td>G</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>TYPE_3cda26e0c8aedbf662adb42f923ef3ec</td>
+      <td>COW_4a2448cc04232570fee82a7d68d94bda</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-9</td>
+      <td>G</td>
+      <td>G</td>
+      <td>A</td>
+      <td>A</td>
+      <td>...</td>
+      <td>C</td>
+      <td>C</td>
+      <td>A</td>
+      <td>A</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>TYPE_3cda26e0c8aedbf662adb42f923ef3ec</td>
+      <td>COW_5346afe3589590c3fe017de8c4b8cad5</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-9</td>
+      <td>G</td>
+      <td>G</td>
+      <td>A</td>
+      <td>A</td>
+      <td>...</td>
+      <td>A</td>
+      <td>C</td>
+      <td>A</td>
+      <td>A</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>TYPE_3cda26e0c8aedbf662adb42f923ef3ec</td>
+      <td>COW_e507d53129af542a4f49f4fc14299061</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-9</td>
+      <td>G</td>
+      <td>G</td>
+      <td>A</td>
+      <td>A</td>
+      <td>...</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>A</td>
+    </tr>
+  </tbody>
+</table>
+<p>65 rows × 76694 columns</p>
+</div>
+
+
+
+### If there is only one file per plink file type, we can also just load it with some pre-formatted column names.
+
+
+```python
+ped_data = plink.file_reader.load_data("ped", numerated_colname="Nucleotide")
+ped_data
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Family ID</th>
+      <th>Individual ID</th>
+      <th>Paternal ID</th>
+      <th>Maternal ID</th>
+      <th>Sex</th>
+      <th>Phenotype</th>
+      <th>Nucleotide 1</th>
+      <th>Nucleotide 2</th>
+      <th>Nucleotide 3</th>
+      <th>Nucleotide 4</th>
+      <th>...</th>
+      <th>Nucleotide 76679</th>
+      <th>Nucleotide 76680</th>
+      <th>Nucleotide 76681</th>
+      <th>Nucleotide 76682</th>
+      <th>Nucleotide 76683</th>
+      <th>Nucleotide 76684</th>
+      <th>Nucleotide 76685</th>
+      <th>Nucleotide 76686</th>
+      <th>Nucleotide 76687</th>
+      <th>Nucleotide 76688</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>TYPE_3c64f9b442261a43a88a89606d363421</td>
+      <td>COW_3c935a5fb77c7462d6535787c846bd24</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-9</td>
+      <td>A</td>
+      <td>G</td>
+      <td>C</td>
+      <td>A</td>
+      <td>...</td>
+      <td>C</td>
+      <td>C</td>
+      <td>A</td>
+      <td>A</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>TYPE_3c64f9b442261a43a88a89606d363421</td>
+      <td>COW_8ffcd41500450a2afc2a7e18740709d1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-9</td>
+      <td>A</td>
+      <td>G</td>
+      <td>C</td>
+      <td>A</td>
+      <td>...</td>
+      <td>C</td>
+      <td>C</td>
+      <td>A</td>
+      <td>A</td>
+      <td>G</td>
+      <td>A</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>TYPE_3c64f9b442261a43a88a89606d363421</td>
+      <td>COW_133f937b04029126ee01146a0c1bb594</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-9</td>
+      <td>A</td>
+      <td>G</td>
+      <td>C</td>
+      <td>A</td>
+      <td>...</td>
+      <td>C</td>
+      <td>C</td>
+      <td>A</td>
+      <td>A</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>TYPE_3c64f9b442261a43a88a89606d363421</td>
+      <td>COW_7d49f51b714f3dbd2c25a04254295b5d</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-9</td>
+      <td>A</td>
+      <td>G</td>
+      <td>C</td>
+      <td>A</td>
+      <td>...</td>
+      <td>C</td>
+      <td>C</td>
+      <td>A</td>
+      <td>A</td>
+      <td>G</td>
+      <td>A</td>
+      <td>G</td>
+      <td>A</td>
+      <td>G</td>
+      <td>G</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>TYPE_3c64f9b442261a43a88a89606d363421</td>
+      <td>COW_15e3a8fe1a0172f527dfb8451492c671</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-9</td>
+      <td>A</td>
+      <td>G</td>
+      <td>C</td>
+      <td>A</td>
+      <td>...</td>
+      <td>C</td>
+      <td>C</td>
+      <td>A</td>
+      <td>A</td>
+      <td>G</td>
+      <td>A</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td>TYPE_3cda26e0c8aedbf662adb42f923ef3ec</td>
+      <td>COW_63b051a5b94f870a92026fa87043f7a1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-9</td>
+      <td>G</td>
+      <td>G</td>
+      <td>A</td>
+      <td>A</td>
+      <td>...</td>
+      <td>A</td>
+      <td>C</td>
+      <td>A</td>
+      <td>A</td>
+      <td>G</td>
+      <td>A</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>TYPE_3cda26e0c8aedbf662adb42f923ef3ec</td>
+      <td>COW_ff04e2afe8a65c7ab4a6cb89d3be51f8</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-9</td>
+      <td>G</td>
+      <td>G</td>
+      <td>A</td>
+      <td>A</td>
+      <td>...</td>
+      <td>C</td>
+      <td>C</td>
+      <td>A</td>
+      <td>A</td>
+      <td>G</td>
+      <td>A</td>
+      <td>G</td>
+      <td>A</td>
+      <td>G</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>TYPE_3cda26e0c8aedbf662adb42f923ef3ec</td>
+      <td>COW_4a2448cc04232570fee82a7d68d94bda</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-9</td>
+      <td>G</td>
+      <td>G</td>
+      <td>A</td>
+      <td>A</td>
+      <td>...</td>
+      <td>C</td>
+      <td>C</td>
+      <td>A</td>
+      <td>A</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>TYPE_3cda26e0c8aedbf662adb42f923ef3ec</td>
+      <td>COW_5346afe3589590c3fe017de8c4b8cad5</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-9</td>
+      <td>G</td>
+      <td>G</td>
+      <td>A</td>
+      <td>A</td>
+      <td>...</td>
+      <td>A</td>
+      <td>C</td>
+      <td>A</td>
+      <td>A</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>TYPE_3cda26e0c8aedbf662adb42f923ef3ec</td>
+      <td>COW_e507d53129af542a4f49f4fc14299061</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-9</td>
+      <td>G</td>
+      <td>G</td>
+      <td>A</td>
+      <td>A</td>
+      <td>...</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>G</td>
+      <td>G</td>
+      <td>G</td>
+      <td>A</td>
+    </tr>
+  </tbody>
+</table>
+<p>66 rows × 76694 columns</p>
+</div>
+
+
+
+
+```python
+map_data = plink.file_reader.load_data("map")
+map_data
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Chromosome</th>
+      <th>Marker ID</th>
+      <th>Genetic Distance</th>
+      <th>Position Base Pairs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>COW_bee91d0199f55f7ceac640dd11d140c0</td>
+      <td>0</td>
+      <td>135098</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>COW_1913080647293a3848ad937ca9653aec</td>
+      <td>0</td>
+      <td>149772</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>COW_2eb599df7f168d419f8c2757da552295</td>
+      <td>0</td>
+      <td>163995</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>COW_96317923c4b14b72dc44ebbdfa25d279</td>
+      <td>0</td>
+      <td>183040</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>COW_81d964d5d890f1b262d1cb2d8e784523</td>
+      <td>0</td>
+      <td>267940</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>38339</th>
+      <td>29</td>
+      <td>COW_7319e9361f794ba225c89a83edfd620b</td>
+      <td>0</td>
+      <td>51038808</td>
+    </tr>
+    <tr>
+      <th>38340</th>
+      <td>29</td>
+      <td>COW_e0c1b1b57e7e6d7b6c83573badbaa991</td>
+      <td>0</td>
+      <td>51042316</td>
+    </tr>
+    <tr>
+      <th>38341</th>
+      <td>29</td>
+      <td>COW_a7f1212ead02b209c58c1766a914b01a</td>
+      <td>0</td>
+      <td>51152056</td>
+    </tr>
+    <tr>
+      <th>38342</th>
+      <td>29</td>
+      <td>COW_5b06fd46612881ff9e7d2604de917a46</td>
+      <td>0</td>
+      <td>51358815</td>
+    </tr>
+    <tr>
+      <th>38343</th>
+      <td>29</td>
+      <td>COW_34d9e4d41e8d8c8b8cadc8505a4f09d6</td>
+      <td>0</td>
+      <td>51484561</td>
+    </tr>
+  </tbody>
+</table>
+<p>38344 rows × 4 columns</p>
+</div>
+
+
+
+## Processing the data for further analysis
+
+Plink enables you to process your data in order to make it easy to analyse. While Plink itself only exposes a command line API, you must still maintain all used instructions for your analysis in order to be scientific: Research must be reproducible. 
+
+This is why this package was created: It allows you to do your analysis in Python while also commanding Plink natively from within Python.
+
+`Plink` allows you to use pythonic arguments and keyword arguments, which will then be translated into command line instructions.
+
+
+```python
+# Encouraged: Use a pythonic way to declare args and kwargs
+output = plink.run(
+    make_bed=True,
+    file=plink.plink_prefix,
+    out=plink.plink_prefix,
+    chr_set=34,
+    chr="1-29",
+    geno=0.1,
+    mind=0.1,
+    maf=0.05
+)
+```
+
+
+```python
+# Supports suppling arguments as strings directly, such as '--make-bed'
+output = plink.run(
+    "--make-bed",
+    file=plink.plink_prefix,
+    out=plink.plink_prefix,
+    chr_set=34,
+    chr="1-29",
+    geno=0.1,
+    mind=0.1,
+    maf=0.05
+)
+```
+
+### Type Safety for Plink keywords
+
+`Plink` will prefer type-safe conversion where possible. But you can indeed provide basic arguments such as `--make-bed` directly as well.
+
+Currently as subsidiary method converts plink commands unsafely to not block you from working due to a missing feature. That's why it is discouraged to provide arguments as strings.
+
+
+```python
+cmd_used = plink.make_cmd(
+    "--make-bed",
+    file=plink.plink_prefix,
+    out=plink.plink_prefix,
+    chr_set=34,
+    chr="1-29",
+    geno=0.1,
+    mind=0.1,
+    maf=0.05
+)
+cmd_used
+```
+
+
+
+
+    [PosixPath('/home/achwalt/Development/plynk/binaries/plink'),
+     '--make-bed',
+     <PlinkKeyword.FILE: '--file'>,
+     '/home/achwalt/Development/plynk/data_src/demo_data/demo_01',
+     <PlinkKeyword.OUT: '--out'>,
+     '/home/achwalt/Development/plynk/data_src/demo_data/demo_01',
+     <PlinkKeyword.CHR_SET: '--chr-set'>,
+     '34',
+     <PlinkKeyword.CHR: '--chr'>,
+     '1-29',
+     <PlinkKeyword.GENO: '--geno'>,
+     '0.1',
+     <PlinkKeyword.MIND: '--mind'>,
+     '0.1',
+     <PlinkKeyword.MAF: '--maf'>,
+     '0.05']
+
+
+
+
+```python
+[str(cmd) for cmd in cmd_used]
+```
+
+
+
+
+    ['/home/achwalt/Development/plynk/binaries/plink',
+     '--make-bed',
+     '--file',
+     '/home/achwalt/Development/plynk/data_src/demo_data/demo_01',
+     '--out',
+     '/home/achwalt/Development/plynk/data_src/demo_data/demo_01',
+     '--chr-set',
+     '34',
+     '--chr',
+     '1-29',
+     '--geno',
+     '0.1',
+     '--mind',
+     '0.1',
+     '--maf',
+     '0.05']
+
+
+
+
+```python
+from pathlib import Path
+
+plink.make_cmd(
+    "--make-bed",
+    "--file",
+    'data_src/demo_data/demo_01', # ❌ No Path safety will be applied!
+    "--out",
+    Path('data_src/demo_data/demo_01'), # ✅ Path safety will be applied.
+    chr_set=34,
+    chr="1-29",
+    geno=0.1,
+    mind=0.1,
+    maf=0.05
+)
+```
+
+
+
+
+    [PosixPath('/home/achwalt/Development/plynk/binaries/plink'),
+     '--make-bed',
+     '--file',
+     'data_src/demo_data/demo_01',
+     '--out',
+     PosixPath('/home/achwalt/Development/plynk/data_src/demo_data/demo_01'),
+     <PlinkKeyword.CHR_SET: '--chr-set'>,
+     '34',
+     <PlinkKeyword.CHR: '--chr'>,
+     '1-29',
+     <PlinkKeyword.GENO: '--geno'>,
+     '0.1',
+     <PlinkKeyword.MIND: '--mind'>,
+     '0.1',
+     <PlinkKeyword.MAF: '--maf'>,
+     '0.05']
+
+
+
+### You can also run a command created by `make_cmd`
+
+
+```python
+cmd = plink.make_cmd(
+    make_bed=True,
+    file=plink.plink_prefix,
+    out=plink.plink_prefix,
+    chr_set=34,
+    chr="1-29",
+    geno=0.1,
+    mind=0.1,
+    maf=0.05
+)
+output = plink.run_cmd(cmd)
+```
+
+
+```python
+# Let's see what files we have now
+plink.file_reader.find_files(plink.plink_prefix)
+```
+
+
+
+
+    [PosixPath('/home/achwalt/Development/plynk/data_src/demo_data/demo_01.bed'),
+     PosixPath('/home/achwalt/Development/plynk/data_src/demo_data/demo_01.bim'),
+     PosixPath('/home/achwalt/Development/plynk/data_src/demo_data/demo_01.fam'),
+     PosixPath('/home/achwalt/Development/plynk/data_src/demo_data/demo_01.log'),
+     PosixPath('/home/achwalt/Development/plynk/data_src/demo_data/demo_01.map'),
+     PosixPath('/home/achwalt/Development/plynk/data_src/demo_data/demo_01.nosex'),
+     PosixPath('/home/achwalt/Development/plynk/data_src/demo_data/demo_01.ped')]
+
+
+
+
+```python
+## More Examples
+cmd = plink.make_cmd(file=plink.plink_prefix, out=plink.plink_prefix, cow=True, het=True)
+output = plink.run_cmd(cmd)
+```
+
+
+```python
+plink.file_reader.load_data("het")
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>FID</th>
+      <th>IID</th>
+      <th>O(HOM)</th>
+      <th>E(HOM)</th>
+      <th>N(NM)</th>
+      <th>F</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>TYPE_3c64f9b442261a43a88a89606d363421</td>
+      <td>COW_3c935a5fb77c7462d6535787c846bd24</td>
+      <td>22120</td>
+      <td>22280.0</td>
+      <td>38015</td>
+      <td>-0.010110</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>TYPE_3c64f9b442261a43a88a89606d363421</td>
+      <td>COW_8ffcd41500450a2afc2a7e18740709d1</td>
+      <td>22102</td>
+      <td>22280.0</td>
+      <td>38017</td>
+      <td>-0.011320</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>TYPE_3c64f9b442261a43a88a89606d363421</td>
+      <td>COW_133f937b04029126ee01146a0c1bb594</td>
+      <td>22005</td>
+      <td>22280.0</td>
+      <td>38017</td>
+      <td>-0.017490</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>TYPE_3c64f9b442261a43a88a89606d363421</td>
+      <td>COW_7d49f51b714f3dbd2c25a04254295b5d</td>
+      <td>22194</td>
+      <td>22280.0</td>
+      <td>38018</td>
+      <td>-0.005507</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>TYPE_3c64f9b442261a43a88a89606d363421</td>
+      <td>COW_15e3a8fe1a0172f527dfb8451492c671</td>
+      <td>21689</td>
+      <td>22280.0</td>
+      <td>38018</td>
+      <td>-0.037600</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td>TYPE_3cda26e0c8aedbf662adb42f923ef3ec</td>
+      <td>COW_63b051a5b94f870a92026fa87043f7a1</td>
+      <td>23399</td>
+      <td>22280.0</td>
+      <td>38018</td>
+      <td>0.071060</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>TYPE_3cda26e0c8aedbf662adb42f923ef3ec</td>
+      <td>COW_ff04e2afe8a65c7ab4a6cb89d3be51f8</td>
+      <td>23515</td>
+      <td>22280.0</td>
+      <td>38017</td>
+      <td>0.078470</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>TYPE_3cda26e0c8aedbf662adb42f923ef3ec</td>
+      <td>COW_4a2448cc04232570fee82a7d68d94bda</td>
+      <td>23970</td>
+      <td>22280.0</td>
+      <td>38018</td>
+      <td>0.107300</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>TYPE_3cda26e0c8aedbf662adb42f923ef3ec</td>
+      <td>COW_5346afe3589590c3fe017de8c4b8cad5</td>
+      <td>23874</td>
+      <td>22280.0</td>
+      <td>38018</td>
+      <td>0.101200</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>TYPE_3cda26e0c8aedbf662adb42f923ef3ec</td>
+      <td>COW_e507d53129af542a4f49f4fc14299061</td>
+      <td>25778</td>
+      <td>22280.0</td>
+      <td>38018</td>
+      <td>0.222200</td>
+    </tr>
+  </tbody>
+</table>
+<p>66 rows × 6 columns</p>
+</div>
+
+
+
+
+```python
+
+```
