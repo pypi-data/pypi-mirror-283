@@ -1,0 +1,54 @@
+#!/usr/bin/env python3
+# This file is placed in the Public Domain.
+# pylint: disable=C0413,W0212,E0401
+
+
+"main"
+
+
+import os
+import sys
+
+
+sys.path.insert(0, os.getcwd())
+
+
+from rssbot.cfg    import Config
+from rssbot.defer  import errors
+from rssbot.disk   import Persist
+from rssbot.main   import cmnd
+from rssbot.parse  import parse
+
+
+from rssbot import modules
+from rssbot import user
+
+
+Cfg         = Config()
+Cfg.dis     = ""
+Cfg.mod     = "mod,cmd,err,thr"
+Cfg.name    = "rssbot"
+Cfg.opts    = ""
+Cfg.wdr     = os.path.expanduser(f"~/.{Cfg.name}")
+Cfg.pidfile = os.path.join(Cfg.wdr, f"{Cfg.name}.pid")
+
+
+Persist.workdir = Cfg.wdr
+
+
+def modnames():
+    "list all modules."
+    return sorted({x for x in dir(modules) + dir(user) if not x.startswith("__")})
+
+
+def main():
+    "main"
+    parse(Cfg, " ".join(sys.argv[1:]))
+    Cfg.dis = Cfg.sets.dis
+    Cfg.mod = ",".join(modnames())
+    cmnd(Cfg.otxt, print)
+
+
+if __name__ == "__main__":
+    main()
+    errors()
