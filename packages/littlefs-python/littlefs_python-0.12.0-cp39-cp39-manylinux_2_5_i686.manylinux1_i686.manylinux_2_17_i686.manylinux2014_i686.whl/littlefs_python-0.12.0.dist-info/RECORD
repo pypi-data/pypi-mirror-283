@@ -1,0 +1,13 @@
+littlefs/lfs.cpython-39-i386-linux-gnu.so,sha256=n1cfTY2oO2lQcKw_ZpkCS4xVJezK2bBm45U1XMHwozc,2408396
+littlefs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+littlefs/context.py,sha256=VRtEOaHncbwBtXkUz8KwFmw0P8bGfpvowTWc0BrovDQ,5375
+littlefs/__main__.py,sha256=sXHy6Vcr8Gr7O7fKhNVNf5kPtABmLJLBUyALydY0Dr8,10308
+littlefs/lfs.pyi,sha256=979npsatMjAeHcIeWPTzYjZ0G90xjqoRAMEw0aKZmNY,3618
+littlefs/errors.py,sha256=r9KV3uoFEL5bHYMKzZNk3TppPzFn5y1mQ0bDPeQowgI,1270
+littlefs/__init__.py,sha256=LC6ZBoTWfHlYEu4dUuyYVyjMiunX4vNlt5hybGd1o90,15147
+littlefs_python-0.12.0.dist-info/entry_points.txt,sha256=mmVZvtJwx-4y5NGjeCkO2BzL5rDEGr10zEqshIDp2Qw,59
+littlefs_python-0.12.0.dist-info/LICENSE,sha256=w9THsH9Q5JPNNctrjI8bbhsTPRz-BRHJkzmYWCGO6UY,1518
+littlefs_python-0.12.0.dist-info/WHEEL,sha256=J_zKDn2cgPBiYGmzO-TgfQp0QdNzAI-aNoFzkRxkVWk,208
+littlefs_python-0.12.0.dist-info/top_level.txt,sha256=ODpjzoOixM9dzTvlv3Fgd78PG_icni-AmzUB6VfdDwU,9
+littlefs_python-0.12.0.dist-info/RECORD,,
+littlefs_python-0.12.0.dist-info/METADATA,sha256=-In7qpcR8YEdk81DXrA2NK3z1NO0ArTivXRqgbOhvWU,7171
