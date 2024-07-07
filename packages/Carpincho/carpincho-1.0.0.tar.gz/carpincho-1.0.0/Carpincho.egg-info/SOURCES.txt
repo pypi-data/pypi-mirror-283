@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+Carpincho/Carpincho.py
+Carpincho/__init__.py
+Carpincho.egg-info/PKG-INFO
+Carpincho.egg-info/SOURCES.txt
+Carpincho.egg-info/dependency_links.txt
+Carpincho.egg-info/requires.txt
+Carpincho.egg-info/top_level.txt
