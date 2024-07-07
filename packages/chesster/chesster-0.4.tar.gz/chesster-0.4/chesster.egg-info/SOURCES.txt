@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+chesster.egg-info/PKG-INFO
+chesster.egg-info/SOURCES.txt
+chesster.egg-info/dependency_links.txt
+chesster.egg-info/requires.txt
+chesster.egg-info/top_level.txt
+tests/test_service.py
