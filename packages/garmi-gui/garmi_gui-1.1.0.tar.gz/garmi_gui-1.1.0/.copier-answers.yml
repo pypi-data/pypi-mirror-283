@@ -1,0 +1,12 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 2024.04.23
+_src_path: gh:scientific-python/cookie
+backend: hatch
+email: jean.elsner@tum.de
+full_name: Jean Elsner
+license: Apache
+org: JeanElsner
+project_name: garmi-gui
+project_short_description: The GARMI gui.
+url: https://github.com/JeanElsner/garmi-gui
+vcs: true
