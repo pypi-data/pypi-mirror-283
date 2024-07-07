@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: euclidsturtle
+Version: 1.1.1
+Summary: Euclid’s turtle
+Author-email: qorzj <goodhorsezxj@gmail.com>
+License: MIT
+Keywords: euclid,turtle,geometry,mathematics,graphics,drawing,math
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: test
+Requires-Dist: autopep8; extra == "test"
+Requires-Dist: mypy; extra == "test"
+Requires-Dist: coverage; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: pytest-mock; extra == "test"
+Requires-Dist: pytest-asyncio; extra == "test"
+Requires-Dist: pytest-aiohttp; extra == "test"
+Requires-Dist: types-toml; extra == "test"
+
+# euclidsturtle
+Euclid's turtle
