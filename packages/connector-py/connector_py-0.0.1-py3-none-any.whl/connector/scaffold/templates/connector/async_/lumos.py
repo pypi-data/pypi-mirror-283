@@ -1,0 +1,111 @@
+from connector.async_.lumos import LumosCommandsMixin
+from connector.serializers.lumos import (
+    AssignEntitlementResp,
+    EntitlementType,
+    FindEntitlementAssociationsResp,
+    FoundAccountData,
+    FoundEntitlementData,
+    FoundResourceData,
+    GetAccountResp,
+    GetResourceResp,
+    ListAccountsResp,
+    ListEntitlementsResp,
+    ListResourcesResp,
+    ResourceType,
+    UnassignEntitlementResp,
+    ValidateCredentialsResp,
+)
+
+from {name}.serializers.lumos import (
+    AssignEntitlementArgs,
+    FindEntitlementAssociationsArgs,
+    GetAccountArgs,
+    GetResourceArgs,
+    ListAccountsArgs,
+    ListEntitlementsArgs,
+    ListResourcesArgs,
+    UnassignEntitlementArgs,
+    ValidateCredentialsArgs,
+)
+
+
+class AsyncCommands(LumosCommandsMixin):
+    app_id = "{hyphenated_name}"
+
+    async def validate_credentials(self, args: ValidateCredentialsArgs) -> ValidateCredentialsResp:
+        return ValidateCredentialsResp(
+            response=True,
+            errors=[],
+            raw_data={{}},
+        )
+
+    async def list_accounts(self, args: ListAccountsArgs) -> ListAccountsResp:
+        return ListAccountsResp(
+            response=[FoundAccountData(given_name="{title}", integration_specific_id="100", email="albus@lumos.com")],
+            errors=[],
+            raw_data = {{"localhost:8080/test": {{"test": "test"}}}},
+        )
+
+    async def get_account(self, args: GetAccountArgs) -> GetAccountResp:
+        return GetAccountResp(
+            response=FoundAccountData(
+                integration_specific_id="1234", email="albus@lumos.com"
+            ),
+            errors=[],
+            raw_data={{"localhost:8080/test": {{"test": "test"}}}},
+        )
+
+    async def list_resources(self, args: ListResourcesArgs) -> ListResourcesResp:
+        return ListResourcesResp(
+            response={{
+                ResourceType.MOCK_CONNECTOR_RESOURCE_1: [
+                    FoundResourceData(
+                        integration_specific_id="1234",
+                        label="Starter Resource",
+                        resource_type=ResourceType.MOCK_CONNECTOR_RESOURCE_1,
+                    )
+                ]
+            }},
+            errors=[],
+            raw_data={{}},
+        )
+
+    async def get_resource(self, args: GetResourceArgs) -> GetResourceResp:
+        return GetResourceResp(
+            response=FoundResourceData(
+                integration_specific_id=args.integration_specific_id,
+                label="label",
+                resource_type=ResourceType.MOCK_CONNECTOR_RESOURCE_1,
+            ),
+            errors=[],
+            raw_data={{}},
+        )
+
+    async def list_entitlements(self, args: ListEntitlementsArgs) -> ListEntitlementsResp:
+        return [
+            FoundEntitlementData(
+                integration_specific_id="1234",
+                integration_specific_resource_id="1234",
+                is_assignable=False,
+                label="mock entitlement",
+                entitlement_type=EntitlementType.MOCK_CONNECTOR_ENTITLEMENT_1,
+            )
+        ]
+
+    async def find_entitlement_associations(
+        self,
+        args: FindEntitlementAssociationsArgs,
+    ) -> FindEntitlementAssociationsResp:
+        return []
+
+    async def assign_entitlement(
+        self,
+        args: AssignEntitlementArgs,
+    ) -> AssignEntitlementResp:
+        pass
+
+    async def unassign_entitlement(
+        self,
+        args: UnassignEntitlementArgs,
+    ) -> UnassignEntitlementResp:
+        pass
