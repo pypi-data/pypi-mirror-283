@@ -1,0 +1,7 @@
+nonebot2
+pytz
+httpx
+pydantic
+nonebot-adapter-onebot
+aiosqlite
+nonebot-plugin-send-anything-anywhere
