@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: function_comment
+Version: 0.1.0
+Summary: A library to comment out functions using decorators
+Home-page: https://github.com/RifatRobin/function_comment
+Author: Rifat Anwar
+Author-email: rifatanwarrobin@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: unittest; extra == "dev"
+
+# function_comment
+
+A Python library to create full-function comments using decorators.
+
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install function_comment
+
+
+```python
+from function_comment import bbkp, ujmp
+
+@bbkp
+@ujmp
+def some_function():
+    print("This should not be printed")
+
+def normal_function():
+    print("This should be printed")
+
+if __name__ == "__main__":
+    some_function()       # This will do nothing
+    normal_function()     # This will print "This should be printed"
