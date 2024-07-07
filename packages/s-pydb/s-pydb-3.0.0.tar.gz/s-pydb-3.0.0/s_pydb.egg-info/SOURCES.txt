@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+s_pydb.egg-info/PKG-INFO
+s_pydb.egg-info/SOURCES.txt
+s_pydb.egg-info/dependency_links.txt
+s_pydb.egg-info/top_level.txt
+spydb/__init__.py

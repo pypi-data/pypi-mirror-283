@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: s-pydb
+Version: 3.0.0
+Summary: A simple local file-based database module.
+Author: Sanalzio
+Author-email: salazio@duck.com
+Keywords: python,database
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# Simple-PyDB 3.0.0
+A simple local file-based database module.
+
+![Python](https://img.shields.io/badge/python-%2314354C.svg?style=for-the-badge&logo=python&logoColor=white)  ![Version](https://img.shields.io/static/v1?label=Version&message=3.0.0&style=for-the-badge&labelColor=222831&color=393E46) ![Downloads](https://img.shields.io/github/downloads/sanalzio/PyDB/2.0/total?label=DOWNLOADS&style=for-the-badge&labelColor=393E46&color=00ADB5) ![Python Version](https://img.shields.io/static/v1?label=Version&message=3.x&style=for-the-badge&labelColor=4B8BBE&color=FFE873&logo=python&logoColor=ffffff) ![LICENSE](https://img.shields.io/static/v1?label=LICENSE&message=MIT&style=for-the-badge)
+
+![Pydb Thumbnail](pydb.jpg)
+
+# Installation
+## For Gnu/Linux or MacOS
+```bash
+python3 -m pip install spydb
+```
+## For windows
+```
+pip install spydb
+```
+
+# Documentation
+### [-> Click to go PyDB documentation <-](https://sanalzio.github.io/PyDB/)
