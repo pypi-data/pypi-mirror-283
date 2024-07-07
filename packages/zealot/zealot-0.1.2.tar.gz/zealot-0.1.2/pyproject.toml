@@ -1,0 +1,34 @@
+[project]
+name = "zealot"
+version = "0.1.2"
+description = "Detect N+1s in your Django app"
+readme = "README.md"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+extend-select = [
+    "I", # isort
+    "N", # naming
+    "B", # bugbear
+    "FIX", # disallow FIXME/TODO comments
+    "F", # pyflakes
+    "T20", # flake8-print
+    "ERA", # commented-out code
+]
+
+[tool.pyright]
+include = ["src", "tests"]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "djangoproject.settings"
+pythonpath = ["src", "tests"]
+testpaths = ["tests"]
+addopts = "--nomigrations"
