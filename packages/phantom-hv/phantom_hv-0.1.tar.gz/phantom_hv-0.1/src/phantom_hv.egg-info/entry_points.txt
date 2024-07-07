@@ -1,0 +1,4 @@
+[console_scripts]
+phantomhv-ctl = phantomhv.tools.ctl:main
+phantomhv-io = phantomhv.tools.io:main
+phantomhv-webui = phantomhv.tools.webui:main
