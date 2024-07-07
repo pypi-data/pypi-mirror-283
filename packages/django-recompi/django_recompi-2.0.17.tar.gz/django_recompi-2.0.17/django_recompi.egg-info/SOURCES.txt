@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+django_recompi/__init__.py
+django_recompi/apps.py
+django_recompi/models.py
+django_recompi.egg-info/PKG-INFO
+django_recompi.egg-info/SOURCES.txt
+django_recompi.egg-info/dependency_links.txt
+django_recompi.egg-info/requires.txt
+django_recompi.egg-info/top_level.txt
