@@ -1,0 +1,8 @@
+conf-mat>=1.0.7
+cqueue>=1.0.5
+hashall>=1.0.1
+hashtbl>=1.0.0
+heep>=1.0.0
+linkedit>=1.0.9
+lstack>=1.0.5
+thri>=1.0.0
