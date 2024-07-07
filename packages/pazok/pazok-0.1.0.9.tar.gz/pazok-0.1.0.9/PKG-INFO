@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: pazok
+Version: 0.1.0.9
+Summary: A short description of my package
+Author: b_azo
+Author-email: husseun.selt@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: requests
+
+ <h3>The <code>tele_ms</code> Function</h3>
+                    <p>
+                        This function is designed to send messages to a specific
+                        Telegram user using the bot token and user's chat ID.
+                    </p>
+                    <p>
+                        The function supports sending formatted text using
+                        MarkdownV2. Supported formats include:
+                    </p>
+                    <ul>
+                        <li>Bold text: <code>*text*</code></li>
+                        <li>Italic text: <code>_text_</code></li>
+                        <li>Strikethrough text: <code>~text~</code></li>
+                        <li>Monospaced text: <code>`text`</code></li>
+                        <li>Text with a link: <code>[text](url)</code></li>
+                        <li>Spoiler text: <code>||text||</code></li>
+                        <li>Code block: <code>```code```</code></li>
+                    </ul>
+                    <p>
+                        It also supports sending files and images via URL or
+                        file path. The function automatically detects whether
+                        the input is a path or URL and handles it accordingly.
+                        If the file or image includes text, it will be
+                        automatically added to the file or image description.
+                        Additionally, the function supports sending buttons of
+                        type types.InlineKeyboardButton, allowing multiple
+                        buttons in the same message or just one button. Let's
+                        start with examples.
+                    </p>
