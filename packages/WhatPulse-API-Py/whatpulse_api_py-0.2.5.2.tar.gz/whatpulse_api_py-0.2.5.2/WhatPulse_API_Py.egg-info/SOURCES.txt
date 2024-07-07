@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+WhatPulse_API/__init__.py
+WhatPulse_API_Py.egg-info/PKG-INFO
+WhatPulse_API_Py.egg-info/SOURCES.txt
+WhatPulse_API_Py.egg-info/dependency_links.txt
+WhatPulse_API_Py.egg-info/top_level.txt
