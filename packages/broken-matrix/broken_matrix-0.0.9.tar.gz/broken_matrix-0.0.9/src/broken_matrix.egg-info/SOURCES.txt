@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/bmatrix/__init__.py
+src/bmatrix/__main__.py
+src/bmatrix/geometry.py
+src/bmatrix/geometry_test.py
+src/bmatrix/main.py
+src/bmatrix/particle.py
+src/bmatrix/stage.py
+src/broken_matrix.egg-info/PKG-INFO
+src/broken_matrix.egg-info/SOURCES.txt
+src/broken_matrix.egg-info/dependency_links.txt
+src/broken_matrix.egg-info/entry_points.txt
+src/broken_matrix.egg-info/requires.txt
+src/broken_matrix.egg-info/top_level.txt
