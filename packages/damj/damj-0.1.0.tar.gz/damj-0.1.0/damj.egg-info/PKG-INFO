@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: damj
+Version: 0.1.0
+Summary: A tool for creating comprehensive prompts for language models by combining project files and applying custom processing options.
+Author-email: Basel Mather <baselmathar@gmail.com>
+Project-URL: Homepage, https://github.com/baselhusam/damj
+Keywords: LLM,prompts,AI,ChatGPT,damj,Damj,Python Package,Prompt Engineering,Prompt Creation
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyperclip==1.9.0
+Requires-Dist: ipython==8.18.1
+Requires-Dist: typing_extensions==4.12.2
+Requires-Dist: asttokens==2.4.1
+
+# damj
+Python Package for creating a well-defined prompts integrated with specified code snippet.
