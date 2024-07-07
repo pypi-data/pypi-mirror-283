@@ -1,0 +1,4 @@
+[console_scripts]
+rbs=rustbinsign.main:main_cli
+rustbinsign=rustbinsign.main:main_cli
+
