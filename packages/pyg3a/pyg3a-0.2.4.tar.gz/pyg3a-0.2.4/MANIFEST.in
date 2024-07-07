@@ -1,0 +1,3 @@
+include pyg3a/include/*
+include pyg3a/selected.bmp
+include pyg3a/unselected.bmp

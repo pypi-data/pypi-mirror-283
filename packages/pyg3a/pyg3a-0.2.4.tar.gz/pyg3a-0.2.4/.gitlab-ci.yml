@@ -1,0 +1,19 @@
+build:
+    before_script:
+        - git clone https://github.com/dr-carlos/libfxcg
+        - make -C libfxcg > /dev/null
+    script:
+        - |
+          for example in $(ls examples); do
+            echo Testing example: $example
+            TEST_ERROR=0
+            TEST_PYG3A=0
+
+            ! [[ $example == *"Error"* ]] || TEST_ERROR=$?
+            ! python -m pyg3a examples/$example -l libfxcg || TEST_PYG3A=$?
+
+            if [ "$TEST_ERROR" == "$TEST_PYG3A" ]; then
+              echo Failed on example: $example
+              exit 1
+            fi
+          done

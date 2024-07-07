@@ -1,0 +1,34 @@
+[tool.black]
+line-length = 100
+target-version = ['py312']
+
+[build-system]
+requires = ['setuptools>=69', 'wheel']
+
+[project]
+name = 'pyg3a'
+version = '0.2.4'
+authors = [
+	{ name='dr_carlos', email='dr.steven.carlos@gmail.com' }
+]
+description = 'A tool to convert Python files to Casio fx-CG 10/20/50 (Prizm) Add-ins'
+readme = 'README.rst'
+requires-python = '>=3.12'
+dependencies = [
+	'libcst >= 1.4.0',
+	'colorlog>=6'
+]
+classifiers = [
+	'Development Status :: 4 - Beta',
+	'Topic :: Software Development :: Build Tools',
+	'Intended Audience :: Developers',
+	'Programming Language :: Python :: 3.12',
+	'License :: OSI Approved :: GNU Lesser General Public License v2 (LGPLv2)'
+]
+
+[project.urls]
+'Homepage' = 'https://gitlab.com/dr_carlos/PyG3A'
+'Bug Tracker' = 'https://gitlab.com/dr_carlos/PyG3A/-/issues'
+
+[project.scripts]
+pyg3a = "pyg3a:PyG3A.main"
