@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: azure-file-share-service
+Version: 2.1
+Summary: Helper to download/upload files to azure file share
+Home-page: https://github.com/DelphianCalamity/azure_file_share_service
+Download-URL: https://github.com/DelphianCalamity/azure_file_share_service/archive/refs/tags/v0.tar.gz
+License: MIT
+Requires-Dist: azure-identity
+Requires-Dist: azure-storage-file-share
+Requires-Dist: azure-core
