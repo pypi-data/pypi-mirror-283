@@ -1,0 +1,9 @@
+setup.py
+django-shinzo/__init__.py
+django-shinzo/git_cloner.py
+django_shinzo.egg-info/PKG-INFO
+django_shinzo.egg-info/SOURCES.txt
+django_shinzo.egg-info/dependency_links.txt
+django_shinzo.egg-info/entry_points.txt
+django_shinzo.egg-info/requires.txt
+django_shinzo.egg-info/top_level.txt
