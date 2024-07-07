@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: MathRocket
+Version: 0.2
+Summary: Uma biblioteca Python para simulação e cálculo de trajetórias de foguetes, com suporte para calcular massa, empuxo e tempo de queima.
+Home-page: https://github.com/Uno13x/MathRocket
+Author: Unoxys
+License: MIT
+Keywords: python,física,Foguete,Rocket,rocket,physic,Physics,Physic,mass,Mass
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+
+A biblioteca Python "MathRocket" é projetada para facilitar a simulação e o cálculo de trajetórias de foguetes em ambientes de modelagem física e engenharia. Com "MathRocket", desenvolvedores podem calcular dinamicamente a aceleração, impulso e outras características essenciais de foguetes através de uma interface simples e intuitiva. Esta biblioteca é ideal para projetos que envolvem análise de desempenho de lançamentos, estudos de física aplicada e simulações educacionais, oferecendo uma maneira eficiente e precisa de explorar o comportamento de sistemas de propulsão espacial.
+
