@@ -1,0 +1,10 @@
+# File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
+
+from __future__ import annotations
+
+from .source_register_s3_params import SourceRegisterS3Params as SourceRegisterS3Params
+from .source_register_s3_response import SourceRegisterS3Response as SourceRegisterS3Response
+from .destination_register_s3_params import DestinationRegisterS3Params as DestinationRegisterS3Params
+from .destination_register_s3_response import DestinationRegisterS3Response as DestinationRegisterS3Response
+from .destination_register_excel_params import DestinationRegisterExcelParams as DestinationRegisterExcelParams
+from .destination_register_excel_response import DestinationRegisterExcelResponse as DestinationRegisterExcelResponse
