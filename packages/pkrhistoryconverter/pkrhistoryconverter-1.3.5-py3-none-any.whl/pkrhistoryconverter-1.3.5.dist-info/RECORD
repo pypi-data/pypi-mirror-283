@@ -1,0 +1,9 @@
+pkrhistoryconverter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pkrhistoryconverter/converter.py,sha256=qgx1oAp2ctPQ4KXpgnTTXx3cvA3hSxUC1i1WQwipi8s,15425
+pkrhistoryconverter/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pkrhistoryconverter/utils/exceptions.py,sha256=zrRqteDvprze7iFR9R2x96tkQVeMS7-vfPXHKLVLGm0,158
+pkrhistoryconverter-1.3.5.dist-info/LICENSE.txt,sha256=4AewcWpFEtCx5NoYxTb4ynfAamSOm_Z-19LcD6uDo9w,1077
+pkrhistoryconverter-1.3.5.dist-info/METADATA,sha256=hOED6U00o_2ovtCm-13HHPk2M5q5oeoaaMMI8lodkG0,1046
+pkrhistoryconverter-1.3.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pkrhistoryconverter-1.3.5.dist-info/top_level.txt,sha256=UEtwuq1Y-NbUMqfyqSnqdWS7OE7pXDO4AzFDKRoRga8,20
+pkrhistoryconverter-1.3.5.dist-info/RECORD,,
