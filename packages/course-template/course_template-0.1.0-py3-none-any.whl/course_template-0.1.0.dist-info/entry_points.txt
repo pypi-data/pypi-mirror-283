@@ -1,0 +1,3 @@
+[console_scripts]
+coursetemp=coursetemp.__cli__:main
+
