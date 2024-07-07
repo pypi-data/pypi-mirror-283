@@ -1,0 +1,8 @@
+htmx_forms/__init__.py,sha256=DsAHdxLC16H2VjdFOU5tBx2xT9VnNQ-XbTS24fRCa_w,22
+htmx_forms/apps.py,sha256=p5yM3_b2xWglFbx67VdAnLa3uPC6M6tRbHayL7htog8,151
+htmx_forms/views.py,sha256=xc1IQHrsij7j33TUbo-_oewy3vs03pw_etpBWaMYJl0,63
+htmx_forms/static/django_htmx_forms.js,sha256=yh19swwYaGcCrEJuxqVlmIp8OvkfnSZlA4BAZkrDtJk,28741
+django_htmx_forms-0.0.1.dist-info/METADATA,sha256=s-FTtuF4qhURkTvignJCHc6q5Piu857vQW_xZXJz7bU,1451
+django_htmx_forms-0.0.1.dist-info/WHEEL,sha256=0XQbNV6JE5ziJsWjIU8TRRv0N6SohNonLWgP86g5fiI,109
+django_htmx_forms-0.0.1.dist-info/top_level.txt,sha256=N2IPuhKA-4Bq6pbtXmEBNM2ruFK4Cn61Lr5ZnPJU_Rk,11
+django_htmx_forms-0.0.1.dist-info/RECORD,,
