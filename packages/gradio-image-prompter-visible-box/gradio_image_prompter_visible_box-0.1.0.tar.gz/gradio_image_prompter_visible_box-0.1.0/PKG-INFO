@@ -1,0 +1,361 @@
+Metadata-Version: 2.3
+Name: gradio_image_prompter_visible_box
+Version: 0.1.0
+Summary: A gradio component to upload images and process point/box prompts with more visible boxes.
+Author-email: "nikigoli based on work of (PhyscalX)" <niki@adainnovations.ai>
+License-Expression: Apache-2.0
+License-File: LICENSE
+Keywords: gradio-custom-component,gradio-template-Image
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: >=3.8
+Requires-Dist: gradio<5.0,>=4.0
+Provides-Extra: dev
+Requires-Dist: build; extra == 'dev'
+Requires-Dist: twine; extra == 'dev'
+Description-Content-Type: text/markdown
+
+
+# `gradio_image_prompter_visible_box`
+<img alt="Static Badge" src="https://img.shields.io/badge/version%20-%200.1.0%20-%20orange">  
+
+A gradio component to upload images and process point/box prompts with more visible boxes.
+
+## Installation
+
+```bash
+pip install gradio_image_prompter_visible_box
+```
+
+## Usage
+
+```python
+import gradio as gr
+from gradio_image_prompter import ImagePrompter
+
+demo = gr.Interface(
+    lambda prompts: (prompts["image"], prompts["points"]),
+    ImagePrompter(show_label=False),
+    [gr.Image(show_label=False), gr.Dataframe(label="Points")],
+)
+if __name__ == '__main__':
+    demo.launch()
+
+```
+
+## `ImagePrompter`
+
+### Initialization
+
+<table>
+<thead>
+<tr>
+<th align="left">name</th>
+<th align="left" style="width: 25%;">type</th>
+<th align="left">default</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>value</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+str | _Image.Image | np.ndarray | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">A PIL Image, numpy array, path or URL for the default value. If callable, it will be called set the initial value.</td>
+</tr>
+
+<tr>
+<td align="left"><code>height</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+int | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">Height of the displayed image in pixels.</td>
+</tr>
+
+<tr>
+<td align="left"><code>width</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+int | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">Width of the displayed image in pixels.</td>
+</tr>
+
+<tr>
+<td align="left"><code>image_mode</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+Literal[
+    "1",
+    "L",
+    "P",
+    "RGB",
+    "RGBA",
+    "CMYK",
+    "YCbCr",
+    "LAB",
+    "HSV",
+    "I",
+    "F",
+]
+```
+
+</td>
+<td align="left"><code>"RGB"</code></td>
+<td align="left">"RGB" if color, or "L" if black and white. See https://pillow.readthedocs.io/en/stable/handbook/concepts.html.</td>
+</tr>
+
+<tr>
+<td align="left"><code>sources</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+list[Literal["upload", "clipboard"]] | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">List of sources for the image.</td>
+</tr>
+
+<tr>
+<td align="left"><code>type</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+Literal["numpy", "pil", "filepath"]
+```
+
+</td>
+<td align="left"><code>"numpy"</code></td>
+<td align="left">The format the image is converted before being passed into the prediction function.</td>
+</tr>
+
+<tr>
+<td align="left"><code>label</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+str | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">The label for this component.</td>
+</tr>
+
+<tr>
+<td align="left"><code>every</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+float | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">If `value` is a callable, run the function 'every' number of seconds while the client connection is open.</td>
+</tr>
+
+<tr>
+<td align="left"><code>show_label</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+bool | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">if True, will display label.</td>
+</tr>
+
+<tr>
+<td align="left"><code>show_download_button</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+bool
+```
+
+</td>
+<td align="left"><code>True</code></td>
+<td align="left">If True, will display button to download image.</td>
+</tr>
+
+<tr>
+<td align="left"><code>container</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+bool
+```
+
+</td>
+<td align="left"><code>True</code></td>
+<td align="left">If True, will place the component in a container - providing some extra padding around the border.</td>
+</tr>
+
+<tr>
+<td align="left"><code>scale</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+int | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">relative width compared to adjacent Components in a Row. Should be an integer.</td>
+</tr>
+
+<tr>
+<td align="left"><code>min_width</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+int
+```
+
+</td>
+<td align="left"><code>160</code></td>
+<td align="left">minimum pixel width, will wrap if not sufficient screen space to satisfy this value.</td>
+</tr>
+
+<tr>
+<td align="left"><code>interactive</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+bool | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">if True, will allow users to upload and edit an image; if False, can only be used to display images.</td>
+</tr>
+
+<tr>
+<td align="left"><code>visible</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+bool
+```
+
+</td>
+<td align="left"><code>True</code></td>
+<td align="left">If False, component will be hidden.</td>
+</tr>
+
+<tr>
+<td align="left"><code>elem_id</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+str | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">An optional string that is assigned as the id of this component in the HTML DOM.</td>
+</tr>
+
+<tr>
+<td align="left"><code>elem_classes</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+list[str] | str | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">An optional list of strings that are assigned as the classes of this component in the HTML DOM.</td>
+</tr>
+
+<tr>
+<td align="left"><code>render</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+bool
+```
+
+</td>
+<td align="left"><code>True</code></td>
+<td align="left">If False, component will not render be rendered in the Blocks context.</td>
+</tr>
+
+<tr>
+<td align="left"><code>show_share_button</code></td>
+<td align="left" style="width: 25%;">
+
+```python
+bool | None
+```
+
+</td>
+<td align="left"><code>None</code></td>
+<td align="left">If True, show a share icon that allows user to share outputs to Hugging Face Spaces Discussions.</td>
+</tr>
+</tbody></table>
+
+
+### Events
+
+| name | description |
+|:-----|:------------|
+| `clear` | This listener is triggered when the user clears the ImagePrompter using the X button for the component. |
+| `change` | Triggered when the value of the ImagePrompter changes either because of user input (e.g. a user types in a textbox) OR because of a function update (e.g. an image receives a value from the output of an event trigger). See `.input()` for a listener that is only triggered by user input. |
+| `stream` | This listener is triggered when the user streams the ImagePrompter. |
+| `select` | Event listener for when the user selects or deselects the ImagePrompter. Uses event data gradio.SelectData to carry `value` referring to the label of the ImagePrompter, and `selected` to refer to state of the ImagePrompter. See EventData documentation on how to use this event data |
+| `upload` | This listener is triggered when the user uploads a file into the ImagePrompter. |
+
+
+
+### User function
+
+The impact on the users predict function varies depending on whether the component is used as an input or output for an event (or both).
+
+- When used as an Input, the component only impacts the input signature of the user function.
+- When used as an output, the component only impacts the return signature of the user function.
+
+The code snippet below is accurate in cases where the component is used as both an input and an output.
+
+- **As output:** Is passed, passes the uploaded image as a `numpy.array`, `PIL.Image` or `str` filepath depending on `type`. For SVGs, the `type` parameter is ignored and the filepath of the SVG is returned.
+
+
+ ```python
+ def predict(
+     value: PromptValue | None
+ ) -> PromptValue:
+     return value
+ ```
+ 
