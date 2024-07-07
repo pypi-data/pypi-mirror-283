@@ -1,0 +1,11 @@
+automatic_file_manager/__init__.py,sha256=QqG7mPMYgKb_ULSQcTXgfesQc4mv2KhxDnB8T2NVy1Y,5126
+automatic_file_manager/automatic_file_manager.py,sha256=h0hwdogXGFqerm-5ZPeT-irPn91pCcQRjiHThXsRzEk,19
+automatic_file_manager/common.py,sha256=Si4ZvbkkaVGyKrOa7gmsVNWS2Abtji-V5nEsJhrIM3M,188
+automatic_file_manager/file.py,sha256=Pz3HfphERnq7p21HnUWYPf14wJBkMGS5yZDkaJCI_ZQ,1975
+tests/__init__.py,sha256=SJ7-jRvWOm5iwlfHP77an1mnxxqoVDMm7rcuIrxabUE,52
+tests/test_automatic_file_manager.py,sha256=b7w6cEPhwOY1idUeep7oXO4-CeXOYC_uiEWgxg7SyeU,462
+automatic_file_manager-0.0.1.dist-info/LICENSE,sha256=s5-8wuxIuIXdPpJZr10MVETsM2RuvzWfwm4xGOiUnWA,1072
+automatic_file_manager-0.0.1.dist-info/METADATA,sha256=0-vzD9_X9g7E_8SVtDt8xtlgcXoEdxzqo71LmICM1Tc,912
+automatic_file_manager-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+automatic_file_manager-0.0.1.dist-info/top_level.txt,sha256=H2k-ZnJZC7jPUunDMzJH6vcediyQhj43x91q4MFwlvA,29
+automatic_file_manager-0.0.1.dist-info/RECORD,,
