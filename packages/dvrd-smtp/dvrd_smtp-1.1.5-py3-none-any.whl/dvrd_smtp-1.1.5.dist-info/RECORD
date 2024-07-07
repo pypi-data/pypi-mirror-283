@@ -1,0 +1,10 @@
+dvrd_smtp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dvrd_smtp/types.py,sha256=bg8MEm8aDhE5mqLQ5H3TeAP3oiojx49RQ-U8bMZ0rKY,158
+dvrd_smtp/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dvrd_smtp/models/smtp_message.py,sha256=sYxVvnlK8_audZEBpvToCJgehvfDbqG0Ypee2RDDbIA,8200
+dvrd_smtp/models/smtp_server.py,sha256=Rk0dQXu5IQ8SNPS6cYc1UWm-iWZuOL5uq5UFd5FAplM,1712
+dvrd_smtp-1.1.5.dist-info/LICENSE,sha256=bM40_RkEOr3BYHPrHRlz37Ckw4pD7-7FVStiwZHlOZA,1522
+dvrd_smtp-1.1.5.dist-info/METADATA,sha256=wVVLh4J-xSjZnSBVyAoNmwPxseQHSK_fjUjj9jufRQU,1157
+dvrd_smtp-1.1.5.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+dvrd_smtp-1.1.5.dist-info/top_level.txt,sha256=dyAO7WKfJtJy-aVPa5CJv1p9N6t2gg3g9WNnafCMVPg,10
+dvrd_smtp-1.1.5.dist-info/RECORD,,
