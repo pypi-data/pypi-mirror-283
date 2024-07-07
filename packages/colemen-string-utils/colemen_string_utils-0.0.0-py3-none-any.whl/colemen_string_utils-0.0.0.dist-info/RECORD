@@ -1,0 +1,17 @@
+colemen_string_utils/ColemenStringUtils.py,sha256=scTmBcqAAFvEZgb8MztrS_IgSIrHTE1lhXysFjqKvO4,644
+colemen_string_utils/Name.py,sha256=mo9YtbI_vfFrx3z7m473itMq8OlnIzEPS8e-XK_9hzI,7385
+colemen_string_utils/__init__.py,sha256=LQMQYpOVq3I_4hJ0LZa926ZdmkoAmLWT5GmE6QSKe-U,376
+colemen_string_utils/string_conversion.py,sha256=MI1D8ye6xOpP9MKa7LQR-3n-34plq897OIEB1liIRZ8,6456
+colemen_string_utils/string_escaping.py,sha256=qctzPIn6hk_OLkvVU-a-lyPu-DvJZrx4TIZGVcLLQRc,23166
+colemen_string_utils/string_format.py,sha256=LFJqNqaACJ-VjCXA3rk5a432g7EY8xj3n6SpHR_7D0Y,30671
+colemen_string_utils/string_generation.py,sha256=VsskCH8ATcRiDs1w6tM0THkFzuj_yIKJv_srXzRsJRg,12527
+colemen_string_utils/string_parsing.py,sha256=qgMNjtqpSSiO50qe4zl6Y0ihDn21aTn-DCOwyvyNJ6o,4742
+colemen_string_utils/string_strip.py,sha256=H9f3yXzopcLmn1l1X08WbAhhjsK-MCxkfKZE3_fF364,5575
+colemen_string_utils/support.py,sha256=4wZ1QgS3AKtL3mWoxK0E9hThhqhTgcnUHWiqB5jcjEA,9832
+colemen_string_utils/settings/__init__.py,sha256=-IOK5BvIqlVRuA9x8smpU40cKkSvl5KuSf99JCYHvIU,118
+colemen_string_utils/settings/control.py,sha256=eOf4tpeOm6InMTR2W9vc7ApvvmG1YeA3BkS8BCb1BPo,916
+colemen_string_utils/settings/types.py,sha256=a1Pe1ZQe8-MJXTFoJPCvBNN-PVp9lklV46Hu0pLITmg,676
+colemen_string_utils-0.0.0.dist-info/METADATA,sha256=xWND9Y6udrCQ4GA6slcVRKpkXN0aOOgKRKhLYOZJt-c,519
+colemen_string_utils-0.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+colemen_string_utils-0.0.0.dist-info/top_level.txt,sha256=TtsRNJLdsZYsQiUhZnGJVpkGDBufSYImPA2otff0XTs,26
+colemen_string_utils-0.0.0.dist-info/RECORD,,
