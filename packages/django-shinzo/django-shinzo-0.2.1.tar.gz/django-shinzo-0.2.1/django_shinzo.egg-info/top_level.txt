@@ -1,0 +1,2 @@
+django-shinzo
+git_cloner
