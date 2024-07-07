@@ -1,0 +1,2 @@
+[console_scripts]
+flagger = flagger.__init__:main
