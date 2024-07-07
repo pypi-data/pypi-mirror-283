@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+nostpy/Event.py
+nostpy/Kind4.py
+nostpy/Query.py
+nostpy/Subscription.py
+nostpy/Websocket.py
+nostpy/__init__.py
+nostpy.egg-info/PKG-INFO
+nostpy.egg-info/SOURCES.txt
+nostpy.egg-info/dependency_links.txt
+nostpy.egg-info/entry_points.txt
+nostpy.egg-info/requires.txt
+nostpy.egg-info/top_level.txt
