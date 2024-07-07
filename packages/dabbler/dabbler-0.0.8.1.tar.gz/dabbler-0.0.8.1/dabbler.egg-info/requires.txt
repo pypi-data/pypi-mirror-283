@@ -1,0 +1,11 @@
+duckdb
+qtpy
+sqlparse
+sqlglot
+lark
+pygls
+ipython
+zmq
+ipykernel
+polars
+pyarrow
