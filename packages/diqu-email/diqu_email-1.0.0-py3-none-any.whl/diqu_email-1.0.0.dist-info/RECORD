@@ -1,0 +1,8 @@
+README.md,sha256=2t77sln4qMs1K9X4bwooLTtesOo5yaVrOwqbP0c8zh0,1214
+diqu/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+diqu/alerts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+diqu/alerts/sendgrid.py,sha256=kklWwnAuEXSfvWUQv-L3PIiLLeZ6ptQizKXjW6oHd64,1616
+diqu_email-1.0.0.dist-info/LICENSE,sha256=jzlBBg3AwskZ7n6S9py2SRwP2elXhjkznJKVaogl2bs,1067
+diqu_email-1.0.0.dist-info/METADATA,sha256=BhBl2Fh7txUkquO4ZTBPPNJ7I0CyNcQL-o8DSJmT-Xk,2323
+diqu_email-1.0.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+diqu_email-1.0.0.dist-info/RECORD,,
