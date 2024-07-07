@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: lrtn
+Version: 1.1.0
+Summary: A Python Package for Low Rank Tensorized networks (LRTN) for Large Language Models
+Home-page: https://github.com/rmsolgi/LRT.git
+Author: Ryan Solgi
+Author-email: ryan.solgi@gmail.com
+Maintainer: Ryan Solgi
+Keywords: tensor,tensor-train,Tucker,LLM,Transformer
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: transformers
+Requires-Dist: torch
+
+# LRT
+Low Rank Tensorized (LRT) Large Language Models
