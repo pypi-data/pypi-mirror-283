@@ -1,0 +1,23 @@
+Metadata-Version: 2.3
+Name: mkprop
+Version: 0.0.2
+Summary: A python package for Krylov and Magnus-Krylov based time propagation.
+Project-URL: Homepage, https://github.com/newbisi/mkprop
+Project-URL: Issues, https://github.com/newbisi/mkprop/issues
+Author-email: Tobias Jawecki <tobias.jawecki@gmail.com>
+License-File: LICENSE
+Keywords: Krylov method,Magnus integrator,time propagation
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: sympy
+Description-Content-Type: text/markdown
+
+# mkprop
+
+**This package is still under development. Future versions might have different API. The current version is not fully documented.**
+
+A time-propagation package for large problems. The package provides adaptive Krylov methods to compute exp(itA)x, and adaptive Magnus-Krylov methods to propagate time-dependent systems. Further documentation is available at https://github.com/newbisi/mkprop.
