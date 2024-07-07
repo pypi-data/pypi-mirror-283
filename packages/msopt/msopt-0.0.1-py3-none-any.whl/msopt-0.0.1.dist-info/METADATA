@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: msopt
+Version: 0.0.1
+Summary: A mip model framework like gurobi, make write lp and mip easy, and support gurobi, cbc, highs solver.
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+Author: allen
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+not yet.
