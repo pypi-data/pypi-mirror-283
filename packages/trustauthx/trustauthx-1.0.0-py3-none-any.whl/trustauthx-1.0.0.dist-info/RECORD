@@ -1,0 +1,11 @@
+trustauthx/__init__.py,sha256=qVUSYC8YFvGOjEC_SAzrNXie1GgVDBWeSIQKS3C5-oo,81
+trustauthx/authlite.py,sha256=f2kUtXvEwPcehasRkqpjW_XvoEJaxfJtwyd0HOHwx6Y,42037
+trustauthx/cli.py,sha256=tPwTrE3l7hX3jP03VYuzc88ecbzq15x61aqlIYwuoIE,5264
+trustauthx/llmai.py,sha256=yNmmFAg0TCJWLSyMLUZH-U5VDP7y86xoyC9a6vCZ91A,4198
+trustauthx/scheme.py,sha256=B-04XxOA4WlUuqrT35x7JcPdCbhxaSxlorAn68Gwavg,4418
+trustauthx-1.0.0.dist-info/LICENSE,sha256=hRoC691oM3nSI6RGHOTHClDVv9YSAN6kVjo1rINtxyo,1067
+trustauthx-1.0.0.dist-info/METADATA,sha256=swAqohj-egpvww0thjVFq5cX1xzRsGBhtwFm_e0uFOo,10038
+trustauthx-1.0.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+trustauthx-1.0.0.dist-info/entry_points.txt,sha256=ZslPrMH6cwgpWjBoZLg23kW5mXUA5szCbTImuVoAN6o,51
+trustauthx-1.0.0.dist-info/top_level.txt,sha256=2k4MxlmaUoKZvyoMW6gMMex8YgC3eqIqNguLNV36Bmw,11
+trustauthx-1.0.0.dist-info/RECORD,,
