@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: universalcolor
+Version: 24.7.0
+Summary: Unversal polymorph color class
+License: LGPL-3.0-or-later
+Author: erfea
+Author-email: erfea.tux@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+
