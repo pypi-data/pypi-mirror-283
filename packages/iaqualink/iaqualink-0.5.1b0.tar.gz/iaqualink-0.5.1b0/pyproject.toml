@@ -1,0 +1,103 @@
+[build-system]
+requires = [
+    "hatchling>=1.3.1",
+    "hatch-vcs",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "iaqualink"
+description = "Asynchronous library for Jandy iAqualink"
+readme = "README.md"
+license = "BSD-3-Clause"
+requires-python = ">=3.12"
+authors = [
+    { name = "Florent Thoumie", email = "florent@thoumie.net" },
+]
+keywords = [
+    "iaqualink",
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "httpx[http2]",
+]
+dynamic = [
+    "version",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+    "mypy",
+]
+test = [
+    "coverage[toml]",
+    "pytest",
+    "pytest-cov",
+    "pytest-icdiff",
+    "pytest-sugar",
+    "respx",
+]
+
+[project.urls]
+Homepage = "https://github.com/flz/iaqualink-py"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/iaqualink/version.py"
+
+[tool.hatch.build.targets.sdist]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/iaqualink"]
+
+[tool.hatch.envs.dev]
+dependencies = [
+    "httpx[http2]",
+]
+features = ["dev", "test"]
+
+[tool.hatch.envs.hatch-test]
+extra-dependencies = [
+    "respx",
+]
+
+[[tool.hatch.envs.hatch-test.matrix]]
+python = ["3.12"]
+
+[tool.ruff]
+line-length = 80
+
+[tool.ruff.lint]
+ignore = [
+    "SLF001",  # Some tests currently use private members
+    "G004",    # Will fix all f-string logging calls later
+]
+
+[tool.coverage.run]
+omit = [
+    ".venv/*",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+]
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "error",
+    "ignore::DeprecationWarning",
+]
