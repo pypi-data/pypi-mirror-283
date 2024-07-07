@@ -1,0 +1,8 @@
+numpy
+scipy
+matplotlib
+dwave-ocean-sdk
+tqdm
+
+[gurobi]
+gurobipy
