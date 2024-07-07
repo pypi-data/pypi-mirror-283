@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scrapy_redis.connection &#8212; Scrapy-Redis 0.9.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=def86cc0" />
+    
+    <script src="../../_static/documentation_options.js?v=39bb1c6d"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Scrapy-Redis 0.9.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">scrapy_redis.connection</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for scrapy_redis.connection</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">scrapy.utils.misc</span> <span class="kn">import</span> <span class="n">load_object</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">defaults</span>
+
+<span class="c1"># Shortcut maps &#39;setting name&#39; -&gt; &#39;parmater name&#39;.</span>
+<span class="n">SETTINGS_PARAMS_MAP</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;REDIS_URL&quot;</span><span class="p">:</span> <span class="s2">&quot;url&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;REDIS_HOST&quot;</span><span class="p">:</span> <span class="s2">&quot;host&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;REDIS_PORT&quot;</span><span class="p">:</span> <span class="s2">&quot;port&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;REDIS_DB&quot;</span><span class="p">:</span> <span class="s2">&quot;db&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;REDIS_ENCODING&quot;</span><span class="p">:</span> <span class="s2">&quot;encoding&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">SETTINGS_PARAMS_MAP</span><span class="p">[</span><span class="s2">&quot;REDIS_DECODE_RESPONSES&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;decode_responses&quot;</span>
+
+
+<div class="viewcode-block" id="get_redis_from_settings">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.connection.get_redis_from_settings">[docs]</a>
+<span class="k">def</span> <span class="nf">get_redis_from_settings</span><span class="p">(</span><span class="n">settings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns a redis client instance from given Scrapy settings object.</span>
+
+<span class="sd">    This function uses ``get_client`` to instantiate the client and uses</span>
+<span class="sd">    ``defaults.REDIS_PARAMS`` global as defaults values for the parameters. You</span>
+<span class="sd">    can override them using the ``REDIS_PARAMS`` setting.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    settings : Settings</span>
+<span class="sd">        A scrapy settings object. See the supported settings below.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    server</span>
+<span class="sd">        Redis client instance.</span>
+
+<span class="sd">    Other Parameters</span>
+<span class="sd">    ----------------</span>
+<span class="sd">    REDIS_URL : str, optional</span>
+<span class="sd">        Server connection URL.</span>
+<span class="sd">    REDIS_HOST : str, optional</span>
+<span class="sd">        Server host.</span>
+<span class="sd">    REDIS_PORT : str, optional</span>
+<span class="sd">        Server port.</span>
+<span class="sd">    REDIS_DB : int, optional</span>
+<span class="sd">        Server database</span>
+<span class="sd">    REDIS_ENCODING : str, optional</span>
+<span class="sd">        Data encoding.</span>
+<span class="sd">    REDIS_PARAMS : dict, optional</span>
+<span class="sd">        Additional client parameters.</span>
+
+<span class="sd">    Python 3 Only</span>
+<span class="sd">    ----------------</span>
+<span class="sd">    REDIS_DECODE_RESPONSES : bool, optional</span>
+<span class="sd">        Sets the `decode_responses` kwarg in Redis cls ctor</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="n">defaults</span><span class="o">.</span><span class="n">REDIS_PARAMS</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">params</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">getdict</span><span class="p">(</span><span class="s2">&quot;REDIS_PARAMS&quot;</span><span class="p">))</span>
+    <span class="c1"># XXX: Deprecate REDIS_* settings.</span>
+    <span class="k">for</span> <span class="n">source</span><span class="p">,</span> <span class="n">dest</span> <span class="ow">in</span> <span class="n">SETTINGS_PARAMS_MAP</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">val</span><span class="p">:</span>
+            <span class="n">params</span><span class="p">[</span><span class="n">dest</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+
+    <span class="c1"># Allow ``redis_cls`` to be a path to a class.</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;redis_cls&quot;</span><span class="p">),</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">params</span><span class="p">[</span><span class="s2">&quot;redis_cls&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">load_object</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="s2">&quot;redis_cls&quot;</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">get_redis</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span></div>
+
+
+
+<span class="c1"># Backwards compatible alias.</span>
+<span class="n">from_settings</span> <span class="o">=</span> <span class="n">get_redis_from_settings</span>
+
+
+<div class="viewcode-block" id="get_redis">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.connection.get_redis">[docs]</a>
+<span class="k">def</span> <span class="nf">get_redis</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns a redis client instance.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    redis_cls : class, optional</span>
+<span class="sd">        Defaults to ``redis.StrictRedis``.</span>
+<span class="sd">    url : str, optional</span>
+<span class="sd">        If given, ``redis_cls.from_url`` is used to instantiate the class.</span>
+<span class="sd">    **kwargs</span>
+<span class="sd">        Extra parameters to be passed to the ``redis_cls`` class.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    server</span>
+<span class="sd">        Redis client instance.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">redis_cls</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;redis_cls&quot;</span><span class="p">,</span> <span class="n">defaults</span><span class="o">.</span><span class="n">REDIS_CLS</span><span class="p">)</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;url&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">url</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">redis_cls</span><span class="o">.</span><span class="n">from_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">redis_cls</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+</pre></div>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Scrapy-Redis 0.9.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">scrapy_redis.connection</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2011-2024, R Max Espinoza.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>scrapy_redis package &#8212; Scrapy-Redis 0.9.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=def86cc0" />
+    
+    <script src="_static/documentation_options.js?v=39bb1c6d"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Contribution" href="contributing.html" />
+    <link rel="prev" title="API Reference" href="modules.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="contributing.html" title="Contribution"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="API Reference"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Scrapy-Redis 0.9.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" accesskey="U">API Reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">scrapy_redis package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="scrapy-redis-package">
+<h1>scrapy_redis package<a class="headerlink" href="#scrapy-redis-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-scrapy_redis.connection">
+<span id="scrapy-redis-connection-module"></span><h2>scrapy_redis.connection module<a class="headerlink" href="#module-scrapy_redis.connection" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="scrapy_redis.connection.from_settings">
+<span class="sig-prename descclassname"><span class="pre">scrapy_redis.connection.</span></span><span class="sig-name descname"><span class="pre">from_settings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">settings</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scrapy_redis.connection.from_settings" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a redis client instance from given Scrapy settings object.</p>
+<p>This function uses <code class="docutils literal notranslate"><span class="pre">get_client</span></code> to instantiate the client and uses
+<code class="docutils literal notranslate"><span class="pre">defaults.REDIS_PARAMS</span></code> global as defaults values for the parameters. You
+can override them using the <code class="docutils literal notranslate"><span class="pre">REDIS_PARAMS</span></code> setting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>settings</strong> (<em>Settings</em>) – A scrapy settings object. See the supported settings below.</p></li>
+<li><p><strong>REDIS_URL</strong> (<em>str</em><em>, </em><em>optional</em>) – Server connection URL.</p></li>
+<li><p><strong>REDIS_HOST</strong> (<em>str</em><em>, </em><em>optional</em>) – Server host.</p></li>
+<li><p><strong>REDIS_PORT</strong> (<em>str</em><em>, </em><em>optional</em>) – Server port.</p></li>
+<li><p><strong>REDIS_DB</strong> (<em>int</em><em>, </em><em>optional</em>) – Server database</p></li>
+<li><p><strong>REDIS_ENCODING</strong> (<em>str</em><em>, </em><em>optional</em>) – Data encoding.</p></li>
+<li><p><strong>REDIS_PARAMS</strong> (<em>dict</em><em>, </em><em>optional</em>) – Additional client parameters.</p></li>
+<li><p><strong>Only</strong> (<em>Python 3</em>)</p></li>
+<li><p><strong>----------------</strong></p></li>
+<li><p><strong>REDIS_DECODE_RESPONSES</strong> (<em>bool</em><em>, </em><em>optional</em>) – Sets the <cite>decode_responses</cite> kwarg in Redis cls ctor</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Redis client instance.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>server</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scrapy_redis.connection.get_redis">
+<span class="sig-prename descclassname"><span class="pre">scrapy_redis.connection.</span></span><span class="sig-name descname"><span class="pre">get_redis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/connection.html#get_redis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.connection.get_redis" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a redis client instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>redis_cls</strong> (<em>class</em><em>, </em><em>optional</em>) – Defaults to <code class="docutils literal notranslate"><span class="pre">redis.StrictRedis</span></code>.</p></li>
+<li><p><strong>url</strong> (<em>str</em><em>, </em><em>optional</em>) – If given, <code class="docutils literal notranslate"><span class="pre">redis_cls.from_url</span></code> is used to instantiate the class.</p></li>
+<li><p><strong>**kwargs</strong> – Extra parameters to be passed to the <code class="docutils literal notranslate"><span class="pre">redis_cls</span></code> class.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Redis client instance.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>server</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scrapy_redis.connection.get_redis_from_settings">
+<span class="sig-prename descclassname"><span class="pre">scrapy_redis.connection.</span></span><span class="sig-name descname"><span class="pre">get_redis_from_settings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">settings</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/connection.html#get_redis_from_settings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.connection.get_redis_from_settings" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a redis client instance from given Scrapy settings object.</p>
+<p>This function uses <code class="docutils literal notranslate"><span class="pre">get_client</span></code> to instantiate the client and uses
+<code class="docutils literal notranslate"><span class="pre">defaults.REDIS_PARAMS</span></code> global as defaults values for the parameters. You
+can override them using the <code class="docutils literal notranslate"><span class="pre">REDIS_PARAMS</span></code> setting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>settings</strong> (<em>Settings</em>) – A scrapy settings object. See the supported settings below.</p></li>
+<li><p><strong>REDIS_URL</strong> (<em>str</em><em>, </em><em>optional</em>) – Server connection URL.</p></li>
+<li><p><strong>REDIS_HOST</strong> (<em>str</em><em>, </em><em>optional</em>) – Server host.</p></li>
+<li><p><strong>REDIS_PORT</strong> (<em>str</em><em>, </em><em>optional</em>) – Server port.</p></li>
+<li><p><strong>REDIS_DB</strong> (<em>int</em><em>, </em><em>optional</em>) – Server database</p></li>
+<li><p><strong>REDIS_ENCODING</strong> (<em>str</em><em>, </em><em>optional</em>) – Data encoding.</p></li>
+<li><p><strong>REDIS_PARAMS</strong> (<em>dict</em><em>, </em><em>optional</em>) – Additional client parameters.</p></li>
+<li><p><strong>Only</strong> (<em>Python 3</em>)</p></li>
+<li><p><strong>----------------</strong></p></li>
+<li><p><strong>REDIS_DECODE_RESPONSES</strong> (<em>bool</em><em>, </em><em>optional</em>) – Sets the <cite>decode_responses</cite> kwarg in Redis cls ctor</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Redis client instance.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>server</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-scrapy_redis.dupefilter">
+<span id="scrapy-redis-dupefilter-module"></span><h2>scrapy_redis.dupefilter module<a class="headerlink" href="#module-scrapy_redis.dupefilter" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="scrapy_redis.dupefilter.RFPDupeFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scrapy_redis.dupefilter.</span></span><span class="sig-name descname"><span class="pre">RFPDupeFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">server</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/dupefilter.html#RFPDupeFilter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.dupefilter.RFPDupeFilter" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDupeFilter</span></code></p>
+<p>Redis-based request duplicates filter.</p>
+<p>This class can also be used with default Scrapy’s scheduler.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.dupefilter.RFPDupeFilter.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/dupefilter.html#RFPDupeFilter.clear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.dupefilter.RFPDupeFilter.clear" title="Link to this definition">¶</a></dt>
+<dd><p>Clears fingerprints data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.dupefilter.RFPDupeFilter.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reason</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/dupefilter.html#RFPDupeFilter.close"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.dupefilter.RFPDupeFilter.close" title="Link to this definition">¶</a></dt>
+<dd><p>Delete data on close. Called by Scrapy’s scheduler.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>reason</strong> (<em>str</em><em>, </em><em>optional</em>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.dupefilter.RFPDupeFilter.from_crawler">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_crawler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">crawler</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/dupefilter.html#RFPDupeFilter.from_crawler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.dupefilter.RFPDupeFilter.from_crawler" title="Link to this definition">¶</a></dt>
+<dd><p>Returns instance from crawler.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>crawler</strong> (<em>scrapy.crawler.Crawler</em>)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Instance of RFPDupeFilter.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#scrapy_redis.dupefilter.RFPDupeFilter" title="scrapy_redis.dupefilter.RFPDupeFilter">RFPDupeFilter</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.dupefilter.RFPDupeFilter.from_settings">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_settings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">settings</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/dupefilter.html#RFPDupeFilter.from_settings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.dupefilter.RFPDupeFilter.from_settings" title="Link to this definition">¶</a></dt>
+<dd><p>Returns an instance from given settings.</p>
+<p>This uses by default the key <code class="docutils literal notranslate"><span class="pre">dupefilter:&lt;timestamp&gt;</span></code>. When using the
+<code class="docutils literal notranslate"><span class="pre">scrapy_redis.scheduler.Scheduler</span></code> class, this method is not used as
+it needs to pass the spider name in the key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>settings</strong> (<em>scrapy.settings.Settings</em>)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A RFPDupeFilter instance.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#scrapy_redis.dupefilter.RFPDupeFilter" title="scrapy_redis.dupefilter.RFPDupeFilter">RFPDupeFilter</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.dupefilter.RFPDupeFilter.from_spider">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_spider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spider</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/dupefilter.html#RFPDupeFilter.from_spider"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.dupefilter.RFPDupeFilter.from_spider" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.dupefilter.RFPDupeFilter.log">
+<span class="sig-name descname"><span class="pre">log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spider</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/dupefilter.html#RFPDupeFilter.log"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.dupefilter.RFPDupeFilter.log" title="Link to this definition">¶</a></dt>
+<dd><p>Logs given request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>scrapy.http.Request</em>)</p></li>
+<li><p><strong>spider</strong> (<em>scrapy.spiders.Spider</em>)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.dupefilter.RFPDupeFilter.logger">
+<span class="sig-name descname"><span class="pre">logger</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;Logger</span> <span class="pre">scrapy_redis.dupefilter</span> <span class="pre">(WARNING)&gt;</span></em><a class="headerlink" href="#scrapy_redis.dupefilter.RFPDupeFilter.logger" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.dupefilter.RFPDupeFilter.request_fingerprint">
+<span class="sig-name descname"><span class="pre">request_fingerprint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/dupefilter.html#RFPDupeFilter.request_fingerprint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.dupefilter.RFPDupeFilter.request_fingerprint" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a fingerprint for a given request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>scrapy.http.Request</em>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.dupefilter.RFPDupeFilter.request_seen">
+<span class="sig-name descname"><span class="pre">request_seen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/dupefilter.html#RFPDupeFilter.request_seen"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.dupefilter.RFPDupeFilter.request_seen" title="Link to this definition">¶</a></dt>
+<dd><p>Returns True if request was already seen.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>scrapy.http.Request</em>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-scrapy_redis.pipelines">
+<span id="scrapy-redis-pipelines-module"></span><h2>scrapy_redis.pipelines module<a class="headerlink" href="#module-scrapy_redis.pipelines" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="scrapy_redis.pipelines.RedisPipeline">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scrapy_redis.pipelines.</span></span><span class="sig-name descname"><span class="pre">RedisPipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">server</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key='%(spider)s:items'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serialize_func=&lt;bound</span> <span class="pre">method</span> <span class="pre">JSONEncoder.encode</span> <span class="pre">of</span> <span class="pre">&lt;scrapy.utils.serialize.ScrapyJSONEncoder</span> <span class="pre">object&gt;&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/pipelines.html#RedisPipeline"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.pipelines.RedisPipeline" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Pushes serialized item into a redis list/queue</p>
+<section id="settings">
+<h3>Settings<a class="headerlink" href="#settings" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>REDIS_ITEMS_KEY<span class="classifier">str</span></dt><dd><p>Redis key where to store items.</p>
+</dd>
+<dt>REDIS_ITEMS_SERIALIZER<span class="classifier">str</span></dt><dd><p>Object path to serializer function.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.pipelines.RedisPipeline.from_crawler">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_crawler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">crawler</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/pipelines.html#RedisPipeline.from_crawler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.pipelines.RedisPipeline.from_crawler" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.pipelines.RedisPipeline.from_settings">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_settings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">settings</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/pipelines.html#RedisPipeline.from_settings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.pipelines.RedisPipeline.from_settings" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.pipelines.RedisPipeline.item_key">
+<span class="sig-name descname"><span class="pre">item_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spider</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/pipelines.html#RedisPipeline.item_key"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.pipelines.RedisPipeline.item_key" title="Link to this definition">¶</a></dt>
+<dd><p>Returns redis key based on given spider.</p>
+<p>Override this function to use a different key depending on the item
+and/or spider.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.pipelines.RedisPipeline.process_item">
+<span class="sig-name descname"><span class="pre">process_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spider</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/pipelines.html#RedisPipeline.process_item"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.pipelines.RedisPipeline.process_item" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+<section id="module-scrapy_redis.queue">
+<span id="scrapy-redis-queue-module"></span><h2>scrapy_redis.queue module<a class="headerlink" href="#module-scrapy_redis.queue" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="scrapy_redis.queue.Base">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scrapy_redis.queue.</span></span><span class="sig-name descname"><span class="pre">Base</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">server</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spider</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serializer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/queue.html#Base"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.queue.Base" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Per-spider base queue class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.queue.Base.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/queue.html#Base.clear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.queue.Base.clear" title="Link to this definition">¶</a></dt>
+<dd><p>Clear queue/stack</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.queue.Base.pop">
+<span class="sig-name descname"><span class="pre">pop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/queue.html#Base.pop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.queue.Base.pop" title="Link to this definition">¶</a></dt>
+<dd><p>Pop a request</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.queue.Base.push">
+<span class="sig-name descname"><span class="pre">push</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/queue.html#Base.push"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.queue.Base.push" title="Link to this definition">¶</a></dt>
+<dd><p>Push a request</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scrapy_redis.queue.FifoQueue">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scrapy_redis.queue.</span></span><span class="sig-name descname"><span class="pre">FifoQueue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">server</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spider</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serializer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/queue.html#FifoQueue"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.queue.FifoQueue" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#scrapy_redis.queue.Base" title="scrapy_redis.queue.Base"><code class="xref py py-class docutils literal notranslate"><span class="pre">Base</span></code></a></p>
+<p>Per-spider FIFO queue</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.queue.FifoQueue.pop">
+<span class="sig-name descname"><span class="pre">pop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/queue.html#FifoQueue.pop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.queue.FifoQueue.pop" title="Link to this definition">¶</a></dt>
+<dd><p>Pop a request</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.queue.FifoQueue.push">
+<span class="sig-name descname"><span class="pre">push</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/queue.html#FifoQueue.push"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.queue.FifoQueue.push" title="Link to this definition">¶</a></dt>
+<dd><p>Push a request</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scrapy_redis.queue.LifoQueue">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scrapy_redis.queue.</span></span><span class="sig-name descname"><span class="pre">LifoQueue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">server</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spider</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serializer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/queue.html#LifoQueue"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.queue.LifoQueue" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#scrapy_redis.queue.Base" title="scrapy_redis.queue.Base"><code class="xref py py-class docutils literal notranslate"><span class="pre">Base</span></code></a></p>
+<p>Per-spider LIFO queue.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.queue.LifoQueue.pop">
+<span class="sig-name descname"><span class="pre">pop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/queue.html#LifoQueue.pop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.queue.LifoQueue.pop" title="Link to this definition">¶</a></dt>
+<dd><p>Pop a request</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.queue.LifoQueue.push">
+<span class="sig-name descname"><span class="pre">push</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/queue.html#LifoQueue.push"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.queue.LifoQueue.push" title="Link to this definition">¶</a></dt>
+<dd><p>Push a request</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scrapy_redis.queue.PriorityQueue">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scrapy_redis.queue.</span></span><span class="sig-name descname"><span class="pre">PriorityQueue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">server</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spider</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serializer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/queue.html#PriorityQueue"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.queue.PriorityQueue" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#scrapy_redis.queue.Base" title="scrapy_redis.queue.Base"><code class="xref py py-class docutils literal notranslate"><span class="pre">Base</span></code></a></p>
+<p>Per-spider priority queue abstraction using redis’ sorted set</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.queue.PriorityQueue.pop">
+<span class="sig-name descname"><span class="pre">pop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/queue.html#PriorityQueue.pop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.queue.PriorityQueue.pop" title="Link to this definition">¶</a></dt>
+<dd><p>Pop a request
+timeout not support in this queue class</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.queue.PriorityQueue.push">
+<span class="sig-name descname"><span class="pre">push</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/queue.html#PriorityQueue.push"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.queue.PriorityQueue.push" title="Link to this definition">¶</a></dt>
+<dd><p>Push a request</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.queue.SpiderPriorityQueue">
+<span class="sig-prename descclassname"><span class="pre">scrapy_redis.queue.</span></span><span class="sig-name descname"><span class="pre">SpiderPriorityQueue</span></span><a class="headerlink" href="#scrapy_redis.queue.SpiderPriorityQueue" title="Link to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#scrapy_redis.queue.PriorityQueue" title="scrapy_redis.queue.PriorityQueue"><code class="xref py py-class docutils literal notranslate"><span class="pre">PriorityQueue</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.queue.SpiderQueue">
+<span class="sig-prename descclassname"><span class="pre">scrapy_redis.queue.</span></span><span class="sig-name descname"><span class="pre">SpiderQueue</span></span><a class="headerlink" href="#scrapy_redis.queue.SpiderQueue" title="Link to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#scrapy_redis.queue.FifoQueue" title="scrapy_redis.queue.FifoQueue"><code class="xref py py-class docutils literal notranslate"><span class="pre">FifoQueue</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.queue.SpiderStack">
+<span class="sig-prename descclassname"><span class="pre">scrapy_redis.queue.</span></span><span class="sig-name descname"><span class="pre">SpiderStack</span></span><a class="headerlink" href="#scrapy_redis.queue.SpiderStack" title="Link to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#scrapy_redis.queue.LifoQueue" title="scrapy_redis.queue.LifoQueue"><code class="xref py py-class docutils literal notranslate"><span class="pre">LifoQueue</span></code></a></p>
+</dd></dl>
+
+</section>
+<section id="module-scrapy_redis.scheduler">
+<span id="scrapy-redis-scheduler-module"></span><h2>scrapy_redis.scheduler module<a class="headerlink" href="#module-scrapy_redis.scheduler" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="scrapy_redis.scheduler.Scheduler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scrapy_redis.scheduler.</span></span><span class="sig-name descname"><span class="pre">Scheduler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">server</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">persist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flush_on_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queue_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'%(spider)s:requests'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queue_cls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'scrapy_redis.queue.PriorityQueue'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dupefilter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dupefilter_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'%(spider)s:dupefilter'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dupefilter_cls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'scrapy_redis.dupefilter.RFPDupeFilter'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idle_before_close</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serializer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/scheduler.html#Scheduler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.scheduler.Scheduler" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Redis-based scheduler</p>
+<section id="id1">
+<h3>Settings<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>SCHEDULER_PERSIST<span class="classifier">bool (default: False)</span></dt><dd><p>Whether to persist or clear redis queue.</p>
+</dd>
+<dt>SCHEDULER_FLUSH_ON_START<span class="classifier">bool (default: False)</span></dt><dd><p>Whether to flush redis queue on start.</p>
+</dd>
+<dt>SCHEDULER_IDLE_BEFORE_CLOSE<span class="classifier">int (default: 0)</span></dt><dd><p>How many seconds to wait before closing if no message is received.</p>
+</dd>
+<dt>SCHEDULER_QUEUE_KEY<span class="classifier">str</span></dt><dd><p>Scheduler redis key.</p>
+</dd>
+<dt>SCHEDULER_QUEUE_CLASS<span class="classifier">str</span></dt><dd><p>Scheduler queue class.</p>
+</dd>
+<dt>SCHEDULER_DUPEFILTER_KEY<span class="classifier">str</span></dt><dd><p>Scheduler dupefilter redis key.</p>
+</dd>
+<dt>SCHEDULER_DUPEFILTER_CLASS<span class="classifier">str</span></dt><dd><p>Scheduler dupefilter class.</p>
+</dd>
+<dt>SCHEDULER_SERIALIZER<span class="classifier">str</span></dt><dd><p>Scheduler serializer.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.scheduler.Scheduler.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reason</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/scheduler.html#Scheduler.close"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.scheduler.Scheduler.close" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.scheduler.Scheduler.enqueue_request">
+<span class="sig-name descname"><span class="pre">enqueue_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/scheduler.html#Scheduler.enqueue_request"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.scheduler.Scheduler.enqueue_request" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.scheduler.Scheduler.flush">
+<span class="sig-name descname"><span class="pre">flush</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/scheduler.html#Scheduler.flush"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.scheduler.Scheduler.flush" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.scheduler.Scheduler.from_crawler">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_crawler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">crawler</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/scheduler.html#Scheduler.from_crawler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.scheduler.Scheduler.from_crawler" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.scheduler.Scheduler.from_settings">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_settings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">settings</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/scheduler.html#Scheduler.from_settings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.scheduler.Scheduler.from_settings" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.scheduler.Scheduler.has_pending_requests">
+<span class="sig-name descname"><span class="pre">has_pending_requests</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/scheduler.html#Scheduler.has_pending_requests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.scheduler.Scheduler.has_pending_requests" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.scheduler.Scheduler.next_request">
+<span class="sig-name descname"><span class="pre">next_request</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/scheduler.html#Scheduler.next_request"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.scheduler.Scheduler.next_request" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.scheduler.Scheduler.open">
+<span class="sig-name descname"><span class="pre">open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spider</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/scheduler.html#Scheduler.open"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.scheduler.Scheduler.open" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+<section id="module-scrapy_redis.spiders">
+<span id="scrapy-redis-spiders-module"></span><h2>scrapy_redis.spiders module<a class="headerlink" href="#module-scrapy_redis.spiders" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisCrawlSpider">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scrapy_redis.spiders.</span></span><span class="sig-name descname"><span class="pre">RedisCrawlSpider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/spiders.html#RedisCrawlSpider"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.spiders.RedisCrawlSpider" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#scrapy_redis.spiders.RedisMixin" title="scrapy_redis.spiders.RedisMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">RedisMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">CrawlSpider</span></code></p>
+<p>Spider that reads urls from redis queue when idle.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisCrawlSpider.redis_key">
+<span class="sig-name descname"><span class="pre">redis_key</span></span><a class="headerlink" href="#scrapy_redis.spiders.RedisCrawlSpider.redis_key" title="Link to this definition">¶</a></dt>
+<dd><p>Redis key where to fetch start URLs from..</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str (default: REDIS_START_URLS_KEY)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisCrawlSpider.redis_batch_size">
+<span class="sig-name descname"><span class="pre">redis_batch_size</span></span><a class="headerlink" href="#scrapy_redis.spiders.RedisCrawlSpider.redis_batch_size" title="Link to this definition">¶</a></dt>
+<dd><p>Number of messages to fetch from redis on each attempt.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int (default: CONCURRENT_REQUESTS)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisCrawlSpider.redis_encoding">
+<span class="sig-name descname"><span class="pre">redis_encoding</span></span><a class="headerlink" href="#scrapy_redis.spiders.RedisCrawlSpider.redis_encoding" title="Link to this definition">¶</a></dt>
+<dd><p>Encoding to use when decoding messages from redis queue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str (default: REDIS_ENCODING)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisCrawlSpider.Settings">
+<span class="sig-name descname"><span class="pre">Settings</span></span><a class="headerlink" href="#scrapy_redis.spiders.RedisCrawlSpider.Settings" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">--------</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisCrawlSpider.REDIS_START_URLS_KEY">
+<span class="sig-name descname"><span class="pre">REDIS_START_URLS_KEY</span></span><a class="headerlink" href="#scrapy_redis.spiders.RedisCrawlSpider.REDIS_START_URLS_KEY" title="Link to this definition">¶</a></dt>
+<dd><p>Default Redis key where to fetch start URLs from..</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str (default: “&lt;spider.name&gt;:start_urls”)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisCrawlSpider.REDIS_START_URLS_BATCH_SIZE">
+<span class="sig-name descname"><span class="pre">REDIS_START_URLS_BATCH_SIZE</span></span><a class="headerlink" href="#scrapy_redis.spiders.RedisCrawlSpider.REDIS_START_URLS_BATCH_SIZE" title="Link to this definition">¶</a></dt>
+<dd><p>Default number of messages to fetch from redis on each attempt.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int (deprecated by CONCURRENT_REQUESTS)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisCrawlSpider.REDIS_START_URLS_AS_SET">
+<span class="sig-name descname"><span class="pre">REDIS_START_URLS_AS_SET</span></span><a class="headerlink" href="#scrapy_redis.spiders.RedisCrawlSpider.REDIS_START_URLS_AS_SET" title="Link to this definition">¶</a></dt>
+<dd><p>Use SET operations to retrieve messages from the redis queue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool (default: True)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisCrawlSpider.REDIS_ENCODING">
+<span class="sig-name descname"><span class="pre">REDIS_ENCODING</span></span><a class="headerlink" href="#scrapy_redis.spiders.RedisCrawlSpider.REDIS_ENCODING" title="Link to this definition">¶</a></dt>
+<dd><p>Default encoding to use when decoding messages from redis queue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str (default: “utf-8”)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisCrawlSpider.from_crawler">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_crawler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">crawler</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/spiders.html#RedisCrawlSpider.from_crawler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.spiders.RedisCrawlSpider.from_crawler" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisMixin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scrapy_redis.spiders.</span></span><span class="sig-name descname"><span class="pre">RedisMixin</span></span><a class="reference internal" href="_modules/scrapy_redis/spiders.html#RedisMixin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.spiders.RedisMixin" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Mixin class to implement reading urls from a redis queue.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisMixin.make_request_from_data">
+<span class="sig-name descname"><span class="pre">make_request_from_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/spiders.html#RedisMixin.make_request_from_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.spiders.RedisMixin.make_request_from_data" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a <cite>Request</cite> instance for data coming from Redis.</p>
+<p>Overriding this function to support the <cite>json</cite> requested <cite>data</cite> that contains
+<cite>url</cite> ,`meta` and other optional parameters. <cite>meta</cite> is a nested json which contains sub-data.</p>
+<p>Along with:
+After accessing the data, sending the FormRequest with <cite>url</cite>, <cite>meta</cite> and addition <cite>formdata</cite>, <cite>method</cite></p>
+<p>For example:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://example.com&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;meta&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;job-id&quot;</span><span class="p">:</span><span class="s2">&quot;123xsd&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;start-date&quot;</span><span class="p">:</span><span class="s2">&quot;dd/mm/yy&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;url_cookie_key&quot;</span><span class="p">:</span><span class="s2">&quot;fertxsas&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;method&quot;</span><span class="p">:</span><span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>If <cite>url</cite> is empty, return <cite>[]</cite>. So you should verify the <cite>url</cite> in the data.
+If <cite>method</cite> is empty, the request object will set method to ‘GET’, optional.
+If <cite>meta</cite> is empty, the request object will set <cite>meta</cite> to an empty dictionary, optional.</p>
+<p>This json supported data can be accessed from ‘scrapy.spider’ through response.
+‘request.url’, ‘request.meta’, ‘request.cookies’, ‘request.method’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>bytes</em>) – Message from redis.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisMixin.max_idle_time">
+<span class="sig-name descname"><span class="pre">max_idle_time</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#scrapy_redis.spiders.RedisMixin.max_idle_time" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisMixin.next_requests">
+<span class="sig-name descname"><span class="pre">next_requests</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/spiders.html#RedisMixin.next_requests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.spiders.RedisMixin.next_requests" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a request to be scheduled or none.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisMixin.pop_list_queue">
+<span class="sig-name descname"><span class="pre">pop_list_queue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">redis_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/spiders.html#RedisMixin.pop_list_queue"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.spiders.RedisMixin.pop_list_queue" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisMixin.pop_priority_queue">
+<span class="sig-name descname"><span class="pre">pop_priority_queue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">redis_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/spiders.html#RedisMixin.pop_priority_queue"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.spiders.RedisMixin.pop_priority_queue" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisMixin.redis_batch_size">
+<span class="sig-name descname"><span class="pre">redis_batch_size</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#scrapy_redis.spiders.RedisMixin.redis_batch_size" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisMixin.redis_encoding">
+<span class="sig-name descname"><span class="pre">redis_encoding</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#scrapy_redis.spiders.RedisMixin.redis_encoding" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisMixin.redis_key">
+<span class="sig-name descname"><span class="pre">redis_key</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#scrapy_redis.spiders.RedisMixin.redis_key" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisMixin.schedule_next_requests">
+<span class="sig-name descname"><span class="pre">schedule_next_requests</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/spiders.html#RedisMixin.schedule_next_requests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.spiders.RedisMixin.schedule_next_requests" title="Link to this definition">¶</a></dt>
+<dd><p>Schedules a request if available</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisMixin.server">
+<span class="sig-name descname"><span class="pre">server</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#scrapy_redis.spiders.RedisMixin.server" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisMixin.setup_redis">
+<span class="sig-name descname"><span class="pre">setup_redis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">crawler</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/spiders.html#RedisMixin.setup_redis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.spiders.RedisMixin.setup_redis" title="Link to this definition">¶</a></dt>
+<dd><p>Setup redis connection and idle signal.</p>
+<p>This should be called after the spider has set its crawler object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisMixin.spider_idle">
+<span class="sig-name descname"><span class="pre">spider_idle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/spiders.html#RedisMixin.spider_idle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.spiders.RedisMixin.spider_idle" title="Link to this definition">¶</a></dt>
+<dd><p>Schedules a request if available, otherwise waits.
+or close spider when waiting seconds &gt; MAX_IDLE_TIME_BEFORE_CLOSE.
+MAX_IDLE_TIME_BEFORE_CLOSE will not affect SCHEDULER_IDLE_BEFORE_CLOSE.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisMixin.spider_idle_start_time">
+<span class="sig-name descname"><span class="pre">spider_idle_start_time</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1720301839</span></em><a class="headerlink" href="#scrapy_redis.spiders.RedisMixin.spider_idle_start_time" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisMixin.start_requests">
+<span class="sig-name descname"><span class="pre">start_requests</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/spiders.html#RedisMixin.start_requests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.spiders.RedisMixin.start_requests" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a batch of start requests from redis.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisSpider">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scrapy_redis.spiders.</span></span><span class="sig-name descname"><span class="pre">RedisSpider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/spiders.html#RedisSpider"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.spiders.RedisSpider" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#scrapy_redis.spiders.RedisMixin" title="scrapy_redis.spiders.RedisMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">RedisMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Spider</span></code></p>
+<p>Spider that reads urls from redis queue when idle.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisSpider.redis_key">
+<span class="sig-name descname"><span class="pre">redis_key</span></span><a class="headerlink" href="#scrapy_redis.spiders.RedisSpider.redis_key" title="Link to this definition">¶</a></dt>
+<dd><p>Redis key where to fetch start URLs from..</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str (default: REDIS_START_URLS_KEY)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisSpider.redis_batch_size">
+<span class="sig-name descname"><span class="pre">redis_batch_size</span></span><a class="headerlink" href="#scrapy_redis.spiders.RedisSpider.redis_batch_size" title="Link to this definition">¶</a></dt>
+<dd><p>Number of messages to fetch from redis on each attempt.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int (default: CONCURRENT_REQUESTS)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisSpider.redis_encoding">
+<span class="sig-name descname"><span class="pre">redis_encoding</span></span><a class="headerlink" href="#scrapy_redis.spiders.RedisSpider.redis_encoding" title="Link to this definition">¶</a></dt>
+<dd><p>Encoding to use when decoding messages from redis queue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str (default: REDIS_ENCODING)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisSpider.Settings">
+<span class="sig-name descname"><span class="pre">Settings</span></span><a class="headerlink" href="#scrapy_redis.spiders.RedisSpider.Settings" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">--------</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisSpider.REDIS_START_URLS_KEY">
+<span class="sig-name descname"><span class="pre">REDIS_START_URLS_KEY</span></span><a class="headerlink" href="#scrapy_redis.spiders.RedisSpider.REDIS_START_URLS_KEY" title="Link to this definition">¶</a></dt>
+<dd><p>Default Redis key where to fetch start URLs from..</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str (default: “&lt;spider.name&gt;:start_urls”)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisSpider.REDIS_START_URLS_BATCH_SIZE">
+<span class="sig-name descname"><span class="pre">REDIS_START_URLS_BATCH_SIZE</span></span><a class="headerlink" href="#scrapy_redis.spiders.RedisSpider.REDIS_START_URLS_BATCH_SIZE" title="Link to this definition">¶</a></dt>
+<dd><p>Default number of messages to fetch from redis on each attempt.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int (deprecated by CONCURRENT_REQUESTS)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisSpider.REDIS_START_URLS_AS_SET">
+<span class="sig-name descname"><span class="pre">REDIS_START_URLS_AS_SET</span></span><a class="headerlink" href="#scrapy_redis.spiders.RedisSpider.REDIS_START_URLS_AS_SET" title="Link to this definition">¶</a></dt>
+<dd><p>Use SET operations to retrieve messages from the redis queue. If False,
+the messages are retrieve using the LPOP command.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool (default: False)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisSpider.REDIS_ENCODING">
+<span class="sig-name descname"><span class="pre">REDIS_ENCODING</span></span><a class="headerlink" href="#scrapy_redis.spiders.RedisSpider.REDIS_ENCODING" title="Link to this definition">¶</a></dt>
+<dd><p>Default encoding to use when decoding messages from redis queue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str (default: “utf-8”)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scrapy_redis.spiders.RedisSpider.from_crawler">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_crawler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">crawler</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scrapy_redis/spiders.html#RedisSpider.from_crawler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scrapy_redis.spiders.RedisSpider.from_crawler" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-scrapy_redis">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-scrapy_redis" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">scrapy_redis package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-scrapy_redis.connection">scrapy_redis.connection module</a><ul>
+<li><a class="reference internal" href="#scrapy_redis.connection.from_settings"><code class="docutils literal notranslate"><span class="pre">from_settings()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.connection.get_redis"><code class="docutils literal notranslate"><span class="pre">get_redis()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.connection.get_redis_from_settings"><code class="docutils literal notranslate"><span class="pre">get_redis_from_settings()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-scrapy_redis.dupefilter">scrapy_redis.dupefilter module</a><ul>
+<li><a class="reference internal" href="#scrapy_redis.dupefilter.RFPDupeFilter"><code class="docutils literal notranslate"><span class="pre">RFPDupeFilter</span></code></a><ul>
+<li><a class="reference internal" href="#scrapy_redis.dupefilter.RFPDupeFilter.clear"><code class="docutils literal notranslate"><span class="pre">RFPDupeFilter.clear()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.dupefilter.RFPDupeFilter.close"><code class="docutils literal notranslate"><span class="pre">RFPDupeFilter.close()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.dupefilter.RFPDupeFilter.from_crawler"><code class="docutils literal notranslate"><span class="pre">RFPDupeFilter.from_crawler()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.dupefilter.RFPDupeFilter.from_settings"><code class="docutils literal notranslate"><span class="pre">RFPDupeFilter.from_settings()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.dupefilter.RFPDupeFilter.from_spider"><code class="docutils literal notranslate"><span class="pre">RFPDupeFilter.from_spider()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.dupefilter.RFPDupeFilter.log"><code class="docutils literal notranslate"><span class="pre">RFPDupeFilter.log()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.dupefilter.RFPDupeFilter.logger"><code class="docutils literal notranslate"><span class="pre">RFPDupeFilter.logger</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.dupefilter.RFPDupeFilter.request_fingerprint"><code class="docutils literal notranslate"><span class="pre">RFPDupeFilter.request_fingerprint()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.dupefilter.RFPDupeFilter.request_seen"><code class="docutils literal notranslate"><span class="pre">RFPDupeFilter.request_seen()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-scrapy_redis.pipelines">scrapy_redis.pipelines module</a><ul>
+<li><a class="reference internal" href="#scrapy_redis.pipelines.RedisPipeline"><code class="docutils literal notranslate"><span class="pre">RedisPipeline</span></code></a><ul>
+<li><a class="reference internal" href="#scrapy_redis.pipelines.RedisPipeline.from_crawler"><code class="docutils literal notranslate"><span class="pre">RedisPipeline.from_crawler()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.pipelines.RedisPipeline.from_settings"><code class="docutils literal notranslate"><span class="pre">RedisPipeline.from_settings()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.pipelines.RedisPipeline.item_key"><code class="docutils literal notranslate"><span class="pre">RedisPipeline.item_key()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.pipelines.RedisPipeline.process_item"><code class="docutils literal notranslate"><span class="pre">RedisPipeline.process_item()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-scrapy_redis.queue">scrapy_redis.queue module</a><ul>
+<li><a class="reference internal" href="#scrapy_redis.queue.Base"><code class="docutils literal notranslate"><span class="pre">Base</span></code></a><ul>
+<li><a class="reference internal" href="#scrapy_redis.queue.Base.clear"><code class="docutils literal notranslate"><span class="pre">Base.clear()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.queue.Base.pop"><code class="docutils literal notranslate"><span class="pre">Base.pop()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.queue.Base.push"><code class="docutils literal notranslate"><span class="pre">Base.push()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scrapy_redis.queue.FifoQueue"><code class="docutils literal notranslate"><span class="pre">FifoQueue</span></code></a><ul>
+<li><a class="reference internal" href="#scrapy_redis.queue.FifoQueue.pop"><code class="docutils literal notranslate"><span class="pre">FifoQueue.pop()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.queue.FifoQueue.push"><code class="docutils literal notranslate"><span class="pre">FifoQueue.push()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scrapy_redis.queue.LifoQueue"><code class="docutils literal notranslate"><span class="pre">LifoQueue</span></code></a><ul>
+<li><a class="reference internal" href="#scrapy_redis.queue.LifoQueue.pop"><code class="docutils literal notranslate"><span class="pre">LifoQueue.pop()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.queue.LifoQueue.push"><code class="docutils literal notranslate"><span class="pre">LifoQueue.push()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scrapy_redis.queue.PriorityQueue"><code class="docutils literal notranslate"><span class="pre">PriorityQueue</span></code></a><ul>
+<li><a class="reference internal" href="#scrapy_redis.queue.PriorityQueue.pop"><code class="docutils literal notranslate"><span class="pre">PriorityQueue.pop()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.queue.PriorityQueue.push"><code class="docutils literal notranslate"><span class="pre">PriorityQueue.push()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scrapy_redis.queue.SpiderPriorityQueue"><code class="docutils literal notranslate"><span class="pre">SpiderPriorityQueue</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.queue.SpiderQueue"><code class="docutils literal notranslate"><span class="pre">SpiderQueue</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.queue.SpiderStack"><code class="docutils literal notranslate"><span class="pre">SpiderStack</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-scrapy_redis.scheduler">scrapy_redis.scheduler module</a><ul>
+<li><a class="reference internal" href="#scrapy_redis.scheduler.Scheduler"><code class="docutils literal notranslate"><span class="pre">Scheduler</span></code></a><ul>
+<li><a class="reference internal" href="#scrapy_redis.scheduler.Scheduler.close"><code class="docutils literal notranslate"><span class="pre">Scheduler.close()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.scheduler.Scheduler.enqueue_request"><code class="docutils literal notranslate"><span class="pre">Scheduler.enqueue_request()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.scheduler.Scheduler.flush"><code class="docutils literal notranslate"><span class="pre">Scheduler.flush()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.scheduler.Scheduler.from_crawler"><code class="docutils literal notranslate"><span class="pre">Scheduler.from_crawler()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.scheduler.Scheduler.from_settings"><code class="docutils literal notranslate"><span class="pre">Scheduler.from_settings()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.scheduler.Scheduler.has_pending_requests"><code class="docutils literal notranslate"><span class="pre">Scheduler.has_pending_requests()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.scheduler.Scheduler.next_request"><code class="docutils literal notranslate"><span class="pre">Scheduler.next_request()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.scheduler.Scheduler.open"><code class="docutils literal notranslate"><span class="pre">Scheduler.open()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-scrapy_redis.spiders">scrapy_redis.spiders module</a><ul>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisCrawlSpider"><code class="docutils literal notranslate"><span class="pre">RedisCrawlSpider</span></code></a><ul>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisCrawlSpider.redis_key"><code class="docutils literal notranslate"><span class="pre">RedisCrawlSpider.redis_key</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisCrawlSpider.redis_batch_size"><code class="docutils literal notranslate"><span class="pre">RedisCrawlSpider.redis_batch_size</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisCrawlSpider.redis_encoding"><code class="docutils literal notranslate"><span class="pre">RedisCrawlSpider.redis_encoding</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisCrawlSpider.Settings"><code class="docutils literal notranslate"><span class="pre">RedisCrawlSpider.Settings</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisCrawlSpider.REDIS_START_URLS_KEY"><code class="docutils literal notranslate"><span class="pre">RedisCrawlSpider.REDIS_START_URLS_KEY</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisCrawlSpider.REDIS_START_URLS_BATCH_SIZE"><code class="docutils literal notranslate"><span class="pre">RedisCrawlSpider.REDIS_START_URLS_BATCH_SIZE</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisCrawlSpider.REDIS_START_URLS_AS_SET"><code class="docutils literal notranslate"><span class="pre">RedisCrawlSpider.REDIS_START_URLS_AS_SET</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisCrawlSpider.REDIS_ENCODING"><code class="docutils literal notranslate"><span class="pre">RedisCrawlSpider.REDIS_ENCODING</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisCrawlSpider.from_crawler"><code class="docutils literal notranslate"><span class="pre">RedisCrawlSpider.from_crawler()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisMixin"><code class="docutils literal notranslate"><span class="pre">RedisMixin</span></code></a><ul>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisMixin.make_request_from_data"><code class="docutils literal notranslate"><span class="pre">RedisMixin.make_request_from_data()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisMixin.max_idle_time"><code class="docutils literal notranslate"><span class="pre">RedisMixin.max_idle_time</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisMixin.next_requests"><code class="docutils literal notranslate"><span class="pre">RedisMixin.next_requests()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisMixin.pop_list_queue"><code class="docutils literal notranslate"><span class="pre">RedisMixin.pop_list_queue()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisMixin.pop_priority_queue"><code class="docutils literal notranslate"><span class="pre">RedisMixin.pop_priority_queue()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisMixin.redis_batch_size"><code class="docutils literal notranslate"><span class="pre">RedisMixin.redis_batch_size</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisMixin.redis_encoding"><code class="docutils literal notranslate"><span class="pre">RedisMixin.redis_encoding</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisMixin.redis_key"><code class="docutils literal notranslate"><span class="pre">RedisMixin.redis_key</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisMixin.schedule_next_requests"><code class="docutils literal notranslate"><span class="pre">RedisMixin.schedule_next_requests()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisMixin.server"><code class="docutils literal notranslate"><span class="pre">RedisMixin.server</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisMixin.setup_redis"><code class="docutils literal notranslate"><span class="pre">RedisMixin.setup_redis()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisMixin.spider_idle"><code class="docutils literal notranslate"><span class="pre">RedisMixin.spider_idle()</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisMixin.spider_idle_start_time"><code class="docutils literal notranslate"><span class="pre">RedisMixin.spider_idle_start_time</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisMixin.start_requests"><code class="docutils literal notranslate"><span class="pre">RedisMixin.start_requests()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisSpider"><code class="docutils literal notranslate"><span class="pre">RedisSpider</span></code></a><ul>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisSpider.redis_key"><code class="docutils literal notranslate"><span class="pre">RedisSpider.redis_key</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisSpider.redis_batch_size"><code class="docutils literal notranslate"><span class="pre">RedisSpider.redis_batch_size</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisSpider.redis_encoding"><code class="docutils literal notranslate"><span class="pre">RedisSpider.redis_encoding</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisSpider.Settings"><code class="docutils literal notranslate"><span class="pre">RedisSpider.Settings</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisSpider.REDIS_START_URLS_KEY"><code class="docutils literal notranslate"><span class="pre">RedisSpider.REDIS_START_URLS_KEY</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisSpider.REDIS_START_URLS_BATCH_SIZE"><code class="docutils literal notranslate"><span class="pre">RedisSpider.REDIS_START_URLS_BATCH_SIZE</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisSpider.REDIS_START_URLS_AS_SET"><code class="docutils literal notranslate"><span class="pre">RedisSpider.REDIS_START_URLS_AS_SET</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisSpider.REDIS_ENCODING"><code class="docutils literal notranslate"><span class="pre">RedisSpider.REDIS_ENCODING</span></code></a></li>
+<li><a class="reference internal" href="#scrapy_redis.spiders.RedisSpider.from_crawler"><code class="docutils literal notranslate"><span class="pre">RedisSpider.from_crawler()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-scrapy_redis">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="modules.html"
+                          title="previous chapter">API Reference</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="contributing.html"
+                          title="next chapter">Contribution</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/scrapy_redis.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="contributing.html" title="Contribution"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="API Reference"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Scrapy-Redis 0.9.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >API Reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">scrapy_redis package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2011-2024, R Max Espinoza.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>

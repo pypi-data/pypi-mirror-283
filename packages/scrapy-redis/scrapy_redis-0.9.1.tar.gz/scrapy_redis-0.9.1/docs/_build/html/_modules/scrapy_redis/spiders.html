@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scrapy_redis.spiders &#8212; Scrapy-Redis 0.9.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=def86cc0" />
+    
+    <script src="../../_static/documentation_options.js?v=39bb1c6d"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Scrapy-Redis 0.9.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">scrapy_redis.spiders</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for scrapy_redis.spiders</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">collections.abc</span> <span class="kn">import</span> <span class="n">Iterable</span>
+
+<span class="kn">from</span> <span class="nn">scrapy</span> <span class="kn">import</span> <span class="n">FormRequest</span><span class="p">,</span> <span class="n">signals</span>
+<span class="kn">from</span> <span class="nn">scrapy</span> <span class="kn">import</span> <span class="n">version_info</span> <span class="k">as</span> <span class="n">scrapy_version</span>
+<span class="kn">from</span> <span class="nn">scrapy.exceptions</span> <span class="kn">import</span> <span class="n">DontCloseSpider</span>
+<span class="kn">from</span> <span class="nn">scrapy.spiders</span> <span class="kn">import</span> <span class="n">CrawlSpider</span><span class="p">,</span> <span class="n">Spider</span>
+
+<span class="kn">from</span> <span class="nn">scrapy_redis.utils</span> <span class="kn">import</span> <span class="n">TextColor</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">connection</span><span class="p">,</span> <span class="n">defaults</span>
+<span class="kn">from</span> <span class="nn">.utils</span> <span class="kn">import</span> <span class="n">bytes_to_str</span><span class="p">,</span> <span class="n">is_dict</span>
+
+
+<div class="viewcode-block" id="RedisMixin">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.spiders.RedisMixin">[docs]</a>
+<span class="k">class</span> <span class="nc">RedisMixin</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Mixin class to implement reading urls from a redis queue.&quot;&quot;&quot;</span>
+
+    <span class="n">redis_key</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">redis_batch_size</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">redis_encoding</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># Redis client placeholder.</span>
+    <span class="n">server</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># Idle start time</span>
+    <span class="n">spider_idle_start_time</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span>
+    <span class="n">max_idle_time</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="RedisMixin.start_requests">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.spiders.RedisMixin.start_requests">[docs]</a>
+    <span class="k">def</span> <span class="nf">start_requests</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a batch of start requests from redis.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">next_requests</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="RedisMixin.setup_redis">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.spiders.RedisMixin.setup_redis">[docs]</a>
+    <span class="k">def</span> <span class="nf">setup_redis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">crawler</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Setup redis connection and idle signal.</span>
+
+<span class="sd">        This should be called after the spider has set its crawler object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">server</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="k">if</span> <span class="n">crawler</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># We allow optional crawler argument to keep backwards</span>
+            <span class="c1"># compatibility.</span>
+            <span class="c1"># XXX: Raise a deprecation warning.</span>
+            <span class="n">crawler</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;crawler&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">crawler</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;crawler is required&quot;</span><span class="p">)</span>
+
+        <span class="n">settings</span> <span class="o">=</span> <span class="n">crawler</span><span class="o">.</span><span class="n">settings</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">redis_key</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">redis_key</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+                <span class="s2">&quot;REDIS_START_URLS_KEY&quot;</span><span class="p">,</span>
+                <span class="n">defaults</span><span class="o">.</span><span class="n">START_URLS_KEY</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis_key</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">redis_key</span> <span class="o">%</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">}</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">redis_key</span><span class="o">.</span><span class="n">strip</span><span class="p">():</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;redis_key must not be empty&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">redis_batch_size</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">redis_batch_size</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">getint</span><span class="p">(</span>
+                <span class="s2">&quot;CONCURRENT_REQUESTS&quot;</span><span class="p">,</span> <span class="n">defaults</span><span class="o">.</span><span class="n">REDIS_CONCURRENT_REQUESTS</span>
+            <span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">redis_batch_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">redis_batch_size</span><span class="p">)</span>
+        <span class="k">except</span> <span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;redis_batch_size must be an integer&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">redis_encoding</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">redis_encoding</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+                <span class="s2">&quot;REDIS_ENCODING&quot;</span><span class="p">,</span> <span class="n">defaults</span><span class="o">.</span><span class="n">REDIS_ENCODING</span>
+            <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">&quot;Reading start URLs from redis key &#39;</span><span class="si">%(redis_key)s</span><span class="s2">&#39; &quot;</span>
+            <span class="s2">&quot;(batch size: </span><span class="si">%(redis_batch_size)s</span><span class="s2">, encoding: </span><span class="si">%(redis_encoding)s</span><span class="s2">)&quot;</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">server</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">from_settings</span><span class="p">(</span><span class="n">crawler</span><span class="o">.</span><span class="n">settings</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">settings</span><span class="o">.</span><span class="n">getbool</span><span class="p">(</span><span class="s2">&quot;REDIS_START_URLS_AS_SET&quot;</span><span class="p">,</span> <span class="n">defaults</span><span class="o">.</span><span class="n">START_URLS_AS_SET</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fetch_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">spop</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">count_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">scard</span>
+        <span class="k">elif</span> <span class="n">settings</span><span class="o">.</span><span class="n">getbool</span><span class="p">(</span><span class="s2">&quot;REDIS_START_URLS_AS_ZSET&quot;</span><span class="p">,</span> <span class="n">defaults</span><span class="o">.</span><span class="n">START_URLS_AS_ZSET</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fetch_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pop_priority_queue</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">count_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">zcard</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fetch_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pop_list_queue</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">count_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">llen</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_idle_time</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">max_idle_time</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+                <span class="s2">&quot;MAX_IDLE_TIME_BEFORE_CLOSE&quot;</span><span class="p">,</span> <span class="n">defaults</span><span class="o">.</span><span class="n">MAX_IDLE_TIME</span>
+            <span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">max_idle_time</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">max_idle_time</span><span class="p">)</span>
+        <span class="k">except</span> <span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;max_idle_time must be an integer&quot;</span><span class="p">)</span>
+
+        <span class="c1"># The idle signal is called when the spider has no requests left,</span>
+        <span class="c1"># that&#39;s when we will schedule new requests from redis queue</span>
+        <span class="n">crawler</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spider_idle</span><span class="p">,</span> <span class="n">signal</span><span class="o">=</span><span class="n">signals</span><span class="o">.</span><span class="n">spider_idle</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RedisMixin.pop_list_queue">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.spiders.RedisMixin.pop_list_queue">[docs]</a>
+    <span class="k">def</span> <span class="nf">pop_list_queue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">redis_key</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">):</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">pipeline</span><span class="p">()</span> <span class="k">as</span> <span class="n">pipe</span><span class="p">:</span>
+            <span class="n">pipe</span><span class="o">.</span><span class="n">lrange</span><span class="p">(</span><span class="n">redis_key</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">batch_size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">pipe</span><span class="o">.</span><span class="n">ltrim</span><span class="p">(</span><span class="n">redis_key</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">datas</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">datas</span></div>
+
+
+<div class="viewcode-block" id="RedisMixin.pop_priority_queue">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.spiders.RedisMixin.pop_priority_queue">[docs]</a>
+    <span class="k">def</span> <span class="nf">pop_priority_queue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">redis_key</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">):</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">pipeline</span><span class="p">()</span> <span class="k">as</span> <span class="n">pipe</span><span class="p">:</span>
+            <span class="n">pipe</span><span class="o">.</span><span class="n">zrevrange</span><span class="p">(</span><span class="n">redis_key</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">batch_size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">pipe</span><span class="o">.</span><span class="n">zremrangebyrank</span><span class="p">(</span><span class="n">redis_key</span><span class="p">,</span> <span class="o">-</span><span class="n">batch_size</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">datas</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">datas</span></div>
+
+
+<div class="viewcode-block" id="RedisMixin.next_requests">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.spiders.RedisMixin.next_requests">[docs]</a>
+    <span class="k">def</span> <span class="nf">next_requests</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a request to be scheduled or none.&quot;&quot;&quot;</span>
+        <span class="c1"># XXX: Do we need to use a timeout here?</span>
+        <span class="n">found</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">datas</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fetch_data</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">redis_key</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">redis_batch_size</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">datas</span><span class="p">:</span>
+            <span class="n">reqs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">make_request_from_data</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">reqs</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">req</span> <span class="ow">in</span> <span class="n">reqs</span><span class="p">:</span>
+                    <span class="k">yield</span> <span class="n">req</span>
+                    <span class="c1"># XXX: should be here?</span>
+                    <span class="n">found</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;start req url:</span><span class="si">{</span><span class="n">req</span><span class="o">.</span><span class="n">url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">reqs</span><span class="p">:</span>
+                <span class="k">yield</span> <span class="n">reqs</span>
+                <span class="n">found</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Request not made from data: </span><span class="si">{</span><span class="n">data</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">found</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Read </span><span class="si">{</span><span class="n">found</span><span class="si">}</span><span class="s2"> requests from &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">redis_key</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RedisMixin.make_request_from_data">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.spiders.RedisMixin.make_request_from_data">[docs]</a>
+    <span class="k">def</span> <span class="nf">make_request_from_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a `Request` instance for data coming from Redis.</span>
+
+<span class="sd">        Overriding this function to support the `json` requested `data` that contains</span>
+<span class="sd">        `url` ,`meta` and other optional parameters. `meta` is a nested json which contains sub-data.</span>
+
+<span class="sd">        Along with:</span>
+<span class="sd">        After accessing the data, sending the FormRequest with `url`, `meta` and addition `formdata`, `method`</span>
+
+<span class="sd">        For example:</span>
+
+<span class="sd">        .. code:: json</span>
+
+<span class="sd">            {</span>
+<span class="sd">                &quot;url&quot;: &quot;https://example.com&quot;,</span>
+<span class="sd">                &quot;meta&quot;: {</span>
+<span class="sd">                    &quot;job-id&quot;:&quot;123xsd&quot;,</span>
+<span class="sd">                    &quot;start-date&quot;:&quot;dd/mm/yy&quot;,</span>
+<span class="sd">                },</span>
+<span class="sd">                &quot;url_cookie_key&quot;:&quot;fertxsas&quot;,</span>
+<span class="sd">                &quot;method&quot;:&quot;POST&quot;,</span>
+<span class="sd">            }</span>
+
+<span class="sd">        If `url` is empty, return `[]`. So you should verify the `url` in the data.</span>
+<span class="sd">        If `method` is empty, the request object will set method to &#39;GET&#39;, optional.</span>
+<span class="sd">        If `meta` is empty, the request object will set `meta` to an empty dictionary, optional.</span>
+
+<span class="sd">        This json supported data can be accessed from &#39;scrapy.spider&#39; through response.</span>
+<span class="sd">        &#39;request.url&#39;, &#39;request.meta&#39;, &#39;request.cookies&#39;, &#39;request.method&#39;</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        data : bytes</span>
+<span class="sd">            Message from redis.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">formatted_data</span> <span class="o">=</span> <span class="n">bytes_to_str</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">redis_encoding</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">is_dict</span><span class="p">(</span><span class="n">formatted_data</span><span class="p">):</span>
+            <span class="n">parameter</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">formatted_data</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">TextColor</span><span class="o">.</span><span class="n">WARNING</span><span class="si">}</span><span class="s2">WARNING: String request is deprecated, please use JSON data format. &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;Detail information, please check https://github.com/rmax/scrapy-redis#features</span><span class="si">{</span><span class="n">TextColor</span><span class="o">.</span><span class="n">ENDC</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+            <span class="k">return</span> <span class="n">FormRequest</span><span class="p">(</span><span class="n">formatted_data</span><span class="p">,</span> <span class="n">dont_filter</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">parameter</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;url&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">TextColor</span><span class="o">.</span><span class="n">WARNING</span><span class="si">}</span><span class="s2">The data from Redis has no url key in push data</span><span class="si">{</span><span class="n">TextColor</span><span class="o">.</span><span class="n">ENDC</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+            <span class="k">return</span> <span class="p">[]</span>
+
+        <span class="n">url</span> <span class="o">=</span> <span class="n">parameter</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;url&quot;</span><span class="p">)</span>
+        <span class="n">method</span> <span class="o">=</span> <span class="n">parameter</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;method&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">if</span> <span class="s2">&quot;method&quot;</span> <span class="ow">in</span> <span class="n">parameter</span> <span class="k">else</span> <span class="s2">&quot;GET&quot;</span>
+        <span class="n">metadata</span> <span class="o">=</span> <span class="n">parameter</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;meta&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="s2">&quot;meta&quot;</span> <span class="ow">in</span> <span class="n">parameter</span> <span class="k">else</span> <span class="p">{}</span>
+
+        <span class="k">return</span> <span class="n">FormRequest</span><span class="p">(</span>
+            <span class="n">url</span><span class="p">,</span> <span class="n">dont_filter</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">formdata</span><span class="o">=</span><span class="n">parameter</span><span class="p">,</span> <span class="n">meta</span><span class="o">=</span><span class="n">metadata</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RedisMixin.schedule_next_requests">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.spiders.RedisMixin.schedule_next_requests">[docs]</a>
+    <span class="k">def</span> <span class="nf">schedule_next_requests</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Schedules a request if available&quot;&quot;&quot;</span>
+        <span class="c1"># TODO: While there is capacity, schedule a batch of redis requests.</span>
+        <span class="k">for</span> <span class="n">req</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">next_requests</span><span class="p">():</span>
+            <span class="c1"># see https://github.com/scrapy/scrapy/issues/5994</span>
+            <span class="k">if</span> <span class="n">scrapy_version</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">crawler</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">crawl</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">crawler</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">crawl</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">spider</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RedisMixin.spider_idle">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.spiders.RedisMixin.spider_idle">[docs]</a>
+    <span class="k">def</span> <span class="nf">spider_idle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Schedules a request if available, otherwise waits.</span>
+<span class="sd">        or close spider when waiting seconds &gt; MAX_IDLE_TIME_BEFORE_CLOSE.</span>
+<span class="sd">        MAX_IDLE_TIME_BEFORE_CLOSE will not affect SCHEDULER_IDLE_BEFORE_CLOSE.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">server</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">count_size</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">redis_key</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">spider_idle_start_time</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">schedule_next_requests</span><span class="p">()</span>
+
+        <span class="n">idle_time</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">spider_idle_start_time</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_idle_time</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">idle_time</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_idle_time</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">raise</span> <span class="n">DontCloseSpider</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="RedisSpider">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.spiders.RedisSpider">[docs]</a>
+<span class="k">class</span> <span class="nc">RedisSpider</span><span class="p">(</span><span class="n">RedisMixin</span><span class="p">,</span> <span class="n">Spider</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Spider that reads urls from redis queue when idle.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    redis_key : str (default: REDIS_START_URLS_KEY)</span>
+<span class="sd">        Redis key where to fetch start URLs from..</span>
+<span class="sd">    redis_batch_size : int (default: CONCURRENT_REQUESTS)</span>
+<span class="sd">        Number of messages to fetch from redis on each attempt.</span>
+<span class="sd">    redis_encoding : str (default: REDIS_ENCODING)</span>
+<span class="sd">        Encoding to use when decoding messages from redis queue.</span>
+
+<span class="sd">    Settings</span>
+<span class="sd">    --------</span>
+<span class="sd">    REDIS_START_URLS_KEY : str (default: &quot;&lt;spider.name&gt;:start_urls&quot;)</span>
+<span class="sd">        Default Redis key where to fetch start URLs from..</span>
+<span class="sd">    REDIS_START_URLS_BATCH_SIZE : int (deprecated by CONCURRENT_REQUESTS)</span>
+<span class="sd">        Default number of messages to fetch from redis on each attempt.</span>
+<span class="sd">    REDIS_START_URLS_AS_SET : bool (default: False)</span>
+<span class="sd">        Use SET operations to retrieve messages from the redis queue. If False,</span>
+<span class="sd">        the messages are retrieve using the LPOP command.</span>
+<span class="sd">    REDIS_ENCODING : str (default: &quot;utf-8&quot;)</span>
+<span class="sd">        Default encoding to use when decoding messages from redis queue.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="RedisSpider.from_crawler">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.spiders.RedisSpider.from_crawler">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_crawler</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">crawler</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">from_crawler</span><span class="p">(</span><span class="n">crawler</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">obj</span><span class="o">.</span><span class="n">setup_redis</span><span class="p">(</span><span class="n">crawler</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">obj</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="RedisCrawlSpider">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.spiders.RedisCrawlSpider">[docs]</a>
+<span class="k">class</span> <span class="nc">RedisCrawlSpider</span><span class="p">(</span><span class="n">RedisMixin</span><span class="p">,</span> <span class="n">CrawlSpider</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Spider that reads urls from redis queue when idle.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    redis_key : str (default: REDIS_START_URLS_KEY)</span>
+<span class="sd">        Redis key where to fetch start URLs from..</span>
+<span class="sd">    redis_batch_size : int (default: CONCURRENT_REQUESTS)</span>
+<span class="sd">        Number of messages to fetch from redis on each attempt.</span>
+<span class="sd">    redis_encoding : str (default: REDIS_ENCODING)</span>
+<span class="sd">        Encoding to use when decoding messages from redis queue.</span>
+
+<span class="sd">    Settings</span>
+<span class="sd">    --------</span>
+<span class="sd">    REDIS_START_URLS_KEY : str (default: &quot;&lt;spider.name&gt;:start_urls&quot;)</span>
+<span class="sd">        Default Redis key where to fetch start URLs from..</span>
+<span class="sd">    REDIS_START_URLS_BATCH_SIZE : int (deprecated by CONCURRENT_REQUESTS)</span>
+<span class="sd">        Default number of messages to fetch from redis on each attempt.</span>
+<span class="sd">    REDIS_START_URLS_AS_SET : bool (default: True)</span>
+<span class="sd">        Use SET operations to retrieve messages from the redis queue.</span>
+<span class="sd">    REDIS_ENCODING : str (default: &quot;utf-8&quot;)</span>
+<span class="sd">        Default encoding to use when decoding messages from redis queue.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="RedisCrawlSpider.from_crawler">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.spiders.RedisCrawlSpider.from_crawler">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_crawler</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">crawler</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">from_crawler</span><span class="p">(</span><span class="n">crawler</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">obj</span><span class="o">.</span><span class="n">setup_redis</span><span class="p">(</span><span class="n">crawler</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">obj</span></div>
+</div>
+
+</pre></div>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Scrapy-Redis 0.9.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">scrapy_redis.spiders</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2011-2024, R Max Espinoza.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>

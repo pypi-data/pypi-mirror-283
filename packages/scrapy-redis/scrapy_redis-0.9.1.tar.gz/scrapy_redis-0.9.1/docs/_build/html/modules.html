@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>API Reference &#8212; Scrapy-Redis 0.9.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=def86cc0" />
+    
+    <script src="_static/documentation_options.js?v=39bb1c6d"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="scrapy_redis package" href="scrapy_redis.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="scrapy_redis.html" title="scrapy_redis package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="installation.html" title="Installation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Scrapy-Redis 0.9.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">API Reference</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="api-reference">
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="scrapy_redis.html">scrapy_redis package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scrapy_redis.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scrapy_redis.html#module-scrapy_redis.connection">scrapy_redis.connection module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.connection.from_settings"><code class="docutils literal notranslate"><span class="pre">from_settings()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.connection.get_redis"><code class="docutils literal notranslate"><span class="pre">get_redis()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.connection.get_redis_from_settings"><code class="docutils literal notranslate"><span class="pre">get_redis_from_settings()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="scrapy_redis.html#module-scrapy_redis.dupefilter">scrapy_redis.dupefilter module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.dupefilter.RFPDupeFilter"><code class="docutils literal notranslate"><span class="pre">RFPDupeFilter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.dupefilter.RFPDupeFilter.clear"><code class="docutils literal notranslate"><span class="pre">RFPDupeFilter.clear()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.dupefilter.RFPDupeFilter.close"><code class="docutils literal notranslate"><span class="pre">RFPDupeFilter.close()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.dupefilter.RFPDupeFilter.from_crawler"><code class="docutils literal notranslate"><span class="pre">RFPDupeFilter.from_crawler()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.dupefilter.RFPDupeFilter.from_settings"><code class="docutils literal notranslate"><span class="pre">RFPDupeFilter.from_settings()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.dupefilter.RFPDupeFilter.from_spider"><code class="docutils literal notranslate"><span class="pre">RFPDupeFilter.from_spider()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.dupefilter.RFPDupeFilter.log"><code class="docutils literal notranslate"><span class="pre">RFPDupeFilter.log()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.dupefilter.RFPDupeFilter.logger"><code class="docutils literal notranslate"><span class="pre">RFPDupeFilter.logger</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.dupefilter.RFPDupeFilter.request_fingerprint"><code class="docutils literal notranslate"><span class="pre">RFPDupeFilter.request_fingerprint()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.dupefilter.RFPDupeFilter.request_seen"><code class="docutils literal notranslate"><span class="pre">RFPDupeFilter.request_seen()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="scrapy_redis.html#module-scrapy_redis.pipelines">scrapy_redis.pipelines module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.pipelines.RedisPipeline"><code class="docutils literal notranslate"><span class="pre">RedisPipeline</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.pipelines.RedisPipeline.from_crawler"><code class="docutils literal notranslate"><span class="pre">RedisPipeline.from_crawler()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.pipelines.RedisPipeline.from_settings"><code class="docutils literal notranslate"><span class="pre">RedisPipeline.from_settings()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.pipelines.RedisPipeline.item_key"><code class="docutils literal notranslate"><span class="pre">RedisPipeline.item_key()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.pipelines.RedisPipeline.process_item"><code class="docutils literal notranslate"><span class="pre">RedisPipeline.process_item()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="scrapy_redis.html#module-scrapy_redis.queue">scrapy_redis.queue module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.queue.Base"><code class="docutils literal notranslate"><span class="pre">Base</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.queue.Base.clear"><code class="docutils literal notranslate"><span class="pre">Base.clear()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.queue.Base.pop"><code class="docutils literal notranslate"><span class="pre">Base.pop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.queue.Base.push"><code class="docutils literal notranslate"><span class="pre">Base.push()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.queue.FifoQueue"><code class="docutils literal notranslate"><span class="pre">FifoQueue</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.queue.FifoQueue.pop"><code class="docutils literal notranslate"><span class="pre">FifoQueue.pop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.queue.FifoQueue.push"><code class="docutils literal notranslate"><span class="pre">FifoQueue.push()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.queue.LifoQueue"><code class="docutils literal notranslate"><span class="pre">LifoQueue</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.queue.LifoQueue.pop"><code class="docutils literal notranslate"><span class="pre">LifoQueue.pop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.queue.LifoQueue.push"><code class="docutils literal notranslate"><span class="pre">LifoQueue.push()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.queue.PriorityQueue"><code class="docutils literal notranslate"><span class="pre">PriorityQueue</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.queue.PriorityQueue.pop"><code class="docutils literal notranslate"><span class="pre">PriorityQueue.pop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.queue.PriorityQueue.push"><code class="docutils literal notranslate"><span class="pre">PriorityQueue.push()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.queue.SpiderPriorityQueue"><code class="docutils literal notranslate"><span class="pre">SpiderPriorityQueue</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.queue.SpiderQueue"><code class="docutils literal notranslate"><span class="pre">SpiderQueue</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.queue.SpiderStack"><code class="docutils literal notranslate"><span class="pre">SpiderStack</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="scrapy_redis.html#module-scrapy_redis.scheduler">scrapy_redis.scheduler module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.scheduler.Scheduler"><code class="docutils literal notranslate"><span class="pre">Scheduler</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.scheduler.Scheduler.close"><code class="docutils literal notranslate"><span class="pre">Scheduler.close()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.scheduler.Scheduler.enqueue_request"><code class="docutils literal notranslate"><span class="pre">Scheduler.enqueue_request()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.scheduler.Scheduler.flush"><code class="docutils literal notranslate"><span class="pre">Scheduler.flush()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.scheduler.Scheduler.from_crawler"><code class="docutils literal notranslate"><span class="pre">Scheduler.from_crawler()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.scheduler.Scheduler.from_settings"><code class="docutils literal notranslate"><span class="pre">Scheduler.from_settings()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.scheduler.Scheduler.has_pending_requests"><code class="docutils literal notranslate"><span class="pre">Scheduler.has_pending_requests()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.scheduler.Scheduler.next_request"><code class="docutils literal notranslate"><span class="pre">Scheduler.next_request()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.scheduler.Scheduler.open"><code class="docutils literal notranslate"><span class="pre">Scheduler.open()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="scrapy_redis.html#module-scrapy_redis.spiders">scrapy_redis.spiders module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisCrawlSpider"><code class="docutils literal notranslate"><span class="pre">RedisCrawlSpider</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisCrawlSpider.redis_key"><code class="docutils literal notranslate"><span class="pre">RedisCrawlSpider.redis_key</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisCrawlSpider.redis_batch_size"><code class="docutils literal notranslate"><span class="pre">RedisCrawlSpider.redis_batch_size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisCrawlSpider.redis_encoding"><code class="docutils literal notranslate"><span class="pre">RedisCrawlSpider.redis_encoding</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisCrawlSpider.Settings"><code class="docutils literal notranslate"><span class="pre">RedisCrawlSpider.Settings</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisCrawlSpider.REDIS_START_URLS_KEY"><code class="docutils literal notranslate"><span class="pre">RedisCrawlSpider.REDIS_START_URLS_KEY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisCrawlSpider.REDIS_START_URLS_BATCH_SIZE"><code class="docutils literal notranslate"><span class="pre">RedisCrawlSpider.REDIS_START_URLS_BATCH_SIZE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisCrawlSpider.REDIS_START_URLS_AS_SET"><code class="docutils literal notranslate"><span class="pre">RedisCrawlSpider.REDIS_START_URLS_AS_SET</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisCrawlSpider.REDIS_ENCODING"><code class="docutils literal notranslate"><span class="pre">RedisCrawlSpider.REDIS_ENCODING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisCrawlSpider.from_crawler"><code class="docutils literal notranslate"><span class="pre">RedisCrawlSpider.from_crawler()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisMixin"><code class="docutils literal notranslate"><span class="pre">RedisMixin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisMixin.make_request_from_data"><code class="docutils literal notranslate"><span class="pre">RedisMixin.make_request_from_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisMixin.max_idle_time"><code class="docutils literal notranslate"><span class="pre">RedisMixin.max_idle_time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisMixin.next_requests"><code class="docutils literal notranslate"><span class="pre">RedisMixin.next_requests()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisMixin.pop_list_queue"><code class="docutils literal notranslate"><span class="pre">RedisMixin.pop_list_queue()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisMixin.pop_priority_queue"><code class="docutils literal notranslate"><span class="pre">RedisMixin.pop_priority_queue()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisMixin.redis_batch_size"><code class="docutils literal notranslate"><span class="pre">RedisMixin.redis_batch_size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisMixin.redis_encoding"><code class="docutils literal notranslate"><span class="pre">RedisMixin.redis_encoding</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisMixin.redis_key"><code class="docutils literal notranslate"><span class="pre">RedisMixin.redis_key</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisMixin.schedule_next_requests"><code class="docutils literal notranslate"><span class="pre">RedisMixin.schedule_next_requests()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisMixin.server"><code class="docutils literal notranslate"><span class="pre">RedisMixin.server</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisMixin.setup_redis"><code class="docutils literal notranslate"><span class="pre">RedisMixin.setup_redis()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisMixin.spider_idle"><code class="docutils literal notranslate"><span class="pre">RedisMixin.spider_idle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisMixin.spider_idle_start_time"><code class="docutils literal notranslate"><span class="pre">RedisMixin.spider_idle_start_time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisMixin.start_requests"><code class="docutils literal notranslate"><span class="pre">RedisMixin.start_requests()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisSpider"><code class="docutils literal notranslate"><span class="pre">RedisSpider</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisSpider.redis_key"><code class="docutils literal notranslate"><span class="pre">RedisSpider.redis_key</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisSpider.redis_batch_size"><code class="docutils literal notranslate"><span class="pre">RedisSpider.redis_batch_size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisSpider.redis_encoding"><code class="docutils literal notranslate"><span class="pre">RedisSpider.redis_encoding</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisSpider.Settings"><code class="docutils literal notranslate"><span class="pre">RedisSpider.Settings</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisSpider.REDIS_START_URLS_KEY"><code class="docutils literal notranslate"><span class="pre">RedisSpider.REDIS_START_URLS_KEY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisSpider.REDIS_START_URLS_BATCH_SIZE"><code class="docutils literal notranslate"><span class="pre">RedisSpider.REDIS_START_URLS_BATCH_SIZE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisSpider.REDIS_START_URLS_AS_SET"><code class="docutils literal notranslate"><span class="pre">RedisSpider.REDIS_START_URLS_AS_SET</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisSpider.REDIS_ENCODING"><code class="docutils literal notranslate"><span class="pre">RedisSpider.REDIS_ENCODING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="scrapy_redis.html#scrapy_redis.spiders.RedisSpider.from_crawler"><code class="docutils literal notranslate"><span class="pre">RedisSpider.from_crawler()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="scrapy_redis.html#module-scrapy_redis">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="installation.html"
+                          title="previous chapter">Installation</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="scrapy_redis.html"
+                          title="next chapter">scrapy_redis package</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/modules.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="scrapy_redis.html" title="scrapy_redis package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="installation.html" title="Installation"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Scrapy-Redis 0.9.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">API Reference</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2011-2024, R Max Espinoza.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>

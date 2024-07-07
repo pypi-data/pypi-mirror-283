@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scrapy_redis.scheduler &#8212; Scrapy-Redis 0.9.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=def86cc0" />
+    
+    <script src="../../_static/documentation_options.js?v=39bb1c6d"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Scrapy-Redis 0.9.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">scrapy_redis.scheduler</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for scrapy_redis.scheduler</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">importlib</span>
+
+<span class="kn">from</span> <span class="nn">scrapy.utils.misc</span> <span class="kn">import</span> <span class="n">load_object</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">connection</span><span class="p">,</span> <span class="n">defaults</span>
+
+
+<span class="c1"># TODO: add SCRAPY_JOB support.</span>
+<div class="viewcode-block" id="Scheduler">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.scheduler.Scheduler">[docs]</a>
+<span class="k">class</span> <span class="nc">Scheduler</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Redis-based scheduler</span>
+
+<span class="sd">    Settings</span>
+<span class="sd">    --------</span>
+<span class="sd">    SCHEDULER_PERSIST : bool (default: False)</span>
+<span class="sd">        Whether to persist or clear redis queue.</span>
+<span class="sd">    SCHEDULER_FLUSH_ON_START : bool (default: False)</span>
+<span class="sd">        Whether to flush redis queue on start.</span>
+<span class="sd">    SCHEDULER_IDLE_BEFORE_CLOSE : int (default: 0)</span>
+<span class="sd">        How many seconds to wait before closing if no message is received.</span>
+<span class="sd">    SCHEDULER_QUEUE_KEY : str</span>
+<span class="sd">        Scheduler redis key.</span>
+<span class="sd">    SCHEDULER_QUEUE_CLASS : str</span>
+<span class="sd">        Scheduler queue class.</span>
+<span class="sd">    SCHEDULER_DUPEFILTER_KEY : str</span>
+<span class="sd">        Scheduler dupefilter redis key.</span>
+<span class="sd">    SCHEDULER_DUPEFILTER_CLASS : str</span>
+<span class="sd">        Scheduler dupefilter class.</span>
+<span class="sd">    SCHEDULER_SERIALIZER : str</span>
+<span class="sd">        Scheduler serializer.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">server</span><span class="p">,</span>
+        <span class="n">persist</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">flush_on_start</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">queue_key</span><span class="o">=</span><span class="n">defaults</span><span class="o">.</span><span class="n">SCHEDULER_QUEUE_KEY</span><span class="p">,</span>
+        <span class="n">queue_cls</span><span class="o">=</span><span class="n">defaults</span><span class="o">.</span><span class="n">SCHEDULER_QUEUE_CLASS</span><span class="p">,</span>
+        <span class="n">dupefilter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">dupefilter_key</span><span class="o">=</span><span class="n">defaults</span><span class="o">.</span><span class="n">SCHEDULER_DUPEFILTER_KEY</span><span class="p">,</span>
+        <span class="n">dupefilter_cls</span><span class="o">=</span><span class="n">defaults</span><span class="o">.</span><span class="n">SCHEDULER_DUPEFILTER_CLASS</span><span class="p">,</span>
+        <span class="n">idle_before_close</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">serializer</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize scheduler.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        server : Redis</span>
+<span class="sd">            The redis server instance.</span>
+<span class="sd">        persist : bool</span>
+<span class="sd">            Whether to flush requests when closing. Default is False.</span>
+<span class="sd">        flush_on_start : bool</span>
+<span class="sd">            Whether to flush requests on start. Default is False.</span>
+<span class="sd">        queue_key : str</span>
+<span class="sd">            Requests queue key.</span>
+<span class="sd">        queue_cls : str</span>
+<span class="sd">            Importable path to the queue class.</span>
+<span class="sd">        dupefilter: Dupefilter</span>
+<span class="sd">            Custom dupefilter instance.</span>
+<span class="sd">        dupefilter_key : str</span>
+<span class="sd">            Duplicates filter key.</span>
+<span class="sd">        dupefilter_cls : str</span>
+<span class="sd">            Importable path to the dupefilter class.</span>
+<span class="sd">        idle_before_close : int</span>
+<span class="sd">            Timeout before giving up.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">idle_before_close</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;idle_before_close cannot be negative&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">server</span> <span class="o">=</span> <span class="n">server</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">persist</span> <span class="o">=</span> <span class="n">persist</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">flush_on_start</span> <span class="o">=</span> <span class="n">flush_on_start</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">queue_key</span> <span class="o">=</span> <span class="n">queue_key</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">queue_cls</span> <span class="o">=</span> <span class="n">queue_cls</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="n">dupefilter</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dupefilter_cls</span> <span class="o">=</span> <span class="n">dupefilter_cls</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dupefilter_key</span> <span class="o">=</span> <span class="n">dupefilter_key</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">idle_before_close</span> <span class="o">=</span> <span class="n">idle_before_close</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">serializer</span> <span class="o">=</span> <span class="n">serializer</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stats</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Scheduler.from_settings">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.scheduler.Scheduler.from_settings">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_settings</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">settings</span><span class="p">):</span>
+        <span class="n">kwargs</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;persist&quot;</span><span class="p">:</span> <span class="n">settings</span><span class="o">.</span><span class="n">getbool</span><span class="p">(</span><span class="s2">&quot;SCHEDULER_PERSIST&quot;</span><span class="p">),</span>
+            <span class="s2">&quot;flush_on_start&quot;</span><span class="p">:</span> <span class="n">settings</span><span class="o">.</span><span class="n">getbool</span><span class="p">(</span><span class="s2">&quot;SCHEDULER_FLUSH_ON_START&quot;</span><span class="p">),</span>
+            <span class="s2">&quot;idle_before_close&quot;</span><span class="p">:</span> <span class="n">settings</span><span class="o">.</span><span class="n">getint</span><span class="p">(</span><span class="s2">&quot;SCHEDULER_IDLE_BEFORE_CLOSE&quot;</span><span class="p">),</span>
+        <span class="p">}</span>
+
+        <span class="c1"># If these values are missing, it means we want to use the defaults.</span>
+        <span class="n">optional</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="c1"># TODO: Use custom prefixes for this settings to note that are</span>
+            <span class="c1"># specific to scrapy-redis.</span>
+            <span class="s2">&quot;queue_key&quot;</span><span class="p">:</span> <span class="s2">&quot;SCHEDULER_QUEUE_KEY&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;queue_cls&quot;</span><span class="p">:</span> <span class="s2">&quot;SCHEDULER_QUEUE_CLASS&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;dupefilter_key&quot;</span><span class="p">:</span> <span class="s2">&quot;SCHEDULER_DUPEFILTER_KEY&quot;</span><span class="p">,</span>
+            <span class="c1"># We use the default setting name to keep compatibility.</span>
+            <span class="s2">&quot;dupefilter_cls&quot;</span><span class="p">:</span> <span class="s2">&quot;DUPEFILTER_CLASS&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;serializer&quot;</span><span class="p">:</span> <span class="s2">&quot;SCHEDULER_SERIALIZER&quot;</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">setting_name</span> <span class="ow">in</span> <span class="n">optional</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">setting_name</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">val</span><span class="p">:</span>
+                <span class="n">kwargs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+
+        <span class="n">dupefilter_cls</span> <span class="o">=</span> <span class="n">load_object</span><span class="p">(</span><span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;dupefilter_cls&quot;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">dupefilter_cls</span><span class="p">,</span> <span class="s2">&quot;from_spider&quot;</span><span class="p">):</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;dupefilter&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dupefilter_cls</span><span class="o">.</span><span class="n">from_settings</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+
+        <span class="c1"># Support serializer as a path to a module.</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;serializer&quot;</span><span class="p">),</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;serializer&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;serializer&quot;</span><span class="p">])</span>
+
+        <span class="n">server</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">from_settings</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+        <span class="c1"># Ensure the connection is working.</span>
+        <span class="n">server</span><span class="o">.</span><span class="n">ping</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">server</span><span class="o">=</span><span class="n">server</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Scheduler.from_crawler">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.scheduler.Scheduler.from_crawler">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_crawler</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">crawler</span><span class="p">):</span>
+        <span class="n">instance</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">from_settings</span><span class="p">(</span><span class="n">crawler</span><span class="o">.</span><span class="n">settings</span><span class="p">)</span>
+        <span class="c1"># FIXME: for now, stats are only supported from this constructor</span>
+        <span class="n">instance</span><span class="o">.</span><span class="n">stats</span> <span class="o">=</span> <span class="n">crawler</span><span class="o">.</span><span class="n">stats</span>
+        <span class="k">return</span> <span class="n">instance</span></div>
+
+
+<div class="viewcode-block" id="Scheduler.open">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.scheduler.Scheduler.open">[docs]</a>
+    <span class="k">def</span> <span class="nf">open</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spider</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spider</span> <span class="o">=</span> <span class="n">spider</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">queue</span> <span class="o">=</span> <span class="n">load_object</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">queue_cls</span><span class="p">)(</span>
+                <span class="n">server</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="p">,</span>
+                <span class="n">spider</span><span class="o">=</span><span class="n">spider</span><span class="p">,</span>
+                <span class="n">key</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">queue_key</span> <span class="o">%</span> <span class="p">{</span><span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="n">spider</span><span class="o">.</span><span class="n">name</span><span class="p">},</span>
+                <span class="n">serializer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">serializer</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="k">except</span> <span class="ne">TypeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Failed to instantiate queue class &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">queue_cls</span><span class="si">}</span><span class="s2">&#39;: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="n">load_object</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dupefilter_cls</span><span class="p">)</span><span class="o">.</span><span class="n">from_spider</span><span class="p">(</span><span class="n">spider</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">flush_on_start</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+        <span class="c1"># notice if there are requests already in the queue to resume the crawl</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="p">):</span>
+            <span class="n">spider</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Resuming crawl (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="p">)</span><span class="si">}</span><span class="s2"> requests scheduled)&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Scheduler.close">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.scheduler.Scheduler.close">[docs]</a>
+    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reason</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">persist</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Scheduler.flush">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.scheduler.Scheduler.flush">[docs]</a>
+    <span class="k">def</span> <span class="nf">flush</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Scheduler.enqueue_request">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.scheduler.Scheduler.enqueue_request">[docs]</a>
+    <span class="k">def</span> <span class="nf">enqueue_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">request</span><span class="o">.</span><span class="n">dont_filter</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">request_seen</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">spider</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">inc_value</span><span class="p">(</span><span class="s2">&quot;scheduler/enqueued/redis&quot;</span><span class="p">,</span> <span class="n">spider</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">spider</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+
+<div class="viewcode-block" id="Scheduler.next_request">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.scheduler.Scheduler.next_request">[docs]</a>
+    <span class="k">def</span> <span class="nf">next_request</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">block_pop_timeout</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">idle_before_close</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">block_pop_timeout</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">request</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">inc_value</span><span class="p">(</span><span class="s2">&quot;scheduler/dequeued/redis&quot;</span><span class="p">,</span> <span class="n">spider</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">spider</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">request</span></div>
+
+
+<div class="viewcode-block" id="Scheduler.has_pending_requests">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.scheduler.Scheduler.has_pending_requests">[docs]</a>
+    <span class="k">def</span> <span class="nf">has_pending_requests</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span></div>
+</div>
+
+</pre></div>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Scrapy-Redis 0.9.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">scrapy_redis.scheduler</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2011-2024, R Max Espinoza.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Scrapy-Redis &#8212; Scrapy-Redis 0.9.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=def86cc0" />
+    
+    <script src="_static/documentation_options.js?v=39bb1c6d"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" />
+    <link rel="prev" title="Welcome to Scrapy-Redis’s documentation!" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="installation.html" title="Installation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Scrapy-Redis’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Scrapy-Redis 0.9.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Scrapy-Redis</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="scrapy-redis">
+<h1>Scrapy-Redis<a class="headerlink" href="#scrapy-redis" title="Link to this heading">¶</a></h1>
+<a class="reference external image-reference" href="https://readthedocs.org/projects/scrapy-redis/?badge=latest"><img alt="Documentation Status" src="https://readthedocs.org/projects/scrapy-redis/badge/?version=latest" />
+</a>
+<a class="reference external image-reference" href="https://pypi.python.org/pypi/scrapy-redis"><img alt="https://img.shields.io/pypi/v/scrapy-redis.svg" src="https://img.shields.io/pypi/v/scrapy-redis.svg" /></a>
+<a class="reference external image-reference" href="https://pypi.python.org/pypi/scrapy-redis"><img alt="https://img.shields.io/pypi/pyversions/scrapy-redis.svg" src="https://img.shields.io/pypi/pyversions/scrapy-redis.svg" /></a>
+<a class="reference external image-reference" href="https://github.com/rmax/scrapy-redis/actions/workflows/builds.yml"><img alt="https://github.com/rmax/scrapy-redis/actions/workflows/builds.yml/badge.svg" src="https://github.com/rmax/scrapy-redis/actions/workflows/builds.yml/badge.svg" /></a>
+<a class="reference external image-reference" href="https://github.com/rmax/scrapy-redis/actions/workflows/checks.yml"><img alt="https://github.com/rmax/scrapy-redis/actions/workflows/checks.yml/badge.svg" src="https://github.com/rmax/scrapy-redis/actions/workflows/checks.yml/badge.svg" /></a>
+<a class="reference external image-reference" href="https://github.com/rmax/scrapy-redis/actions/workflows/tests.yml"><img alt="https://github.com/rmax/scrapy-redis/actions/workflows/tests.yml/badge.svg" src="https://github.com/rmax/scrapy-redis/actions/workflows/tests.yml/badge.svg" /></a>
+<a class="reference external image-reference" href="https://codecov.io/github/rmax/scrapy-redis"><img alt="Coverage Status" src="https://codecov.io/github/rmax/scrapy-redis/coverage.svg?branch=master" />
+</a>
+<a class="reference external image-reference" href="https://github.com/rmax/scrapy-redis"><img alt="Security Status" src="https://img.shields.io/badge/security-bandit-green.svg" /></a>
+<p>Redis-based components for Scrapy.</p>
+<ul class="simple">
+<li><p>Usage: <a class="reference external" href="https://github.com/rmax/scrapy-redis/wiki/Usage">https://github.com/rmax/scrapy-redis/wiki/Usage</a></p></li>
+<li><p>Documentation: <a class="reference external" href="https://github.com/rmax/scrapy-redis/wiki">https://github.com/rmax/scrapy-redis/wiki</a>.</p></li>
+<li><p>Release: <a class="reference external" href="https://github.com/rmax/scrapy-redis/wiki/History">https://github.com/rmax/scrapy-redis/wiki/History</a></p></li>
+<li><p>Contribution: <a class="reference external" href="https://github.com/rmax/scrapy-redis/wiki/Getting-Started">https://github.com/rmax/scrapy-redis/wiki/Getting-Started</a></p></li>
+<li><p>LICENSE: MIT license</p></li>
+</ul>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Link to this heading">¶</a></h2>
+<ul>
+<li><p>Distributed crawling/scraping</p>
+<blockquote>
+<div><p>You can start multiple spider instances that share a single redis queue.
+Best suitable for broad multi-domain crawls.</p>
+</div></blockquote>
+</li>
+<li><p>Distributed post-processing</p>
+<blockquote>
+<div><p>Scraped items gets pushed into a redis queued meaning that you can start as
+many as needed post-processing processes sharing the items queue.</p>
+</div></blockquote>
+</li>
+<li><p>Scrapy plug-and-play components</p>
+<blockquote>
+<div><p>Scheduler + Duplication Filter, Item Pipeline, Base Spiders.</p>
+</div></blockquote>
+</li>
+<li><p>In this forked version: added <code class="docutils literal notranslate"><span class="pre">json</span></code> supported data in Redis</p>
+<blockquote>
+<div><p>data contains <code class="docutils literal notranslate"><span class="pre">url</span></code>, <code class="docutils literal notranslate"><span class="pre">`meta`</span></code> and other optional parameters. <code class="docutils literal notranslate"><span class="pre">meta</span></code> is a nested json which contains sub-data.
+this function extract this data and send another FormRequest with <code class="docutils literal notranslate"><span class="pre">url</span></code>, <code class="docutils literal notranslate"><span class="pre">meta</span></code> and addition <code class="docutils literal notranslate"><span class="pre">formdata</span></code>.</p>
+<p>For example:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://exaple.com&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;meta&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;job-id&quot;</span><span class="p">:</span><span class="s2">&quot;123xsd&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;start-date&quot;</span><span class="p">:</span><span class="s2">&quot;dd/mm/yy&quot;</span><span class="p">},</span><span class="w"> </span><span class="nt">&quot;url_cookie_key&quot;</span><span class="p">:</span><span class="s2">&quot;fertxsas&quot;</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>this data can be accessed in <cite>scrapy spider</cite> through response.
+like: <cite>request.url</cite>, <cite>request.meta</cite>, <cite>request.cookies</cite></p>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This features cover the basic case of distributing the workload across multiple workers. If you need more features like URL expiration, advanced URL prioritization, etc., we suggest you to take a look at the <a class="reference external" href="https://github.com/scrapinghub/frontera">Frontera</a> project.</p>
+</div>
+</section>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Python 3.7+</p></li>
+<li><p>Redis &gt;= 5.0</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Scrapy</span></code> &gt;=  2.0</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redis-py</span></code> &gt;= 4.0</p></li>
+</ul>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
+<p>From pip</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>scrapy-redis
+</pre></div>
+</div>
+<p>From GitHub</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/darkrho/scrapy-redis.git
+<span class="nb">cd</span><span class="w"> </span>scrapy-redis
+python<span class="w"> </span>setup.py<span class="w"> </span>install
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For using this json supported data feature, please make sure you have not installed the scrapy-redis through pip. If you already did it, you first uninstall that one.</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>uninstall<span class="w"> </span>scrapy-redis
+</pre></div>
+</div>
+</section>
+<section id="alternative-choice">
+<h2>Alternative Choice<a class="headerlink" href="#alternative-choice" title="Link to this heading">¶</a></h2>
+<p><a class="reference external" href="https://github.com/scrapinghub/frontera">Frontera</a>  is a web crawling framework consisting of <a class="reference external" href="http://nlp.stanford.edu/IR-book/html/htmledition/the-url-frontier-1.html">crawl frontier</a>, and distribution/scaling primitives, allowing to build a large scale online web crawler.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Scrapy-Redis</a><ul>
+<li><a class="reference internal" href="#features">Features</a></li>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#alternative-choice">Alternative Choice</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="index.html"
+                          title="previous chapter">Welcome to Scrapy-Redis’s documentation!</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="installation.html"
+                          title="next chapter">Installation</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/readme.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="installation.html" title="Installation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Scrapy-Redis’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Scrapy-Redis 0.9.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Scrapy-Redis</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2011-2024, R Max Espinoza.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scrapy_redis.dupefilter &#8212; Scrapy-Redis 0.9.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=def86cc0" />
+    
+    <script src="../../_static/documentation_options.js?v=39bb1c6d"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Scrapy-Redis 0.9.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">scrapy_redis.dupefilter</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for scrapy_redis.dupefilter</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">hashlib</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="kn">from</span> <span class="nn">scrapy.dupefilters</span> <span class="kn">import</span> <span class="n">BaseDupeFilter</span>
+<span class="kn">from</span> <span class="nn">scrapy.utils.python</span> <span class="kn">import</span> <span class="n">to_unicode</span>
+<span class="kn">from</span> <span class="nn">w3lib.url</span> <span class="kn">import</span> <span class="n">canonicalize_url</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">defaults</span>
+<span class="kn">from</span> <span class="nn">.connection</span> <span class="kn">import</span> <span class="n">get_redis_from_settings</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<span class="c1"># TODO: Rename class to RedisDupeFilter.</span>
+<div class="viewcode-block" id="RFPDupeFilter">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.dupefilter.RFPDupeFilter">[docs]</a>
+<span class="k">class</span> <span class="nc">RFPDupeFilter</span><span class="p">(</span><span class="n">BaseDupeFilter</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Redis-based request duplicates filter.</span>
+
+<span class="sd">    This class can also be used with default Scrapy&#39;s scheduler.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">logger</span> <span class="o">=</span> <span class="n">logger</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">server</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the duplicates filter.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        server : redis.StrictRedis</span>
+<span class="sd">            The redis server instance.</span>
+<span class="sd">        key : str</span>
+<span class="sd">            Redis key Where to store fingerprints.</span>
+<span class="sd">        debug : bool, optional</span>
+<span class="sd">            Whether to log filtered requests.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server</span> <span class="o">=</span> <span class="n">server</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">key</span> <span class="o">=</span> <span class="n">key</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="n">debug</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logdupes</span> <span class="o">=</span> <span class="kc">True</span>
+
+<div class="viewcode-block" id="RFPDupeFilter.from_settings">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.dupefilter.RFPDupeFilter.from_settings">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_settings</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">settings</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns an instance from given settings.</span>
+
+<span class="sd">        This uses by default the key ``dupefilter:&lt;timestamp&gt;``. When using the</span>
+<span class="sd">        ``scrapy_redis.scheduler.Scheduler`` class, this method is not used as</span>
+<span class="sd">        it needs to pass the spider name in the key.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        settings : scrapy.settings.Settings</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        RFPDupeFilter</span>
+<span class="sd">            A RFPDupeFilter instance.</span>
+
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">server</span> <span class="o">=</span> <span class="n">get_redis_from_settings</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+        <span class="c1"># XXX: This creates one-time key. needed to support to use this</span>
+        <span class="c1"># class as standalone dupefilter with scrapy&#39;s default scheduler</span>
+        <span class="c1"># if scrapy passes spider on open() method this wouldn&#39;t be needed</span>
+        <span class="c1"># TODO: Use SCRAPY_JOB env as default and fallback to timestamp.</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="n">defaults</span><span class="o">.</span><span class="n">DUPEFILTER_KEY</span> <span class="o">%</span> <span class="p">{</span><span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())}</span>
+        <span class="n">debug</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">getbool</span><span class="p">(</span><span class="s2">&quot;DUPEFILTER_DEBUG&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="n">debug</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RFPDupeFilter.from_crawler">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.dupefilter.RFPDupeFilter.from_crawler">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_crawler</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">crawler</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns instance from crawler.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        crawler : scrapy.crawler.Crawler</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        RFPDupeFilter</span>
+<span class="sd">            Instance of RFPDupeFilter.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">from_settings</span><span class="p">(</span><span class="n">crawler</span><span class="o">.</span><span class="n">settings</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RFPDupeFilter.request_seen">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.dupefilter.RFPDupeFilter.request_seen">[docs]</a>
+    <span class="k">def</span> <span class="nf">request_seen</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns True if request was already seen.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        request : scrapy.http.Request</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        bool</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">fp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">request_fingerprint</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+        <span class="c1"># This returns the number of values added, zero if already exists.</span>
+        <span class="n">added</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">sadd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">key</span><span class="p">,</span> <span class="n">fp</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">added</span> <span class="o">==</span> <span class="mi">0</span></div>
+
+
+<div class="viewcode-block" id="RFPDupeFilter.request_fingerprint">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.dupefilter.RFPDupeFilter.request_fingerprint">[docs]</a>
+    <span class="k">def</span> <span class="nf">request_fingerprint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a fingerprint for a given request.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        request : scrapy.http.Request</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        str</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">fingerprint_data</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="n">to_unicode</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">),</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">canonicalize_url</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">url</span><span class="p">),</span>
+            <span class="s2">&quot;body&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">body</span> <span class="ow">or</span> <span class="sa">b</span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">hex</span><span class="p">(),</span>
+        <span class="p">}</span>
+        <span class="n">fingerprint_json</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">fingerprint_data</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha1</span><span class="p">(</span><span class="n">fingerprint_json</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="RFPDupeFilter.from_spider">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.dupefilter.RFPDupeFilter.from_spider">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_spider</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">spider</span><span class="p">):</span>
+        <span class="n">settings</span> <span class="o">=</span> <span class="n">spider</span><span class="o">.</span><span class="n">settings</span>
+        <span class="n">server</span> <span class="o">=</span> <span class="n">get_redis_from_settings</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+        <span class="n">dupefilter_key</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s2">&quot;SCHEDULER_DUPEFILTER_KEY&quot;</span><span class="p">,</span> <span class="n">defaults</span><span class="o">.</span><span class="n">SCHEDULER_DUPEFILTER_KEY</span>
+        <span class="p">)</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="n">dupefilter_key</span> <span class="o">%</span> <span class="p">{</span><span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="n">spider</span><span class="o">.</span><span class="n">name</span><span class="p">}</span>
+        <span class="n">debug</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">getbool</span><span class="p">(</span><span class="s2">&quot;DUPEFILTER_DEBUG&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="n">debug</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RFPDupeFilter.close">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.dupefilter.RFPDupeFilter.close">[docs]</a>
+    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reason</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete data on close. Called by Scrapy&#39;s scheduler.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        reason : str, optional</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="RFPDupeFilter.clear">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.dupefilter.RFPDupeFilter.clear">[docs]</a>
+    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Clears fingerprints data.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">key</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RFPDupeFilter.log">
+<a class="viewcode-back" href="../../scrapy_redis.html#scrapy_redis.dupefilter.RFPDupeFilter.log">[docs]</a>
+    <span class="k">def</span> <span class="nf">log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">spider</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Logs given request.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        request : scrapy.http.Request</span>
+<span class="sd">        spider : scrapy.spiders.Spider</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Filtered duplicate request: </span><span class="si">%(request)s</span><span class="s2">&quot;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;request&quot;</span><span class="p">:</span> <span class="n">request</span><span class="p">},</span> <span class="n">extra</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="n">spider</span><span class="p">})</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">logdupes</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="s2">&quot;Filtered duplicate request </span><span class="si">%(request)s</span><span class="s2">&quot;</span>
+                <span class="s2">&quot; - no more duplicates will be shown&quot;</span>
+                <span class="s2">&quot; (see DUPEFILTER_DEBUG to show all duplicates)&quot;</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;request&quot;</span><span class="p">:</span> <span class="n">request</span><span class="p">},</span> <span class="n">extra</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="n">spider</span><span class="p">})</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logdupes</span> <span class="o">=</span> <span class="kc">False</span></div>
+</div>
+
+</pre></div>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Scrapy-Redis 0.9.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">scrapy_redis.dupefilter</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2011-2024, R Max Espinoza.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>

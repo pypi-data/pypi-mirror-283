@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>History &#8212; Scrapy-Redis 0.9.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=def86cc0" />
+    
+    <script src="_static/documentation_options.js?v=39bb1c6d"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="installation.html" title="Installation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Scrapy-Redis 0.9.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">History</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="history">
+<h1>History<a class="headerlink" href="#history" title="Link to this heading">¶</a></h1>
+<section id="id1">
+<h2>0.9.0 (2024-07-06)<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed <code class="docutils literal notranslate"><span class="pre">Scheduler</span></code> not compatible with BaseDupeFilter (#294)</p></li>
+<li><p>Added precommit hooks.</p></li>
+<li><p>Switched to Python 3.12 as default build version.</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>0.8.0 (2024-07-03)<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed request fingerprint method.</p></li>
+<li><p>Fixed support for Scrapy 2.6+.</p></li>
+<li><p>Fixed tox tests and github workflow.</p></li>
+<li><p>Deprecated <code class="docutils literal notranslate"><span class="pre">REDIS_START_URLS_BATCH_SIZE</span></code>.</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>0.7.3 (2022-07-21)<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Move docs to GitHub Wiki</p></li>
+<li><p>Update tox and support dynamic tests</p></li>
+<li><p>Update support for json data</p></li>
+<li><p>Refactor max idle time</p></li>
+<li><p>Add support for python3.7~python3.10</p></li>
+<li><p>Deprecate python2.x support</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>0.7.2 (2021-12-27)<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix RedisStatsCollector._get_key()</p></li>
+<li><p>Fix redis-py dependency version</p></li>
+<li><p>Added maximum idle waiting time MAX_IDLE_TIME_BEFORE_CLOSE</p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>0.7.1 (2021-03-27)<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fixes datetime parse error for redis-py 3.x.</p></li>
+<li><p>Add support for stats extensions.</p></li>
+</ul>
+</section>
+<section id="rc1-2021-03-27">
+<h2>0.7.1-rc1 (2021-03-27)<a class="headerlink" href="#rc1-2021-03-27" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fixes datetime parse error for redis-py 3.x.</p></li>
+</ul>
+</section>
+<section id="b1-2021-03-22">
+<h2>0.7.1-b1 (2021-03-22)<a class="headerlink" href="#b1-2021-03-22" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Add support for stats extensions.</p></li>
+</ul>
+</section>
+<section id="dev-unreleased">
+<h2>0.7.0-dev (unreleased)<a class="headerlink" href="#dev-unreleased" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Unreleased.</p></li>
+</ul>
+</section>
+<section id="id6">
+<h2>0.6.8 (2017-02-14)<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed automated release due to not matching registered email.</p></li>
+</ul>
+</section>
+<section id="id7">
+<h2>0.6.7 (2016-12-27)<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fixes bad formatting in logging message.</p></li>
+</ul>
+</section>
+<section id="id8">
+<h2>0.6.6 (2016-12-20)<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fixes wrong message on dupefilter duplicates.</p></li>
+</ul>
+</section>
+<section id="id9">
+<h2>0.6.5 (2016-12-19)<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed typo in default settings.</p></li>
+</ul>
+</section>
+<section id="id10">
+<h2>0.6.4 (2016-12-18)<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed data decoding in Python 3.x.</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">REDIS_ENCODING</span></code> setting (default <code class="docutils literal notranslate"><span class="pre">utf-8</span></code>).</p></li>
+<li><p>Default to <code class="docutils literal notranslate"><span class="pre">CONCURRENT_REQUESTS</span></code> value for <code class="docutils literal notranslate"><span class="pre">REDIS_START_URLS_BATCH_SIZE</span></code>.</p></li>
+<li><p>Renamed queue classes to a proper naming conventiong (backwards compatible).</p></li>
+</ul>
+</section>
+<section id="id11">
+<h2>0.6.3 (2016-07-03)<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">REDIS_START_URLS_KEY</span></code> setting.</p></li>
+<li><p>Fixed spider method <code class="docutils literal notranslate"><span class="pre">from_crawler</span></code> signature.</p></li>
+</ul>
+</section>
+<section id="id12">
+<h2>0.6.2 (2016-06-26)<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Support <code class="docutils literal notranslate"><span class="pre">redis_cls</span></code> parameter in <code class="docutils literal notranslate"><span class="pre">REDIS_PARAMS</span></code> setting.</p></li>
+<li><p>Python 3.x compatibility fixed.</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">SCHEDULER_SERIALIZER</span></code> setting.</p></li>
+</ul>
+</section>
+<section id="id13">
+<h2>0.6.1 (2016-06-25)<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Backwards incompatible change:</strong> Require explicit <code class="docutils literal notranslate"><span class="pre">DUPEFILTER_CLASS</span></code>
+setting.</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">SCHEDULER_FLUSH_ON_START</span></code> setting.</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">REDIS_START_URLS_AS_SET</span></code> setting.</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">REDIS_ITEMS_KEY</span></code> setting.</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">REDIS_ITEMS_SERIALIZER</span></code> setting.</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">REDIS_PARAMS</span></code> setting.</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">REDIS_START_URLS_BATCH_SIZE</span></code> spider attribute to read start urls
+in batches.</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">RedisCrawlSpider</span></code>.</p></li>
+</ul>
+</section>
+<section id="id14">
+<h2>0.6.0 (2015-07-05)<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Updated code to be compatible with Scrapy 1.0.</p></li>
+<li><p>Added <cite>-a domain=…</cite> option for example spiders.</p></li>
+</ul>
+</section>
+<section id="id15">
+<h2>0.5.0 (2013-09-02)<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added <cite>REDIS_URL</cite> setting to support Redis connection string.</p></li>
+<li><p>Added <cite>SCHEDULER_IDLE_BEFORE_CLOSE</cite> setting to prevent the spider closing too
+quickly when the queue is empty. Default value is zero keeping the previous
+behavior.</p></li>
+<li><p>Schedule preemptively requests on item scraped.</p></li>
+<li><p>This version is the latest release compatible with Scrapy 0.24.x.</p></li>
+</ul>
+</section>
+<section id="id16">
+<h2>0.4.0 (2013-04-19)<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added <cite>RedisSpider</cite> and <cite>RedisMixin</cite> classes as building blocks for spiders
+to be fed through a redis queue.</p></li>
+<li><p>Added redis queue stats.</p></li>
+<li><p>Let the encoder handle the item as it comes instead converting it to a dict.</p></li>
+</ul>
+</section>
+<section id="id17">
+<h2>0.3.0 (2013-02-18)<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added support for different queue classes.</p></li>
+<li><p>Changed requests serialization from <cite>marshal</cite> to <cite>cPickle</cite>.</p></li>
+</ul>
+</section>
+<section id="id18">
+<h2>0.2.0 (2013-02-17)<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Improved backward compatibility.</p></li>
+<li><p>Added example project.</p></li>
+</ul>
+</section>
+<section id="id19">
+<h2>0.1.0 (2011-09-01)<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>First release on PyPI.</p></li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">History</a><ul>
+<li><a class="reference internal" href="#id1">0.9.0 (2024-07-06)</a></li>
+<li><a class="reference internal" href="#id2">0.8.0 (2024-07-03)</a></li>
+<li><a class="reference internal" href="#id3">0.7.3 (2022-07-21)</a></li>
+<li><a class="reference internal" href="#id4">0.7.2 (2021-12-27)</a></li>
+<li><a class="reference internal" href="#id5">0.7.1 (2021-03-27)</a></li>
+<li><a class="reference internal" href="#rc1-2021-03-27">0.7.1-rc1 (2021-03-27)</a></li>
+<li><a class="reference internal" href="#b1-2021-03-22">0.7.1-b1 (2021-03-22)</a></li>
+<li><a class="reference internal" href="#dev-unreleased">0.7.0-dev (unreleased)</a></li>
+<li><a class="reference internal" href="#id6">0.6.8 (2017-02-14)</a></li>
+<li><a class="reference internal" href="#id7">0.6.7 (2016-12-27)</a></li>
+<li><a class="reference internal" href="#id8">0.6.6 (2016-12-20)</a></li>
+<li><a class="reference internal" href="#id9">0.6.5 (2016-12-19)</a></li>
+<li><a class="reference internal" href="#id10">0.6.4 (2016-12-18)</a></li>
+<li><a class="reference internal" href="#id11">0.6.3 (2016-07-03)</a></li>
+<li><a class="reference internal" href="#id12">0.6.2 (2016-06-26)</a></li>
+<li><a class="reference internal" href="#id13">0.6.1 (2016-06-25)</a></li>
+<li><a class="reference internal" href="#id14">0.6.0 (2015-07-05)</a></li>
+<li><a class="reference internal" href="#id15">0.5.0 (2013-09-02)</a></li>
+<li><a class="reference internal" href="#id16">0.4.0 (2013-04-19)</a></li>
+<li><a class="reference internal" href="#id17">0.3.0 (2013-02-18)</a></li>
+<li><a class="reference internal" href="#id18">0.2.0 (2013-02-17)</a></li>
+<li><a class="reference internal" href="#id19">0.1.0 (2011-09-01)</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="installation.html"
+                          title="previous chapter">Installation</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/history.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="installation.html" title="Installation"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Scrapy-Redis 0.9.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">History</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2011-2024, R Max Espinoza.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>
