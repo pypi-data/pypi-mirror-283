@@ -1,0 +1,24 @@
+pdfp/button_widget.py,sha256=eJyHPmqeJ2hlzpuT8LC0dNMBLHn0cGZ3XrRncxA8ZLA,7515
+pdfp/file_tree_widget.py,sha256=HH87eWCQt9X6QN4ytNHTHUIU393HbL7HKk81c7NmK3A,2882
+pdfp/fonts/DejaVu Fonts License.txt,sha256=ow8kZqlc0erv9gQWkvQ0ae3MoFLQAuh3AVqBnG4xwZQ,4765
+pdfp/fonts/DejaVuSans.ttf,sha256=faGVp0xVvvmI0NSPlQi9XYSUJcF3Dbpde_xs6e2EiVQ,757076
+pdfp/images/logo.ico,sha256=3340Ct6vvFy4gLDCVlzrAXfill4c-Wj7FfkcBRBo2_w,67646
+pdfp/log_widget.py,sha256=ri0QarRLw44CQQM1-US6znRr4k5nw8w_e5-nTCXGGVs,1778
+pdfp/main.py,sha256=EzcSfPIJWtTUfrBmNgHc9gcGIA8k836jlMLWRkjiWZ0,452
+pdfp/main_window.py,sha256=exAHBwNdOgf6LSwhZCdtFDPAkZyyMUNGWXuRUDrGItw,3900
+pdfp/operations/clean_copy.py,sha256=DueaB23D-6ERkIHX2nEaXnGV8kZGkUJ5OgJLn_R0I-U,3250
+pdfp/operations/crop.py,sha256=OJI4RNg2WSA6JeDMkTk4zC2Tgf3rRa8A5RqkQ7zUmT8,1791
+pdfp/operations/epub.py,sha256=DS7oCLyUNjzQp3MS-vpus9qV4BiGzkYEQ0gGQEhJ77Y,1382
+pdfp/operations/ocr.py,sha256=n3vonPa3wxJg4rPL3WK3Qau49nFbQN85ODdWux7Anqg,1098
+pdfp/operations/png.py,sha256=lbhvVdx7Kw49ckh63-CB8E2zWj8i62wUzyrkFA0N4FY,1199
+pdfp/operations/rm_pages.py,sha256=aKod4ymHStPfo-8xjS8c0WPytAHJ-YvXNdGyFLXYMeI,2410
+pdfp/operations/tts.py,sha256=nA-Ncza0kvMlL2BbCI9xxk_E_8GPU3JbOwNghT9_UXA,3375
+pdfp/operations/txt2pdf.py,sha256=S5J3aPHe-fd5q2Ml0suhQ1lvp8Y9b1SYGqPrvcFcU6k,1926
+pdfp/settings_window.py,sha256=guV_eHFGbYTTCTY60BaDQS4AsRgItoZX11JItTzi4o4,21994
+pdfp/utils/command_installed.py,sha256=aWi8aDBC8jxmZqvtnWzXFWpXGBjXJlw9wom3KT8SmAo,499
+pdfp/utils/filename_constructor.py,sha256=xUMnfn4m0wVApUc8Skv0gigDGbieaEeVHtAQNJIhymM,2004
+pdfp-0.0.3.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+pdfp-0.0.3.dist-info/METADATA,sha256=GDu5QjDbGCevQFNAisG1mfrqvA_W5ntyFrSwac9szrI,2256
+pdfp-0.0.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pdfp-0.0.3.dist-info/entry_points.txt,sha256=W16KwA0ZSa6SSYD4HaJflTjTPAMIP-fEUib9Jm_V0Bw,39
+pdfp-0.0.3.dist-info/RECORD,,
