@@ -1,0 +1,2 @@
+[console_scripts]
+OCR_with_format = OCR_with_format.__init__:cli
