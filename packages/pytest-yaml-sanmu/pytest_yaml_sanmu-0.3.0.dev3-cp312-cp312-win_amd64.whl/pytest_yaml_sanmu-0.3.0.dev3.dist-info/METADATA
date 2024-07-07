@@ -1,0 +1,193 @@
+Metadata-Version: 2.1
+Name: pytest-yaml-sanmu
+Version: 0.3.0.dev3
+Summary: pytest plugin for generating test cases by yaml
+License: Apache-2.0
+Author-email: dongfangtianyu <7629022+dongfangtianyu@users.noreply.github.com>
+Requires-Python: >=3.12
+Requires-Dist: allure-pytest>=2.13.0
+Requires-Dist: jsonschema>=4.21.1
+Requires-Dist: pydantic<3,>=2.0
+Requires-Dist: pytest~=8.2.2
+Requires-Dist: pyyaml-include~=1.3.1
+Requires-Dist: pyyaml~=6.0.1
+Project-URL: Homepage, https://github.com/dongfangtianyu/pytest-yaml-sanmu
+Description-Content-Type: text/markdown
+
+# pytest-yaml-sanmu
+
+pytest plugin for generating test cases by yaml files.
+
+
+
+
+
+## Require
+
+```
+python~=3.12
+pytest~=8.2
+pyyaml~=6.0
+pyyaml-include~=1.3.1
+```
+
+
+
+
+
+
+## Install
+```
+pip install pytest-yaml-sanmu
+```
+
+
+
+## Config
+
+```ini
+# pytest.ini
+
+[pytest]
+# To execute YAML files starting with "test_"
+run_yaml_case = 1 
+```
+
+
+
+## Usage
+
+### 1. Write tests
+
+```yaml
+# test_api.yaml
+
+test_name: fetch baidu # Each test case has a name
+steps:                 # Each test case has multiple steps
+
+  - request:           # steps 1: send request
+      method: get
+      url: https://www.baidu.com
+
+  - response:          # steps 2: assert response
+      status_code: 200
+      text: "*baidu*"
+
+```
+
+
+### 2. Write Hook
+
+```python
+# conftest.py
+
+import requests
+import responses_validator
+
+
+def pytest_yaml_run_step(item):
+    step = item.current_step
+    request = step.get('request')
+    response = step.get('response')
+
+    if request:
+        print(f'url={request["url"]}')
+        item.resp = requests.request(**request)
+
+    if response:
+        responses_validator.validator(item.resp, **response)
+
+    return True
+
+```
+
+
+
+
+
+
+### 3. Run pytest
+
+```
+(.venv) ~/pytest-yaml-demo>pytest
+================== test session starts ==================
+platform win32 -- Python 3.12.2, pytest-8.2.2, pluggy-1.5.0
+rootdir: ~/pytest-yaml-demo
+configfile: pytest.ini
+plugins: allure-pytest-2.13.5, yaml-0.3.0.dev3
+collected 1 item                                                                                 
+
+test_api.yaml .                            [100%]
+
+================== 1 passed in 0.22s ================== 
+```
+
+
+
+### 4.  More tests
+
+
+
+```yaml
+# tests/test_mark_parametrize.yaml
+
+test_name: parametrize
+mark:
+  - parametrize:
+      - n
+      - [1,2,3]
+steps:
+  - request:
+      method: get
+      url: https://baidu.com?o=${n}
+
+```
+
+
+
+
+
+```yaml
+# tests/test_ddt.yaml
+test_name: ddt
+mark:
+  - parametrize:
+      - n
+      - !include ddt_n.yaml
+steps:
+  - request:
+      method: get
+      url: https://baidu.com?o=${n}
+
+```
+
+
+
+```yaml
+# tests/test_mark_skip.yaml
+
+test_name: skip
+mark:
+  - skip
+steps:
+  - request:
+      method: get
+      url: https://www.baidu.com
+
+```
+
+
+
+```yaml
+# tests/test_mark_usefixtures_values.yaml
+test_name: usefixtures
+mark:
+  - usefixtures:
+      - base_url
+steps:
+  - request:
+      method: get
+      url: ${base_url}/abc.html
+```
+
+
