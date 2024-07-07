@@ -1,0 +1,15 @@
+tokre/.DS_Store,sha256=eqZ-38x6n9xC6p-cK2WeS_-D16uK8r-advQMJ3pxgTQ,6148
+tokre/__init__.py,sha256=_AvoNaOgjG_glvZgjfYWm4uAV3ckgsRB6avW_Me7MyA,1241
+tokre/setup_workspace.py,sha256=thTDkwow7VOqgVd2XlkcfoCwB5KEGCviP1cmjTeRGrY,2089
+tokre/synth_feat.py,sha256=4xup40ZSeqRTzB6PMbrCIP4Ywp4CawHVhRWXOBQqFDA,17344
+tokre/temp/.tokenizer_hash,sha256=h0h7A_1UHihk8WdZlwd_MaIlAa7IT86wOFL4L39OkXY,32
+tokre/tok_labelling/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tokre/tok_labelling/create_tok_label.py,sha256=aVCXeG3l4Kna1APpAtSsllnanH0m0-Uewqr7UFBzDpc,7805
+tokre/tok_labelling/query_openai.py,sha256=rGq2_VYElKS6FR3C36rLfUT_ezZiYSUGlo14s3QMQB8,1159
+tokre/tokre_core/faster_matcher.py,sha256=eNSfQVJsiCAAr84oxDju69WLIU75NZL62pKbFpBwb9A,9922
+tokre/tokre_core/get_nfa.py,sha256=S0Mf8l0aKXW3ZTx-bUQoOjFQ4KbFwz0RFOUb3yAH-6A,28890
+tokre/tokre_core/parse.py,sha256=s3k6KNGV3ykQ85I83ctHsd_S5QlqAfKPnHzSJKVmJM8,23009
+tokre/utils.py,sha256=KSTbDnjzDcrrNt8VHvze_OLvkQnbaxvhOGfr2ocYHkI,3984
+tokre-0.1.0.post20.dist-info/METADATA,sha256=RKifJo1Kye6O10_2n9q2R9i-4_PZFh5L7yrEjze5SGk,627
+tokre-0.1.0.post20.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+tokre-0.1.0.post20.dist-info/RECORD,,
