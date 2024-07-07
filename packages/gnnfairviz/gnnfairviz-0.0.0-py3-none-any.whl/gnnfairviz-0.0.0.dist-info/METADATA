@@ -1,0 +1,114 @@
+Metadata-Version: 2.1
+Name: gnnfairviz
+Version: 0.0.0
+Summary: Official implementation of GNNFairViz
+Author-email: Xinwu Ye <yexw0403@foxmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 Xinwu Ye
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Keywords: fairness,visual analysis,graph neural networks,Jupyter notebook
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy >=1.26.2
+Requires-Dist: holoviews >=1.16.2
+Requires-Dist: torch >=2.0.1
+Requires-Dist: dgl >=1.1.1
+Requires-Dist: pandas >=1.5.3
+Requires-Dist: panel >=1.2.0
+Requires-Dist: shapely
+Requires-Dist: scikit-learn >=1.3.0
+Requires-Dist: umap-learn >=0.5.5
+Requires-Dist: scipy >=1.11.4
+Requires-Dist: tqdm >=4.65.0
+Requires-Dist: bokeh >=3.1.1
+Requires-Dist: matplotlib >=3.7.1
+
+# GNNFairViz
+
+![Build Status](https://github.com/xinwuye/GNNFairViz/actions/workflows/python-publish.yml/badge.svg) ![License](https://img.shields.io/github/license/xinwuye/GNNFairViz)
+
+## Overview
+
+GNNFairViz is a visualization tool designed to provide insights into the fairness of Graph Neural Networks from the perspective of data. 
+
+## Installation
+
+You can install GNNFairViz using pip or from source.
+
+### Using pip
+
+```bash
+pip install GNNFairViz
+```
+
+### From Source
+
+```bash
+git clone https://github.com/xinwuye/GNNFairViz.git
+cd GNNFairViz
+pip install .
+```
+
+## Usage
+
+Examples of how to use the package can be found in the `evaluation/cases` folder.
+
+## Features
+
+- Support customizing and inspecting fairness through various
+viewpoints.
+- Provide clues and interactions for node selection to analyze how
+they affect model bias.
+- Allow diagnosing GNN fairness issues in an interactive manner.
+
+## Contributing
+
+We welcome contributions! Follow these steps to set up your development environment and contribute to the project.
+
+### Setting Up the Development Environment
+
+```bash
+git clone https://github.com/xinwuye/GNNFairViz.git
+cd GNNFairViz
+poetry install
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For questions or support, please contact:
+
+- **Email**: xwye23@m.fudan.edu.cn
+- **GitHub Issues**: [GitHub Issues](https://github.com/xinwuye/GNNFairViz/issues)
+
+## Credits
+
+This project uses and adapts code from the following repositories:
+
+- [CSC591_Community_Detection by imabhishekl](https://github.com/imabhishekl/CSC591_Community_Detection)
+- [NoLiES by leitte](https://github.com/leitte/NoLiES)
+- [PyGDebias by yushundong](https://github.com/yushundong/PyGDebias)

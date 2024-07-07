@@ -1,0 +1,15 @@
+gnnfairviz/RangesetCategorical.py,sha256=5hrxHEZxMlZfxJR-Dh4FvDXiyP7-joZMM94Q0Q0kfds,2929
+gnnfairviz/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gnnfairviz/community.py,sha256=LBiq6QRNZvXzh3wDqr8hrtxHykT620cuoH_1-KDTsa4,4773
+gnnfairviz/css.py,sha256=EnEI2FX8gK5Yk85bsGC37-ZVVUShHuMMLX62lY6J-9Q,751
+gnnfairviz/draw.py,sha256=vKyn0ro4vRObLQxkKQAE3armo1kTV0P6qFvvmGUHf6E,38767
+gnnfairviz/eug.py,sha256=F8YPKFqTE5xNMsgHhKuhbQHNaCV3LSo6cjuljNw74ms,74468
+gnnfairviz/individual_bias.py,sha256=iFs51P3GtBuC-dlsp3dcz_wmfNFmMpyzL3OWznHsZXY,9049
+gnnfairviz/util.py,sha256=LcsYZRVdc0KYj8sOFU09YAbBFA16wENSxEpbsFWPJdg,9894
+gnnfairviz/metrics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gnnfairviz/metrics/node_classification.py,sha256=G3WDy3cC_yY0oih_DF_msRBKyIuuiLryXYkSSb2qGqQ,15920
+gnnfairviz-0.0.0.dist-info/LICENSE,sha256=f8-dGoBx8UlsXkwJu-ti2mJh7nGwrMQFekIFsX8kVZw,1065
+gnnfairviz-0.0.0.dist-info/METADATA,sha256=vfBet3l-o9Dy21KdJw1A5xvbrKPgWYRrDOeCIzMe6WQ,3780
+gnnfairviz-0.0.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+gnnfairviz-0.0.0.dist-info/top_level.txt,sha256=PJbgHol_SgT8VW5PwY3AjjnGq0NXbilYK8RDjGVovFI,11
+gnnfairviz-0.0.0.dist-info/RECORD,,
