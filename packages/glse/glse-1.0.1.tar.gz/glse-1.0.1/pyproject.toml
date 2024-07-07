@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "glse"
+version = "1.0.1"
+description = "A GUI editor for GraphingLib style files"
+license = "MIT"
+authors = [
+    "Gustave Coulombe <magikgus@gmail.com>",
+    "Yannick Lapointe <yannicklapointe77@gmail.com>",
+]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+requests = "^2.31.0"
+setuptools-scm = "^8.0.4"
+qt-material = "^2.14"
+pyside6 = "^6.7.1"
+graphinglib = "~1.5.0"
+
+[tool.poetry.scripts]
+glse = "glse.cli:main"
+
+[tool.poetry.group.dev.dependencies]
+sphinx = "^7.3.7"
+pydata-sphinx-theme = "^0.15.3"
+sphinx-favicon = "^1.0.1"
+sphinx-design = "^0.6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
