@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+secure_encryption/__init__.py
+secure_encryption/crypto_service.py
+secure_encryption.egg-info/PKG-INFO
+secure_encryption.egg-info/SOURCES.txt
+secure_encryption.egg-info/dependency_links.txt
+secure_encryption.egg-info/requires.txt
+secure_encryption.egg-info/top_level.txt
+secure_encryption/__pycache__/__init__.cpython-312.pyc
+secure_encryption/__pycache__/crypto_service.cpython-312.pyc
+tests/test_crypto_service.py
+tests/__pycache__/test_crypto_service.cpython-312.pyc
