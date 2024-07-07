@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "tokre"
+version = "0.1.0-26"
+description = ""
+authors = ["Noa Nabeshima <noanabeshima@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11.0, <=3.11.9"
+lark = "^1.1.9"
+ipykernel = "^6.29.4"
+backoff = "^2.2.1"
+openai = "^1.32.0"
+numpy = "^1.26.4"
+regex = "^2024.5.15"
+ray = "^2.24.0"
+schedulefree = "^1.2.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
