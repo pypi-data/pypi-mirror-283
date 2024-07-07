@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+gvision/GVISION_AUTOMATION.py
+gvision/__init__.py
+gvision/cli.py
+gvision.egg-info/PKG-INFO
+gvision.egg-info/SOURCES.txt
+gvision.egg-info/dependency_links.txt
+gvision.egg-info/entry_points.txt
+gvision.egg-info/requires.txt
+gvision.egg-info/top_level.txt
+gvision/pages/2_Object_Detection_Demo.py
+gvision/pages/3_Classification_or_Pose_Demo.py
