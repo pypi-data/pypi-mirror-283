@@ -1,0 +1,6 @@
+Flask
+Flask-Markdown
+Flask-Misaka
+nltk
+pyparsing
+python-markdown-math
