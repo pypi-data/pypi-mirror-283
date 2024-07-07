@@ -1,0 +1,11 @@
+chemlibmgr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chemlibmgr/analyse.py,sha256=r3W0X8uXqwZr-dGZOaPDR1YMn_-rAhDP-UmlLh4XK3g,6948
+chemlibmgr/config.py,sha256=RjxVRAllScDyASWuOsWpXAM2smpHnfnbghACI6GRo3M,191
+chemlibmgr/db.py,sha256=lIvwh2e75-9VxDAYe2z9VXlI2NK05rsiOrt09_s3v6M,3633
+chemlibmgr/io.py,sha256=eASIJ91IzycNX_UoVdQsCQOVEySS1w-28bxtprRiFcc,2498
+chemlibmgr/manager.py,sha256=88h7Ur5M4boOkkhneYyYui6bUDaVyUz-4Q5J3_VvZLw,2365
+chemlibmgr-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+chemlibmgr-0.0.1.dist-info/METADATA,sha256=APsFz5VrExKhDWFioNpeginiv80Syu8_yT0k92FKD2E,1987
+chemlibmgr-0.0.1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+chemlibmgr-0.0.1.dist-info/top_level.txt,sha256=ushAlfienZoQ-iX7DNDjntIP0-27MjBThQRUEh0a9KM,11
+chemlibmgr-0.0.1.dist-info/RECORD,,
