@@ -1,0 +1,59 @@
+# Xgua - Logger with saving logs to s3 storage
+
+## Save files to the vault to fix bugs and improve your product!
+
+----------
+
+### Quick Startup
+
+```python
+import asyncio
+from Xgua.config import Config, S3Config
+from Xgua.logger import Logger
+
+s3 = S3Config("access_key", "secret_key", "endpoint_url", "bucket_name")
+config = Config(s3)
+logger = Logger(config)
+
+async def main():
+	try:
+		"0" + 1
+	except Exception as e:
+		await logger.log(e)
+
+asyncio.run(main())
+```
+
+----------
+
+### Configuration
+
+| Argument | README |
+| ------ | ------ |
+| access_key | Get after adding a serialized user |
+| secret_key | Get after adding a serialized user |
+| endpoint_url | If you haven't enabled "Virtual-Hosted Addressing", then https://s3.storage.selcloud.ru or else name-container.s3.storage.selcloud.ru |
+| bucket_name | The name of the container at creation. |
+
+#### How do I get all the parameters?
+
+Through the side navigation block go to "Access Control" -> Next tab "Service Users" and add a new user.
+
+[Fast open "Access Control"](https://my.selectel.ru/iam/users_management/users?type=service&create=false)
+
+#### How do you create a container?
+
+Using the navigation box on the right, navigate to "Cloud Storage" and click on the "Create Container" button
+
+![View Photo](https://github.com/SikWeet/Xgua/assets/124031984/5d9a34b1-cf7c-480b-b6a7-b38051a97b92)
+
+
+[Fast Open "Storage"](https://my.selectel.ru/storage)
+
+#### Config
+
+Now substitute your values by key
+
+```python
+s3 = S3Config("access_key", "secret_key", "endpoint_url", "bucket_name")
+```
