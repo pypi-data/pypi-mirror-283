@@ -1,0 +1,12 @@
+jgdtrans/__init__.py,sha256=KNFloFeLyL1hKgyerazHcMMsr3bYpvQ-A6IDXm8XYlI,821
+jgdtrans/dms.py,sha256=5vEqlB-7gS-YLPz6CheBYIxaZE0c10yStlQlQJzAjSE,9665
+jgdtrans/error.py,sha256=3EAC50cFF0RUODxWX1q6kxd-1jtmDVNsA-EJbtfvC_E,749
+jgdtrans/mesh.py,sha256=vGjN2oAxuOc0r3XpGyquyJ3KAyfennWann5oRhVYJEA,35970
+jgdtrans/par.py,sha256=64uAMjlMkDLs14Wpxylk-8NFXlVa2lAZBHy6uIUTTPU,8285
+jgdtrans/point.py,sha256=9ouT67KdhOlU8FEgKw7KAb0VL5DxOHTMhtekFazXyIA,11624
+jgdtrans/transformer.py,sha256=p3amCVj9GetfWSA3P1pIPvxuDMd-1cltqic-iEodA_0,33935
+jgdtrans/types.py,sha256=O0a08GDzg0bRRnL5TkoVPEXXELlsLWJ7_7XKmzwqzwc,2440
+jgdtrans-0.2.1.dist-info/METADATA,sha256=WruS1lj5uvedmMKAwWCdy_da03s3AET0fTx4oV_Ee3Q,4693
+jgdtrans-0.2.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+jgdtrans-0.2.1.dist-info/licenses/LICENSE,sha256=I_GOA9xJ35FiL-KnYXZJdATkbO2KcV2dK2enRGVxzKM,1023
+jgdtrans-0.2.1.dist-info/RECORD,,
