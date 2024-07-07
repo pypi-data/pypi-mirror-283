@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+xlpkg03/__init__.py
+xlpkg03.egg-info/PKG-INFO
+xlpkg03.egg-info/SOURCES.txt
+xlpkg03.egg-info/dependency_links.txt
+xlpkg03.egg-info/top_level.txt
