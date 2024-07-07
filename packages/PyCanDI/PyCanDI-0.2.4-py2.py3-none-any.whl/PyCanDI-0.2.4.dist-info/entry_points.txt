@@ -1,0 +1,3 @@
+[console_scripts]
+candi-install = CanDI.setup.install:main
+candi-uninstall = CanDI.setup.uninstall:main
