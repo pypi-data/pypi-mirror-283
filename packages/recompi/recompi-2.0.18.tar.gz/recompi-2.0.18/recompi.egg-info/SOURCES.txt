@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+recompi/__init__.py
+recompi/recompi.py
+recompi.egg-info/PKG-INFO
+recompi.egg-info/SOURCES.txt
+recompi.egg-info/dependency_links.txt
+recompi.egg-info/requires.txt
+recompi.egg-info/top_level.txt
