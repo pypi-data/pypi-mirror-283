@@ -1,0 +1,6 @@
+vmi485tousb
+vmiconfig
+vmiiputil
+vmilog
+vmimpeg
+vmimqtt
