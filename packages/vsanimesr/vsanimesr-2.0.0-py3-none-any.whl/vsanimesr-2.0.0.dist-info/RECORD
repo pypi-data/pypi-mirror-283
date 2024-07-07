@@ -1,0 +1,10 @@
+vsanimesr/__init__.py,sha256=EGaIRVstLWeWAGyvyWEFjafSs2eZw94dqE9jzMM5fjE,10478
+vsanimesr/arch_util.py,sha256=6YHiePY1xy2mgRRjS6cH4e1fCFs8Iowlxg-NENc0bww,2322
+vsanimesr/interpolate.py,sha256=Rju24UJGIFdANuxao3Cm6qUhftrlHXZH2JatpyE35Dg,17580
+vsanimesr/vsr_arch.py,sha256=kedFupOwI32K33PUUkvRii5EHuxr_EEIT74yWbuq-zk,5377
+vsanimesr/models/AnimeSR_v1.pth,sha256=kV738PcGfwQhlRa1DojDYlgTAOSJAuO39UBlDjKiDBA,6000015
+vsanimesr/models/AnimeSR_v2.pth,sha256=0PKciWa1NxiCi9Qku9wwbn_wy_Y1C-ra-LWyUAsQhUg,5996559
+vsanimesr-2.0.0.dist-info/METADATA,sha256=h4A_HYTpD_NRWUhip_9wzZZqxIpTO8YnQlekDLTdw1g,1839
+vsanimesr-2.0.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+vsanimesr-2.0.0.dist-info/licenses/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+vsanimesr-2.0.0.dist-info/RECORD,,
