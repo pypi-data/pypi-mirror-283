@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: zenberry
+Version: 0.1.1
+Summary: A library that acts like time.sleep but beeps gently every second.
+Home-page: https://zenberry.one
+Author: Eugene Zenberry
+Author-email: zenberry.music@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: sounddevice
+
+# zenberry
+
+`zenberry` is a Python library that acts like `time.sleep` but beeps gently every second ^_^
+
+Tested on macOS
+
+## Installation
+
+```bash
+pip install zenberry
+```
+
+## Usage
+
+```bash
+import zenberry
+zenberry.sleep(42)
+#beeps 42 times
+```
