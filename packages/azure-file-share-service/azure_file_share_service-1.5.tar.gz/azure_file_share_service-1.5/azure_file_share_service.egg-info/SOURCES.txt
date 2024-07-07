@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+azure_file_share_service/__init__.py
+azure_file_share_service/main.py
+azure_file_share_service.egg-info/PKG-INFO
+azure_file_share_service.egg-info/SOURCES.txt
+azure_file_share_service.egg-info/dependency_links.txt
+azure_file_share_service.egg-info/entry_points.txt
+azure_file_share_service.egg-info/requires.txt
+azure_file_share_service.egg-info/top_level.txt
