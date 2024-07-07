@@ -1,0 +1,2 @@
+[console_scripts]
+unzip_http = unzip_http:main
