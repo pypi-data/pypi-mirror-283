@@ -1,0 +1,7 @@
+pandas>=2.0
+scipy>=1.11
+tabulate
+
+[test]
+pytest>=7.4
+pylint>=3.0
