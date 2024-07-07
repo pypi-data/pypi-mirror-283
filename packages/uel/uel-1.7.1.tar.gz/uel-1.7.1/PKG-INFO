@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: uel
+Version: 1.7.1
+Summary: A programming language
+Author: XingHao. Li<3584434540@qq.com>
+Keywords: language,uel,puel,programming
+License-File: LICENSE
+Requires-Dist: objprint
