@@ -1,0 +1,7 @@
+git_cloner/__init__.py,sha256=bRif4as9BsHuWlaSlGVo4hwWMbx7wJKDWGC3L5BsJro,35
+git_cloner/git_cloner.py,sha256=WCkt4QBvJia042ebUXGfXoBgfrTyouFGZWdS01zHTGQ,1127
+django_sekai-0.2.4.dist-info/METADATA,sha256=kkur6iNdhloB51YaU0dKJtnT6BBRmR9Nvebzxu0atSg,919
+django_sekai-0.2.4.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+django_sekai-0.2.4.dist-info/entry_points.txt,sha256=bDChdBpn7VhTqozFCksXOANkUZLE79aDft5BKndBeWU,60
+django_sekai-0.2.4.dist-info/top_level.txt,sha256=ZoUcRbFxIAazo9hYY6q-c23tLVZcXVAphSjJhWsKTvo,11
+django_sekai-0.2.4.dist-info/RECORD,,
