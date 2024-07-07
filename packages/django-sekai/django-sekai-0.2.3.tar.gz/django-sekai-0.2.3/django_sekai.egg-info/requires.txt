@@ -1,0 +1,17 @@
+black
+djangorestframework
+drf-spectacular
+drf-spectacular-sidecar
+Django
+django-jazzmin
+gunicorn
+pillow
+psycopg2-binary
+python-dotenv
+django-modeltranslation
+django-ckeditor-5
+django-cors-headers
+django-rosetta
+colorama
+PyJWT
+django-unfold
