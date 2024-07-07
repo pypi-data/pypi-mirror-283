@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+chemlibmgr/__init__.py
+chemlibmgr/analyse.py
+chemlibmgr/config.py
+chemlibmgr/db.py
+chemlibmgr/io.py
+chemlibmgr/manager.py
+chemlibmgr.egg-info/PKG-INFO
+chemlibmgr.egg-info/SOURCES.txt
+chemlibmgr.egg-info/dependency_links.txt
+chemlibmgr.egg-info/top_level.txt
