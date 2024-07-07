@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: shinzo-test
+Version: 1.1.2
+Summary: A Django project structure generator
+Home-page: https://github.com/JahongirHakimjonov
+Author: Jahongir Hakimjonov
+Author-email: jahongirhakimjonov@gmail.com
+Keywords: django project structure generator
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Dist: alive_progress
+Requires-Dist: colorama
+Requires-Dist: black
+Requires-Dist: djangorestframework
+Requires-Dist: drf-spectacular
+Requires-Dist: drf-spectacular-sidecar
+Requires-Dist: Django
+Requires-Dist: django-jazzmin
+Requires-Dist: gunicorn
+Requires-Dist: pillow
+Requires-Dist: psycopg2-binary
+Requires-Dist: python-dotenv
+Requires-Dist: django-modeltranslation
+Requires-Dist: django-ckeditor-5
+Requires-Dist: django-cors-headers
+Requires-Dist: django-rosetta
+Requires-Dist: PyJWT
+Requires-Dist: django-unfold
