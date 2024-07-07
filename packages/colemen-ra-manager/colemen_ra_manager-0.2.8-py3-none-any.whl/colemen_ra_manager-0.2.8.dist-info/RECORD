@@ -1,0 +1,17 @@
+main.py,sha256=CdIJJcuYvNEQRdhmzdUjCp2JqoaIcqdqPHBEe5zapSc,587
+ramanager/Database.py,sha256=SAQDTdMgFhkydBoVvZqxn-ZNcP5UPGeyT5AKW9b5sIE,6373
+ramanager/Project.py,sha256=W933dEVPUmyPYuVHNJqZpfl0QchJh1pgmInR_Po5XLM,13965
+ramanager/ProjectBase.py,sha256=mFj_OoH1E_yL2p3aq97DgiPB77o3rLg7NRgnfE9IwcQ,8188
+ramanager/ProjectManager.py,sha256=3nQk0_7E7VsBBfeeoH95bMiTH55Ra-vo_8EKlHSdgns,12572
+ramanager/TextToSpeech.py,sha256=KfmcDqvSdjZ1X50xhJONTI2dSn8QBzehT6mKXnM7EFI,1195
+ramanager/Year.py,sha256=rCYl39cgyUhul4Qny6Y4_4B1MmotgK3SujKahd8iXzo,15138
+ramanager/__init__.py,sha256=1AEfk30pp9MIhXjkJfH2SE1cXF90ZwFzVemfcoztFAc,407
+ramanager/inputs.py,sha256=i0WloHmdtJ53VHF3C3RrCl7hEFesFVNvhcqAEASt40w,3229
+ramanager/settings/__init__.py,sha256=PqxbCcWChKb6qIZEPdqi1hXGI5pB4GsCtXNM-146-lc,86
+ramanager/settings/control.py,sha256=qedhvJ_y1c2zHfvhoVIxqDJ2dzbkyadFukJG8Tv07SM,465
+ramanager/settings/types.py,sha256=MZpTNj6BbJOCHhD2sFV4mbvajXJNAUIxWWmlkn_O07w,710
+ramanager/templates/PythonPackage/$project_name_snake/build_utils/general.py,sha256=TKlP9uW9NDRWCbiAWLcwEh-VfJiOYS6bzcCRHwfZEL8,51408
+colemen_ra_manager-0.2.8.dist-info/METADATA,sha256=blzBx-Gq6LSNmDu0RhkWV_Ukf7Yap9A71F-EWBavJLg,558
+colemen_ra_manager-0.2.8.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+colemen_ra_manager-0.2.8.dist-info/top_level.txt,sha256=XlN8wmV60Fe0sAPRZ-S9W0KfHQWV-oLHG22Heza1AMg,15
+colemen_ra_manager-0.2.8.dist-info/RECORD,,
