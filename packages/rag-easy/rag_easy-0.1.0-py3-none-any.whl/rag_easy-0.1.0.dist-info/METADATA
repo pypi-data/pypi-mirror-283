@@ -1,0 +1,132 @@
+Metadata-Version: 2.1
+Name: rag-easy
+Version: 0.1.0
+Summary: A simple and secure RAG framework to rag any LLM model with ease.
+Home-page: https://github.com/Tarun0951/easy-rag
+Author: Tarun Baswa
+Author-email: tarunbaswa9059@gmail.com
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+Requires-Dist: openai >=0.28.0
+Requires-Dist: chromadb >=0.3.0
+Requires-Dist: faiss-cpu >=1.7.0
+Requires-Dist: google-generativeai
+Requires-Dist: transformers >=4.0.0
+Requires-Dist: torch >=1.0.0
+Provides-Extra: dev
+Requires-Dist: pytest >=6.0 ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+
+# EasyRAG: A Simple and Secure RAG Framework
+
+EasyRAG is a Python library that simplifies the implementation of Retrieval-Augmented Generation (RAG) systems. It provides a modular and extensible framework for building RAG applications with various embedding models, vector stores, and language models.
+
+## Features
+
+- Secure handling of API keys
+- Support for multiple embedding providers (OpenAI, HuggingFace)
+- Integration with various vector stores (Chroma, FAISS)
+- Flexible LLM support (OpenAI, Google Gemini)
+- Easy document management
+- Configurable text splitting
+
+## Installation
+
+```bash
+pip install rag-easy
+```
+
+## Getting Started
+
+Here is a basic example to get started using the EasyRAG framework:
+
+```python
+from easy_rag import SecureRAGFramework, Document
+
+# User-provided API keys
+api_keys = {
+    "openai": "",
+    "gemini": "",
+    "huggingface": ""
+}
+
+# Use the SecureRAGFramework in a with statement
+with SecureRAGFramework(
+    embedding_provider="huggingface",
+    vectorstore_provider="chroma",
+    llm_provider="gemini",
+    api_keys=api_keys,
+    embedding_model="sentence-transformers/all-MiniLM-L6-v2",
+    llm_model="gemini-pro",
+    system_prompt="You are a helpful assistant that answers questions based on the given context."
+) as rag:
+
+    # Add documents
+    documents = [
+        Document("Paris is the capital of France, known for its art, fashion, and culture.", {"source": "geo.txt"}),
+    ]
+    rag.add_documents(documents)
+
+    # Query the RAG system
+    query = "Give a few lines about Paris and its specialities in 3 words."
+    response = rag.query(query)
+    print(f"Query: {query}")
+    print(f"Response: {response}")
+```
+
+This example uses the `gemini` LLM with the `sentence-transformers/all-MiniLM-L6-v2` embedding model. You can customize it with OpenAI or any other supported provider based on your convenience. The framework ensures secure handling of API keys and provides flexibility in choosing different models and vector stores.
+
+## Customization
+
+You can easily customize the framework to use different embedding providers, vector stores, and language models. Here is an example using OpenAI's embedding model and LLM:
+
+```python
+from easy_rag import SecureRAGFramework, Document
+
+# User-provided API keys
+api_keys = {
+    "openai": "your_openai_api_key",
+    "gemini": "",
+    "huggingface": ""
+}
+
+# Use the SecureRAGFramework in a with statement
+with SecureRAGFramework(
+    embedding_provider="openai",
+    vectorstore_provider="faiss",
+    llm_provider="openai",
+    api_keys=api_keys,
+    embedding_model="text-embedding-ada-002",
+    llm_model="text-davinci-003",
+    system_prompt="You are a helpful assistant that answers questions based on the given context."
+) as rag:
+
+    # Add documents
+    documents = [
+        Document("Paris is the capital of France, known for its art, fashion, and culture.", {"source": "geo.txt"}),
+    ]
+    rag.add_documents(documents)
+
+    # Query the RAG system
+    query = "Give a few lines about Paris and its specialities in 3 words."
+    response = rag.query(query)
+    print(f"Query: {query}")
+    print(f"Response: {response}")
+```
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+We welcome contributions to improve EasyRAG. Please fork the repository and submit pull requests.
