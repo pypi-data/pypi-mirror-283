@@ -1,0 +1,4 @@
+autotests
+core
+funcs
+tg
