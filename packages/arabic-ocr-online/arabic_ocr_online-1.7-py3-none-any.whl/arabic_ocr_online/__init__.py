@@ -1,0 +1,1 @@
+from .arabic_ocr_online import ocring
