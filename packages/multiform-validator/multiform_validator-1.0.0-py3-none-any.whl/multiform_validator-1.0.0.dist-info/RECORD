@@ -1,0 +1,15 @@
+multiform_validator/__init__.py,sha256=Sk5FwG5v24Yue4hXErYraNsq8P1bhWNIXrDGsOKrr-w,427
+multiform_validator/cnpjValidator.py,sha256=K2Jxo6a4vdwhABtJIlaljzJgryaFuypAFpWPLI_d6G8,2222
+multiform_validator/cpfValidator.py,sha256=dYSs7d8WY0_HVJe7QuofZzX0jEodZ7EdaMPj8excaS0,2209
+multiform_validator/getOnlyEmail.py,sha256=HYQbqOk0Gw7r1-0cW61_NF6TIYBcFaS1K8Q8TRmZWSA,2700
+multiform_validator/identifyFlagCard.py,sha256=c9I08uaQcIUA_52EDkEyNxHfEiJuqzDdsBu5rtlZrP4,1132
+multiform_validator/isCreditCardValid.py,sha256=XvXMWYrod4YTFV14gUyDUdz3I5Lo1vq68M_ascG33Gw,679
+multiform_validator/isEmail.py,sha256=rmyMBeamS9ofJ43Tl3CqM1ugHIap_hkEbF-RSK97KCk,1258
+multiform_validator/isValidImage.py,sha256=d5DYG4zg78CBzwjdLzVqwQ09KyOR2vKT-FHzj6TW7RY,453
+multiform_validator/passwordStrengthTester.py,sha256=DtWQeeEDaEzeAfFqea0HjjqhXmCxnyl0E7GhkbILixg,1461
+multiform_validator/validateBRPhoneNumber.py,sha256=0E5x2UMuEXQOItw8lg5prd2saoE69I_3eHtL5LyqN2c,1149
+multiform_validator-1.0.0.dist-info/LICENSE,sha256=FxtjQV26vvObELD-YVeIXcWG2VxErEz2iVlTnDpybFg,1074
+multiform_validator-1.0.0.dist-info/METADATA,sha256=QiEotwz4aO4FDTTUiJKUG-Sv7qhjdhnHZ3uiH6CbvbE,6486
+multiform_validator-1.0.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+multiform_validator-1.0.0.dist-info/top_level.txt,sha256=oPu51p_eFTaIcw6eMSxlv8wzRGWSt-IVBtBJgLz9s-Q,20
+multiform_validator-1.0.0.dist-info/RECORD,,
