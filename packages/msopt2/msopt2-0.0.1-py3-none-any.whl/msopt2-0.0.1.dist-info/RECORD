@@ -1,0 +1,14 @@
+msopt2/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+msopt2/api.cpython-311-darwin.so,sha256=nJQuLlLu-oCsBstAtHeabXLY4Vl9DHio4SRAA5lJcfQ,532040
+msopt2/api.cpython-311-x86_64-linux-gnu.so,sha256=hJDVGq7Bi1zK-0KaWLsNVw37L0WaxGeFYZga07295X8,738168
+msopt2/conflict.cpython-311-darwin.so,sha256=miPTuDXc72cI-EBELjQpdzEZJ3rCTRUr0bMDYfJLduU,157264
+msopt2/conflict.cpython-311-x86_64-linux-gnu.so,sha256=UIhFVRv8euzVpY5gcmU-wRCeil4hUdrpyHkjbEpc_kk,184400
+msopt2/entities.cpython-311-darwin.so,sha256=I8GqP66VA54qOTjy7UZ_yubY-e4vMEKlQPEncCkNC1w,345744
+msopt2/entities.cpython-311-x86_64-linux-gnu.so,sha256=pZ-VdXZMsgl_6PZTNixuSO_sVvxZad82koqmzMWhpYE,465376
+msopt2/envr.cpython-311-darwin.so,sha256=SOFr1WN3p5TfDbSotBTzf5ZM5MhngNKktWxtD5L_skI,99000
+msopt2/envr.cpython-311-x86_64-linux-gnu.so,sha256=mVa88Jj_G5PwSdbsaEY2zmsT9A1ZmWV266FAHs25Qvw,106288
+msopt2/licgen.cpython-311-darwin.so,sha256=UY_ab_kU4lvEZtKObeVGsvCpk88GzVoYWw-EFTr51zA,177632
+msopt2/licgen.cpython-311-x86_64-linux-gnu.so,sha256=KKhkVcOzrLXoFts_lCg13mIVN3Nh4D5nsgxUr5C_sAk,210240
+msopt2-0.0.1.dist-info/METADATA,sha256=l0IWNwlwFulBN2WMisiXMmQ7kXeMeo4sy3h0oPBUuyU,521
+msopt2-0.0.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+msopt2-0.0.1.dist-info/RECORD,,
