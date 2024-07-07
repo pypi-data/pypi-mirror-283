@@ -1,0 +1,8 @@
+sqlite_zstd_build-0.0.1.dist-info/entry_points.txt,sha256=jqihfI47wKovkCy9A_D1eLkZIhUlghDfeyQKKedcI9Y,48
+sqlite_zstd_build-0.0.1.dist-info/WHEEL,sha256=V6ZXF_-Lgo9DjcLFTy6TYCUKLad0GAdsIcmYQhbNxA0,161
+sqlite_zstd_build-0.0.1.dist-info/top_level.txt,sha256=aDcIQ5HxKsIyW8Bl7ZyLoW64HuPebD-pSHmWyOSkLHo,12
+sqlite_zstd_build-0.0.1.dist-info/RECORD,,
+sqlite_zstd_build-0.0.1.dist-info/METADATA,sha256=x4ZlYt95zUzBySxNfT-crxzaLQ7xqamS57IEKfP2psI,1094
+sqlite_zstd/datasette.py,sha256=4YSJ62NHkH_7WwFkrF8mshYaIxG9QMa4c8PWoX4mx-E,182
+sqlite_zstd/__init__.py,sha256=hT-PLnfM-qnAhMbOazb4TV2Bw0jiQhIdg6_1buX4mQ0,256
+sqlite_zstd/libsqlite_zstd.pypy39-pp73-x86_64-linux-gnu.so,sha256=TBHGFO-L5ybuWHRr-l4lYWB4Tz1S2Copc4eW8U7mF3s,2640648
