@@ -1,0 +1,18 @@
+from setuptools import setup, find_packages
+
+setup(
+name='Flask-Shopify-Integration-Library',
+version='0.0.2',
+packages=find_packages(),
+platforms='',
+install_requires=[
+'Flask==2.0.3'
+,'flask-marshmallow==0.10.1'
+,'Flask-SQLAlchemy==2.4.1'
+,'marshmallow==3.3.0'
+,'marshmallow-sqlalchemy==0.21.0'
+,'python-dotenv==0.10.3'
+,'ShopifyAPI==12.4.0'
+,'SQLAlchemy==1.3.13'
+],
+)
