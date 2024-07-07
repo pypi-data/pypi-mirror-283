@@ -1,0 +1,13 @@
+.gitignore
+LICENSE
+README.md
+httpscan.py
+httpscan.yml.sample
+pyproject.toml
+.vscode/launch.json
+httpscan.egg-info/PKG-INFO
+httpscan.egg-info/SOURCES.txt
+httpscan.egg-info/dependency_links.txt
+httpscan.egg-info/entry_points.txt
+httpscan.egg-info/requires.txt
+httpscan.egg-info/top_level.txt
