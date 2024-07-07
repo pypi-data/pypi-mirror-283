@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+custom_components/reflex_qrcode/__init__.py
+custom_components/reflex_qrcode/qrcode.py
+custom_components/reflex_qrcode.egg-info/PKG-INFO
+custom_components/reflex_qrcode.egg-info/SOURCES.txt
+custom_components/reflex_qrcode.egg-info/dependency_links.txt
+custom_components/reflex_qrcode.egg-info/requires.txt
+custom_components/reflex_qrcode.egg-info/top_level.txt
