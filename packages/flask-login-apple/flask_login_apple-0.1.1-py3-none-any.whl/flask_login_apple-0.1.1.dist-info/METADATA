@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: flask_login_apple
+Version: 0.1.1
+Summary: A Flask extension to support Sign in with Apple
+Home-page: https://github.com/prdp1137/flask_apple_login
+Author: Pradip Bhattarai
+Author-email: contact@pradeepbhattarai.me
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: flask
+Requires-Dist: requests
+
