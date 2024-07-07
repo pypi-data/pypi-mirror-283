@@ -1,0 +1,10 @@
+plare/__init__.py,sha256=J-j-u0itpEFT6irdmWmixQqYMadNl1X91TxUmoiLHMI,22
+plare/exception.py,sha256=DCePowpCFti-Pp0NwBHNOHPZqCp6fVkQJ5Y5yHQCBkI,181
+plare/lexer.py,sha256=aTyspStjBeHhb72XzaMuvNT7aNuhhSarsJR9CdFvZIU,2302
+plare/parser.py,sha256=tvnjaFgylcWJ1yhy-rDmySejr8RATjNSc3a1HUXsbMk,18686
+plare/token.py,sha256=2N017DP6RytR3zzQlyHC34gzu3sxlQFsyrKK8QVSy9U,771
+plare/utils.py,sha256=VKrDCd5W0KdAKUWAg5WFrXKPo6suTLoDb20QrUGjubY,892
+plare-1.0.0.dist-info/METADATA,sha256=kljleTMMdLkApiAr-PwoSvlm1GQwwKf8pr65mMeveuE,742
+plare-1.0.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+plare-1.0.0.dist-info/licenses/LICENSE,sha256=-g2MsVVAPphFndJBTozh5S8MfpvCU_kWY_h6d1bMhhc,1076
+plare-1.0.0.dist-info/RECORD,,
