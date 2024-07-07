@@ -1,0 +1,5 @@
+openai
+pydantic
+jsonschema
+colorama
+json_repair
