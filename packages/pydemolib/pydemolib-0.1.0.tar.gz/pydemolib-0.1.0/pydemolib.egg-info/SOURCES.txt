@@ -1,0 +1,8 @@
+README.md
+setup.py
+pydemolib/__init__.py
+pydemolib/module1.py
+pydemolib.egg-info/PKG-INFO
+pydemolib.egg-info/SOURCES.txt
+pydemolib.egg-info/dependency_links.txt
+pydemolib.egg-info/top_level.txt
