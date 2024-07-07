@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: vscrapper
+Version: 0.1.0
+Summary: 
+Author: vikyw89
+Author-email: vikyw89@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# scrapper
