@@ -1,0 +1,99 @@
+Metadata-Version: 2.1
+Name: rlate-env
+Version: 0.0.16
+Summary: A collection of RL environments
+Author-email: RLate <hello@rlate.space>
+Project-URL: Homepage, https://github.com/RLate-Space/RL-Enviros
+Project-URL: Issues, https://github.com/RLate-Space/RL-Enviros/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: gymnasium >=0.29.1
+Requires-Dist: numpy >=1.26.4
+
+# RL Enviros
+
+RL Enviros is a collection of custom environments compatible with Gymnasium, designed to simulate various games and scenarios for reinforcement learning experiments. This project aims to provide a variety of environments to help researchers and enthusiasts develop and test reinforcement learning algorithms.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Environments](#environments)
+  - [PickHigh](#pickhigh)
+  - [AnotherEnv](#anotherenv)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Installation
+
+### PyPi
+
+You can install the `rlate-env` package directly from PyPi:
+
+```bash
+pip install rlate-env
+```
+
+## Environments
+
+### PickHigh
+
+PickHigh is a simple game where the player picks between two cards, aiming to select the higher card. This environment is useful for testing basic reinforcement learning algorithms.
+
+- **Observation Space**: Discrete space of size 100, representing two cards (e.g., 34 for left card 3 and right card 4).
+- **Action Space**: Discrete space of size 2. Action 0 selects the left card, and action 1 selects the right card.
+- **Reward**:
+    - +1 if the chosen card is higher.
+    - 0 if both cards are the same.
+    - -1 if the chosen card is lower.
+- **Episode Termination**: The episode terminates when the player picks a card that is different from the dealer's card.
+
+[Detailed Documentation for PickHigh](src/gymnasium_rlate/pick_high/README.md)
+
+## Usage
+
+Here is an example of how to use the `PickHigh` environment:
+
+```python
+import gymnasium_rlate as rlate
+
+# Create the Canon environment
+env = rlate.Cannon()
+
+# Reset the environment
+obs, info = env.reset()
+print(obs)
+
+# Make a step in the environment
+obs, reward, terminated, truncated, _ = env.step(23.5)
+print(obs, reward, terminated)
+
+
+# Render the environment
+print(env.render())
+
+# Close the environment
+env.close()
+```
+
+## Contributing
+
+Contributions are welcome! If you have an environment you'd like to add or an improvement to suggest, please open an issue or submit a pull request.
+
+1. Fork the repository.
+2. Create your feature branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Repository
+
+GitHub Repository: [https://github.com/RLate-Space/RL-Enviros](https://github.com/RLate-Space/RL-Enviros)
