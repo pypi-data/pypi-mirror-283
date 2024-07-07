@@ -1,0 +1,2 @@
+[console_scripts]
+cj-google-scraper = cj_google_scraper.scripts:google_scraper
