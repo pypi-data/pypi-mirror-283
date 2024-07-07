@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+better_gradient/__init__.py
+better_gradient/color_functions.py
+better_gradient.egg-info/PKG-INFO
+better_gradient.egg-info/SOURCES.txt
+better_gradient.egg-info/dependency_links.txt
+better_gradient.egg-info/entry_points.txt
+better_gradient.egg-info/requires.txt
+better_gradient.egg-info/top_level.txt

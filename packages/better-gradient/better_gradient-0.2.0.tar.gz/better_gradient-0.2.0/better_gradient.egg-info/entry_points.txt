@@ -1,0 +1,2 @@
+[console_scripts]
+better-gradient = better_gradient.__main__:main
