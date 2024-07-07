@@ -1,0 +1,2 @@
+[console_scripts]
+django-shinzo = django_default.django_default:clone_repo
