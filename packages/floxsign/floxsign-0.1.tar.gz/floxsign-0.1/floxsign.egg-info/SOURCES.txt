@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+floxsign.egg-info/PKG-INFO
+floxsign.egg-info/SOURCES.txt
+floxsign.egg-info/dependency_links.txt
+floxsign.egg-info/top_level.txt
+sign/__init__.py
+sign/get_name.py
+tests/test_sign.py
