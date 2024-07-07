@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+orchestralAI/__init__.py
+orchestralAI.egg-info/PKG-INFO
+orchestralAI.egg-info/SOURCES.txt
+orchestralAI.egg-info/dependency_links.txt
+orchestralAI.egg-info/top_level.txt
