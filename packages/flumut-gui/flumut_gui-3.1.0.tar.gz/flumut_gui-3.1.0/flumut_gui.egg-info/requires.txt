@@ -1,0 +1,2 @@
+pyqt5
+flumut>=0.6.1

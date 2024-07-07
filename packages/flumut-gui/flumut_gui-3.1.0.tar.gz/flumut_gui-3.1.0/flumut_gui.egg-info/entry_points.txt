@@ -1,0 +1,2 @@
+[console_scripts]
+flumut_gui = flumut_gui:launch
