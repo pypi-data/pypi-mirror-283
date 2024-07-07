@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+emfrytestingpackages2.egg-info/PKG-INFO
+emfrytestingpackages2.egg-info/SOURCES.txt
+emfrytestingpackages2.egg-info/dependency_links.txt
+emfrytestingpackages2.egg-info/top_level.txt
