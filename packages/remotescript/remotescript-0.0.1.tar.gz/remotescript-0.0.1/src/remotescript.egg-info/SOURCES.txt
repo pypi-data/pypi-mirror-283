@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/remotescript/__init__.py
+src/remotescript/__main__.py
+src/remotescript/_core.py
+src/remotescript/_imports.py
+src/remotescript/_utils.py
+src/remotescript/py.typed
+src/remotescript.egg-info/PKG-INFO
+src/remotescript.egg-info/SOURCES.txt
+src/remotescript.egg-info/dependency_links.txt
+src/remotescript.egg-info/requires.txt
+src/remotescript.egg-info/top_level.txt
+tests/test_namespace.py
