@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+plurals/__init__.py
+plurals/agent.py
+plurals/deliberation.py
+plurals/helpers.py
+plurals/unit_test.py
+plurals.egg-info/PKG-INFO
+plurals.egg-info/SOURCES.txt
+plurals.egg-info/dependency_links.txt
+plurals.egg-info/requires.txt
+plurals.egg-info/top_level.txt
