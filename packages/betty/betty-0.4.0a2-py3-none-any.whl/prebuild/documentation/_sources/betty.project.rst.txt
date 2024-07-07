@@ -1,0 +1,18 @@
+betty.project package
+=====================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 999
+
+   betty.project.extension
+
+Module contents
+---------------
+
+.. automodule:: betty.project
+   :members:
+   :undoc-members:
+   :show-inheritance:

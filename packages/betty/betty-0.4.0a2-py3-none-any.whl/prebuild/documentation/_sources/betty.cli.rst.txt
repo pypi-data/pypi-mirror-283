@@ -1,0 +1,10 @@
+betty.cli package
+=================
+
+Module contents
+---------------
+
+.. automodule:: betty.cli
+   :members:
+   :undoc-members:
+   :show-inheritance:
