@@ -1,0 +1,30 @@
+Metadata-Version: 2.3
+Name: okrolearn
+Version: 0.2.1
+Summary: A machine learning library created by Okerew, which is supposed to be a raw implementation of combining pytorch with scikit-learn
+Project-URL: Documentation, https://github.com/Okerew/okrolearn#readme
+Project-URL: Issues, https://github.com/Okerew/okrolearn/issues
+Project-URL: Source, https://github.com/Okerew/okrolearn
+Author-email: Okerew <93822247+Okerew@users.noreply.github.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Okrolearn 
+Machine Learning library created by Okerew
+<br>
+To build it self as installation is not yet supported, install numpy and then just import it by having it in your project directory
+<br>
+`from okrolearn.src.okrolearn import *`
+<br>
+Note gpu and jit compilation is not yet supported.
