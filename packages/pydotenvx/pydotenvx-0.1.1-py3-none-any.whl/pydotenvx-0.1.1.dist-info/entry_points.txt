@@ -1,0 +1,3 @@
+[console_scripts]
+pydotenvx=pydotenvx.__main__:script
+
