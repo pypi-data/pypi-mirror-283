@@ -1,0 +1,2 @@
+artd_paymentsway
+paymentsway

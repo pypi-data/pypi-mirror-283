@@ -1,0 +1,107 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-06 17:14+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
+#: artd_paymentsway/models.py:20 artd_paymentsway/models.py:21
+msgid "Created at"
+msgstr "Creado el"
+
+#: artd_paymentsway/models.py:25 artd_paymentsway/models.py:26
+msgid "Updated at"
+msgstr "Actualizado el"
+
+#: artd_paymentsway/models.py:30 artd_paymentsway/models.py:31
+msgid "Status"
+msgstr "Estado"
+
+#: artd_paymentsway/models.py:43
+msgid "Partner"
+msgstr "Asociado"
+
+#: artd_paymentsway/models.py:47 artd_paymentsway/models.py:48
+msgid "Merchant ID"
+msgstr "ID del comercio"
+
+#: artd_paymentsway/models.py:52 artd_paymentsway/models.py:53
+msgid "API Key"
+msgstr "API key"
+
+#: artd_paymentsway/models.py:56 artd_paymentsway/models.py:57
+msgid "Redirect"
+msgstr "Redirección"
+
+#: artd_paymentsway/models.py:66 artd_paymentsway/models.py:79
+msgid "Payments Way Credential"
+msgstr "Credencial de Payments Way"
+
+#: artd_paymentsway/models.py:67
+msgid "Payments Way Credentials"
+msgstr "Credenciales de Payments Way"
+
+#: artd_paymentsway/models.py:83 artd_paymentsway/models.py:84
+msgid "Form ID"
+msgstr "ID del formulario"
+
+#: artd_paymentsway/models.py:88 artd_paymentsway/models.py:89
+msgid "Terminal ID"
+msgstr "ID de la terminal"
+
+#: artd_paymentsway/models.py:93 artd_paymentsway/models.py:94
+msgid "Order Number"
+msgstr "Número de la orden"
+
+#: artd_paymentsway/models.py:98 artd_paymentsway/models.py:99
+msgid "Amount"
+msgstr "Monto"
+
+#: artd_paymentsway/models.py:104 artd_paymentsway/models.py:105
+msgid "Currency"
+msgstr "Moneda"
+
+#: artd_paymentsway/models.py:111 artd_paymentsway/models.py:112
+msgid "Order Description"
+msgstr "Descripción de la orden"
+
+#: artd_paymentsway/models.py:115 artd_paymentsway/models.py:116
+msgid "Name"
+msgstr "Nombre"
+
+#: artd_paymentsway/models.py:120 artd_paymentsway/models.py:121
+msgid "Last Name"
+msgstr "Apellido"
+
+#: artd_paymentsway/models.py:125 artd_paymentsway/models.py:126
+msgid "Email"
+msgstr "Correo"
+
+#: artd_paymentsway/models.py:129 artd_paymentsway/models.py:130
+msgid "Identification"
+msgstr "Identificación"
+
+#: artd_paymentsway/models.py:134 artd_paymentsway/models.py:135
+msgid "Identification Type"
+msgstr "Tipo de identificación"
+
+#: artd_paymentsway/models.py:141 artd_paymentsway/models.py:142
+msgid "Response URL"
+msgstr "URL de respuesta"
+
+#: artd_paymentsway/models.py:149 artd_paymentsway/models.py:150
+msgid "Payments Way Test Data"
+msgstr "Datos de prueba de Payment Way"
