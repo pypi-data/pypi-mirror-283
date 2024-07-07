@@ -1,0 +1,264 @@
+Metadata-Version: 2.1
+Name: ai_function_helper
+Version: 0.2.4
+Summary: A helper for creating AI-powered functions using OpenAI's API
+Home-page: https://github.com/Clad3815/ai-function-helper-python
+Author: Clad3815
+Author-email: clad3815@gmail.com
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: openai
+Requires-Dist: pydantic
+Requires-Dist: jsonschema
+Requires-Dist: colorama
+Requires-Dist: json-repair
+
+# AI Function Helper
+
+[![PyPI version](https://badge.fury.io/py/ai-function-helper.svg)](https://badge.fury.io/py/ai-function-helper)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python Versions](https://img.shields.io/pypi/pyversions/ai-function-helper.svg)](https://pypi.org/project/ai-function-helper/)
+
+**Streamline your AI-powered Python functions with ease!**
+
+[Key Features](#key-features) • [Installation](#installation) • [Quick Start](#quick-start) • [Documentation](#documentation) • [Contributing](#contributing)
+
+---
+
+## 📚 Table of Contents
+
+- [Key Features](#key-features)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Core Concepts](#core-concepts)
+- [Advanced Usage](#advanced-usage)
+  - [Customizing AI Function Behavior](#customizing-ai-function-behavior)
+  - [Function Formats](#function-formats)
+  - [Synchronous vs Asynchronous Usage](#synchronous-vs-asynchronous-usage)
+- [Error Handling and Debugging](#error-handling-and-debugging)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [License](#license)
+
+## 🌟 Key Features
+
+- **Seamless OpenAI Integration**: Easy setup with various AI models (GPT-3.5, GPT-4, etc.)
+- **Flexible Function Decorators**: Customize AI-powered tasks with ease
+- **Synchronous and Asynchronous Support**: Use AI functions in both sync and async contexts
+- **Robust Error Handling**: Automatic retries and comprehensive error management
+- **Type Safety**: Pydantic models for JSON parsing and validation
+- **Debugging Capabilities**: Detailed logging of API interactions
+- **Function Calling**: Support for OpenAI's function calling feature
+- **Multiple Return Formats**: Flexible output handling (JSON, string, raw response)
+
+## 🚀 Installation
+
+Install AI Function Helper using pip:
+
+```bash
+pip install ai-function-helper
+```
+
+## 🏁 Quick Start
+
+Get up and running with AI Function Helper in just a few lines of code:
+
+```python
+from ai_function_helper import AIFunctionHelper
+
+# Initialize AI Function Helper
+ai_helper = AIFunctionHelper("your-api-key")
+
+# Create an AI-powered function (synchronous version)
+@ai_helper.ai_function(model="gpt-3.5-turbo", max_tokens=200)
+def generate_short_story(theme: str):
+    """
+    Generate a short story based on a given theme.
+    """
+
+# Use the function
+story = generate_short_story(theme="A day in the life of a time traveler")
+print(story)
+
+# Asynchronous version
+@ai_helper.ai_function(model="gpt-3.5-turbo", max_tokens=200)
+async def generate_short_story_async(theme: str):
+    """
+    Generate a short story based on a given theme (async version).
+    """
+
+# Use the async function
+import asyncio
+
+async def main():
+    story = await generate_short_story_async(theme="A day in the life of a time traveler")
+    print(story)
+
+asyncio.run(main())
+```
+
+## 🧠 Core Concepts
+
+AI Function Helper is built around several key concepts:
+
+1. **AIFunctionHelper Class**: The main entry point for creating AI-powered functions.
+2. **AI Function Decorator**: Transforms regular Python functions into AI-powered ones, supporting both sync and async usage.
+3. **Pydantic Models**: Ensures type safety and easy validation of AI-generated responses.
+4. **Error Handling**: Built-in mechanisms for handling API errors and retrying failed calls.
+5. **Debugging**: Comprehensive logging options for troubleshooting and optimization.
+
+## 🔧 Advanced Usage
+
+### Customizing AI Function Behavior
+
+Fine-tune your AI functions with various parameters:
+
+```python
+@ai_helper.ai_function(
+    model="gpt-4",
+    max_tokens=500,
+    temperature=0.7,
+    top_p=0.9,
+    frequency_penalty=0.1,
+    presence_penalty=0.1,
+    timeout=60,
+    max_retries=3,
+    show_debug=True,
+    debug_level=2
+)
+def advanced_function(input_data: str) -> ComplexResponseModel:
+    """
+    An advanced AI-powered function with custom settings.
+    """
+```
+
+### Function Formats
+
+AI Function Helper supports multiple function formats to suit various use cases:
+
+1. **Using `ai_result` Parameter**:
+   ```python
+   def func(ai_result: ResponseModel, input: str) -> ResponseModel:
+   ```
+
+2. **Direct Pydantic Model Return**:
+   ```python
+   def func(input: str) -> ResponseModel:
+   ```
+
+3. **String Output**:
+   ```python
+   def func(input: str) -> str:
+   ```
+
+4. **Unspecified Return Type**:
+   ```python
+   def func(input: str):
+   ```
+
+### Synchronous vs Asynchronous Usage
+
+AI Function Helper now supports both synchronous and asynchronous usage:
+
+1. **Synchronous Usage**:
+   ```python
+   @ai_helper.ai_function(model="gpt-3.5-turbo")
+   def sync_function(input: str) -> str:
+       """
+       A synchronous AI-powered function.
+       """
+
+   result = sync_function("Hello, AI!")
+   print(result)
+   ```
+
+2. **Asynchronous Usage**:
+   ```python
+   @ai_helper.ai_function(model="gpt-3.5-turbo")
+   async def async_function(input: str) -> str:
+       """
+       An asynchronous AI-powered function.
+       """
+
+   async def main():
+       result = await async_function("Hello, AI!")
+       print(result)
+
+   asyncio.run(main())
+   ```
+
+The `ai_function` decorator automatically detects whether the decorated function is synchronous or asynchronous and adapts accordingly.
+
+## 🐞 Error Handling and Debugging
+
+Enable detailed logging and set retry attempts:
+
+```python
+@ai_helper.ai_function(max_retries=3, show_debug=True, debug_level=2)
+def debug_example(input_data: str) -> ResponseModel:
+    """
+    This function will display detailed debug information and retry up to 3 times on failure.
+    """
+```
+
+## 📘 Examples
+
+### 1. Simple Text Generation (Synchronous)
+
+```python
+@ai_helper.ai_function(model="gpt-3.5-turbo", max_tokens=100)
+def generate_haiku(theme: str) -> str:
+    """
+    Generate a haiku based on the given theme.
+    """
+
+haiku = generate_haiku(theme="autumn leaves")
+print(haiku)
+```
+
+### 2. Complex Data Processing (Asynchronous)
+
+```python
+class RecipeResponse(BaseModel):
+    name: str
+    ingredients: List[str]
+    instructions: List[str]
+
+@ai_helper.ai_function(model="gpt-4", max_tokens=500)
+async def generate_recipe(cuisine: str, dietary_restrictions: str) -> RecipeResponse:
+    """
+    Generate a recipe based on the given cuisine and dietary restrictions.
+    """
+
+async def main():
+    recipe = await generate_recipe(cuisine="Italian", dietary_restrictions="vegetarian")
+    print(f"Recipe: {recipe.name}")
+    print("Ingredients:", ", ".join(recipe.ingredients))
+    print("Instructions:", "\n".join(f"{i+1}. {step}" for i, step in enumerate(recipe.instructions)))
+
+asyncio.run(main())
+```
+
+## 🤝 Contributing
+
+We welcome contributions to AI Function Helper! Here's how you can help:
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Commit your changes (`git commit -m 'Add some amazing feature'`)
+5. Push to the branch (`git push origin feature/amazing-feature`)
+6. Open a Pull Request
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
