@@ -1,0 +1,10 @@
+starsep_utils-0.3.0.dist-info/METADATA,sha256=t4vkCSvTmjNvPvPGs6yhjn9OWxdai7HkdNy_hi5Oayc,720
+starsep_utils-0.3.0.dist-info/WHEEL,sha256=mbxFTmdEUhG7evcdMkR3aBt9SWcoFBJ4CDwnfguNegA,90
+starsep_utils-0.3.0.dist-info/licenses/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+starsep_utils/__init__.py,sha256=XU2OPXNl20RvmvzrsXwZMpbHaOikyU9w6m0yc3zfV68,131
+starsep_utils/distance.py,sha256=A7j2P_lXn-t0d5Lj83YYq-L0eDTTjIsmDrjHQOaB40k,661
+starsep_utils/logDuration.py,sha256=OKLcUcOogCW1s4Q2Dbje-DJ8HVOeOM6x2D5cK9d19rQ,117
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/distance_test.py,sha256=fbmvoCmkEmeN6pkIiJ1uGBwf-oPXD79wxqEwrBLcTuI,712
+tests/logDuration_test.py,sha256=KdH_VGRP-lAiKibZja1z0hIgDM322YFR77AMCAuHZGk,224
+starsep_utils-0.3.0.dist-info/RECORD,,
