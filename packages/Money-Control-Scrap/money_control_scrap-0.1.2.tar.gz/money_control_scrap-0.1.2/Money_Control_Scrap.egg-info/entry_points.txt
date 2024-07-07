@@ -1,0 +1,2 @@
+[console_scripts]
+Money_Control_Scrap = src.main:fetch_news_headlines
