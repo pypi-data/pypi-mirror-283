@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+tests/test_suggestions.py
+youtube_suggestions/__init__.py
+youtube_suggestions/suggestions.py
+youtube_suggestions.egg-info/PKG-INFO
+youtube_suggestions.egg-info/SOURCES.txt
+youtube_suggestions.egg-info/dependency_links.txt
+youtube_suggestions.egg-info/requires.txt
+youtube_suggestions.egg-info/top_level.txt
