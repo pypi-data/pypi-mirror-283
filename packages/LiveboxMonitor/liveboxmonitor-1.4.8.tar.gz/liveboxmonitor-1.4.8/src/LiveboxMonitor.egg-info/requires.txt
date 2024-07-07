@@ -1,0 +1,7 @@
+PyQt6
+requests
+python-dateutil
+cryptography
+pyqtgraph
+
+[dev]
