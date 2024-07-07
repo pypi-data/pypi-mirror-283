@@ -1,0 +1,10 @@
+README.md
+setup.py
+Crylearn/CGCNN_atom_emb.json
+Crylearn/__init__.py
+Crylearn/cry2graph.py
+Crylearn.egg-info/PKG-INFO
+Crylearn.egg-info/SOURCES.txt
+Crylearn.egg-info/dependency_links.txt
+Crylearn.egg-info/requires.txt
+Crylearn.egg-info/top_level.txt
