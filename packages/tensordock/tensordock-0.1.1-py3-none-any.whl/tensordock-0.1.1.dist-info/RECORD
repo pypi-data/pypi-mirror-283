@@ -1,0 +1,10 @@
+endpoints/__init__.py,sha256=j0IrUwfMnDWe2FYubFSHK8it4JxuOdd5KtuSNWjRCEE,180
+endpoints/authorization.py,sha256=QIdf92lDUyokJLVuCj6tNN40_CJrZs0M3XizUq4pwXY,1003
+endpoints/billing.py,sha256=HxYx1Nbz7eEuyuXVQHN2ULlcnAaQZ2SuAfO08UleBTM,1710
+endpoints/containers.py,sha256=_AUOvarlimMQbxKEXOMtx5JFhPyOPlR3cUqIzLfVses,2103
+endpoints/servers.py,sha256=xqWAzrKKgmRSeKgp924BLAXUijj-2D9KcR6wCL_QIZQ,1514
+endpoints/virtual_machines.py,sha256=NlbT0O9gmdneWdohrGdDGY0vSrjK23--YHtvPd9-gXw,4203
+tensordock-0.1.1.dist-info/METADATA,sha256=zBnmXQhIk71nIHmwKtepp41D826kJcF4iVLnELtf11Q,3286
+tensordock-0.1.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+tensordock-0.1.1.dist-info/top_level.txt,sha256=P_Fg3hHp0uv-LzU7lkJhRagjQAazQotgYle6dLUOIY8,10
+tensordock-0.1.1.dist-info/RECORD,,
