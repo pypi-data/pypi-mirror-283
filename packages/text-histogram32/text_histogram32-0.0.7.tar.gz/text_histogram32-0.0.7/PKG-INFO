@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: text_histogram32
+Version: 0.0.7
+Summary: A dependency-free library to quickly make ascii/text histograms from data.
+Home-page: https://github.com/clach04/text_histogram32
+Author: Andy Kish, Jehiah Czebotar, Jay Deiman, Jon Lundy, Chris Clark
+License: Apache License, Version 2.0
+Platform: any
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 2
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Terminals
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+License-File: LICENSE
+
+text_histogram
+==============
+
+|version| |downloads|
+
+Histograms are great for exploring data, but numpy and matplotlib are heavy and
+overkill for quick analysis. They also can't be easily used on remote servers
+over ssh. Don't even get me started on installing them.
+
+`Bit.ly's data_hacks <https://github.com/bitly/data_hacks>`_ histogram.py is
+great but difficult to use from python code directly (it requires an
+``optparse.OptionParser`` to pass histogram options). This is histogram.py
+repackaged for convenient script use.
+
+::
+
+    Python 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)] on win32
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>> from text_histogram import histogram
+    >>> histogram([1, 2, 2, 2, 2, 3, 3, 3], graph_char='#')
+    # NumSamples = 8; Min = 1.00; Max = 3.00
+    # Mean = 2.250000; Variance = 0.437500; SD = 0.661438; Median 2.000000
+    # each # represents a count of 1
+         1.0000 -      1.2000 [     1]: #
+         1.2000 -      1.4000 [     0]:
+         1.4000 -      1.6000 [     0]:
+         1.6000 -      1.8000 [     0]:
+         1.8000 -      2.0000 [     4]: ####
+         2.0000 -      2.2000 [     0]:
+         2.2000 -      2.4000 [     0]:
+         2.4000 -      2.6000 [     0]:
+         2.6000 -      2.8000 [     0]:
+         2.8000 -      3.0000 [     3]: ###
+    >>> histogram([1, 2, 2, 2, 2, 3, 3, 3], graph_char='#', display_empty_buckets=False)
+    # NumSamples = 8; Min = 1.00; Max = 3.00
+    # Mean = 2.250000; Variance = 0.437500; SD = 0.661438; Median 2.000000
+    # each # represents a count of 1
+         1.0000 -      1.2000 [     1]: #
+         1.8000 -      2.0000 [     4]: ####
+         2.8000 -      3.0000 [     3]: ###
+
+
+Installation
+============
+
+.. code:: bash
+
+    pip uninstall text_histogram text_histogram3  # avoid conflicts
+    pip install text_histogram32
+
+
+Source: https://github.com/clach04/text_histogram32
+
+Fork of https://github.com/Kobold/text_histogram with a few tweaks:
+
+  * **Same** name space as original text_histogram
+  * Python 3 and 2.7 support
+  * Support for control over character used for the bar (see `graph_char` and `DEFAULT_graph_char` option)
+  * Support for NOT displaying empty buckets/bins/intervals (see `display_empty_buckets` and `DEFAULT_display_empty_buckets` option)
+  * Fixes
+      * https://github.com/Kobold/text_histogram/issues/4 - Zero for min or max value
+      * when min == max value
+      * improved error handling for empty data sets
+
+ToDo items
+
+  * Improve dynamic sizing of string and bar
+  * Support for non-linear buckets/bins/intervals (see `display_empty_buckets` option)?
+  * Support for Scott's rule https://en.wikipedia.org/wiki/Scott%27s_rule ?
+  * Bug? https://github.com/Kobold/text_histogram/issues/2 https://github.com/bitly/data_hacks/pull/22
+
+
+
+.. |downloads| image:: https://pypip.in/d/text_histogram/badge.png
+   :target: https://pypi.python.org/pypi/text_histogram
+   :alt: Number of PyPI downloads
+.. |version| image:: https://badge.fury.io/py/text_histogram.png
+   :target: http://badge.fury.io/py/text_histogram
+   :alt: PyPI version
