@@ -1,0 +1,15 @@
+audiopython/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+audiopython/analysis.py,sha256=WXKPT5t4eC7FWxA0qpJeF5GaRLQYs2DLdC7_zNvk-dQ,12088
+audiopython/audiofile.py,sha256=epgYk4SlAJtZWfrSYL8OPZy1EZNvFjjTKw4H6Auy9DQ,27173
+audiopython/granulator.py,sha256=hMY9rjkHamkzadwZm2xTR6gFBGu5SmSpp-jjM3CXVag,3592
+audiopython/operations.py,sha256=aNoT_aqSrm_ffAhCqWC2YjyqHXNiEEC-U-e_AA3KHt8,13959
+audiopython/plot.py,sha256=lTQ_cdRQVo6xJJMG4wjnlGK57KJDpbuaB8PKxGRvVcs,2571
+audiopython/sampler.py,sha256=a6mOnh8QybvOodJnpP7175hbzaptwXHDTgpVzd4pmk4,20054
+audiopython/setup.py,sha256=zD-Igq0eSJ9pzGsZGr1kEIKgfcA8t1v2xJWCKsEFvpc,658
+audiopython/spectrum.py,sha256=RmoZkqaxrYQntTBHv0XUcbnMV2ILP0jNEYCGdwhmMUs,1124
+audiopython/synthesis.py,sha256=S6luwW1FhiawV5pUIaIaQpyUe-6f6rT3egl358G4_eM,3828
+audiopython-0.0.12.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+audiopython-0.0.12.dist-info/METADATA,sha256=6Qt2ZJHft3984F2dEO6nxEfWLvUEDHOU3AJfG8JM0yc,1481
+audiopython-0.0.12.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+audiopython-0.0.12.dist-info/top_level.txt,sha256=iJOJ9WDVJT7qOAZwdspNvtKeF0KKtKyybtgE_I2Jo30,12
+audiopython-0.0.12.dist-info/RECORD,,
