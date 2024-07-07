@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: fabric-text-processor
+Version: 0.1.1
+Summary: 
+Author: Shuyi Wang
+Author-email: nkwshuyi@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# Fabric Text Processor
+
+base for text splitting and fabric function calling
