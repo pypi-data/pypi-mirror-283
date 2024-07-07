@@ -1,0 +1,2 @@
+[console_scripts]
+kicad_testpoints = kicad_testpoints.cli:main
