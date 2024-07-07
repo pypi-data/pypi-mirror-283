@@ -1,0 +1,9 @@
+plurals/__init__.py,sha256=guuVLFrmAMM4-t5wwJQBTiWRlSiAFeYEDvgsXKg9-lI,25
+plurals/agent.py,sha256=hLF1MvHvgCjGgvwn-IVc59nHlVqSkSXsEyd37V8krUU,12833
+plurals/deliberation.py,sha256=tpoOvJIsEXCcRlDQk14H8eBU3F7muVJPZNyh_-sNmp0,13931
+plurals/helpers.py,sha256=PxUBbcet19H5csARRLEhj7sgf78znYyT5hwoXjz0tqU,3757
+plurals/unit_test.py,sha256=OXEuWSOVmduynZSKp8Sa2Y1FfiEEBEFsB12zX9zFkfs,9173
+plurals-0.0.1.dist-info/METADATA,sha256=xsm6kSDTExYr-yGIfLbFBJcdr7Ti-GL8s0ERZYucBDI,584
+plurals-0.0.1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+plurals-0.0.1.dist-info/top_level.txt,sha256=cJvqKFwQ83T10wgpYey1UmDbWfg6F4ag_Bq2LrtCYYc,8
+plurals-0.0.1.dist-info/RECORD,,
