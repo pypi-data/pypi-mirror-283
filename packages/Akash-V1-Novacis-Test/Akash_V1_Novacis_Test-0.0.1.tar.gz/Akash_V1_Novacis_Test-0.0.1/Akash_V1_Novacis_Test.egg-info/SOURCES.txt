@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+Akash_V1_Novacis_Test/__init__.py
+Akash_V1_Novacis_Test/main.py
+Akash_V1_Novacis_Test.egg-info/PKG-INFO
+Akash_V1_Novacis_Test.egg-info/SOURCES.txt
+Akash_V1_Novacis_Test.egg-info/dependency_links.txt
+Akash_V1_Novacis_Test.egg-info/top_level.txt
