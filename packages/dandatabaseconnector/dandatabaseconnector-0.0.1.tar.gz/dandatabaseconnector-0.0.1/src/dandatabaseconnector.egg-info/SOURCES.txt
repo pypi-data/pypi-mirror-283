@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/dan_db_connect/__init__.py
+src/dan_db_connect/mongo_crud.py
+src/dan_db_connect/sql_crud.py
+src/dandatabaseconnector.egg-info/PKG-INFO
+src/dandatabaseconnector.egg-info/SOURCES.txt
+src/dandatabaseconnector.egg-info/dependency_links.txt
+src/dandatabaseconnector.egg-info/requires.txt
+src/dandatabaseconnector.egg-info/top_level.txt
