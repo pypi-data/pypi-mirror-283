@@ -1,0 +1,17 @@
+cbr_content/__init__.py,sha256=0qNtsOlkMbaAe2-PumPNv2_APGBjh2H7DBw6cOCHPq4,18
+cbr_content/en/web-pages/chat-with-llms.md,sha256=HsAyEY8Lxi7LUdL4MvhDeHkbfGqLCx5Z6W6joZYKjgU,268
+cbr_content/en/web-pages/experiments/index.md,sha256=WXANFgYuXurxBHH561d3DQREGyZuO7-9OaifAgc9rLA,339
+cbr_content/en/web-pages/index.md,sha256=i9VkyN6Fjoo7pTps_HX4NRP6qSGa-fBTkHl1_iPnL8w,784
+cbr_content/en/web-pages/personas/cfo.md,sha256=fjrkZdEBYn-bHhzgoVEp3_EBsyT3ivpDDFyvF6XhonY,23
+cbr_content/en/web-pages/personas/index.md,sha256=y_RYWXEVe7LQ1RLVba8Z_3v-MdLdRvwfIWpSN2F7G3A,18
+cbr_content/pt/web-pages/chat-with-llms.md,sha256=Tin1ntPa8XGUoPDYsQDaMX2MbZklChK6bJOMDZslF-0,282
+cbr_content/security-content/1-cybersecurity-in-the-boardroom.md,sha256=K78n_xcNP7fnWUefJRJh61fOqNU23rl8tj0FrOvGgjg,2898
+cbr_content/security-content/2-building-a-cybersecure-organisation.md,sha256=MlYgwgZe-dRpfZfpCOS0cEZmXdelIPSAIAPM1oLV-cg,3291
+cbr_content/security-content/3-Incident-management.md,sha256=sGNsx_Ym6RkqXw1qDvjTLq5pJz6CKrjPICrRFh9EqGA,2487
+cbr_content/security-content/4-the-importance-of-digital-trust.md,sha256=77QiH7rPm-ja-HBGVHnUNLGiBEzbKj0Q38Rjulcf-UM,1765
+cbr_content/security-content/_category_.json,sha256=pMGlwUvEXKUGbYfs1DDSqJxBeqi72eTPjRg2xVwmdIc,51
+cbr_content/version,sha256=rDy4Jq1Bsq5fnNyT2d6nc4M8IJ_OHDvhhF99XD66sPA,7
+cbr_content-0.3.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+cbr_content-0.3.1.dist-info/METADATA,sha256=uc92zh5OT1MNQoLZ8PHfZDxs0uZ44y_3xJp2DwlgE2U,955
+cbr_content-0.3.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+cbr_content-0.3.1.dist-info/RECORD,,
