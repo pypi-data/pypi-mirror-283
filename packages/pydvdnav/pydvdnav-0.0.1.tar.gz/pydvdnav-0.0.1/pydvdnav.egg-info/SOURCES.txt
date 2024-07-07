@@ -1,0 +1,10 @@
+LICENSE
+setup.py
+./pydvdnav/__init__.py
+pydvdnav.egg-info/PKG-INFO
+pydvdnav.egg-info/SOURCES.txt
+pydvdnav.egg-info/dependency_links.txt
+pydvdnav.egg-info/top_level.txt
+src/DvdNav.cpp
+src/DvdNav.h
+src/pyDvdNav.cpp
