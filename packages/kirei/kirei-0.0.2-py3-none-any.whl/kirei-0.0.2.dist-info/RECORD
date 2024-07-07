@@ -1,0 +1,7 @@
+kirei/__init__.py,sha256=7-ks7Na8k2vy3BTK68n81cIl4kqgjlnlHsiZySC021E,61
+kirei/_app/__init__.py,sha256=v0DUB5Ggibdh-3uMoKcDjgw7z3DknZfPiIBAFXG3DEA,47
+kirei/_app/cli.py,sha256=I9IJ4d-7nhDn0xtY_FcsuYkI8yP9QpDYFLzKvqSs83s,4613
+kirei/_types.py,sha256=OSiX1jj61gRZz5GutV3ImF5MSlWUaMAJIPwFZ6N16d4,453
+kirei-0.0.2.dist-info/METADATA,sha256=JC9XQeDvFx86BRFIvbIVx6UATI8x6JIoirMnEsCMB9M,1089
+kirei-0.0.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+kirei-0.0.2.dist-info/RECORD,,
