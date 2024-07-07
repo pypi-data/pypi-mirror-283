@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+emfrytestingpackages.egg-info/PKG-INFO
+emfrytestingpackages.egg-info/SOURCES.txt
+emfrytestingpackages.egg-info/dependency_links.txt
+emfrytestingpackages.egg-info/top_level.txt
+pandafry/__init__.py
+pandafry/pandafry.py
+tests/__init__.py
+tests/test_pandafry.py
