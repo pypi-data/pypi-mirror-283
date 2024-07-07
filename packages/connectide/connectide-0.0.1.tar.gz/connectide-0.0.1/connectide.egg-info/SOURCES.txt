@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+connectide/__init__.py
+connectide.egg-info/PKG-INFO
+connectide.egg-info/SOURCES.txt
+connectide.egg-info/dependency_links.txt
+connectide.egg-info/top_level.txt
