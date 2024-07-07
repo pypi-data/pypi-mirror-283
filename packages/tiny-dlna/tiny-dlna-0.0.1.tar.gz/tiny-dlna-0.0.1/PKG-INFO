@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: tiny-dlna
+Version: 0.0.1
+Summary: a tiny DLNA receiver
+Home-page: https://github.com/mitnk/tiny-dlna
+Author: mitnk
+License: MIT
+Keywords: dlna
+
+
+Home Page: https://github.com/mitnk/tiny-dlna
+
+A tiny DLNA receiver.
+
+Install
+-------
+
+::
+
+    $ pip install tiny-dlna
+
+Usages
+------
+
+::
+
+    $ tiny-render
+
