@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: youtube-suggestions
+Version: 0.1.0
+Summary: A package to get YouTube search suggestions
+Home-page: https://github.com/yourusername/youtube-suggestions
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests >=2.25.1
+
+# YouTube Suggestions
+
+A simple Python package to get YouTube search suggestions.
+
+## Installation
+
+You can install the YouTube Suggestions package using pip:
+
+```
+pip install youtube-suggestions
+```
+
+## Usage
+
+Here's a quick example of how to use the package:
+
+```python
+from youtube_suggestions import get_suggestions
+
+suggestions = get_suggestions("python programming")
+print(suggestions)
+```
+
+This will print a list of search suggestions for "python programming".
+
+## Features
+
+- Get YouTube search suggestions
+- Fallback method if the primary method fails
+- Easy to use
+
+## Requirements
+
+- Python 3.6+
+- requests library
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License.
