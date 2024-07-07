@@ -1,0 +1,8 @@
+nonebot2
+pytz
+httpx
+pydantic
+nonebot-adapter-onebot
+aiosqlite
+nonebot_plugin_send_anything_anywhere
+nonebot_plugin_apscheduler
