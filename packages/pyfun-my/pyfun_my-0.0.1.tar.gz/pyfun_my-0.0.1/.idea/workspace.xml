@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d3e7085e-49e5-4239-859b-261e54d8aafe" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pyfun.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pyfun.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/arrays/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/arrays/basic_arrays.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kata_machine/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kata_machine/generate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kata_machine/templates/insertion_sort.mako" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kata_machine/templates/test_insertion_sort.mako" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/linked_lists/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/linked_lists/doubly_linked_list.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/linked_lists/linked_list_notes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/linked_lists/singly_linked_lists.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/searching_algorithms/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/searching_algorithms/linear_search.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sorting_algorithms/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sorting_algorithms/insert_sort.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sorting_algorithms/quick_sort.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trees/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trees/bfs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/two_pointers/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/two_pointers/notes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/two_pointers/two_sum.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_doubly_linked_list.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_insert_sort.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_quick_sort.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_two_sum.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2itTGoY3UOTwto1CwaS2zv1QbFj" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for test_option.test_option_flat_map.executor": "Run",
+    "Python.Option.executor": "Run",
+    "Python.insert_sort.executor": "Run",
+    "Python.linear_search.executor": "Run",
+    "Python.option.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/michaelyau/PycharmProjects/pyfun/src/pyfun"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pyfun" />
+      <recent name="$PROJECT_DIR$/test" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pyfun" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Python tests for test_option.test_option_flat_map">
+    <configuration name="insert_sort" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pyfun" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/sorting_algorithms" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/sorting_algorithms/insert_sort.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="linear_search" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pyfun" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/searching_algorithms" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/searching_algorithms/linear_search.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="option" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pyfun" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/pyfun" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/pyfun/option.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_option.test_option_flat_map" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="pyfun" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_option.test_option_flat_map&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for test_option.test_option_flat_map" />
+        <item itemvalue="Python.option" />
+        <item itemvalue="Python.linear_search" />
+        <item itemvalue="Python.insert_sort" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-0509580d9d50-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.14494.241" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d3e7085e-49e5-4239-859b-261e54d8aafe" name="Changes" comment="" />
+      <created>1720308780949</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720308780949</updated>
+    </task>
+    <servers />
+  </component>
+</project>
