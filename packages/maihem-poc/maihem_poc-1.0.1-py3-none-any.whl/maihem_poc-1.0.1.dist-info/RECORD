@@ -1,0 +1,13 @@
+maihem_poc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+maihem_poc/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+maihem_poc/core/ai.py,sha256=-Z0J8jnRka5PqHa_m8rphSsQ3X988_if8nMntWfkvsk,1760
+maihem_poc/core/questions.py,sha256=4h3tMez7eCmUgYt_Xdfg7Z_xisY8n_9SaKDVEg8wN44,4084
+maihem_poc/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+maihem_poc/data/db.py,sha256=7pkSWyfN1koGhCq-45XPNDoh3JN77VfMyYCh7p2STac,1382
+maihem_poc/data/loader.py,sha256=ngkAsDAkh311MLAt3uDUKJGSNbwH4XYW2oLoFCHxedw,623
+maihem_poc/data/vectoriser.py,sha256=GD8XNtOPn2aADKqmgYAzdwFVHQFrKpba4ZxXp4-LIGM,1284
+maihem_poc/metrics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+maihem_poc-1.0.1.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+maihem_poc-1.0.1.dist-info/METADATA,sha256=AbccUy1SrFGdu6mPFbEb5xBA37xbIOWAGlqWuJVbu5Y,1081
+maihem_poc-1.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+maihem_poc-1.0.1.dist-info/RECORD,,
