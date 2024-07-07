@@ -1,0 +1,8 @@
+leads>=0.9.1
+torch
+torchvision
+timm
+segment-anything
+requests
+rich
+ultralytics
