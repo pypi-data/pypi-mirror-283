@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+mmxsdk.egg-info/PKG-INFO
+mmxsdk.egg-info/SOURCES.txt
+mmxsdk.egg-info/dependency_links.txt
+mmxsdk.egg-info/requires.txt
+mmxsdk.egg-info/top_level.txt
