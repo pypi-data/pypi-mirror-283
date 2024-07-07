@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: Money_Control_Scrap
+Version: 0.1.0
+Summary: A package to scrape news from Money Control
+Author: Aniruddha Kumar
+Author-email: foraniruddhakumar@gmail.com
+Description-Content-Type: text/markdown
+Requires-Dist: selenium
+Requires-Dist: pandas
+
+# Descriptions
+
+A package to install and scrap the money control website into an Excel file to get the links and the headlines of the Financial News
