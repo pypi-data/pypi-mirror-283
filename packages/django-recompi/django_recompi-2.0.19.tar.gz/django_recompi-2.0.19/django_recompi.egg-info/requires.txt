@@ -1,0 +1,2 @@
+recompi>=2.0.17
+Django>=2
