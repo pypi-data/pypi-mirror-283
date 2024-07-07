@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pytzen
+Version: 1.1.5
+Summary: DATA LAB
+Home-page: https://pytzen.com
+Author: PYTZEN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+> This library acts as a support component for DATA LAB, a comprehensive environment designed for the development and testing of data-driven applications. Designed for independence, each module within this library can be employed separately, ensuring versatile application in diverse experimental contexts. For further details, please visit [pytzen.com](https://pytzen.com).
