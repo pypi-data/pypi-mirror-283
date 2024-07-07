@@ -1,0 +1,12 @@
+django_admin_page_api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_admin_page_api/apps.py,sha256=X80qHD1A1tmBa-V8CTO_Bqbjf1AaeL4csediua5zXLU,207
+django_admin_page_api/model_functions.py,sha256=GukCCJsA63FWxf2LIkyFHoMQlEHGtIHVmkBXvI_ePEc,8122
+django_admin_page_api/sites.py,sha256=4Drm7XjKxB2n6UAdD1-Mu-Q06ZHI0V4-HSovS4l6BAQ,81
+django_admin_page_api/urls.py,sha256=BzkioQS4Mg8H9wykY7xVWDUI7QUAJNaex7cFE2kvR0Y,482
+django_admin_page_api/utils.py,sha256=rn-0eSF3cDGQUBO_ag-D3_I3oaRtkOu5rXbMsbYqf-A,299
+django_admin_page_api/views.py,sha256=m4tbCILcQfvRWsMgKfnEBfSK_5fsJuVZEHG_Pov9aqg,7801
+django_admin_page_api-1.0.4.dist-info/LICENSE,sha256=_u3USxe-c1ISjqviINJiTlOQEV9aRr_fWqGO67iWhPY,1077
+django_admin_page_api-1.0.4.dist-info/METADATA,sha256=kqWXTqLRGNrCLvFfR8SZsUux4rIH8z9jTZx0fz9b6vA,2111
+django_admin_page_api-1.0.4.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+django_admin_page_api-1.0.4.dist-info/top_level.txt,sha256=RWgQaqrSHgXP0LDUXcndNK3AHWBaPn6jiu2m-myo7xc,22
+django_admin_page_api-1.0.4.dist-info/RECORD,,
