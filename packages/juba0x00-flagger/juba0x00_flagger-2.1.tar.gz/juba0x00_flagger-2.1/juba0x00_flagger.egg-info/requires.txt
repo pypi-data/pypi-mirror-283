@@ -1,0 +1,4 @@
+base45
+pillow
+colorama
+Requests

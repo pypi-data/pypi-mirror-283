@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: juba0x00-flagger
+Version: 2.1
+Summary: Python tool automating flag searches using various methods, enhancing CTF challenge solving efficiency
+Author: juba0x00
+License-File: LICENSE
+Requires-Dist: base45
+Requires-Dist: pillow
+Requires-Dist: colorama
+Requires-Dist: Requests
