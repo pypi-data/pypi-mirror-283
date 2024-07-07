@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: leads-jarvis
+Version: 0.0.1a2
+Summary: Jarvis Extension for LEADS
+Home-page: https://github.com/ProjectNeura/LEADS-Jarvis
+Author: ProjectNeura
+Author-email: central@projectneura.org
+License: Apache License 2.0
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: leads >=0.9.1
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: timm
+Requires-Dist: segment-anything
+Requires-Dist: requests
+Requires-Dist: rich
+Requires-Dist: ultralytics
+
+# LEADS Jarvis
+
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/ProjectNeura/LEADS-Jarvis)
+![PyPI](https://img.shields.io/pypi/v/leads-jarvis)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/leads-jarvis)
+![GitHub Release](https://img.shields.io/github/v/release/ProjectNeura/LEADS-Jarvis)
+![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/ProjectNeura/LEADS-Jarvis)
+
+Jarvis Extension for LEADS
+
+This is a submodule of [LEADS](https://github.com/ProjectNeura/LEADS).
