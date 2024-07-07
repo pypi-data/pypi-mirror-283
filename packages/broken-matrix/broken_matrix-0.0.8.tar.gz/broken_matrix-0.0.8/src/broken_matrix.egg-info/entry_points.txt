@@ -1,0 +1,2 @@
+[console_scripts]
+bmatrix = bmatrix.main:main
