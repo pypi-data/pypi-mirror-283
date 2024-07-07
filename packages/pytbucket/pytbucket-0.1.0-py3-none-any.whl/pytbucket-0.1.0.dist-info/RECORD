@@ -1,0 +1,13 @@
+pytbucket/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytbucket/limiter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytbucket/limiter/bucket.py,sha256=A6va7LIgslQgYuOX7YKTZibE-eP9JDZq8Ob2L5DJQ54,167
+pytbucket/limiter/limit.py,sha256=ADIj65cl0i9Xt0UM6plsOPxz3ytczSnn12M9i8dQB3o,178
+pytbucket/limiter/limiter.py,sha256=c6ZG2biHEtpv-aSgTO02jieNvQiB5WSRT6d-h17qn2c,2221
+pytbucket/limiter/memory.py,sha256=Am6NVD0tSYQZP_4VUklVcdFFF_i6n68sxa4Jk68v-74,1336
+pytbucket/limiter/refiller.py,sha256=5Et2w5elRbX1z36nOSYRCu-Q48w5-zZG9IUbg3zuYBE,150
+pytbucket/limiter/tmp_file.py,sha256=Rg9YN07gNBFm0xAOdpktLt3oh2bbrdkTJFx5jEppurM,2333
+pytbucket/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytbucket/tests/test_limiter.py,sha256=6C2NKQVgXkhUkZpSfB9KAAoTtD7is6NEbNy3iGsn5S4,974
+pytbucket-0.1.0.dist-info/METADATA,sha256=8FXS9Y5V0y6A_SnmS0h_wDPqm2D-9eBcRUPP0Ks9_SQ,488
+pytbucket-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pytbucket-0.1.0.dist-info/RECORD,,
