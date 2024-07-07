@@ -1,0 +1,21 @@
+[project]
+name = "payback-coupon-activator"
+description = "Activates all Payback coupons with Selenium WebDriver in Chrome logged into your Payback account."
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+authors = [{name = "Robert Kampf", email = "Robert.Kampf@gmx.de"}]
+dependencies = ["selenium"]
+dynamic = ["version"]
+
+[project.urls]
+"Homepage" = "https://github.com/BobbyCephy/payback-coupon-activator"
+
+[project.scripts]
+payback-coupon-activator = "payback_coupon_activator:main"
+
+[build-system]
+requires = ["setuptools", "setuptools-git-versioning"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools-git-versioning]
+enabled = true
