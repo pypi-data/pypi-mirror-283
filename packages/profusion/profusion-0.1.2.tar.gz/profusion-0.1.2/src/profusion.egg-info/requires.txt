@@ -1,0 +1,6 @@
+h5py
+mmh3
+
+[dev]
+black
+pytest>=3.7
