@@ -1,0 +1,10 @@
+ataraxis_automation/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ataraxis_automation/__init__.pyi,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ataraxis_automation/automation.py,sha256=hjWQbdDky1sS2ier-MMzCNyisakFDSK9LN0aEVPnmy8,99303
+ataraxis_automation/automation.pyi,sha256=tr5nLMlCEJvWM0Fv3jqSOya3bR5ken8AAEuLT3QgI1g,33675
+ataraxis_automation/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ataraxis_automation-2.0.1.dist-info/METADATA,sha256=ram2gluzq3X-RvjAmFEWz7psdmCebCTSQ_97ChfETp4,53324
+ataraxis_automation-2.0.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+ataraxis_automation-2.0.1.dist-info/entry_points.txt,sha256=tYdlHSFkGFh_SVRyqRhvs3UN_vW5zMfoyW_JUjqLPA0,70
+ataraxis_automation-2.0.1.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+ataraxis_automation-2.0.1.dist-info/RECORD,,
