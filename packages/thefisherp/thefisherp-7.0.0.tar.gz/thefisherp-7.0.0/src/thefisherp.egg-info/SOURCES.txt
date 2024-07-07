@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/thefisherp/__init__.py
+src/thefisherp/thefisherp.py
+src/thefisherp.egg-info/PKG-INFO
+src/thefisherp.egg-info/SOURCES.txt
+src/thefisherp.egg-info/dependency_links.txt
+src/thefisherp.egg-info/top_level.txt
