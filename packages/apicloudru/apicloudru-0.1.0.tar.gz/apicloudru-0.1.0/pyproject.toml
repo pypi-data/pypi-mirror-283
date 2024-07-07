@@ -1,0 +1,26 @@
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apicloudru"
+version = "0.1.0"
+description = "api-cloud.ru python wrapper"
+readme = "README.md"
+authors = [{ name = "Evgeniy Finskiy", email = "finskiy.ru@yandex.ru" }]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["api-cloud.ru", "api", "wrapper", "pydantic"]
+dependencies = [
+    "aiohttp[speedups]",
+    "aiodns",
+    "pydantic",
+]
+requires-python = ">=3.9"
+
+[project.urls]
+Homepage = "https://github.com/efinskiy/apicloudru"
+Issues = "https://github.com/efinskiy/apicloudru/issues"

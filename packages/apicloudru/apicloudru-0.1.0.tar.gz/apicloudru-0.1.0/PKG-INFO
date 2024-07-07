@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: apicloudru
+Version: 0.1.0
+Summary: api-cloud.ru python wrapper
+Author-email: Evgeniy Finskiy <finskiy.ru@yandex.ru>
+Project-URL: Homepage, https://github.com/efinskiy/apicloudru
+Project-URL: Issues, https://github.com/efinskiy/apicloudru/issues
+Keywords: api-cloud.ru,api,wrapper,pydantic
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp[speedups]
+Requires-Dist: aiodns
+Requires-Dist: pydantic
+
+# api-cloud.ru Python 3 wrapper
+### methods roadmap
+- [partial done] LK
+- ✓ FSSP 
+- ✘ RSA
+- ✘ EAISTO
+- ✘ ZALOG
+- ✘ NALOG
+- ✘ MVD
+- ✘ SFRI
+- ✘ BANKROT
+- ✘ ROSREESTR
+- ✘ FEDSFM
+- ✘ RAS_ARBITR
+- ✘ KAD_ARBITR
+- ✘ INOAGENT
