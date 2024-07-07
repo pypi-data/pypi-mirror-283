@@ -1,0 +1,8 @@
+LICENSE
+setup.py
+tests/test_tsops.py
+tsops.egg-info/PKG-INFO
+tsops.egg-info/SOURCES.txt
+tsops.egg-info/dependency_links.txt
+tsops.egg-info/requires.txt
+tsops.egg-info/top_level.txt

@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: tsops
+Version: 0.1.0
+Summary: Timeseries Operations
+Home-page: https://github.com/barisser/tsops/tree/master
+Author: Andrew Barisser
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: pandas
