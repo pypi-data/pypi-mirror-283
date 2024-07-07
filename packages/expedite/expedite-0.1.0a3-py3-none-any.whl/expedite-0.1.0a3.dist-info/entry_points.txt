@@ -1,0 +1,4 @@
+[console_scripts]
+ed-client=expedite.client.main:main
+ed-server=expedite.server.main:main
+
