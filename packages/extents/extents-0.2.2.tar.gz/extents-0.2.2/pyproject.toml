@@ -1,0 +1,78 @@
+# ------------------
+# Build system info:
+# ------------------
+[build-system]
+requires = [
+    "setuptools>=61.0",
+    "setuptools-scm>=8.0"
+]
+build-backend = "setuptools.build_meta"
+
+
+# -------------
+# Project info:
+# -------------
+[project]
+name = "extents"
+
+version = "0.2.2"
+
+authors = [
+    {name="Michael Frank", email="michaelfrank@swapp.ai"},
+]
+
+maintainers = [
+    {name="Michael Frank", email="michaelfrank@swapp.ai"}, 
+]
+
+description = "An intervals library implemented in pure python, meant to be a drop-in replacment for the pyinterval library."
+
+readme = "README.md"
+
+license = {file = "LICENSE"}
+
+keywords = ["interval", "intervals"]
+
+classifiers = [
+    "Programming Language :: Python",
+]
+
+requires-python = ">= 3.7"
+
+dependencies = [
+]
+
+# Optional dependencies (need these for testing + doc generation)
+[project.optional-dependencies]
+# key=[packages...]
+#     defines a special optional dependency which is installed
+#     pip install mypackage[key]
+doc = [
+    "jupyter",
+    "myst-nb",
+    "sphinx-autoapi",
+    "sphinx-rtd-theme",
+    "sphinx-markdown-builder",
+]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "tomlkit",
+    "jupyter",
+    "myst-nb",
+    "sphinx-autoapi",
+    "sphinx-rtd-theme",
+    "sphinx-markdown-builder",
+]
+tests = [
+    "pytest"
+]
+
+
+[project.urls]
+Homepage = "https://github.com/swapp-ai/extents"
+Documentation = "https://github.com/swapp-ai/extents/blob/main/README.md"
+Repository = "https://github.com/swapp-ai/extents.git"
+Issues = "https://github.com/swapp-ai/extents/issues"
+# Changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
+
