@@ -1,0 +1,1 @@
+> This library acts as a support component for DATA LAB, a comprehensive environment designed for the development and testing of data-driven applications. Designed for independence, each module within this library can be employed separately, ensuring versatile application in diverse experimental contexts. For further details, please visit [pytzen.com](https://pytzen.com).
