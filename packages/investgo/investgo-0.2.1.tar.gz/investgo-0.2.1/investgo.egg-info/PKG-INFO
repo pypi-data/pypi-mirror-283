@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: investgo
+Version: 0.2.1
+Summary: A package to fetch historical stock prices from Investing.com
+Home-page: https://github.com/gohibiki/investgo
+Author: gohibiki
+Author-email: gohibiki@protonmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENCE.txt
+
+# InvestGo
+
+InvestGo is a Python library that allows you to fetch historical stock prices from Investing.com using a simple API. This package uses Flask for the web server and cloudscraper to handle web scraping.
+
+## Features
+
+- Fetch historical stock prices for a given stock ID and date range
+- Convert JSON responses to pandas DataFrame for easy manipulation
+- Simple API endpoint to retrieve historical data
+
+## Installation
+
+You can install InvestGo directly from PyPI:
+
+```sh
+pip install investgo
