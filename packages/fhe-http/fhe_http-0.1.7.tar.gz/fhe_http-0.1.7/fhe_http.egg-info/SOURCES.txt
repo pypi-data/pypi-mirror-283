@@ -1,0 +1,14 @@
+README.md
+setup.py
+assembler/__init__.py
+assembler/assembler.py
+assembler/configs.py
+assembler/parsetab.py
+fhe_http.egg-info/PKG-INFO
+fhe_http.egg-info/SOURCES.txt
+fhe_http.egg-info/dependency_links.txt
+fhe_http.egg-info/requires.txt
+fhe_http.egg-info/top_level.txt
+fhe_http_python/__init__.py
+fhe_http_python/modules.pyi
+fhe_http_python/package.pyi
