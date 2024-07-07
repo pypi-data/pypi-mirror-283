@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "pydotenvx"
+version = "0.1.1"
+description = "A tool inspired by [dotenvx](https://dotenvx.com/), but easier to install in python projects."
+authors = ["duarte-pompeu <duarte-pompeu@users.noreply.github.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+coverage = "^7.5.4"
+isort = "^5.13.2"
+pytest = "^8.2.2"
+ruff = "^0.5.0"
+mypy = "^1.10.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+pydotenvx = 'pydotenvx.__main__:script'

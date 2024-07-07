@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pydotenvx
+Version: 0.1.1
+Summary: A tool inspired by [dotenvx](https://dotenvx.com/), but easier to install in python projects.
+Author: duarte-pompeu
+Author-email: duarte-pompeu@users.noreply.github.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
