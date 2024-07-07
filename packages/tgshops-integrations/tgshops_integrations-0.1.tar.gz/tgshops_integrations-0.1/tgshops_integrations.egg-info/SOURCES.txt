@@ -1,0 +1,6 @@
+README.md
+setup.py
+tgshops_integrations.egg-info/PKG-INFO
+tgshops_integrations.egg-info/SOURCES.txt
+tgshops_integrations.egg-info/dependency_links.txt
+tgshops_integrations.egg-info/top_level.txt
