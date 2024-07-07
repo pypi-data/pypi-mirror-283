@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: SecAutoBan
+Version: 1.1
+Summary: SecAutoBan SDK
+Home-page: https://github.com/sec-report/SecAutoBan
+Author: SecReport
+Author-email: sec-report@outlook.com
+Description-Content-Type: text/markdown
+Requires-Dist: pycryptodome
+Requires-Dist: websocket-client
+
+SecAutoBan SDK
