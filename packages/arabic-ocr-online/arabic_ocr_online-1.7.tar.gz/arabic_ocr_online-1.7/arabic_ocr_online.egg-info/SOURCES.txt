@@ -1,0 +1,9 @@
+README.md
+setup.py
+arabic_ocr_online/__init__.py
+arabic_ocr_online/arabic_ocr_online.py
+arabic_ocr_online.egg-info/PKG-INFO
+arabic_ocr_online.egg-info/SOURCES.txt
+arabic_ocr_online.egg-info/dependency_links.txt
+arabic_ocr_online.egg-info/requires.txt
+arabic_ocr_online.egg-info/top_level.txt
