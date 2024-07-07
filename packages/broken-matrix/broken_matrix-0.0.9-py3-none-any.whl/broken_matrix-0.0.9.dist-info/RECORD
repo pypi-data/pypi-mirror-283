@@ -1,0 +1,13 @@
+bmatrix/__init__.py,sha256=wWyOZtnKJiUHg_YB91pXmSzeCSruMO14g8pTdkehNdk,23
+bmatrix/__main__.py,sha256=1s2StFjTDoUXSFo83Fg0YOHebx7huvZhDZLju6qrUq0,70
+bmatrix/geometry.py,sha256=p3C9pWwUB0UhwnojmMDLlbKMbNXUYxBeSl085NUGxDg,4456
+bmatrix/geometry_test.py,sha256=yrOkQeyPQpi7SOyQKVvd9oUomuIJQsyrug8jbaZA56M,2240
+bmatrix/main.py,sha256=ZUOc89LKBpPZB464_YwuEvidDBU-rFYfjh4E3uJ3aE4,2840
+bmatrix/particle.py,sha256=aXJQfOUTXV2bMAC9zGFuPmSSZGrWkNNYIn2ie9gAto0,4817
+bmatrix/stage.py,sha256=X9cdejlipJUuhSvqijF7IOI1VODz_tbDSB_boL6-Lgw,2230
+broken_matrix-0.0.9.dist-info/LICENSE,sha256=_YCib7s_ZErx-plBNERnApMpaFGXlyJ-B6E2jeqA8Lw,1023
+broken_matrix-0.0.9.dist-info/METADATA,sha256=GLdfgWNS6-1Lalp1B7KlKeqtVyTHoftuT75Jfx-E8eU,1408
+broken_matrix-0.0.9.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+broken_matrix-0.0.9.dist-info/entry_points.txt,sha256=jqvfe-5AjIZvch0CNlPwVNiBkRaYjU4GLEbH_fXPRnA,46
+broken_matrix-0.0.9.dist-info/top_level.txt,sha256=Ws1WjkEvZwksn4Kw71oFP-HdXzGPQ2THFB8AVENCJs4,8
+broken_matrix-0.0.9.dist-info/RECORD,,
