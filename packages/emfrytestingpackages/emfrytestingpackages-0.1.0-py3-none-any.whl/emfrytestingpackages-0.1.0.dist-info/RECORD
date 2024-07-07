@@ -1,0 +1,12 @@
+pandafry/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pandafry/pandafry.py,sha256=fo_CKczxbTF71RJ1hsASleNjvWU5ck5jJ30L7sWAyXo,68
+testingpackages/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+testingpackages/testingpackages.py,sha256=fo_CKczxbTF71RJ1hsASleNjvWU5ck5jJ30L7sWAyXo,68
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_pandafry.py,sha256=Y-cStUjIhJNGvyz676wh0vwrlAWCGBq3o4ju88WGosA,663
+tests/test_testingpackages.py,sha256=Y-cStUjIhJNGvyz676wh0vwrlAWCGBq3o4ju88WGosA,663
+emfrytestingpackages-0.1.0.dist-info/LICENSE,sha256=Qv2ilebwoUtMJnRsZwRy729xS5JZQzLauJ0tQzkAkTA,1088
+emfrytestingpackages-0.1.0.dist-info/METADATA,sha256=VbDSy5gpOEr8pwTFsmiOibcY3sJUzGSd64zz5n5bP1o,493
+emfrytestingpackages-0.1.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+emfrytestingpackages-0.1.0.dist-info/top_level.txt,sha256=VLMdl_-7sqCgMgsCw-rddlDafVVq7k0tv_pBKRnViWM,15
+emfrytestingpackages-0.1.0.dist-info/RECORD,,
