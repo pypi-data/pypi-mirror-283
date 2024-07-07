@@ -1,0 +1,16 @@
+README.md
+setup.py
+tensordock/__init__.py
+tensordock/api.py
+tensordock/exceptions.py
+tensordock.egg-info/PKG-INFO
+tensordock.egg-info/SOURCES.txt
+tensordock.egg-info/dependency_links.txt
+tensordock.egg-info/requires.txt
+tensordock.egg-info/top_level.txt
+tensordock/endpoints/__init__.py
+tensordock/endpoints/authorization.py
+tensordock/endpoints/billing.py
+tensordock/endpoints/containers.py
+tensordock/endpoints/servers.py
+tensordock/endpoints/virtual_machines.py
