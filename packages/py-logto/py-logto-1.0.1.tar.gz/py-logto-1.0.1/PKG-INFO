@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: py-logto
+Version: 1.0.1
+Summary: Logto API references
+Home-page: https://github.com/Housain-maina/py-logto
+Author: Hussaini Usman
+Author-email: hussainmaina27@gmail.com
+License: UNKNOWN
+Keywords: OpenAPI,OpenAPI-Generator,Logto API references
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+        Python Client for Logto API. To learn more about how to interact with Logto APIs, see [Interact with Management API](https://docs.logto.io/docs/recipes/interact-with-management-api/).
+        
+
