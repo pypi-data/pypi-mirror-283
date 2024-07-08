@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/_types.py
+src/constants.py
+src/errors.py
+src/functions.py
+src/pymathematic.egg-info/PKG-INFO
+src/pymathematic.egg-info/SOURCES.txt
+src/pymathematic.egg-info/dependency_links.txt
+src/pymathematic.egg-info/top_level.txt
