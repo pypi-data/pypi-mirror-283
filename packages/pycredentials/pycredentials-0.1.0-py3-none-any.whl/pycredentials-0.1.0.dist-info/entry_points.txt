@@ -1,0 +1,3 @@
+[console_scripts]
+credentials=credentials.__main__:main
+
