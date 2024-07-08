@@ -1,0 +1,6 @@
+loguru
+requests
+
+[dev]
+build
+twine
