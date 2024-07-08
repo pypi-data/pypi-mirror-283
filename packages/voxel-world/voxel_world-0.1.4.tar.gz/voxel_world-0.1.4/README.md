@@ -1,0 +1,106 @@
+# VoxelWorld
+
+3d Numpy array in -> Voxel world out
+
+[Demo on Py.Cafe ☕](https://py.cafe/jackparmer/voxel-worlds)
+
+<img width="800" alt="image" src="https://github.com/jackparmer/VoxelWorld/assets/1865834/680dcde4-299e-4508-8cb7-1779831b1b98">
+
+## Install
+
+### From PyPi
+
+> pip3 install voxel_world
+
+### From source
+
+```sh
+git clone https://github.com/jackparmer/VoxelWorld.git
+cd VoxelWorld
+python3 -m pip install .
+
+from voxel_world import VoxelWorld
+```
+
+## About
+
+For physics simulation, computer vision, games, art, whatever
+
+Features!
+- Automatic GIF generation
+- Simple! Numpy 3d ones array in -> Voxel world out
+- Portable! Outputs images or standalone HTML files with [Vixel](https://github.com/wwwtyro/vixel)
+- Notebooks! Works well in the Jupyter notebook ecosystem
+- Eye candy! [Ambient occlusion](https://en.wikipedia.org/wiki/Ambient_occlusion), ray tracing from Vixel, etc
+
+***
+
+# Examples
+
+## Surfaces API
+
+```
+from voxel_world import Volume, Surface;
+volume = Volume(Volume.purlin_matrix(32)); surf = Surface(volume)
+surf.color = (255,0,0)
+volume.add(surf).show()
+```
+<img width="800" alt="image" src="https://github.com/jackparmer/VoxelWorld/assets/1865834/4a9c5f99-4ff2-441b-9086-fac3c4e7132a">
+
+## Random world
+
+[Demo on Py.Cafe ☕](https://py.cafe/jackparmer/voxel-worlds)
+
+```py
+import random
+from voxel_world import Volume
+
+Volume(
+    Volume.purlin_matrix(16),
+    theme=random.choice(list(Volume.themes.keys())),
+    viewing_angle=(random.randint(0, 90), random.randint(0, 90)),
+).render().show()
+```
+<img width="800" alt="image" src="https://github.com/jackparmer/VoxelWorld/assets/1865834/80ad3ed5-15f2-427f-9608-72a46b07e932">
+
+## Ray tracing + WebGL renderer
+
+```py
+from voxel_world import Volume, Vixel; vw = Volume(); vix = Vixel(vw); vix.html()
+```
+
+<img width="800" alt="image" src="https://github.com/jackparmer/VoxelWorld/assets/1865834/90826a0c-6d74-4956-acd1-fa230a79c9da">
+
+## Animations
+
+```py
+from voxel_world import Volume, Surface, Agent, Sequence
+
+volume = Volume(Volume.purlin_matrix(64));
+surf = Surface(volume);
+agents = [Agent(surf, mask) for mask in Sequence.snake(grid_size=64, num_steps=1000)];
+seq = Sequence(agents);
+
+seq2 = seq.apply_bg(volume)
+
+seq2.save('voxel_animation64_v2.gif')
+```
+<img width="800" alt="image" src="https://github.com/jackparmer/VoxelWorld/blob/main/voxel_animation64.gif?raw=true">
+
+<img width="500" alt="image" src="https://github.com/jackparmer/VoxelWorld/blob/main/compression_animation.gif?raw=true">
+
+<img width="800" alt="image" src="https://github.com/jackparmer/VoxelWorld/assets/1865834/917f38ac-dd26-4419-9725-0693ca05aaa1">
+
+## [examples/color_matrix/sand_world.py](examples/color_matrix/sand_world.py)
+
+<img width="800" alt="image" src="https://github.com/jackparmer/VoxelWorld/assets/1865834/f2a61fae-5133-4e2c-8bf9-71e69c1d0948">
+
+## [examples/lighting/light_source.py](examples/lighting/light_source.py)
+
+<img width="800" alt="image" src="https://github.com/jackparmer/VoxelWorld/assets/1865834/d86f3e6a-322a-4273-8260-fc41fb215eaf">
+
+#### Publishing to pip
+```sh
+python3 -m build
+python3 -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
+```
