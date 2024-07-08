@@ -1,0 +1,43 @@
+<div class="range">
+  <label for="arm-pinch-set_degrees" class="form-label">Pinch</label>
+  <input type="range" class="form-range" min="0" max="38" step="1" value="0" id="arm-pinch-set_degrees" />
+</div>
+<script type="module">
+import {rest_host, rest_port} from "./globals.js";
+const arm_pinch_set_degrees_element = $("#arm-pinch-set_degrees");
+const arm_pinch_set_degrees_range = arm_pinch_set_degrees_element[0];
+function arm_pinch_set_degrees (degrees, set_range) {
+  if (degrees < 0 || degrees > 38) {
+    return;
+  }
+  $.ajax({
+    url: "http://" + rest_host + ":" + rest_port + "/call/arm-pinch/set_degrees?degrees=int:" + degrees,
+    type: "GET"
+  });
+  if (set_range) {
+    arm_pinch_set_degrees_range.value = degrees;
+  }
+}
+arm_pinch_set_degrees_element.on("input", function () {
+  arm_pinch_set_degrees(arm_pinch_set_degrees_range.value, false);
+});
+window.addEventListener("keydown", (event) => {
+  let current_degrees = parseInt(arm_pinch_set_degrees_range.value);
+  let new_degrees = current_degrees;
+  switch (event.key) {
+    case ".":
+      new_degrees = current_degrees - 1;
+      break;
+    case "o":
+      new_degrees = current_degrees + 1;
+      break;
+    case "p":
+      new_degrees = 0;
+      break;
+  }
+  if (new_degrees !== current_degrees) {
+    arm_pinch_set_degrees(new_degrees, true);
+  }
+  event.preventDefault();
+}, true);
+</script>
