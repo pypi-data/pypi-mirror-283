@@ -1,0 +1,8 @@
+README.md
+setup.py
+MITREAttackScrapper/__init__.py
+MITREAttackScrapper/enterprise_techniques.py
+MITREAttackScrapper.egg-info/PKG-INFO
+MITREAttackScrapper.egg-info/SOURCES.txt
+MITREAttackScrapper.egg-info/dependency_links.txt
+MITREAttackScrapper.egg-info/top_level.txt
