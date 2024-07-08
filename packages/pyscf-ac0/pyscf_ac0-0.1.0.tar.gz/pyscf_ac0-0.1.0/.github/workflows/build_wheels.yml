@@ -1,0 +1,70 @@
+name: Release [Build wheels]
+
+on:
+  release:
+    types:
+      - created
+
+jobs:
+  build_wheels:
+    name: Build and test wheels on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix: # CIBW wheel tests need the right runner arch, so we use separate runners for macos
+        os: [ ubuntu-24.04, macos-14, macos-12 ]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build wheels
+        uses: pypa/cibuildwheel@v2.19
+        env:
+          MACOSX_DEPLOYMENT_TARGET: ${{ matrix.os == 'macos-14' && '14.0' || '12.0' }}  # TODO: compile libs on CI so we don't use brew
+          CIBW_ENVIRONMENT_MACOS: FC=gfortran-11
+          CIBW_BEFORE_ALL_LINUX: "yum install -y lapack-devel blas-devel"
+          CIBW_ARCHS: "auto64"
+          CIBW_SKIP: "*-musllinux*"
+          CIBW_BUILD: "cp31?-*"
+          CIBW_BUILD_FRONTEND: "build"
+          CIBW_TEST_REQUIRES: pytest~=6.2.2
+          CIBW_TEST_COMMAND: pytest {project}/tests
+
+      - name: Upload wheels to artifact
+        uses: actions/upload-artifact@v4
+        with:
+          path: ./wheelhouse/*.whl
+          name: cibw-wheels-${{ matrix.os }}
+
+  build_sdist:
+    name: Make SDist
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build SDist
+        run: pipx run build --sdist
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cibw-sdist
+          path: dist/*.tar.gz
+
+  publish_to_pypi:
+    name: Publish to pypi
+    needs: [ build_wheels, build_sdist ]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all wheels
+        uses: actions/download-artifact@v4
+        with:
+          pattern: cibw-*
+          path: dist
+          merge-multiple: true
+
+      - name: Publish wheels
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}
+          verbose: true
+#          repository-url: https://test.pypi.org/legacy/
