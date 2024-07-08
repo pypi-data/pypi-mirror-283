@@ -1,0 +1,10 @@
+__init__.py,sha256=gVfw9SOQxUez8PskmXPnL1hrgz4RwhpoVZEZc8RiDoA,364
+_types.py,sha256=0hfyM2dm1yX4pusCHaA0dnnpvlHVT0VVQP6dqm3ACnY,3622
+constants.py,sha256=RMXTwOhpBE-bcTfwP8kj5M49aGKbvQELGYhZ1Ll5ZkM,86
+errors.py,sha256=DMcupDAU9yjyRK6rdVu_3awy5W-ZdvQw3LMzZFmHFZw,965
+functions.py,sha256=CqWTiPGA08njrtD5o9l6QUxJ1CIzPlYPUwYdu0JL9iw,2170
+pymathematic-0.0.1.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+pymathematic-0.0.1.dist-info/METADATA,sha256=3qG0nOnLibsIyG85vJ1I1rHrdKvhTaF8K4t7lKMoRoQ,23049
+pymathematic-0.0.1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+pymathematic-0.0.1.dist-info/top_level.txt,sha256=aQ50a5lx2Pl945TcidjEhlkRmqTy8cPdwFLwyYbT7K4,43
+pymathematic-0.0.1.dist-info/RECORD,,
