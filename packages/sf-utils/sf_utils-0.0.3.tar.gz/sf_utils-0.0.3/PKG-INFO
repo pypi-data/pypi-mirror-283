@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: sf-utils
+Version: 0.0.3
+Summary: Various utilities built around sf-cli
+Author-email: Aditya Raj <aditya2400raj@gmail.com>
+Project-URL: Homepage, https://github.com/aditya24raj/sf_utils
+Project-URL: Issues, https://github.com/aditya24raj/sf_utils/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fire
+
+# sf-utils
+Various utilities built around sf-cli
+
+# Installation
+1. Ensure that python is installed on your system.
+2. And then execute- 
+```bash
+pip install sf-utils
+```
+# Features
+## sf-utils reauth
+Re-authenticates the default org. 
+```bash
+sf-utils reauth
+```
+Optionally pass --org=<ORG_ALIAS> to re-authenticate any particular org
+```bash
+sf-utils reauth 'my-org-alias'
+```
