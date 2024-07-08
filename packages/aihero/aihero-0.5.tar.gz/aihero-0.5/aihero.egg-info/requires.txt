@@ -1,0 +1,6 @@
+httpx
+python-dotenv
+validators
+pydantic
+names-generator
+url-normalize
