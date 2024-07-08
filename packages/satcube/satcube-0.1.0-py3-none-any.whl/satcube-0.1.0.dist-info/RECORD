@@ -1,0 +1,9 @@
+satcube/__init__.py,sha256=Tib3dgX1UTZZS9eO91bLicTYjnl4w5uYMQzB9l4R01k,134
+satcube/cloud_detection.py,sha256=7MviF8QlT2tj6QC3seepr8SZU0nHOK9Pji8AU94Z2q0,751
+satcube/dataclass.py,sha256=TAAKouyTts5eMtVXRmwWgJb5EaUXryEtkKMtt1O8TKM,934
+satcube/main.py,sha256=n77L_Oeip99G0KcBqHCunaE-uwn3_yVPmLNzGmfgffQ,14833
+satcube/utils.py,sha256=UBCI2oaL7E5MEjebobnyqGqgOtK6jU9O3t-c58JqZ0k,35057
+satcube-0.1.0.dist-info/LICENSE,sha256=YdB4BQMkMzWuKvXRIpQR4g91IQ_pwA5PSH2lNM97zFI,1070
+satcube-0.1.0.dist-info/WHEEL,sha256=bbU3AyvhQ312rVm7zzRQjs6axI1UYWC3nmFA2E6FFSI,88
+satcube-0.1.0.dist-info/METADATA,sha256=Jcrxcsiq4oBkdJ2FEO6ClyOQpq4fUErsfDxv5s4bzfI,1124
+satcube-0.1.0.dist-info/RECORD,,
