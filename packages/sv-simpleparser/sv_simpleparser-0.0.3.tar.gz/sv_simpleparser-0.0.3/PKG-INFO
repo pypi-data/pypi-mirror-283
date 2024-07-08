@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: sv_simpleparser
+Version: 0.0.3
+Summary: A simple system verilog parser
+Author-email: Eric Macedo <ericsmacedo@gmail.com>
+License: MIT
+Keywords: SystemVerilog
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: pathlib
+
+# sv-simpleparser
+Simple system verilog parser used to extract information from verilog files
