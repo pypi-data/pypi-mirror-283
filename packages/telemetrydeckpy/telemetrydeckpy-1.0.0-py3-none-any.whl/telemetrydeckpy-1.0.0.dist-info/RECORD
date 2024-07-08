@@ -1,0 +1,11 @@
+telemetrydeckpy/__init__.py,sha256=s83SjX8KH0pw9rRfkCMWRGpCnKyFDw8VIPv4OdwbQms,68
+telemetrydeckpy/signal.py,sha256=QbW6Khtv7XBx-Xl7RDahWXNrkYSEUwit_ttNJEBrdoA,876
+telemetrydeckpy/telemetrydeck.py,sha256=AMp9BvWSQi-p2ksEIDhEMXFzWorticbxt5KXH0DPO0c,966
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/signal_test.py,sha256=-6s9X_jlhwA3sM3AO3hpyPuLjqIijiGf_wGIlB4QBBs,600
+tests/telemetrydeck_test.py,sha256=pOswPZlpcClFzuj00H2y5DD0B5aXhDlydvgN0s2zPYc,278
+telemetrydeckpy-1.0.0.dist-info/LICENSE,sha256=n-B-pM2J2TzM08KaONuGlzNLEDnCf7Wj5vyy5pNQFT4,1069
+telemetrydeckpy-1.0.0.dist-info/METADATA,sha256=k7DBIIxOdm2u5bhIdwQ1kRKRPQ0ENo6GUM6POg-kJno,2152
+telemetrydeckpy-1.0.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+telemetrydeckpy-1.0.0.dist-info/top_level.txt,sha256=P33794u0Af-oKJSDoUWDXldWoM_bQycgYQ6LsNyM72g,22
+telemetrydeckpy-1.0.0.dist-info/RECORD,,
