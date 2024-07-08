@@ -1,0 +1,9 @@
+README.md
+setup.py
+gcp_proxy.egg-info/PKG-INFO
+gcp_proxy.egg-info/SOURCES.txt
+gcp_proxy.egg-info/dependency_links.txt
+gcp_proxy.egg-info/requires.txt
+gcp_proxy.egg-info/top_level.txt
+gxp_proxy/__init__.py
+gxp_proxy/proxy.py

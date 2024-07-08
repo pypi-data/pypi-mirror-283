@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: gcp-proxy
+Version: 0.1
+Summary: A package to set up a python proxy for GCP functions
+Home-page: https://github.com/yourusername/gcp_proxy_package
+Author: Barak Shefer
+Author-email: barakshfr@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+Soon...
+
