@@ -1,0 +1,5 @@
+include README.md
+include multibacktesting/*.py
+include multibacktesting/*.js
+recursive-include multibacktesting *
+
