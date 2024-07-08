@@ -1,0 +1,35 @@
+# Python related
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyz
+*.pyzw
+*.pywz
+
+# Hatch related
+.hatch/
+.hatch.lock
+dist/
+.coverage
+
+# Virtual environment
+.venv/
+
+# IDE files
+.idea/
+.vscode/
+
+# Compiled Python files
+*.pyc
+
+# Logs and runtime files
+*.log
+*.pid
+*.pyo
+*.pyc
+
+# macOS specific
+.DS_Store
+
+# Windows specific
+Thumbs.db
