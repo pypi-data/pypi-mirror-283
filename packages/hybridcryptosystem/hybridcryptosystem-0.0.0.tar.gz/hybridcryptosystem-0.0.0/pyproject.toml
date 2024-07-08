@@ -1,0 +1,17 @@
+[project]
+name = "hybridcryptosystem"
+authors = [
+  { name="Sira Pornsiriprasert", email="code@psira.me" },
+]
+description = "Coming soon"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "cryptography",
+]
+dynamic = ["version"]
