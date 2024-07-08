@@ -1,0 +1,9 @@
+gensim
+multiprocess
+nltk
+numpy
+pandas
+pip
+scikit-learn
+scipy
+tqdm
