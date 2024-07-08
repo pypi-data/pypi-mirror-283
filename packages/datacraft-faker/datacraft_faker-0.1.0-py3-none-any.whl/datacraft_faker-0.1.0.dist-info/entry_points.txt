@@ -1,0 +1,2 @@
+[datacraft.custom_type_loader]
+faker = datacraft_faker:load_custom
