@@ -1,0 +1,275 @@
+Metadata-Version: 2.1
+Name: YWP
+Version: 15.2
+Summary: This is a library to simplify the Python language for beginners while adding some features that are not found in other libraries
+Home-page: https://github.com/YourWantedProducts/YWP_Python
+Author: Your Wanted Products (YWP)
+Author-email: pbstzidr@ywp.freewebhostmost.com
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# YWP
+YWP is a library to simplify the Python language for beginners while adding some features that are not found in other libraries
+
+## Installation
+
+You can install YWP using pip:
+
+```bash
+pip install YWP
+```
+
+### Usage (Code)
+
+```python
+from YWP import Audios:
+    play_audio(pro_path, mp3_audio_file)
+    stop_recording()
+    record_audio(filename="recorder.wav", duration=5, fs=44100, device_number=2)
+    transcribe_audio(filename="recorder.wav", language_="en-US")
+    text_to_speech(text, filename="tts.mp3", language='en')
+    play_sound(filename='tts.mp3')
+    play_audio_online(pro_path, mp3_file_link):
+        pro_path : any program can run online audio like AIMP
+    transcribe_audio_offline(filename="recorder.wav")
+    text_to_speech_offline(text, filename="tts.mp3", language='en')
+from YWP import Files:
+    create_file(name) :
+        name : the name of the file
+        body : show in cmd with input
+    open_file(filepath)
+    delete_all_files(directory=".", type={})
+from YWP import Websites:
+    open_website(url)
+from YWP import System:
+    shutdown():
+        Support to:
+            1- Windows
+            2- linux
+            3- MacOS
+    restart():
+        Support to:
+            Windows only
+    log_off():
+        Support to:
+            Windows only
+    hibernate():
+        Support to:
+            Windows only
+from YWP import Crypto:
+    token_information(data, type='binance') :
+        Supported Types Now:
+            1- binance
+            2- etherum
+            3- geckoterminal
+        data required:
+            1- binance (token)
+            2- etherum (token)
+            3- geckoterminal (pool)
+from YWP import server():
+    route_flask(location, returnValue)
+    run(check=False, debug=True, host="0.0.0.0", port="8000")
+from YWP import AI:
+    Builder():
+        train(jsonfile="intents.json", picklefile="data.pickle", h5file="model.h5")
+        process(message, picklefile="data.pickle", h5file="model.h5", jsonfile="intents.json", sleeptime=0)
+        json_creator(jsonfile="intents.json", tag, patterns=[], responses=[])
+from YWP import VideosCreator:
+    Basic:
+        basic_video_creator(image_folder="images/", animation_choice="None", frame_rate=25, video_name="output", video_type=".mp4", video_platform="Youtube", image_time=5):
+            Available Platforms:
+                1- Youtube
+                2- Tiktok
+                3- Instagram
+                4- Facebook
+            Available Animations:
+                1- FadeIn
+                2- FadeOut
+                3- Rotate
+                4- FlipHorizontal
+                5- FlipVertical
+                6- None
+from YWP import endecrypt:
+    aes:
+        encrypt(file_path, password)
+        decrypt(file_path, password)
+    BlowFish:
+        encrypt(file_path, password)
+        decrypt(file_path, password)
+    Base64:
+        encrypt(file_path)
+        decrypt(file_path)
+    Hex:
+        encrypt(file_path)
+        decrypt(file_path)
+from YWP import Libraries:
+    Basic:
+        init_creator(filesave="__init__.py", filename, function_class)
+        basic_setup_file_creator(filename="setup.py", folder_name, readme_name="README.md", library_name, library_version, libraries_required=[], description, creator_name, creator_email, License="MIT"):
+            Available Licenses:
+                1- MIT
+        upload_file_creator(filename="upload_libarary", pypi_api, platform="windows"):
+            Available Platforms:
+                1- Windows
+                2- Linux
+            Available Write Platform:
+                1- windows
+                2- linux
+from YWP import printstyle:
+    print_one(text, second=0.05)
+    print_all(text, total_time=5)
+from YWP import Translate():
+    translate_text(text, to_lan, from_lan="en")
+from YWP import inuser:
+    from YWP import Audios:
+        play_audio_inuser()
+        stop_recording_inuser()
+        record_audio_inuser()
+        transcribe_audio_inuser()
+        text_to_speech_inuser()
+        play_sound_inuser()
+        play_audio_online_inuser():
+        transcribe_audio_offline_inuser()
+        text_to_speech_offline_inuser()
+    from YWP import Files:
+        create_file_inuser()
+        open_file_inuser()
+        delete_all_files_inuser()
+    from YWP import Websites:
+        open_website_inuser()
+    from YWP import Crypto:
+        token_information_inuser()
+    from YWP import server():
+        route_flask_inuser()
+        run_inuser()
+    from YWP import AI:
+        Builder():
+            train_inuser()
+            process_inuser()
+            json_creator_inuser()
+    from YWP import VideosCreator:
+        Basic:
+            basic_video_creator_inuser()
+    from YWP import endecrypt:
+        aes:
+            encrypt_inuser()
+            decrypt_inuser()
+        BlowFish:
+            encrypt_inuser()
+            decrypt_inuser()
+        Base64:
+            encrypt_inuser()
+            decrypt_inuser()
+        Hex:
+            encrypt_inuser()
+            decrypt_inuser()
+    from YWP import Libraries:
+        Basic:
+            init_creator_inuser()
+            basic_setup_file_creator_inuser()
+            upload_file_creator_inuser()
+    from YWP import printstyle:
+        print_one_inuser()
+        print_all_inuser()
+```
+
+#### Usage (Terminal)
+
+```java
+YWP.install_packages:
+    Available Platforms:
+        1- Linux
+    Help:
+        This Command Used For Install Required Libraries
+YWP.install_libraries:
+    Help:
+        This Command Used For Install Libraries Required For YWP (If Not Installed Sucsessfully or Found any errors in Installtion)
+YWP.upgrade_libraries:
+    Help:
+        This Command Used For Upgrade Libraries Required For YWP (If you want)
+YWP.upgrade_library:
+    Help:
+        This Command Used For Upgrade YWP Library
+YWP:
+    Help:
+        This is Command Used For Print Available Commands
+YWP.help:
+    Help:
+        This is Command Used For Print Available Commands
+Functions in Terminal:
+    YWP.Audios.play_sound
+    YWP.Audios.play_audio
+    YWP.Audios.record_audio
+    YWP.Audios.transcribe_audio_offline
+    YWP.Audios.transcribe_audio
+    YWP.Audios.text_to_speech
+    YWP.Audios.text_to_speech_offline
+    YWP.Audios.play_audio_online
+    YWP.Files.create_file
+    YWP.Files.open_file
+    YWP.Files.delete_all_files
+    YWP.Websites.open_website
+    YWP.Crypto.token_information
+    YWP.VideosCreator.Basic.basic_video_creator
+    YWP.endecrypt.aes.encrypt
+    YWP.endecrypt.aes.decrypt
+    YWP.endecrypt.BlowFish.encrypt
+    YWP.endecrypt.BlowFish.decrypt
+    YWP.endecrypt.Base64.encrypt
+    YWP.endecrypt.Base64.decrypt
+    YWP.endecrypt.Hex.encrypt
+    YWP.endecrypt.Hex.decrypt
+    YWP.Libraries.Basic.init_creator
+    YWP.Libraries.Basic.basic_setup_file_creator
+    YWP.Libraries.Basic.upload_file_creator
+    YWP.Files.delete_file
+    YWP.printstyle.print_one
+    YWP.printstyle.print_all
+```
+
+##### Usage (GUI)
+
+```java
+Available Platforms:
+    1- Linux
+    2- Windows
+    3- MacOS
+Help:
+    If You Donot Want Use Terminal You Program Called "YWP" in Your Search in Programs
+    If show any errors in installation
+Use:
+    1- Click on Button
+    2- Open Terminal automaticly
+    3- Enter Inputs/Informations (If found)
+    4- When Terminal End
+    5- Close Terminal
+```
+
+###### LICENSE
+
+MIT License
+
+```javascript
+Copyright (c) [2024] ["Ammar Elkhateeb"]
+```
+
+```javascript
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
