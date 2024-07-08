@@ -1,0 +1,1 @@
+drf_haystack_search_filter
