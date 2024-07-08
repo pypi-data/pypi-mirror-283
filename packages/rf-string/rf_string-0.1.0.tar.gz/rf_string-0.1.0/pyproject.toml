@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "rf-string"
+version = "0.1.0"
+description = "rf-string provides round trip string support via complimentary regex parsing to fstring formatting."
+authors = ["Jared Cuteri <jaredcuteri@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
