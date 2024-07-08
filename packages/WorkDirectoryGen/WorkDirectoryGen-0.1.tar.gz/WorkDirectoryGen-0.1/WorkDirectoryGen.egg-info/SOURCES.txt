@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+WorkDirectoryGen/__init__.py
+WorkDirectoryGen/cli.py
+WorkDirectoryGen/core.py
+WorkDirectoryGen.egg-info/PKG-INFO
+WorkDirectoryGen.egg-info/SOURCES.txt
+WorkDirectoryGen.egg-info/dependency_links.txt
+WorkDirectoryGen.egg-info/entry_points.txt
+WorkDirectoryGen.egg-info/requires.txt
+WorkDirectoryGen.egg-info/top_level.txt
