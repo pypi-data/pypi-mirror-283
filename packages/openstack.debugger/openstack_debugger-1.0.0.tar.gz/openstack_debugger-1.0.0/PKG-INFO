@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: openstack.debugger
+Version: 1.0.0
+Summary: OpenStack Configuration for Debugging
+Home-page: https://gitlabix.gabia.io/cloud/openstack/
+Author: nobody
+Author-email: cloud_dev@gabia.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.8
+License-File: AUTHORS
+Requires-Dist: pbr!=2.1.0,>=2.0.0
+Requires-Dist: tox<5.0.0,>=3.18.0
+Requires-Dist: oslo.config>=6.8.0
+Requires-Dist: oslo.log>=3.44.0
+Requires-Dist: debugpy>=1.8.2
+
+# openstack-debugger
+
+[![Documentation Status](https://img.shields.io/badge/docs-latest-brightgreen.svg)](https://openstack-debugger-cloud-openstack-d2a2d90fe3bd53a93f0b23853347.pageix.gabia.io/)
+
+OpenStack 프로젝트에서 [oslo.config](https://opendev.org/openstack/oslo.config)를 통해 원격 디버깅 옵션을 활성화할 때 사용하는 공용 라이브러리입니다.
+
