@@ -1,0 +1,12 @@
+amdfan/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+amdfan/__main__.py,sha256=cHiQqlMghXeCCnGcb0gEomNYJRDCkI3HADyiFBySBfg,385
+amdfan/commands.py,sha256=CzOUvX7Tz7AYJMyQdsQ0T8O91rK3TtlNYsokd2OhGE0,3797
+amdfan/config.py,sha256=4EGonAAbGF9hBoZNz3pI9CL7szipjbEb2kjH02wrkL4,593
+amdfan/controller.py,sha256=R8Xl1iz40x5DXgzGxzQSKUxmK3njxFIYW7hbN1vL5uo,9644
+amdfan/defaults.py,sha256=qB7GQVrLGirYcvHLdRLxoKdnqsXw2hWXnrWoHRzZ5I4,1002
+dist/systemd/amdfan.service,sha256=lQieoqj0DCgeBVn47nhhf2Axv0VFr0BAherIEfPk94M,211
+amdfan-0.2.1.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+amdfan-0.2.1.dist-info/METADATA,sha256=KdTnPrh7klL9B4wH3OtM4hDHeEEhwgaAZPqI1xLzn94,5838
+amdfan-0.2.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+amdfan-0.2.1.dist-info/entry_points.txt,sha256=mDnWJbK9xH4aSkk0T5vBPhAObuugKdnRqakYueW-kgw,47
+amdfan-0.2.1.dist-info/RECORD,,
