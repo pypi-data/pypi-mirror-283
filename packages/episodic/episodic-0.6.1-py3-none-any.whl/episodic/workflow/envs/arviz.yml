@@ -1,0 +1,12 @@
+name: arviz
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+    - arviz==0.18.0
+    - pandas
+    - typer
+    - bokeh
+    - holoviews
