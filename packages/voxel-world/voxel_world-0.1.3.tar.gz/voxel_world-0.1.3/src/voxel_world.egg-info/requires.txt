@@ -1,0 +1,9 @@
+vnoise
+numpy
+pillow
+matplotlib
+IPython
+pathlib
+binascii
+textwrap
+webbrowser
