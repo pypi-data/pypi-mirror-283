@@ -1,0 +1,11 @@
+README.md
+setup.py
+base64Compressor/__init__.py
+base64Compressor/__main__.py
+base64Compressor/compressor.py
+base64Compressor.egg-info/PKG-INFO
+base64Compressor.egg-info/SOURCES.txt
+base64Compressor.egg-info/dependency_links.txt
+base64Compressor.egg-info/entry_points.txt
+base64Compressor.egg-info/requires.txt
+base64Compressor.egg-info/top_level.txt

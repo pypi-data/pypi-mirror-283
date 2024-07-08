@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: base64Compressor
+Version: 0.1.0
+Summary: A library to compress base64 encoded images.
+Home-page: https://github.com/adityarach/base64Compressor
+Author: Aditya Rachman
+Author-email: adityarachman24.ar@gmail.com
+License: UNKNOWN
+Description: # base64image
+        
+        A library to compress base64 encoded images.
+        
+        ## Installation
+        
+        You can install the library using pip:
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown

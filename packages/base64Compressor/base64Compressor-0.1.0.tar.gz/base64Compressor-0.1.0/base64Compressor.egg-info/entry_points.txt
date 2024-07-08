@@ -1,0 +1,3 @@
+[console_scripts]
+base64Compressor = base64Compressor.__main__:main
+
