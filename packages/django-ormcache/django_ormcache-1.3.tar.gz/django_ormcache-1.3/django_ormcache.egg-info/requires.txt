@@ -1,0 +1,8 @@
+Django<5.0,>=2.0
+six
+
+[test]
+tox
+pytest
+pytest-django
+flake8
