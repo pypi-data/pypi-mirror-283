@@ -1,0 +1,55 @@
+# VScrapper
+
+![VScrapper Logo](./docs/catscrapper.jpeg)
+
+## Overview
+
+VScrapper is a versatile web scraping library designed to simplify the process of extracting data from websites. It provides a set of tools and utilities to handle various aspects of web scraping, from URL sanitization to detailed search results.
+
+## Features
+
+- **Google Search**: Performs basic and detailed Google searches to fetch relevant data.
+- **Markdown Conversion**: Converts web content into Markdown format for easy integration into documents.
+- **Detailed Search Results**: Provides detailed search results for each search query.
+- **Async by default**: Supports asynchronous operations by default.
+
+## Installation
+
+To install VScrapper, use the following command:
+
+```bash
+pip install vscrapper
+```
+
+## Usage
+
+Here's a basic example of how to use VScrapper to perform a Google search and sanitize a URL:
+
+```python
+from vscrapper.search import SearchQuery
+from vscrapper.weburl import WebURL
+from vscraooer import warmup
+# do a warmup first
+
+warmup()
+
+# Perform a Google search
+search_query = SearchQuery(query="Python web scraping")
+search_results = await search_query.google_search()
+
+# Perform a detailed google search
+detailed_results = await search_query.detailed_google_search()
+
+# Convert an url to a markdown
+web_url = WebURL(url="http://example.com")
+sanitized_url = await web_url.to_markdown()
+
+```
+
+## Contributing
+
+Contributions are welcome! Please read the [contributing guidelines](CONTRIBUTING.md) to get started.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
