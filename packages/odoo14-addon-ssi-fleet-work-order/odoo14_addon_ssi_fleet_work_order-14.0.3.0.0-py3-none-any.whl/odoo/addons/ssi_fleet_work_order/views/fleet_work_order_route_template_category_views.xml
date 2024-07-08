@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Copyright 2024 OpenSynergy Indonesia
+Copyright 2024 PT. Simetri Sinergi Indonesia
+License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <record
+        id="fleet_work_order_route_template_category_view_search"
+        model="ir.ui.view"
+    >
+        <field name="name">fleet_work_order_route_template_category - Search</field>
+        <field name="model">fleet_work_order_route_template_category</field>
+        <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_search"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data />
+        </field>
+    </record>
+
+    <record id="fleet_work_order_route_template_category_view_tree" model="ir.ui.view">
+        <field name="name">fleet_work_order_route_template_category - Tree</field>
+        <field name="model">fleet_work_order_route_template_category</field>
+        <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_tree"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data />
+        </field>
+    </record>
+
+    <record id="fleet_work_order_route_template_category_view_form" model="ir.ui.view">
+        <field name="name">fleet_work_order_route_template_category - Form</field>
+        <field name="model">fleet_work_order_route_template_category</field>
+        <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_form"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data>
+            </data>
+        </field>
+    </record>
+
+    <record
+        id="fleet_work_order_route_template_category_action"
+        model="ir.actions.act_window"
+    >
+        <field name="name">Route Template Categories</field>
+        <field name="res_model">fleet_work_order_route_template_category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="fleet_work_order_route_template_category_menu"
+        name="Route Template Categories"
+        action="fleet_work_order_route_template_category_action"
+        parent="ssi_fleet_management.menu_fleet_management_configuration"
+        groups="fleet_work_order_route_template_category_group"
+        sequence="110"
+    />
+</odoo>

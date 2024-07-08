@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 OpenSynergy Indonesia
+     Copyright 2024 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record id="view_fleet_work_order_analysis_pivot" model="ir.ui.view">
+        <field name="name">fleet_work_order_analysis.pivot</field>
+        <field name="model">fleet_work_order_analysis</field>
+        <field name="arch" type="xml">
+            <pivot
+                string="Fleet Work Order Analysis"
+                display_quantity="true"
+                disable_linking="True"
+                sample="1"
+            >
+                <field name="vehicle_id" type="row" />
+                <field name="odometer" type="measure" />
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_fleet_work_order_analysis_graph" model="ir.ui.view">
+        <field name="name">fleet_work_order_analysis.graph</field>
+        <field name="model">fleet_work_order_analysis</field>
+        <field name="arch" type="xml">
+            <graph
+                string="Fleet Work Order Analysis"
+                type="bar"
+                sample="1"
+                disable_linking="1"
+            >
+                <field name="vehicle_id" type="row" />
+                <field name="odometer" type="measure" />
+            </graph>
+         </field>
+    </record>
+
+    <record id="view_fleet_work_order_analysis_search" model="ir.ui.view">
+        <field name="name">fleet_work_order_analysis.search</field>
+        <field name="model">fleet_work_order_analysis</field>
+        <field name="arch" type="xml">
+            <search string="Fleet Work Order Analysis">
+                <field name="type_id" />
+                <field name="vehicle_id" />
+                <field name="driver_id" />
+                <field name="codriver_id" />
+                <field name="date_start" />
+                <field name="date_end" />
+                <field name="real_date_depart" />
+                <field name="real_date_arrive" />
+                <field name="odometer" />
+                <field name="state" />
+                <separator />
+                <filter name="filter_empty" string="Empty" domain="[('id','=',0)]" />
+                <group expand="1" string="Group By">
+                    <filter
+                        name="group_type"
+                        string="Type"
+                        context="{'group_by':'type_id'}"
+                    />
+                    <filter
+                        name="group_vehicle"
+                        string="Vehicle"
+                        context="{'group_by':'vehicle_id'}"
+                    />
+                    <filter
+                        name="group_driver"
+                        string="Driver"
+                        context="{'group_by':'driver_id'}"
+                    />
+                    <filter
+                        name="group_codriver"
+                        string="Co-Driver"
+                        context="{'group_by':'codriver_id'}"
+                    />
+                    <filter
+                        name="group_state"
+                        string="State"
+                        context="{'group_by':'state'}"
+                    />
+                    <filter
+                        name="group_etd"
+                        string="ETD"
+                        context="{'group_by':'date_end'}"
+                    />
+                    <filter
+                        name="group_eta"
+                        string="ETA"
+                        context="{'group_by':'date_start'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+   <record id="action_fleet_work_order_analysis" model="ir.actions.act_window">
+        <field name="name">Fleet Work Order Analysis</field>
+        <field name="res_model">fleet_work_order_analysis</field>
+        <field name="view_mode">pivot,graph</field>
+        <field name="search_view_id" ref="view_fleet_work_order_analysis_search" />
+        <field name="context">{"search_default_filter_empty": True}</field>
+   </record>
+
+    <menuitem
+        id="menu_fleet_work_order_analysis"
+        parent="ssi_fleet_management.menu_fleet_management_report"
+        action="action_fleet_work_order_analysis"
+        sequence="10"
+        groups="fleet_work_order_analysis_group"
+    />
+
+</odoo>
