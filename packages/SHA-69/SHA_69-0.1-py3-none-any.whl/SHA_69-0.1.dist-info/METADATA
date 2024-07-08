@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: SHA-69
+Version: 0.1
+Summary: Custom hashing algorithm (SHA-69) implementation
+Home-page: https://github.com/PythonScratcher/SHA-69
+Author: Your Name
+Author-email: mc@psr.tf
+License: MIT
+Keywords: hashing sha-69
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
