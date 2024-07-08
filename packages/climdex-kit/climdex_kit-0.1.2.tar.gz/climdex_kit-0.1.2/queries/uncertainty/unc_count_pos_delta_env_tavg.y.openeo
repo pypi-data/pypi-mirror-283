@@ -1,0 +1,272 @@
+{
+  "process_graph": {
+    "load2": {
+      "process_id": "load_collection",
+      "arguments": {
+        "id": "su_19712100_tnst_1x1km_year_cordexadj_qdm",
+        "spatial_extent": {
+          "west": 10.964819724054955,
+          "east": 11.49028077307477,
+          "south": 46.27765083387604,
+          "north": 46.40085609837578
+        },
+        "temporal_extent": null,
+        "bands": null,
+        "properties": {}
+      }
+    },
+    "load3": {
+      "process_id": "load_collection",
+      "arguments": {
+        "id": "tr_19712100_tnst_1x1km_year_cordexadj_qdm",
+        "spatial_extent": {
+          "west": 10.293056040808795,
+          "east": 12.580988155437245,
+          "south": 45.61443989663384,
+          "north": 47.14218071084979
+        },
+        "temporal_extent": null,
+        "bands": null
+      },
+      "result": true
+    },
+    "filter4": {
+      "process_id": "filter_labels",
+      "arguments": {
+        "data": {
+          "from_node": "load2"
+        },
+        "condition": {
+          "process_graph": {
+            "eq1": {
+              "process_id": "eq",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 8.5
+              },
+              "result": true
+            }
+          }
+        },
+        "dimension": "rcp"
+      },
+      "description": "Select emissions scenario."
+    },
+    "filter5": {
+      "process_id": "filter_labels",
+      "arguments": {
+        "data": {
+          "from_node": "filter4"
+        },
+        "condition": {
+          "process_graph": {
+            "gte1": {
+              "process_id": "gte",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 2051
+              }
+            },
+            "lte2": {
+              "process_id": "lte",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 2080
+              }
+            },
+            "and3": {
+              "process_id": "and",
+              "arguments": {
+                "x": {
+                  "from_node": "gte1"
+                },
+                "y": {
+                  "from_node": "lte2"
+                }
+              },
+              "result": true
+            }
+          }
+        },
+        "dimension": "year"
+      },
+      "description": "Select the 2051-2080 time interval."
+    },
+    "filter6": {
+      "process_id": "filter_labels",
+      "arguments": {
+        "data": {
+          "from_node": "filter4"
+        },
+        "condition": {
+          "process_graph": {
+            "gte1": {
+              "process_id": "gte",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 1981
+              }
+            },
+            "lte2": {
+              "process_id": "lte",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 2010
+              }
+            },
+            "and3": {
+              "process_id": "and",
+              "arguments": {
+                "x": {
+                  "from_node": "gte1"
+                },
+                "y": {
+                  "from_node": "lte2"
+                }
+              },
+              "result": true
+            }
+          }
+        },
+        "dimension": "year"
+      },
+      "description": "Select baseline interval 1981-2010."
+    },
+    "reduce7": {
+      "process_id": "reduce_dimension",
+      "arguments": {
+        "data": {
+          "from_node": "filter5"
+        },
+        "reducer": {
+          "process_graph": {
+            "mean1": {
+              "process_id": "mean",
+              "arguments": {
+                "data": {
+                  "from_parameter": "data"
+                }
+              },
+              "result": true
+            }
+          }
+        },
+        "dimension": "year"
+      },
+      "description": "Compute the average over the time interval."
+    },
+    "reduce8": {
+      "process_id": "reduce_dimension",
+      "arguments": {
+        "data": {
+          "from_node": "filter6"
+        },
+        "reducer": {
+          "process_graph": {
+            "mean1": {
+              "process_id": "mean",
+              "arguments": {
+                "data": {
+                  "from_parameter": "data"
+                }
+              },
+              "result": true
+            }
+          }
+        },
+        "dimension": "year"
+      }
+    },
+    "merge1": {
+      "process_id": "merge_cubes",
+      "arguments": {
+        "cube1": {
+          "from_node": "reduce7"
+        },
+        "cube2": {
+          "from_node": "reduce8"
+        },
+        "overlap_resolver": {
+          "process_graph": {
+            "subtract1": {
+              "process_id": "subtract",
+              "arguments": {
+                "x": {
+                  "from_parameter": "x"
+                },
+                "y": {
+                  "from_parameter": "y"
+                }
+              },
+              "result": true
+            }
+          }
+        }
+      },
+      "description": "Compute the pixel-by-pixel difference for each model in the ensemble."
+    },
+    "reduce2": {
+      "process_id": "reduce_dimension",
+      "arguments": {
+        "data": {
+          "from_node": "merge1"
+        },
+        "reducer": {
+          "process_graph": {
+            "gt2": {
+              "process_id": "gt",
+              "arguments": {
+                "x": {
+                  "from_parameter": "data"
+                },
+                "y": 0
+              }
+            },
+            "if1": {
+              "process_id": "if",
+              "arguments": {
+                "value": {
+                  "from_node": "gt2"
+                },
+                "accept": 1,
+                "reject": 0
+              }
+            },
+            "sum3": {
+              "process_id": "sum",
+              "arguments": {
+                "data": {
+                  "from_node": "if1"
+                }
+              },
+              "result": true
+            }
+          }
+        },
+        "dimension": "M"
+      },
+      "description": "Assign the count of all positive differences of the ensemble models to each spatial pixel."
+    },
+    "save3": {
+      "process_id": "save_result",
+      "arguments": {
+        "format": "JSON",
+        "data": {
+          "from_node": "reduce2"
+        }
+      },
+      "description": "Export 2D map to JSON."
+    }
+  },
+  "parameters": []
+}

@@ -1,0 +1,20 @@
+for $c in (rx1day_19712100_tnst_1x1km_year_cordexadj_qdm)
+return encode(
+   coverage model_diff
+      over $pm model(imageCrsDomain($c[M(*:*)], M)) // all of them: cannot pick N slices point
+      values (
+            condense +
+            over $px1 X( imageCrsDomain($c, X) ),
+                 $py1 Y( imageCrsDomain($c, Y) )
+            where min($c[X($px1), Y($py1), M($pm), year(1981:2010), rcp(8.5)]) is not null and // exclude NODATA
+                  min($c[X($px1), Y($py1), M($pm), year(2071:2100), rcp(8.5)]) is not null     //
+            using avg($c[X($px1), Y($py1), M($pm), year(2071:2100), rcp(8.5)]) -
+                  avg($c[X($px1), Y($py1), M($pm), year(1981:2010), rcp(8.5)])
+            ) / (
+            condense +
+            over $px2 X( imageCrsDomain($c, X) ),
+                 $py2 Y( imageCrsDomain($c, Y) )
+            where min($c[X($px2), Y($py2), M($pm), year(1981:2010), rcp(8.5)]) is not null and // exclude NODATA
+                  min($c[X($px2), Y($py2), M($pm), year(2071:2100), rcp(8.5)]) is not null     //
+            using 1),
+   "application/json")

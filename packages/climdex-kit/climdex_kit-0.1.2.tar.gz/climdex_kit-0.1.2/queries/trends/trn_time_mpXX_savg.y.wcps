@@ -1,0 +1,18 @@
+for $c in (rx1day_19712100_tnst_1x1km_year_cordexadj_qdm)
+return encode(
+   coverage spatial_avg
+      over $pt year(imageCrsDomain($c, year)),
+           $pm    M(imageCrsDomain($c, M))
+      values (
+           condense +
+           over $px1 X( imageCrsDomain($c, X) ),
+                $py1 Y( imageCrsDomain($c, Y) )
+           where $c[X($px1), Y($py1), M($pm), year($pt), rcp(8.5)] is not null // exclude NODATA
+           using $c[X($px1), Y($py1), M($pm), year($pt), rcp(8.5)]
+           ) / (
+           condense +
+           over $px2 X( imageCrsDomain($c, X) ),
+                $py2 Y( imageCrsDomain($c, Y) )
+           where $c[X($px2), Y($py2), M($pm), year($pt), rcp(8.5)] is not null // exclude NODATA
+           using 1),
+   "application/json")

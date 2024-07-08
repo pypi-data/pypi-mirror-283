@@ -1,0 +1,71 @@
+# ---------------------------------------------------------------
+
+This folder contains the script for the publication of 
+the climate indices time-series as rasdaman coverages.
+
+Configuration files are found in the ./etc/ folder.
+
+To start publishing the indices, follow the instructions in:
+
+    $ rc.sh
+
+In order to reset the state of a previous ingestion, remove
+the ./ingredients/ folder and/or all its JSON files.
+
+# ---------------------------------------------------------------
+
+UTF-8 encoded characters in NetCDF metadata raising Unicode exception:
+For instance, "°C" in some metadata field to be used in ingredients file:
+
+   ========================================================
+   UnicodeEncodeError: 'ascii' codec can't encode character
+          u'\xb0' in position 33: ordinal not in range(128)
+   ========================================================
+
+The exception is thrown when the UTF-8 encoded string is stored as "str(s)"
+when using Python 2.7.
+
+Python 3 would not raise any exception, but wcst_import requires Python 2.7
+-- see e.g. __builtins__ instead of builtins import [1] in utils/time_utils.py --,
+so forcing Python 3 is not an option.
+
+The file where the exceptions originate are:
+
+  1. /opt/rasdaman/share/rasdaman/wcst_import/master/evaluator/sentence_evaluator.py
+        in the evaluate function: "str(expression_result)";
+  2. /opt/rasdaman/share/rasdaman/wcst_import/master/extra_metadata/extra_metadata_serializers.py
+        where the XML description of a coverage is serialized to an XML string;
+
+The problem lies in the fact that "unicode" objects leak in, while (encoded) strings
+are always expected. Hence it shall be made sure that possible Unicode objects
+are always decoded to string first.        
+
+The possible solutions are:
+
+  A) (workaround) remove any non-ASCII character from those metadata fields that are forwarded
+     from a NetCDF attribute to the Coverage's metadata
+
+  B) make the source code of the wcst_import Python package Unicode-aware [2]
+     as per PATCH provided in this folder.
+
+
+# ---------------------------------------------------------------
+
+   "The URL provided in the coverageRef parameter is malformed"
+
+This can be a tomcat security measure on the tmp directory that are usually
+found in WCS-T URLs when creating new coverages.
+
+To solve the issue, set the **`PrivateTmp`** property to `no` in
+`/lib/systemd/system/tomcat9.service`. Then restart:
+
+```sh
+$ sudo systemctl daemon-reload
+$ sudo service tomcat9 restart
+```
+
+# ---------------------------------------------------------------
+
+
+ [1] https://github.com/catboost/catboost/issues/953#issuecomment-521557773
+ [2] https://docs.python.org/2.7/howto/unicode.html#tips-for-writing-unicode-aware-programs

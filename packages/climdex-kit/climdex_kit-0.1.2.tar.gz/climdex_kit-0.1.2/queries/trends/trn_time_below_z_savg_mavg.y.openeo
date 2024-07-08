@@ -1,0 +1,157 @@
+{
+  "parameters": [],
+  "process_graph": {
+    "1": {
+      "process_id": "load_collection",
+      "arguments": {
+        "spatial_extent": {
+          "east": 12.580988155437245,
+          "south": 45.61443989663384,
+          "north": 47.14218071084979,
+          "west": 10.293056040808795
+        },
+        "id": "eudem_2011_tnst_1x1km_eea_copernicus"
+      }
+    },
+    "2": {
+      "process_id": "reduce_dimension",
+      "description": "Take the ensemble average.",
+      "arguments": {
+        "data": {
+          "from_node": "reduce2"
+        },
+        "reducer": {
+          "process_graph": {
+            "mean1": {
+              "result": true,
+              "process_id": "mean",
+              "arguments": {
+                "data": {
+                  "from_parameter": "data"
+                }
+              }
+            }
+          }
+        },
+        "dimension": "M"
+      }
+    },
+    "save3": {
+      "process_id": "save_result",
+      "description": "Export the 1D time-series to JSON.",
+      "arguments": {
+        "data": {
+          "from_node": "2"
+        },
+        "format": "JSON"
+      }
+    },
+    "load2": {
+      "result": true,
+      "process_id": "load_collection",
+      "arguments": {
+        "spatial_extent": {
+          "east": 12.580988155437245,
+          "south": 45.61443989663384,
+          "north": 47.14218071084979,
+          "west": 10.293056040808795
+        },
+        "id": "tr_19712100_tnst_1x1km_year_cordexadj_qdm"
+      }
+    },
+    "filter1": {
+      "process_id": "filter_labels",
+      "description": "Select emissions scenario.",
+      "arguments": {
+        "condition": {
+          "process_graph": {
+            "eq1": {
+              "result": true,
+              "process_id": "eq",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 4.5
+              }
+            }
+          }
+        },
+        "data": {
+          "from_node": "load1"
+        }
+      }
+    },
+    "reduce2": {
+      "process_id": "reduce_spatial",
+      "description": "Take the spatial average over the area of interest.\n",
+      "arguments": {
+        "data": {
+          "from_node": "merge3"
+        },
+        "reducer": {
+          "process_graph": {
+            "mean1": {
+              "result": true,
+              "process_id": "mean",
+              "arguments": {
+                "data": {
+                  "from_parameter": "data"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "load1": {
+      "process_id": "load_collection",
+      "arguments": {
+        "spatial_extent": {
+          "east": 12.580988155437245,
+          "south": 45.61443989663384,
+          "north": 47.14218071084979,
+          "west": 10.293056040808795
+        },
+        "id": "su_19712100_tnst_1x1km_year_cordexadj_qdm"
+      }
+    },
+    "merge3": {
+      "process_id": "merge_cubes",
+      "description": "Filter out only those pixels below a certain elevation threshold.",
+      "arguments": {
+        "cube2": {
+          "from_node": "1"
+        },
+        "cube1": {
+          "from_node": "filter1"
+        },
+        "overlap_resolver": {
+          "process_graph": {
+            "lte2": {
+              "process_id": "lte",
+              "arguments": {
+                "x": {
+                  "from_parameter": "y"
+                },
+                "y": 700
+              }
+            },
+            "if3": {
+              "result": true,
+              "process_id": "if",
+              "arguments": {
+                "value": {
+                  "from_node": "lte2"
+                },
+                "accept": {
+                  "from_parameter": "x"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

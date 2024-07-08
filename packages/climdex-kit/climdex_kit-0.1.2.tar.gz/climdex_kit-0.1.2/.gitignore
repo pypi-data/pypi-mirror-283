@@ -1,0 +1,10 @@
+# spyder project files
+.spyproject/
+
+# cache files
+__pycache__/
+*.egg-info/
+.Rhistory
+
+# jupyter
+.ipynb_checkpoints/

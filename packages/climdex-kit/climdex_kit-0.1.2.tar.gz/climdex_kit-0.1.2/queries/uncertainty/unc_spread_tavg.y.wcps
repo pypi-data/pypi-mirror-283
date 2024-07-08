@@ -1,0 +1,9 @@
+for $c in (rx1day_19712100_tnst_1x1km_year_cordexadj_qdm)
+return encode(
+   coverage ens_spread
+      over $px X(imageCrsDomain($c, X)),
+           $py Y(imageCrsDomain($c, Y))
+      values
+           max($c[X($px), Y($py), year(2080:2100), rcp(4.5)]) -
+           min($c[X($px), Y($py), year(2080:2100), rcp(4.5)]),
+   "png")

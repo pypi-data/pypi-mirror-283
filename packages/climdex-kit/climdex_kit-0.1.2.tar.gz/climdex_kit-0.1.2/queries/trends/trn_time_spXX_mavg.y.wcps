@@ -1,0 +1,13 @@
+for $c in (rx1day_19712100_tnst_1x1km_year_cordexadj_qdm)
+return encode(
+   coverage ens_avg
+      over $pt year(imageCrsDomain($c[year(2050:2080)], year)),
+           $pv v(0:((imageCrsDomain($c, X).hi + 1) *
+                    (imageCrsDomain($c, Y).hi + 1) - 1))
+      values
+           avg($c[
+              X( $pv - ((long)( $pv/(imageCrsDomain($c, X).hi + 1) ) *
+                                    (imageCrsDomain($c, X).hi + 1))),
+              Y(        (long)( $pv/(imageCrsDomain($c, X).hi + 1) ) ),
+              year($pt), rcp(8.5)]),
+   "application/json")

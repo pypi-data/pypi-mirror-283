@@ -1,0 +1,103 @@
+{
+  "config": {
+    "service_url": "{{ows_url}}",
+    "tmp_directory": "{{tmp_dir}}",
+    "crs_resolver": "{{def_dir}}",
+    "mock": false,
+    "automated": false,
+    "track_files": false,
+    "blocking": false,
+    "insitu": true,
+    "skip": false,
+    "retry": false
+  },
+  "input": {
+    "coverage_id": "{{coverage_id}}",
+    "paths": [
+      "/mnt/CEPH_PROJECTS/FACT_CLIMAX/CORDEX-Adjust/INDICES/DEM_1km_LAEA.nc"
+    ]
+  },
+  "inspire": {
+    "metadata_url": "TODO"
+  },
+  "recipe": {
+    "name": "general_coverage",
+    "options": {
+      "coverage": {
+        "crs": "EPSG/0/3035",
+        "metadata": {
+          "type": "xml",
+          "global": {
+            "Title": "${netcdf:metadata:Title}",
+            "Project": "'FAct CLIMAX'",
+            "Creator": "${netcdf:metadata:Institution}",
+            "Description": "'${netcdf:metadata:Comment}'",
+            "License": "'CC-BY-4.0'",
+            "License_Link": "${netcdf:metadata:Licence}",
+            "About_Link": "'${netcdf:metadata:References}'",
+            "Temporal_Extent": "'${netcdf:metadata:Temporal_Extent}'",
+            "Keywords": "'DEM, FAct CLIMAX, Trentino, South Tyrol, Copernicus, Elevation, Digital Elevation Model, DSM, Copernicus Land, hydrography'",
+            "Provider1_Name": "${netcdf:metadata:Institution}",
+            "Provider1_Roles": "'Producer'",
+            "Provider1_Link": "'https://www.eea.europa.eu/'",
+            "Provider2_Name": "'Eurac EO WCS'",
+            "Provider2_Roles": "'Host'",
+            "Provider2_Link": "'http://www.eurac.edu'",
+            "Provider3_Name": "'Alice Crespi'",
+            "Provider3_Roles": "'Processor'",
+            "Provider3_Link": "'https://www.eurac.edu/en/people/alice-crespi'"
+          },
+          "local": {
+            "Source": "'${netcdf:metadata:Source}'"
+          },
+          "bands": {
+            "dem": {
+              "long_name": "'${netcdf:variable:dem:long_name}'",
+              "uomCode": "'${netcdf:variable:dem:units}'"
+            }
+          },
+          "axes": {
+            "Y": {
+              "units": "${netcdf:variable:northing:units}",
+              "long_name": "${netcdf:variable:northing:long_name}",
+              "standard_name": "${netcdf:variable:northing:standard_name}"
+            },
+            "X": {
+              "units": "${netcdf:variable:easting:units}",
+              "long_name": "${netcdf:variable:easting:long_name}",
+              "standard_name": "${netcdf:variable:easting:standard_name}"
+            }
+          }
+        },
+        "slicer": {
+          "type": "netcdf",
+          "pixelIsPoint": true,
+          "bands": [
+            {
+              "identifier": "dem",
+              "name": "dem",
+              "description": "'${netcdf:variable:dem:long_name}'",
+              "uomCode": "'${netcdf:variable:dem:units}'"
+            }
+          ],
+          "axes": {
+            "Y": {
+              "min": "${netcdf:variable:northing:min}",
+              "max": "${netcdf:variable:northing:max}",
+              "resolution": "${netcdf:variable:northing:resolution}",
+              "gridOrder": 0,
+              "crsOrder": 0
+            },
+            "X": {
+              "min": "${netcdf:variable:easting:min}",
+              "max": "${netcdf:variable:easting:max}",
+              "resolution": "${netcdf:variable:easting:resolution}",
+              "gridOrder": 1,
+              "crsOrder": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

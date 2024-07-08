@@ -1,0 +1,3 @@
+RMAN_OWS_URL="http://saocompute.eurac.edu/rasdaman/ows"
+RMAN_TMP_DIR="/tmp"
+RMAN_CRS_RES="http://saocompute.eurac.edu/def"

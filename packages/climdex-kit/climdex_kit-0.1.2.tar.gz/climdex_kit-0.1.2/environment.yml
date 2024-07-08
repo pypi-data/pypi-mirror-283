@@ -1,0 +1,14 @@
+# create environment
+# $ conda env create -f environment.yml
+# $ conda activate climax
+name: climdex
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python >= 3.8
+  - cdo = 1.9.9
+  - python-cdo
+  - pip
+  - pip:
+    - climate-indices

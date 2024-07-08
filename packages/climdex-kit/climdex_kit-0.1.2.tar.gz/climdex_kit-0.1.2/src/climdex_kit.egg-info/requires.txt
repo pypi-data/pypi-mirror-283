@@ -1,0 +1,10 @@
+cdo
+climate-indices
+
+[docs]
+
+[interactive]
+matplotlib
+jupyter
+
+[tests]

@@ -1,0 +1,3 @@
+RMAN_OWS_URL="http://eosao66:8088/rasdaman/ows"
+RMAN_TMP_DIR="/tmp/rasdaman"
+RMAN_CRS_RES="http://eosao66:8088/rasdaman/def"

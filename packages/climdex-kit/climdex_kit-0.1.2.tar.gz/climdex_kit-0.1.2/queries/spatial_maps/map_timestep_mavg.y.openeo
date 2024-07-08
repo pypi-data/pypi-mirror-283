@@ -1,0 +1,111 @@
+{
+  "parameters": [],
+  "process_graph": {
+    "1": {
+      "process_id": "filter_labels",
+      "description": "Select the year 2050.",
+      "arguments": {
+        "condition": {
+          "process_graph": {
+            "eq1": {
+              "result": true,
+              "process_id": "eq",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 2050
+              }
+            }
+          }
+        },
+        "data": {
+          "from_node": "filter1"
+        },
+        "dimension": "year"
+      }
+    },
+    "save2": {
+      "process_id": "save_result",
+      "description": "Export the 2D spatial map to JSON.",
+      "arguments": {
+        "data": {
+          "from_node": "reduce2"
+        },
+        "format": "JSON"
+      }
+    },
+    "load3": {
+      "result": true,
+      "process_id": "load_collection",
+      "arguments": {
+        "spatial_extent": {
+          "east": 12.580988155437245,
+          "south": 45.61443989663384,
+          "north": 47.14218071084979,
+          "west": 10.293056040808795
+        },
+        "id": "tr_19712100_tnst_1x1km_year_cordexadj_qdm"
+      }
+    },
+    "filter1": {
+      "process_id": "filter_labels",
+      "description": "Select the RCP 4.5 emissions scenario.",
+      "arguments": {
+        "condition": {
+          "process_graph": {
+            "eq1": {
+              "result": true,
+              "process_id": "eq",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 4.5
+              }
+            }
+          }
+        },
+        "data": {
+          "from_node": "load1"
+        },
+        "dimension": "rcp"
+      }
+    },
+    "reduce2": {
+      "process_id": "reduce_dimension",
+      "description": "Compute the ensemble average. ",
+      "arguments": {
+        "data": {
+          "from_node": "1"
+        },
+        "reducer": {
+          "process_graph": {
+            "mean1": {
+              "result": true,
+              "process_id": "mean",
+              "arguments": {
+                "data": {
+                  "from_parameter": "data"
+                }
+              }
+            }
+          }
+        },
+        "dimension": "M"
+      }
+    },
+    "load1": {
+      "process_id": "load_collection",
+      "arguments": {
+        "spatial_extent": {
+          "east": 12.580988155437245,
+          "south": 45.61443989663384,
+          "north": 47.14218071084979,
+          "west": 10.293056040808795
+        },
+        "id": "su_19712100_tnst_1x1km_year_cordexadj_qdm"
+      }
+    }
+  }
+}

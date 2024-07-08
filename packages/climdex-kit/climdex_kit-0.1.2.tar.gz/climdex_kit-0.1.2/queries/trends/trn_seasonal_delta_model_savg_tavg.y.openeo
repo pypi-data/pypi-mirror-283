@@ -1,0 +1,294 @@
+{
+  "parameters": [],
+  "process_graph": {
+    "2": {
+      "process_id": "filter_labels",
+      "description": "Select 1981-2010 interval.",
+      "arguments": {
+        "condition": {
+          "process_graph": {
+            "and3": {
+              "result": true,
+              "process_id": "and",
+              "arguments": {
+                "x": {
+                  "from_node": "lte1"
+                },
+                "y": {
+                  "from_node": "gte2"
+                }
+              }
+            },
+            "lte1": {
+              "process_id": "lte",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 2010
+              }
+            },
+            "gte2": {
+              "process_id": "gte",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 1981
+              }
+            }
+          }
+        },
+        "data": {
+          "from_node": "filter2"
+        },
+        "dimension": "year"
+      }
+    },
+    "4": {
+      "process_id": "reduce_spatial",
+      "description": "Average out spatial axes.",
+      "arguments": {
+        "data": {
+          "from_node": "reduce7"
+        },
+        "reducer": {
+          "process_graph": {
+            "mean1": {
+              "result": true,
+              "process_id": "mean",
+              "arguments": {
+                "data": {
+                  "from_parameter": "data"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "5": {
+      "process_id": "load_collection",
+      "arguments": {
+        "spatial_extent": {
+          "east": 12.580988155437245,
+          "south": 45.61443989663384,
+          "north": 47.14218071084979,
+          "west": 10.293056040808795
+        },
+        "id": "jja_mt_19712100_tnst_1x1km_year_cordexadj_qdm"
+      }
+    },
+    "merge8": {
+      "process_id": "merge_cubes",
+      "description": "Compute the difference, for each ensemble model, of the average values.",
+      "arguments": {
+        "cube2": {
+          "from_node": "4"
+        },
+        "cube1": {
+          "from_node": "reduce3"
+        },
+        "overlap_resolver": {
+          "process_graph": {
+            "subtract1": {
+              "result": true,
+              "process_id": "subtract",
+              "arguments": {
+                "x": {
+                  "from_parameter": "y"
+                },
+                "y": {
+                  "from_parameter": "x"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "reduce7": {
+      "process_id": "reduce_dimension",
+      "description": "Average all values in the time interval.",
+      "arguments": {
+        "data": {
+          "from_node": "filter4"
+        },
+        "reducer": {
+          "process_graph": {
+            "mean1": {
+              "result": true,
+              "process_id": "mean",
+              "arguments": {
+                "data": {
+                  "from_parameter": "data"
+                }
+              }
+            }
+          }
+        },
+        "dimension": "year"
+      }
+    },
+    "filter2": {
+      "process_id": "filter_labels",
+      "description": "Filter on RCP 8.5 emissions scenario.",
+      "arguments": {
+        "condition": {
+          "process_graph": {
+            "eq1": {
+              "result": true,
+              "process_id": "eq",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 8.5
+              }
+            }
+          }
+        },
+        "data": {
+          "from_node": "load6"
+        },
+        "dimension": "rcp"
+      }
+    },
+    "filter4": {
+      "process_id": "filter_labels",
+      "description": "Select 2071-2100 interval.",
+      "arguments": {
+        "condition": {
+          "process_graph": {
+            "and3": {
+              "result": true,
+              "process_id": "and",
+              "arguments": {
+                "x": {
+                  "from_node": "lte1"
+                },
+                "y": {
+                  "from_node": "gte2"
+                }
+              }
+            },
+            "lte1": {
+              "process_id": "lte",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 2100
+              }
+            },
+            "gte2": {
+              "process_id": "gte",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 2071
+              }
+            }
+          }
+        },
+        "data": {
+          "from_node": "filter2"
+        },
+        "dimension": "year"
+      }
+    },
+    "load7": {
+      "process_id": "load_collection",
+      "arguments": {
+        "spatial_extent": {
+          "east": 12.580988155437245,
+          "south": 45.61443989663384,
+          "north": 47.14218071084979,
+          "west": 10.293056040808795
+        },
+        "id": "djf_mt_19712100_tnst_1x1km_year_cordexadj_qdm"
+      }
+    },
+    "load6": {
+      "process_id": "load_collection",
+      "arguments": {
+        "spatial_extent": {
+          "east": 12.580988155437245,
+          "south": 45.61443989663384,
+          "north": 47.14218071084979,
+          "west": 10.293056040808795
+        },
+        "id": "jja_pr_19712100_tnst_1x1km_year_cordexadj_qdm"
+      }
+    },
+    "load8": {
+      "process_id": "load_collection",
+      "arguments": {
+        "spatial_extent": {
+          "east": 12.580988155437245,
+          "south": 45.61443989663384,
+          "north": 47.14218071084979,
+          "west": 10.293056040808795
+        },
+        "id": "djf_pr_19712100_tnst_1x1km_year_cordexadj_qdm"
+      }
+    },
+    "reduce4": {
+      "process_id": "reduce_dimension",
+      "description": "Average all values in the time interval.",
+      "arguments": {
+        "data": {
+          "from_node": "2"
+        },
+        "reducer": {
+          "process_graph": {
+            "mean1": {
+              "result": true,
+              "process_id": "mean",
+              "arguments": {
+                "data": {
+                  "from_parameter": "data"
+                }
+              }
+            }
+          }
+        },
+        "dimension": "year"
+      }
+    },
+    "reduce3": {
+      "process_id": "reduce_spatial",
+      "description": "Average out spatial axes.",
+      "arguments": {
+        "data": {
+          "from_node": "reduce4"
+        },
+        "reducer": {
+          "process_graph": {
+            "mean1": {
+              "result": true,
+              "process_id": "mean",
+              "arguments": {
+                "data": {
+                  "from_parameter": "data"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "save9": {
+      "result": true,
+      "process_id": "save_result",
+      "description": "Export 1D output to JSON: each element is the difference of average temperatures in the two selected time intervals, for each available model in the ensemble.",
+      "arguments": {
+        "data": {
+          "from_node": "merge8"
+        },
+        "format": "JSON"
+      }
+    }
+  }
+}

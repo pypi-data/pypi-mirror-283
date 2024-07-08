@@ -1,0 +1,94 @@
+{
+  "parameters": [],
+  "process_graph": {
+    "filter2": {
+      "process_id": "filter_labels",
+      "description": "Select emissions scenario.",
+      "arguments": {
+        "condition": {
+          "process_graph": {
+            "eq1": {
+              "result": true,
+              "process_id": "eq",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 4.5
+              }
+            }
+          }
+        },
+        "data": {
+          "from_node": "load1"
+        },
+        "dimension": "rcp"
+      }
+    },
+    "save5": {
+      "result": true,
+      "process_id": "save_result",
+      "description": "Export 2D spatial map to JOSN.",
+      "arguments": {
+        "data": {
+          "from_node": "filter4"
+        },
+        "format": "JSON"
+      }
+    },
+    "filter3": {
+      "process_id": "filter_labels",
+      "description": "Select model.",
+      "arguments": {
+        "condition": {
+          "process_graph": {
+            "eq1": {
+              "result": true,
+              "process_id": "eq",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 0
+              }
+            }
+          }
+        },
+        "data": {
+          "from_node": "filter2"
+        },
+        "dimension": "M"
+      }
+    },
+    "filter4": {
+      "process_id": "filter_labels",
+      "description": "Select year.",
+      "arguments": {
+        "condition": {
+          "process_graph": {
+            "eq1": {
+              "result": true,
+              "process_id": "eq",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 2080
+              }
+            }
+          }
+        },
+        "data": {
+          "from_node": "filter3"
+        },
+        "dimension": "year"
+      }
+    },
+    "load1": {
+      "process_id": "load_collection",
+      "arguments": {
+        "id": "amjjas_pr_19712100_tnst_1x1km_year_cordexadj_qdm"
+      }
+    }
+  }
+}

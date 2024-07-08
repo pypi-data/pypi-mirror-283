@@ -1,0 +1,9 @@
+for $c in (rx1day_19712100_tnst_1x1km_year_cordexadj_qdm)
+return encode(
+   coverage ens_avg
+      over $px X(imageCrsDomain($c, X)),
+           $py Y(imageCrsDomain($c, Y))
+      values
+           avg($c[X($px), Y($py), year(2050:2080), rcp(8.5)]) /
+           avg($c[X($px), Y($py), year(2050:2080), rcp(4.5)]),
+   "png")

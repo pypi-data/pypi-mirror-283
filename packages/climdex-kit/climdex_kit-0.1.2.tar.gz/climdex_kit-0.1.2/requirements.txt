@@ -1,0 +1,4 @@
+# install packages
+# $ conda install --file requirements.txt
+cdo
+climate-indices

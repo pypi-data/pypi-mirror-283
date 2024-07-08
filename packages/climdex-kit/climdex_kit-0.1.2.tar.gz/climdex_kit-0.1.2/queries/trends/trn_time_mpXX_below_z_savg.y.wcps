@@ -1,0 +1,21 @@
+for $c in (rx1day_19712100_tnst_1x1km_year_cordexadj_qdm),
+    $d in (eudem_2011_tnst_1x1km_eea_copernicus)
+return encode(
+   coverage spatial_avg
+      over $pt year(imageCrsDomain($c[year(2071:2100)], year)),
+           $pm    M(imageCrsDomain($c, M))
+      values (
+           condense +
+           over $px1 X( imageCrsDomain($c, X) ),
+                $py1 Y( imageCrsDomain($c, Y) )
+           where $c[X($px1), Y($py1), M($pm), year($pt), rcp(8.5)] is not null and
+                 $d[X($px1), Y($py1)] <= 500
+           using $c[X($px1), Y($py1), M($pm), year($pt), rcp(8.5)]
+           ) / (
+           condense +
+           over $px2 X( imageCrsDomain($c, X) ),
+                $py2 Y( imageCrsDomain($c, Y) )
+           where $c[X($px2), Y($py2), M($pm), year($pt), rcp(8.5)] is not null and
+                 $d[X($px2), Y($py2)] <= 500
+           using 1),
+   "application/json")

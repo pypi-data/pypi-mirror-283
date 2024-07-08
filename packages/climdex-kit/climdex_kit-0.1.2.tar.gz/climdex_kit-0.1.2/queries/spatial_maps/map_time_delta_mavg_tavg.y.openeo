@@ -1,0 +1,258 @@
+{
+  "parameters": [],
+  "process_graph": {
+    "1": {
+      "process_id": "filter_labels",
+      "description": "Select the 2041-2070 time interval.",
+      "arguments": {
+        "condition": {
+          "process_graph": {
+            "and3": {
+              "result": true,
+              "process_id": "and",
+              "arguments": {
+                "x": {
+                  "from_node": "gte1"
+                },
+                "y": {
+                  "from_node": "lte2"
+                }
+              }
+            },
+            "lte2": {
+              "process_id": "lte",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 2070
+              }
+            },
+            "gte1": {
+              "process_id": "gte",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 2041
+              }
+            }
+          }
+        },
+        "data": {
+          "from_node": "filter1"
+        },
+        "dimension": "year"
+      }
+    },
+    "3": {
+      "process_id": "reduce_dimension",
+      "description": "Compute the average of the 1981-2010 time interval.",
+      "arguments": {
+        "data": {
+          "from_node": "filter2"
+        },
+        "reducer": {
+          "process_graph": {
+            "mean1": {
+              "result": true,
+              "process_id": "mean",
+              "arguments": {
+                "data": {
+                  "from_parameter": "data"
+                }
+              }
+            }
+          }
+        },
+        "dimension": "year"
+      }
+    },
+    "save2": {
+      "process_id": "save_result",
+      "description": "Export the 2D differences map to JSON.",
+      "arguments": {
+        "data": {
+          "from_node": "merge5"
+        },
+        "format": "JSON"
+      }
+    },
+    "load3": {
+      "result": true,
+      "process_id": "load_collection",
+      "arguments": {
+        "spatial_extent": {
+          "east": 12.580988155437245,
+          "south": 45.61443989663384,
+          "north": 47.14218071084979,
+          "west": 10.293056040808795
+        },
+        "id": "tr_19712100_tnst_1x1km_year_cordexadj_qdm"
+      }
+    },
+    "filter1": {
+      "process_id": "filter_labels",
+      "description": "Select the RCP 4.5 emissions scenario.",
+      "arguments": {
+        "condition": {
+          "process_graph": {
+            "eq1": {
+              "result": true,
+              "process_id": "eq",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 4.5
+              }
+            }
+          }
+        },
+        "data": {
+          "from_node": "load1"
+        },
+        "dimension": "rcp"
+      }
+    },
+    "reduce4": {
+      "process_id": "reduce_dimension",
+      "description": "Compute the ensemble average. ",
+      "arguments": {
+        "data": {
+          "from_node": "3"
+        },
+        "reducer": {
+          "process_graph": {
+            "mean1": {
+              "result": true,
+              "process_id": "mean",
+              "arguments": {
+                "data": {
+                  "from_parameter": "data"
+                }
+              }
+            }
+          }
+        },
+        "dimension": "M"
+      }
+    },
+    "merge5": {
+      "process_id": "merge_cubes",
+      "description": "Compute the pixel-by-pixel difference between the two interval averages.",
+      "arguments": {
+        "cube2": {
+          "from_node": "reduce4"
+        },
+        "cube1": {
+          "from_node": "reduce2"
+        },
+        "overlap_resolver": {
+          "process_graph": {
+            "subtract1": {
+              "result": true,
+              "process_id": "subtract",
+              "arguments": {
+                "x": {
+                  "from_parameter": "x"
+                },
+                "y": {
+                  "from_parameter": "y"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "reduce3": {
+      "process_id": "reduce_dimension",
+      "description": "Compute the average of the 2041-2070 time interval.",
+      "arguments": {
+        "data": {
+          "from_node": "1"
+        }
+      }
+    },
+    "filter2": {
+      "process_id": "filter_labels",
+      "description": "Select the 1981-2010 time interval.",
+      "arguments": {
+        "condition": {
+          "process_graph": {
+            "and3": {
+              "result": true,
+              "process_id": "and",
+              "arguments": {
+                "x": {
+                  "from_node": "gte1"
+                },
+                "y": {
+                  "from_node": "lte2"
+                }
+              }
+            },
+            "lte2": {
+              "process_id": "lte",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 2010
+              }
+            },
+            "gte1": {
+              "process_id": "gte",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 1981
+              }
+            }
+          }
+        },
+        "data": {
+          "from_node": "filter1"
+        },
+        "dimension": "year"
+      }
+    },
+    "reduce2": {
+      "process_id": "reduce_dimension",
+      "description": "Compute the ensemble average. ",
+      "arguments": {
+        "data": {
+          "from_node": "reduce3"
+        },
+        "reducer": {
+          "process_graph": {
+            "mean1": {
+              "result": true,
+              "process_id": "mean",
+              "arguments": {
+                "data": {
+                  "from_parameter": "data"
+                }
+              }
+            }
+          }
+        },
+        "dimension": "M"
+      }
+    },
+    "load1": {
+      "process_id": "load_collection",
+      "arguments": {
+        "spatial_extent": {
+          "east": 12.580988155437245,
+          "south": 45.61443989663384,
+          "north": 47.14218071084979,
+          "west": 10.293056040808795
+        },
+        "id": "su_19712100_tnst_1x1km_year_cordexadj_qdm"
+      }
+    }
+  }
+}

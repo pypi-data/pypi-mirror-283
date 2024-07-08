@@ -1,0 +1,163 @@
+{
+  "config": {
+    "service_url": "{{ows_url}}",
+    "tmp_directory": "{{tmp_dir}}",
+    "crs_resolver": "{{def_dir}}",
+    "mock": false,
+    "automated": false,
+    "track_files": false,
+    "blocking": false,
+    "insitu": true,
+    "skip": false,
+    "retry": false
+  },
+  "input": {
+    "coverage_id": "{{coverage_id}}",
+    "paths": [
+      "/mnt/CEPH_PROJECTS/FACT_CLIMAX/CORDEX-Adjust/INDICES/{{index}}/rcp45/{{index}}_*.nc",
+      "/mnt/CEPH_PROJECTS/FACT_CLIMAX/CORDEX-Adjust/INDICES/{{index}}/rcp85/{{index}}_*.nc"
+    ]
+  },
+  "inspire": {
+    "metadata_url": "TODO"
+  },
+  "recipe": {
+    "name": "general_coverage",
+    "options": {
+      "coverage": {
+        "crs": "OGC/0/Temporal?epoch=\"1970-01-01T00:00Z\"%26uom=\"d\"%26label=\"t\"@EPSG/0/3035@OGC/0/Index1D?axis-label=\"M\"@OGC/0/Index1D?axis-label=\"rcp\"",
+        "metadata": {
+          "type": "xml",
+          "global": {
+            "Title": "${netcdf:metadata:Title}",
+            "Project": "'FAct CLIMAX'",
+            "Creator": "${netcdf:metadata:Institution}",
+            "Description": "'${netcdf:metadata:Comment}'",
+            "License": "'CC-BY-4.0'",
+            "License_Link": "https://creativecommons.org/licenses/by/4.0/",
+            "About_Link": "'${netcdf:metadata:References}'",
+            "Citation": "'TODO'",
+            "Temporal_Step": "'P1M'",
+            "Keywords": "'{{index}}, FAct CLIMAX, Trentino, South Tyrol, Projection'",
+            "Provider1_Name": "'Eurac EO WCS'",
+            "Provider1_Roles": "'Host'",
+            "Provider1_Link": "'http://www.eurac.edu'",
+            "Provider2_Name": "'Alice Crespi'",
+            "Provider2_Roles": "'Processor'",
+            "Provider2_Link": "'https://www.eurac.edu/en/people/alice-crespi'"
+          },
+          "local": {
+            "Source": "'${netcdf:metadata:Source}'"
+          },
+          "bands": {
+            "{{index}}": {
+              "long_name": "'${netcdf:variable:{{index}}:long_name}'",
+              "nilValue": "${netcdf:variable:{{index}}:missing_value}",
+              "nilReason": "The nil value represents an area outside the region of interest.",
+              "uomCode": "'${netcdf:variable:{{index}}:units}'"
+            }
+          },
+          "axes": {
+            "t": {
+              "units": "d",
+              "calendar": "${netcdf:variable:time:calendar}"
+            },
+            "Y": {
+              "units": "${netcdf:variable:y:units}",
+              "long_name": "${netcdf:variable:y:long_name}",
+              "standard_name": "${netcdf:variable:y:standard_name}"
+            },
+            "X": {
+              "units": "${netcdf:variable:x:units}",
+              "long_name": "${netcdf:variable:x:long_name}",
+              "standard_name": "${netcdf:variable:x:standard_name}"
+            },
+            "M": {
+              "long_name": "ensamble model",
+              "description": "ensamble model of the input climate projections",
+              "lut": {
+                "EUR-11_CNRM-CERFACS-CNRM-CM5_CLMcom-CCLM4-8-17_r1i1p1_v1_day_19702100": 0,
+                "EUR-11_CNRM-CERFACS-CNRM-CM5_CLMcom-ETH-COSMO-crCLIM-v1-1_r1i1p1_v1_day_19702100" : 1,
+                "EUR-11_CNRM-CERFACS-CNRM-CM5_CNRM-ALADIN63_r1i1p1_v2_day_19702100" : 2,
+                "EUR-11_CNRM-CERFACS-CNRM-CM5_KNMI-RACMO22E_r1i1p1_v2_day_19702100" : 3,
+                "EUR-11_CNRM-CERFACS-CNRM-CM5_RMIB-UGent-ALARO-0_r1i1p1_v1_day_19702100" : 4,
+                "EUR-11_CNRM-CERFACS-CNRM-CM5_SMHI-RCA4_r1i1p1_v1_day_19702100" : 5,
+                "EUR-11_ICHEC-EC-EARTH_CLMcom-CCLM4-8-17_r12i1p1_v1_day_19702100" : 6,
+                "EUR-11_ICHEC-EC-EARTH_CLMcom-ETH-COSMO-crCLIM-v1-1_r12i1p1_v1_day_19702100": 7,
+                "EUR-11_ICHEC-EC-EARTH_DMI-HIRHAM5_r3i1p1_v2_day_19702100" : 8,
+                "EUR-11_ICHEC-EC-EARTH_ICTP-RegCM4-6_r12i1p1_v1_day_19702100": 9,
+                "EUR-11_ICHEC-EC-EARTH_IPSL-WRF381P_r12i1p1_v1_day_19702100": 10,
+                "EUR-11_ICHEC-EC-EARTH_KNMI-RACMO22E_r12i1p1_v1_day_19702100": 11,
+                "EUR-11_ICHEC-EC-EARTH_SMHI-RCA4_r12i1p1_v1_day_19702100": 12,
+                "EUR-11_IPSL-IPSL-CM5A-MR_IPSL-WRF381P_r1i1p1_v1_day_19702100": 13,
+                "EUR-11_IPSL-IPSL-CM5A-MR_SMHI-RCA4_r1i1p1_v1_day_19702100": 14,
+                "EUR-11_MOHC-HadGEM2-ES_CLMcom-CCLM4-8-17_r1i1p1_v1_day_19702100": 15,
+                "EUR-11_MOHC-HadGEM2-ES_KNMI-RACMO22E_r1i1p1_v2_day_19702100": 16,
+                "EUR-11_MPI-M-MPI-ESM-LR_CLMcom-CCLM4-8-17_r1i1p1_v1_day_19702100": 17,
+                "EUR-11_MPI-M-MPI-ESM-LR_CLMcom-ETH-COSMO-crCLIM-v1-1_r1i1p1_v1_day_19702100": 18,
+                "EUR-11_MPI-M-MPI-ESM-LR_MPI-CSC-REMO2009_r1i1p1_v1_day_19702100": 19,
+                "EUR-11_MPI-M-MPI-ESM-LR_SMHI-RCA4_r1i1p1_v1a_day_19702100": 20,
+                "EUR-11_NCC-NorESM1-M_GERICS-REMO2015_r1i1p1_v1_day_19702100": 21,
+                "EUR-11_NCC-NorESM1-M_ICTP-RegCM4-6_r1i1p1_v1_day_19702100": 22,
+                "EUR-11_NCC-NorESM1-M_SMHI-RCA4_r1i1p1_v1_day_19702100": 23
+              }
+            },
+            "rcp": {
+              "long_name": "scenario",
+              "description": "\"representative concentration pathway\" scenarios of the input climate projections"
+            }
+          }
+        },
+        "slicer": {
+          "type": "netcdf",
+          "pixelIsPoint": true,
+          "bands": [
+            {
+              "identifier": "{{index}}",
+              "name": "{{index}}",
+              "description": "'${netcdf:variable:{{index}}:long_name}'",
+              "uomCode": "'${netcdf:variable:{{index}}:units}'"
+            }
+          ],
+          "axes": {
+            "t": {
+              "min": "${netcdf:variable:time:min} - 0.5",
+              "max": "${netcdf:variable:time:max} - 0.5",
+              "directPositions": "[ t for t in ${netcdf:variable:time} ]",
+              "irregular": true,
+              "gridOrder": 0,
+              "crsOrder": 0
+            },
+            "Y": {
+              "min": "${netcdf:variable:y:min}",
+              "max": "${netcdf:variable:y:max}",
+              "resolution": "${netcdf:variable:y:resolution}",
+              "gridOrder": 1,
+              "crsOrder": 1
+            },
+            "X": {
+              "min": "${netcdf:variable:x:min}",
+              "max": "${netcdf:variable:x:max}",
+              "resolution": "${netcdf:variable:x:resolution}",
+              "gridOrder": 2,
+              "crsOrder": 2
+            },
+            "M": {
+              "statements": "import json; f=open('{{models_lut_file}}'); lut=json.load(f); f.close()",
+              "min": "lut[regex_extract('${file:name}', '{{index}}_(.*)_rcp.*.nc', 1)]",
+              "irregular": true,
+              "dataBound": false,
+              "crsOrder": 3
+            },
+            "rcp": {
+              "min": "float(regex_extract('${file:name}', '.*_rcp(.*).nc', 1)) / 10",
+              "irregular": true,
+              "dataBound": false,
+              "crsOrder": 4
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+    "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+    "type": "SoftwareSourceCode",
+    "applicationCategory": "Climate Services",
+    "author": [
+        {
+            "id": "https://orcid.org/0000-0002-1032-9825",
+            "type": "Person",
+            "affiliation": {
+                "type": "Organization",
+                "name": "Center for Climate Change and Transformation, Eurac Research"
+            },
+            "email": "piero.campalani@eurac.edu",
+            "familyName": "Campalani",
+            "givenName": "Piero"
+        },
+        {
+            "type": "schema:Role",
+            "schema:author": "https://orcid.org/0000-0002-1032-9825",
+            "schema:roleName": "Maintainer"
+        },
+        {
+            "type": "schema:Role",
+            "schema:author": "https://orcid.org/0000-0002-1032-9825",
+            "schema:roleName": "Developer"
+        },
+        {
+            "id": "https://orcid.org/0000-0003-4186-8474",
+            "type": "Person",
+            "affiliation": {
+                "type": "Organization",
+                "name": "Center for Climate Change and Transformation, Eurac Research"
+            },
+            "email": "alice.crespi@eurac.edu",
+            "familyName": "Crespi",
+            "givenName": "Alice"
+        }
+    ],
+    "codeRepository": "git+https://gitlab.inf.unibz.it/earth_observation_public/cdr/climdex-kit.git",
+    "dateCreated": "2022-01-14",
+    "dateModified": "2024-07-08",
+    "datePublished": "2022-01-25",
+    "description": "Tool for multi-scenario calculation, publishing, and analysis of indices from 3D time-series of climate projections.",
+    "downloadUrl": "https://gitlab.inf.unibz.it/earth_observation_public/cdr/climdex-kit/-/releases",
+    "funder": {
+        "type": "Organization",
+        "name": "Eurac Research"
+    },
+    "keywords": [
+        "indices",
+        "climate",
+        "scenario"
+    ],
+    "name": "climdex-kit",
+    "operatingSystem": "Linux",
+    "programmingLanguage": "Python 3",
+    "relatedLink": "https://www.eurac.edu/en/institutes-centers/institute-for-earth-observation/projects/fact-climax",
+    "schema:releaseNotes": "ADDED\n- CDO-based [wsdi], [cool_dd], [grow_dd], and [heat_dd] indices.\n- Fixed bug in [hwd] index.\n- Add codemeta.json, biblatex citation and AUTHORS files.",
+    "softwareRequirements": "Python 3.8",
+    "version": "0.1.2",
+    "developmentStatus": "wip",
+    "issueTracker": "https://gitlab.inf.unibz.it/earth_observation_public/cdr/climdex-kit/-/issues",
+    "referencePublication": "https://doi.org/10.20944/preprints202301.0228.v1"
+}

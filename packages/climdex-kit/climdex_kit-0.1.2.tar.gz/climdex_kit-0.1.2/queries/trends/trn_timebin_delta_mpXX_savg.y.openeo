@@ -1,0 +1,230 @@
+{
+  "parameters": [],
+  "process_graph": {
+    "save1": {
+      "process_id": "save_result",
+      "description": "Export the 1D dataset to JSON.\nNOTE: reduce to scalar when percentile process is available.",
+      "arguments": {
+        "data": {
+          "from_node": "merge6"
+        },
+        "format": "JSON"
+      }
+    },
+    "load3": {
+      "result": true,
+      "process_id": "load_collection",
+      "arguments": {
+        "spatial_extent": {
+          "east": 12.580988155437245,
+          "south": 45.61443989663384,
+          "north": 47.14218071084979,
+          "west": 10.293056040808795
+        },
+        "id": "tn90p_19712100_tnst_1x1km_year_cordexadj_qdm"
+      }
+    },
+    "save7": {
+      "process_id": "save_result",
+      "arguments": {
+        "format": "JSON",
+        "options": {}
+      }
+    },
+    "reduce5": {
+      "process_id": "reduce_spatial",
+      "description": "Take the spatial average over the area of interest.",
+      "arguments": {
+        "data": {
+          "from_node": "filter3"
+        },
+        "reducer": {
+          "process_graph": {
+            "mean1": {
+              "result": true,
+              "process_id": "mean",
+              "arguments": {
+                "data": {
+                  "from_parameter": "data"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "load2": {
+      "process_id": "load_collection",
+      "arguments": {
+        "spatial_extent": {
+          "east": 12.580988155437245,
+          "south": 45.61443989663384,
+          "north": 47.14218071084979,
+          "west": 10.293056040808795
+        },
+        "id": "tx90p_19712100_tnst_1x1km_year_cordexadj_qdm"
+      }
+    },
+    "filter1": {
+      "process_id": "filter_labels",
+      "description": "Select the emissions scenario.",
+      "arguments": {
+        "condition": {
+          "process_graph": {
+            "eq1": {
+              "result": true,
+              "process_id": "eq",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 8.5
+              }
+            }
+          }
+        },
+        "data": {
+          "from_node": "load2"
+        },
+        "dimension": "rcp"
+      }
+    },
+    "reduce4": {
+      "process_id": "reduce_spatial",
+      "description": "Take the spatial average over the area of interest.",
+      "arguments": {
+        "data": {
+          "from_node": "filter2"
+        },
+        "reducer": {
+          "process_graph": {
+            "mean1": {
+              "result": true,
+              "process_id": "mean",
+              "arguments": {
+                "data": {
+                  "from_parameter": "data"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "filter2": {
+      "process_id": "filter_labels",
+      "description": "Select the 2041-2070 time interval.",
+      "arguments": {
+        "condition": {
+          "process_graph": {
+            "and3": {
+              "result": true,
+              "process_id": "and",
+              "arguments": {
+                "x": {
+                  "from_node": "gte1"
+                },
+                "y": {
+                  "from_node": "lte2"
+                }
+              }
+            },
+            "lte2": {
+              "process_id": "lte",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 2070
+              }
+            },
+            "gte1": {
+              "process_id": "gte",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 2041
+              }
+            }
+          }
+        },
+        "data": {
+          "from_node": "filter1"
+        },
+        "dimension": "year"
+      }
+    },
+    "merge6": {
+      "process_id": "merge_cubes",
+      "description": "Compute the difference between the selected interval and the baseline averages.",
+      "arguments": {
+        "cube2": {
+          "from_node": "reduce5"
+        },
+        "cube1": {
+          "from_node": "reduce4"
+        },
+        "overlap_resolver": {
+          "process_graph": {
+            "subtract1": {
+              "result": true,
+              "process_id": "subtract",
+              "arguments": {
+                "x": {
+                  "from_parameter": "x"
+                },
+                "y": {
+                  "from_parameter": "y"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "filter3": {
+      "process_id": "filter_labels",
+      "description": "Select the 1981-2010 baseline interval.",
+      "arguments": {
+        "condition": {
+          "process_graph": {
+            "and3": {
+              "result": true,
+              "process_id": "and",
+              "arguments": {
+                "x": {
+                  "from_node": "gte1"
+                },
+                "y": {
+                  "from_node": "lte2"
+                }
+              }
+            },
+            "lte2": {
+              "process_id": "lte",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 2010
+              }
+            },
+            "gte1": {
+              "process_id": "gte",
+              "arguments": {
+                "x": {
+                  "from_parameter": "value"
+                },
+                "y": 1981
+              }
+            }
+          }
+        },
+        "data": {
+          "from_node": "filter1"
+        }
+      }
+    }
+  }
+}

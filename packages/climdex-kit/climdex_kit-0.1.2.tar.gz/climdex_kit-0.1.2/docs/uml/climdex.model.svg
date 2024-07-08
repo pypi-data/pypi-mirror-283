@@ -1,0 +1,1844 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="45cm"
+   height="52cm"
+   viewBox="74 203 894 1023"
+   version="1.1"
+   id="svg742"
+   sodipodi:docname="climdex.model.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs746" />
+  <sodipodi:namedview
+     id="namedview744"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="cm"
+     showgrid="false"
+     inkscape:zoom="0.19894632"
+     inkscape:cx="-882.14753"
+     inkscape:cy="794.1841"
+     inkscape:window-width="1920"
+     inkscape:window-height="986"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g12" />
+  <g
+     id="g12">
+    <rect
+       style="fill: #ffffff"
+       x="75.5744"
+       y="224.672"
+       width="891.967"
+       height="1000.75"
+       id="rect2" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="75.5744"
+       y="224.672"
+       width="891.967"
+       height="1000.75"
+       id="rect4" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:1.04048"
+       x="75.574402"
+       y="204.672"
+       width="229.40401"
+       height="20"
+       id="rect6" />
+    <rect
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.07668"
+       x="75.61274"
+       y="204.71034"
+       width="229.33823"
+       height="19.923325"
+       id="rect8" />
+    <text
+       font-size="12.7998"
+       style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal"
+       x="77.5744"
+       y="218.672"
+       id="text10" />
+  </g>
+  <text
+     font-size="12.8016"
+     style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700"
+     x="134.231"
+     y="218.882"
+     id="text16"><tspan
+       x="134.231"
+       y="218.882"
+       id="tspan14">the climdex ecosystem</tspan></text>
+  <text
+     font-size="12.8016"
+     style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal"
+     x="104.078"
+     y="218.872"
+     id="text20"><tspan
+       x="104.078"
+       y="218.872"
+       id="tspan18">«model»</tspan></text>
+  <g
+     id="g32">
+    <rect
+       style="fill: #f5fefe"
+       x="93.6368"
+       y="263.741"
+       width="856.838"
+       height="863.686"
+       id="rect22" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="93.6368"
+       y="263.741"
+       width="856.838"
+       height="863.686"
+       id="rect24" />
+    <rect
+       style="fill: #f5fefe"
+       x="93.6368"
+       y="243.741"
+       width="150.3"
+       height="20"
+       id="rect26" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="93.6368"
+       y="243.741"
+       width="150.3"
+       height="20"
+       id="rect28" />
+    <text
+       font-size="12.7998"
+       style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal"
+       x="95.6368"
+       y="257.741"
+       id="text30" />
+  </g>
+  <text
+     font-size="12.8016"
+     style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700"
+     x="102.131"
+     y="257.951"
+     id="text36"><tspan
+       x="102.131"
+       y="257.951"
+       id="tspan34">python runtime</tspan></text>
+  <g
+     id="g42">
+    <polygon
+       style="fill: #ffffff"
+       points="221.967,246.78 231.409,259.878 212.912,259.846 "
+       id="polygon38" />
+    <polygon
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2"
+       points="221.967,246.78 231.409,259.878 212.912,259.846 "
+       id="polygon40"
+       transform="translate(6.3076668)" />
+  </g>
+  <g
+     id="g54">
+    <rect
+       style="fill: #d8e5e5"
+       x="109.01"
+       y="374.269"
+       width="826.614"
+       height="600.516"
+       id="rect44" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="109.01"
+       y="374.269"
+       width="826.614"
+       height="600.516"
+       id="rect46" />
+    <rect
+       style="fill:#d8e5e5;stroke-width:1.04914"
+       x="109.01"
+       y="354.26901"
+       width="72.205284"
+       height="20"
+       id="rect48" />
+    <rect
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.0912"
+       x="109.0556"
+       y="354.31461"
+       height="19.908798"
+       id="rect50"
+       width="72.047432" />
+    <text
+       font-size="12.7998"
+       style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal"
+       x="111.01"
+       y="368.269"
+       id="text52" />
+  </g>
+  <text
+     font-size="12.8016"
+     style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700"
+     x="117.504"
+     y="369.226"
+     id="text58"><tspan
+       x="117.504"
+       y="369.226"
+       id="tspan56">climdex</tspan></text>
+  <g
+     id="g84">
+    <g
+       id="g70">
+      <rect
+         style="fill: #ffffff"
+         x="211.961"
+         y="298.513"
+         width="126.447"
+         height="57.3507"
+         id="rect60" />
+      <rect
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         x="211.961"
+         y="298.513"
+         width="126.447"
+         height="57.3507"
+         id="rect62" />
+      <rect
+         style="fill: #ffffff"
+         x="211.961"
+         y="278.513"
+         width="40"
+         height="20"
+         id="rect64" />
+      <rect
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         x="211.961"
+         y="278.513"
+         width="40"
+         height="20"
+         id="rect66" />
+      <text
+         font-size="12.7998"
+         style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal"
+         x="213.961"
+         y="292.513"
+         id="text68" />
+    </g>
+    <text
+       font-size="12.8016"
+       style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700"
+       x="275.185"
+       y="324.262"
+       id="text76"><tspan
+         x="275.185"
+         y="324.262"
+         id="tspan72">API</tspan><tspan
+         x="275.185"
+         y="340.264"
+         id="tspan74">clients</tspan></text>
+    <g
+       id="g82">
+      <polygon
+         style="fill: #ffffff"
+         points="319.705,304.734 329.688,321.629 309.857,321.563 "
+         id="polygon78" />
+      <polygon
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         points="319.705,304.734 329.688,321.629 309.857,321.563 "
+         id="polygon80" />
+    </g>
+  </g>
+  <g
+     id="g90">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000"
+       points="655.796,282.977 603.666,282.977 603.666,327.409 "
+       id="polyline86" />
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="598.666,314.762 603.666,330.762 608.666,314.762 "
+       id="polyline88" />
+  </g>
+  <g
+     id="g114">
+    <g
+       id="g102">
+      <rect
+         style="fill: #ffffff"
+         x="655.796"
+         y="254.302"
+         width="126.447"
+         height="57.3507"
+         id="rect92" />
+      <rect
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         x="655.796"
+         y="254.302"
+         width="126.447"
+         height="57.3507"
+         id="rect94" />
+      <rect
+         style="fill: #ffffff"
+         x="655.796"
+         y="234.302"
+         width="40"
+         height="20"
+         id="rect96" />
+      <rect
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         x="655.796"
+         y="234.302"
+         width="40"
+         height="20"
+         id="rect98" />
+      <text
+         font-size="12.7998"
+         style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal"
+         x="657.796"
+         y="248.302"
+         id="text100" />
+    </g>
+    <text
+       font-size="12.8016"
+       style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700"
+       x="719.02"
+       y="288.052"
+       id="text106"><tspan
+         x="719.02"
+         y="288.052"
+         id="tspan104">Users</tspan></text>
+    <g
+       id="g112">
+      <polygon
+         style="fill: #ffffff"
+         points="763.251,260.715 773.234,277.611 753.402,277.545 "
+         id="polygon108" />
+      <polygon
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         points="763.251,260.715 773.234,277.611 753.402,277.545 "
+         id="polygon110" />
+    </g>
+  </g>
+  <g
+     id="g126">
+    <rect
+       style="fill: #ffffff"
+       x="140"
+       y="880"
+       width="521.437"
+       height="74.2655"
+       id="rect116" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="140"
+       y="880"
+       width="521.437"
+       height="74.2655"
+       id="rect118" />
+    <rect
+       style="fill:#ffffff;stroke-width:1.02362"
+       x="140"
+       y="860"
+       width="76.802986"
+       height="20"
+       id="rect120" />
+    <rect
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.04875"
+       x="140.02437"
+       y="860.02435"
+       width="77.104538"
+       height="19.951254"
+       id="rect122" />
+    <text
+       font-size="12.7998"
+       style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal"
+       x="142"
+       y="874"
+       id="text124" />
+  </g>
+  <text
+     font-size="12.8016"
+     style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700"
+     x="148.495"
+     y="874.211"
+     id="text130"><tspan
+       x="148.495"
+       y="874.211"
+       id="tspan128">bindings</tspan></text>
+  <g
+     id="g136">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000"
+       points="603.666,414.115 603.666,435.055 603.671,435.055 603.671,452.516 "
+       id="polyline132" />
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="598.671,439.869 603.671,455.869 608.671,439.869 "
+       id="polyline134" />
+  </g>
+  <g
+     id="g142">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000"
+       points="275.185,355.864 275.185,403.482 275.282,403.482 275.282,452.396 "
+       id="polyline138" />
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="270.282,439.749 275.282,455.749 280.282,439.749 "
+       id="polyline140" />
+  </g>
+  <g
+     id="g154">
+    <rect
+       style="fill: #ffffff"
+       x="140"
+       y="579.641"
+       width="520"
+       height="260.359"
+       id="rect144" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="140"
+       y="579.641"
+       width="520"
+       height="260.359"
+       id="rect146" />
+    <rect
+       style="fill:#ffffff;stroke-width:1.02448"
+       x="140"
+       y="559.64099"
+       width="76.932907"
+       height="20"
+       id="rect148" />
+    <rect
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.04599"
+       x="140.02299"
+       y="559.664"
+       width="76.886917"
+       height="19.954006"
+       id="rect150" />
+    <text
+       font-size="12.7998"
+       style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal"
+       x="142"
+       y="573.641"
+       id="text152" />
+  </g>
+  <text
+     font-size="12.8016"
+     style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700"
+     x="148.495"
+     y="573.852"
+     id="text158"><tspan
+       x="148.495"
+       y="573.852"
+       id="tspan156">workers</tspan></text>
+  <g
+     id="g164">
+    <rect
+       style="fill: #ffffff"
+       x="500"
+       y="605.947"
+       width="118.863"
+       height="37.5975"
+       id="rect160" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="500"
+       y="605.947"
+       width="118.863"
+       height="37.5975"
+       id="rect162" />
+  </g>
+  <text
+     font-size="12.8016"
+     style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700"
+     x="559.431"
+     y="629.821"
+     id="text168"><tspan
+       x="559.431"
+       y="629.821"
+       id="tspan166">registry</tspan></text>
+  <g
+     id="g174">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000"
+       points="559.431,517.598 559.431,518.598 559.431,596.947 559.431,599.242 "
+       id="polyline170" />
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="554.431,586.595 559.431,602.595 564.431,586.595 "
+       id="polyline172" />
+  </g>
+  <g
+     id="g182">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="559.431,668.716 559.431,677.655 559.43,677.655 559.43,697.765 "
+       id="polyline176" />
+    <polygon
+       style="fill: #ffffff"
+       points="559.431,643.545 564.231,657.545 559.431,671.545 554.631,657.545 "
+       id="polygon178" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="559.431,643.545 564.231,657.545 559.431,671.545 554.631,657.545 "
+       id="polygon180" />
+  </g>
+  <g
+     id="g222">
+    <g
+       id="g206">
+      <rect
+         style="fill: #ffffff"
+         x="485.452"
+         y="720"
+         width="148"
+         height="28"
+         id="rect184" />
+      <rect
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         x="485.452"
+         y="720"
+         width="148"
+         height="28"
+         id="rect186" />
+      <rect
+         style="fill: #ffffff"
+         x="485.452"
+         y="748"
+         width="148"
+         height="28"
+         id="rect188" />
+      <rect
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         x="485.452"
+         y="748"
+         width="148"
+         height="28"
+         id="rect190" />
+      <text
+         font-size="9.6"
+         style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal"
+         x="488.452"
+         y="758.4"
+         id="text192">+ID: str</text>
+      <text
+         font-size="9.6"
+         style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal"
+         x="488.452"
+         y="770.4"
+         id="text194">+INDICES: list</text>
+      <rect
+         style="fill: #ffffff"
+         x="485.452"
+         y="776"
+         width="148"
+         height="40"
+         id="rect196" />
+      <rect
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         x="485.452"
+         y="776"
+         width="148"
+         height="40"
+         id="rect198" />
+      <text
+         font-size="9.6"
+         style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal"
+         x="488.452"
+         y="786.4"
+         id="text200">+compute(...)</text>
+      <text
+         font-size="9.6"
+         style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal"
+         x="488.452"
+         y="798.4"
+         id="text202">+compute_all(...)</text>
+      <text
+         font-size="9.6"
+         style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal"
+         x="488.452"
+         y="810.4"
+         id="text204">+can_handle(index): bool</text>
+    </g>
+    <g
+       id="g212">
+      <rect
+         style="fill: #ffffff"
+         x="485.413"
+         y="697.765"
+         width="148.036"
+         height="50.2291"
+         id="rect208" />
+      <rect
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         x="485.413"
+         y="697.765"
+         width="148.036"
+         height="50.2291"
+         id="rect210" />
+    </g>
+    <text
+       font-size="12.8016"
+       style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700"
+       x="559.342"
+       y="731.86"
+       id="text216"><tspan
+         x="559.342"
+         y="731.86"
+         id="tspan214">IWorker</tspan></text>
+    <text
+       font-size="10.5438"
+       style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal"
+       x="559.252"
+       y="717.821"
+       id="text220"><tspan
+         x="559.252"
+         y="717.821"
+         id="tspan218">«interface»</tspan></text>
+  </g>
+  <g
+     id="g234">
+    <rect
+       style="fill: #ffffff"
+       x="696.333"
+       y="478.337"
+       width="200"
+       height="473.374"
+       id="rect224" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="696.333"
+       y="478.337"
+       width="200"
+       height="473.374"
+       id="rect226" />
+    <rect
+       style="fill:#ffffff;stroke-width:1.01929"
+       x="696.33301"
+       y="458.33701"
+       width="132.15396"
+       height="20"
+       id="rect228" />
+    <rect
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.03644"
+       x="696.3512"
+       y="458.35522"
+       width="132.11752"
+       height="19.963564"
+       id="rect230" />
+    <text
+       font-size="12.7998"
+       style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal"
+       x="698.333"
+       y="472.337"
+       id="text232" />
+  </g>
+  <text
+     font-size="12.8016"
+     style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700"
+     x="704.827"
+     y="473.271"
+     id="text238"><tspan
+       x="704.827"
+       y="473.271"
+       id="tspan236">cross-cutting</tspan></text>
+  <g
+     id="g244"
+     transform="translate(7.3589446)">
+    <polygon
+       style="fill:#ffffff"
+       points="816.555,474.426 798.058,474.395 807.113,461.328 "
+       id="polygon240" />
+    <polygon
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2"
+       points="816.555,474.426 798.058,474.395 807.113,461.328 "
+       id="polygon242" />
+  </g>
+  <g
+     id="g250">
+    <rect
+       style="fill: #ffffff"
+       x="740"
+       y="500"
+       width="118.863"
+       height="37.5975"
+       id="rect246" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="740"
+       y="500"
+       width="118.863"
+       height="37.5975"
+       id="rect248" />
+  </g>
+  <text
+     font-size="12.8016"
+     style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700"
+     x="799.431"
+     y="523.874"
+     id="text254"><tspan
+       x="799.431"
+       y="523.874"
+       id="tspan252">indices</tspan></text>
+  <g
+     id="g260">
+    <rect
+       style="fill: #ffffff"
+       x="740"
+       y="888.998"
+       width="118.863"
+       height="37.5975"
+       id="rect256" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="740"
+       y="888.998"
+       width="118.863"
+       height="37.5975"
+       id="rect258" />
+  </g>
+  <text
+     font-size="12.8016"
+     style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700"
+     x="799.431"
+     y="912.872"
+     id="text264"><tspan
+       x="799.431"
+       y="912.872"
+       id="tspan262">constants</tspan></text>
+  <g
+     id="g270">
+    <rect
+       style="fill: #ffffff"
+       x="740"
+       y="767.034"
+       width="118.863"
+       height="37.5975"
+       id="rect266" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="740"
+       y="767.034"
+       width="118.863"
+       height="37.5975"
+       id="rect268" />
+  </g>
+  <text
+     font-size="12.8016"
+     style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700"
+     x="799.431"
+     y="790.908"
+     id="text274"><tspan
+       x="799.431"
+       y="790.908"
+       id="tspan272">nc</tspan></text>
+  <g
+     id="g280">
+    <rect
+       style="fill: #ffffff"
+       x="740"
+       y="640"
+       width="118.863"
+       height="37.5975"
+       id="rect276" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="740"
+       y="640"
+       width="118.863"
+       height="37.5975"
+       id="rect278" />
+  </g>
+  <text
+     font-size="12.8016"
+     style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700"
+     x="799.431"
+     y="663.874"
+     id="text284"><tspan
+       x="799.431"
+       y="663.874"
+       id="tspan282">utils</tspan></text>
+  <g
+     id="g336">
+    <g
+       id="g296">
+      <rect
+         style="fill: #ffffff"
+         x="393.666"
+         y="334.115"
+         width="420"
+         height="80"
+         id="rect286" />
+      <rect
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         x="393.666"
+         y="334.115"
+         width="420"
+         height="80"
+         id="rect288" />
+      <rect
+         style="fill: #ffffff"
+         x="393.666"
+         y="314.115"
+         width="150.3"
+         height="20"
+         id="rect290" />
+      <rect
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         x="393.666"
+         y="314.115"
+         width="150.3"
+         height="20"
+         id="rect292" />
+      <text
+         font-size="12.7998"
+         style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal"
+         x="395.666"
+         y="328.115"
+         id="text294" />
+    </g>
+    <text
+       font-size="12.8016"
+       style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700"
+       x="402.16"
+       y="328.325"
+       id="text300"><tspan
+         x="402.16"
+         y="328.325"
+         id="tspan298">interface layer</tspan></text>
+    <g
+       id="g306">
+      <polygon
+         style="fill: #ffffff"
+         points="525.081,317.153 534.522,330.251 516.026,330.22 "
+         id="polygon302" />
+      <polygon
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         points="525.081,317.153 534.522,330.251 516.026,330.22 "
+         id="polygon304" />
+    </g>
+    <g
+       id="g312">
+      <rect
+         style="fill: #ffffff"
+         x="433.666"
+         y="354.115"
+         width="118.863"
+         height="37.5975"
+         id="rect308" />
+      <rect
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         x="433.666"
+         y="354.115"
+         width="118.863"
+         height="37.5975"
+         id="rect310" />
+    </g>
+    <text
+       font-size="12.8016"
+       style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700"
+       x="493.097"
+       y="377.988"
+       id="text316"><tspan
+         x="493.097"
+         y="377.988"
+         id="tspan314">__main__</tspan></text>
+    <g
+       id="g322">
+      <rect
+         style="fill: #ffffff"
+         x="653.666"
+         y="354.115"
+         width="118.863"
+         height="37.5975"
+         id="rect318" />
+      <rect
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         x="653.666"
+         y="354.115"
+         width="118.863"
+         height="37.5975"
+         id="rect320" />
+    </g>
+    <text
+       font-size="12.8016"
+       style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700"
+       x="713.097"
+       y="377.988"
+       id="text326"><tspan
+         x="713.097"
+         y="377.988"
+         id="tspan324">cli</tspan></text>
+    <g
+       id="g334">
+      <polyline
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000"
+         points="552.529,372.913 579.051,372.913 579.051,372.913 646.961,372.913 "
+         id="polyline328" />
+      <polyline
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         points="634.313,377.913 650.313,372.913 634.313,367.913 "
+         id="polyline330" />
+      <text
+         font-size="12.7998"
+         style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal"
+         x="581.051"
+         y="368.913"
+         id="text332">«use»</text>
+    </g>
+  </g>
+  <g
+     id="g384">
+    <g
+       id="g348">
+      <rect
+         style="fill: #ffffff"
+         x="140"
+         y="460"
+         width="520"
+         height="74.2655"
+         id="rect338" />
+      <rect
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         x="140"
+         y="460"
+         width="520"
+         height="74.2655"
+         id="rect340" />
+      <rect
+         style="fill:#ffffff;stroke-width:1.0224"
+         x="140"
+         y="440"
+         width="68.57238"
+         height="20"
+         id="rect342" />
+      <rect
+         style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.04664"
+         x="140.02332"
+         y="440.02332"
+         width="68.855995"
+         height="19.953358"
+         id="rect344" />
+      <text
+         font-size="12.7998"
+         style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal"
+         x="142"
+         y="454"
+         id="text346" />
+    </g>
+    <text
+       font-size="12.8016"
+       style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700"
+       x="148.495"
+       y="454.211"
+       id="text352"><tspan
+         x="148.495"
+         y="454.211"
+         id="tspan350">actions</tspan></text>
+    <g
+       id="g358">
+      <rect
+         style="fill: #ffffff"
+         x="180"
+         y="480"
+         width="118.863"
+         height="37.5975"
+         id="rect354" />
+      <rect
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         x="180"
+         y="480"
+         width="118.863"
+         height="37.5975"
+         id="rect356" />
+    </g>
+    <text
+       font-size="12.8016"
+       style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700"
+       x="239.431"
+       y="503.681"
+       id="text362"><tspan
+         x="239.431"
+         y="503.681"
+         id="tspan360">list</tspan></text>
+    <g
+       id="g368">
+      <rect
+         style="fill: #ffffff"
+         x="340"
+         y="480"
+         width="118.863"
+         height="37.5975"
+         id="rect364" />
+      <rect
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         x="340"
+         y="480"
+         width="118.863"
+         height="37.5975"
+         id="rect366" />
+    </g>
+    <text
+       font-size="12.8016"
+       style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700"
+       x="399.431"
+       y="503.681"
+       id="text372"><tspan
+         x="399.431"
+         y="503.681"
+         id="tspan370">show</tspan></text>
+    <g
+       id="g378">
+      <rect
+         style="fill: #ffffff"
+         x="500"
+         y="480"
+         width="118.863"
+         height="37.5975"
+         id="rect374" />
+      <rect
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         x="500"
+         y="480"
+         width="118.863"
+         height="37.5975"
+         id="rect376" />
+    </g>
+    <text
+       font-size="12.8016"
+       style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700"
+       x="559.431"
+       y="503.681"
+       id="text382"><tspan
+         x="559.431"
+         y="503.681"
+         id="tspan380">compute</tspan></text>
+  </g>
+  <g
+     id="g390">
+    <rect
+       style="fill: #ffffff"
+       x="180"
+       y="900"
+       width="118.863"
+       height="37.5975"
+       id="rect386" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="180"
+       y="900"
+       width="118.863"
+       height="37.5975"
+       id="rect388" />
+  </g>
+  <text
+     font-size="12.8016"
+     style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700"
+     x="239.431"
+     y="923.681"
+     id="text394"><tspan
+       x="239.431"
+       y="923.681"
+       id="tspan392">CDOWrapper</tspan></text>
+  <g
+     id="g400">
+    <rect
+       style="fill: #ffffff"
+       x="340"
+       y="900"
+       width="118.863"
+       height="37.5975"
+       id="rect396" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="340"
+       y="900"
+       width="118.863"
+       height="37.5975"
+       id="rect398" />
+  </g>
+  <text
+     font-size="12.8016"
+     style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700"
+     x="399.431"
+     y="923.681"
+     id="text404"><tspan
+       x="399.431"
+       y="923.681"
+       id="tspan402">CIWrapper</tspan></text>
+  <g
+     id="g416">
+    <polygon
+       style="fill: #ffffff"
+       points="520,903.7 612.5,903.7 624.5,915.7 624.5,933.469 520,933.469 "
+       id="polygon406" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="520,903.7 612.5,903.7 624.5,915.7 624.5,933.469 520,933.469 "
+       id="polygon408" />
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000"
+       points="612.5,903.7 612.5,915.7 624.5,915.7 "
+       id="polyline410" />
+    <text
+       font-size="9.41493"
+       style="fill: #000000;text-anchor:start;font-family:Bahnschrift;font-style:normal;font-weight:normal"
+       x="527"
+       y="926.05"
+       id="text414"><tspan
+         x="527"
+         y="926.05"
+         id="tspan412">CI &gt;&gt; climate-indices</tspan></text>
+  </g>
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 1.2; stroke-dasharray: 6; stroke: #000000"
+     x1="458.863"
+     y1="918.799"
+     x2="520"
+     y2="918.584"
+     id="line418" />
+  <g
+     id="g424">
+    <rect
+       style="fill: #ffffff"
+       x="180"
+       y="749.169"
+       width="118.863"
+       height="37.5975"
+       id="rect420" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="180"
+       y="749.169"
+       width="118.863"
+       height="37.5975"
+       id="rect422" />
+  </g>
+  <text
+     font-size="12.8016"
+     style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700"
+     x="239.431"
+     y="773.042"
+     id="text428"><tspan
+       x="239.431"
+       y="773.042"
+       id="tspan426">CDOWorker</tspan></text>
+  <g
+     id="g436">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000"
+       points="467.216,734 399.428,734 399.428,671.179 "
+       id="polyline430" />
+    <polygon
+       style="fill: #ffffff"
+       points="467.216,742 483.216,734 467.216,726 "
+       id="polygon432" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="467.216,742 483.216,734 467.216,726 "
+       id="polygon434" />
+  </g>
+  <g
+     id="g444">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000"
+       points="467.216,768 384.157,768 384.157,767.967 298.863,767.967 "
+       id="polyline438" />
+    <polygon
+       style="fill: #ffffff"
+       points="467.216,776 483.216,768 467.216,760 "
+       id="polygon440" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="467.216,776 483.216,768 467.216,760 "
+       id="polygon442" />
+  </g>
+  <g
+     id="g456">
+    <polygon
+       style="fill: #ffffff"
+       points="178.5,615.723 271,615.723 283,627.723 283,645.491 178.5,645.491 "
+       id="polygon446" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="178.5,615.723 271,615.723 283,627.723 283,645.491 178.5,645.491 "
+       id="polygon448" />
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000"
+       points="271,615.723 271,627.723 283,627.723 "
+       id="polyline450" />
+    <text
+       font-size="9.41493"
+       style="fill: #000000;text-anchor:start;font-family:Bahnschrift;font-style:normal;font-weight:normal"
+       x="185.5"
+       y="638.073"
+       id="text454"><tspan
+         x="185.5"
+         y="638.073"
+         id="tspan452">CI &gt;&gt; climate-indices</tspan></text>
+  </g>
+  <g
+     id="g468">
+    <polygon
+       style="fill: #ffffff"
+       points="167.311,697.576 302.811,697.576 314.811,709.576 314.811,727.344 167.311,727.344 "
+       id="polygon458" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="167.311,697.576 302.811,697.576 314.811,709.576 314.811,727.344 167.311,727.344 "
+       id="polygon460" />
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000"
+       points="302.811,697.576 302.811,709.576 314.811,709.576 "
+       id="polyline462" />
+    <text
+       font-size="9.41493"
+       style="fill: #000000;text-anchor:start;font-family:Bahnschrift;font-style:normal;font-weight:normal"
+       x="174.311"
+       y="719.926"
+       id="text466"><tspan
+         x="174.311"
+         y="719.926"
+         id="tspan464">CDO &gt;&gt; Climate Data Operators</tspan></text>
+  </g>
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 1.2; stroke-dasharray: 6; stroke: #000000"
+     x1="284.007"
+     y1="637.482"
+     x2="339.005"
+     y2="644.581"
+     id="line470" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 1.2; stroke-dasharray: 6; stroke: #000000"
+     x1="240.013"
+     y1="748.169"
+     x2="240.594"
+     y2="728.349"
+     id="line472" />
+  <g
+     id="g480">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000"
+       points="239.431,786.766 239.431,829.174 239.431,829.174 239.431,893.295 "
+       id="polyline474" />
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="234.431,880.647 239.431,896.647 244.431,880.647 "
+       id="polyline476" />
+    <text
+       font-size="12.7998px"
+       style="font-style:normal;font-weight:normal;font-family:monospace;text-anchor:middle;fill:#000000"
+       x="262.55917"
+       y="825.17401"
+       id="text478">«use»</text>
+  </g>
+  <g
+     id="g488">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000"
+       points="399.428,671.179 399.428,828.92 399.431,828.92 399.431,893.295 "
+       id="polyline482" />
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="394.431,880.647 399.431,896.647 404.431,880.647 "
+       id="polyline484" />
+    <text
+       font-size="12.7998px"
+       style="font-style:normal;font-weight:normal;font-family:monospace;text-anchor:middle;fill:#000000"
+       x="422.55792"
+       y="824.91998"
+       id="text486">«use»</text>
+  </g>
+  <g
+     id="g500">
+    <g
+       id="g494">
+      <rect
+         style="fill: #ffffff"
+         x="339.997"
+         y="633.582"
+         width="118.863"
+         height="37.5975"
+         id="rect490" />
+      <rect
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         x="339.997"
+         y="633.582"
+         width="118.863"
+         height="37.5975"
+         id="rect492" />
+    </g>
+    <text
+       font-size="12.8016"
+       style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700"
+       x="399.428"
+       y="657.456"
+       id="text498"><tspan
+         x="399.428"
+         y="657.456"
+         id="tspan496">CIWorker</tspan></text>
+  </g>
+  <g
+     id="g518">
+    <g
+       id="g512">
+      <rect
+         style="fill: #ffffff"
+         x="336.152"
+         y="1029"
+         width="126.447"
+         height="57.3507"
+         id="rect502" />
+      <rect
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         x="336.152"
+         y="1029"
+         width="126.447"
+         height="57.3507"
+         id="rect504" />
+      <rect
+         style="fill: #ffffff"
+         x="336.152"
+         y="1009"
+         width="40"
+         height="20"
+         id="rect506" />
+      <rect
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         x="336.152"
+         y="1009"
+         width="40"
+         height="20"
+         id="rect508" />
+      <text
+         font-size="12.7998"
+         style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal"
+         x="338.152"
+         y="1023"
+         id="text510" />
+    </g>
+    <text
+       font-size="12.8016"
+       style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700"
+       x="399.376"
+       y="1062.75"
+       id="text516"><tspan
+         x="399.376"
+         y="1062.75"
+         id="tspan514">climate-indices</tspan></text>
+  </g>
+  <g
+     id="g550">
+    <g
+       id="g536">
+      <g
+         id="g530">
+        <rect
+           style="fill: #ffffff"
+           x="520"
+           y="1020"
+           width="167.583"
+           height="74.9624"
+           id="rect520" />
+        <rect
+           style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+           x="520"
+           y="1020"
+           width="167.583"
+           height="74.9624"
+           id="rect522" />
+        <rect
+           style="fill: #ffffff"
+           x="520"
+           y="1000"
+           width="40"
+           height="20"
+           id="rect524" />
+        <rect
+           style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+           x="520"
+           y="1000"
+           width="40"
+           height="20"
+           id="rect526" />
+        <text
+           font-size="12.7998"
+           style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal"
+           x="522"
+           y="1014"
+           id="text528" />
+      </g>
+      <text
+         font-size="12.8016"
+         style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700"
+         x="528.495"
+         y="1014.21"
+         id="text534"><tspan
+           x="528.495"
+           y="1014.21"
+           id="tspan532">nco</tspan></text>
+    </g>
+    <g
+       id="g548">
+      <g
+         id="g542">
+        <rect
+           style="fill: #ffffff"
+           x="544.626"
+           y="1038.46"
+           width="118.863"
+           height="37.5975"
+           id="rect538" />
+        <rect
+           style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+           x="544.626"
+           y="1038.46"
+           width="118.863"
+           height="37.5975"
+           id="rect540" />
+      </g>
+      <text
+         font-size="12.8016"
+         style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700"
+         x="604.057"
+         y="1062.33"
+         id="text546"><tspan
+           x="604.057"
+           y="1062.33"
+           id="tspan544">Nco</tspan></text>
+    </g>
+  </g>
+  <g
+     id="g582">
+    <g
+       id="g568">
+      <g
+         id="g562">
+        <rect
+           style="fill: #ffffff"
+           x="110"
+           y="1020"
+           width="167.583"
+           height="74.9624"
+           id="rect552" />
+        <rect
+           style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+           x="110"
+           y="1020"
+           width="167.583"
+           height="74.9624"
+           id="rect554" />
+        <rect
+           style="fill: #ffffff"
+           x="110"
+           y="1000"
+           width="40"
+           height="20"
+           id="rect556" />
+        <rect
+           style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+           x="110"
+           y="1000"
+           width="40"
+           height="20"
+           id="rect558" />
+        <text
+           font-size="12.7998"
+           style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal"
+           x="112"
+           y="1014"
+           id="text560" />
+      </g>
+      <text
+         font-size="12.8016"
+         style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700"
+         x="115.23"
+         y="1012.76"
+         id="text566"><tspan
+           x="115.23"
+           y="1012.76"
+           id="tspan564">cdo</tspan></text>
+    </g>
+    <g
+       id="g580">
+      <g
+         id="g574">
+        <rect
+           style="fill: #ffffff"
+           x="134.308"
+           y="1039"
+           width="118.863"
+           height="37.5975"
+           id="rect570" />
+        <rect
+           style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+           x="134.308"
+           y="1039"
+           width="118.863"
+           height="37.5975"
+           id="rect572" />
+      </g>
+      <text
+         font-size="12.8016"
+         style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700"
+         x="193.739"
+         y="1062.88"
+         id="text578"><tspan
+           x="193.739"
+           y="1062.88"
+           id="tspan576">Cdo</tspan></text>
+    </g>
+  </g>
+  <g
+     id="g614">
+    <g
+       id="g600">
+      <g
+         id="g594">
+        <rect
+           style="fill: #ffffff"
+           x="740"
+           y="1020"
+           width="167.583"
+           height="74.9624"
+           id="rect584" />
+        <rect
+           style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+           x="740"
+           y="1020"
+           width="167.583"
+           height="74.9624"
+           id="rect586" />
+        <rect
+           style="fill:#ffffff;stroke-width:1.0407"
+           x="740"
+           y="1000"
+           width="129.42511"
+           height="20"
+           id="rect588" />
+        <rect
+           style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.07678"
+           x="740.03839"
+           y="1000.0384"
+           width="129.34833"
+           height="19.923216"
+           id="rect590" />
+        <text
+           font-size="12.7998"
+           style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal"
+           x="742"
+           y="1014"
+           id="text592" />
+      </g>
+      <text
+         font-size="12.8016"
+         style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700"
+         x="748.495"
+         y="1014.21"
+         id="text598"><tspan
+           x="748.495"
+           y="1014.21"
+           id="tspan596">multiprocessing</tspan></text>
+    </g>
+    <g
+       id="g612">
+      <g
+         id="g606">
+        <rect
+           style="fill: #ffffff"
+           x="762.811"
+           y="1037.51"
+           width="118.863"
+           height="37.5975"
+           id="rect602" />
+        <rect
+           style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+           x="762.811"
+           y="1037.51"
+           width="118.863"
+           height="37.5975"
+           id="rect604" />
+      </g>
+      <text
+         font-size="12.8016"
+         style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700"
+         x="822.242"
+         y="1061.38"
+         id="text610"><tspan
+           x="822.242"
+           y="1061.38"
+           id="tspan608">Pool</tspan></text>
+    </g>
+  </g>
+  <g
+     id="g620">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000"
+       points="239.431,937.598 239.431,990.262 193.791,990.262 193.791,1013.29 "
+       id="polyline616" />
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="188.791,1000.65 193.791,1016.65 198.791,1000.65 "
+       id="polyline618" />
+  </g>
+  <g
+     id="g626">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000"
+       points="399.431,937.598 399.431,979.301 399.376,979.301 399.376,1022.3 "
+       id="polyline622" />
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="394.376,1009.65 399.376,1025.65 404.376,1009.65 "
+       id="polyline624" />
+  </g>
+  <g
+     id="g632">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000"
+       points="399.428,671.179 399.428,860.418 281.908,860.418 281.908,893.646 "
+       id="polyline628" />
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="276.908,880.998 281.908,896.998 286.908,880.998 "
+       id="polyline630" />
+  </g>
+  <g
+     id="g638">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000"
+       points="462.599,1057.68 487.3,1057.68 487.3,1057.48 513.295,1057.48 "
+       id="polyline634" />
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="500.647,1062.48 516.647,1057.48 500.647,1052.48 "
+       id="polyline636" />
+  </g>
+  <g
+     id="g654">
+    <g
+       id="g644">
+      <rect
+         style="fill: #fceef0"
+         x="134.257"
+         y="1151.52"
+         width="118.863"
+         height="50.2291"
+         id="rect640" />
+      <rect
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         x="134.257"
+         y="1151.52"
+         width="118.863"
+         height="50.2291"
+         id="rect642" />
+    </g>
+    <text
+       font-size="12.8016"
+       style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700"
+       x="194.042"
+       y="1185.59"
+       id="text648"><tspan
+         x="194.042"
+         y="1185.59"
+         id="tspan646">cdo</tspan></text>
+    <text
+       font-size="10.5438"
+       style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal"
+       x="194.942"
+       y="1171.57"
+       id="text652"><tspan
+         x="194.942"
+         y="1171.57"
+         id="tspan650">«toolkit»</tspan></text>
+  </g>
+  <g
+     id="g660">
+    <rect
+       style="fill: #fceef0"
+       x="544.654"
+       y="1151.52"
+       width="118.863"
+       height="50.2291"
+       id="rect656" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="544.654"
+       y="1151.52"
+       width="118.863"
+       height="50.2291"
+       id="rect658" />
+  </g>
+  <text
+     font-size="12.8016"
+     style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700"
+     x="604.085"
+     y="1185.27"
+     id="text664"><tspan
+       x="604.085"
+       y="1185.27"
+       id="tspan662">nco</tspan></text>
+  <text
+     font-size="10.5438"
+     style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal"
+     x="605.339"
+     y="1172.22"
+     id="text668"><tspan
+       x="605.339"
+       y="1172.22"
+       id="tspan666">«toolkit»</tspan></text>
+  <g
+     id="g674">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000"
+       points="193.739,1076.6 193.739,1110.06 193.688,1110.06 193.688,1144.81 "
+       id="polyline670" />
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="188.688,1132.16 193.688,1148.16 198.688,1132.16 "
+       id="polyline672" />
+  </g>
+  <g
+     id="g680">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000"
+       points="604.057,1076.06 604.057,1109.79 604.085,1109.79 604.085,1144.81 "
+       id="polyline676" />
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="599.085,1132.16 604.085,1148.16 609.085,1132.16 "
+       id="polyline678" />
+  </g>
+  <g
+     id="g686">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000"
+       points="881.897,975.27 881.897,993.212 881.921,993.212 881.921,1012.45 "
+       id="polyline682" />
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="876.921,999.801 881.921,1015.8 886.921,999.801 "
+       id="polyline684" />
+  </g>
+  <g
+     id="g702">
+    <polygon
+       style="fill: #ffffff"
+       points="720,560 870.8,560 882.8,572 882.8,613.306 720,613.306 "
+       id="polygon688" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="720,560 870.8,560 882.8,572 882.8,613.306 720,613.306 "
+       id="polygon690" />
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000"
+       points="870.8,560 870.8,572 882.8,572 "
+       id="polyline692" />
+    <text
+       font-size="9.41493"
+       style="fill: #000000;text-anchor:start;font-family:Bahnschrift;font-style:normal;font-weight:normal"
+       x="727"
+       y="582.35"
+       id="text700"><tspan
+         x="727"
+         y="582.35"
+         id="tspan694">[!] Registry of climate indices</tspan><tspan
+         x="727"
+         y="594.119"
+         id="tspan696">loaded from ./etc/indices.ini</tspan><tspan
+         x="727"
+         y="605.887"
+         id="tspan698">(or alternative file given from CLI).</tspan></text>
+  </g>
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 1.2; stroke-dasharray: 6; stroke: #000000"
+     x1="800.598"
+     y1="559.004"
+     x2="800.005"
+     y2="538.579"
+     id="line704" />
+  <g
+     id="g716">
+    <polygon
+       style="fill: #ffffff"
+       points="761.09,828.518 824.49,828.518 836.49,840.518 836.49,858.287 761.09,858.287 "
+       id="polygon706" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="761.09,828.518 824.49,828.518 836.49,840.518 836.49,858.287 761.09,858.287 "
+       id="polygon708" />
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000"
+       points="824.49,828.518 824.49,840.518 836.49,840.518 "
+       id="polyline710" />
+    <text
+       font-size="9.41493"
+       style="fill: #000000;text-anchor:start;font-family:Bahnschrift;font-style:normal;font-weight:normal"
+       x="768.09"
+       y="850.868"
+       id="text714"><tspan
+         x="768.09"
+         y="850.868"
+         id="tspan712">NC &gt;&gt; NetCDF</tspan></text>
+  </g>
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 1.2; stroke-dasharray: 6; stroke: #000000"
+     x1="798.967"
+     y1="827.513"
+     x2="799.211"
+     y2="805.637"
+     id="line718" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 1.2; stroke-dasharray: 6; stroke: #000000"
+     x1="798.613"
+     y1="678.586"
+     x2="797.875"
+     y2="696.417"
+     id="line720" />
+  <g
+     id="g734">
+    <polygon
+       style="fill: #ffffff"
+       points="720,697.407 861.95,697.407 873.95,709.407 873.95,738.944 720,738.944 "
+       id="polygon722" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="720,697.407 861.95,697.407 873.95,709.407 873.95,738.944 720,738.944 "
+       id="polygon724" />
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000"
+       points="861.95,697.407 861.95,709.407 873.95,709.407 "
+       id="polyline726" />
+    <text
+       font-size="9.41493"
+       style="fill: #000000;text-anchor:start;font-family:Bahnschrift;font-style:normal;font-weight:normal"
+       x="727"
+       y="719.757"
+       id="text732"><tspan
+         x="727"
+         y="719.757"
+         id="tspan728">Shared sub-routines, templates,</tspan><tspan
+         x="727"
+         y="731.526"
+         id="tspan730">logging setup.</tspan></text>
+  </g>
+  <g
+     id="g740">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000"
+       points="399.431,937.598 399.431,984.452 603.791,984.452 603.791,1013.29 "
+       id="polyline736" />
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="598.791,1000.65 603.791,1016.65 608.791,1000.65 "
+       id="polyline738" />
+  </g>
+</svg>
