@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: semroute
+Version: 0.0.1
+Summary: Sem-Route is a semantic router that helps you route sing the semantic meaning of the query
+Home-page: https://github.com/HansalShah007/semroute
+Author: Hansal Shah
+Author-email: hansalshah100@gmail.com
+Project-URL: Issues, https://github.com/HansalShah007/semroute/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: openai>=1.35.10
+Requires-Dist: numpy>=2.0.0
+Requires-Dist: mistralai>=0.4.2
