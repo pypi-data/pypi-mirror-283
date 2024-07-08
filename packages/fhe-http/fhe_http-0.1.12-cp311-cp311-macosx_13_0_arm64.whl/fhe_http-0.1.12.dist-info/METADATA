@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: fhe-http
+Version: 0.1.12
+Summary: This is an test package for Python Fhe Http 
+Home-page: https://github.com/spockwall/fhe-http
+Author: spockwall
+Author-email: e1e1e1n9n9n9@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: maturin >=1.5.0
+Requires-Dist: ply >=3.11
+Requires-Dist: setuptools-rust >=1.9.0
+Requires-Dist: setuptools >=68.2.2
+Requires-Dist: wheel >=0.43.0
+
+# FHE_HTTP
+
+## About
+This project is designed as an HTTP extension for an FHE feature or plan, and integrated with existing HTTP services and standards. It allows users to specify their preferred service feature or plan by appending a specific field to the HTTP header when making requests to web services. It will support the web devtools as a packages.
+
+## Example Diagram
+1. User sends an http requests with header specifying 2 columns:
+    ```
+    - FHE-Type: <library>:<version>
+    - FHE-Method: <Defined by server>
+    ```
+    and send encrypted payload text to a server.
+2. A server receives the http request, and parse the header. If the server recognizes the header, then the server will use the library for computation.
+    ```
+    - success: 
+        status code 209 for FHE computation successed.
+    - error: 
+        status code 405 for FHE-Method not allowed.
+        status code 406 for FHE-Type not acceptable.
+        status code 422 for unprocessable content.
+    - response: 
+        sever's computation result
+
+## Tentative supporting
+- rust
+- python binding
+- rust -> wasm, javascript
+
+## References
+- [Rust compression crate benchmark](https://blog.logrocket.com/rust-compression-libraries/)
