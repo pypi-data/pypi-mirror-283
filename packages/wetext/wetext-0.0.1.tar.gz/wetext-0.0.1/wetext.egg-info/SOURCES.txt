@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.py
+wetext/__init__.py
+wetext/cli.py
+wetext/token_parser.py
+wetext/wetext.py
+wetext.egg-info/PKG-INFO
+wetext.egg-info/SOURCES.txt
+wetext.egg-info/dependency_links.txt
+wetext.egg-info/entry_points.txt
+wetext.egg-info/requires.txt
+wetext.egg-info/top_level.txt

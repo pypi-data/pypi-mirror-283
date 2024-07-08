@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: wetext
+Version: 0.0.1
+Summary: WeTextProcessing Runtime
+Home-page: https://github.com/pengzhendong/wetext
+Author: Zhendong Peng
+Author-email: pzd17@tsinghua.org.cn
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# wetext
+
+Python runtime for WeTextProcessing (does not depend on Pynini).
+
+
