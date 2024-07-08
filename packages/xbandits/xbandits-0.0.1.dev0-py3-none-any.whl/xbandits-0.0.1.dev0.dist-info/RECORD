@@ -1,0 +1,12 @@
+xbandits/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xbandits/algo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xbandits/algo/ucb.py,sha256=qbBgJvk7m7QQqvk-fqwlPaznB6PKLiZ8TlFBIeyE_tw,4109
+xbandits/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xbandits/core/regret.py,sha256=zvLFMLxJn_UDQ61Xou7YHtSdJmztqsxz3xyiZ5ctLLg,867
+xbandits/core/rollout.py,sha256=GJjI6a6VW0bS2mVmeV5POhKvln0Z5AWL2eobnDocBpk,2550
+xbandits/core/statistics.py,sha256=irR4q4D4wXp6FR2SpvbN9uGgAyrh-9-pczjr8CoRud8,1604
+xbandits-0.0.1.dev0.dist-info/LICENSE,sha256=oWjQ3UgEZsFVetbduH7cjUVEn0lU9h84DWrBP0VXWtM,1066
+xbandits-0.0.1.dev0.dist-info/METADATA,sha256=QGtidRxSXLh6HtmEqd6AXzrAu0z_eo_l-wHvMR-YWjY,1769
+xbandits-0.0.1.dev0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+xbandits-0.0.1.dev0.dist-info/top_level.txt,sha256=Ua1xIoaaCmTZ8-yhIKCoKu9QB7n_U8wBG7YAbz_yfWk,9
+xbandits-0.0.1.dev0.dist-info/RECORD,,
