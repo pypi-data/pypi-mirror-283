@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: atomprobe_lib
+Version: 0.0.1
+Summary: Atom Probe library testing
+Author: Victor Petyuk
+Author-email: <victor.petyuk@pnnl.gov>
+Keywords: python,first package
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+
+Library for interaction between atom probe and client computer
