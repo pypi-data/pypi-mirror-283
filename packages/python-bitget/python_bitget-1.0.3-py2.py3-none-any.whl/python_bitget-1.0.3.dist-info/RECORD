@@ -1,0 +1,11 @@
+pybitget/__init__.py,sha256=CXMUNjym_xuOOd2D_n-XaAFkqmLjMFww9ajXGHvSSRo,269
+pybitget/client.py,sha256=APvZbqL9H4mkn_gQpFR6CiDHQZIBCvjR3OvtRdY76TY,49434
+pybitget/enums.py,sha256=qOQ3UIjaKQnSmFRR8RIxBNnihYjkrne-7myVbop94bQ,3182
+pybitget/exceptions.py,sha256=q3WL1ezbTquTVx26-QhbNZr7fKaJf0wwMuDMnD-XPJo,1114
+pybitget/stream.py,sha256=6erRID54e_Aj4YOBr0mTkmkfkAb_BSKgw3H62Ql6JeM,11088
+pybitget/utils.py,sha256=Af5TcSm3WWhMkAZ-kG9lVin6kpvoT5q5B7KKq7b19yo,1586
+python_bitget-1.0.3.dist-info/METADATA,sha256=_h6Yy0yIiQz2qBHDQwvWK60rzGABJoOBUGlRJHYwG88,5085
+python_bitget-1.0.3.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+python_bitget-1.0.3.dist-info/top_level.txt,sha256=6OUWFIPmAhot1NzP8uNTIowWhZvg859vSyUYG0gngZk,9
+python_bitget-1.0.3.dist-info/zip-safe,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+python_bitget-1.0.3.dist-info/RECORD,,
