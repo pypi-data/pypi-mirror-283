@@ -1,0 +1,5 @@
+test_rye/__init__.py,sha256=VDK1C_OlqYLhiCuvyIXZ6ZxRT0G2kiYzEP9i4R58pmk,50
+test_rye-0.1.0.dist-info/METADATA,sha256=A06Y64COSeArzy5r6HNv7V3YMkwt0NGOkDfXMtTaQQs,200
+test_rye-0.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+test_rye-0.1.0.dist-info/licenses/LICENSE,sha256=ocSzG5tDrm8bP30Jtjbjoxi42GLQm6MDM4QIlySCngg,1069
+test_rye-0.1.0.dist-info/RECORD,,
