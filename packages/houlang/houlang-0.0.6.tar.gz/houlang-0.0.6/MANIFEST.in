@@ -1,0 +1,6 @@
+include README.md
+include setup.py
+include houlang/__init__.py
+recursive-include houlang *.py
+recursive-include houlang *.pt
+recursive-include houlang *.mlmodel
