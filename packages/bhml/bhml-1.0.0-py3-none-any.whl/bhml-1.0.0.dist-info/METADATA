@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: bhml
+Version: 1.0.0
+Summary: constrain the evolution of a complete catalog based of redshift ranges and other paramters ranges (e.g. mass, luminosity .....)
+Home-page: https://github.com/fatma2585/bhml
+Author-email: fatmashaban0@gmail.com
+License: LICENSE
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: numpy (>=1.24.4)
+Requires-Dist: scipy (>=1.11.1)
+Requires-Dist: astropy (>=5.3.3)
+Requires-Dist: matplotlib (>=3.6.1)
+
