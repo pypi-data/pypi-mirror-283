@@ -1,0 +1,8 @@
+chilkat/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chilkat/_chilkat.pyd,sha256=FX-aKKE-BIfcyEhDoOznBYHS6R_fE8-7ONmq3cRXdkI,19179008
+chilkat/chilkat.py,sha256=PltWgugjCEp5sRbAmTAaw4qWqzRq1ouTF_rXIdT1kZ4,1144507
+chilkat/testChilkat.py,sha256=khdTl_wyp7hhGZj_sKyZj_ovTkDQLc6wDNJmGjRhFZQ,811
+chilkat-1.0.1.dist-info/METADATA,sha256=xI78R38pKunV2-57J037fD4cNH5ahEBMQi5x8zz_h1k,694
+chilkat-1.0.1.dist-info/WHEEL,sha256=VjOakRrFjQDaJ3SL0TIqKBZGtb43B2QJnIB-eW3qItk,101
+chilkat-1.0.1.dist-info/top_level.txt,sha256=-_t7eud0tfQ5XakjYMmQNvVodEz022_uQ-9Z6HMwENg,8
+chilkat-1.0.1.dist-info/RECORD,,
