@@ -1,0 +1,12 @@
+recommendation/__init__.py,sha256=bpT73UG7mZL_JjEqMwbYx6q69jA8J5Jcoul1LcDokhA,81
+recommendation/tools/__init__.py,sha256=bpT73UG7mZL_JjEqMwbYx6q69jA8J5Jcoul1LcDokhA,81
+recommendation/tools/recommendation_api_tool.py,sha256=xo4eATL1V7s8O9TS_XNCC0kQ43BNRrnrgbmkKkwjY7E,870
+recommendation/tools/utils.py,sha256=AZ9zo9PoEF9GqHCRxAb28dVJdFuzVl6bGdqFLtfvrY4,536
+recommendation/yamls/recommendation_api_tool.yaml,sha256=WrqWR8lg7Nj-sARTi1sRTugV9_0Xrb_6n9D5VlYrVYs,278
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_recommendation_api_tool.py,sha256=yHney9G3hXhEIKOvdzLdtc9s1ZOri1eIpMGcNs1zvuA,721
+recommendation_api-0.0.1.dist-info/METADATA,sha256=yxOrLVds5h6cgnTYvzFbdaDc_SM_CWPOhgGiQGQY7qU,107
+recommendation_api-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+recommendation_api-0.0.1.dist-info/entry_points.txt,sha256=-wXOuaEbQe-X-jYXHVjEEZEoswl4miOLv5Ip9EXKcqw,88
+recommendation_api-0.0.1.dist-info/top_level.txt,sha256=fwyi_3PW_5IAydiKNXkj1zwfRBuvuKeSXyfPAkvECKU,21
+recommendation_api-0.0.1.dist-info/RECORD,,
