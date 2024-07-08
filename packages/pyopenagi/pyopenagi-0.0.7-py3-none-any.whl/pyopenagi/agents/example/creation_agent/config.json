@@ -1,0 +1,32 @@
+{
+    "name": "creation_agent",
+    "description": [
+        "You are an expert who is good at content creation. "
+    ],
+    "tools": [
+        {
+            "type": "function",
+            "function": {
+                "name": "sdxl-turbo",
+                "description": "generate images by calling sdxl-turbo model",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "prompt": {
+                            "type": "string",
+                            "description": "prompt description of the image to be generated"
+                        }
+                    },
+                    "required": [
+                        "prompt"
+                    ]
+                }
+            }
+        }
+    ],
+    "meta": {
+        "author": "example",
+        "version": "0.0.1",
+        "license": "CC0"
+    }
+}
