@@ -1,0 +1,125 @@
+- name: Income below lowest threshold
+  period: 2024
+  input:
+    spouse_market_income: 2_700
+    household_married: true
+    household_market_income: 28_000
+  output:
+    dependent_spouse_additional_amount: 0
+
+- name: Income at lowest threshold (€29,000)
+  period: 2024
+  input:
+    spouse_market_income: 2_700
+    household_married: true
+    household_market_income: 29_000
+  output:
+    dependent_spouse_additional_amount: 10
+
+- name: Income between €29,000 and €29,200
+  period: 2024
+  input:
+    spouse_market_income: 2_700
+    household_married: true
+    household_market_income: 29_100
+  output:
+    dependent_spouse_additional_amount: 10
+
+- name: Income at €29,200 threshold
+  period: 2024
+  input:
+    spouse_market_income: 2_700
+    household_married: true
+    household_market_income: 29_200
+  output:
+    dependent_spouse_additional_amount: 20
+
+- name: Income between €29,200 and €34,700
+  period: 2024
+  input:
+    spouse_market_income: 2_700
+    household_married: true
+    household_market_income: 32_000
+  output:
+    dependent_spouse_additional_amount: 20
+
+- name: Income at €34,700 threshold
+  period: 2024
+  input:
+    spouse_market_income: 2_700
+    household_married: true
+    household_market_income: 34_700
+  output:
+    dependent_spouse_additional_amount: 30
+
+- name: Income between €34,700 and €35,000
+  period: 2024
+  input:
+    spouse_market_income: 2_700
+    household_married: true
+    household_market_income: 34_850
+  output:
+    dependent_spouse_additional_amount: 30
+
+- name: Income at €35,000 threshold
+  period: 2024
+  input:
+    spouse_market_income: 2_700
+    household_married: true
+    household_market_income: 35_000
+  output:
+    dependent_spouse_additional_amount: 20
+
+- name: Income between €35,000 and €35,100
+  period: 2024
+  input:
+    spouse_market_income: 2_700
+    household_married: true
+    household_market_income: 35_050
+  output:
+    dependent_spouse_additional_amount: 20
+
+- name: Income at €35,100 threshold
+  period: 2024
+  input:
+    spouse_market_income: 2_700
+    household_married: true
+    household_market_income: 35_100
+  output:
+    dependent_spouse_additional_amount: 10
+
+- name: Income between €35,100 and €35,200
+  period: 2024
+  input:
+    spouse_market_income: 2_700
+    household_married: true
+    household_market_income: 35_150
+  output:
+    dependent_spouse_additional_amount: 10
+
+- name: Income at €35,200 threshold
+  period: 2024
+  input:
+    spouse_market_income: 2_700
+    household_married: true
+    household_market_income: 35_200
+  output:
+    dependent_spouse_additional_amount: 0
+
+- name: Income above highest threshold
+  period: 2024
+  input:
+    spouse_market_income: 2_700
+    household_married: true
+    household_market_income: 36_000
+  output:
+    dependent_spouse_additional_amount: 0
+
+- name: Household not eligible - spouse income too high
+  period: 2024
+  input:
+    spouse_market_income: 3_500
+    household_married: true
+    household_market_income: 32_000
+  output:
+    dependent_spouse_additional_amount: 0
