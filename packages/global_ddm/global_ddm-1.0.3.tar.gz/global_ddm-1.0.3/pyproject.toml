@@ -1,0 +1,17 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "global_ddm"
+version = "1.0.3"
+authors = [{name = "suozihao"}]
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+description = "global digit distance model"
+readme = "README.md"
+requires-python = ">=3.6"
+dependencies = [
+    "numpy",
+    "netCDF4"
+]
