@@ -1,0 +1,18 @@
+Metadata-Version: 2.3
+Name: abcvlib
+Version: 0.0.7
+Summary: Python server for the OIST smartphone-robot Android-2-Python API
+Project-URL: Homepage, https://github.com/oist/smartphone-robot-python-server
+Project-URL: Issues, https://github.com/oist/smartphone-robot-python-server/issues
+Author: Christopher Buckley
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: flask==3.0.3
+Requires-Dist: flatbuffers==2.0
+Requires-Dist: netifaces==0.11.0
+Requires-Dist: smartphone-robot-flatbuffers==0.0.2
+Description-Content-Type: text/markdown
+
+This repo was created by mistake and I don't have admin rights to remove it due to the way it was created (I transfered ownership from my personal account rather than creating it within the OIST account). 
