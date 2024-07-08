@@ -1,0 +1,111 @@
+Metadata-Version: 2.1
+Name: py3-ttsmms
+Version: 0.8.4
+Summary: Text-to-speech with The Massively Multilingual Speech (MMS) project
+Home-page: https://github.com/willwade/ttsmms
+Author: willwade
+Author-email: willwade <willwade@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2023 Wannaphong Phatthiyaphaibun
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/willwade/ttsmms
+Project-URL: Repository, https://github.com/willwade/ttsmms
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Cython >=3.0.10
+Requires-Dist: librosa >=0.10.0
+Requires-Dist: scipy >=1.14.0
+Requires-Dist: numpy >=1.22.0
+Requires-Dist: phonemizer >=3.2.1
+Requires-Dist: torch >=2.3.1
+Requires-Dist: Unidecode >=1.3.7
+Requires-Dist: monotonic-align >=1.0.0
+
+# py3-ttsmms
+
+(A fork of ttsmms by wannaphong)
+Text-to-speech with The Massively Multilingual Speech (MMS) project from Meta. 
+
+This project want to help you for use Text-to-speech model from MMS project in Python. We aim to keep functioanlity minimal. Other projects such as py3-ttswrapper will provide more features.
+
+Support 1,107 Languages! (See support_list.txt)
+
+- VITS: [GitHub](https://github.com/jaywalnut310/vits)
+- MMS: Scaling Speech Technology to 1000+ languages: [GitHub](https://github.com/facebookresearch/fairseq/tree/main/examples/mms)
+
+[Google colab](https://colab.research.google.com/github/wannaphong/ttsmms/blob/main/notebook/test.ipynb)
+
+**Don't forget the TTS model in MMS project use CC-BY-NC license.**
+
+## Install
+
+> pip install py3-ttsmms
+
+** Warning; There are a LOT of dependencies. If you already have Torch or PyTorch installed, you may need to uninstall it and reinstall it with the correct version. **
+
+**NB: We use the same method names as ttsmms, but the code is not compatible.**
+
+## Usage
+
+First, you need to download the model by yourself or use the code below. Note these are ISO 639-1 language codes. Youc an see the full list in support_list.txt.
+
+```python
+from ttsmms import download
+
+dir_path = download("eng","./data") # lang_code, dir for save model
+```
+
+or download file by yourself eg:
+
+
+1. Download the language model file. Replace "lang_code" with the language code you want to download. You can see the full list in support_list.txt kur for Kurdish, eng for English, etc.
+
+> curl https://dl.fbaipublicfiles.com/mms/tts/lang_code.tar.gz --output lang_code.tar.gz
+
+2. extract a tar ball archive.
+
+3. create a directory for save model
+
+> mkdir -p data && tar -xzf lang_code.tar.gz -C data/
+
+### Synthesis
+
+```python
+from ttsmms import TTS
+
+tts=TTS(dir_path) # or "model_dir_path" your path dir that extract a tar ball archive
+wav=tts.synthesis("txt")
+# output:
+# {
+#    'audio_bytes': b'\x00\x0',
+#    "x":array(wav array),
+#    "sampling_rate": 16000
+# }
+
+tts.synthesis("txt",wav_path="example.wav")
+# output: example.wav file
+```
