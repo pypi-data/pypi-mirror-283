@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+thznumpy/__init__.py
+thznumpy.egg-info/PKG-INFO
+thznumpy.egg-info/SOURCES.txt
+thznumpy.egg-info/dependency_links.txt
+thznumpy.egg-info/top_level.txt
