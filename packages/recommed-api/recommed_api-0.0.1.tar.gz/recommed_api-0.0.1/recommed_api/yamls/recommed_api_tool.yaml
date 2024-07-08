@@ -1,0 +1,13 @@
+recommed_api.tools.recommed_api_tool.get_recommend:
+  function: get_recommend
+  inputs:
+    connection:
+      type:
+      - CustomConnection
+    input_text:
+      type:
+      - string
+  module: recommed_api.tools.recommed_api_tool
+  name: Hello World Tool
+  description: This is hello world tool
+  type: python
