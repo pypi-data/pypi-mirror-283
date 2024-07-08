@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: DataHiveToolKit
+Version: 0.1
+Summary: Common utility functions for Data Hive
+Author: DataHive
+Author-email: contact@datahive.us
+Requires-Python: >=3.9
+Requires-Dist: google_api_python_client>=2.125.0
+Requires-Dist: protobuf>=5.27.2
+Requires-Dist: slack_sdk>=3.21.3

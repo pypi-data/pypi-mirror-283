@@ -1,0 +1,10 @@
+README.md
+setup.py
+DataHiveToolKit/__init__.py
+DataHiveToolKit/email.py
+DataHiveToolKit/slack.py
+DataHiveToolKit.egg-info/PKG-INFO
+DataHiveToolKit.egg-info/SOURCES.txt
+DataHiveToolKit.egg-info/dependency_links.txt
+DataHiveToolKit.egg-info/requires.txt
+DataHiveToolKit.egg-info/top_level.txt
