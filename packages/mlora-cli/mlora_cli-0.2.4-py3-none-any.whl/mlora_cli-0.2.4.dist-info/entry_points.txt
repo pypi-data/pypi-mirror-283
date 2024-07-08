@@ -1,0 +1,2 @@
+[console_scripts]
+mlora_cli = mlora_cli.shell:cmd_loop
