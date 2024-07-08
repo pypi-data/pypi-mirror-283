@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+optimal_mean_estimator/__init__.py
+optimal_mean_estimator/optimalmean.py
+optimal_mean_estimator.egg-info/PKG-INFO
+optimal_mean_estimator.egg-info/SOURCES.txt
+optimal_mean_estimator.egg-info/dependency_links.txt
+optimal_mean_estimator.egg-info/requires.txt
+optimal_mean_estimator.egg-info/top_level.txt
