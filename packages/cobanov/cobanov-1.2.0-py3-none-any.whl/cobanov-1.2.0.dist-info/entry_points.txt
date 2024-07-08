@@ -1,0 +1,2 @@
+[console_scripts]
+cobanov = cobanov.main:main
