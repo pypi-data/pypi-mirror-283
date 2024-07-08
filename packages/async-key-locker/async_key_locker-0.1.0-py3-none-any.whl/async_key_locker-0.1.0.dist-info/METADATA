@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: async-key-locker
+Version: 0.1.0
+Summary: 
+Author: megahomyak
+Author-email: g.megahomyak@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# What is this
+
+This library is like an `asyncio.Lock()`, but this library's `Lock` can be activated with various keys, and the locking is distinct for each key
+
+# Installation
+
+`pip install key_locker`
+
+# Usage
+
+```
+from key_locker import Storage, Lock
+
+storage = Storage()
+
+lock = Lock(storage, "key")
+
+await lock.acquire()
+await lock.release()
+async with lock:
+    pass
+```
+
