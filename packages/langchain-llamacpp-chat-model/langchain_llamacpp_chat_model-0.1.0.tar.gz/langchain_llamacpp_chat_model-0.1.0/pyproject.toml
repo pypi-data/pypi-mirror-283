@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "langchain-llamacpp-chat-model"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+authors = []
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "<=3.12.4,>=3.10"
+llama-cpp-python = "^0.2.81"
+langchain = "^0.2.6"
+anyio = "^4.4.0"
+fastapi = "^0.111.0"
+sse-starlette = "^2.1.2"
+starlette-context = "^0.3.6"
+pydantic-settings = "^2.3.4"
+langchain-community = "^0.2.6"
+langchain-openai = "^0.1.14"
+
+[tool.poetry.group.test.dependencies]
+huggingface-hub = "^0.23.4"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+pytest-watch = "^4.2.0"
+pytest-asyncio = "^0.23.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
