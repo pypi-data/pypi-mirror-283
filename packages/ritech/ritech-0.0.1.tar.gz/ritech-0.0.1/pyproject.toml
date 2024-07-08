@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ritech"
+version = "0.0.1"
+description = "Realtime GTFS API for RIT passio"
+readme = "README.md"
+requires-python = ">=3.11.2"
+dependencies = [
+    "protobuf==5.27.2",
+    "requests"
+]
+
+[project.urls]
+Homepage = "https://github.com/GlennTatum/rittech"

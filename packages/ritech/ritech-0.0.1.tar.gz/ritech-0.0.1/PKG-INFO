@@ -1,0 +1,8 @@
+Metadata-Version: 2.3
+Name: ritech
+Version: 0.0.1
+Summary: Realtime GTFS API for RIT passio
+Project-URL: Homepage, https://github.com/GlennTatum/rittech
+Requires-Python: >=3.11.2
+Requires-Dist: protobuf==5.27.2
+Requires-Dist: requests
