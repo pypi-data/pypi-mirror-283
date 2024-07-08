@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: custom_profiler
+Version: 0.1.0
+Summary: time and memory profiler
+Author: Karim Ammar
+Author-email: karim.ammar@cea.fr
+Maintainer: Karim Ammar
+Keywords: profiler
+Requires-Dist: psutil
+
+time and memory profiler
