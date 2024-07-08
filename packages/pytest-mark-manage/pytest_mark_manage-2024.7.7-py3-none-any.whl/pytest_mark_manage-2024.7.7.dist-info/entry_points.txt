@@ -1,0 +1,2 @@
+[pytest11]
+pytest-mark-manage = pytest_mark_manage.plugin
