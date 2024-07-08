@@ -1,0 +1,6 @@
+README.md
+setup.py
+sbsha69.egg-info/PKG-INFO
+sbsha69.egg-info/SOURCES.txt
+sbsha69.egg-info/dependency_links.txt
+sbsha69.egg-info/top_level.txt
