@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: pazok
+Version: 0.1.1.1
+Summary: A short description of my package
+Author: b_azo
+Author-email: husseun.selt@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: requests
+
+
+
+___<h1 align="center">pazok</h1>
+
+
+### What is pazok library?
+
+The pazok library is a library that summarizes some large commands from several other libraries. This is to simplify some large codes and reduce them to one line or less.
+
+Ù…ÙƒØªØ¨Ù‡ Ø¨Ø§Ø²ÙˆÙƒ Ù‡ÙŠ Ù…ÙƒØªØ¨Ù‡ ØªØ®ØªØµØ± Ø¨Ø¹Ø¶ Ø§Ù„Ø§ÙˆØ§Ù…Ø± Ø§Ù„ÙƒØ¨ÙŠØ²Ù‡ Ù…Ù† Ø¹Ø¯Ø© Ù…ÙƒØ§ØªØ¨ Ø§Ø®Ø±Ù‰ ÙˆÙ‡Ø°Ø§ Ù„ØªØ¨Ø³ÙŠØ· Ø¨Ø¹Ø¶ Ø§Ù„Ø§ÙƒÙˆØ¯ Ø§Ù„ÙƒØ¨ÙŠØ±Ù‡ ÙˆØ§Ø®ØªØµØ§Ø±Ù‡Ø§ Ø¨Ø³Ø·Ø± ÙˆØ§Ø­Ø¯ Ø§Ùˆ Ø§Ù‚Ù„
+
+### Support
++ python
++ termux
+
+### Install
+
+Just write this code on terminal:
+
+```shell
+pip3 install pazok
+```
+
+___
+
+<p align="center">
+<strong>For more information and explanation</strong>
+</p>
+
+<p align="center">
+<a href="https://t.me/p_azok"><label style="display: block;"><strong>https://t.me/p_azok</strong></label></a>
+</p>
