@@ -1,0 +1,3 @@
+[console_scripts]
+TP-Frida = TP_Frida:main
+
