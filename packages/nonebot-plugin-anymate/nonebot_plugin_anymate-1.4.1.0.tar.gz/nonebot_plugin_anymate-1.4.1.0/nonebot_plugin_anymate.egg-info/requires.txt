@@ -1,0 +1,11 @@
+anyio
+filetype
+strenum
+pytz
+httpx
+pydantic
+nonebot_adapter_onebot
+aiosqlite
+nonebot-plugin-send-anything-anywhere
+nonebot_plugin_apscheduler
+nonebot2
