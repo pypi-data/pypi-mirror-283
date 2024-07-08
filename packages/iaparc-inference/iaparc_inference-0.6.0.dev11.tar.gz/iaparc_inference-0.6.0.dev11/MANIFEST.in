@@ -1,0 +1,2 @@
+include src/iaparc_inference/messenger/*.so
+include src/iaparc_inference/messenger/*.h
