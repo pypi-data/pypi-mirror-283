@@ -1,0 +1,10 @@
+happyxpy/__init__.py,sha256=0OFJJFQEZi4ZNlVp5uyLFJPtQWgquh7szFKU_o8zVg0,3827
+happyxpy/constants.py,sha256=8Gk-aB4INX0HeHtv1ot-0mKNj8ScfH6eGe2xuj5WdpM,1167
+happyxpy/happyx_unix_amd64.so,sha256=mRxIrfmpEcja9VzmEt03A_SGMI1H7riTGFZtKrQ351s,1340208
+happyxpy/happyx_unix_arm64.so,sha256=C0GaH7IopnhfGvXv8gx751jI3dwqiS7QfibpfUYlKUU,1265368
+happyxpy/happyx_win.pyd,sha256=1QGfscz7iaRiCvdXIVTYUEaF3MYkT1WATvUq3eiccXs,1680617
+happyxpy/server.py,sha256=X5RnbchO8KOkKJg9-z4wegZSsv3-WmvUzr7alF4-WxM,11973
+happyxpy-4.2.1.dist-info/METADATA,sha256=iw2i5KQBef43yZmwP3rHcKLFMpys0gv5drXsH31qLtk,2112
+happyxpy-4.2.1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+happyxpy-4.2.1.dist-info/top_level.txt,sha256=bp6iR_SuaavhgPTV_pyseAYyuO_6O1QMHuDLXH_kzTc,16
+happyxpy-4.2.1.dist-info/RECORD,,
