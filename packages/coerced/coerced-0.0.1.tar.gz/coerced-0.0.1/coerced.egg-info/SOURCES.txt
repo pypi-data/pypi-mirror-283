@@ -1,0 +1,6 @@
+setup.cfg
+setup.py
+coerced.egg-info/PKG-INFO
+coerced.egg-info/SOURCES.txt
+coerced.egg-info/dependency_links.txt
+coerced.egg-info/top_level.txt
