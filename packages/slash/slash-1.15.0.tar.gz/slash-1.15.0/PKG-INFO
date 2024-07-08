@@ -1,0 +1,71 @@
+Metadata-Version: 2.3
+Name: slash
+Version: 1.15.0
+Summary: A Modern Testing Framework for Large-scale Projects
+Project-URL: Homepage, http://getslash.github.io/
+Project-URL: GitHub, https://github.com/getslash/slash
+Author-email: Rotem Yaari <vmalloc@gmail.com>
+License: BSD 3-Clause License
+License-File: LICENSE
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.7
+Requires-Dist: arrow
+Requires-Dist: brotli
+Requires-Dist: colorama
+Requires-Dist: confetti>=2.5.3
+Requires-Dist: dessert~=1.4.7
+Requires-Dist: emport~=1.3.1
+Requires-Dist: gossip>=2.3.0
+Requires-Dist: ipython; implementation_name != 'pypy' and python_version > '3.6'
+Requires-Dist: ipython<7.17.0; implementation_name != 'pypy' and python_version <= '3.6'
+Requires-Dist: ipython==1.2.1; implementation_name == 'pypy'
+Requires-Dist: jinja2
+Requires-Dist: libtmux
+Requires-Dist: logbook>=1.2.0
+Requires-Dist: ordered-set
+Requires-Dist: py>=1.5.0
+Requires-Dist: pyparsing
+Requires-Dist: raven
+Requires-Dist: requests>=1.1.0
+Requires-Dist: sqlalchemy
+Requires-Dist: vintage>=0.4.0
+Provides-Extra: doc
+Requires-Dist: alabaster; extra == 'doc'
+Requires-Dist: docutils; extra == 'doc'
+Requires-Dist: releases~=1.6.1; extra == 'doc'
+Requires-Dist: sphinx; extra == 'doc'
+Provides-Extra: testing
+Requires-Dist: astroid~=2.15.5; extra == 'testing'
+Requires-Dist: coverage; extra == 'testing'
+Requires-Dist: coveralls; extra == 'testing'
+Requires-Dist: munch; extra == 'testing'
+Requires-Dist: pyforge; extra == 'testing'
+Requires-Dist: pylint~=2.17.4; extra == 'testing'
+Requires-Dist: pytest; extra == 'testing'
+Requires-Dist: pytest-cov; extra == 'testing'
+Requires-Dist: pytest-timeout; extra == 'testing'
+Description-Content-Type: text/markdown
+
+Slash
+=====
+
+
+|                       |                                                                                         |
+|-----------------------|-----------------------------------------------------------------------------------------|
+| Build Status          | ![Build Status](https://github.com/getslash/slash/actions/workflows/main.yml/badge.svg?branch=develop)      |
+| Supported Versions    | ![Supported Versions](https://img.shields.io/pypi/pyversions/slash.svg)                 |
+| Latest Version        | ![Latest Version](https://img.shields.io/pypi/v/slash.svg)                              |
+| Test Coverage         | ![Coverage Status](https://codecov.io/gh/getslash/slash/branch/develop/graph/badge.svg) |
+
+
+
+
+Slash is a testing framework written in Python for testing complex projects. 
+
+* [Homepage](http://getslash.github.io/slash)
+
+* [Documentation](https://slash.readthedocs.org/)
