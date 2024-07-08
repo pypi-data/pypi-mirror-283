@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: rcps
+Version: 0.0.1
+Summary: A tool trojan for control your computer remotely with bunch of other tools.
+Author: arpy8 & cloaky233
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: wheel
+Requires-Dist: termcolor
+Requires-Dist: setuptools
+Requires-Dist: argparse
+Requires-Dist: argparse
+Requires-Dist: pynput
+Requires-Dist: opencv-python
+Requires-Dist: pyautogui
+
+remote-control
