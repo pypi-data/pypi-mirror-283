@@ -1,0 +1,17 @@
+README.rst
+setup.py
+triceratops/__init__.py
+triceratops/funcs.py
+triceratops/likelihoods.py
+triceratops/marginal_likelihoods.py
+triceratops/priors.py
+triceratops/triceratops.py
+triceratops.egg-info/PKG-INFO
+triceratops.egg-info/SOURCES.txt
+triceratops.egg-info/dependency_links.txt
+triceratops.egg-info/not-zip-safe
+triceratops.egg-info/requires.txt
+triceratops.egg-info/top_level.txt
+triceratops/data/ldc_kepler.csv
+triceratops/data/ldc_tess.csv
+triceratops/data/temp.txt
