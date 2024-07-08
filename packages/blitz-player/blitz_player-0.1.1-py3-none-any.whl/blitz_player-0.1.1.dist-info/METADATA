@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: blitz-player
+Version: 0.1.1
+Summary: A CLI YouTube Music player
+Home-page: https://github.com/blitzjb/blitz-player
+Author: BlitzJB
+Author-email: blitz04.dev@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ytmusicapi
+Requires-Dist: yt-dlp
+Requires-Dist: python-vlc
+Requires-Dist: appdirs
+
+# Blitz Player
+
+A command-line interface (CLI) tool to play music from YouTube Music.
+
+## Installation
+
+```bash
+pip install blitz-player
+```
+
+## Usage
+
+To play a song, use the following command:
+
+```bash
+bp Song name to play here
+```
+
+## Controls
+
+- `p`: Play/Pause
+- `n`: Next Song
+- `b`: Previous Song
+- `l`: Toggle Loop (On/Off)
+- `q`: Quit
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
