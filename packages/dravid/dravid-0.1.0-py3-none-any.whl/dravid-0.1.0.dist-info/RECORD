@@ -1,0 +1,14 @@
+drd/.gitignore,sha256=aOOnuicmQwGUpdK6aqc2aC7kxsoZ8bKOSaiRm_d1KmQ,49
+drd/claude_api.py,sha256=Wc0mHSr_Kx7WjaA562Eczb-KvC-ePgoELS7Y821qNzk,3317
+drd/claude_parser.py,sha256=s8ZZbjzzx32679OgJwXTw96vM2aBCkTF0jDvjdq7oP8,1709
+drd/executor.py,sha256=8O83B1uAO8TF2EQreHMxpUy7uUNGBjX_RASPhvL-1LI,4733
+drd/main.py,sha256=rEGnEK86EotyVMrwPkpmdhvNn3VkTUT_wV6m-9ARfSQ,13527
+drd/project_metadata.py,sha256=aEIsVsWGHuV6-30urROhXzkEUOctNA5EU1Sgkbl2Hzk,1651
+drd/prompts/claude_instructions.py,sha256=FS3uUcKmxa60Pg-xchtVAtlZJr5Bo3DYyMsdh7y1fUA,1713
+drd/prompts/error_handling.py,sha256=ccdBrOHSYWyxGlHHFCR0TAh8iRNYZZjcBYSEHjY3eak,777
+drd/prompts/file_operations.py,sha256=fPLW3uHbKmKij_4rkO-ACIyIMw-MFvw1_yieMDC0Q_o,710
+drd/utils.py,sha256=nlEwO-doC1tWL1e2BimogLgRa5mPp-Yg16xigCjU1k0,272
+dravid-0.1.0.dist-info/METADATA,sha256=PDJJxNRFKoCoiZlGiJdgVU0gM0Rkq5-xlRqoEOD0KIY,769
+dravid-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+dravid-0.1.0.dist-info/entry_points.txt,sha256=wer0U0pxblmc2dx6-29rsKisASqXKjKuoUmw2d956C8,43
+dravid-0.1.0.dist-info/RECORD,,

@@ -1,0 +1,3 @@
+[console_scripts]
+drd=drd.main:claude_cli
+
