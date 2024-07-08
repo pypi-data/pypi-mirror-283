@@ -1,0 +1,11 @@
+{
+    "__type__": "sequential_operator",
+    "steps": [
+        {
+            "__type__": "extract_with_regex",
+            "regex": "\\[\\[(.*?)\\]\\]",
+            "field": "prediction",
+            "process_every_value": false
+        }
+    ]
+}

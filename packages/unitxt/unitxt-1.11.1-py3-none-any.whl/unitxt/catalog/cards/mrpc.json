@@ -1,0 +1,79 @@
+{
+    "__type__": "task_card",
+    "loader": {
+        "__type__": "load_hf",
+        "path": "glue",
+        "name": "mrpc",
+        "streaming": false
+    },
+    "preprocess_steps": [
+        "splitters.default",
+        {
+            "__type__": "map_instance_values",
+            "mappers": {
+                "label": {
+                    "0": "not equivalent",
+                    "1": "equivalent"
+                }
+            }
+        },
+        {
+            "__type__": "set",
+            "fields": {
+                "choices": [
+                    "not equivalent",
+                    "equivalent"
+                ]
+            }
+        }
+    ],
+    "task": {
+        "__type__": "task",
+        "inputs": [
+            "choices",
+            "sentence1",
+            "sentence2"
+        ],
+        "outputs": [
+            "label"
+        ],
+        "metrics": [
+            "metrics.accuracy"
+        ]
+    },
+    "templates": {
+        "__type__": "templates_list",
+        "items": [
+            {
+                "__type__": "input_output_template",
+                "input_format": "Given this sentence: {sentence1}, classify if this sentence: {sentence2} is {choices}.",
+                "output_format": "{label}"
+            }
+        ]
+    },
+    "__tags__": {
+        "annotations_creators": "other",
+        "arxiv": "1804.07461",
+        "flags": [
+            "coreference-nli",
+            "paraphrase-identification",
+            "qa-nli"
+        ],
+        "language": "en",
+        "language_creators": "other",
+        "license": "other",
+        "multilinguality": "monolingual",
+        "region": "us",
+        "size_categories": "10K<n<100K",
+        "source_datasets": "original",
+        "task_categories": "text-classification",
+        "task_ids": [
+            "acceptability-classification",
+            "natural-language-inference",
+            "semantic-similarity-scoring",
+            "sentiment-classification",
+            "text-scoring"
+        ]
+    },
+    "__description__": "The Microsoft Research Paraphrase Corpus (Dolan & Brockett, 2005) is a corpus of sentence pairs automatically extracted from online news sources, with human annotations for whether the sentences in the pair are semantically equivalent… See the full description on the dataset page: https://huggingface.co/datasets/nyu-mll/glue."
+}
