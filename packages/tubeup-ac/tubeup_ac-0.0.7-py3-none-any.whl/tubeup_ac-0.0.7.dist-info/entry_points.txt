@@ -1,0 +1,2 @@
+[console_scripts]
+tubeup_ac = tubeup.__main__:run
