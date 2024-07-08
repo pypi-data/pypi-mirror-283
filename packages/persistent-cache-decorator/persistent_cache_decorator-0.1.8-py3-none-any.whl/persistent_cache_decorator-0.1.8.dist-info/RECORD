@@ -1,0 +1,14 @@
+persistent_cache/__init__.py,sha256=kHh2VUcYmjPZ8SiYQjFchxFdbQLIErJIseYx87ZkD88,496
+persistent_cache/_version.py,sha256=PdJ7dZoz_SyEgX0MdrMfQYBFlGcwpemv6ibF8NKALBY,411
+persistent_cache/cli.py,sha256=3cVe0fw917A9sIEiq0lUJAmC7nS6lNFXw8JmajO4wZU,1198
+persistent_cache/decorators.py,sha256=gk4mBFolmlf-6iA4OtQRJhOPcRswbsRKcVsz2FK64bo,10343
+persistent_cache/backend/__init__.py,sha256=aRjju-NGpsqe5avhVZHuVaZrAHQzHDDn4ToDDoI5_CE,7958
+persistent_cache/backend/json.py,sha256=Qi5QCqhJENAHlU9VDiUXzIo6yrxTvVPshjCkwq3Al94,3406
+persistent_cache/backend/pickle.py,sha256=iDRvsz8U6JQFRZeqFeNjAzCJm6BwKKijHKeU6BhQM3E,1698
+persistent_cache/backend/sqlite.py,sha256=Kp4-M2HO8UZRi6F0UfoMqg-s7eRkTW_ucj6L84dXdEY,5158
+persistent_cache/wrappers/__init__.py,sha256=3BPNIZRaT-4LJCp2CXq152Powa7wLTH6WO02cTkUA7A,1799
+persistent_cache_decorator-0.1.8.dist-info/METADATA,sha256=YD_y0J2WKgpyYK1YRyZWNYgwq2SiBKOUtwOVeXSzQ6E,5862
+persistent_cache_decorator-0.1.8.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+persistent_cache_decorator-0.1.8.dist-info/entry_points.txt,sha256=hcX_c4rUgKKhDW-8NnrPnVDWZ4LUB-9jblhzXJAMCuk,56
+persistent_cache_decorator-0.1.8.dist-info/licenses/LICENSE,sha256=hnwRw-SOiu-dsEIEedurFKcVZEL4uyF2XFBRE95vJGE,1063
+persistent_cache_decorator-0.1.8.dist-info/RECORD,,
