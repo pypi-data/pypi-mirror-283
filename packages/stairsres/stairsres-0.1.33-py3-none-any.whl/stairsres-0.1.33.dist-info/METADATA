@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: stairsres
+Version: 0.1.33
+Summary: 
+Author: Roman Netrogolov
+Author-email: romius2001@gmail.com
+Requires-Python: >=3.10,<3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: bamt_light
+Requires-Dist: idbadapter (>=2.4.1,<3.0.0)
+Requires-Dist: numpy (<2)
+Description-Content-Type: text/markdown
+
+# Module with time models and resource staff models
+
+___
+
+**!NB: Measurement for resources is not considered here.**
+
+This module contains two main methods:
+
+1. get_resources_volumes
+
+        Input: 
+        1. work_name, 
+        2. work_volume, 
+        3. measurement, 
+        4. shift
+         
+       Returns: {'worker_reqs': [{'kind': 'Геодезист',
+                                 'volume': 3,
+                                 'min_count': 1,
+                                 'max_count': 5}, <...>]}
+2. estimate_time
+
+        Input: 
+        1. work_unit ({"name": work_name, "volume": work_volume})
+        2. worker_list ([{'name': res_name, '_count': amount}]
+        3. measurement
+       Returns: int (number of calculated shifts)
