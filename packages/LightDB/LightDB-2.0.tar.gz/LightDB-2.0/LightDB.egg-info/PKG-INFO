@@ -1,0 +1,124 @@
+Metadata-Version: 2.1
+Name: LightDB
+Version: 2.0
+Summary: Lightweight JSON Database for Python
+Home-page: https://github.com/Fl1yd/LightDB
+Download-URL: https://github.com/Fl1yd/LightDB/releases
+Author: Fl1yd
+Author-email: projects@fl1yd.su
+License: MIT
+
+What is this?
+-------------
+
+**LightDB** is a simple and lightweight JSON database for Python that allows users to **efficiently** write data to a file. It is designed to be **easy to use**, making it a great choice for developers who need a fast and reliable way to store and retrieve data
+
+
+Features
+--------
+
+- **Lightweight and Simple**: LightDB is a lightweight database implemented as a Python dictionary with an intuitive API for easy key-value management
+- **JSON Storage and Persistence**: Data is stored and retained in a JSON file, allowing easy external editing and persistence between runs
+- **Reset Capability**: Provides a reset method to clear the database and start fresh
+- **Type Agnostic**: Can store any Python object as a value
+- **Portable**: Easily transferable between systems, ideal for simple data storage
+- **Model Support**: Supports models for structured data management, ensuring organized and maintainable code
+
+
+Installing
+----------
+
+You can install LightDB using ``pip``:
+
+.. code-block:: bash
+
+    pip install LightDB
+
+
+Usage
+-----
+
+To use LightDB, first import the ``LightDB`` class from the ``lightdb`` package:
+
+.. code-block:: python
+
+    from lightdb import LightDB
+
+Then, create a ``LightDB`` object by passing in the path to a JSON file where the database will be stored:
+
+.. code-block:: python
+
+    db = LightDB("db.json")
+
+You can then set key-value pairs in the database using the ``set()`` method:
+
+.. code-block:: python
+
+    db.set("name", "Alice")
+    db.set("age", 30)
+
+To save the changes, use the ``save()`` method:
+
+.. code-block:: python
+
+    db.save()
+
+
+Using Models
+------------
+
+LightDB supports defining models for more structured and convenient data management. Hereâ€™s how to use models with LightDB:
+
+First, import the necessary classes:
+
+.. code-block:: python
+
+    from typing import List, Dict, Any
+
+    from lightdb import LightDB
+    from lightdb.models import Model
+
+Define your model by extending the ``Model`` class:
+
+.. code-block:: python
+
+    class User(Model, table="users"):
+        name: str
+        age: int
+        items: List[str] = []
+        extra: Dict[str, Any] = {}
+
+Create a new instance of the model and save it to the database:
+
+.. code-block:: python
+
+    user = User.create(name="Alice", age=30)
+
+Retrieve a user from the database:
+
+.. code-block:: python
+
+    user = User.get(User.name == "Alice")
+    # or user = User.get(name="Alice")
+    print(user.name, user.age)
+
+Update a userâ€™s information and save it:
+
+.. code-block:: python
+
+    user.name = "Kristy"
+    user.save()
+
+Filter users based on certain criteria:
+
+.. code-block:: python
+
+    users = User.filter(User.age >= 20)
+    for user in users:
+        print(user.name)
+
+Delete a user:
+
+.. code-block:: python
+
+    user.delete()
