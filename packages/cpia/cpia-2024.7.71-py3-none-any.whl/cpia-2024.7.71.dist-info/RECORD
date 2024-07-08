@@ -1,0 +1,17 @@
+cpia/__init__.py,sha256=P-4h7XKKtXay5jo4s9D5sOg85Q_ZI4RcpGrKfmjTb28,2488
+cpia/converter.py,sha256=cyEXLpTH2okSCfRya4mHgv7Ob7VEALh71tAe9tehNfA,8346
+cpia/utils.py,sha256=ZiFpX8h_lNsyavOY-3HfBT2XRKBiJL25RlnHvORCYjM,128
+cpia/fsts/avaee.fst,sha256=OCzPly7n13qV4rpbEmsL6S-Tz536ZTa5OGuFIMlGp38,1646858
+cpia/fsts/expressive.fst,sha256=jhSLqGKyeJvJOzJ0P8Uxp_36YQxIegCLgqgAW8a1-mY,1664931
+cpia/fsts/generation.fst,sha256=gakZfs7g0OSjy8zPe591I4A6gIW2cqPPEDQdESxxHr0,505789
+cpia/fsts/homophone.fst,sha256=qF2SYCgbgHXbsBeOylOiiuxnawS1QQGtxuBVtoZLopM,911774
+cpia/fsts/splitter.fst,sha256=x049ixxQ_n31eH71xrxjkvnVgQZc7SO2L0shqcqm6dQ,1645922
+cpia/fsts/standard.fst,sha256=IheMYSvsGrNFDOSuvmrQ_dQiXgV5GjsFXgzdy4Q-Vpw,815950
+cpia/streats/convertableStems.txt,sha256=gUEfOu0_oq7XQB4BTV9_OMixix9yeFobV-REUbIhZ4k,112
+cpia/streats/convertableWords.txt,sha256=XzP3mk9iZhpr3j4dyfRJpA_9v1Zq3nniQ24ARweMCMg,13336
+cpia/streats/rule-parts.txt,sha256=58ExdqMdiIFN9RoCDI7cksf_x2JbZkgtS5hU5Q2ccq0,2028
+cpia-2024.7.71.dist-info/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+cpia-2024.7.71.dist-info/METADATA,sha256=dGywDaCUX_lc3GZahtbV_cz7R5we9lUOcizO4puAvNA,9300
+cpia-2024.7.71.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+cpia-2024.7.71.dist-info/top_level.txt,sha256=PTHLwgXkBeMhzJqHEi2XZCg2ZB_vcls-DyOZy7sev8g,5
+cpia-2024.7.71.dist-info/RECORD,,
