@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: houlang
+Version: 0.0.5
+Summary: Houlang is a package for Chinese historical documents automatic transcription.
+Author: Colin Brisson
+Author-email: colibrisson@gmail.com
+Keywords: historical documents,classical chinese,automatic transcription,OCR
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8, <3.12
+Description-Content-Type: text/markdown
+Requires-Dist: kraken>=5.0
+Requires-Dist: ultralytics>=8.0
+Requires-Dist: scikit-learn
+
+# houlang: a package Chinese historical documents automatic transcription
