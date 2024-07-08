@@ -1,0 +1,3 @@
+[console_scripts]
+garmi-gui = garmi_gui.gui:start_gui
+garmi-gui-control = garmi_gui.control:main
