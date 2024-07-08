@@ -1,0 +1,137 @@
+Metadata-Version: 2.1
+Name: FunPayNexusAPI
+Version: 0.0.2
+Summary: This is the API for funpay.com
+Home-page: https://github.com/Sema4ka0/FunPay-API
+Author: Sema4ka0
+Author-email: seem.git@gmail.com
+Project-URL: GitHub, https://github.com/Sema4ka0/FunPay-API
+Project-URL: Chanel, https://t.me/FunPayNexus
+Keywords: funpay api FunPayAPI tool bot tg lib
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+<h1 align="center"> FunPay Nexus API </h1>
+<h3 align="center">  Р±РёР±Р»РёРѕС‚РµРєР° РґР»СЏ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёСЏ СЃ СЃР°Р№С‚РѕРј funpay.com, РїСЂРµРґРѕСЃС‚Р°РІР»СЏСЋС‰Р°СЏ СѓРґРѕР±РЅС‹Рµ РјРµС‚РѕРґС‹ СЂР°Р±РѕС‚С‹ СЃ Р°РєРєР°СѓРЅС‚РѕРј. </h3>
+
+<h1 align="center"> Р’Р°Р¶РЅС‹Рµ СЃСЃС‹Р»РєРё</h1>
+<h4 align="center">
+    <a href="https://t.me/FunPayNexus">Telegram РєР°РЅР°Р»</a><br>
+<h4 align="center">
+    <a href="https://t.me/FunPayNexus_chat">Telegram С‡Р°С‚</a><br>
+<h4 align="center">
+    <a href="https://github.com/Sema4ka0/FunPayNexusAPI">GitHub</a><br>
+<h4 align="center">
+    <a href="https://pypi.org/project/FunPayNexusAPI/">PyPi</a><br>
+
+## РЈСЃС‚Р°РЅРѕРІРєР°
+РЈСЃС‚Р°РЅРѕРІРєР° Р±РёР±Р»РёРѕС‚РµРєРё:
+```bash
+pip install FunPayNexusAPI
+```
+## РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ
+
+### РџРѕР»СѓС‡РµРЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РїСЂРѕС„РёР»Рµ
+
+РќРёР¶Рµ РїСЂРёРІРµРґРµРЅС‹ РЅРµСЃРєРѕР»СЊРєРѕ РїСЂРёРјРµСЂРѕРІ СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј FunPayNexusAPI
+
+```python
+from FunPayNexusAPI.account import Client
+from FunPayNexusAPI.methods import ObjectAccount
+import asyncio
+
+# Р’РІРѕРґРёРј golden_key Рё user_agent
+golden_key = "golden_key Р°РєРєР°СѓРЅС‚Р°"
+user_agent = "РІР°С€ user_agent" 
+
+# РёРЅРёС†РёР°Р»РёР·РёСЂСѓРµРј Р°РєРєР°СѓРЅС‚
+client = Client(golden_key=golden_key, user_agent=user_agent)
+account = ObjectAccount(client)
+
+async def info_handler() -> None:
+    username = await account.username
+    user_id = await account.user_id
+    url_account = await account.url
+    balanse = await account.balans
+    print(f"username: {username}\nID: {user_id}\nurl: {url_account}\nbalans: {balanse[0]}в‚Ѕ {balanse[1]}$ {balanse[2]}в‚¬")
+    
+async def main() -> None:
+    await info_handler()
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+### РџРѕР»СѓС‡РµРЅРёРµ РЅРµРїСЂРѕС‡РёС‚Р°РЅРЅС‹С… С‡Р°С‚РѕРІ РЅР° Р°РєРєСѓРЅС‚Рµ
+
+```python
+from FunPayNexusAPI.account import Client
+from FunPayNexusAPI.methods import ObjectAccount
+import asyncio
+
+# Р’РІРѕРґРёРј golden_key Рё user_agent
+golden_key = "golden_key Р°РєРєР°СѓРЅС‚Р°"
+user_agent = "РІР°С€ user_agent" 
+
+# РёРЅРёС†РёР°Р»РёР·РёСЂСѓРµРј Р°РєРєР°СѓРЅС‚
+client = Client(golden_key=golden_key, user_agent=user_agent)
+account = ObjectAccount(client)
+
+async def func():
+    a = await account.get_new_messages
+    print(a)
+
+async def main():
+    await func()
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+### РћС‚РїСЂР°РІР»РµРЅРёРµ СЃРѕРѕР±С‰РµРЅРёСЏ РІ С‡Р°С‚
+
+```python
+from FunPayNexusAPI.account import Client
+from FunPayNexusAPI.methods import ObjectAccount
+import asyncio
+
+# Р’РІРѕРґРёРј golden_key Рё user_agent
+golden_key = "golden_key Р°РєРєР°СѓРЅС‚Р°"
+user_agent = "РІР°С€ user_agent" 
+
+# РёРЅРёС†РёР°Р»РёР·РёСЂСѓРµРј Р°РєРєР°СѓРЅС‚
+client = Client(golden_key=golden_key, user_agent=user_agent)
+account = ObjectAccount(client)
+
+user_id = 'Р°Р№РґРё Р°РєРєР°СѓРЅС‚Р° СЃРѕР±РµСЃРµРґРЅРёРєР°'
+mess = 'С‚РµРєСЃС‚ СЃРѕРѕР±С‰РµРЅРёСЏ'
+
+async def func():
+    await account.send_message(user_id, mess)
+
+async def main():
+    await func()
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+## РћРїРёСЃР°РЅРёРµ РєР»Р°СЃСЃРѕРІ Рё РјРµС‚РѕРґРѕРІ
+
+### account.py
+
+Р­С‚РѕС‚ РјРѕРґСѓР»СЊ СЃРѕРґРµСЂР¶РёС‚ РєР»Р°СЃСЃ `Client`, РєРѕС‚РѕСЂС‹Р№ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ Рє Р°РєРєР°СѓРЅС‚Сѓ FunPay.
+
+### methods.py
+
+Р­С‚РѕС‚ РјРѕРґСѓР»СЊ СЃРѕРґРµСЂР¶РёС‚ РєР»Р°СЃСЃ `ObjectAccount`, РєРѕС‚РѕСЂС‹Р№ РїСЂРµРґРѕСЃС‚Р°РІР»СЏРµС‚ РјРµС‚РѕРґС‹ РґР»СЏ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёСЏ СЃ Р°РєРєР°СѓРЅС‚РѕРј.
+
+## Р—Р°РєР»СЋС‡РµРЅРёРµ
+РџСЂРѕРµРєС‚ РЅР°С…РѕРґРёС‚СЃСЏ РІ СЃР°РјРѕРј РЅР°С‡Р°Р»Рµ СЃРІРѕРµРіРѕ СЂР°Р·РІРёС‚РёСЏ, Рё Р°РєС‚РёРІРЅРѕ СЂР°Р·СЂР°Р±Р°С‚С‹РІР°РµС‚СЃСЏ, РІСЃРєРѕСЂРµ Р±СѓРґРµС‚ РґРѕР±Р°РІР»РµРЅ РЅРѕРІС‹Р№ С„СѓРЅРєС†РёРѕРЅР°Р», РїРѕ РЅР°РґРѕР±РЅРѕСЃС‚Рё РѕР±РЅРѕРІР»РµРЅ СЃС‚Р°СЂС‹Р№.
