@@ -1,0 +1,15 @@
+MANIFEST.in
+license.txt
+pyproject.toml
+readme.rst
+setup.py
+prosigue/__init__.py
+prosigue/command.py
+prosigue.egg-info/PKG-INFO
+prosigue.egg-info/SOURCES.txt
+prosigue.egg-info/dependency_links.txt
+prosigue.egg-info/top_level.txt
+prosigue/readme_prosigue/__init__.py
+prosigue/readme_prosigue/readme.py
+prosigue/standard/__init__.py
+prosigue/standard/principiofinal.py
