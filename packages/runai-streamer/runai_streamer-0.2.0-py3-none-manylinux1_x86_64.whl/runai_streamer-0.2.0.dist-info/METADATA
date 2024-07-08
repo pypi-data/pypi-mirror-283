@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: runai-streamer
+Version: 0.2.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: humanize
+Requires-Dist: torch (<3.0.0,>=2.0.0)
+
+UNKNOWN
+
+
