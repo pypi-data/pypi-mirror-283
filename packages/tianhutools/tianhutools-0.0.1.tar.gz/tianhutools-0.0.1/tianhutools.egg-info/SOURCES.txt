@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+thznumpy/__init__.py
+tianhutools.egg-info/PKG-INFO
+tianhutools.egg-info/SOURCES.txt
+tianhutools.egg-info/dependency_links.txt
+tianhutools.egg-info/top_level.txt
