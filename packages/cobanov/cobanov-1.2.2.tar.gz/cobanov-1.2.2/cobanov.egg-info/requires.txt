@@ -1,0 +1,5 @@
+psutil
+rich
+
+[:platform_system == "Linux"]
+pyudev
