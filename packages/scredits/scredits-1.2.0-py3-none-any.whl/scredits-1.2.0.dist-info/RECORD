@@ -1,0 +1,12 @@
+scredits/__init__.py,sha256=CTpdxQ43aV-FbNna8_EtkszzFLhE-lHf_OT2D8fPdgI,162
+scredits/__main__.py,sha256=5BjNuyet8AY-POwoF5rGt722rHQ7tJ0Vf0UFUfzzi-I,58
+scredits/__version__.py,sha256=MpAT5hgNoHnTtG1XRD_GV_A7QrHVU6vJjGSw_8qMGA4,22
+scredits/cli.py,sha256=8fKIvdWMask-5KuPJsgbtR6cZIWswj7QKj-n3r-Xl6o,1428
+scredits/config.py,sha256=0xN8-sCH6uR6xAXW--2vFYFTG7ytc3KnwesuiSjPfGs,101
+scredits/scredits.py,sha256=21dZZeOcbRXwzeERwxn5pi_YzPyIqMqs9F5WZsL02fs,8048
+scredits-1.2.0.dist-info/LICENSE,sha256=xhEF1_VM9bSWvjaTCr1B-52KXHiHjrxLkHo3Qydep1c,1099
+scredits-1.2.0.dist-info/METADATA,sha256=hznHv-nDP2Xa5HQZipIbshdxbhAPCZwSJg_40KzNin0,4644
+scredits-1.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+scredits-1.2.0.dist-info/entry_points.txt,sha256=W8yR2A131-b7eZ9xOYjUsEVGAn4w0T_NhHvH4JQSiRY,48
+scredits-1.2.0.dist-info/top_level.txt,sha256=coh7uA4eqcdk32EqCcjScbBBO-ZMIQ3za3XZJiGxuUs,9
+scredits-1.2.0.dist-info/RECORD,,
