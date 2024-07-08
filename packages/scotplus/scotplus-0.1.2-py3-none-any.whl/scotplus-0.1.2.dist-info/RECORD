@@ -1,0 +1,9 @@
+scotplus/__init__.py,sha256=Hv0PJupbngx4HRBzB9fwEdjs1PtgOXxFAagwQwP5aVE,114
+scotplus/solvers.py,sha256=HJuur8wC55YA0QCIl8lx7WyJ7UGGfsTjJSsl3eI4_6o,19665
+scotplus/backend/package_solver_supervised.py,sha256=5Jw2M0YvD0OMzgTvVrpz16DR3LSdgcUvTbFVH_ncBHM,34409
+scotplus/utils/alignment.py,sha256=HhThAZmS-EKCIg9h2TKi6cQZM0InPYXtdtCJOx2Lcnk,4260
+scotplus-0.1.2.dist-info/LICENSE,sha256=WlQVCJtg262EKXVQbRaFb6hGIvm3TJlNiDrOVgQf1GQ,1065
+scotplus-0.1.2.dist-info/METADATA,sha256=h5BKgOKnNu05EN3PfsqF-9aTsvO8drSOwFoEtiQuyEg,1012
+scotplus-0.1.2.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+scotplus-0.1.2.dist-info/top_level.txt,sha256=z90xAnoEoF13JN8P0qPvjTS11i0-DIIT-MlsNn-Bp-s,9
+scotplus-0.1.2.dist-info/RECORD,,
