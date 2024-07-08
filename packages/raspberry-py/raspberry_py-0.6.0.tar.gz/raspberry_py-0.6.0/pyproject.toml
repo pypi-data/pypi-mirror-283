@@ -1,0 +1,33 @@
+[build-system]
+requires = ['poetry-core']
+build-backend = 'poetry.core.masonry.api'
+
+[tool.poetry]
+name = 'raspberry-py'
+version = "0.6.0"
+description = 'A Python/REST interface for GPIO circuits running on the Raspberry Pi'
+readme = 'README.md'
+authors = [
+    'Matthew Gerber <gerber.matthew@gmail.com>'
+]
+packages = [
+    { include = 'raspberry_py', from = 'src'}
+]
+repository = 'https://github.com/MatthewGerber/raspberry-py'
+
+[tool.poetry.dependencies]
+python = '>=3.10'
+numpy = '~=1.26'
+'RPi.GPIO' = '~=0.7'
+smbus2 = '~=0.4'
+Flask = '~=3.0'
+Flask-Cors = '~=4.0'
+opencv-python = '~=4.8'
+rpi-ws281x = '~=5.0'
+
+[tool.poetry.group.dev.dependencies]
+mypy = '~=1.10'
+flake8 = '~=7.0'
+
+[tool.poetry.scripts]
+write_component_files = 'raspberry_py.rest.application:write_component_files_cli'
