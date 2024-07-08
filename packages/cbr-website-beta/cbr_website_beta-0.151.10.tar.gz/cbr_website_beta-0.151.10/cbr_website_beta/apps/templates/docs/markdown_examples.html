@@ -1,0 +1,46 @@
+<style>
+    .debug_view {
+        border: 1px dotted;
+        background-color: #f0f6fc;
+    }
+</style>
+
+<form onsubmit="submit_debug_view_form(event);">
+    <div class="container py-2 debug_view">
+                <div class="row">
+                    <!-- Column 1 -->
+                    <div class="col-4">
+                        <select id="method_selector" name="method_selector"  size="5" onchange="updateFormFields()">
+                            {% for class_name, methods in markdown_examples.items() %}
+                                <optgroup label="{{ class_name }}">
+                                    {% for method_name, kwargs in methods.items() %}
+                                        <option value="{{ class_name }}.{{ method_name }}" class="form-control">
+                                            {{ class_name }} - {{ method_name }}
+                                        </option>
+                                    {% endfor %}
+                                </optgroup>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                </div>
+        </div>
+</form>
+
+<script>
+function updateFormFields() {
+    var selectedMethod = document.getElementById('method_selector').value;
+    var methodParts = selectedMethod.split('.');
+    var class_name = methodParts[0];
+    var method_name = methodParts[1];
+    var markdown_examples = {{ markdown_examples|safe }};
+
+
+    var method_kwargs = markdown_examples[class_name][method_name];
+    $('#markdown-input').val(method_kwargs)
+    renderMarkdown()
+}
+</script>
+
+
+
