@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "abcvlib"
+dynamic = ["version"]
+dependencies = [
+    'flatbuffers==2.0',
+    'netifaces==0.11.0',
+    'smartphone-robot-flatbuffers==0.0.2',
+    'flask==3.0.3'
+]
+authors = [
+  { name="Christopher Buckley"},
+]
+description = "Python server for the OIST smartphone-robot Android-2-Python API"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/oist/smartphone-robot-python-server"
+Issues = "https://github.com/oist/smartphone-robot-python-server/issues"
+
+[tool.hatch.build.targets.sdist]
+sources = ["src"]
+
+[tool.hatch.build.targets.wheel]
+sources = ["src"]
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "_version.py"
