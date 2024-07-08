@@ -1,0 +1,12 @@
+findmyorder/__init__.py,sha256=3iv_5JKZfRBkBcKRbCvYTm3yefM9O5TPS3ZjFF1LGWo,118
+findmyorder/config.py,sha256=e1SrJv2MGl75rmJJtHJFoaL4jCdUC4XWVtO25-ujCKg,673
+findmyorder/default_settings.toml,sha256=X9ZAKzdBc4UrHmM6mrxQdCmTWY2yQk0zk7RVYG2cEvc,1835
+findmyorder/handler/__init__.py,sha256=OhjLMEB4uZqE2rAwUNxGB3BgEsDE4W0LyGacZY14xJA,146
+findmyorder/handler/basic.py,sha256=XsSXu84eYpMvSXfP6o_20x-uKUOPWvsxzVPp7AU_kyk,1151
+findmyorder/handler/handler.py,sha256=3DH0S7OmaSNnAkHcAgZkmd8Z3YNDN4BA3fUFbPpE8G4,3781
+findmyorder/handler/standard.py,sha256=wS46U3yVviolbUmAJr_xZJ-aAvdMqy3kJfW10G3QtVg,2676
+findmyorder/main.py,sha256=_R4Z9FypWL1Rqdd6vr_YZ_TInZJoidAIEPka-gx68Gc,6122
+findmyorder-2.1.0.dist-info/LICENSE,sha256=Ym-WJCFdWfn0XKn-qLQI-u5nxBJX6F2kl-hPeRJp1fI,1064
+findmyorder-2.1.0.dist-info/METADATA,sha256=IGFRqJipV783u4HZnM-QyPfAEisFfs-QEAWvo1rE8Zg,3530
+findmyorder-2.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+findmyorder-2.1.0.dist-info/RECORD,,
