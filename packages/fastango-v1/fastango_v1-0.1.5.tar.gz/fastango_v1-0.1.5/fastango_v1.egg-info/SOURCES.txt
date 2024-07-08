@@ -1,0 +1,11 @@
+README.md
+setup.py
+fastango_v1/__init__.py
+fastango_v1/app.py
+fastango_v1/middleware.py
+fastango_v1/response.py
+fastango_v1.egg-info/PKG-INFO
+fastango_v1.egg-info/SOURCES.txt
+fastango_v1.egg-info/dependency_links.txt
+fastango_v1.egg-info/requires.txt
+fastango_v1.egg-info/top_level.txt
