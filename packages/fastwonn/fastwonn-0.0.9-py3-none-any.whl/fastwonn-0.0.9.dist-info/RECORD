@@ -1,0 +1,16 @@
+fastwonn/__init__.py,sha256=ukjmg6xtgGoYtTIHlGvfQOTKoO6Hv2FG-HyXtemboSI,651
+fastwonn/mle.py,sha256=1e13TvEUyNHaworq2rZ-6Lw2lNXtgK-rfMNEezhAK98,2682
+fastwonn/twonn.py,sha256=_-Ygrgt4iWJEyUYbfx6YJNtLjxztLCsrB9_1M7S6s10,2113
+fastwonn/utils.py,sha256=O9hJXFU6CKUr9xZEYrfkx6nCoehFuhFjDuW0j75dqcU,1058
+fastwonn/impl/__init__.py,sha256=Dey_8x85MdPPShUn4q2nf7xcJMvuHhHSwwwYhWrtp3A,2956
+fastwonn/impl/faisscpu.py,sha256=B3EWRQQPimy_hq7quRXf04N7OviIpi3XMnZbBeVRMZM,1673
+fastwonn/impl/faissgpu.py,sha256=EqHxSykiEVCptqlWvHCiJxhUq276FGZNC17YK2tFmYs,1709
+fastwonn/impl/fallback.py,sha256=dB9F8LRS-u5EX1bEGiUTE120WYpHLkfOnoXdLseASQY,1072
+fastwonn/impl/keops.py,sha256=y2c3GeJEWH9VRmbcHFskZUeoAI2daNKcmI2SouRFH-Y,1353
+fastwonn/impl/pytorch.py,sha256=mBhfXcHf0ZG_BGDx8PYeHZR6Vy5L6vty8gzcQlM0n1Q,1111
+fastwonn/impl/utils.py,sha256=XA0Q07ltbBcrSsmfiFk9VSzoUDd4lKQYp0rWqzlW9j8,995
+fastwonn-0.0.9.dist-info/METADATA,sha256=O8c9H2wCo9PieWk0Ww2Y3i5iwxODAEC1St0gmnfoHVs,2040
+fastwonn-0.0.9.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+fastwonn-0.0.9.dist-info/top_level.txt,sha256=uAXLsJrvjFV7ORYsgU-VKIISQ0ZRchKnBptIVRgKVVQ,9
+fastwonn-0.0.9.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+fastwonn-0.0.9.dist-info/RECORD,,
