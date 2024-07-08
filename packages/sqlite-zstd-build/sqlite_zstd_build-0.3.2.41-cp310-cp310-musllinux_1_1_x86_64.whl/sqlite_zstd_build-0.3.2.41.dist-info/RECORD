@@ -1,0 +1,9 @@
+sqlite_zstd/libsqlite_zstd.abi3.so,sha256=qU0hPSZMbSDmzgRcgzvH-UuCl-0IdGoPZHCVeR1Izow,2663985
+sqlite_zstd/datasette.py,sha256=4YSJ62NHkH_7WwFkrF8mshYaIxG9QMa4c8PWoX4mx-E,182
+sqlite_zstd/__init__.py,sha256=oiTezylMMe-72mMcZyuO7YYbmWeD7qs-WM6h_o08okc,902
+sqlite_zstd_build-0.3.2.41.dist-info/entry_points.txt,sha256=jqihfI47wKovkCy9A_D1eLkZIhUlghDfeyQKKedcI9Y,48
+sqlite_zstd_build-0.3.2.41.dist-info/WHEEL,sha256=9KY9Y1-vhZ1U8cpyvc_bg1nB3mPzSXEtbuBY-1edaIY,112
+sqlite_zstd_build-0.3.2.41.dist-info/top_level.txt,sha256=aDcIQ5HxKsIyW8Bl7ZyLoW64HuPebD-pSHmWyOSkLHo,12
+sqlite_zstd_build-0.3.2.41.dist-info/RECORD,,
+sqlite_zstd_build-0.3.2.41.dist-info/METADATA,sha256=cqFMT3rm8NDUANVhf25SXevPvxgIXgsX4LB5WapolA4,1203
+sqlite_zstd_build.libs/libgcc_s-a04fdf82.so.1,sha256=YxqJNaesQMhDswHEQpXsiLnVvMBBbYO6KYMDZFPWKSM,81257
