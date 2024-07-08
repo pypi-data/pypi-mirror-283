@@ -1,0 +1,20 @@
+/*
+    See the JupyterLab Developer Guide for useful CSS Patterns:
+
+    https://jupyterlab.readthedocs.io/en/stable/developer/css.html
+*/
+
+.jp-SplitButton-container {
+    display: flex;
+  }
+  
+.jp-SplitButton-main {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+  
+.jp-SplitButton-secondary {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 1px solid var(--jp-border-color0);
+}
