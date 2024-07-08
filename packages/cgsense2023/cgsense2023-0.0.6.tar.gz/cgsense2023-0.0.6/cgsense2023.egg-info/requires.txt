@@ -1,0 +1,10 @@
+jupyter_compare_view
+scikit-image
+matplotlib
+seaborn
+prettytable
+h5py
+scipy
+pyfftw
+
+[dev]
