@@ -1,0 +1,8 @@
+finetuna-0.1.3.dist-info/METADATA,sha256=OmkX-g_dEvHZowlVt0rSApKGo0LydPQ_NBpRnjsMKEo,437
+finetuna-0.1.3.dist-info/WHEEL,sha256=mbxFTmdEUhG7evcdMkR3aBt9SWcoFBJ4CDwnfguNegA,90
+finetuna-0.1.3.dist-info/entry_points.txt,sha256=znjctouALA0MfqXJ18Vo8tJDnpG3wy3rJK02JLqTJm4,53
+finetuna/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+finetuna/__main__.py,sha256=HBptWYr6KAW2eqJSl77qRqdbMU73riqrDMp0k9WVz3I,1845
+finetuna/device.py,sha256=iMYn3AwgNB55pncVXnCX8gzPhQ-5ZArLNQ6qjk4av8g,1343
+finetuna/model.py,sha256=iyFzTRmNREkGR4s2FdWXjp8k4yi5HNQh_R9DnS7F-KU,9249
+finetuna-0.1.3.dist-info/RECORD,,
