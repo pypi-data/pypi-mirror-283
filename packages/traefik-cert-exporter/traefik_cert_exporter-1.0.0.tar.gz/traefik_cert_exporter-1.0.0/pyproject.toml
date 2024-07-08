@@ -1,0 +1,63 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "traefik-cert-exporter"
+dynamic = ["version"]
+description = "CLI and python library to export Traefik SSL certificates"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+keywords = ["cli", "traefik", "ssl", "certificate", "export"]
+authors = [
+    { name = "Alfredo Altamirano", email = "pypi.sprinkled287@passmail.net" },
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: System :: Monitoring",
+    "Topic :: Utilities",
+]
+dependencies = ["click>=8.1.7, <9"]
+
+[project.optional-dependencies]
+dev = ["black", "isort"]
+tests = ["pytest"]
+
+[project.scripts]
+export-certs = "traefik_cert_exporter.cli:export_certs"
+
+[project.urls]
+Documentation = "https://github.com/ahuahuachi/traefik-cert-exporter#readme"
+Issues = "https://github.com/ahuahuachi/traefik-cert-exporter/issues"
+Source = "https://github.com/ahuahuachi/traefik-cert-exporter"
+
+[tool.hatch.version]
+path = "src/traefik_cert_exporter/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = ["mypy>=1.0.0"]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/traefik_cert_exporter tests}"
+
+[tool.coverage.run]
+source_pkgs = ["traefik_cert_exporter", "tests"]
+branch = true
+parallel = true
+omit = ["src/traefik_cert_exporter/__about__.py"]
+
+[tool.coverage.paths]
+traefik_cert_exporter = [
+    "src/traefik_cert_exporter",
+    "*/traefik-cert-exporter/src/traefik_cert_exporter",
+]
+tests = ["tests", "*/traefik-cert-exporter/tests"]
+
+[tool.coverage.report]
+exclude_lines = ["no cov", "if __name__ == .__main__.:", "if TYPE_CHECKING:"]
