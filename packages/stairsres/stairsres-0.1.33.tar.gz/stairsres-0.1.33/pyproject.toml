@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "stairsres"
+version = "0.1.33"
+description = ""
+authors = ["Roman Netrogolov <romius2001@gmail.com>"]
+readme = "README.md"
+packages = [{include = "stairsres"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+idbadapter = "^2.4.1"
+#bamt = "^1.2.71"
+bamt_light = "*"
+numpy = "<2"
+#stairs-sdk = { git = "https://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@github.com/aimclub/stairs-sdk.git", branch = "main" }
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
