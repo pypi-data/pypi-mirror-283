@@ -1,0 +1,9 @@
+setup.py
+aniplease/__init__.py
+aniplease/category_types.py
+aniplease/upload.py
+aniplease.egg-info/PKG-INFO
+aniplease.egg-info/SOURCES.txt
+aniplease.egg-info/dependency_links.txt
+aniplease.egg-info/requires.txt
+aniplease.egg-info/top_level.txt
