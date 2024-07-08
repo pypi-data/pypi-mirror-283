@@ -1,0 +1,2 @@
+[console_scripts]
+exespy = exespy.exespy:main
