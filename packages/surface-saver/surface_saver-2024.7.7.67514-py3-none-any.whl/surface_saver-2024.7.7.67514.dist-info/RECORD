@@ -1,0 +1,12 @@
+surface_saver/__init__.py,sha256=iJhwBRMPB06uJPpQ_ySV5_D244z5umZ6nZUOindXfxo,149
+surface_saver/__main__.py,sha256=8jpq77C7m2EPj2NxMQUtlSXTDgbsFcLriY3-J24SFg0,128
+surface_saver/box-contents-schema.json,sha256=7UiRfwVdRHMiJRxjVg3beJ0BriaSQfmIuRa7B-KEYDY,765
+surface_saver/validator.py,sha256=AIE28IQUR3NXS44uPBFi2aIRiHAeRDTHxViUOUIR54c,3004
+surface_saver/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+surface_saver/tests/test_init.py,sha256=jJ_8tuA0DocE3rTNViP5J2-1mCrBo2I8d3lxuELOyZA,214
+surface_saver/tests/test_validator.py,sha256=FDPe9FDUqO0TQcGKl1gEcFGtZPrS-o0o0UWLlwoJr2A,5035
+surface_saver-2024.7.7.67514.dist-info/METADATA,sha256=g0T4Tr4e-dAqNNop7oxvquRKadvKBWBVFjRA1dttIK0,2104
+surface_saver-2024.7.7.67514.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+surface_saver-2024.7.7.67514.dist-info/entry_points.txt,sha256=EdTWXbfoeEEIdu77BvlD-IhU8_ZaqC0eL0kOeK7zKho,37
+surface_saver-2024.7.7.67514.dist-info/top_level.txt,sha256=arW8iEtwf-WQrPueeNs9qJ_FPi4RAcv7uIlePteWWUo,14
+surface_saver-2024.7.7.67514.dist-info/RECORD,,
