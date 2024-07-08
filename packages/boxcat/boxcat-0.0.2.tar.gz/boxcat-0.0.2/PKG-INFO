@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: boxcat
+Version: 0.0.2
+Summary: small playground library for fp in python
+Author-email: Michael Yau <m.yw.yau@gmail.com>
+Project-URL: Homepage, https://github.com/mywyau/boxcat
+Project-URL: Issues, https://github.com/mywyau/boxcat/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# boxcat
+
+
+A small playground library for fp in Python
+
+``` commandline
+pip install boxcat==0.0.1
+```
+
