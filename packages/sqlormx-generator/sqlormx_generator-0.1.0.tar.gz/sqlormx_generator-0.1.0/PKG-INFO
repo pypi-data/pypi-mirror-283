@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: sqlormx_generator
+Version: 0.1.0
+Summary: sqlormx-generator is a model code generator from tables for sqlormx_generator.
+Home-page: https://gitee.com/summry/sqlx-orm-generator
+Author: summry
+Author-email: xiazhongbiao@126.com
+License: UNKNOWN
+Keywords: SQL,sqlormx,python
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Install
+'''''''
+
+.. code:: shell
+
+   pip install sqlormx_generator
+
+Usage Sample
+''''''''''''
+
+.. code:: python
+
+       from sqlormx_generator import Generator
+
+       if __name__ == '__main__':
+           coder = Generator(host='127.0.0.1', port='3306', user='xxx', password='xxx', database='test')
+           # you can generate a model class for one table
+           coder.generate_with_tables(tables='user', path='models.py')
+           # you can generate model classes for tables
+           coder.generate_with_tables(tables=['user', 'person'], path='models.py')
+           # you can generate model classes for all tables from a given schema. default current schema if not given
+           coder.generate_with_schema(schema='test', path='models.py')
+
+If you run last code, then generate a file 'models.py' in current
+directory like follow:
+
+.. code:: python
+
+       from decimal import Decimal
+       from dataclasses import dataclass
+       from datetime import date, datetime
+       from sqlormx import Model
+
+       @dataclass
+       class BaseModel(Model):
+           id: int = None
+           create_by: int = None
+           create_time: datetime = None
+           update_by: int = None
+           update_time: datetime = None
+           del_flag: int = None
+
+
+       @dataclass
+       class User(BaseModel):
+           __table__ = 'user'
+           name: str = None
+           age: int = None
+           birth_date: date = None
+           sex: int = None
+
+
+SQLORMX: https://pypi.org/project/sqlormx
+
+
