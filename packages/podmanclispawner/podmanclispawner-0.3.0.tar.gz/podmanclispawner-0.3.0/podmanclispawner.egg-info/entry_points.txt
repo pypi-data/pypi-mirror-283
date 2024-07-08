@@ -1,0 +1,2 @@
+[jupyterhub.spawners]
+podmancli = podmanclispawner:PodmanCLISpawner
