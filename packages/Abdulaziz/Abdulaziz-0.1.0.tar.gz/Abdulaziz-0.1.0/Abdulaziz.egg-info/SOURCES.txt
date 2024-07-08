@@ -1,0 +1,6 @@
+README.md
+setup.py
+Abdulaziz.egg-info/PKG-INFO
+Abdulaziz.egg-info/SOURCES.txt
+Abdulaziz.egg-info/dependency_links.txt
+Abdulaziz.egg-info/top_level.txt
