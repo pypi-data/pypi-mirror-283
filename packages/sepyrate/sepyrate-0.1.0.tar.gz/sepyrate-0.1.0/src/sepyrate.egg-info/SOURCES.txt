@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/sepyrate/__init__.py
+src/sepyrate/sepyrate.py
+src/sepyrate.egg-info/PKG-INFO
+src/sepyrate.egg-info/SOURCES.txt
+src/sepyrate.egg-info/dependency_links.txt
+src/sepyrate.egg-info/top_level.txt

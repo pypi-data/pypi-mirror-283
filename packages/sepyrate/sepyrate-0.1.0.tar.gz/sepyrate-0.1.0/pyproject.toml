@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sepyrate"
+version = "0.1.0"
+authors = [
+  { name="Vivi Andasari, PhD", email="vandasari@gmail.com" },
+]
+description = "A library to display digits into groups of thousands and decimal using various delimiters. "
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["digit grouping", "decimal separator", "thousands separator"]
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/vandasari/sepyrate"
+Repository = "https://github.com/vandasari/sepyrate"
+Issues = "https://github.com/vandasari/sepyrate/issues"
+
