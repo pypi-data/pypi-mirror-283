@@ -1,0 +1,9 @@
+vscrapper/__init__.py,sha256=FGWiZCQKRUb7wt0zfdcPd5pgMTO5kAop2dXgdtYJYPs,724
+vscrapper/search/__init__.py,sha256=4fqKxnLi21DUi7vlA3QFZyhOs3FDQCevdaSBJTKLztk,2372
+vscrapper/types/__init__.py,sha256=8vivUN2ehRS3TH99ZIGLYKa7WURbSE7_ZShvYzYSFsM,170
+vscrapper/utils/__init__.py,sha256=1pFcMHn46VS5YwJAmWgf0EE0EViZWOBI4lxyjX_RYOs,210
+vscrapper/weburl/__init__.py,sha256=DQfWhjoYRDKGtQfy6dF2wIFawLnAVdi0fDTmqFmILAM,1150
+vscrapper-0.1.6.dist-info/METADATA,sha256=-rUffiJYJeQzXmQI66aPnPzHvyHZqpIQJTVwf5cJT64,2093
+vscrapper-0.1.6.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+vscrapper-0.1.6.dist-info/entry_points.txt,sha256=DTlxVa7Bnips1qTvbALfXaG1k_ip-ie9i3PmBmOwOOQ,69
+vscrapper-0.1.6.dist-info/RECORD,,
