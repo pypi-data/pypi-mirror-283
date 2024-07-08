@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: scad_pm
+Version: 0.24
+Home-page: https://github.com/shaddyx/scad_pm
+Requires-Dist: pyyaml
+Requires-Dist: dataclasses_json
+Requires-Dist: scopeton
