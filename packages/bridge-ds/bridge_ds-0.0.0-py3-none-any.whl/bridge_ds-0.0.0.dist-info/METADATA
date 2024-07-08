@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: bridge-ds
+Version: 0.0.0
+Summary: A Gate to Datasets!
+Author-email: Guy Bukchin <bukchinguy@gmail.com>
+Maintainer-email: Guy Bukchin <bukchinguy@gmail.com>
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: imageio
+Requires-Dist: holoviews
+Requires-Dist: panel
+Requires-Dist: dill
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: datasets
+Requires-Dist: scipy
+Requires-Dist: hvplot
+Requires-Dist: pycocotools
+Requires-Dist: tabulate
+Requires-Dist: albumentations
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-mock ; extra == 'dev'
+Requires-Dist: jupyter ; extra == 'dev'
+Requires-Dist: notebook ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: testbook ; extra == 'dev'
+
