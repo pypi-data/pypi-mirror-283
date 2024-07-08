@@ -1,0 +1,16 @@
+README.md
+setup.py
+MRFHelper/BuildingGeometry.py
+MRFHelper/ConnectionAndBoundary.py
+MRFHelper/LoadAndMaterial.py
+MRFHelper/MRFhelper.py
+MRFHelper/StructuralComponents.py
+MRFHelper/UserCommand.py
+MRFHelper/WriteInfo.py
+MRFHelper/WriteScript.py
+MRFHelper/__init__.py
+MRFHelper/func.py
+mrfhelper.egg-info/PKG-INFO
+mrfhelper.egg-info/SOURCES.txt
+mrfhelper.egg-info/dependency_links.txt
+mrfhelper.egg-info/top_level.txt
