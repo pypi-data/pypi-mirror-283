@@ -1,0 +1,4 @@
+fast_langdetect
+lingua-language-detector
+pydantic
+budoux
