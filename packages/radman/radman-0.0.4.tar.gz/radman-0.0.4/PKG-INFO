@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: radman
+Version: 0.0.4
+Summary: Python Package for interfacing with Radman APIs
+Author-email: Daniel Carrion <daniel.carrion@monashhealth.org>
+Project-URL: Homepage, https://github.com/mhmedphys/radman-python
+Project-URL: Issues, https://github.com/mhmedphys/radman-python/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2
+
+
+## Getting started
+
+```
+pip install radman
+```
+
+
+
+## Example
+
+os.makedirs(self.settings.CACHE_PATH,exist_ok=True)
+
+base_url = self.settings.RADMAN_URL
+username = self.settings.RADMAN_USER
+password = self.settings.RADMAN_PASS
+
+radman = Radman(base_url, username, password)
+report_start = self.settings.REPORT_PERIOD['previous']['start']
+report_end = self.settings.REPORT_PERIOD['current']['end']
+query_params = {
+    'filter1': f'study_date,bt,{report_start},{report_end}',
+    'join' : 'study,series,instance'
+}
+print(query_params)
+result = radman.run_query("study_ct", query_params)
+if result:
+    with open(self.data_json_path, 'w') as file:
+        json.dump(result, file)
+    print("Query result saved")
