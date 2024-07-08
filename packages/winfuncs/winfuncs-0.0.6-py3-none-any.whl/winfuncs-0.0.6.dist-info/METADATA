@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: winfuncs
+Version: 0.0.6
+Summary: Simplifying various WinAPI functions, with this library you won`t need to use ctypes to call WinAPI functions.
+Home-page: https://github.com/potichek/WinFuncsLib/blob/main/WinFuncs
+Author: potichek
+Author-email: bibilmeshka@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools >=39.0.1
+
+# WinFuncs Library #
+## What is this? ##
+Simplifying various WinAPI functions, with this library you won`t need to use ctypes to call WinAPI functions.
+## Working with the library ##
+
+
+
+
