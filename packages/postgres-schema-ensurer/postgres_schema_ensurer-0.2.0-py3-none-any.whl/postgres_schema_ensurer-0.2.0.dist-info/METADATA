@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: postgres-schema-ensurer
+Version: 0.2.0
+Summary: 
+Author: megahomyak
+Author-email: g.megahomyak@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: database-schema-ensurer (==2.0.0)
+Requires-Dist: psycopg2-binary (>=2.9.9,<3.0.0)
+Description-Content-Type: text/markdown
+
+To be used with `database_schema_ensurer` (another Python library)
+
+## Installation
+
+`pip install postgres_schema_ensurer`
+

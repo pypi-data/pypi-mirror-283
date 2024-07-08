@@ -1,0 +1,5 @@
+postgres_schema_ensurer/__init__.py,sha256=h4Htl-a-5f6EdOX3Po2W0c5FwT8DeiBN8t_PhDrxYqA,31
+postgres_schema_ensurer/postgres.py,sha256=uad9ZTe-lBQooaZvSLPE2HdWKj0tXWOBCPG1V1QL9N8,1714
+postgres_schema_ensurer-0.2.0.dist-info/METADATA,sha256=8JoYg_awgU0OqF1OFQ9WzlaDEzu78EC7XWI49ExRq64,724
+postgres_schema_ensurer-0.2.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+postgres_schema_ensurer-0.2.0.dist-info/RECORD,,
