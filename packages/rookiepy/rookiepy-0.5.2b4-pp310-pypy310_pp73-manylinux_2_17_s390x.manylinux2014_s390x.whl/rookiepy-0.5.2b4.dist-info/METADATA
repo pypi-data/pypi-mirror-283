@@ -1,0 +1,28 @@
+Metadata-Version: 2.3
+Name: rookiepy
+Version: 0.5.2b4
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Summary: Load cookies from any browser on any platform
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Homepage, https://github.com/thewh1teagle/rookie
+Project-URL: Documentation, https://github.com/thewh1teagle/rookie/blob/main/docs/Python.md
+Project-URL: Repository, https://github.com/thewh1teagle/rookie
+Project-URL: Issues, https://github.com/thewh1teagle/rookie/issues
+
+# rookiepy
+
+Extract cookies from web browsers
+Bindings for [rookie](https://github.com/thewh1teagle/rookie)
+
+## Usage
+
+```python
+from rookiepy import chrome
+cookies = chrome()
+for cookie in cookies:
+    print(cookie['domain'], cookie['name'], cookie['value'])
+```
+
