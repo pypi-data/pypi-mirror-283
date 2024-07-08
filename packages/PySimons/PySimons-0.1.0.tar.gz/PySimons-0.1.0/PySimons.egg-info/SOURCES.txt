@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+PySimons.egg-info/PKG-INFO
+PySimons.egg-info/SOURCES.txt
+PySimons.egg-info/dependency_links.txt
+PySimons.egg-info/requires.txt
+PySimons.egg-info/top_level.txt
+pysimons/__init__.py
+pysimons/company.py
+tests/__init__.py
+tests/test_company.py
