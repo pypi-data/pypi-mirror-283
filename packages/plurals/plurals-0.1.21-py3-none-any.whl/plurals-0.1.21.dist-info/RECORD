@@ -1,0 +1,14 @@
+plurals/__init__.py,sha256=guuVLFrmAMM4-t5wwJQBTiWRlSiAFeYEDvgsXKg9-lI,25
+plurals/agent.py,sha256=yGyqrqU3-g5JHFnj9CLS15UFxnWfezDFaN0P2VqmBf8,15632
+plurals/anes-mapping.yaml,sha256=oMXGByIo_CX5lMKYkgENg-OHgpQHgAzhZ4QflSrYOZw,1601
+plurals/deliberation.py,sha256=fPpt_M3kersGaSc2bklvTIjeqhhlrDtC0aV4sVcY6WE,14117
+plurals/helpers.py,sha256=7uXdTvyfJ9PdR3q1Hcicrk3Aw4OsasFNrdW27jx7UGw,4944
+plurals/instructions.yaml,sha256=qhm6K-9UaOzLtuV8hfiKT60tMxNB12rP4VkOkyWQ8BU,4626
+plurals/unit_test.py,sha256=rpEs65fylrHDoRT7Q4zf05tUKF4NQ1wR3X9V7AzG_RA,9960
+plurals/data/__init.py__,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plurals/data/anes_pilot_2022_20221214.csv,sha256=tZgqj-2Tmv6U6iJZFgTFeaAEe1_WBniGLcbxjRnb-Fk,3560315
+plurals/data/anes_pilot_2024_20240319.csv,sha256=0h1IZvm-Jap7qQpe1nj283eOYJMBLczCWOvbhqYCH0w,26539105
+plurals-0.1.21.dist-info/METADATA,sha256=ohRpg4tMp-7Z9NZ0rqydoZbPnRdEJJY3QaiLll0g-6o,18087
+plurals-0.1.21.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+plurals-0.1.21.dist-info/top_level.txt,sha256=cJvqKFwQ83T10wgpYey1UmDbWfg6F4ag_Bq2LrtCYYc,8
+plurals-0.1.21.dist-info/RECORD,,
