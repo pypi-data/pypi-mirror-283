@@ -1,0 +1,11 @@
+cd_directory_manager/__init__.py,sha256=7Dk2ncB-mymxNlQmado9_N5F5z8YWZ4_PRK1Y2br1D8,356
+cd_directory_manager/directory_manager.py,sha256=ov9YzVFR-6QQcrC9m6OaC6KMtaL9eu4fjHhbqqblYns,4136
+cd_directory_manager/file_manager.py,sha256=7kSZaexzg581LQLRB2ukcf9WblJ_RdpngeR-b7ySSIg,8984
+cd_directory_manager/path_manager.py,sha256=aMO3a6Y9rHTUsRhs0cPFxhd-ytfILjyh26TTZ-JDTVw,3095
+cd_directory_manager/version.py,sha256=qNpez2ffioMTSqpdN4Mle_E6rCzlm_nDqTVFjYZG7jU,25
+cd_directory_manager/zipper.py,sha256=796J1UppNtO4SbCZ3kDNvrFNsl2auzOL6-oD8ospzVg,5745
+cd_directory_manager-0.6.0.dist-info/LICENSE.md,sha256=xXPRashrI0cnQQXx2q4Ypb5FmNlRGcJx0D2iCSTOGls,1100
+cd_directory_manager-0.6.0.dist-info/LICENSE.txt,sha256=xXPRashrI0cnQQXx2q4Ypb5FmNlRGcJx0D2iCSTOGls,1100
+cd_directory_manager-0.6.0.dist-info/METADATA,sha256=MyqeEPR6CBV2qwZkRL4hcNe7bdKe7QrHKgzxEnlNeOE,2744
+cd_directory_manager-0.6.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+cd_directory_manager-0.6.0.dist-info/RECORD,,
