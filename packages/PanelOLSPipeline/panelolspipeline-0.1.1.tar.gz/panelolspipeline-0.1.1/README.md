@@ -1,0 +1,26 @@
+# OLS_pipeline
+
+A Python package to preprocess data, fit models, and calculate VIF.
+
+## Installation
+
+You can install the package using pip:
+
+
+## Usage
+
+```python
+import OLS_pipeline.pipeline as OLS_pipe
+
+data_path = "path/to/your/data.csv"
+
+dependent_var = 'Target'
+independent_vars = ['Feature1','Feature2']
+normalize_cols = ['Feature3', 'Feature4', 'Feature5']
+weight_dict = {'Normalized_F3': 0.4, 'Normalized_F4': 0.2, 'Normalized_F5': 0.4}
+#Note Normalized_F3=Feature 3 which you input in normalized_cols and weights should be summed up to 1
+interaction_pairs = [('Feature_x', 'Feature_y')]#Dot product of both the features
+
+results = OLS_pipe.pipeline(data_path, dependent_var, independent_vars, normalize_cols, weight_dict, interaction_pairs)
+fixed_effects_results, random_effects_model, vif_data = results 
+```

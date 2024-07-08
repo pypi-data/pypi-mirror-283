@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+OLS_pipeline/__init__.py
+OLS_pipeline/pipeline.py
+PanelOLSPipeline.egg-info/PKG-INFO
+PanelOLSPipeline.egg-info/SOURCES.txt
+PanelOLSPipeline.egg-info/dependency_links.txt
+PanelOLSPipeline.egg-info/requires.txt
+PanelOLSPipeline.egg-info/top_level.txt
+tests/__init__.py
+tests/test_pipeline.py
