@@ -1,0 +1,7 @@
+[console_scripts]
+rtkconjugategradient = itk.rtkconjugategradient:main
+rtkelektasynergygeometry = itk.rtkelektasynergygeometry:main
+rtkorageometry = itk.rtkorageometry:main
+rtksimulatedgeometry = itk.rtksimulatedgeometry:main
+rtkvarianobigeometry = itk.rtkvarianobigeometry:main
+
