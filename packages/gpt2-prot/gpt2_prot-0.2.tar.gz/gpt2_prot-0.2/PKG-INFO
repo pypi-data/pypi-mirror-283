@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: gpt2_prot
+Version: 0.2
+Summary: Single NT/AA resoultion biological GPT2 language modelling
+Project-URL: Homepage, https://github.com/JBwdn/gpt2-prot
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: biopython
+Requires-Dist: jsonargparse[signatures]>=4.27.7
+Requires-Dist: lightning
+Requires-Dist: numpy
+Requires-Dist: requests
+Requires-Dist: tensorboard
+Requires-Dist: torch
+Requires-Dist: tqdm
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: ipython; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: pylint; extra == "dev"
+Requires-Dist: pyright; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+
+# gpt2-prot
+Train biological language models at single NT or AA resolution.
+
+## Roadmap
+
+- [ ] Readme instructions
+- [ ] AWS spot instances demo
+- [ ] Update recipe configs with new inference flags
+- [x] Add inference mode
+- [x] Add config recipes for eg. foundation model training, specific protein modelling etc.
+- [x] Github actions for publishing the package to pypi
+- [x] Docstrings etc.
+
+## Installation
+
+```bash
+pip install gpt2_prot
+```
+
+### From source
+
+```bash
+micromamba create -f environment.yml  # or conda etc.
+micromamba activate gpt2-prot
+
+pip install .  # Basic install
+pip install -e ".[dev]"  # Install in editable mode with dev dependencies
+pip install ".[test]"  # Install the package and all test dependencies
+```
+
+## Usage
+
+### From the CLI
+
+```bash
+gpt2-prot -h
+
+# Run the demo config for cas9 protein language modelling
+# Since this uses Lightning you can overwrite parameters from the config using the command line
+gpt2-prot fit --config recipes/cas9_analogues.yml --max_epochs 10  
+```
+
+## Development
+
+### Running pre-commit hooks
+
+```bash
+# Install the hooks:
+pre-commit install
+
+# Run all the hooks:
+pre-commit run --all-files
+
+# Run unit tests:
+pytest
+```
