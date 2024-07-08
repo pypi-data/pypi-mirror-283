@@ -1,0 +1,9 @@
+.gitignore
+README.md
+pyproject.toml
+vcxproj.py
+.github/workflows/ci.yml
+vcxproj_stream_editor.egg-info/PKG-INFO
+vcxproj_stream_editor.egg-info/SOURCES.txt
+vcxproj_stream_editor.egg-info/dependency_links.txt
+vcxproj_stream_editor.egg-info/top_level.txt
