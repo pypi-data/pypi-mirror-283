@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: youtube-suggestions
+Version: 0.2.1
+Summary: A package to get YouTube search suggestions with proxy support
+Home-page: https://github.com/ryan-huang1/youtube_suggestions
+Author: Ryan Huang
+Author-email: ryan@stdint.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests >=2.25.1
+
+# YouTube Suggestions
+
+A simple Python package to get YouTube search suggestions with optional proxy support.
+
+## Installation
+
+You can install the YouTube Suggestions package using pip:
+
+```
+pip install youtube-suggestions
+```
+
+## Usage
+
+Here's a quick example of how to use the package:
+
+```python
+from youtube_suggestions import get_suggestions
+
+# Without proxy
+suggestions = get_suggestions("python programming")
+print(suggestions)
+
+# With proxy
+proxy = "gate.dc.smartproxy.com:1111:proxyname:password"
+suggestions_with_proxy = get_suggestions("python programming", proxy=proxy)
+print(suggestions_with_proxy)
+```
+
+This will print a list of search suggestions for "python programming", first without a proxy and then using the specified proxy.
+
+## Features
+
+- Get YouTube search suggestions
+- Optional proxy support
+- Fallback method if the primary method fails
+- Easy to use
+
+## Proxy Format
+
+The proxy should be specified in the following format:
+
+```
+host:port:username:password
+```
+
+For example:
+
+```
+gate.dc.smartproxy.com:1111:proxyname:password
+```
+
+## Requirements
+
+- Python 3.6+
+- requests library
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License.
