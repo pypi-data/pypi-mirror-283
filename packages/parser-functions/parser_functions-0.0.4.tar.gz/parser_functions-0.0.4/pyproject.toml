@@ -1,0 +1,100 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "parser-functions"
+dynamic = ["version"]
+description = ''
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "stealthycoin", email = "stealthycoin@users.noreply.github.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+]
+dependencies = []
+
+[project.urls]
+Documentation = "https://github.com/stealthycoin/parser-functions#readme"
+Issues = "https://github.com/stealthycoin/parser-functions/issues"
+Source = "https://github.com/stealthycoin/parser-functions"
+
+[tool.hatch.version]
+path = "src/parser_functions/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/parser_functions tests}"
+
+[tool.vulture]
+ignore_names = ["_generate_*", "visit_*"]
+
+[tool.coverage.run]
+source_pkgs = ["parser_functions", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/parser_functions/__about__.py",
+  "tests/helpers/__init__.py",
+]
+
+[tool.coverage.paths]
+parser_functions = ["src/parser_functions", "*/parser-functions/src/parser_functions"]
+tests = ["tests", "*/parser-functions/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
+
+[tool.black]
+skip-string-normalization = true
+
+[tool.isort]
+profile = "black"
+
+[tool.hatch.envs.default]
+python = "3.12"
+
+[tool.hatch.envs.hatch-static-analysis]
+python = "3.12"
+dependencies = ["black", "pyflakes", "isort", "vulture"]
+
+[tool.hatch.envs.hatch-static-analysis.scripts]
+format-check = [
+  "black --check --diff {args:.}",
+  "isort --check-only --diff {args:.}",
+]
+format-fix = [
+  "isort --float-to-top {args:.}",
+  "black {args:.}",
+]
+lint-check = [
+  "vulture {args:src/ tests/}",
+  "pyflakes {args:src/ tests/}",
+]
+lint-fix = "lint-check"
+
+[[tool.hatch.envs.hatch-test.matrix]]
+python = ["3.12"]
+
+[tool.hatch.envs.hatch-test.scripts]
+run = "pytest{env:HATCH_TEST_ARGS:} {args}"
+run-cov = "coverage run -m pytest{env:HATCH_TEST_ARGS:} {args}"
+cov-combine = "coverage combine"
+cov-report = "coverage report"
+
+[tool.hatch.publish.index]
+disable = true
