@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: lean4
+Version: 1.0.0
+Home-page: https://github.com/cosmosZhou/lean
+Author: Cosmos
+Author-email: 744984949@qq.com
+License: MIT
+Classifier: Programming Language :: Python :: 3.11
+
+# lean
+lean4 project translated in python
