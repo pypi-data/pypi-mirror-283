@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: django-lan
+Version: 0.0.1
+Summary: A Django plugin to manage Local Area Networks
+License: Apache-2.0
+Author: Starling Associates
+Author-email: info@starling.associates
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: Django (>=4.0,<5.0)
+Project-URL: Homepage, https://github.com/starling-cloud/django-lan
+Project-URL: Repository, https://github.com/starling-cloud/django-lan
