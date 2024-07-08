@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: jupyter-marimo-proxy
+Version: 0.0.1
+Summary: Jupyter extension to proxy Marimo
+Home-page: https://github.com/jyio/jupyter-marimo-proxy
+Author: Jiang Yio
+License-File: LICENSE
+Requires-Dist: jupyter-server-proxy
