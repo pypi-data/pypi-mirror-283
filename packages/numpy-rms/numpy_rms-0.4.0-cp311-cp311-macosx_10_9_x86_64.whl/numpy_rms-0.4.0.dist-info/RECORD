@@ -1,0 +1,11 @@
+_numpy_rms.abi3.so,sha256=8yQNAN_YjgxUeYy_YtBrw1a6OGB2z3GiscqzsC_sC6I,34840
+numpy_rms-0.4.0.dist-info/RECORD,,
+numpy_rms-0.4.0.dist-info/LICENSE,sha256=O-3x-1aaHJPorLGJUFNphc-YzgPMjhmiyTOUbODYa7o,1063
+numpy_rms-0.4.0.dist-info/WHEEL,sha256=tiABefSBUedU9YCr1NdKrBy4Ki45oQg3rWot6FlXaMY,110
+numpy_rms-0.4.0.dist-info/top_level.txt,sha256=mK761EA2spie1JYqYrVzLsNlBxSzK3Fgdn41IdcXS0w,27
+numpy_rms-0.4.0.dist-info/METADATA,sha256=kVESeJluaeCYmDUksR7sfnJc8TMs7LiLKsgPo43RVBQ,3426
+numpy_rms/_version.py,sha256=ZQQoVAERtw5B5GsTX-bSvfvG5FzCY91PZqAR8gmlCeY,440
+numpy_rms/__init__.py,sha256=GQ_vSKuWafELz1zR0Tk4kdz23nWH9O07ejXHXX55ZlE,1333
+numpy_rms/_rms.c,sha256=PqWV50D5brkc12O3YNAXZ3ANIMQupuBJTsqg4K4_7pU,3981
+numpy_rms/_rms_cffi.py,sha256=0kEuLqJSoIYjJV0wH3lhW5jpUD0CPsgyEa1u1GqDUTw,839
+numpy_rms/fallback.py,sha256=hIkZsvtYHoPORf1Q-XlI_O6uLY8LD0AOZCPA1JI4Lf0,723
