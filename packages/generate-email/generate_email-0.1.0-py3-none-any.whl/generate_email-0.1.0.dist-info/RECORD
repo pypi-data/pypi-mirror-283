@@ -1,0 +1,12 @@
+generate_email/__init__.py,sha256=LkH1_Pb8cmCfD1HCinmt3N2DRvCwlF9T95e_Sh6flsw,47
+generate_email/account_generator.py,sha256=qn22PwobYsq8zPMsJCwhtz36C4eEmpJTup2Wr9ncpkQ,8615
+generate_email/check_availability.py,sha256=SSF46ZbtXgdIzak6vvy6AVI6beDUIefKwCDmjNCmKAI,1817
+generate_email/chrome_driver.py,sha256=KHi9WOZyh3ETn0u-NxuWSEcMlD7yXdazCoaTjRbKOpQ,1982
+generate_email/fake_account_data.py,sha256=5yQHhU5CtYxQOq6VhnVA4QbTbntbPjtXKs2flHnS6wI,1000
+generate_email/proxy_generator.py,sha256=IPiwE_ZByKNZYy_R5aFAaNZVwWVue7CaSgWgep4CqJ0,2401
+generate_email/user_agent_handler.py,sha256=IEZAJvRL7cNa1QBksPEZOAHaov9aOaKWq-lzvyvBBGw,1250
+generate_email-0.1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+generate_email-0.1.0.dist-info/METADATA,sha256=rN76gg0gOpqIuuZ2KNpks3nZpWfmMWbdIho7zNWqVTk,1841
+generate_email-0.1.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+generate_email-0.1.0.dist-info/top_level.txt,sha256=yryonPH-JgGoGeNUGdRrJz4mT-rqrG3cQYIc-TSSarc,15
+generate_email-0.1.0.dist-info/RECORD,,
