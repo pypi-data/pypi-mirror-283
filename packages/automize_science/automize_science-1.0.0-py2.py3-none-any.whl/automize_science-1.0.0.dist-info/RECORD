@@ -1,0 +1,10 @@
+automize_science/__init__.py,sha256=Rv-a2tUQAjXY-3Jndnf4renE70VdVCOwcHHAB8dnr7U,372
+automize_science/computing_statistics.py,sha256=Ox_riXgtJrectYlAduxYdhsC2I3cPi9hNINlNkM-_Fw,2299
+automize_science/data_cleanup.py,sha256=kDxd0bMiUFOwmQuFt8UNAgGLA3c__C0BVYqOblC0vsE,3931
+automize_science/graph_constructor.py,sha256=UMZ9lKq94z9s3MAB6CFJKrx2zbWxvBUwMynXbvO4QPo,9034
+automize_science/saving.py,sha256=RGyqwvRAyLw-zvtEbEoV1kvN24uwtotZxewiscSYleI,2466
+automize_science/workflows.py,sha256=dDlKZi9GoPorkzHi8pqyarm-uGnwSdKjkQwPKuzjit4,1258
+automize_science-1.0.0.dist-info/LICENSE,sha256=JBw1BHohm24SIamEq8kxH--PVSQkNA6j569dGZHN-xQ,1102
+automize_science-1.0.0.dist-info/WHEEL,sha256=Sgu64hAMa6g5FdzHxXv9Xdse9yxpGGMeagVtPMWpJQY,99
+automize_science-1.0.0.dist-info/METADATA,sha256=KcAgL30sPpRoga98d7xDTPG9oT03lk1RW0-ucGFLrno,2892
+automize_science-1.0.0.dist-info/RECORD,,
