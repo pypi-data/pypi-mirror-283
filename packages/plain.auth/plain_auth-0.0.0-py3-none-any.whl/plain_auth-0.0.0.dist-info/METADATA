@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: plain.auth
+Version: 0.0.0
+Summary: 
+Author: Dave Gaeddert
+Author-email: dave.gaeddert@dropseed.dev
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
