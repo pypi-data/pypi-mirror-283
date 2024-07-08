@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: dclut
+Version: 0.0.1
+Summary: dclut: Dimensionally Clear Look-Up Table
+Home-page: https://github.com/dbheadley/dclut
+Author: Drew B. Headley
+Author-email: drewbheadley@gmail.com
+License: MIT License
+Keywords: python,binary files,lookup table,dclut
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: tqdm>=4.66.4
+Requires-Dist: xarray>=2024.5.0
+
+# dclut: Dimensionally Clear Look Up Table
+
+dclut is a package that allows users to define dimensions and scales when indexing homogenous binary files. It does this by storing a mapping between the indices in the binary file and a set of dimensions, each of which can be multilevel.

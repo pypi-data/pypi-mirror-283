@@ -1,0 +1,8 @@
+LICENSE.txt
+README.md
+setup.py
+dclut.egg-info/PKG-INFO
+dclut.egg-info/SOURCES.txt
+dclut.egg-info/dependency_links.txt
+dclut.egg-info/requires.txt
+dclut.egg-info/top_level.txt
