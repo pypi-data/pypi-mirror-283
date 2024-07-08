@@ -1,0 +1,16 @@
+torch_submit/__init__.py,sha256=5goucZlmO13zqOZSRgiQR-jJ2AeuPpsI6D74SpkD0-Q,107
+torch_submit/_version.py,sha256=t0X65LrYiLUtWMUddqtx1x2mhqiZaEFl4z-5x7gySSQ,442
+torch_submit/cli.py,sha256=1QjeNoK3WnbvUV9hNH8wyi3YxcjZcmjRafyaGKL8cNg,230
+torch_submit/cluster_config.py,sha256=1H7QDN_T1U-Gr2tbHiJ1z9bLTv1jTfTHZlJnfVPmgc8,3603
+torch_submit/executor.py,sha256=gScdpxDPC6vf8A1jARJCOppvj9hSHbTpVBgt-W-ozig,4748
+torch_submit/job.py,sha256=enRqsvCkFdSkepUHsfM68fFpe6vx_X9lozfVqUsTErk,4068
+torch_submit/utils.py,sha256=j_h7FKcNU_aEOW0yXa2Onebm4ZXxXu10UKNh_TKuzvM,694
+torch_submit/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+torch_submit/commands/cluster.py,sha256=1v-MZR7zahYNGIFufdQA2ZgrOk063pXdGDx4Ym97wO8,3028
+torch_submit/commands/job.py,sha256=ih6LztD-x-zJrbyJd_NUWurms57AwF8-oR1a0o0S7nA,6344
+torch_submit/commands/logs.py,sha256=Amfu23-lWjudZ7a3T5Q2TsJU9AVaNJAWkbe7PtEn9Ao,775
+torch_submit-0.1.0.dist-info/METADATA,sha256=oSKO1f578m1vDO-WrECa2ottSTCbpfqwb1Ia_zXogK4,3477
+torch_submit-0.1.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+torch_submit-0.1.0.dist-info/entry_points.txt,sha256=JvNRrGKa5LN-jPugqXhkL3VBRjElZwIMABOYBT5dplk,54
+torch_submit-0.1.0.dist-info/top_level.txt,sha256=LIq_zYT3MWZlW9mlB_DChAvfWC3DVquaKfuVZO8calI,13
+torch_submit-0.1.0.dist-info/RECORD,,
