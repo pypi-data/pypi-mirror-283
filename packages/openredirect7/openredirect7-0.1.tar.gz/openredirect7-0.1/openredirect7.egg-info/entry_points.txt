@@ -1,0 +1,3 @@
+[console_scripts]
+openredirect7 = openredirect2.main:main
+
