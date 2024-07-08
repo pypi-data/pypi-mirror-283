@@ -1,0 +1,10 @@
+hkgfinder/__init__.py,sha256=Zn1KFblwuFHiDRdRAiRnDBRkbPttWh44jKa5zG2ov0E,22
+hkgfinder/cli.py,sha256=UbKK8wdAcht2XsJcudflFeXOoKKcP80bhUN-CntGDiw,1776
+hkgfinder/hkgfinder.hmm,sha256=jpw7FLLFFAwRElRBpzvTh5sYAoZSHraxb61gcmh3kxk,5068650
+hkgfinder/hkgfinder.py,sha256=ikNUnnDyqHxiSpyiXQnvsBHVpVYOJR_ID6EvzLaD_lI,8083
+hkgfinder/hkglib.py,sha256=BAhstHQhD8Udgm74ZQdKwBBQSWvn-F5aheJenP3EC_s,9851
+hkgfinder-0.3.0.dist-info/LICENSE,sha256=GKoQenPWr-LNleapVzhLlip4G8Y-kroJfUqRZo3PqMI,1068
+hkgfinder-0.3.0.dist-info/entry_points.txt,sha256=Wp-sZPKREP6DyjGwwMucYDSPd3c5Z_CehPMKqyqKueE,54
+hkgfinder-0.3.0.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+hkgfinder-0.3.0.dist-info/METADATA,sha256=Ra_sEKv_YI3znCFz2I9MyELCWa404Ecbtp0_qBCe_vw,4254
+hkgfinder-0.3.0.dist-info/RECORD,,
