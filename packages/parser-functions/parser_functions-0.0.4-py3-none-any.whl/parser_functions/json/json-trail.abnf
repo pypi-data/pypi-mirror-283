@@ -1,0 +1,40 @@
+JSON-text = ws value ws       ; metadata: DROP value DROP
+
+
+begin-array     = ws %x5B ws  ; metadata: DROP DROP DROP
+begin-object    = ws %x7B ws  ; metadata: DROP DROP DROP
+end-array       = ws %x5D ws  ; metadata: DROP DROP DROP
+end-object      = ws %x7D ws  ; metadata: DROP DROP DROP
+name-separator  = ws %x3A ws  ; metadata: DROP DROP DROP
+value-separator = ws %x2C ws  ; metadata: DROP DROP DROP
+
+
+value   = false / null / true / object / array / number / string  ; metadata: value
+ws      = whitespace [ comment whitespace ] ; metadata: DROP DROP
+false   = "false"                           ; metadata: DROP
+null    = "null"                            ; metadata: DROP
+true    = "true"                            ; metadata: DROP
+comment = "//" *character %x0A              ; metadata: DROP value DROP
+
+object = begin-object [ member *( [value-separator] member) [value-separator] ] end-object  ; metadata: DROP value DROP
+member = string name-separator value                                                        ; metadata: key DROP value
+array  = begin-array [ value *( value-separator value ) [value-separator] ] end-array       ; metadata: DROP value DROP
+
+
+number        = [ minus ] int [ frac ] [ exp ]  ; metadata: minus value frac exponent
+decimal-point = "."                             ; metadata: DROP
+digit1-9      = %x31-39                         ; metadata: digit
+e             = "E" / "e"                       ; metadata: DROP
+frac          = decimal-point 1*digit           ; metadata: DROP digits
+exp           = e [ minus / plus ] 1*digit      ; metadata: DROP sign digits
+int           = zero / ( digit1-9 *digit )      ; metadata: value
+minus         = "-"                             ; metadata: DROP
+plus          = "+"                             ; metadata: DROP
+zero          = "0"                             ; metadata: DROP
+
+
+string    = quotation-mark *character quotation-mark  ; metadata: DROP value DROP
+character = unescaped / escape (%x22 / %x5C / %x2F / %x62 / %x66 / %x6E / %x72 / %x74 / %x75 4hexdig ) ; metadata: value
+escape         = %x5C                         ; metadata: DROP
+quotation-mark = %x22                         ; metadata: DROP
+unescaped      = %x20-21 / %x23-5B / %x5D-FF  ; metadata: data
