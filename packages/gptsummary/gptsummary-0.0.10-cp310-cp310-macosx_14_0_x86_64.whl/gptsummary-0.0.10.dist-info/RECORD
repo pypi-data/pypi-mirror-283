@@ -1,0 +1,7 @@
+gptsummary/__init__.py,sha256=noVj8eSHfZGqiYbape44Hrwy9kNC72Cw8FTjguM3tGE,135
+gptsummary/gptsummary.c,sha256=NMX0_LB20wEN2RV-cwggcghP3w_SlYKLLq-faRnxyD0,357380
+gptsummary/gptsummary.cpython-310-darwin.so,sha256=ilrknRg5Prm8vZSHaex0Xe-RdNWrwxyouJ1kwZZonP0,102680
+gptsummary-0.0.10.dist-info/METADATA,sha256=2VRK3sAfXBAhbDhZ9TkgFPCPJErVml-qH5bDfJJ367U,791
+gptsummary-0.0.10.dist-info/WHEEL,sha256=bV_wnYsDnLr47dBfwKY9UmBC_7ZrNPlwTrvbscGVij0,111
+gptsummary-0.0.10.dist-info/top_level.txt,sha256=0qdjEtikKsKEWsAqWo-_NP_Mw6EVePB4AP-yZ8BHXS8,11
+gptsummary-0.0.10.dist-info/RECORD,,
