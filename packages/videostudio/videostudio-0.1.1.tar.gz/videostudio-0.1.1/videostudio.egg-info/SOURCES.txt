@@ -1,0 +1,14 @@
+README.md
+setup.py
+videostudio/__init__.py
+videostudio/audio_analyzer.py
+videostudio/canvas.py
+videostudio/elements.py
+videostudio/export.py
+videostudio/manipulators.py
+videostudio/transitions.py
+videostudio.egg-info/PKG-INFO
+videostudio.egg-info/SOURCES.txt
+videostudio.egg-info/dependency_links.txt
+videostudio.egg-info/requires.txt
+videostudio.egg-info/top_level.txt
