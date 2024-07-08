@@ -1,0 +1,12 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 2024.04.23
+_src_path: gh:scientific-python/cookie
+backend: hatch
+email: jean.elsner@tum.de
+full_name: Jean Elsner
+license: Apache
+org: tum-robotics
+project_name: garmi-gui
+project_short_description: GUI for the GARMI robot's face screen.
+url: https://github.com/tum-robotics/garmi-gui
+vcs: true
