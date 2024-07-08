@@ -1,0 +1,2 @@
+[console_scripts]
+karaokemanager = karaokemanager.__main__:main
