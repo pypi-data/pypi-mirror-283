@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: fastwonn
+Version: 0.0.9
+Summary: Fast, GPU-friendly, differentiable computation of Intrinsic Dimension via Maximum Likelihood, the TwoNN algorithm, and everything in between!
+Home-page: https://github.com/emaballarin/fastwonn
+Author: Emanuele Ballarin
+Author-email: emanuele@ballarin.cc
+License: MIT
+Keywords: Deep Learning,Differentiable Programming,Intrinsic Dimension,Machine Learning,Manifold Learning,Maximum Likelihood Estimation,PyTorch,TwoNN
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: torch>=2
+Requires-Dist: torchsort>=0.1.9
+Provides-Extra: keops
+Requires-Dist: keopscore>=2.2.3; extra == "keops"
+Requires-Dist: pykeops>=2.2.3; extra == "keops"
+Provides-Extra: faiss-cpu
+Requires-Dist: faiss-cpu>=1.8.0; extra == "faiss-cpu"
+Provides-Extra: faiss-gpu-older
+Requires-Dist: faiss-gpu>=1.7.2; extra == "faiss-gpu-older"
+Provides-Extra: faiss-gpu-newer-cu11
+Requires-Dist: faiss-gpu-cu11>=1.8.0.2; extra == "faiss-gpu-newer-cu11"
+Provides-Extra: faiss-gpu-newer-cu12
+Requires-Dist: faiss-gpu-cu12>=1.8.0.2; extra == "faiss-gpu-newer-cu12"
+
+# `fastwonn`
+
+Fast, GPU-friendly, differentiable computation of Intrinsic Dimension via Maximum Likelihood (Levina & Bickel, 2004), the TwoNN algorithm (Facco et al., 2017), and everything in between!
+
+---
+
+### References
+- [E. Levina, P. Bickel; "Maximum Likelihood Estimation of Intrinsic Dimension", Advances in Neural Information Processing Systems, 2004](https://papers.nips.cc/paper_files/paper/2004/hash/74934548253bcab8490ebd74afed7031-Abstract.html)
+- [E. Facco, M. d'Errico, A. Rodriguez, A. Laio; "Estimating the intrinsic dimension of datasets by a minimal neighborhood information", Nature Scientific Reports, 2017](https://www.nature.com/articles/s41598-017-11873-y)
