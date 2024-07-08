@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pip_install_if_missing
+Version: 0.0.5
+Summary: Easily install Python packages if they are missing. Thought for Colab-like disposable environments.
+Home-page: https://github.com/emaballarin/pip_install_if_missing
+Author: Emanuele Ballarin
+Author-email: emanuele@ballarin.cc
+License: MIT
+Keywords: pip,install,missing,dependency
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+License-File: LICENSE
+
+Easily install Python packages if they are missing. Thought for Colab-like disposable environments.
