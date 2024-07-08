@@ -1,0 +1,9 @@
+setup.py
+jvapi/__init__.py
+jvapi/jvapi.py
+jvapi/strings.py
+jvapi.egg-info/PKG-INFO
+jvapi.egg-info/SOURCES.txt
+jvapi.egg-info/dependency_links.txt
+jvapi.egg-info/requires.txt
+jvapi.egg-info/top_level.txt

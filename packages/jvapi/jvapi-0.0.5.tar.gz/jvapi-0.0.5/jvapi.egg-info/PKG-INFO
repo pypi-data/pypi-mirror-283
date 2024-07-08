@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: jvapi
+Version: 0.0.5
+Summary: A Python package for XYZ
+Home-page: UNKNOWN
+Author: Gye Wong
+License: UNKNOWN
+Description: Detailed description of jvapi package.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/plain
