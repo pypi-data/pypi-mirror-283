@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: qiyi-ctv-memory
+Version: 0.1.0
+Summary: 内存相关测试工具
+Home-page: http://gitlab.qiyi.domain/ctv-performance/GalaApmScript
+Author: MaoYongPeng
+Author-email: maoyongpeng@qiyi.com
+License: IQIYI License
+Platform: UNKNOWN
+Requires-Python: >=2.7
+
+UNKNOWN
+
+
