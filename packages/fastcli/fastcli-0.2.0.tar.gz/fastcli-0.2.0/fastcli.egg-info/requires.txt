@@ -1,0 +1,13 @@
+aiohttp<4,>=3.7.4
+
+[dev]
+black
+build
+flake8
+mypy
+pytest
+recommonmark
+sphinx
+sphinx-rtd-theme
+tox
+twine
