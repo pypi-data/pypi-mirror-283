@@ -1,0 +1,9 @@
+README.md
+setup.py
+my_user_management_lib/__init__.py
+my_user_management_lib/users.py
+my_user_management_lib.egg-info/PKG-INFO
+my_user_management_lib.egg-info/SOURCES.txt
+my_user_management_lib.egg-info/dependency_links.txt
+my_user_management_lib.egg-info/requires.txt
+my_user_management_lib.egg-info/top_level.txt
