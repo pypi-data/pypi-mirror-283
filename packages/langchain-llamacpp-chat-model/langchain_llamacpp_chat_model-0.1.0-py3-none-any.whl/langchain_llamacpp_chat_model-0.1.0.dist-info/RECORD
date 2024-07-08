@@ -1,0 +1,6 @@
+langchain_llamacpp_chat_model/__init__.py,sha256=_keRYMuQnioi7CbmhQl7nzVdydD6fmr2WBUknx7pwXM,154
+langchain_llamacpp_chat_model/llama_chat_model.py,sha256=CyFWxFYEJIcEGQz-QIrKvcJuZa7MJDJRc3pCuNWOfo8,1387
+langchain_llamacpp_chat_model/llama_proxy_chat_model.py,sha256=SeubLZRjlDO6WtM4_CSLGuVzhUZGLyy6OR8UUWqwKiQ,616
+langchain_llamacpp_chat_model-0.1.0.dist-info/METADATA,sha256=9IsBp9WEXDWZvq47uf-2iLcn500DE2q2130Z640d7_c,1775
+langchain_llamacpp_chat_model-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+langchain_llamacpp_chat_model-0.1.0.dist-info/RECORD,,

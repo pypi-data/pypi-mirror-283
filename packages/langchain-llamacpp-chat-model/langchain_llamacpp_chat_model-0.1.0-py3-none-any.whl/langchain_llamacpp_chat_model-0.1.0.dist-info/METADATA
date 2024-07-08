@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: langchain-llamacpp-chat-model
+Version: 0.1.0
+Summary: 
+License: MIT
+Requires-Python: >=3.10,<=3.12.4
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: anyio (>=4.4.0,<5.0.0)
+Requires-Dist: fastapi (>=0.111.0,<0.112.0)
+Requires-Dist: langchain (>=0.2.6,<0.3.0)
+Requires-Dist: langchain-community (>=0.2.6,<0.3.0)
+Requires-Dist: langchain-openai (>=0.1.14,<0.2.0)
+Requires-Dist: llama-cpp-python (>=0.2.81,<0.3.0)
+Requires-Dist: pydantic-settings (>=2.3.4,<3.0.0)
+Requires-Dist: sse-starlette (>=2.1.2,<3.0.0)
+Requires-Dist: starlette-context (>=0.3.6,<0.4.0)
+Description-Content-Type: text/markdown
+
+# Langchain Chat Model + LLamaCPP
+
+A working solution for Integrating LLamaCPP with langchain
+
+## Usage
+
+```python
+import os
+from llama_cpp.server.app import LlamaProxy
+from llama_cpp.server.settings import ModelSettings
+
+model_path = os.path.join(
+    os.path.expanduser("~/.cache/lm-studio/models"),
+    "lmstudio-community/Meta-Llama-3-8B-Instruct-GGUF/Meta-Llama-3-8B-Instruct-Q4_K_M.gguf",
+)
+
+settings = ModelSettings(
+    model=model_path,
+    model_alias="llama3",
+    n_gpu_layers=-1, # Use GPU
+    n_ctx=1024,
+    n_batch=512,  # Should be between 1 and n_ctx, consider the amount of RAM
+    offload_kqv=True,  # Equivalent of f16_kv=True
+    chat_format="chatml-function-calling",
+    verbose=False,
+)
+
+self.llama_proxy = LlamaProxy(models=[settings])
+
+chat_model = LlamaCppChatModel(llama_proxy=self.llama_proxy, model_name=self.model_alias)
+
+chat_model.invoke("Tell me a joke")
+chat_model.stream("Tell me a joke")
+```
+
