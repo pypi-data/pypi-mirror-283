@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: amplifyy
+Version: 0.0.1
+Summary: Image Augmentation Tool
+Author: Adarsh Kesharwani
+Author-email: <akesherwani900@gamil.com>
+Keywords: python,image augement,augmentation
+Description-Content-Type: text/markdown
+Requires-Dist: numpy==2.0.0
+Requires-Dist: opencv-python==4.10.0.84
+Requires-Dist: pillow==10.4.0
+
+```markdown
+# Image Augmentation Package
+
+## Overview
+
+This package provides a set of functions for image augmentation using various techniques. Users can integrate these functions into their projects to preprocess images for machine learning tasks or other applications.
+
+## Features
+
+- **Image Augmentation Functions**: Includes functions for flipping, rotating, shearing, cropping, blurring, adjusting exposure, adding noise, and more.
+- **Flexible Integration**: Functions can be used individually or combined based on user requirements.
+- **Output Options**: Generates augmented images in a specified output directory, with options to create ZIP or TAR.GZ archives.
+
+## Installation
+
+To install the package, you can use pip:
+
+```bash
+pip install image-augmenter
+```
+
+## Usage
+
+### Example Usage
+
+```python
+from image_augmenter import (
+    get_custom_augmented_images,
+    get_augmentation_descriptions,
+    apply_all_augmentations,
+    create_zip,
+    create_tar_gz_with_timestamp
+)
+
+input_dir = 'path/to/input/directory'
+output_dir = 'path/to/output/directory'
+
+# Display available augmentations with their descriptions
+augmentation_descriptions = get_augmentation_descriptions()
+for method, description in augmentation_descriptions.items():
+    print(f'{method}: {description}')
+
+# User selects augmentation methods based on the provided descriptions
+user_choices = [1, 2, 3, 4, 5]  # Example choices
+
+# Apply specific augmentations
+get_custom_augmented_images(input_dir, output_dir, user_choices)
+
+# Apply all augmentations
+apply_all_augmentations(input_dir, output_dir)
+
+# Create a zip file of augmented images
+create_zip('augmented_images.zip', output_dir)
+
+# Create a tar.gz file of augmented images with a timestamp
+create_tar_gz_with_timestamp(output_dir)
+```
+
+### Functions
+
+- **`get_custom_augmented_images(input_dir, output_dir, user_choices)`**: Applies selected augmentations to images in `input_dir` and saves augmented images to `output_dir`.
+  
+- **`apply_all_augmentations(input_dir, output_dir)`**: Applies all available augmentations to images in `input_dir` and saves them to `output_dir`.
+  
+- **`create_zip(zip_filename, output_dir)`**: Creates a ZIP archive containing augmented images from `output_dir`.
+  
+- **`create_tar_gz_with_timestamp(output_dir)`**: Creates a TAR.GZ archive with a timestamp containing augmented images from `output_dir`.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- This package was inspired by the need for flexible and scalable image augmentation techniques in machine learning and computer vision projects.
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request with your enhancements.
+
+## Support
+
+For any questions or issues, please [open an issue](https://github.com/your/repository/issues) on GitHub.
+```
+
+### Notes:
+- **Installation**: Replace `'image-augmenter'` with the actual name of your package.
+- **Usage**: Modify the `input_dir` and `output_dir` paths based on where users will store their images and where they want augmented images to be saved.
+- **Contributing**: Provide guidelines for contributors if you want to encourage community involvement.
