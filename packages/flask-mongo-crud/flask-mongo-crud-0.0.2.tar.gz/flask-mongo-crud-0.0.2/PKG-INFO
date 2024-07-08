@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: flask-mongo-crud
+Version: 0.0.2
+Summary: This is a Flask Library that enables a developer to define mongo database models, and the library will automatically generate CRUD endpoints basing on Models defined. ;)
+Home-page: 
+Author: Valentine Sean Chanengeta
+Author-email: 
+License: MIT
+Keywords: flask-crud,flask-mongo-crud,flask-mongo-odm,flask-mongo-orm
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENCE.txt
+
+This is a Flask Library that enables a developer to define database models, and the library will automatically generate CRUD endpoints. ;)
+
+Change Log
+==========
+
+0.0.1 (03/07/2024)
+-------------------
+- First Release
