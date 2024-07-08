@@ -1,0 +1,12 @@
+versifier/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+versifier/__main__.py,sha256=6jBUTDZMTGgaRpch3rIPyzRTrORBL-qmgjsvGKKmXu8,7836
+versifier/compiler.py,sha256=fw-9jCrwu5hnmH_wd9zfa7_ctx0eaxEijsNUOygI5AE,2186
+versifier/config.py,sha256=C1HdB6iwdzscRRYrqP84GgEdsWdGDXW-KHosQb9a6RI,1214
+versifier/core.py,sha256=wYSbieOrFFeQ6aOCBzfmWk3AlqWDrZbKL40uzZ5u6e8,5410
+versifier/poetry.py,sha256=Em6bUwXxWk5ayU5JxlmChhM5KqcZejUpzrbMzNKWaMs,4475
+versifier/stub.py,sha256=f8fowXy3ZVuxttagdVVJNO4ZgXGyn4RlVphB4Bu85BE,7390
+versifier-0.2.4.dist-info/entry_points.txt,sha256=e4ejU9nPrgu_Bo_wx_og9ZgrsUnHbI-OblBaBc9X_wk,52
+versifier-0.2.4.dist-info/LICENSE,sha256=acc0GLs50MAberO1NcqLqiVver1Nm0AwsKyC9r9_H3Q,1064
+versifier-0.2.4.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+versifier-0.2.4.dist-info/METADATA,sha256=9b1HQ4XWD2SBQoXnk1dS2M5ATcvF6CPPD-q9gwwn96c,6904
+versifier-0.2.4.dist-info/RECORD,,
