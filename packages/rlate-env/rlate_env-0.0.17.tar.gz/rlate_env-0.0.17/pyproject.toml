@@ -1,0 +1,25 @@
+[project]
+name = "rlate-env"
+version = "0.0.17"
+authors = [
+    { name="RLate", email="hello@rlate.space" },
+]
+description = "A collection of RL environments"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+# Dependencies
+dependencies = [
+    "gymnasium>=0.29.1",
+    "numpy>=1.26.4"
+]
+
+
+[project.urls]
+Homepage = "https://github.com/RLate-Space/RL-Enviros"
+Issues = "https://github.com/RLate-Space/RL-Enviros/issues"
