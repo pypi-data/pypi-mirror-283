@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: pickle_tool
+Version: 0.1.0
+Summary: 基于pickle的拓展工具
+Home-page: 
+Author: ray.ping
+Author-email: 342099577@qq.com
+License: MIT
+
+============
+pickle工具
+============
+
+============
+1.如何安装
+============
+
+::
+
+    pip install pickle_tool
+
+========================
+2.该包包含的方法
+========================
+------------------------
+save_to_pickle
+------------------------
+装饰器，若被装饰的函数有返回值，在该函数外层加上该装饰器，则会将函数的返回对象序列化保存到磁盘，下次调用该函数时直接读磁盘的序列化结果
+用于节省一些耗时的运算结果保存在本地，以免下次要重复计算
+
+示例：
+::
+
+    @save_to_pickle("tmp.pickle", overwrite=False)
+    def foo():
+        return 1
+
+则当下次再运行该函数，会直接读取"tmp.pickle"文件，并返回保存的结果
+
+------------------------
+load_pickle
+------------------------
+简化了对pickle的读取操作，不需要再额外使用open()来打开文件
+
+::
+
+    obj = load_pickle("tmp.pickle")
