@@ -1,0 +1,12 @@
+popsink_transformer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+popsink_transformer/avro_to_json/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+popsink_transformer/avro_to_json/main.py,sha256=cwRhyZiOFtW15TLa0FjOe4fK-6kyveIjl2nUENNNqlY,5264
+popsink_transformer/avro_to_sql/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+popsink_transformer/avro_to_sql/main.py,sha256=roatChMn4xkeISyMMIKpG-PK08DLiRCRNvp1es5w4Fw,7837
+popsink_transformer/avro_to_sql/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+popsink_transformer/avro_to_sql/utils/type_converter.py,sha256=-_T-FHqtmNvwBzWDXJGRz0zMYt4hoHheefbnjjmVKnA,3138
+popsink_transformer/errors.py,sha256=uReJuFhvAaeXzAWmcxFMmmrPalyfLAsXIND1trlmWdY,114
+popsink_transformer/transformer.py,sha256=pXf2zEgkxzF71_vpBTOvbTEcELY2nj3FqIVdECQptlA,513
+popsink_transformer-2.3.3.dist-info/METADATA,sha256=m7fDzjRUamFd_yuTvhEdVJ-guD2Q3XdHJWGEhTgK3m4,2852
+popsink_transformer-2.3.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+popsink_transformer-2.3.3.dist-info/RECORD,,
