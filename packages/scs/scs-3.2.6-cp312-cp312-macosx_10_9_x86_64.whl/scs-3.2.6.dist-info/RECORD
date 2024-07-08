@@ -1,0 +1,7 @@
+_scs_direct.cpython-312-darwin.so,sha256=x_uEui6vpMlpQybvhKlDicPQbGdGk6NqtoeBKh_5OH0,140752
+_scs_indirect.cpython-312-darwin.so,sha256=bTDjXacKJrAUx_XEfUODf9Cf7vc5fg-PBrouFtZYNO0,123168
+scs-3.2.6.dist-info/RECORD,,
+scs-3.2.6.dist-info/LICENSE,sha256=lxIl5g3kUJCLfZjb72Z7K6XviabPAckIClya6BP-0Bg,1075
+scs-3.2.6.dist-info/WHEEL,sha256=_wD9vp17Ip3Sx167bqmzdeIAZ0JxphxDP5a9ReO8tK8,94
+scs-3.2.6.dist-info/METADATA,sha256=-2cgf37-Je5EOkeF-QS58tznQxU6WWeZf166XYlvknA,2054
+scs/__init__.py,sha256=UVvImr-amS2iP4PjeNZp2jar0y3Xu8IjthfEJTRkZic,6136
