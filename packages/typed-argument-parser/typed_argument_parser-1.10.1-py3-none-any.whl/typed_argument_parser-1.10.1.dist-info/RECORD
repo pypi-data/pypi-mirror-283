@@ -1,0 +1,10 @@
+tap/__init__.py,sha256=JoFl2VbuPRKs7TbjKdFHOYfjTSWj7eKFy22F1CnDO04,302
+tap/py.typed,sha256=bWew9mHgMy8LqMu7RuqQXFXLBxh2CRx0dUbSx-3wE48,27
+tap/tap.py,sha256=Pfm3vQwWDqmXirDHr4AHAm898E7wz4yAXuGZjTs_u7Y,32261
+tap/tapify.py,sha256=xbBcXSJac_VTk5TJdQX26TdYmkIvT6fU7pOKUru-lDc,15735
+tap/utils.py,sha256=bE0TLEEkqla1udZ387ssR_72UEDRZPFx71Dmy0_ztlo,18916
+typed_argument_parser-1.10.1.dist-info/LICENSE.txt,sha256=BUCmMIdyZIXNSQSeiu58_m-6eQBWvgdHlDpnkk2Ns84,1073
+typed_argument_parser-1.10.1.dist-info/METADATA,sha256=k7_ipaNUyP1BD3-01EYytF-wCC0wUQ7ax2z19nprVDg,32302
+typed_argument_parser-1.10.1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+typed_argument_parser-1.10.1.dist-info/top_level.txt,sha256=o0JNlsfIvol0cHu4WKnrXUDX-zMwvLkRo3YWEc5EHnk,4
+typed_argument_parser-1.10.1.dist-info/RECORD,,
