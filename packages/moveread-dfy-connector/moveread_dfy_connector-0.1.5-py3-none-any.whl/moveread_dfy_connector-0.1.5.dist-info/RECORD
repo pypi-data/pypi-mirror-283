@@ -1,0 +1,9 @@
+moveread/dfy_connector/__init__.py,sha256=f7EUYwo_QB2i3SMU04gYg7YWZWtaXL9YKLn9HnDrWZM,105
+moveread/dfy_connector/pull.py,sha256=qc_dm3TypEtoADq3y99z2vq7c4Eb2HMnNXFxXMGQbnw,3514
+moveread/dfy_connector/scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+moveread/dfy_connector/scripts/pull.py,sha256=aqWkWI4gzvYj0GPNqGcS8YAJu1iwwIGLpVnNyd1BI0I,2106
+moveread_dfy_connector-0.1.5.dist-info/METADATA,sha256=ngt9ncKsYN35NEowuxJJTP65-cDUMSzcPLlwiBzZK4U,598
+moveread_dfy_connector-0.1.5.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+moveread_dfy_connector-0.1.5.dist-info/entry_points.txt,sha256=DkvK0xZn_05XDoG625fRMY2p7L3JQ35AElcfoJ7TAHU,70
+moveread_dfy_connector-0.1.5.dist-info/top_level.txt,sha256=Nf4zr37sbhc5sbPztUq8FfXD7iyRYJ9bjMTU09166ig,9
+moveread_dfy_connector-0.1.5.dist-info/RECORD,,
