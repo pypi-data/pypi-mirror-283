@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Good and bad practices &#8212; Injector 0.21.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=514cf933" />
+    
+    <script src="_static/documentation_options.js?v=c4f92b34"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Frequently Asked Questions" href="faq.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="faq.html" title="Frequently Asked Questions"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Injector 0.21.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Good and bad practices</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="good-and-bad-practices">
+<span id="practices"></span><h1>Good and bad practices<a class="headerlink" href="#good-and-bad-practices" title="Link to this heading">¶</a></h1>
+<section id="side-effects">
+<h2>Side effects<a class="headerlink" href="#side-effects" title="Link to this heading">¶</a></h2>
+<p>You should avoid creating side effects in your modules for two reasons:</p>
+<ul class="simple">
+<li><p>Side effects will make it more difficult to test a module if you want to do it</p></li>
+<li><p>Modules expose a way to acquire some resource but they don’t provide any way
+to release it. If, for example, your module connects to a remote server while
+creating a service you have no way of closing that connection unless the
+service exposes it.</p></li>
+</ul>
+</section>
+<section id="injecting-into-constructors-vs-injecting-into-other-methods">
+<h2>Injecting into constructors vs injecting into other methods<a class="headerlink" href="#injecting-into-constructors-vs-injecting-into-other-methods" title="Link to this heading">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Injector 0.11+ doesn’t support injecting into non-constructor methods,
+this section is kept for historical reasons.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Injector 0.11 deprecates using &#64;inject with keyword arguments to declare
+bindings, this section remains unchanged for historical reasons.</p>
+</div>
+<p>In general you should prefer injecting into constructors to injecting into
+other methods because:</p>
+<ul>
+<li><p>it can expose potential issues earlier (at object construction time rather
+than at the method call)</p></li>
+<li><p>it exposes class’ dependencies more openly. Constructor injection:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Service1</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="nd">@inject</span><span class="p">(</span><span class="n">http_client</span><span class="o">=</span><span class="n">HTTP</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">http_client</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">http_client</span> <span class="o">=</span> <span class="n">http_client</span>
+        <span class="c1"># some other code</span>
+
+    <span class="c1"># tens or hundreds lines of code</span>
+
+    <span class="k">def</span> <span class="nf">method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># do something</span>
+        <span class="k">pass</span>
+</pre></div>
+</div>
+<p>Regular method injection:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Service2</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># some other code</span>
+
+    <span class="c1"># tens or hundreds lines of code</span>
+
+    <span class="nd">@inject</span><span class="p">(</span><span class="n">http_client</span><span class="o">=</span><span class="n">HTTP</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">http_client</span><span class="p">):</span>
+        <span class="c1"># do something</span>
+        <span class="k">pass</span>
+</pre></div>
+</div>
+<p>In first case you know all the dependencies by looking at the class’
+constructor, in the second you don’t know about <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> dependency until
+you see the method definition.</p>
+<p>Slightly different approach is suggested when it comes to Injector modules -
+in this case injecting into their constructors (or <code class="docutils literal notranslate"><span class="pre">configure</span></code> methods)
+would make the injection process dependent on the order of passing modules
+to Injector and therefore quite fragile. See this code sample:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">Key</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">Key</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">ModuleA</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+    <span class="nd">@inject</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">A</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">configure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binder</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">ModuleB</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+    <span class="nd">@inject</span><span class="p">(</span><span class="n">b</span><span class="o">=</span><span class="n">B</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">ModuleC</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">configure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binder</span><span class="p">):</span>
+        <span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+        <span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+
+
+<span class="c1"># error, at the time of ModuleA processing A is unbound</span>
+<span class="n">Injector</span><span class="p">([</span><span class="n">ModuleA</span><span class="p">,</span> <span class="n">ModuleC</span><span class="p">])</span>
+
+<span class="c1"># error, at the time of ModuleB processing B is unbound</span>
+<span class="n">Injector</span><span class="p">([</span><span class="n">ModuleB</span><span class="p">,</span> <span class="n">ModuleC</span><span class="p">])</span>
+
+<span class="c1"># no error this time</span>
+<span class="n">Injector</span><span class="p">([</span><span class="n">ModuleC</span><span class="p">,</span> <span class="n">ModuleA</span><span class="p">,</span> <span class="n">ModuleB</span><span class="p">])</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="doing-too-much-in-modules-and-or-providers">
+<h2>Doing too much in modules and/or providers<a class="headerlink" href="#doing-too-much-in-modules-and-or-providers" title="Link to this heading">¶</a></h2>
+<p>An implementation detail of Injector: Injector and accompanying classes are
+protected by a lock to make them thread safe. This has a downside though:
+in general only one thread can use dependency injection at any given moment.</p>
+<p>In best case scenario you “only” slow other threads’ dependency injection
+down. In worst case scenario (performing blocking calls without timeouts) you
+can <strong>deadlock</strong> whole application.</p>
+<p><strong>It is advised to avoid performing any IO, particularly without a timeout
+set, inside modules code.</strong></p>
+<p>As an illustration:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Thread</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+
+<span class="kn">from</span> <span class="nn">injector</span> <span class="kn">import</span> <span class="n">inject</span><span class="p">,</span> <span class="n">Injector</span><span class="p">,</span> <span class="n">Module</span><span class="p">,</span> <span class="n">provider</span>
+
+<span class="k">class</span> <span class="nc">A</span><span class="p">:</span> <span class="k">pass</span>
+<span class="k">class</span> <span class="nc">SubA</span><span class="p">(</span><span class="n">A</span><span class="p">):</span> <span class="k">pass</span>
+<span class="k">class</span> <span class="nc">B</span><span class="p">:</span> <span class="k">pass</span>
+
+
+<span class="k">class</span> <span class="nc">BadModule</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+    <span class="nd">@provider</span>
+    <span class="k">def</span> <span class="nf">provide_a</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">suba</span><span class="p">:</span> <span class="n">SubA</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">A</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">suba</span>
+
+    <span class="nd">@provider</span>
+    <span class="k">def</span> <span class="nf">provide_suba</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SubA</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Providing SubA...&#39;</span><span class="p">)</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sleeping...&#39;</span><span class="p">)</span>
+            <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="c1"># This never executes</span>
+        <span class="k">return</span> <span class="n">SubA</span><span class="p">()</span>
+
+    <span class="nd">@provider</span>
+    <span class="k">def</span> <span class="nf">provide_b</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">B</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">B</span><span class="p">()</span>
+
+
+<span class="n">injector</span> <span class="o">=</span> <span class="n">Injector</span><span class="p">([</span><span class="n">BadModule</span><span class="p">])</span>
+
+<span class="n">thread</span> <span class="o">=</span> <span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
+
+<span class="c1"># to make sure the thread doesn&#39;t keep the application alive</span>
+<span class="n">thread</span><span class="o">.</span><span class="n">daemon</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+<span class="c1"># This will never finish</span>
+<span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Got B&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Here’s the output of the application:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Providing</span> <span class="n">SubA</span><span class="o">...</span>
+<span class="n">Sleeping</span><span class="o">...</span>
+<span class="n">Sleeping</span><span class="o">...</span>
+<span class="n">Sleeping</span><span class="o">...</span>
+<span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="injecting-injector-and-abusing-injector-get">
+<h2>Injecting Injector and abusing Injector.get<a class="headerlink" href="#injecting-injector-and-abusing-injector-get" title="Link to this heading">¶</a></h2>
+<p>Sometimes code like this is written:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">B</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">C</span><span class="p">:</span>
+    <span class="nd">@inject</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">injector</span><span class="p">:</span> <span class="n">Injector</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>It is advised to use the following pattern instead:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">B</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">C</span><span class="p">:</span>
+    <span class="nd">@inject</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">:</span> <span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">B</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="n">a</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span>
+</pre></div>
+</div>
+<p>The second form has the benefits of:</p>
+<ul class="simple">
+<li><p>expressing clearly what the dependencies of <code class="docutils literal notranslate"><span class="pre">C</span></code> are</p></li>
+<li><p>making testing of the <code class="docutils literal notranslate"><span class="pre">C</span></code> class easier - you can provide the dependencies
+(whether they are mocks or not) directly, instead of having to mock
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Injector</span></code> and make the mock handle <code class="xref py py-meth docutils literal notranslate"><span class="pre">Injector.get()</span></code> calls</p></li>
+<li><p>following the common practice and being easier to understand</p></li>
+</ul>
+</section>
+<section id="injecting-dependencies-only-to-pass-them-somewhere-else">
+<h2>Injecting dependencies only to pass them somewhere else<a class="headerlink" href="#injecting-dependencies-only-to-pass-them-somewhere-else" title="Link to this heading">¶</a></h2>
+<p>A pattern similar to the one below can emerge:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">B</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="n">a</span>
+
+<span class="k">class</span> <span class="nc">C</span><span class="p">:</span>
+    <span class="nd">@inject</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">:</span> <span class="n">A</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">B</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Class <code class="docutils literal notranslate"><span class="pre">C</span></code> in this example has the responsibility of gathering dependencies of
+class <code class="docutils literal notranslate"><span class="pre">B</span></code> and constructing an object of type <code class="docutils literal notranslate"><span class="pre">B</span></code>, there may be a valid reason
+for it but in general it defeats the purpose of using <code class="docutils literal notranslate"><span class="pre">Injector</span></code> and should
+be avoided.</p>
+<p>The appropriate pattern is:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">B</span><span class="p">:</span>
+    <span class="nd">@inject</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">:</span> <span class="n">A</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="n">a</span>
+
+<span class="k">class</span> <span class="nc">C</span><span class="p">:</span>
+    <span class="nd">@inject</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">B</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Good and bad practices</a><ul>
+<li><a class="reference internal" href="#side-effects">Side effects</a></li>
+<li><a class="reference internal" href="#injecting-into-constructors-vs-injecting-into-other-methods">Injecting into constructors vs injecting into other methods</a></li>
+<li><a class="reference internal" href="#doing-too-much-in-modules-and-or-providers">Doing too much in modules and/or providers</a></li>
+<li><a class="reference internal" href="#injecting-injector-and-abusing-injector-get">Injecting Injector and abusing Injector.get</a></li>
+<li><a class="reference internal" href="#injecting-dependencies-only-to-pass-them-somewhere-else">Injecting dependencies only to pass them somewhere else</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="faq.html"
+                          title="previous chapter">Frequently Asked Questions</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/practices.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="faq.html" title="Frequently Asked Questions"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Injector 0.21.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Good and bad practices</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2013, Alec Thomas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

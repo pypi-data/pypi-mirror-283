@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Scopes &#8212; Injector 0.21.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=514cf933" />
+    
+    <script src="_static/documentation_options.js?v=c4f92b34"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Logging" href="logging.html" />
+    <link rel="prev" title="Testing with Injector" href="testing.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="logging.html" title="Logging"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="testing.html" title="Testing with Injector"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Injector 0.21.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Scopes</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="scopes">
+<span id="id1"></span><h1>Scopes<a class="headerlink" href="#scopes" title="Link to this heading">¶</a></h1>
+<section id="singletons">
+<h2>Singletons<a class="headerlink" href="#singletons" title="Link to this heading">¶</a></h2>
+<p>Singletons are declared by binding them in the SingletonScope. This can be done in three ways:</p>
+<ol class="arabic simple">
+<li><p>Decorating the class with <cite>&#64;singleton</cite>.</p></li>
+<li><p>Decorating a <cite>&#64;provider</cite> decorated Module method with <cite>&#64;singleton</cite>.</p></li>
+<li><p>Explicitly calling <cite>binder.bind(X, scope=singleton)</cite>.</p></li>
+</ol>
+<p>A (redundant) example showing all three methods:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@singleton</span>
+<span class="k">class</span> <span class="nc">Thing</span><span class="p">:</span> <span class="k">pass</span>
+<span class="k">class</span> <span class="nc">ThingModule</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">configure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binder</span><span class="p">):</span>
+        <span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">Thing</span><span class="p">,</span> <span class="n">scope</span><span class="o">=</span><span class="n">singleton</span><span class="p">)</span>
+    <span class="nd">@singleton</span>
+    <span class="nd">@provider</span>
+    <span class="k">def</span> <span class="nf">provide_thing</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Thing</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">Thing</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>If using hierarchies of injectors, classes decorated with <cite>&#64;singleton</cite> will be created by and bound to the parent/ancestor injector closest to the root that can provide all of its dependencies.</p>
+</section>
+<section id="implementing-new-scopes">
+<h2>Implementing new Scopes<a class="headerlink" href="#implementing-new-scopes" title="Link to this heading">¶</a></h2>
+<p>In the above description of scopes, we glossed over a lot of detail. In particular, how one would go about implementing our own scopes.</p>
+<p>Basically, there are two steps. First, subclass <cite>Scope</cite> and implement <cite>Scope.get</cite>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">injector</span> <span class="kn">import</span> <span class="n">Scope</span>
+<span class="k">class</span> <span class="nc">CustomScope</span><span class="p">(</span><span class="n">Scope</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">provider</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">provider</span>
+</pre></div>
+</div>
+<p>Then create a global instance of <code class="xref py py-class docutils literal notranslate"><span class="pre">ScopeDecorator</span></code> to allow classes to be easily annotated with your scope:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">injector</span> <span class="kn">import</span> <span class="n">ScopeDecorator</span>
+<span class="n">customscope</span> <span class="o">=</span> <span class="n">ScopeDecorator</span><span class="p">(</span><span class="n">CustomScope</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This can be used like so:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@customscope</span>
+<span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<p>Scopes are bound in modules with the <code class="xref py py-meth docutils literal notranslate"><span class="pre">Binder.bind_scope()</span></code> method:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyModule</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">configure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binder</span><span class="p">):</span>
+        <span class="n">binder</span><span class="o">.</span><span class="n">bind_scope</span><span class="p">(</span><span class="n">CustomScope</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Scopes can be retrieved from the injector, as with any other instance. They are singletons across the life of the injector:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">injector</span> <span class="o">=</span> <span class="n">Injector</span><span class="p">([</span><span class="n">MyModule</span><span class="p">()])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">CustomScope</span><span class="p">)</span> <span class="ow">is</span> <span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">CustomScope</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>For scopes with a transient lifetime, such as those tied to HTTP requests, the usual solution is to use a thread or greenlet-local cache inside the scope. The scope is “entered” in some low-level code by calling a method on the scope instance that creates this cache. Once the request is complete, the scope is “left” and the cache cleared.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Scopes</a><ul>
+<li><a class="reference internal" href="#singletons">Singletons</a></li>
+<li><a class="reference internal" href="#implementing-new-scopes">Implementing new Scopes</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="testing.html"
+                          title="previous chapter">Testing with Injector</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="logging.html"
+                          title="next chapter">Logging</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/scopes.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="logging.html" title="Logging"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="testing.html" title="Testing with Injector"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Injector 0.21.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Scopes</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2013, Alec Thomas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

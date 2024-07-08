@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Injector API reference &#8212; Injector 0.21.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=514cf933" />
+    
+    <script src="_static/documentation_options.js?v=c4f92b34"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Frequently Asked Questions" href="faq.html" />
+    <link rel="prev" title="Logging" href="logging.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="faq.html" title="Frequently Asked Questions"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="logging.html" title="Logging"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Injector 0.21.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Injector API reference</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="injector-api-reference">
+<h1>Injector API reference<a class="headerlink" href="#injector-api-reference" title="Link to this heading">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unless specified otherwise, instance methods are <strong>not</strong> thread safe.</p>
+<p>The following functions are thread safe:</p>
+<ul class="simple">
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">Injector.get()</span></code></p></li>
+<li><p>injection provided by <code class="xref py py-func docutils literal notranslate"><span class="pre">inject()</span></code> decorator (please note, however, that it doesn’t say anything about decorated function thread safety)</p></li>
+</ul>
+</div>
+<p id="module-injector">Injector - Python dependency injection framework, inspired by Guice</p>
+<dl class="field-list simple">
+<dt class="field-odd">copyright<span class="colon">:</span></dt>
+<dd class="field-odd"><ol class="loweralpha simple" start="3">
+<li><p>2012 by Alec Thomas</p></li>
+</ol>
+</dd>
+<dt class="field-even">license<span class="colon">:</span></dt>
+<dd class="field-even"><p>BSD</p>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="injector.Binder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">Binder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">injector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#injector.Injector" title="injector.Injector"><span class="pre">Injector</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_bind</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#injector.Binder" title="injector.Binder"><span class="pre">Binder</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#injector.Binder" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Bind interfaces to implementations.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is instantiated internally for you and there’s no need
+to instantiate it on your own.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="injector.Binder.bind">
+<span class="sig-name descname"><span class="pre">bind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">interface</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.12)"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">T</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.12)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#injector.Provider" title="injector.Provider"><span class="pre">Provider</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.12)"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#injector.Scope" title="injector.Scope"><span class="pre">Scope</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ScopeDecorator</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#injector.Binder.bind" title="Link to this definition">¶</a></dt>
+<dd><p>Bind an interface to an implementation.</p>
+<p>Binding <cite>T</cite> to an instance of <cite>T</cite> like</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="n">A</span><span class="p">(</span><span class="s1">&#39;some&#39;</span><span class="p">,</span> <span class="s1">&#39;thing&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>is, for convenience, a shortcut for</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="n">InstanceProvider</span><span class="p">(</span><span class="n">A</span><span class="p">(</span><span class="s1">&#39;some&#39;</span><span class="p">,</span> <span class="s1">&#39;thing&#39;</span><span class="p">)))</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Likewise, binding to a callable like</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="n">some_callable</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>is a shortcut for</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="n">CallableProvider</span><span class="p">(</span><span class="n">some_callable</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>and, as such, if <cite>some_callable</cite> there has any annotated parameters they’ll be provided
+automatically without having to use <a class="reference internal" href="#injector.inject" title="injector.inject"><code class="xref py py-func docutils literal notranslate"><span class="pre">inject()</span></code></a> or <a class="reference internal" href="#injector.Inject" title="injector.Inject"><code class="xref py py-data docutils literal notranslate"><span class="pre">Inject</span></code></a> with the callable.</p>
+<p><cite>typing.List</cite> and <cite>typing.Dict</cite> instances are reserved for multibindings and trying to bind them
+here will result in an error (use <a class="reference internal" href="#injector.Binder.multibind" title="injector.Binder.multibind"><code class="xref py py-meth docutils literal notranslate"><span class="pre">multibind()</span></code></a> instead):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">to</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="s1">&#39;there&#39;</span><span class="p">])</span>  <span class="c1"># Error</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>interface</strong> – Type to bind.</p></li>
+<li><p><strong>to</strong> – Instance or class to bind to, or an instance of
+<a class="reference internal" href="#injector.Provider" title="injector.Provider"><code class="xref py py-class docutils literal notranslate"><span class="pre">Provider</span></code></a> subclass.</p></li>
+<li><p><strong>scope</strong> – Optional <a class="reference internal" href="#injector.Scope" title="injector.Scope"><code class="xref py py-class docutils literal notranslate"><span class="pre">Scope</span></code></a> in which to bind.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="injector.Binder.install">
+<span class="sig-name descname"><span class="pre">install</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.12)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#injector.Binder" title="injector.Binder"><span class="pre">Binder</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#injector.Module" title="injector.Module"><span class="pre">Module</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.12)"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#injector.Module" title="injector.Module"><span class="pre">Module</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#injector.Binder.install" title="Link to this definition">¶</a></dt>
+<dd><p>Install a module into this binder.</p>
+<p>In this context the module is one of the following:</p>
+<ul>
+<li><p>function taking the <a class="reference internal" href="#injector.Binder" title="injector.Binder"><code class="xref py py-class docutils literal notranslate"><span class="pre">Binder</span></code></a> as its only parameter</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">configure</span><span class="p">(</span><span class="n">binder</span><span class="p">):</span>
+    <span class="n">bind</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
+
+<span class="n">binder</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">configure</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>instance of <a class="reference internal" href="#injector.Module" title="injector.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a> (instance of its subclass counts)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyModule</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">configure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binder</span><span class="p">):</span>
+        <span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
+
+<span class="n">binder</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">MyModule</span><span class="p">())</span>
+</pre></div>
+</div>
+</li>
+<li><p>subclass of <a class="reference internal" href="#injector.Module" title="injector.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a> - the subclass needs to be instantiable so if it
+expects any parameters they need to be injected</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">binder</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">MyModule</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="injector.Binder.multibind">
+<span class="sig-name descname"><span class="pre">multibind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">interface</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.12)"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.12)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.12)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.12)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.12)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#injector.Provider" title="injector.Provider"><span class="pre">Provider</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.12)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.12)"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#injector.Scope" title="injector.Scope"><span class="pre">Scope</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ScopeDecorator</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#injector.Binder.multibind" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">multibind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">interface</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.12)"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.12)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><span class="pre">K</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">V</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.12)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><span class="pre">K</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">V</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.12)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.12)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><span class="pre">K</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">V</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#injector.Provider" title="injector.Provider"><span class="pre">Provider</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.12)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><span class="pre">K</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">V</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.12)"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#injector.Scope" title="injector.Scope"><span class="pre">Scope</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ScopeDecorator</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span></span></dt>
+<dd><p>Creates or extends a multi-binding.</p>
+<p>A multi-binding contributes values to a list or to a dictionary. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">binder</span><span class="o">.</span><span class="n">multibind</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">to</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;some&#39;</span><span class="p">,</span> <span class="s1">&#39;strings&#39;</span><span class="p">])</span>
+<span class="n">binder</span><span class="o">.</span><span class="n">multibind</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">to</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;other&#39;</span><span class="p">,</span> <span class="s1">&#39;strings&#39;</span><span class="p">])</span>
+<span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span>  <span class="c1"># [&#39;some&#39;, &#39;strings&#39;, &#39;other&#39;, &#39;strings&#39;]</span>
+
+<span class="n">binder</span><span class="o">.</span><span class="n">multibind</span><span class="p">(</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">to</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">})</span>
+<span class="n">binder</span><span class="o">.</span><span class="n">multibind</span><span class="p">(</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">to</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;other_key&#39;</span><span class="p">:</span> <span class="mi">33</span><span class="p">})</span>
+<span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">])</span>  <span class="c1"># {&#39;key&#39;: 11, &#39;other_key&#39;: 33}</span>
+</pre></div>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 0.17.0: </span>Added support for using <cite>typing.Dict</cite> and <cite>typing.List</cite> instances as interfaces.
+Deprecated support for <cite>MappingKey</cite>, <cite>SequenceKey</cite> and single-item lists and
+dictionaries as interfaces.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>interface</strong> – typing.Dict or typing.List instance to bind to.</p></li>
+<li><p><strong>to</strong> – Instance, class to bind to, or an explicit <a class="reference internal" href="#injector.Provider" title="injector.Provider"><code class="xref py py-class docutils literal notranslate"><span class="pre">Provider</span></code></a>
+subclass. Must provide a list or a dictionary, depending on the interface.</p></li>
+<li><p><strong>scope</strong> – Optional Scope in which to bind.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="injector.BoundKey">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">BoundKey</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">interface</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.12)"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#injector.BoundKey" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a></p>
+<p>A BoundKey provides a key to a type with pre-injected arguments.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
+<span class="gp">... </span>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="n">a</span>
+<span class="gp">... </span>    <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">InjectedA</span> <span class="o">=</span> <span class="n">BoundKey</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="n">InstanceProvider</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">b</span><span class="o">=</span><span class="n">InstanceProvider</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">injector</span> <span class="o">=</span> <span class="n">Injector</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">InjectedA</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">b</span>
+<span class="go">(1, 2)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="injector.CallError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">CallError</span></span><a class="headerlink" href="#injector.CallError" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#injector.Error" title="injector.Error"><code class="xref py py-class docutils literal notranslate"><span class="pre">Error</span></code></a></p>
+<p>Call to callable object fails.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="injector.CallableProvider">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">CallableProvider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.12)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#injector.CallableProvider" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#injector.Provider" title="injector.Provider"><code class="xref py py-class docutils literal notranslate"><span class="pre">Provider</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Generic" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">T</span></code>]</p>
+<p>Provides something using a callable.</p>
+<p>The callable is called every time new value is requested from the provider.</p>
+<p>There’s no need to explicitly use <a class="reference internal" href="#injector.inject" title="injector.inject"><code class="xref py py-func docutils literal notranslate"><span class="pre">inject()</span></code></a> or <a class="reference internal" href="#injector.Inject" title="injector.Inject"><code class="xref py py-data docutils literal notranslate"><span class="pre">Inject</span></code></a> with the callable as it’s
+assumed that, if the callable has annotated parameters, they’re meant to be provided
+automatically. It wouldn’t make sense any other way, as there’s no mechanism to provide
+parameters to the callable at a later time, so either they’ll be injected or there’ll be
+a <cite>CallError</cite>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">factory</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;providing&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">MyClass</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">configure</span><span class="p">(</span><span class="n">binder</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">MyClass</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="n">CallableProvider</span><span class="p">(</span><span class="n">factory</span><span class="p">))</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">injector</span> <span class="o">=</span> <span class="n">Injector</span><span class="p">(</span><span class="n">configure</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">MyClass</span><span class="p">)</span> <span class="ow">is</span> <span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">MyClass</span><span class="p">)</span>
+<span class="go">providing</span>
+<span class="go">providing</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="injector.CircularDependency">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">CircularDependency</span></span><a class="headerlink" href="#injector.CircularDependency" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#injector.Error" title="injector.Error"><code class="xref py py-class docutils literal notranslate"><span class="pre">Error</span></code></a></p>
+<p>Circular dependency detected.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="injector.ClassProvider">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">ClassProvider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.12)"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#injector.ClassProvider" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#injector.Provider" title="injector.Provider"><code class="xref py py-class docutils literal notranslate"><span class="pre">Provider</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Generic" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">T</span></code>]</p>
+<p>Provides instances from a given class, created using an Injector.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="injector.Error">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">Error</span></span><a class="headerlink" href="#injector.Error" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
+<p>Base exception.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="injector.Inject">
+<span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">Inject</span></span><a class="headerlink" href="#injector.Inject" title="Link to this definition">¶</a></dt>
+<dd><p>An experimental way to declare injectable dependencies utilizing a <a class="reference external" href="https://www.python.org/dev/peps/pep-0593/">PEP 593</a> implementation
+in Python 3.9 and backported to Python 3.7+ in <cite>typing_extensions</cite>.</p>
+<p>Those two declarations are equivalent:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@inject</span>
+<span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="n">SomeType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="n">Inject</span><span class="p">[</span><span class="n">SomeType</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<p>The advantage over using <a class="reference internal" href="#injector.inject" title="injector.inject"><code class="xref py py-func docutils literal notranslate"><span class="pre">inject()</span></code></a> is that if you have some noninjectable parameters
+it may be easier to spot what are they. Those two are equivalent:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@inject</span>
+<span class="nd">@noninjectable</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="n">SomeType</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="n">SomeOtherType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="n">Inject</span><span class="p">[</span><span class="n">SomeType</span><span class="p">],</span> <span class="n">s</span><span class="p">:</span> <span class="n">SomeOtherType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt>Function <a class="reference internal" href="#injector.get_bindings" title="injector.get_bindings"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_bindings()</span></code></a></dt><dd><p>A way to inspect how various injection declarations interact with each other.</p>
+</dd>
+</dl>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 0.18.0.</span></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Requires Python 3.7+.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you’re using mypy you need the version 0.750 or newer to fully type-check code using this
+construct.</p>
+</div>
+<p>alias of <code class="xref py py-obj docutils literal notranslate"><span class="pre">InjectT</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">InjectT</span></code>]</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="injector.Injector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">Injector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modules</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.12)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#injector.Binder" title="injector.Binder"><span class="pre">Binder</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#injector.Module" title="injector.Module"><span class="pre">Module</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.12)"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#injector.Module" title="injector.Module"><span class="pre">Module</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.12)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.12)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#injector.Binder" title="injector.Binder"><span class="pre">Binder</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#injector.Module" title="injector.Module"><span class="pre">Module</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.12)"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#injector.Module" title="injector.Module"><span class="pre">Module</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_bind</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#injector.Injector" title="injector.Injector"><span class="pre">Injector</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#injector.Injector" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>modules</strong> – <p>Optional - a configuration module or iterable of configuration modules.
+Each module will be installed in current <a class="reference internal" href="#injector.Binder" title="injector.Binder"><code class="xref py py-class docutils literal notranslate"><span class="pre">Binder</span></code></a> using <a class="reference internal" href="#injector.Binder.install" title="injector.Binder.install"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Binder.install()</span></code></a>.</p>
+<p>Consult <a class="reference internal" href="#injector.Binder.install" title="injector.Binder.install"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Binder.install()</span></code></a> documentation for the details.</p>
+</p></li>
+<li><p><strong>auto_bind</strong> – Whether to automatically bind missing types.</p></li>
+<li><p><strong>parent</strong> – Parent injector.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 0.7.5: </span><code class="docutils literal notranslate"><span class="pre">use_annotations</span></code> parameter</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 0.13.0: </span><code class="docutils literal notranslate"><span class="pre">use_annotations</span></code> parameter is removed</p>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="injector.Injector.binder">
+<span class="sig-name descname"><span class="pre">binder</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#injector.Binder" title="injector.Binder"><span class="pre">Binder</span></a></em><a class="headerlink" href="#injector.Injector.binder" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="injector.Injector.call_with_injection">
+<span class="sig-name descname"><span class="pre">call_with_injection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.12)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">self_</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">T</span></span></span><a class="headerlink" href="#injector.Injector.call_with_injection" title="Link to this definition">¶</a></dt>
+<dd><p>Call a callable and provide its dependencies if needed.</p>
+<p>Dependencies are provided when the callable is decorated with <a class="reference internal" href="#injector.inject" title="injector.inject"><code class="xref py py-func docutils literal notranslate"><span class="pre">&#64;inject</span></code></a>
+or some individual parameters are wrapped in <a class="reference internal" href="#injector.Inject" title="injector.Inject"><code class="xref py py-data docutils literal notranslate"><span class="pre">Inject</span></code></a> – otherwise
+<code class="docutils literal notranslate"><span class="pre">call_with_injection()</span></code> is equivalent to just calling the callable directly.</p>
+<p>If there is an overlap between arguments provided in <code class="docutils literal notranslate"><span class="pre">args</span></code> and <code class="docutils literal notranslate"><span class="pre">kwargs</span></code>
+and injectable dependencies the provided values take precedence and no dependency
+injection process will take place for the corresponding parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self</strong> – Instance of a class callable belongs to if it’s a method,
+None otherwise.</p></li>
+<li><p><strong>args</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)"><em>tuple</em></a><em> of </em><em>objects</em>) – Arguments to pass to callable.</p></li>
+<li><p><strong>kwargs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><em>dict</em></a><em> of </em><em>string -&gt; object</em>) – Keyword arguments to pass to callable.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Value returned by callable.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="injector.Injector.create_object">
+<span class="sig-name descname"><span class="pre">create_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.12)"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">T</span></span></span><a class="headerlink" href="#injector.Injector.create_object" title="Link to this definition">¶</a></dt>
+<dd><p>Create a new instance, satisfying any dependencies on cls.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="injector.Injector.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">interface</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.12)"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ScopeDecorator</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.12)"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#injector.Scope" title="injector.Scope"><span class="pre">Scope</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">T</span></span></span><a class="headerlink" href="#injector.Injector.get" title="Link to this definition">¶</a></dt>
+<dd><p>Get an instance of the given interface.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although this method is part of <a class="reference internal" href="#injector.Injector" title="injector.Injector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Injector</span></code></a>’s public interface
+it’s meant to be used in limited set of circumstances.</p>
+<p>For example, to create some kind of root object (application object)
+of your application (note that only one <cite>get</cite> call is needed,
+inside the <cite>Application</cite> class and any of its dependencies
+<a class="reference internal" href="#injector.inject" title="injector.inject"><code class="xref py py-func docutils literal notranslate"><span class="pre">inject()</span></code></a> can and should be used):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Application</span><span class="p">:</span>
+
+    <span class="nd">@inject</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dep1</span><span class="p">:</span> <span class="n">Dep1</span><span class="p">,</span> <span class="n">dep2</span><span class="p">:</span> <span class="n">Dep2</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dep1</span> <span class="o">=</span> <span class="n">dep1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dep2</span> <span class="o">=</span> <span class="n">dep2</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dep1</span><span class="o">.</span><span class="n">something</span><span class="p">()</span>
+
+<span class="n">injector</span> <span class="o">=</span> <span class="n">Injector</span><span class="p">(</span><span class="n">configuration</span><span class="p">)</span>
+<span class="n">application</span> <span class="o">=</span> <span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Application</span><span class="p">)</span>
+<span class="n">application</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>interface</strong> – Interface whose implementation we want.</p></li>
+<li><p><strong>scope</strong> – Class of the Scope in which to resolve.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An implementation of interface.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="injector.InstanceProvider">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">InstanceProvider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">T</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#injector.InstanceProvider" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#injector.Provider" title="injector.Provider"><code class="xref py py-class docutils literal notranslate"><span class="pre">Provider</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Generic" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">T</span></code>]</p>
+<p>Provide a specific instance.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">MyType</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">contents</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">configure</span><span class="p">(</span><span class="n">binder</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">MyType</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="n">InstanceProvider</span><span class="p">(</span><span class="n">MyType</span><span class="p">()))</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">injector</span> <span class="o">=</span> <span class="n">Injector</span><span class="p">(</span><span class="n">configure</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">MyType</span><span class="p">)</span> <span class="ow">is</span> <span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">MyType</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">MyType</span><span class="p">)</span><span class="o">.</span><span class="n">contents</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">MyType</span><span class="p">)</span><span class="o">.</span><span class="n">contents</span>
+<span class="go">[&#39;x&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="injector.Module">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">Module</span></span><a class="headerlink" href="#injector.Module" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Configures injector and providers.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="injector.Module.configure">
+<span class="sig-name descname"><span class="pre">configure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">binder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#injector.Binder" title="injector.Binder"><span class="pre">Binder</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#injector.Module.configure" title="Link to this definition">¶</a></dt>
+<dd><p>Override to configure bindings.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="injector.NoInject">
+<span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">NoInject</span></span><a class="headerlink" href="#injector.NoInject" title="Link to this definition">¶</a></dt>
+<dd><p>An experimental way to declare noninjectable dependencies utilizing a <a class="reference external" href="https://www.python.org/dev/peps/pep-0593/">PEP 593</a> implementation
+in Python 3.9 and backported to Python 3.7+ in <cite>typing_extensions</cite>.</p>
+<p>Since <a class="reference internal" href="#injector.inject" title="injector.inject"><code class="xref py py-func docutils literal notranslate"><span class="pre">inject()</span></code></a> declares all function’s parameters to be injectable there needs to be a way
+to opt out of it. This has been provided by <a class="reference internal" href="#injector.noninjectable" title="injector.noninjectable"><code class="xref py py-func docutils literal notranslate"><span class="pre">noninjectable()</span></code></a> but <cite>noninjectable</cite> suffers from
+two issues:</p>
+<ul class="simple">
+<li><p>You need to repeat the parameter name</p></li>
+<li><p>The declaration may be relatively distance in space from the actual parameter declaration, thus
+hindering readability</p></li>
+</ul>
+<p><cite>NoInject</cite> solves both of those concerns, for example (those two declarations are equivalent):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@inject</span>
+<span class="nd">@noninjectable</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">TypeA</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">TypeB</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="nd">@inject</span>
+<span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">TypeA</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">NoInject</span><span class="p">[</span><span class="n">TypeB</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt>Function <a class="reference internal" href="#injector.get_bindings" title="injector.get_bindings"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_bindings()</span></code></a></dt><dd><p>A way to inspect how various injection declarations interact with each other.</p>
+</dd>
+</dl>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 0.18.0.</span></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Requires Python 3.7+.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you’re using mypy you need the version 0.750 or newer to fully type-check code using this
+construct.</p>
+</div>
+<p>alias of <code class="xref py py-obj docutils literal notranslate"><span class="pre">InjectT</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">InjectT</span></code>]</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="injector.NoScope">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">NoScope</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">injector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#injector.Injector" title="injector.Injector"><span class="pre">Injector</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#injector.NoScope" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#injector.Scope" title="injector.Scope"><code class="xref py py-class docutils literal notranslate"><span class="pre">Scope</span></code></a></p>
+<p>An unscoped provider.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="injector.Provider">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">Provider</span></span><a class="headerlink" href="#injector.Provider" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Generic" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">T</span></code>]</p>
+<p>Provides class instances.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="injector.ProviderOf">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">ProviderOf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">injector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#injector.Injector" title="injector.Injector"><span class="pre">Injector</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">interface</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.12)"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#injector.ProviderOf" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Generic" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">T</span></code>]</p>
+<p>Can be used to get a provider of an interface, for example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">provide_int</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;providing&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="mi">123</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">configure</span><span class="p">(</span><span class="n">binder</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="n">provide_int</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">injector</span> <span class="o">=</span> <span class="n">Injector</span><span class="p">(</span><span class="n">configure</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">provider</span> <span class="o">=</span> <span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ProviderOf</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">value</span> <span class="o">=</span> <span class="n">provider</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+<span class="go">providing</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">value</span>
+<span class="go">123</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="injector.ProviderOf.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">T</span></span></span><a class="headerlink" href="#injector.ProviderOf.get" title="Link to this definition">¶</a></dt>
+<dd><p>Get an implementation for the specified interface.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="injector.Scope">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">Scope</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">injector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#injector.Injector" title="injector.Injector"><span class="pre">Injector</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#injector.Scope" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>A Scope looks up the Provider for a binding.</p>
+<p>By default (ie. <a class="reference internal" href="#injector.NoScope" title="injector.NoScope"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoScope</span></code></a> ) this simply returns the default
+<a class="reference internal" href="#injector.Provider" title="injector.Provider"><code class="xref py py-class docutils literal notranslate"><span class="pre">Provider</span></code></a> .</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="injector.Scope.configure">
+<span class="sig-name descname"><span class="pre">configure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#injector.Scope.configure" title="Link to this definition">¶</a></dt>
+<dd><p>Configure the scope.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="injector.Scope.get">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.12)"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#injector.Provider" title="injector.Provider"><span class="pre">Provider</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#injector.Provider" title="injector.Provider"><span class="pre">Provider</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#injector.Scope.get" title="Link to this definition">¶</a></dt>
+<dd><p>Get a <a class="reference internal" href="#injector.Provider" title="injector.Provider"><code class="xref py py-class docutils literal notranslate"><span class="pre">Provider</span></code></a> for a key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> – The key to return a provider for.</p></li>
+<li><p><strong>provider</strong> – The default Provider associated with the key.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A Provider instance that can provide an instance of key.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="injector.SingletonScope">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">SingletonScope</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">injector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#injector.Injector" title="injector.Injector"><span class="pre">Injector</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#injector.SingletonScope" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#injector.Scope" title="injector.Scope"><code class="xref py py-class docutils literal notranslate"><span class="pre">Scope</span></code></a></p>
+<p>A <a class="reference internal" href="#injector.Scope" title="injector.Scope"><code class="xref py py-class docutils literal notranslate"><span class="pre">Scope</span></code></a> that returns a per-Injector instance for a key.</p>
+<p><code class="xref py py-data docutils literal notranslate"><span class="pre">singleton</span></code> can be used as a convenience class decorator.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">A</span><span class="p">:</span> <span class="k">pass</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">injector</span> <span class="o">=</span> <span class="n">Injector</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">provider</span> <span class="o">=</span> <span class="n">ClassProvider</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">singleton</span> <span class="o">=</span> <span class="n">SingletonScope</span><span class="p">(</span><span class="n">injector</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">singleton</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">provider</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">singleton</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">provider</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="injector.ThreadLocalScope">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">ThreadLocalScope</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">injector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#injector.Injector" title="injector.Injector"><span class="pre">Injector</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#injector.ThreadLocalScope" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#injector.Scope" title="injector.Scope"><code class="xref py py-class docutils literal notranslate"><span class="pre">Scope</span></code></a></p>
+<p>A <a class="reference internal" href="#injector.Scope" title="injector.Scope"><code class="xref py py-class docutils literal notranslate"><span class="pre">Scope</span></code></a> that returns a per-thread instance for a key.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="injector.UnknownArgument">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">UnknownArgument</span></span><a class="headerlink" href="#injector.UnknownArgument" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#injector.Error" title="injector.Error"><code class="xref py py-class docutils literal notranslate"><span class="pre">Error</span></code></a></p>
+<p>Tried to mark an unknown argument as noninjectable.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="injector.UnknownProvider">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">UnknownProvider</span></span><a class="headerlink" href="#injector.UnknownProvider" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#injector.Error" title="injector.Error"><code class="xref py py-class docutils literal notranslate"><span class="pre">Error</span></code></a></p>
+<p>Tried to bind to a type whose provider couldn’t be determined.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="injector.UnsatisfiedRequirement">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">UnsatisfiedRequirement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">owner</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><span class="pre">object</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">interface</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><span class="pre">type</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#injector.UnsatisfiedRequirement" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#injector.Error" title="injector.Error"><code class="xref py py-class docutils literal notranslate"><span class="pre">Error</span></code></a></p>
+<p>Requirement could not be satisfied.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="injector.get_bindings">
+<span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">get_bindings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.12)"><span class="pre">Callable</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.12)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><span class="pre">type</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#injector.get_bindings" title="Link to this definition">¶</a></dt>
+<dd><p>Get bindings of injectable parameters from a callable.</p>
+<p>If the callable is not decorated with <a class="reference internal" href="#injector.inject" title="injector.inject"><code class="xref py py-func docutils literal notranslate"><span class="pre">inject()</span></code></a> and does not have any of its
+parameters declared as injectable using <a class="reference internal" href="#injector.Inject" title="injector.Inject"><code class="xref py py-data docutils literal notranslate"><span class="pre">Inject</span></code></a> an empty dictionary will
+be returned.  Otherwise the returned dictionary will contain a mapping
+between parameter names and their types with the exception of parameters
+excluded from dependency injection (either with <a class="reference internal" href="#injector.noninjectable" title="injector.noninjectable"><code class="xref py py-func docutils literal notranslate"><span class="pre">noninjectable()</span></code></a>, <a class="reference internal" href="#injector.NoInject" title="injector.NoInject"><code class="xref py py-data docutils literal notranslate"><span class="pre">NoInject</span></code></a>
+or only explicit injection with <a class="reference internal" href="#injector.Inject" title="injector.Inject"><code class="xref py py-data docutils literal notranslate"><span class="pre">Inject</span></code></a> being used). For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">function1</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">pass</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">get_bindings</span><span class="p">(</span><span class="n">function1</span><span class="p">)</span>
+<span class="go">{}</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="nd">@inject</span>
+<span class="gp">... </span><span class="k">def</span> <span class="nf">function2</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">pass</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">get_bindings</span><span class="p">(</span><span class="n">function2</span><span class="p">)</span>
+<span class="go">{&#39;a&#39;: &lt;class &#39;int&#39;&gt;}</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="nd">@inject</span>
+<span class="gp">... </span><span class="nd">@noninjectable</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">def</span> <span class="nf">function3</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">pass</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">get_bindings</span><span class="p">(</span><span class="n">function3</span><span class="p">)</span>
+<span class="go">{&#39;a&#39;: &lt;class &#39;int&#39;&gt;}</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># The simple case of no @inject but injection requested with Inject[...]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">function4</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">Inject</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">b</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">pass</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">get_bindings</span><span class="p">(</span><span class="n">function4</span><span class="p">)</span>
+<span class="go">{&#39;a&#39;: &lt;class &#39;int&#39;&gt;}</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Using @inject with Inject is redundant but it should not break anything</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nd">@inject</span>
+<span class="gp">... </span><span class="k">def</span> <span class="nf">function5</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">Inject</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">b</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">pass</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">get_bindings</span><span class="p">(</span><span class="n">function5</span><span class="p">)</span>
+<span class="go">{&#39;a&#39;: &lt;class &#39;int&#39;&gt;, &#39;b&#39;: &lt;class &#39;str&#39;&gt;}</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># We need to be able to exclude a parameter from injection with NoInject</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nd">@inject</span>
+<span class="gp">... </span><span class="k">def</span> <span class="nf">function6</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">NoInject</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">pass</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">get_bindings</span><span class="p">(</span><span class="n">function6</span><span class="p">)</span>
+<span class="go">{&#39;a&#39;: &lt;class &#39;int&#39;&gt;}</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># The presence of NoInject should not trigger anything on its own</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">function7</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">NoInject</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">pass</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">get_bindings</span><span class="p">(</span><span class="n">function7</span><span class="p">)</span>
+<span class="go">{}</span>
+</pre></div>
+</div>
+<p>This function is used internally so by calling it you can learn what exactly
+Injector is going to try to provide to a callable.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="injector.inject">
+<span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">inject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">constructor_or_class</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CallableT</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CallableT</span></span></span><a class="headerlink" href="#injector.inject" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">inject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">constructor_or_class</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.12)"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.12)"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span></span></dt>
+<dd><p>Decorator declaring parameters to be injected.</p>
+<p>eg.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nd">@inject</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">([</span><span class="n">number</span><span class="p">,</span> <span class="n">name</span><span class="p">])</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">configure</span><span class="p">(</span><span class="n">binder</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="s1">&#39;Bob&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Use the Injector to get a new instance of A:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Injector</span><span class="p">(</span><span class="n">configure</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="go">[123, &#39;Bob&#39;]</span>
+</pre></div>
+</div>
+<p>As a convenience one can decorate a class itself:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@inject</span>
+<span class="k">class</span> <span class="nc">B</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dependency</span><span class="p">:</span> <span class="n">Dependency</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dependency</span> <span class="o">=</span> <span class="n">dependency</span>
+</pre></div>
+</div>
+<p>This is equivalent to decorating its constructor. In particular this provides integration with
+<a class="reference external" href="https://docs.python.org/3/library/dataclasses.html">dataclasses</a> (the order of decorator
+application is important here):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@inject</span>
+<span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">C</span><span class="p">:</span>
+    <span class="n">dependency</span><span class="p">:</span> <span class="n">Dependency</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This decorator is to be used on class constructors (or, as a convenience, on classes).
+Using it on non-constructor methods worked in the past but it was an implementation
+detail rather than a design decision.</p>
+<p>Third party libraries may, however, provide support for injecting dependencies
+into non-constructor methods or free functions in one form or another.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt>Generic type <a class="reference internal" href="#injector.Inject" title="injector.Inject"><code class="xref py py-data docutils literal notranslate"><span class="pre">Inject</span></code></a></dt><dd><p>A more explicit way to declare parameters as injectable.</p>
+</dd>
+<dt>Function <a class="reference internal" href="#injector.get_bindings" title="injector.get_bindings"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_bindings()</span></code></a></dt><dd><p>A way to inspect how various injection declarations interact with each other.</p>
+</dd>
+</dl>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 0.16.2: </span>(Re)added support for decorating classes with &#64;inject.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="injector.is_decorated_with_inject">
+<span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">is_decorated_with_inject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.12)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#injector.is_decorated_with_inject" title="Link to this definition">¶</a></dt>
+<dd><p>See if given callable is declared to want some dependencies injected.</p>
+<p>Example use:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="n">i</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">is_decorated_with_inject</span><span class="p">(</span><span class="n">fun</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nd">@inject</span>
+<span class="gp">... </span><span class="k">def</span> <span class="nf">fun2</span><span class="p">(</span><span class="n">i</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">is_decorated_with_inject</span><span class="p">(</span><span class="n">fun2</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="injector.multiprovider">
+<span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">multiprovider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CallableT</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CallableT</span></span></span><a class="headerlink" href="#injector.multiprovider" title="Link to this definition">¶</a></dt>
+<dd><p>Like <a class="reference internal" href="#injector.provider" title="injector.provider"><code class="xref py py-func docutils literal notranslate"><span class="pre">provider()</span></code></a>, but for multibindings. Example usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyModule</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+    <span class="nd">@multiprovider</span>
+    <span class="k">def</span> <span class="nf">provide_strs</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;str1&#39;</span><span class="p">]</span>
+
+<span class="k">class</span> <span class="nc">OtherModule</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+    <span class="nd">@multiprovider</span>
+    <span class="k">def</span> <span class="nf">provide_strs_also</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;str2&#39;</span><span class="p">]</span>
+
+<span class="n">Injector</span><span class="p">([</span><span class="n">MyModule</span><span class="p">,</span> <span class="n">OtherModule</span><span class="p">])</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span>  <span class="c1"># [&#39;str1&#39;, &#39;str2&#39;]</span>
+</pre></div>
+</div>
+<p>See also: <a class="reference internal" href="#injector.Binder.multibind" title="injector.Binder.multibind"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Binder.multibind()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="injector.noninjectable">
+<span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">noninjectable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.12)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">CallableT</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">CallableT</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#injector.noninjectable" title="Link to this definition">¶</a></dt>
+<dd><p>Mark some parameters as not injectable.</p>
+<p>This serves as documentation for people reading the code and will prevent
+Injector from ever attempting to provide the parameters.</p>
+<p>For example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Service</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="k">pass</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">SomeClass</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nd">@inject</span>
+<span class="gp">... </span>    <span class="nd">@noninjectable</span><span class="p">(</span><span class="s1">&#39;user_id&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">service</span><span class="p">:</span> <span class="n">Service</span><span class="p">,</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="c1"># ...</span>
+<span class="gp">... </span>        <span class="k">pass</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="#injector.noninjectable" title="injector.noninjectable"><code class="xref py py-func docutils literal notranslate"><span class="pre">noninjectable()</span></code></a> decorations can be stacked on top of
+each other and the order in which a function is decorated with
+<a class="reference internal" href="#injector.inject" title="injector.inject"><code class="xref py py-func docutils literal notranslate"><span class="pre">inject()</span></code></a> and <a class="reference internal" href="#injector.noninjectable" title="injector.noninjectable"><code class="xref py py-func docutils literal notranslate"><span class="pre">noninjectable()</span></code></a>
+doesn’t matter.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt>Generic type <a class="reference internal" href="#injector.NoInject" title="injector.NoInject"><code class="xref py py-data docutils literal notranslate"><span class="pre">NoInject</span></code></a></dt><dd><p>A nicer way to declare parameters as noninjectable.</p>
+</dd>
+<dt>Function <a class="reference internal" href="#injector.get_bindings" title="injector.get_bindings"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_bindings()</span></code></a></dt><dd><p>A way to inspect how various injection declarations interact with each other.</p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="injector.provider">
+<span class="sig-prename descclassname"><span class="pre">injector.</span></span><span class="sig-name descname"><span class="pre">provider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CallableT</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CallableT</span></span></span><a class="headerlink" href="#injector.provider" title="Link to this definition">¶</a></dt>
+<dd><p>Decorator for <a class="reference internal" href="#injector.Module" title="injector.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a> methods, registering a provider of a type.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">MyModule</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<span class="gp">... </span>  <span class="nd">@provider</span>
+<span class="gp">... </span>  <span class="k">def</span> <span class="nf">provide_name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="gp">... </span>      <span class="k">return</span> <span class="s1">&#39;Bob&#39;</span>
+</pre></div>
+</div>
+<p>&#64;provider-decoration implies &#64;inject so you can omit it and things will
+work just the same:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">MyModule2</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">configure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binder</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="mi">654</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">... </span>    <span class="nd">@provider</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">provide_str</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">injector</span> <span class="o">=</span> <span class="n">Injector</span><span class="p">(</span><span class="n">MyModule2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="go">&#39;654&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Injector API reference</a><ul>
+<li><a class="reference internal" href="#injector.Binder"><code class="docutils literal notranslate"><span class="pre">Binder</span></code></a><ul>
+<li><a class="reference internal" href="#injector.Binder.bind"><code class="docutils literal notranslate"><span class="pre">Binder.bind()</span></code></a></li>
+<li><a class="reference internal" href="#injector.Binder.install"><code class="docutils literal notranslate"><span class="pre">Binder.install()</span></code></a></li>
+<li><a class="reference internal" href="#injector.Binder.multibind"><code class="docutils literal notranslate"><span class="pre">Binder.multibind()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#injector.BoundKey"><code class="docutils literal notranslate"><span class="pre">BoundKey</span></code></a></li>
+<li><a class="reference internal" href="#injector.CallError"><code class="docutils literal notranslate"><span class="pre">CallError</span></code></a></li>
+<li><a class="reference internal" href="#injector.CallableProvider"><code class="docutils literal notranslate"><span class="pre">CallableProvider</span></code></a></li>
+<li><a class="reference internal" href="#injector.CircularDependency"><code class="docutils literal notranslate"><span class="pre">CircularDependency</span></code></a></li>
+<li><a class="reference internal" href="#injector.ClassProvider"><code class="docutils literal notranslate"><span class="pre">ClassProvider</span></code></a></li>
+<li><a class="reference internal" href="#injector.Error"><code class="docutils literal notranslate"><span class="pre">Error</span></code></a></li>
+<li><a class="reference internal" href="#injector.Inject"><code class="docutils literal notranslate"><span class="pre">Inject</span></code></a></li>
+<li><a class="reference internal" href="#injector.Injector"><code class="docutils literal notranslate"><span class="pre">Injector</span></code></a><ul>
+<li><a class="reference internal" href="#injector.Injector.binder"><code class="docutils literal notranslate"><span class="pre">Injector.binder</span></code></a></li>
+<li><a class="reference internal" href="#injector.Injector.call_with_injection"><code class="docutils literal notranslate"><span class="pre">Injector.call_with_injection()</span></code></a></li>
+<li><a class="reference internal" href="#injector.Injector.create_object"><code class="docutils literal notranslate"><span class="pre">Injector.create_object()</span></code></a></li>
+<li><a class="reference internal" href="#injector.Injector.get"><code class="docutils literal notranslate"><span class="pre">Injector.get()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#injector.InstanceProvider"><code class="docutils literal notranslate"><span class="pre">InstanceProvider</span></code></a></li>
+<li><a class="reference internal" href="#injector.Module"><code class="docutils literal notranslate"><span class="pre">Module</span></code></a><ul>
+<li><a class="reference internal" href="#injector.Module.configure"><code class="docutils literal notranslate"><span class="pre">Module.configure()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#injector.NoInject"><code class="docutils literal notranslate"><span class="pre">NoInject</span></code></a></li>
+<li><a class="reference internal" href="#injector.NoScope"><code class="docutils literal notranslate"><span class="pre">NoScope</span></code></a></li>
+<li><a class="reference internal" href="#injector.Provider"><code class="docutils literal notranslate"><span class="pre">Provider</span></code></a></li>
+<li><a class="reference internal" href="#injector.ProviderOf"><code class="docutils literal notranslate"><span class="pre">ProviderOf</span></code></a><ul>
+<li><a class="reference internal" href="#injector.ProviderOf.get"><code class="docutils literal notranslate"><span class="pre">ProviderOf.get()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#injector.Scope"><code class="docutils literal notranslate"><span class="pre">Scope</span></code></a><ul>
+<li><a class="reference internal" href="#injector.Scope.configure"><code class="docutils literal notranslate"><span class="pre">Scope.configure()</span></code></a></li>
+<li><a class="reference internal" href="#injector.Scope.get"><code class="docutils literal notranslate"><span class="pre">Scope.get()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#injector.SingletonScope"><code class="docutils literal notranslate"><span class="pre">SingletonScope</span></code></a></li>
+<li><a class="reference internal" href="#injector.ThreadLocalScope"><code class="docutils literal notranslate"><span class="pre">ThreadLocalScope</span></code></a></li>
+<li><a class="reference internal" href="#injector.UnknownArgument"><code class="docutils literal notranslate"><span class="pre">UnknownArgument</span></code></a></li>
+<li><a class="reference internal" href="#injector.UnknownProvider"><code class="docutils literal notranslate"><span class="pre">UnknownProvider</span></code></a></li>
+<li><a class="reference internal" href="#injector.UnsatisfiedRequirement"><code class="docutils literal notranslate"><span class="pre">UnsatisfiedRequirement</span></code></a></li>
+<li><a class="reference internal" href="#injector.get_bindings"><code class="docutils literal notranslate"><span class="pre">get_bindings()</span></code></a></li>
+<li><a class="reference internal" href="#injector.inject"><code class="docutils literal notranslate"><span class="pre">inject()</span></code></a></li>
+<li><a class="reference internal" href="#injector.is_decorated_with_inject"><code class="docutils literal notranslate"><span class="pre">is_decorated_with_inject()</span></code></a></li>
+<li><a class="reference internal" href="#injector.multiprovider"><code class="docutils literal notranslate"><span class="pre">multiprovider()</span></code></a></li>
+<li><a class="reference internal" href="#injector.noninjectable"><code class="docutils literal notranslate"><span class="pre">noninjectable()</span></code></a></li>
+<li><a class="reference internal" href="#injector.provider"><code class="docutils literal notranslate"><span class="pre">provider()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="logging.html"
+                          title="previous chapter">Logging</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="faq.html"
+                          title="next chapter">Frequently Asked Questions</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/api.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="faq.html" title="Frequently Asked Questions"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="logging.html" title="Logging"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Injector 0.21.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Injector API reference</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2013, Alec Thomas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

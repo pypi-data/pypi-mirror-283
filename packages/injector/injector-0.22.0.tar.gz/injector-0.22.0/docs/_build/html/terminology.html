@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Terminology &#8212; Injector 0.21.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=514cf933" />
+    
+    <script src="_static/documentation_options.js?v=c4f92b34"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Testing with Injector" href="testing.html" />
+    <link rel="prev" title="Injector Change Log" href="changelog.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="testing.html" title="Testing with Injector"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="changelog.html" title="Injector Change Log"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Injector 0.21.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Terminology</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="terminology">
+<h1>Terminology<a class="headerlink" href="#terminology" title="Link to this heading">¶</a></h1>
+<p>At its heart, Injector is simply a dictionary for mapping types to things that create instances of those types. This could be as simple as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nb">str</span><span class="p">:</span> <span class="s1">&#39;an instance of a string&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>For those new to dependency-injection and/or Guice, though, some of the terminology used may not be obvious.</p>
+<section id="provider">
+<h2>Provider<a class="headerlink" href="#provider" title="Link to this heading">¶</a></h2>
+<p>A means of providing an instance of a type. Built-in providers include:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="api.html#injector.ClassProvider" title="injector.ClassProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">ClassProvider</span></code></a> - creates a new instance from a class</p></li>
+<li><p><a class="reference internal" href="api.html#injector.InstanceProvider" title="injector.InstanceProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">InstanceProvider</span></code></a> - returns an existing instance directly</p></li>
+<li><p><a class="reference internal" href="api.html#injector.CallableProvider" title="injector.CallableProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">CallableProvider</span></code></a> - provides an instance by calling a function</p></li>
+</ul>
+<p>In order to create custom provider you need to subclass <a class="reference internal" href="api.html#injector.Provider" title="injector.Provider"><code class="xref py py-class docutils literal notranslate"><span class="pre">Provider</span></code></a> and override its <code class="xref py py-meth docutils literal notranslate"><span class="pre">get()</span></code> method.</p>
+</section>
+<section id="scope">
+<h2>Scope<a class="headerlink" href="#scope" title="Link to this heading">¶</a></h2>
+<p>By default, providers are executed each time an instance is required. Scopes allow this behaviour to be customised. For example, <cite>SingletonScope</cite> (typically used through the class decorator <cite>singleton</cite>), can be used to always provide the same instance of a class.</p>
+<p>Other examples of where scopes might be a threading scope, where instances are provided per-thread, or a request scope, where instances are provided per-HTTP-request.</p>
+<p>The default scope is <code class="xref py py-class docutils literal notranslate"><span class="pre">NoScope</span></code>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="scopes.html#scopes"><span class="std std-ref">Scopes</span></a></p>
+</div>
+</section>
+<section id="binding">
+<h2>Binding<a class="headerlink" href="#binding" title="Link to this heading">¶</a></h2>
+<p>A binding is the mapping of a unique binding key to a corresponding provider. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">injector</span> <span class="kn">import</span> <span class="n">InstanceProvider</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bindings</span> <span class="o">=</span> <span class="p">{</span>
+<span class="gp">... </span>  <span class="p">(</span><span class="n">Name</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span> <span class="n">InstanceProvider</span><span class="p">(</span><span class="s1">&#39;Sherlock&#39;</span><span class="p">),</span>
+<span class="gp">... </span>  <span class="p">(</span><span class="n">Description</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span> <span class="n">InstanceProvider</span><span class="p">(</span><span class="s1">&#39;A man of astounding insight&#39;</span><span class="p">),</span>
+<span class="gp">... </span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="binder">
+<h2>Binder<a class="headerlink" href="#binder" title="Link to this heading">¶</a></h2>
+<p>The <cite>Binder</cite> is simply a convenient wrapper around the dictionary that maps types to providers. It provides methods that make declaring bindings easier.</p>
+</section>
+<section id="module">
+<span id="id1"></span><h2>Module<a class="headerlink" href="#module" title="Link to this heading">¶</a></h2>
+<p>A <cite>Module</cite> configures bindings. It provides methods that simplify the process of binding a key to a provider. For example the above bindings would be created with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">injector</span> <span class="kn">import</span> <span class="n">Module</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">MyModule</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">configure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binder</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">Name</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="s1">&#39;Sherlock&#39;</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">Description</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="s1">&#39;A man of astounding insight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For more complex instance construction, methods decorated with <cite>&#64;provider</cite> will be called to resolve binding keys:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">injector</span> <span class="kn">import</span> <span class="n">provider</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">MyModule</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">configure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binder</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">Name</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="s1">&#39;Sherlock&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">... </span>    <span class="nd">@provider</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">describe</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Description</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="s1">&#39;A man of astounding insight (at </span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="injection">
+<h2>Injection<a class="headerlink" href="#injection" title="Link to this heading">¶</a></h2>
+<p>Injection is the process of providing an instance of a type, to a method that uses that instance. It is achieved with the <cite>inject</cite> decorator. Keyword arguments to inject define which arguments in its decorated method should be injected, and with what.</p>
+<p>Here is an example of injection on a module provider method, and on the constructor of a normal class:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">injector</span> <span class="kn">import</span> <span class="n">inject</span>
+
+<span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
+    <span class="nd">@inject</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">Name</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="n">Description</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="n">description</span>
+
+
+<span class="k">class</span> <span class="nc">UserModule</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">configure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binder</span><span class="p">):</span>
+       <span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">User</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">UserAttributeModule</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">configure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binder</span><span class="p">):</span>
+        <span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">Name</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="s1">&#39;Sherlock&#39;</span><span class="p">)</span>
+
+    <span class="nd">@provider</span>
+    <span class="k">def</span> <span class="nf">describe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">Name</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Description</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> is a man of astounding insight&#39;</span> <span class="o">%</span> <span class="n">name</span>
+</pre></div>
+</div>
+</section>
+<section id="injector">
+<h2>Injector<a class="headerlink" href="#injector" title="Link to this heading">¶</a></h2>
+<p>The <cite>Injector</cite> brings everything together. It takes a list of <cite>Module</cite> s, and configures them with a binder, effectively creating a dependency graph:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">injector</span> <span class="kn">import</span> <span class="n">Injector</span>
+<span class="n">injector</span> <span class="o">=</span> <span class="n">Injector</span><span class="p">([</span><span class="n">UserModule</span><span class="p">(),</span> <span class="n">UserAttributeModule</span><span class="p">()])</span>
+</pre></div>
+</div>
+<p>You can also pass classes instead of instances to <cite>Injector</cite>, it will instantiate them for you:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">injector</span> <span class="o">=</span> <span class="n">Injector</span><span class="p">([</span><span class="n">UserModule</span><span class="p">,</span> <span class="n">UserAttributeModule</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>The injector can then be used to acquire instances of a type, either directly:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Name</span><span class="p">)</span>
+<span class="go">&#39;Sherlock&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Description</span><span class="p">)</span>
+<span class="go">&#39;Sherlock is a man of astounding insight&#39;</span>
+</pre></div>
+</div>
+<p>Or transitively:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">user</span> <span class="o">=</span> <span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">User</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">isinstance</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">User</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">user</span><span class="o">.</span><span class="n">name</span>
+<span class="go">&#39;Sherlock&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">user</span><span class="o">.</span><span class="n">description</span>
+<span class="go">&#39;Sherlock is a man of astounding insight&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="assisted-injection">
+<h2>Assisted injection<a class="headerlink" href="#assisted-injection" title="Link to this heading">¶</a></h2>
+<p>Sometimes there are classes that have injectable and non-injectable parameters in their constructors. Let’s have for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Database</span><span class="p">:</span> <span class="k">pass</span>
+
+
+<span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+
+<span class="k">class</span> <span class="nc">UserUpdater</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">db</span><span class="p">:</span> <span class="n">Database</span><span class="p">,</span> <span class="n">user</span><span class="p">):</span>
+        <span class="k">pass</span>
+</pre></div>
+</div>
+<p>You may want to have database connection <cite>db</cite> injected into <cite>UserUpdater</cite> constructor, but in the same time provide <cite>user</cite> object by yourself, and assuming that <cite>user</cite> object is a value object and there’s many users in your application it doesn’t make much sense to inject objects of class <cite>User</cite>.</p>
+<p>In this situation there’s technique called Assisted injection:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">injector</span> <span class="kn">import</span> <span class="n">ClassAssistedBuilder</span>
+<span class="n">injector</span> <span class="o">=</span> <span class="n">Injector</span><span class="p">()</span>
+<span class="n">builder</span> <span class="o">=</span> <span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ClassAssistedBuilder</span><span class="p">[</span><span class="n">UserUpdater</span><span class="p">])</span>
+<span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s1">&#39;John&#39;</span><span class="p">)</span>
+<span class="n">user_updater</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">user</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This way we don’t get <cite>UserUpdater</cite> directly but rather a builder object. Such builder has <cite>build(**kwargs)</cite> method which takes non-injectable parameters, combines them with injectable dependencies of <cite>UserUpdater</cite> and calls <cite>UserUpdater</cite> initializer using all of them.</p>
+<p><cite>AssistedBuilder[T]</cite> and <cite>ClassAssistedBuilder[T]</cite> are injectable just as anything
+else, if you need instance of it you just ask for it like that:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NeedsUserUpdater</span><span class="p">:</span>
+    <span class="nd">@inject</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">builder</span><span class="p">:</span> <span class="n">ClassAssistedBuilder</span><span class="p">[</span><span class="n">UserUpdater</span><span class="p">]):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">updater_builder</span> <span class="o">=</span> <span class="n">builder</span>
+
+    <span class="k">def</span> <span class="nf">method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">updater</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">updater_builder</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><cite>ClassAssistedBuilder</cite> means it’ll construct a concrete class and no bindings will be used.</p>
+<p>If you want to follow bindings and construct class pointed to by a key you use <cite>AssistedBuilder</cite> and can do it like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">DB</span> <span class="o">=</span> <span class="n">Key</span><span class="p">(</span><span class="s1">&#39;DB&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">DBImplementation</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uri</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">pass</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">configure</span><span class="p">(</span><span class="n">binder</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">DB</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="n">DBImplementation</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">injector</span> <span class="o">=</span> <span class="n">Injector</span><span class="p">(</span><span class="n">configure</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">builder</span> <span class="o">=</span> <span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">AssistedBuilder</span><span class="p">[</span><span class="n">DB</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">isinstance</span><span class="p">(</span><span class="n">builder</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">uri</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">),</span> <span class="n">DBImplementation</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>More information on this topic:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://stackoverflow.com/questions/996300/how-to-use-google-guice-to-create-objects-that-require-parameters">“How to use Google Guice to create objects that require parameters?” on Stack Overflow</a></p></li>
+<li><p><a class="reference external" href="http://code.google.com/p/google-guice/wiki/AssistedInject">Google Guice assisted injection</a></p></li>
+</ul>
+</section>
+<section id="child-injectors">
+<h2>Child injectors<a class="headerlink" href="#child-injectors" title="Link to this heading">¶</a></h2>
+<p>Concept similar to Guice’s child injectors is supported by <cite>Injector</cite>. This way you can have one injector that inherits bindings from other injector (parent) but these bindings can be overriden in it and it doesn’t affect parent injector bindings:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">configure_parent</span><span class="p">(</span><span class="n">binder</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="s1">&#39;asd&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">configure_child</span><span class="p">(</span><span class="n">binder</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="s1">&#39;qwe&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">parent</span> <span class="o">=</span> <span class="n">Injector</span><span class="p">(</span><span class="n">configure_parent</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">child</span> <span class="o">=</span> <span class="n">parent</span><span class="o">.</span><span class="n">create_child_injector</span><span class="p">(</span><span class="n">configure_child</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">parent</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">str</span><span class="p">),</span> <span class="n">parent</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="go">(&#39;asd&#39;, 42)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">child</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">str</span><span class="p">),</span> <span class="n">child</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="go">(&#39;qwe&#39;, 42)</span>
+</pre></div>
+</div>
+<p><strong>Note</strong>: Default scopes are bound only to root injector. Binding them manually to child injectors will result in unexpected behaviour. <strong>Note 2</strong>: Once a binding key is present in parent injector scope (like <cite>singleton</cite> scope), provider saved there takes predecence when binding is overridden in child injector in the same scope. This behaviour is subject to change:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">configure_parent</span><span class="p">(</span><span class="n">binder</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="s1">&#39;asd&#39;</span><span class="p">,</span> <span class="n">scope</span><span class="o">=</span><span class="n">singleton</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">configure_child</span><span class="p">(</span><span class="n">binder</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="s1">&#39;qwe&#39;</span><span class="p">,</span> <span class="n">scope</span><span class="o">=</span><span class="n">singleton</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">parent</span> <span class="o">=</span> <span class="n">Injector</span><span class="p">(</span><span class="n">configure_parent</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">child</span> <span class="o">=</span> <span class="n">parent</span><span class="o">.</span><span class="n">create_child_injector</span><span class="p">(</span><span class="n">configure_child</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">child</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="c1"># this behaves as expected</span>
+<span class="go">&#39;qwe&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">parent</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="c1"># wat</span>
+<span class="go">&#39;qwe&#39;</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Terminology</a><ul>
+<li><a class="reference internal" href="#provider">Provider</a></li>
+<li><a class="reference internal" href="#scope">Scope</a></li>
+<li><a class="reference internal" href="#binding">Binding</a></li>
+<li><a class="reference internal" href="#binder">Binder</a></li>
+<li><a class="reference internal" href="#module">Module</a></li>
+<li><a class="reference internal" href="#injection">Injection</a></li>
+<li><a class="reference internal" href="#injector">Injector</a></li>
+<li><a class="reference internal" href="#assisted-injection">Assisted injection</a></li>
+<li><a class="reference internal" href="#child-injectors">Child injectors</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="changelog.html"
+                          title="previous chapter">Injector Change Log</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="testing.html"
+                          title="next chapter">Testing with Injector</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/terminology.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="testing.html" title="Testing with Injector"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="changelog.html" title="Injector Change Log"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Injector 0.21.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Terminology</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2013, Alec Thomas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

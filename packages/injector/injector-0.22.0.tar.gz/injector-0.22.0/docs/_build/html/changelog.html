@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Injector Change Log &#8212; Injector 0.21.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=514cf933" />
+    
+    <script src="_static/documentation_options.js?v=c4f92b34"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Terminology" href="terminology.html" />
+    <link rel="prev" title="Welcome to Injector’s documentation!" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="terminology.html" title="Terminology"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Injector’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Injector 0.21.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Injector Change Log</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="injector-change-log">
+<h1>Injector Change Log<a class="headerlink" href="#injector-change-log" title="Link to this heading">¶</a></h1>
+<section id="id1">
+<h2>0.21.0<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Improved the documentation, thanks to jonathanmach and Jakub Wilk</p></li>
+<li><p>Fixed a thread-safety regression</p></li>
+<li><p>Improved the type annotations, thanks to David Pärsson</p></li>
+<li><p>Fixed singleton scope behavior with parent/child injectors, thanks to David Pärsson</p></li>
+<li><p>Stopped using a deprecated test function, thanks to ljnsn</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>0.20.1<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added support for PEP 604 union types (Python 3.10+), thanks to David Pärsson</p></li>
+<li><p>Fixed building with pypandoc 1.8+, thanks to Søren Fuglede Jørgensen</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>0.20.0<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed handling of Union combined with Annotated, thanks to Tobias Nilsson</p></li>
+<li><p>Fixed AssitedBuilder/child Injector interaction, thanks to Erik Cederberg</p></li>
+<li><p>Made get_bindings() and injections work even if a injectee’s return type
+annotation is a forward reference that can’t be resolved</p></li>
+</ul>
+<p>Backwards incompatible:</p>
+<ul class="simple">
+<li><p>Dropped Python 3.6 support</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>0.19.0<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added the license to the source distribution, thanks to Joshua Adelman</p></li>
+<li><p>Added Python 3.9 and 3.10 support, this includes fixing Python 3.10 compatibility, thanks to Torge Matthies</p></li>
+<li><p>Improved the documentation, thanks to Takahiro Kojima</p></li>
+<li><p>Improved the source distribution so that it can be used to build and install wheels, thanks to Janusz Skonieczny</p></li>
+<li><p>Added requirements files for easier development, thanks to Greg Eremeev</p></li>
+</ul>
+<p>Backwards incompatible:</p>
+<ul class="simple">
+<li><p>Removed Python 3.5 support</p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>0.18.4<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed a bug where only one of multiple NoInject annotations was interpreted</p></li>
+</ul>
+</section>
+<section id="id6">
+<h2>0.18.3<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed Python 3.5.3 compatibility</p></li>
+</ul>
+</section>
+<section id="id7">
+<h2>0.18.2<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added remaining type hints to the codebase so that the client code can have better static typing safety</p></li>
+<li><p>Fixed UnsatisfiedRequirement string representation (this time for real)</p></li>
+<li><p>Added forward return type reference support to provider methods</p></li>
+</ul>
+</section>
+<section id="id8">
+<h2>0.18.1<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed UnsatisfiedRequirement instantiation (trying to get its string representation would fail)</p></li>
+<li><p>Fixed injecting a subclass of a generic type on Python versions older than 3.7.0</p></li>
+<li><p>Fixed regression that caused BoundKey injection failure</p></li>
+</ul>
+</section>
+<section id="id9">
+<h2>0.18.0<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added new public <a class="reference internal" href="api.html#injector.get_bindings" title="injector.get_bindings"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_bindings</span></code></a> function to see what parameters will be injected
+into a function</p></li>
+<li><p>Added new generic types using a draft implementation of <a class="reference external" href="https://www.python.org/dev/peps/pep-0593/">PEP 593</a>:
+<a class="reference internal" href="api.html#injector.Inject" title="injector.Inject"><code class="xref py py-data docutils literal notranslate"><span class="pre">Inject</span></code></a> and <a class="reference internal" href="api.html#injector.NoInject" title="injector.NoInject"><code class="xref py py-data docutils literal notranslate"><span class="pre">NoInject</span></code></a>. Those serve as additional ways to
+declare (non)injectable parameters while <a class="reference internal" href="api.html#injector.inject" title="injector.inject"><code class="xref py py-func docutils literal notranslate"><span class="pre">inject</span></code></a> won’t go away any time soon
+<a class="reference internal" href="api.html#injector.noninjectable" title="injector.noninjectable"><code class="xref py py-func docutils literal notranslate"><span class="pre">noninjectable</span></code></a> may be removed once <cite>NoInject</cite> is cofirmed to work.</p></li>
+</ul>
+<p>Backwards incompatible:</p>
+<ul class="simple">
+<li><p>Removed previously deprecated <cite>Key</cite>, <cite>BindingKey</cite>, <cite>SequenceKey</cite> and <cite>MappingKey</cite> pseudo-types</p></li>
+</ul>
+</section>
+<section id="id10">
+<h2>0.17.0<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added support for using <cite>typing.Dict</cite> and <cite>typing.List</cite> in multibindings. See <a class="reference internal" href="api.html#injector.Binder.multibind" title="injector.Binder.multibind"><code class="xref py py-meth docutils literal notranslate"><span class="pre">multibind</span></code></a>.</p></li>
+<li><p>Added multibinding-specific <a class="reference internal" href="api.html#injector.provider" title="injector.provider"><code class="xref py py-func docutils literal notranslate"><span class="pre">provider</span></code></a> variant: <a class="reference internal" href="api.html#injector.multiprovider" title="injector.multiprovider"><code class="xref py py-func docutils literal notranslate"><span class="pre">multiprovider</span></code></a></p></li>
+<li><p>Deprecated using <a class="reference internal" href="api.html#injector.provider" title="injector.provider"><code class="xref py py-func docutils literal notranslate"><span class="pre">provider</span></code></a> for multibindings</p></li>
+<li><p>Fixed failure to provide a default value to a <cite>NewType</cite>-aliased type with auto_bind enabled</p></li>
+<li><p>Deprecated <code class="xref py py-func docutils literal notranslate"><span class="pre">Key</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">SequenceKey</span></code> and
+<code class="xref py py-func docutils literal notranslate"><span class="pre">MappingKey</span></code> – use real types or type aliases instead</p></li>
+<li><p>Deprecated using single-item lists and dictionaries for multibindings - use real types or type aliases instead</p></li>
+</ul>
+<p>Technically backwards incompatible:</p>
+<ul class="simple">
+<li><p>typing.List and typing.Dict specializations are now explicitly disallowed as <a class="reference internal" href="api.html#injector.Binder.bind" title="injector.Binder.bind"><code class="xref py py-meth docutils literal notranslate"><span class="pre">bind</span></code></a>
+interfaces and types returned by <a class="reference internal" href="api.html#injector.provider" title="injector.provider"><code class="xref py py-func docutils literal notranslate"><span class="pre">provider</span></code></a>-decorated methods</p></li>
+</ul>
+</section>
+<section id="id11">
+<h2>0.16.2<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>(Re)added support for decorating classes themselves with <a class="reference internal" href="api.html#injector.inject" title="injector.inject"><code class="xref py py-func docutils literal notranslate"><span class="pre">&#64;inject</span></code></a>. This is the same
+as decorating their constructors. Among other things this gives us
+<a class="reference external" href="https://docs.python.org/3/library/dataclasses.html">dataclasses</a> integration.</p></li>
+</ul>
+</section>
+<section id="id12">
+<h2>0.16.1<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Reuploaded to fix incorrectly formatted project description</p></li>
+</ul>
+</section>
+<section id="id13">
+<h2>0.16.0<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added support for overriding injectable parameters with positional arguments (previously only
+possible with keyword arguments)</p></li>
+<li><p>Fixed crashes caused by typed self in method signatures</p></li>
+<li><p>Improved typing coverage</p></li>
+</ul>
+<p>Backwards incompatible:</p>
+<ul class="simple">
+<li><p>Dropped Python 3.4 support</p></li>
+<li><p>Removed previously deprecated constructs: with_injector, Injector.install_into, Binder.bind_scope</p></li>
+<li><p>Dependencies are no longer injected into Module.configure and raw module functions (previously
+deprecated)</p></li>
+</ul>
+<p>- Removed unofficial support for injecting into parent class constructors</p>
+</section>
+<section id="id14">
+<h2>0.15.0<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added type information for Injector.create_object() (patch #101 thanks to David Pärsson)</p></li>
+<li><p>Made the code easier to understand (patch #105 thanks to Christian Clauss)</p></li>
+<li><p>Opted the package into distributing type information and checking it (PEP 561)</p></li>
+</ul>
+</section>
+<section id="id15">
+<h2>0.14.1<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed regression that required all noninjectable parameters to be typed</p></li>
+</ul>
+</section>
+<section id="id16">
+<h2>0.14.0<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added NewType support</p></li>
+<li><p>Added type hints</p></li>
+</ul>
+<p>Backwards incompatible:</p>
+<ul class="simple">
+<li><p>Passing invalid parameter names to &#64;noninjectable() will now result in an error</p></li>
+<li><p>Dropped Python 3.3 support</p></li>
+</ul>
+</section>
+<section id="id17">
+<h2>0.13.4<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Deprecated with_injector. There’s no one migration path recommended, it depends on
+a particular case.</p></li>
+<li><p>Deprecated install_into.</p></li>
+</ul>
+</section>
+<section id="id18">
+<h2>0.13.3<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed a bug with classes deriving from PyQt classes not being able to be
+instantiated manually (bug #75, patch #76 thanks to David Pärsson)</p></li>
+</ul>
+</section>
+<section id="id19">
+<h2>0.13.2<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed a bug with values shared between Injectors in a hierarchy (bugs #52 and #72)</p></li>
+<li><p>Binding scopes explicitly (<code class="docutils literal notranslate"><span class="pre">Binder.bind_scope</span></code>) is no longer necessary and <code class="docutils literal notranslate"><span class="pre">bind_scope</span></code> is a no-op now.</p></li>
+</ul>
+</section>
+<section id="id20">
+<h2>0.13.1<a class="headerlink" href="#id20" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Improved some error messages</p></li>
+</ul>
+</section>
+<section id="id21">
+<h2>0.13.0<a class="headerlink" href="#id21" title="Link to this heading">¶</a></h2>
+<p>Backwards incompatible:</p>
+<ul class="simple">
+<li><p>Dropped Python 3.2 support</p></li>
+<li><p>Dropped Injector use_annotations constructor parameter. Whenever &#64;inject is
+used parameter annotations will be used automatically.</p></li>
+<li><p>Dropped Python 2 support (this includes PyPy)</p></li>
+<li><p>Removed &#64;provides decorator, use &#64;provider instead</p></li>
+<li><p>Removed support for passing keyword arguments to &#64;inject</p></li>
+</ul>
+</section>
+<section id="id22">
+<h2>0.12.0<a class="headerlink" href="#id22" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed binding inference in presence of * and ** arguments (previously Injector
+would generate extra arguments, now it just ignores them)</p></li>
+<li><p>Improved error reporting</p></li>
+<li><p>Fixed compatibility with newer typing versions (that includes the one
+bundled with Python 3.6)</p></li>
+</ul>
+<p>Technically backwards incompatible:</p>
+<ul>
+<li><p>Forward references as PEP 484 understands them are being resolved now when
+Python 3-style annotations are used. See
+<a class="reference external" href="https://www.python.org/dev/peps/pep-0484/#forward-references">https://www.python.org/dev/peps/pep-0484/#forward-references</a> for details.</p>
+<p>Optional parameters are treated as compulsory for the purpose of injection.</p>
+</li>
+</ul>
+</section>
+<section id="id23">
+<h2>0.11.1<a class="headerlink" href="#id23" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>0.11.0 packages uploaded to PyPI are broken (can’t be installed), this is
+a fix-only release.</p></li>
+</ul>
+</section>
+<section id="id24">
+<h2>0.11.0<a class="headerlink" href="#id24" title="Link to this heading">¶</a></h2>
+<ul>
+<li><p>The following way to declare dependencies is introduced and recommended
+now:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SomeClass</span><span class="p">:</span>
+    <span class="nd">@inject</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">OtherClass</span><span class="p">):</span>
+        <span class="c1"># ...</span>
+</pre></div>
+</div>
+<p>The following ways are still supported but are deprecated and will be
+removed in the future:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python 2-compatible style</span>
+<span class="k">class</span> <span class="nc">SomeClass</span>
+    <span class="nd">@inject</span><span class="p">(</span><span class="n">other</span><span class="o">=</span><span class="n">OtherClass</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="c1"># ...</span>
+
+<span class="c1"># Python 3 style without @inject-decoration but with use_annotations</span>
+<span class="k">class</span> <span class="nc">SomeClass</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">OtherClass</span><span class="p">):</span>
+        <span class="c1"># ...</span>
+
+<span class="n">injector</span> <span class="o">=</span> <span class="n">Injector</span><span class="p">(</span><span class="n">use_annotations</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># ...</span>
+</pre></div>
+</div>
+</li>
+<li><p>The following way to declare Module provider methods is introduced and
+recommended now:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyModule</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+    <span class="nd">@provider</span>
+    <span class="k">def</span> <span class="nf">provide_something</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dependency</span><span class="p">:</span> <span class="n">Dependency</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Something</span><span class="p">:</span>
+        <span class="c1"># ...</span>
+</pre></div>
+</div>
+<p>&#64;provider implies &#64;inject.</p>
+<p>Previously it would look like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyModule</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+    <span class="nd">@provides</span><span class="p">(</span><span class="n">Something</span><span class="p">)</span>
+    <span class="nd">@inject</span>
+    <span class="k">def</span> <span class="nf">provide_something</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dependency</span><span class="p">:</span> <span class="n">Dependency</span><span class="p">):</span>
+        <span class="c1"># ...</span>
+</pre></div>
+</div>
+<p>The <code class="xref py py-func docutils literal notranslate"><span class="pre">provides()</span></code> decorator will be removed in the future.</p>
+</li>
+<li><p>Added a <a class="reference internal" href="api.html#injector.noninjectable" title="injector.noninjectable"><code class="xref py py-func docutils literal notranslate"><span class="pre">noninjectable()</span></code></a> decorator to mark parameters as not injectable
+(this serves as documentation and a way to avoid some runtime errors)</p></li>
+</ul>
+<p>Backwards incompatible:</p>
+<ul>
+<li><p>Removed support for decorating classes with <a class="reference internal" href="api.html#injector.inject" title="injector.inject"><code class="xref py py-func docutils literal notranslate"><span class="pre">&#64;inject</span></code></a>. Previously:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@inject</span><span class="p">(</span><span class="n">something</span><span class="o">=</span><span class="n">Something</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">Class</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<p>Now:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Class</span><span class="p">:</span>
+    <span class="nd">@inject</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">something</span><span class="p">:</span> <span class="n">Something</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">something</span> <span class="o">=</span> <span class="n">something</span>
+</pre></div>
+</div>
+</li>
+<li><p>Removed support for injecting partially applied functions, previously:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@inject</span><span class="p">(</span><span class="n">something</span><span class="o">=</span><span class="n">Something</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">some_function</span><span class="p">(</span><span class="n">something</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+
+<span class="k">class</span> <span class="nc">Class</span><span class="p">:</span>
+    <span class="nd">@inject</span><span class="p">(</span><span class="n">function</span><span class="o">=</span><span class="n">some_function</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">function</span><span class="p">):</span>
+        <span class="c1"># ...</span>
+</pre></div>
+</div>
+<p>Now you need to move the function with injectable dependencies to a class.</p>
+</li>
+<li><p>Removed support for getting <code class="xref py py-class docutils literal notranslate"><span class="pre">AssistedBuilder(callable=...)</span></code></p></li>
+<li><p>Dropped Python 2.6 support</p></li>
+<li><p>Changed the way <code class="xref py py-class docutils literal notranslate"><span class="pre">AssistedBuilder</span></code> and <a class="reference internal" href="api.html#injector.ProviderOf" title="injector.ProviderOf"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProviderOf</span></code></a> are used.
+Previously:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">builder1</span> <span class="o">=</span> <span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">AssistedBuilder</span><span class="p">(</span><span class="n">Something</span><span class="p">))</span>
+<span class="c1"># or: builder1 = injector.get(AssistedBuilder(interface=Something))</span>
+<span class="n">builder2</span> <span class="o">=</span> <span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">AssistedBuilder</span><span class="p">(</span><span class="bp">cls</span><span class="o">=</span><span class="n">SomethingElse</span><span class="p">))</span>
+<span class="n">provider</span> <span class="o">=</span> <span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ProviderOf</span><span class="p">(</span><span class="n">SomeOtherThing</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Now:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">builder1</span> <span class="o">=</span> <span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">AssistedBuilder</span><span class="p">[</span><span class="n">Something</span><span class="p">])</span>
+<span class="n">builder2</span> <span class="o">=</span> <span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ClassAssistedBuilder</span><span class="p">[</span><span class="bp">cls</span><span class="o">=</span><span class="n">SomethingElse</span><span class="p">])</span>
+<span class="n">provider</span> <span class="o">=</span> <span class="n">injector</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ProviderOf</span><span class="p">[</span><span class="n">SomeOtherThing</span><span class="p">])</span>
+</pre></div>
+</div>
+</li>
+<li><p>Removed support for injecting into non-constructor methods</p></li>
+</ul>
+</section>
+<section id="id25">
+<h2>0.10.1<a class="headerlink" href="#id25" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed a false positive bug in dependency cycle detection (AssistedBuilder can be
+used to break dependency cycles now)</p></li>
+</ul>
+</section>
+<section id="id26">
+<h2>0.10.0<a class="headerlink" href="#id26" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">injector.Provider.get()</span></code> now requires an <a class="reference internal" href="api.html#injector.Injector" title="injector.Injector"><code class="xref py py-class docutils literal notranslate"><span class="pre">injector.Injector</span></code></a> instance as
+its parameter</p></li>
+<li><p>deprecated injecting arguments into modules (be it functions/callables,
+<a class="reference internal" href="api.html#injector.Module" title="injector.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a> constructors or <a class="reference internal" href="api.html#injector.Module.configure" title="injector.Module.configure"><code class="xref py py-meth docutils literal notranslate"><span class="pre">injector.Module.configure()</span></code></a> methods)</p></li>
+<li><p>removed <cite>extends</cite> decorator</p></li>
+<li><p>few classes got useful __repr__ implementations</p></li>
+<li><p>fixed injecting ProviderOf and AssistedBuilders when <a class="reference internal" href="api.html#injector.Injector" title="injector.Injector"><code class="xref py py-class docutils literal notranslate"><span class="pre">injector.Injector</span></code></a>
+auto_bind is set to False (previously would result in <cite>UnsatisfiedRequirement</cite>
+error)</p></li>
+<li><p>fixed crash occurring when Python 3-function annotation use is enabled and
+__init__ method has a return value annotation (“injector.UnknownProvider:
+couldn’t determine provider for None to None”), should also apply to free
+functions as well</p></li>
+</ul>
+</section>
+<section id="id27">
+<h2>0.9.1<a class="headerlink" href="#id27" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Bug fix release.</p></li>
+</ul>
+</section>
+<section id="id28">
+<h2>0.9.0<a class="headerlink" href="#id28" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Child <a class="reference internal" href="api.html#injector.Injector" title="injector.Injector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Injector</span></code></a> can rebind dependancies bound in parent Injector (that changes <a class="reference internal" href="api.html#injector.Provider" title="injector.Provider"><code class="xref py py-class docutils literal notranslate"><span class="pre">Provider</span></code></a> semantics), thanks to Ilya Orlov</p></li>
+<li><p><a class="reference internal" href="api.html#injector.CallableProvider" title="injector.CallableProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">CallableProvider</span></code></a> callables can be injected into, thanks to Ilya Strukov</p></li>
+<li><p>One can request <a class="reference internal" href="api.html#injector.ProviderOf" title="injector.ProviderOf"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProviderOf</span></code></a> (Interface) and get a <code class="xref py py-class docutils literal notranslate"><span class="pre">BoundProvider</span></code> which can be used to get an implementation of Interface when needed</p></li>
+</ul>
+</section>
+<section id="id29">
+<h2>0.8.0<a class="headerlink" href="#id29" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Binding annotations are removed. Use <code class="xref py py-func docutils literal notranslate"><span class="pre">Key()</span></code> to create unique types instead.</p></li>
+</ul>
+</section>
+<section id="id30">
+<h2>0.7.9<a class="headerlink" href="#id30" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed regression with injecting unbound key resulting in None instead of raising an exception</p></li>
+</ul>
+</section>
+<section id="id31">
+<h2>0.7.8<a class="headerlink" href="#id31" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Exception is raised when <a class="reference internal" href="api.html#injector.Injector" title="injector.Injector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Injector</span></code></a> can’t install itself into a class instance due to __slots__ presence</p></li>
+<li><p>Some of exception messages are now more detailed to make debugging easier when injection fails</p></li>
+<li><p>You can inject functions now - <a class="reference internal" href="api.html#injector.Injector" title="injector.Injector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Injector</span></code></a> provides a wrapper that takes care of injecting dependencies into the original function</p></li>
+</ul>
+</section>
+<section id="id32">
+<h2>0.7.7<a class="headerlink" href="#id32" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Made <code class="xref py py-class docutils literal notranslate"><span class="pre">AssistedBuilder</span></code> behave more explicitly: it can build either innstance of a concrete class (<code class="docutils literal notranslate"><span class="pre">AssistedBuilder(cls=Class)</span></code>) or it will follow Injector bindings (if exist) and construct instance of a class pointed by an interface (<code class="docutils literal notranslate"><span class="pre">AssistedBuilder(interface=Interface)</span></code>). <code class="docutils literal notranslate"><span class="pre">AssistedBuilder(X)</span></code> behaviour remains the same, it’s equivalent to <code class="docutils literal notranslate"><span class="pre">AssistedBuilder(interface=X)</span></code></p></li>
+</ul>
+</section>
+<section id="id33">
+<h2>0.7.6<a class="headerlink" href="#id33" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Auto-convert README.md to RST for PyPi.</p></li>
+</ul>
+</section>
+<section id="id34">
+<h2>0.7.5<a class="headerlink" href="#id34" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added a ChangeLog!</p></li>
+<li><p>Added support for using Python3 annotations as binding types.</p></li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Injector Change Log</a><ul>
+<li><a class="reference internal" href="#id1">0.21.0</a></li>
+<li><a class="reference internal" href="#id2">0.20.1</a></li>
+<li><a class="reference internal" href="#id3">0.20.0</a></li>
+<li><a class="reference internal" href="#id4">0.19.0</a></li>
+<li><a class="reference internal" href="#id5">0.18.4</a></li>
+<li><a class="reference internal" href="#id6">0.18.3</a></li>
+<li><a class="reference internal" href="#id7">0.18.2</a></li>
+<li><a class="reference internal" href="#id8">0.18.1</a></li>
+<li><a class="reference internal" href="#id9">0.18.0</a></li>
+<li><a class="reference internal" href="#id10">0.17.0</a></li>
+<li><a class="reference internal" href="#id11">0.16.2</a></li>
+<li><a class="reference internal" href="#id12">0.16.1</a></li>
+<li><a class="reference internal" href="#id13">0.16.0</a></li>
+<li><a class="reference internal" href="#id14">0.15.0</a></li>
+<li><a class="reference internal" href="#id15">0.14.1</a></li>
+<li><a class="reference internal" href="#id16">0.14.0</a></li>
+<li><a class="reference internal" href="#id17">0.13.4</a></li>
+<li><a class="reference internal" href="#id18">0.13.3</a></li>
+<li><a class="reference internal" href="#id19">0.13.2</a></li>
+<li><a class="reference internal" href="#id20">0.13.1</a></li>
+<li><a class="reference internal" href="#id21">0.13.0</a></li>
+<li><a class="reference internal" href="#id22">0.12.0</a></li>
+<li><a class="reference internal" href="#id23">0.11.1</a></li>
+<li><a class="reference internal" href="#id24">0.11.0</a></li>
+<li><a class="reference internal" href="#id25">0.10.1</a></li>
+<li><a class="reference internal" href="#id26">0.10.0</a></li>
+<li><a class="reference internal" href="#id27">0.9.1</a></li>
+<li><a class="reference internal" href="#id28">0.9.0</a></li>
+<li><a class="reference internal" href="#id29">0.8.0</a></li>
+<li><a class="reference internal" href="#id30">0.7.9</a></li>
+<li><a class="reference internal" href="#id31">0.7.8</a></li>
+<li><a class="reference internal" href="#id32">0.7.7</a></li>
+<li><a class="reference internal" href="#id33">0.7.6</a></li>
+<li><a class="reference internal" href="#id34">0.7.5</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="index.html"
+                          title="previous chapter">Welcome to Injector’s documentation!</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="terminology.html"
+                          title="next chapter">Terminology</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/changelog.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="terminology.html" title="Terminology"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Injector’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Injector 0.21.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Injector Change Log</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2013, Alec Thomas.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>
