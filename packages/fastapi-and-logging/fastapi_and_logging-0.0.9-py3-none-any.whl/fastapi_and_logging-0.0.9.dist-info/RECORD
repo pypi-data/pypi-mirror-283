@@ -1,0 +1,14 @@
+fastapi_and_logging/__init__.py,sha256=ltNIFTmNxtyyBCNxcf5ru1wq_RGbhzZwftMhfCgO4tI,261
+fastapi_and_logging/enums.py,sha256=9-qJT_Hp38MqslyuL5s77RpqgKfsgKbQ1INiav-_is8,331
+fastapi_and_logging/fastapi/__init__.py,sha256=mEBxcU-AiQYCjY1tJz_qTkU8esRZoQ-oWT3-3PTqmD8,415
+fastapi_and_logging/fastapi/exception.py,sha256=PgFMvrNkoqTbh_OTh36JgUrDZtZ1ZoaJBCqyO7KqTB4,3148
+fastapi_and_logging/fastapi/incoming.py,sha256=GKvzb85FTe4fENJuxEE-LPFhjB1JsdGE_iZpgBhBJao,2717
+fastapi_and_logging/fastapi/route.py,sha256=XArcjxvqcmCQpzP4LTiyDohZbG1F3JL-N5UbpHg2m3I,2342
+fastapi_and_logging/http_clients/__init__.py,sha256=71QYGjNsEsR-nhk73CtRdynCT-z0FmptshZMyMNcK38,121
+fastapi_and_logging/http_clients/aiohttp.py,sha256=JKatmHyP-YswbwMhRqyQZIrkKSj7AUTttyCOAhjxtw4,2778
+fastapi_and_logging/http_clients/httpx.py,sha256=jVAKhqiap1K8nR9I0tF22rDqyhGEPBhDB5K6BzRprP8,5265
+fastapi_and_logging/logging.py,sha256=3IlpaUr3K4W--98u5p9_USNSkVjtTFmVOZdYm0ycGUE,2929
+fastapi_and_logging-0.0.9.dist-info/LICENSE,sha256=kBemOYad_QBxSF7AvAGCQu-o8oP2yla-2xUVBklZlRQ,1076
+fastapi_and_logging-0.0.9.dist-info/METADATA,sha256=JA77PYhPHkY-5crwJUuomsG_g5lks9NLkTez3862fGg,10767
+fastapi_and_logging-0.0.9.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+fastapi_and_logging-0.0.9.dist-info/RECORD,,
