@@ -1,0 +1,3 @@
+[console_scripts]
+django_ifc_manage=django_ifc.manage:main
+
