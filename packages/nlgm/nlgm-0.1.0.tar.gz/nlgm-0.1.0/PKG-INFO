@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: nlgm
+Version: 0.1.0
+Summary: Implementation of the neural latent geometry search framework
+Author-email: Anupam Bhakta <ab5494@columbia.edu>, Adam Mehdi <adm2243@columbia.edu>, Kevin Qiu <kzq2000@columbia.edu>
+License: MIT License
+        
+        Copyright (c) 2024-present Anupam Bhakta, Adam Mehdi, Kevin Qiu
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/ae-bii/nlgm
+Project-URL: Issues, https://github.com/ae-bii/nlgm/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+<h3 align="center">
+    <img src="https://raw.githubusercontent.com/ae-bii/nlgm/main/assets/nlgm_banner.png" alt="nlgm banner"/>
+</h3>
+
+--------------------------------------------------------------------------------
+
+<!-- # Neural Latent Geometry Manifolds -->
+
+> [!CAUTION]
+> The package is still in its early stages. Updates may cause breaking changes.
+
+Neural Latent Geometry Manifolds (`nlgm`) is a Python package inspired by the approach taken in [Neural Latent Geometry Search: Product Manifold Inference via Gromov-Hausdorff-Informed Bayesian Optimization](https://arxiv.org/pdf/2309.04810.pdf).
+
+The main high-level features include:
+- Implementation of the neural latent geometry search framework, a novel approach to infer product manifolds by leveraging Gromov-Hausdorff distances.
+- Various optimization methods to suit different requirements.
+
+This package is compatible with libraries like NumPy and PyTorch. For documentation, see [docs](https://ae-bii.github.io/nlgm/).
+
+## Installation
+
+To install `nlgm`, you can use pip:
+
+```bash
+pip install nlgm
+```
+
+## Usage
+
+After installing, you can import the package and use it by following the [example](https://github.com/ae-bii/nlgm/blob/main/examples/example.py).
+
+## Contributing
+
+Contributions to `nlgm` are welcome! To contribute:
+
+1. Fork the repository.
+2. Install the pre-commit hooks using `pre-commit install`.
+3. Create a new branch for your changes.
+4. Make your changes in your branch.
+5. Submit a pull request.
+
+Before submitting your pull request, please make sure your changes pass all tests.
+
+## License
+
+`nlgm` is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.

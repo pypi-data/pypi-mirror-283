@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+nlgm/__init__.py
+nlgm/autoencoder.py
+nlgm/manifolds.py
+nlgm/optimizers.py
+nlgm/searchspace.py
+nlgm/train.py
+nlgm/visualize.py
+nlgm.egg-info/PKG-INFO
+nlgm.egg-info/SOURCES.txt
+nlgm.egg-info/dependency_links.txt
+nlgm.egg-info/top_level.txt
