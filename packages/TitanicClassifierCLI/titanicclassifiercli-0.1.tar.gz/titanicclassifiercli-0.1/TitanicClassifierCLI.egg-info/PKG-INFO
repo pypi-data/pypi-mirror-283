@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: TitanicClassifierCLI
+Version: 0.1
+Summary: A CLI tool for Titanic survival prediction
+Home-page: https://github.com/tuusuario/TitanicClassifierCLI
+Author: Jhon Felipe Delgado Dalazar
+Author-email: jhonfeldel@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: Click
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+
+
+# Titanic Classifier CLI
+
+## Description
+Titanic Classifier CLI is a proof-of-concept machine learning project that predicts survival on the Titanic. It provides a command-line interface for training a model on the Titanic dataset and making predictions.
+
+## Features
+- Data preprocessing and cleaning
+- Model training using RandomForest classifier
+- Model evaluation with various metrics
+- Prediction on new data
+- Command-line interface for easy interaction
