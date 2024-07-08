@@ -1,0 +1,12 @@
+pyspline/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+pyspline/arrays.py,sha256=uJTwTKVf4aKolx6-kxgC1GfcVWOjodM-gT4zJ1UiGsA,7045
+pyspline/basis.py,sha256=GSurUwo0tN-CgMpLKdNb40JKc8k-C5nna-b-N19wif0,3664
+pyspline/formatter.py,sha256=JmMka8_oLycmO_J-pD_jF8ZpUYZyFPh5hWnlVeDyMb8,1561
+pyspline/psplines.py,sha256=D1n7yKgPJSQ2c_PwbzN24AcTJHelOJb4UZn6RLOYUN8,9658
+pyspline/psplines_inner.py,sha256=HDGe8Q4wYvIcCA27Fc6c0th2DrcZqlZBHNjRDCb4emc,11833
+pyspline/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyspline-0.0.1.dist-info/LICENSE,sha256=ylRZd1oH89edNOeKCN_rNqGntB_44vTz7vO8sPUvVxU,1465
+pyspline-0.0.1.dist-info/METADATA,sha256=1EB1GsyvflvHRFd9O7dnrDEv3CTLFY1oky1IWUEjgOg,3465
+pyspline-0.0.1.dist-info/WHEEL,sha256=0XQbNV6JE5ziJsWjIU8TRRv0N6SohNonLWgP86g5fiI,109
+pyspline-0.0.1.dist-info/top_level.txt,sha256=W1sNZHXx03aI5Gu3PCj7kl0H2mecjEiPMf9JBvDPaag,9
+pyspline-0.0.1.dist-info/RECORD,,
