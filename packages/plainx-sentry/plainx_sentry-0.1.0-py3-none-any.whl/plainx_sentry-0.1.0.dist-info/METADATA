@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: plainx-sentry
+Version: 0.1.0
+Summary: 
+Author: Dave Gaeddert
+Author-email: dave.gaeddert@dropseed.dev
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: sentry-sdk (>=1.8.0,<2.0.0)
