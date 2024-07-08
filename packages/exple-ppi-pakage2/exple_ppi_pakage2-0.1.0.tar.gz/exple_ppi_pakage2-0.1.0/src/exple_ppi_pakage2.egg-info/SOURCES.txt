@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/examplepy/__init__.py
+src/examplepy/module1.py
+src/exple_ppi_pakage2.egg-info/PKG-INFO
+src/exple_ppi_pakage2.egg-info/SOURCES.txt
+src/exple_ppi_pakage2.egg-info/dependency_links.txt
+src/exple_ppi_pakage2.egg-info/requires.txt
+src/exple_ppi_pakage2.egg-info/top_level.txt
+tests/test_module1.py
