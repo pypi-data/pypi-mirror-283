@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+face_aginggan.egg-info/PKG-INFO
+face_aginggan.egg-info/SOURCES.txt
+face_aginggan.egg-info/dependency_links.txt
+face_aginggan.egg-info/requires.txt
+face_aginggan.egg-info/top_level.txt
