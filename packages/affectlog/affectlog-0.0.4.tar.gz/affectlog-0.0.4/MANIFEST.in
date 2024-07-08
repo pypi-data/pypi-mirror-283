@@ -1,0 +1,3 @@
+include NEWS.md
+include affectlog/datasets/data/*
+include affectlog/documentation.md
