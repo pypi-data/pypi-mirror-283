@@ -1,0 +1,2 @@
+[console_scripts]
+export-certs = traefik_cert_exporter.cli:export_certs
