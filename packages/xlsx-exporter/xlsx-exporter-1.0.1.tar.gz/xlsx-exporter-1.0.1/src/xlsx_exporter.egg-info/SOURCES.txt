@@ -1,0 +1,11 @@
+MANIFEST.in
+setup.py
+src/templates/success.html
+src/templates/upload.html
+src/xlsx_exporter.egg-info/PKG-INFO
+src/xlsx_exporter.egg-info/SOURCES.txt
+src/xlsx_exporter.egg-info/dependency_links.txt
+src/xlsx_exporter.egg-info/entry_points.txt
+src/xlsx_exporter.egg-info/not-zip-safe
+src/xlsx_exporter.egg-info/requires.txt
+src/xlsx_exporter.egg-info/top_level.txt

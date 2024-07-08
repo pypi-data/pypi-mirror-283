@@ -1,0 +1,3 @@
+[testy]
+xlsx-exporter = xlsxExporter.plugin:plugin_entry_point
+
