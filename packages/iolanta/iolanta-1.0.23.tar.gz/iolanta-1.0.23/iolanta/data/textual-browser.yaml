@@ -1,0 +1,31 @@
+- $id: https://iolanta.tech/cli/interactive
+  iolanta:hasDefaultFacet:
+    $id: python://iolanta.facets.textual_browser.TextualBrowserFacet
+
+- $id: https://iolanta.tech/cli/textual
+  iolanta:hasDefaultFacet:
+    $id: python://iolanta.facets.textual_default.TextualDefaultFacet
+
+- $id: https://iolanta.tech/cli/link
+  iolanta:hasDefaultFacet:
+    $id: python://iolanta.facets.textual_link.TextualLinkFacet
+
+- $id: https://iolanta.tech/env/title
+  iolanta:hasDefaultFacet:
+    $id: python://iolanta.facets.title.TitleFacet
+
+- $id: rdfs:Class
+  iolanta:hasInstanceFacet:
+    $id: python://iolanta.facets.textual_class.Class
+    iolanta:supports:
+      $id: https://iolanta.tech/cli/default
+
+- $id: owl:Ontology
+  iolanta:hasInstanceFacet:
+    $id: python://iolanta.facets.textual_ontology.OntologyFacet
+    iolanta:supports:
+      $id: https://iolanta.tech/cli/default
+
+- $id: https://iolanta.tech/qname
+  iolanta:hasDefaultFacet:
+    $id: python://iolanta.facets.qname.QNameFacet
