@@ -1,0 +1,10 @@
+git_branch_sweeper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+git_branch_sweeper/cli.py,sha256=-_cEtAy9wOQbtGhZ9ElZturW6mqmaIfU3R_MV-zpPgE,2658
+git_branch_sweeper/git.py,sha256=2OsYl-uM1ThkIeNlJ90ReL2o9g8Q7tpsITm4L8or9j8,2685
+git_branch_sweeper/process.py,sha256=4Wc3wsQ922Rwm6MLPyvOtWybBwBUrXMzchv36X6LDWw,266
+git_branch_sweeper/styles.py,sha256=jsX04FF30-XVPlFROS9LpNjTqe_v6MN5Mc_Rm7dP7Lc,454
+git_branch_sweeper/utils.py,sha256=GBSjFeP0aYeSnMxjqX4mjJx51-Q1Gu_9FWkig1jFu8c,516
+git_branch_sweeper-1.0.0.dist-info/METADATA,sha256=3i-XLMowEJozXzPj2L91v81__yGo8PDwmUwTD9nn9EY,4014
+git_branch_sweeper-1.0.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+git_branch_sweeper-1.0.0.dist-info/entry_points.txt,sha256=L11jc8mt-5oewnT84dr3KjUD2FNRmUkbruuB9z-u0DA,66
+git_branch_sweeper-1.0.0.dist-info/RECORD,,
