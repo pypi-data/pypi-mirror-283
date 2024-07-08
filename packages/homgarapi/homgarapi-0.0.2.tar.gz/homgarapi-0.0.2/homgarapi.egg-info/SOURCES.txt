@@ -1,0 +1,14 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+homgarapi/__init__.py
+homgarapi/__main__.py
+homgarapi/api.py
+homgarapi/devices.py
+homgarapi/logutil.py
+homgarapi.egg-info/PKG-INFO
+homgarapi.egg-info/SOURCES.txt
+homgarapi.egg-info/dependency_links.txt
+homgarapi.egg-info/requires.txt
+homgarapi.egg-info/top_level.txt

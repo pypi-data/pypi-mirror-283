@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: homgarapi
+Version: 0.0.2
+Summary: HomGar API client
+Home-page: https://github.com/Remboooo/homgarapi
+Download-URL: https://github.com/Remboooo/homgarapi/archive/refs/tags/v0.0.2.tar.gz
+Author: Rembrand van Lakwijk
+Author-email: rem@lakwijk.com
+License: MIT
+Keywords: homgar
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+License-File: LICENSE.txt
