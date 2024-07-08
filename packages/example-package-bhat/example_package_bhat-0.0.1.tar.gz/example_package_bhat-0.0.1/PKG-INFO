@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: example_package_bhat
+Version: 0.0.1
+Summary: A small example package
+Author-Email: Suchitra Bhat <bhat.suchi@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# packagingexample
