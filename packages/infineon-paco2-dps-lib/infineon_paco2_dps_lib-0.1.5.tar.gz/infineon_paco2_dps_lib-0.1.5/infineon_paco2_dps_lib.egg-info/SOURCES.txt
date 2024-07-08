@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+infineon_paco2_dps_lib.egg-info/PKG-INFO
+infineon_paco2_dps_lib.egg-info/SOURCES.txt
+infineon_paco2_dps_lib.egg-info/dependency_links.txt
+infineon_paco2_dps_lib.egg-info/requires.txt
+infineon_paco2_dps_lib.egg-info/top_level.txt
