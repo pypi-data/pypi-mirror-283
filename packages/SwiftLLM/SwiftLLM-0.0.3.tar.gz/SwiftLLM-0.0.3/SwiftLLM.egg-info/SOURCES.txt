@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+SwiftLLM.egg-info/PKG-INFO
+SwiftLLM.egg-info/SOURCES.txt
+SwiftLLM.egg-info/dependency_links.txt
+SwiftLLM.egg-info/requires.txt
+SwiftLLM.egg-info/top_level.txt
+swiftllm/__init__.py
+swiftllm/genai_wrapper.py
+swiftllm/openai_wrapper.py
