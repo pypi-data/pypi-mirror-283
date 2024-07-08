@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: docusearch
+Version: 0.2.1
+Summary: Query documents quickly and efficiently
+Home-page: https://arc30.com/
+Author: Arshaan Sayed
+Author-email: as1429@duke.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: beautifulsoup4 ==4.12.3
+Requires-Dist: EbookLib ==0.18
+Requires-Dist: faiss-cpu ==1.8.0
+Requires-Dist: numpy ==1.26.0
+Requires-Dist: odfpy ==1.4.1
+Requires-Dist: openai ==0.28.0
+Requires-Dist: pdfplumber ==0.11.1
+Requires-Dist: python-docx ==1.1.2
+Requires-Dist: tiktoken ==0.7.0
+
