@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "pycredentials"
+version = "0.1.0"
+packages = [
+    { include = "credentials", from="src" },
+]
+description = "Store your credentials securely."
+authors = ["ilotoki0804 <ilotoki0804@gmail.com>"]
+readme = "README.md"
+keywords = [
+    "secrets",
+]
+license = "MIT"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[tool.poetry.urls]
+Homepage = "https://ilotoki0804.gitbook.io/pycredentials/"
+Documentation = "https://github.com/ilotoki0804/pycredentials"
+Repository = "https://github.com/ilotoki0804/pycredentials"
+Issues = "https://github.com/ilotoki0804/pycredentials/issues"
+Changelog = "https://github.com/ilotoki0804/pycredentials#relese-note"
+Funding = "https://toss.me/ilotoki"
+
+[tool.poetry.dependencies]
+python = "~3.12"
+cryptography = "^42.0.8"
+
+[tool.poetry.scripts]
+credentials = "credentials.__main__:main"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+
+[tool.ruff]
+line-length = 120
+
+[tool.black]
+line-length = 120
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

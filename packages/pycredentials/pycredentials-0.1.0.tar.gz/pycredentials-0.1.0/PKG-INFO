@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: pycredentials
+Version: 0.1.0
+Summary: Store your credentials securely.
+License: MIT
+Keywords: secrets
+Author: ilotoki0804
+Author-email: ilotoki0804@gmail.com
+Requires-Python: >=3.12,<3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: cryptography (>=42.0.8,<43.0.0)
+Project-URL: Changelog, https://github.com/ilotoki0804/pycredentials#relese-note
+Project-URL: Documentation, https://github.com/ilotoki0804/pycredentials
+Project-URL: Funding, https://toss.me/ilotoki
+Project-URL: Homepage, https://ilotoki0804.gitbook.io/pycredentials/
+Project-URL: Issues, https://github.com/ilotoki0804/pycredentials/issues
+Project-URL: Repository, https://github.com/ilotoki0804/pycredentials
+Description-Content-Type: text/markdown
+
+# credentials
+
+**Store your credentials securely.**
+
+## Example
+
+```console
+export CREDENTIALS_PATH="./my-important-data"
+# create
+credentials add my_token deadbeef1234
+# modify/create
+credentials set my_token dead123409876
+# delete
+credentials remove my_token
+# clear
+credentials remove all
+# show
+credentials show my_token
+# show all
+credentials show all
+```
+
