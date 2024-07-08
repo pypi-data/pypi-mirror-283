@@ -1,0 +1,24 @@
+[build-system]
+requires = [
+    "setuptools>=61.0",
+    "aiosqlite>=0.20.0",
+    "aiogram>=3.10.0",
+    "asyncio>=3.4.3",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sqlite_storage"
+version = "1.0.3"
+authors = [{ name = "osf4", email = "12y98431c29y4@mail.ru" }]
+description = "SQLite storage for aiogram bots."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/osf4/sqlite_storage"
+Issues = "https://github.com/osf4/sqlite_storage/issues"
