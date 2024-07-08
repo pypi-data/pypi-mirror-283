@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: MateGen
+Version: 0.1.76
+Summary: 交互式智能编程助手MateGen
+Author: Jiutian
+Author-email: 2323365771@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: IPython
+Requires-Dist: openai >=1.2
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+Requires-Dist: seaborn
+Requires-Dist: oss2
+Requires-Dist: python-dotenv
+Requires-Dist: pymysql
+Requires-Dist: requests
+Requires-Dist: google-api-python-client
+Requires-Dist: google-auth
+Requires-Dist: google-auth-oauthlib
+Requires-Dist: beautifulsoup4
+Requires-Dist: python-dateutil
+Requires-Dist: tiktoken
+Requires-Dist: lxml
+Requires-Dist: cryptography
+Requires-Dist: numpy
+Requires-Dist: html2text
+Requires-Dist: nbconvert
+
+MateGen Agent
