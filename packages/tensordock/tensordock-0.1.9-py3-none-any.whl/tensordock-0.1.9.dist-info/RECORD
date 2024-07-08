@@ -1,0 +1,12 @@
+tensordock/__init__.py,sha256=gCNMwie4bChe1nVa5E7CgrjE1GD6DueDMNDv5NSVNuw,703
+tensordock/api.py,sha256=-l_UhdGx7XcQ1Hn6gBSD-RLDEJrBQrBFWn2HYIvxcu8,652
+tensordock/exceptions.py,sha256=YVhgleeBoXp5timeuk42jTBqL8MbdFECcRJOmgBiRV8,49
+tensordock/endpoints/__init__.py,sha256=j0IrUwfMnDWe2FYubFSHK8it4JxuOdd5KtuSNWjRCEE,180
+tensordock/endpoints/authorization.py,sha256=8zqiuoVdoirXLDIbc4jH-jnPuymi4NTSiguaW4IfZa0,1979
+tensordock/endpoints/billing.py,sha256=nUHD2f81ZUAh6ujy2KwS504-YaqgzHaghKwaeSf0jjQ,5588
+tensordock/endpoints/containers.py,sha256=321ewC-ctU7SwNnX8_Ev4hjzO3W7l-wnMLBfV7IdBWc,4877
+tensordock/endpoints/virtual_machines.py,sha256=hC2AQeABvJQkt683B382vSc2BlspdES3PlEvI1FwD9M,13278
+tensordock-0.1.9.dist-info/METADATA,sha256=ebuRLvqDZb5vHhYvTJp5vyVL8AWqdQ2y2U2oIMh0rZU,3337
+tensordock-0.1.9.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+tensordock-0.1.9.dist-info/top_level.txt,sha256=6LjXkvF-fEe7qjZSgF8JUezhlJXWFTFqRJsZZ1YQXmE,11
+tensordock-0.1.9.dist-info/RECORD,,
