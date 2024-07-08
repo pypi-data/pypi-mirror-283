@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/example_package_jasfreaq/__init__.py
+src/example_package_jasfreaq/example.py
+src/example_package_jasfreaq.egg-info/PKG-INFO
+src/example_package_jasfreaq.egg-info/SOURCES.txt
+src/example_package_jasfreaq.egg-info/dependency_links.txt
+src/example_package_jasfreaq.egg-info/requires.txt
+src/example_package_jasfreaq.egg-info/top_level.txt
