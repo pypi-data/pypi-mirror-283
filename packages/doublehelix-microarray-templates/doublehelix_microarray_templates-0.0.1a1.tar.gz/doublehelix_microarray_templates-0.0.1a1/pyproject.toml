@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=42", "setuptools_scm[toml]>=6.0.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "doublehelix-microarray_templates"
+description = "This repository contains the templates for microarray file generator"
+readme = { file = "README.md", content-type = "text/markdown" }
+authors = [{ name = "chaplin89", email = "hello@doublehelix.app" }]
+keywords = ["bioinformatics", "genetics", "wgs", "microarray", "science"]
+license = {file = "LICENSE"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Environment :: X11 Applications :: Qt",
+    "Environment :: Win32 (MS Windows)",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dynamic = ["version"]
+dependencies = [
+    "setuptools",
+]
+
+[project.urls]
+Documentation = "https://doublehelix.app"
+homepage = "https://doublehelix.app"
+Repository = "https://github.com/DoubleHelixApp/DoubleHelix-Microarray-Templates"
+Issues = "https://github.com/DoubleHelixApp/DoubleHelix-Microarray-Templates/issues"
+Changelog = "https://github.com/DoubleHelixApp/DoubleHelix-Microarray-Templates/releases"
+
+[tool.setuptools.packages.find]
+include = ["helix.plugins.microarray_templates"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools_scm]
+version_file = "helix/plugins/microarray_templates/VERSION.py"
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--strict-markers -p no:warnings --no-header"
+testpaths = [
+    "test"
+]
+filterwarnings = [
+    'ignore:DeprecationWarning',
+]

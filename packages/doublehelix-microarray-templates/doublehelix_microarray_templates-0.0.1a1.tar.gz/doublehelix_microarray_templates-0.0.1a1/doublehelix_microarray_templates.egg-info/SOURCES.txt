@@ -1,0 +1,15 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+.github/workflows/python-build-lint.yml
+.github/workflows/python-publish-test.yml
+.github/workflows/python-publish.yml
+doublehelix_microarray_templates.egg-info/PKG-INFO
+doublehelix_microarray_templates.egg-info/SOURCES.txt
+doublehelix_microarray_templates.egg-info/dependency_links.txt
+doublehelix_microarray_templates.egg-info/requires.txt
+doublehelix_microarray_templates.egg-info/top_level.txt
+helix/plugins/microarray_templates/VERSION.py
+helix/plugins/microarray_templates/__init__.py
+test/test_microarray_templates.py
