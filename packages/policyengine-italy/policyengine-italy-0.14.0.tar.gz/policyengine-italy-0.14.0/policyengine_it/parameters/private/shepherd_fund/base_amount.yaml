@@ -1,0 +1,7 @@
+description: Shepherd Fund base amount that all contributors pay
+values:
+  0000-01-01: 464.81
+
+metadata:
+  unit: currency-EUR
+  label: Shepherd Fund base amount

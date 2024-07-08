@@ -1,0 +1,21 @@
+- name: Head of household is not dependent
+  period: 2024
+  input:
+    is_head: true
+  output:
+    is_dependent: false
+
+- name: Spouse is not dependent
+  period: 2024
+  input:
+    is_spouse: true
+  output:
+    is_dependent: false
+  
+- name: Someone who is neither head nor spouse is dependent
+  period: 2024
+  input:
+    is_spouse: false
+    is_head: false
+  output:
+    is_dependent: true

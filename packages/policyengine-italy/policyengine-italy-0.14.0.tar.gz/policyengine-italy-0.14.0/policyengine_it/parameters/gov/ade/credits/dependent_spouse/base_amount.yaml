@@ -1,0 +1,20 @@
+description: Base amount for dependent spouse credit
+brackets:
+  - threshold:
+      2024-01-01: 0
+    amount:
+      2024-01-01: 800
+  - threshold:
+      2024-01-01: 15_000
+    amount:
+      2024-01-01: 690
+  - threshold:
+      2024-01-01: 80_000
+    amount:
+      2024-01-01: 0
+
+metadata:
+  type: single_amount
+  rate_unit: currency-EUR
+  threshold_unit: currency-EUR
+  label: Dependent spouse credit, base amount

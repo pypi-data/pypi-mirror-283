@@ -1,0 +1,79 @@
+- name: Household not eligible - unmarried
+  period: 2024
+  input:
+    household_market_income: 30_000
+    household_married: false
+  output:
+    dependent_spouse_base_amount: 0
+
+- name: Household not eligible - spouse income too high
+  period: 2024
+  input:
+    spouse_market_income: 3_000
+    household_married: true
+    household_market_income: 43_000
+  output:
+    dependent_spouse_base_amount: 0
+
+- name: Household not eligible - income above €80,000
+  period: 2024
+  input:
+    spouse_market_income: 2_800
+    household_married: true
+    household_market_income: 81_000
+  output:
+    dependent_spouse_base_amount: 0
+
+- name: Eligible household in lowest bracket (≤€15,000)
+  period: 2024
+  input:
+    spouse_market_income: 2_000
+    household_married: true
+    household_market_income: 14_000
+  output:
+    dependent_spouse_base_amount: 697.333
+
+- name: Eligible household at €15,000 threshold
+  period: 2024
+  input:
+    spouse_market_income: 2_000
+    household_married: true
+    household_market_income: 15_000
+  output:
+    dependent_spouse_base_amount: 690
+
+- name: Eligible household in middle bracket (€15,000 < income ≤ €40,000)
+  period: 2024
+  input:
+    spouse_market_income: 2_500
+    household_married: true
+    household_market_income: 27_500
+  output:
+    dependent_spouse_base_amount: 690
+
+- name: Eligible household at €40,000 threshold
+  period: 2024
+  input:
+    spouse_market_income: 2_500
+    household_married: true
+    household_market_income: 40_000
+  output:
+    dependent_spouse_base_amount: 690
+
+- name: Eligible household in highest bracket (€40,000 < income ≤ €80,000)
+  period: 2024
+  input:
+    spouse_market_income: 2_500
+    household_market_income: 57_500
+    household_married: true
+  output:
+    dependent_spouse_base_amount: 388.125
+
+- name: Eligible household above upper limit
+  period: 2024
+  input:
+    spouse_market_income: 2_700
+    household_married: true
+    household_market_income: 81_800
+  output:
+    dependent_spouse_base_amount: 0
