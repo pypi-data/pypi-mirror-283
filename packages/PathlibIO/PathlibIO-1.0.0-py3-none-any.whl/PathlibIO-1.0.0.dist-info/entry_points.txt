@@ -1,0 +1,2 @@
+[console_scripts]
+pathlibio = PathlibIO:main
