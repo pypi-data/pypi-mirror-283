@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+techzdl/__init__.py
+techzdl/extra.py
+techzdl/logger.py
+techzdl.egg-info/PKG-INFO
+techzdl.egg-info/SOURCES.txt
+techzdl.egg-info/dependency_links.txt
+techzdl.egg-info/requires.txt
+techzdl.egg-info/top_level.txt
