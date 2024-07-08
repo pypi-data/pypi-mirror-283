@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: Chozita
+Version: 1.4.0
+Summary: Una mini librería de automatización de cifrado de archivos
+Home-page: https://github.com/BAA4TS/Chozita
+Author: baaaaa
+Author-email: devbaats@gmail.com
+License: MIT
+Keywords: Cifrado,Python,Fernet,Automatización
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Security :: Cryptography
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cryptography>=3.0
+
+# Chozita `En desarollo`
+Una mini librería de automatización de cifrado de archivos
