@@ -1,0 +1,7 @@
+black
+jupyter-book
+litgen @ git+https://github.com/pthom/litgen
+mypy
+opencv-python
+pybind11
+pytest
