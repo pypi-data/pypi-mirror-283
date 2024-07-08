@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Financial Markets and Trading &mdash; C++ IEX Parser  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Requirements" href="usage.html" />
+    <link rel="prev" title="Contents" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            C++ IEX Parser
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Home</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Financial Markets and Trading</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#participants">Participants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#order-types">Order Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trade-execution-process">Trade Execution Process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bids-submission">Bids Submission</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#exchanges-and-market-data-dissemination">Exchanges and Market Data Dissemination</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#exchanges">Exchanges</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#order-handling">Order Handling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#market-data-dissemination">Market Data Dissemination</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#iex-market-data">IEX Market Data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#iex-market-data-formats">IEX Market Data Formats</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html#usage">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Package Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unsupported_os.html">Unsupported OS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iex_format.html">IEX-PCAP file format</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">C++ IEX Parser</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Financial Markets and Trading</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/market_data.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="financial-markets-and-trading">
+<h1>Financial Markets and Trading<a class="headerlink" href="#financial-markets-and-trading" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>Trading in financial markets involves the buying and selling of financial instruments such as stocks, bonds, commodities, or currencies. This process allows investors and traders to profit from changes in market prices.</p>
+<section id="participants">
+<h3>Participants<a class="headerlink" href="#participants" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Traders</strong>: Individuals or entities (like institutions or funds) who buy and sell financial instruments.</p></li>
+<li><p><strong>Brokers</strong>: Intermediaries who execute trades on behalf of traders.</p></li>
+<li><p><strong>Exchanges</strong>: Platforms where trading occurs, facilitating the matching of buy and sell orders.</p></li>
+</ul>
+</section>
+<section id="order-types">
+<h3>Order Types<a class="headerlink" href="#order-types" title="Link to this heading"></a></h3>
+<p>Before understanding how trades are executed, it’s crucial to know the types of orders traders can place:</p>
+<ul class="simple">
+<li><p><strong>Market Order</strong>: Executes immediately at the current market price.</p></li>
+<li><p><strong>Limit Order</strong>: Executes only at a specified price or better.</p></li>
+<li><p><strong>Stop Order</strong>: Becomes a market order when a specified price level is reached.</p></li>
+<li><p><strong>Stop-Limit Order</strong>: Becomes a limit order when a specified price level is reached.</p></li>
+</ul>
+</section>
+<section id="trade-execution-process">
+<h3>Trade Execution Process<a class="headerlink" href="#trade-execution-process" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><p><strong>Order Placement</strong>: Traders submit orders to buy or sell securities through their brokers. These orders are routed to the relevant exchange where the security is listed.</p></li>
+<li><p><strong>Matching Orders</strong>: On the exchange, buy orders (bids) are matched with sell orders (asks) based on price and time priority. The exchange’s order book displays these orders.</p></li>
+<li><p><strong>Price Determination</strong>: The current market price is determined by the highest price a buyer is willing to pay (bid) and the lowest price a seller is willing to accept (ask).</p></li>
+<li><p><strong>Execution</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Market Orders</strong>: Execute immediately at the best available price.</p></li>
+<li><p><strong>Limit Orders</strong>: Execute only if the market reaches the specified price or better.</p></li>
+<li><p><strong>Stop Orders</strong>: Trigger a market order when the stop price is reached.</p></li>
+<li><p><strong>Stop-Limit Orders</strong>: Trigger a limit order when the stop price is reached, with a specified limit price.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="bids-submission">
+<h3>Bids Submission<a class="headerlink" href="#bids-submission" title="Link to this heading"></a></h3>
+<p>Bids refer to buy orders submitted by traders. Here’s how bids are typically submitted:</p>
+<ol class="arabic simple">
+<li><p><strong>Selection of Order Type</strong>: Traders choose between market, limit, stop, or stop-limit orders based on their trading strategy and market conditions.</p></li>
+<li><p><strong>Order Parameters</strong>: Traders specify:
+- Quantity: Number of shares or units to buy.
+- Price: The maximum price they are willing to pay (for limit orders) or the trigger price (for stop orders).
+- Duration: Day order (valid for the current trading day) or good till canceled (remains active until executed or canceled).</p></li>
+<li><p><strong>Order Transmission</strong>: Orders are transmitted through trading platforms provided by brokers or directly to exchanges.</p></li>
+<li><p><strong>Order Visibility</strong>: Bids become part of the exchange’s order book, where they await matching with appropriate sell orders.</p></li>
+</ol>
+</section>
+</section>
+<section id="exchanges-and-market-data-dissemination">
+<h2>Exchanges and Market Data Dissemination<a class="headerlink" href="#exchanges-and-market-data-dissemination" title="Link to this heading"></a></h2>
+<section id="exchanges">
+<h3>Exchanges<a class="headerlink" href="#exchanges" title="Link to this heading"></a></h3>
+<p>Exchanges are platforms where financial instruments such as stocks, bonds, commodities, or currencies are traded. They facilitate the matching of buy and sell orders from traders and investors. Exchanges vary in their rules, listing requirements, and trading mechanisms.</p>
+</section>
+<section id="order-handling">
+<h3>Order Handling<a class="headerlink" href="#order-handling" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Order Types</strong>: Traders can place various types of orders including market, limit, stop, and stop-limit orders. These orders are submitted through brokers or directly to the exchange’s trading platform.</p></li>
+<li><p><strong>Order Matching</strong>: Orders are matched based on price and time priority. Buy orders (bids) are matched with sell orders (asks) to execute trades.</p></li>
+<li><p><strong>Market Mechanics</strong>: Exchanges operate based on centralized order books where buy and sell orders are displayed. The current market price is determined by the best bid and ask prices available.</p></li>
+</ol>
+</section>
+<section id="market-data-dissemination">
+<h3>Market Data Dissemination<a class="headerlink" href="#market-data-dissemination" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Real-time Data</strong>: Exchanges disseminate real-time market data including:</p>
+<ul class="simple">
+<li><p><strong>Trade Data</strong>: Information about executed trades, including price, volume, and timestamp.</p></li>
+<li><p><strong>Quote Data</strong>: Bid and ask prices, along with their respective volumes.</p></li>
+</ul>
+</li>
+<li><p><strong>Historical Data</strong>: Exchanges provide historical market data, allowing traders and analysts to analyze past trends and behavior. This data is crucial for backtesting trading strategies and conducting research.</p></li>
+</ol>
+</section>
+<section id="iex-market-data">
+<h3>IEX Market Data<a class="headerlink" href="#iex-market-data" title="Link to this heading"></a></h3>
+<p>The Investors Exchange (IEX) provides market data with a focus on transparency and fairness. Historical data from IEX includes:</p>
+<ul class="simple">
+<li><p><strong>Trade Data</strong>: Detailed records of executed trades, including price, volume, and trade conditions.</p></li>
+<li><p><strong>Quote Data</strong>: Real-time bid and ask prices along with depth-of-book information.</p></li>
+<li><p><strong>Market Metrics</strong>: Additional metrics like market-wide circuit breakers and trading halts.</p></li>
+</ul>
+<p>IEX’s market data is accessible through various APIs and data providers, enabling market participants to analyze historical trends and make informed trading decisions.
+In the next section, we will explore the various protocols and formats used by IEX to disseminate market data.</p>
+</section>
+</section>
+<section id="iex-market-data-formats">
+<h2>IEX Market Data Formats<a class="headerlink" href="#iex-market-data-formats" title="Link to this heading"></a></h2>
+<p>IEX DEEP data is transmitted via UDP multicast. UDP is preferred for market data to minimize transmission delays and ensure timely updates to market participants.
+UDP packets contain encoded market data in a structured format. Each packet includes information such as trade prices, volumes, quote updates, and other relevant market data.</p>
+<p>IEX also provides historical data, which is essentially a copy of the UDP multicast feed captured every day. This historical data is stored in PCAP files, which can be parsed to extract trade reports, price levels, and other market data.</p>
+<a class="reference internal image-reference" href="_images/exchange.png"><img alt="_images/exchange.png" class="align-center" src="_images/exchange.png" style="width: 600px;" /></a>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Contents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="usage.html" class="btn btn-neutral float-right" title="Requirements" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Copyright (c) 2024, VENKATA SAI NARAYANA BAVISETTY, KARTHIK VASU.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
