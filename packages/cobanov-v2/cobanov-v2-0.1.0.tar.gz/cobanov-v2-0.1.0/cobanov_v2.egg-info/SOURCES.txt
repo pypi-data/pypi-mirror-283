@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+cobanov_v2/__init__.py
+cobanov_v2/main.py
+cobanov_v2.egg-info/PKG-INFO
+cobanov_v2.egg-info/SOURCES.txt
+cobanov_v2.egg-info/dependency_links.txt
+cobanov_v2.egg-info/entry_points.txt
+cobanov_v2.egg-info/top_level.txt
