@@ -1,0 +1,7 @@
+typing>=3.7.4.3
+pydantic>=2.8.2
+
+[dev]
+pip-tools
+pytest
+behave
