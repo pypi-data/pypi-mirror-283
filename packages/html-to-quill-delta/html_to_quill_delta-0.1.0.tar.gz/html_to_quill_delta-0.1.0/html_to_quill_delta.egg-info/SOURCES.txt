@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+html_to_delta/__init__.py
+html_to_delta/converter.py
+html_to_quill_delta.egg-info/PKG-INFO
+html_to_quill_delta.egg-info/SOURCES.txt
+html_to_quill_delta.egg-info/dependency_links.txt
+html_to_quill_delta.egg-info/requires.txt
+html_to_quill_delta.egg-info/top_level.txt
+tests/__init__.py
+tests/test_converter.py
