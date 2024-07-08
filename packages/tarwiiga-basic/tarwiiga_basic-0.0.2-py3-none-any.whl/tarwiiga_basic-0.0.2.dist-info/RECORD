@@ -1,0 +1,14 @@
+tarwiiga_basic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tarwiiga_basic/llm.py,sha256=JL5XBBnjtApiWP5sk1f9vqI42_-F-LVTfOgTBuivQMY,216
+tarwiiga_basic/adgen/__init__.py,sha256=-o60HYYc_VVFoCcyR9TohMfsw_X9PfDV_s1xl0CFxiE,65
+tarwiiga_basic/adgen/generator/__init__.py,sha256=uZTmoUIOeTitONa_Dyre2T1BPH3D_2PMyHeIqRuLSOo,89
+tarwiiga_basic/adgen/generator/call_ad.py,sha256=QlTuEI4cb616So7Qwjl9B07toCsnhD5VgVeM9lMLIWk,1382
+tarwiiga_basic/adgen/generator/responsive_ad.py,sha256=SqMTcCvYU3U-BVAn_5rna5FSjWBfSSE7Rg3uTMqvZe8,2715
+tarwiiga_basic/chat/__init__.py,sha256=f6G2wlePhdYiURNgS8XJWVvVvpnF1TtxzFxNsYOJ8XE,36
+tarwiiga_basic/chat/generator.py,sha256=N7cwIL4kUEAVPwppuP0fhTxNRFhac5dN69yI47BfVIA,1869
+tarwiiga_basic/chat/loader.py,sha256=zkdFVJnIccAoq2eUKI6uLZ2KYj2XLNvjcu52562Xg_U,826
+tarwiiga_basic/sitegen/__init__.py,sha256=BGPDsoa4QIQyHI5gF9VvU-aAi4V2In_qX2k1Q_OmNFU,37
+tarwiiga_basic/sitegen/generator.py,sha256=e3J1KwNK_fv7bTeBTkv54LgBAjLp2bOhN0TwVoAaiyQ,2167
+tarwiiga_basic-0.0.2.dist-info/METADATA,sha256=egz2OgsAbP85Fe3gaiFwL9eNOF8eIyi6-nIX8FgchLk,540
+tarwiiga_basic-0.0.2.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+tarwiiga_basic-0.0.2.dist-info/RECORD,,
