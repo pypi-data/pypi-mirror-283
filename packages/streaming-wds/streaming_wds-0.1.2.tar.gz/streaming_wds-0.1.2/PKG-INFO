@@ -1,0 +1,122 @@
+Metadata-Version: 2.1
+Name: streaming-wds
+Version: 0.1.2
+Summary: Iterable Streaming Webdataset for PyTorch from boto3 compliant storage
+Author-email: Tony Francis <tony@dream3d.com>
+License: MIT
+Project-URL: Homepage, https://github.com/dream3d-ai/streaming-wds
+Project-URL: Bug Tracker, https://github.com/dream3d-ai/streaming-wds/issues
+Keywords: pytorch,webdataset,streaming,iterable,torch
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pyarrow
+Requires-Dist: boto3
+Requires-Dist: torch
+
+# streaming-wds (Streaming WebDataset)
+
+`streaming-wds` is a Python library that enables efficient streaming of WebDataset-format datasets from boto3-compliant object stores for PyTorch. It's designed to handle large-scale datasets with ease, providing asynchronous data loading and processing capabilities.
+
+## Features
+
+- Asynchronous streaming of WebDataset-format data from S3-compatible object stores
+- Compatible with PyTorch and `torchdata`
+- Supports mid-epoch resumption when used with `StatefulDataLoader` from `torchdata`
+- Efficient prefetching and parallel processing of data
+- Customizable decoding of dataset elements
+
+## Installation
+
+You can install `streaming-wds` using pip:
+
+```bash
+pip install streaming-wds
+```
+
+## Quick Start
+Here's a basic example of how to use streaming-wds:
+
+```python
+from streaming_wds import AsyncStreamingWebDataset
+from torch.utils.data import DataLoader
+from torchdata.datapipes.iter import StatefulDataLoader
+
+# Create the dataset
+dataset = AsyncStreamingWebDataset(
+    remote="s3://your-bucket/your-dataset",
+    split="train",
+    profile="your_aws_profile",
+    prefetch=2,
+    shuffle=True,
+    max_workers=4,
+    schema={"image": "pil", "label": "json"}
+)
+
+# Create a StatefulDataLoader for mid-epoch resumption
+dataloader = StatefulDataLoader(dataset, batch_size=32, num_workers=4)
+
+# Iterate through the data
+for batch in dataloader:
+    # Your training loop here
+    pass
+
+# You can save the state for resumption
+state_dict = dataloader.state_dict()
+
+# Later, you can resume from this state
+dataloader.load_state_dict(state_dict)
+```
+
+
+## Key Components
+
+### AsyncStreamingWebDataset
+The main class that handles the asynchronous streaming of data. It manages the download and extraction of tar files from the object store, and yields individual samples.
+
+### AsyncIterator
+A helper class that bridges the gap between synchronous and asynchronous iteration, allowing the dataset to be used with standard PyTorch DataLoaders.
+
+## Configuration
+
+- `remote`: The S3 URI of your dataset
+- `split`: The dataset split (e.g., "train", "val", "test")
+- `profile`: The AWS profile to use for authentication
+- `prefetch`: Number of samples to prefetch
+- `shuffle`: Whether to shuffle the data
+- `max_workers`: Maximum number of worker threads for download and extraction
+- `schema`: A dictionary defining the decoding method for each data field
+
+## Mid-Epoch Resumption
+When used with `StatefulDataLoader` from `torchdata`, streaming-wds supports mid-epoch resumption. This is particularly useful for long-running training jobs that may be interrupted.
+
+## Contributing
+Contributions to streaming-wds are welcome! Please feel free to submit a Pull Request.
+
+## License
+MIT License
+
+Copyright (c) 2024 Dream3D AI
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+## Acknowledgements
+This project was inspired by the WebDataset format and built to work seamlessly with PyTorch and torchdata.
