@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: moveread-core
+Version: 0.2.5
+Summary: Core Moveread Dataset
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/moveread/core.git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic
+Requires-Dist: haskellian
+Requires-Dist: robust-extraction2
+Requires-Dist: chess-pairings
+Requires-Dist: chess-notation
+Requires-Dist: python-kv
+Requires-Dist: scoresheet-models
+Requires-Dist: chess-utils
+Requires-Dist: sequence-edits
+Provides-Extra: cli
+Requires-Dist: ocr-dataset ; extra == 'cli'
+Requires-Dist: files-dataset ; extra == 'cli'
+Requires-Dist: typer ; extra == 'cli'
+Requires-Dist: fs-tools ; extra == 'cli'
+
+# Moveread Core Dataset
+
+### CLI
+
+#### Exporting
+
+**Important**
+- Exporting `boxes` will yield one box per PGN move.
+- To export the labeled boxes, use `core export ocr` instead 
+
+```bash
+core export pgn -v path/to/core > sans.txt
+core export labels -v path/to/core > labels.txt
+core export boxes -v path/to/core -o path/to/files-dataset
+core export ocr -v path/to/core -o path/to/ocr-dataset
+```
