@@ -1,0 +1,20 @@
+[project]
+name = "PathlibIO"
+dynamic = ["version"]
+description = "CLI functionality of Python's Pathlib module"
+readme = "README.md"
+license = {file = "LICENSE"}
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/jb2170/PathlibIO/"
+
+[project.scripts]
+pathlibio = "PathlibIO:main"
+
+[tool.setuptools.dynamic]
+version = {attr = "PathlibIO.__version__"}
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

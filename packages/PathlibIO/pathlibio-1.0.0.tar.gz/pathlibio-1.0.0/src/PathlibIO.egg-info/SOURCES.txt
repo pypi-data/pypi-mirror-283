@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/PathlibIO/Handler.py
+src/PathlibIO/__init__.py
+src/PathlibIO/exit_code_tests.py
+src/PathlibIO/not_implemented.py
+src/PathlibIO/properties_etc.py
+src/PathlibIO.egg-info/PKG-INFO
+src/PathlibIO.egg-info/SOURCES.txt
+src/PathlibIO.egg-info/dependency_links.txt
+src/PathlibIO.egg-info/entry_points.txt
+src/PathlibIO.egg-info/top_level.txt
