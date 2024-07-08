@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "python-jobscrape"
+version = "1.1.62"
+description = "Job scraper for LinkedIn, Indeed, Glassdoor & ZipRecruiter"
+authors = ["Nathan Demssie <nsd2145@columbia.edu>","Zachary Hampton <zachary@bunsly.com>", "Cullen Watson <cullen@bunsly.com>"]
+homepage = "https://github.com/nathan102030/jobscrape"
+readme = "README.md"
+
+packages = [
+    { include = "jobscrape", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.31.0" #(for making HTTP requests)
+beautifulsoup4 = "^4.12.2" #for parsing HTML content)
+pandas = "^2.1.0" #(for data manipulation and analysis)
+NUMPY = "1.24.2" #(for numerical computing)
+pydantic = "^2.3.0" #(for data validation and settings management)
+tls-client = "^1.0.1" # (for handling TLS connections)
+markdownify = "^0.11.6" #(for converting HTML to Markdown)
+regex = "^2024.4.28" #(for regular expression support)
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.1"
+jupyter = "^1.0.0"
+black = "*" #(for code formatting)
+pre-commit = "*" #(for managing and maintaining pre-commit hooks)
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
