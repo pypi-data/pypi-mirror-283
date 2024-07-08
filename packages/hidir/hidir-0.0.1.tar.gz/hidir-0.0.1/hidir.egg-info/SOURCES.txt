@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+hidir/__init__.py
+hidir/exceptions.py
+hidir/handler.py
+hidir/py.typed
+hidir/utils.py
+hidir/version.py
+hidir.egg-info/PKG-INFO
+hidir.egg-info/SOURCES.txt
+hidir.egg-info/dependency_links.txt
+hidir.egg-info/requires.txt
+hidir.egg-info/top_level.txt
+tests/test_handler.py
+tests/test_utils.py
