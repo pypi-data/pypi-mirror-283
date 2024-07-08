@@ -1,0 +1,3 @@
+[console_scripts]
+base64imageCompress = base64imageCompress.__main__:main
+
