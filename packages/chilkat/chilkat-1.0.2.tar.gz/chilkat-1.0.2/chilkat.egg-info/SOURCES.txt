@@ -1,0 +1,10 @@
+README.md
+setup.py
+chilkat/__init__.py
+chilkat/_chilkat.pyd
+chilkat/chilkat.py
+chilkat/testChilkat.py
+chilkat.egg-info/PKG-INFO
+chilkat.egg-info/SOURCES.txt
+chilkat.egg-info/dependency_links.txt
+chilkat.egg-info/top_level.txt
