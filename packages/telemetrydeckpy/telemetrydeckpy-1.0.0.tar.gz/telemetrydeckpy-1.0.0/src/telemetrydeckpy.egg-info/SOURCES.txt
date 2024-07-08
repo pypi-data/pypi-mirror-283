@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/telemetrydeckpy/__init__.py
+src/telemetrydeckpy/signal.py
+src/telemetrydeckpy/telemetrydeck.py
+src/telemetrydeckpy.egg-info/PKG-INFO
+src/telemetrydeckpy.egg-info/SOURCES.txt
+src/telemetrydeckpy.egg-info/dependency_links.txt
+src/telemetrydeckpy.egg-info/not-zip-safe
+src/telemetrydeckpy.egg-info/requires.txt
+src/telemetrydeckpy.egg-info/top_level.txt
+src/tests/__init__.py
+src/tests/signal_test.py
+src/tests/telemetrydeck_test.py
