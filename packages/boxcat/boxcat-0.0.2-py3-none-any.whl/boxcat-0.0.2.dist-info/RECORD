@@ -1,0 +1,9 @@
+boxcat/Either.py,sha256=pnPjR5zrVqFif1ASik_W1gGs5egkGGifZEdhpbFen9s,1937
+boxcat/Option.py,sha256=RlJ_16-kvpO2DVx5YLYw9NSxXhJu-un7mlZma_mWYGM,1305
+boxcat/Seq.py,sha256=Hl9TI9pgrLQFOieXgbzVfqtQXPA4aa6-bA6zNfJlJtA,1281
+boxcat/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boxcat-0.0.2.dist-info/LICENSE,sha256=LbCmZTRcVLXOb7y3CzxN6qHrLSr-JhRQw082yHB2Dtc,1068
+boxcat-0.0.2.dist-info/METADATA,sha256=gp5NF_zvOOXgR9dBlC7aBrxLJHgq7-m53f0Q_MmRyT8,600
+boxcat-0.0.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+boxcat-0.0.2.dist-info/top_level.txt,sha256=mv8EKwHQkqasSZMdu2PBIE4AOTb7c0xJaLU2wyAVM3E,7
+boxcat-0.0.2.dist-info/RECORD,,
