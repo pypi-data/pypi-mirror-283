@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: pyinfusion
+Version: 0.0.1
+Summary: A brief description of your package
+Author: Mobolaji Shobanke
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# Pyinfusion
+---
+- Pyinfusion calculates aggregated information about the Infusion and Active Time of Infusion Pumps. It is still under development and is undergoing experimentation. 
+- The input to the algorithm is a Spark DataFrame.
+- Algorithm output is also a Spark DataFrame.
+
+
+
+## How To Use
+---
+
+```python
+from pyspark.sql import SparkSession
+from pyinfuse import infusion_desc
+
+# create spark instance
+spark = SparkSession.builder.appName('sample_app').getOrCreate()
+
+# read in the data
+data = spark.read.csv(filepath)
+
+# initilaze the package
+infusion_inform = infusion_desc(data)
+
+# obtain the infusion time
+infusion_time_ = infusion_inform.infusion_time()
+
+```
