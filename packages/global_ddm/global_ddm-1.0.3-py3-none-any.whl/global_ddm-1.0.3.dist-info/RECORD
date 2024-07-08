@@ -1,0 +1,6 @@
+global_ddm/__init__.py,sha256=hLrv_6bPt7PKWauWOO375gEiMUyOn8bY8mFcZQuCYh0,2638
+global_ddm/ddm_5km.nc,sha256=14-c6xVuzDkSAs4oFNstXhYycCM74kirsqx7Nivl51Y,16775377
+global_ddm-1.0.3.dist-info/LICENSE,sha256=sf7ac4evvYf7978PBWOC2uhM5juss95F6M3ApA4xuPY,1075
+global_ddm-1.0.3.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+global_ddm-1.0.3.dist-info/METADATA,sha256=dNFVpwBzy-cy8ppmo-OhzG3FqwosIukU5vwHE0raNaA,3205
+global_ddm-1.0.3.dist-info/RECORD,,
