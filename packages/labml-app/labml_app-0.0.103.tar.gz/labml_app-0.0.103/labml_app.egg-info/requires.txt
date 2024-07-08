@@ -1,0 +1,9 @@
+labml>=0.4.158
+gunicorn
+numpy
+labml-db
+fastapi
+uvicorn
+aiofiles
+labml_db
+pymongo
