@@ -1,0 +1,11 @@
+optimizeai/__init__.py,sha256=aw-O0eMzSL7BrRSe_5cLdeM_f4KiGsOU74u443EithI,89
+optimizeai/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+optimizeai/config.py,sha256=jeaVXsNdfEH__4vF4Jjndb--vlj-r4oBEi5Je9ZRgf0,213
+optimizeai/cot.py,sha256=9Xg8ygqGFf7uS7PzvYOos1dRBKICeZkVZjn5eULraas,550
+optimizeai/decorators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+optimizeai/decorators/optimize.py,sha256=f_DqIhyg97LDtFzVs-a4-bZspuky65WA1TViY9TVWXw,2936
+optimizeai/llm_wrapper.py,sha256=vzr9ATN29Ad92qUs-NIZFI5ikgeHqtZRvxfkHt5gJSk,2813
+optimizeai-0.2.0.dist-info/LICENSE,sha256=A2W_igecrBU9eh9_gPas8a23lXmMwatOxOquSY7CYvM,1069
+optimizeai-0.2.0.dist-info/METADATA,sha256=EO67HveCsCJNmYo8J6jhjsRjm33qRxkuxBVN7jdHnUk,5178
+optimizeai-0.2.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+optimizeai-0.2.0.dist-info/RECORD,,
