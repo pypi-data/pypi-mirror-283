@@ -1,0 +1,10 @@
+recommendation.tools.recommendation_api_tool.get_recommendation_api:
+  function: get_recommendation_api
+  inputs:
+    input_text:
+      type:
+      - string
+  module: recommendation.tools.recommendation_api_tool
+  name: Samsung products recommendation tool
+  description: This is Samsung products recommendation tool
+  type: python

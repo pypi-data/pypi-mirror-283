@@ -1,0 +1,2 @@
+[package_tools]
+recommendation_api_tool = recommendation.tools.utils:list_package_tools
