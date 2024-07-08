@@ -1,0 +1,10 @@
+hydev/__init__.py,sha256=U4S_2y3zgLZVfMenHRaJFBW8yqh2mUBuI291LGQVOJ8,35
+hydev/common_pyproject.toml,sha256=UbN5ntinSdZRyLc9ey85SeU-3K0-I6bMy8Dy34rYHrg,9033
+hydev/hydlog.py,sha256=daYD1t9KkLflv7pxw-hqcd9Jkcu-vmqQV83qGwKvBYo,3170
+hydev/main.py,sha256=9Gaj09KAMip9vpYzl1Ty1Fp6-yXJsxDVrIQx4rHsQXs,8593
+hydev/utils.py,sha256=Ik_MePCO2Nj526gC9rWCmPmwQYUYsZKtjlZiZdA8oF0,2920
+hydev-2.4.0.dist-info/LICENSE,sha256=eoAxykNu7on7zB75cg6RdG-lPmiAoixymiEYMUXN9hs,252
+hydev-2.4.0.dist-info/METADATA,sha256=Llcbxn0vuNZxuUbbXNJ0M9Q4__zL1xbZUkVRJEwoP4Q,2438
+hydev-2.4.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+hydev-2.4.0.dist-info/entry_points.txt,sha256=mGRMh3vnyGN34yh1vQcIanJ97eQFhpmD4qMj35Bcw78,490
+hydev-2.4.0.dist-info/RECORD,,
