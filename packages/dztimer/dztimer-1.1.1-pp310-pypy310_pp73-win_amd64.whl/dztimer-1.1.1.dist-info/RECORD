@@ -1,0 +1,6 @@
+dztimer/__init__.py,sha256=uRGQqQpCiME0rPu8OY4slryWPrgVrYtEYyrWBY-KC68,31
+dztimer/dztimer_ext.pypy310-pp73-win_amd64.pyd,sha256=IrSb3ti6U1DvgtCTADHz0J_Nb8Q236sWJgEZYznt__8,110592
+dztimer-1.1.1.dist-info/METADATA,sha256=udXKvVejWD4WHHNiWrov43QU9tBffeS9NFxSLSy3xA0,3190
+dztimer-1.1.1.dist-info/WHEEL,sha256=p_p20MHNmfI2VN6FLtHLOxHm-8w6r9iOXzEeBibCsyI,112
+dztimer-1.1.1.dist-info/licenses/LICENSE,sha256=g4NFzqdvvo0cBFw5kmRPnqxz8nN-2u-gayYTlNW7UkY,1588
+dztimer-1.1.1.dist-info/RECORD,,
