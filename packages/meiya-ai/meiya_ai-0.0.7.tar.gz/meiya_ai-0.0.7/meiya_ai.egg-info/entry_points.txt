@@ -1,0 +1,2 @@
+[console_scripts]
+meiya_ai = meiya_ai.main:main
