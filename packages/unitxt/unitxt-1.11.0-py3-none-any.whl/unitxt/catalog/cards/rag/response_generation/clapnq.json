@@ -1,0 +1,36 @@
+{
+    "__type__": "task_card",
+    "loader": {
+        "__type__": "load_hf",
+        "path": "PrimeQA/clapnq"
+    },
+    "preprocess_steps": [
+        {
+            "__type__": "split_random_mix",
+            "mix": {
+                "train": "train",
+                "test": "validation"
+            }
+        },
+        {
+            "__type__": "copy",
+            "field_to_field": {
+                "passages/*/text": "contexts",
+                "input": "question",
+                "output/*/answer": "reference_answers"
+            }
+        },
+        {
+            "__type__": "set",
+            "fields": {
+                "contexts_ids": []
+            }
+        }
+    ],
+    "task": "tasks.rag.response_generation",
+    "templates": {
+        "please_respond": "templates.rag.response_generation.please_respond",
+        "answer_based_on_context": "templates.rag.response_generation.answer_based_on_context",
+        "answer_based_on_context_inverted": "templates.rag.response_generation.answer_based_on_context_inverted"
+    }
+}

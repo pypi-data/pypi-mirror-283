@@ -1,0 +1,10 @@
+{
+    "__type__": "sequential_operator",
+    "steps": [
+        {
+            "__type__": "yes_to_one_else_zero",
+            "field": "prediction",
+            "process_every_value": false
+        }
+    ]
+}

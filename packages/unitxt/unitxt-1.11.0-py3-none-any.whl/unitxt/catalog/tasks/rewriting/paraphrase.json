@@ -1,0 +1,16 @@
+{
+    "__type__": "task",
+    "inputs": [
+        "input_text",
+        "text_type"
+    ],
+    "outputs": [
+        "output_text"
+    ],
+    "metrics": [
+        "metrics.rouge"
+    ],
+    "defaults": {
+        "text_type": "text"
+    }
+}
