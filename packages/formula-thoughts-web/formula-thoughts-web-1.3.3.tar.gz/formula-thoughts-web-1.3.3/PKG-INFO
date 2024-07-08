@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: formula-thoughts-web
+Version: 1.3.3
+Summary: A web library for AWS lambda, gateway and SQS event handling
+Author: GanTheMan
+Author-email: aidanwilliamgannon@gmail.com
+Keywords: python,lambda,api gateway,sqs
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Description-Content-Type: text/markdown
+
+Allows for handling http api gateway requests, and SQS events
