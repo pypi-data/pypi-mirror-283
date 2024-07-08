@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: django-default
+Version: 0.0.2
+Summary: A Django project structure generator
+Home-page: https://github.com/JahongirHakimjonov
+Author: Jahongir Hakimjonov
+Author-email: jahongirhakimjonov@gmail.com
+Keywords: django project structure generator
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: alive-progress
+Requires-Dist: colorama
+Requires-Dist: black
+Requires-Dist: djangorestframework
+Requires-Dist: djangorestframework-simplejwt
+Requires-Dist: drf-spectacular
+Requires-Dist: drf-spectacular-sidecar
+Requires-Dist: Django
+Requires-Dist: django-jazzmin
+Requires-Dist: gunicorn
+Requires-Dist: pillow
+Requires-Dist: psycopg2-binary
+Requires-Dist: python-dotenv
+Requires-Dist: django-modeltranslation
+Requires-Dist: django-ckeditor-5
+Requires-Dist: django-cors-headers
+Requires-Dist: django-rosetta
+Requires-Dist: PyJWT
+Requires-Dist: django-unfold
+
+# Django Default
+
+![banner](https://i.postimg.cc/D0c9wjqW/Pics-Art-24-07-08-01-10-45-321.png "banner")
+
+
+Django Default is a Django project structure generator that simplifies the process of setting up new Django projects. It automates the cloning of a predefined Django project structure from a GitHub repository, enabling developers to start their projects with a solid foundation.
+
+## Features
+
+- Automates the cloning of a Django project structure.
+- Customizable to fit specific project needs.
+- Streamlines the initial setup process for Django projects.
+
+## Installation
+
+Install Shinzo Test using pip:
+
+```bash
+pip install django-default
+```
+
+## Usage
+
+To generate a new Django project structure, execute the following command:
+
+```bash
+shinzo
+```
+
+This command clones the predefined Django project structure into your current working directory.
+
+## Contributing
+
+Contributions are welcome! If you have suggestions for improving Django Default, please open an issue or submit a pull request.
+
+## License
+
+Django Default is released under the MIT License. See the LICENSE file in the project repository for more information.
+
+## Acknowledgments
+
+- Thanks to all contributors who have helped to improve Django Default.
+- Special thanks to Jahongir Hakimjonov for creating and maintaining this project.
+
+## Resources
+GitHub Repository for this structure: [Django Default](https://github.com/JahongirHakimjonov/DjangoDefault)
+
+## Contact
+Please contact Jahongir Hakimjonov with any questions or concerns regarding this project.
+
+Subscribe to the: 
+[GitHub](https://github.com/JahongirHakimjonov)
+[Instagram](https://www.instagram.com/ja_kahn_gir/)
+[Telegram](https://t.me/jakhangir_blog)
+
