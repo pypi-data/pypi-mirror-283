@@ -1,0 +1,33 @@
+KleioTranslator - server version 12.5 - build 570 2024-02-29 07:39:02
+30-6-2024 14-16
+
+Processing data file obitoShort_id.cli
+-------------------------------------------
+Generic Act translation module with geoentities (XML).
+     Joaquim Ramos de Carvalho (joaquim@uc.pt) 
+** New document: kleio
+=========================
+kleio translation started
+=========================
+Structure: gacto2.str
+Prefix: soure
+Autorel: soure
+Translation count: 5
+Obs: 
+** Processing source fonte$soure-obitoShort_id
+6: obito$soure-obitoShort_id_id
+*** End of File
+
+
+Structure file: /kleio-home/projects/test-project/structures/sources.str
+Structure processing report: /kleio-home/projects/test-project/structures/sources.srpt
+Structure in JSON: /kleio-home/projects/test-project/structures/sources.str.json
+
+Kleio file: /kleio-home/projects/test-project/kleio/reference_sources/paroquiais/obitos/obitoShort_id.cli
+Original file: /kleio-home/projects/test-project/kleio/reference_sources/paroquiais/obitos/obitoShort_id.org
+Previous version: /kleio-home/projects/test-project/kleio/reference_sources/paroquiais/obitos/obitoShort_id.old
+Temp file with ids: /kleio-home/projects/test-project/kleio/reference_sources/paroquiais/obitos/obitoShort_id.ids
+** - /kleio-home/projects/test-project/kleio/reference_sources/paroquiais/obitos/obitoShort_id.cli-renamed to- /kleio-home/projects/test-project/kleio/reference_sources/paroquiais/obitos/obitoShort_id.old
+0  errors. 
+0  warnings.
+Translation finished.

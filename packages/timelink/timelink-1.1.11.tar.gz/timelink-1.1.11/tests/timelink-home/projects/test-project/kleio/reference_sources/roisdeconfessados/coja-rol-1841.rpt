@@ -1,0 +1,33 @@
+KleioTranslator - server version 12.5 - build 570 2024-02-29 07:39:02
+30-6-2024 14-16
+
+Processing data file coja-rol-1841.cli
+-------------------------------------------
+Generic Act translation module with geoentities (XML).
+     Joaquim Ramos de Carvalho (joaquim@uc.pt) 
+** New document: kleio
+=========================
+kleio translation started
+=========================
+Structure: gacto2.str
+Prefix: 
+Autorel: 
+Translation count: 5
+Obs: 
+** Processing source fonte$coja-rol-1841
+6: rol$rol1
+*** End of File
+
+
+Structure file: /kleio-home/projects/test-project/structures/sources.str
+Structure processing report: /kleio-home/projects/test-project/structures/sources.srpt
+Structure in JSON: /kleio-home/projects/test-project/structures/sources.str.json
+
+Kleio file: /kleio-home/projects/test-project/kleio/reference_sources/roisdeconfessados/coja-rol-1841.cli
+Original file: /kleio-home/projects/test-project/kleio/reference_sources/roisdeconfessados/coja-rol-1841.org
+Previous version: /kleio-home/projects/test-project/kleio/reference_sources/roisdeconfessados/coja-rol-1841.old
+Temp file with ids: /kleio-home/projects/test-project/kleio/reference_sources/roisdeconfessados/coja-rol-1841.ids
+** - /kleio-home/projects/test-project/kleio/reference_sources/roisdeconfessados/coja-rol-1841.cli-renamed to- /kleio-home/projects/test-project/kleio/reference_sources/roisdeconfessados/coja-rol-1841.old
+0  errors. 
+0  warnings.
+Translation finished.
