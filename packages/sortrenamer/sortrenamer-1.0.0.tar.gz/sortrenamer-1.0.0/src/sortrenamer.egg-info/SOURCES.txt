@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/sortrenamer/gui.py
+src/sortrenamer/languages.py
+src/sortrenamer/toolbox.py
+src/sortrenamer.egg-info/PKG-INFO
+src/sortrenamer.egg-info/SOURCES.txt
+src/sortrenamer.egg-info/dependency_links.txt
+src/sortrenamer.egg-info/entry_points.txt
+src/sortrenamer.egg-info/requires.txt
+src/sortrenamer.egg-info/top_level.txt

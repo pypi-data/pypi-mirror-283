@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sortrenamer"
+version = "1.0.0"
+authors = [{ name="DrSugak", email="dr.sugak.dev@gmail.com" }]
+description = "Cross-platform desktop GUI app, that renames/moves (sorts) images and other files, and finds and moves duplicates."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["PyQt6", "pillow"]
+keywords = ["exif", "rename", "move", "duplicates"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/DrSugak/sortrenamer"
+
+[project.gui-scripts]
+sortrenamer = "sortrenamer.gui:main"
+
