@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+TP_Frida/__init__.py
+TP_Frida.egg-info/PKG-INFO
+TP_Frida.egg-info/SOURCES.txt
+TP_Frida.egg-info/dependency_links.txt
+TP_Frida.egg-info/entry_points.txt
+TP_Frida.egg-info/requires.txt
+TP_Frida.egg-info/top_level.txt
