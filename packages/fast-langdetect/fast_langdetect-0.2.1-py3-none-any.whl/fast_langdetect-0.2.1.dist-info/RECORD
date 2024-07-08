@@ -1,0 +1,9 @@
+fast_langdetect-0.2.1.dist-info/METADATA,sha256=ix2DtFb2frTwGy22-2cJjreA8SByrOHEaTGuIuh_jwQ,2981
+fast_langdetect-0.2.1.dist-info/WHEEL,sha256=mbxFTmdEUhG7evcdMkR3aBt9SWcoFBJ4CDwnfguNegA,90
+fast_langdetect-0.2.1.dist-info/licenses/LICENSE,sha256=8u28K1sYUp8UBl7JcpqtMJPvs4ppPu1GBrlyuO5FH6c,1065
+fast_langdetect-0.2.1.dist-info/licenses/NOTICE.MD,sha256=1iYkdzOKi9M3Vxw8cdMPerdDw3RsUucDbxcxDE74QZQ,186
+fast_langdetect/__init__.py,sha256=I7lkq5p-kgKVwuil_w-T8wJq_Z2cOhWI-TN4BcIQnCo,121
+fast_langdetect/ft_detect/LICENSE,sha256=oIjKk21VnOkMTwO_x4t78BrL6tPd0rfN_IwtI3OdrYY,1070
+fast_langdetect/ft_detect/__init__.py,sha256=uRYj1j9htirNY8qJ5DU2ETe4GioQOgW_0eMGyjyloXw,1147
+fast_langdetect/ft_detect/infer.py,sha256=5iG3jGseoIi4Js2p0u5pkKYOM_wgCHkyI2Oz8zGzumM,3457
+fast_langdetect-0.2.1.dist-info/RECORD,,
