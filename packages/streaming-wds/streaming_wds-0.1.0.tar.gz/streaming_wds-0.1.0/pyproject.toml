@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "streaming-wds"
+authors = [
+    {name = "Tony Francis", email = "tony@dream3d.com"},
+]
+description = "Iterable Streaming Webdataset for PyTorch from boto3 compliant storage"
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["pytorch", "webdataset", "streaming", "iterable", "torch"]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pyarrow",
+    "aiobotocore",
+    "torch",
+]
+dynamic = ["version"]
+
+[tool.setuptools_scm]
+write_to = "streaming_wds/_version.py"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["streaming_wds*"]
+exclude = ["tests*"]
+
+[project.urls]
+"Homepage" = "https://github.com/dream3d-ai/streaming-wds"
+"Bug Tracker" = "https://github.com/dream3d-ai/streaming-wds/issues"
