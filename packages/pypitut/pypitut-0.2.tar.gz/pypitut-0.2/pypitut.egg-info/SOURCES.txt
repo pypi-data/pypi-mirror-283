@@ -1,0 +1,9 @@
+README.md
+setup.py
+pypitut/__init__.py
+pypitut/main.py
+pypitut.egg-info/PKG-INFO
+pypitut.egg-info/SOURCES.txt
+pypitut.egg-info/dependency_links.txt
+pypitut.egg-info/entry_points.txt
+pypitut.egg-info/top_level.txt
