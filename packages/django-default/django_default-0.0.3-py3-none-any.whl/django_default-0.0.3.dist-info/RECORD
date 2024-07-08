@@ -1,0 +1,8 @@
+git_cloner/__init__.py,sha256=bRif4as9BsHuWlaSlGVo4hwWMbx7wJKDWGC3L5BsJro,35
+git_cloner/git_cloner.py,sha256=ZA-YsAP27xlIy4QbWhBiViVj5PTZXG0AEz-TNlw_R94,3174
+django_default-0.0.3.dist-info/LICENSE,sha256=EhqSH1fYgAMZabTcWIPTw-4bn9ZiuxalmQpBD_GHfeQ,1095
+django_default-0.0.3.dist-info/METADATA,sha256=lG-vcDo9NnupznHtjtDxoikH7fAYawlYz40smwcEFYY,5143
+django_default-0.0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+django_default-0.0.3.dist-info/entry_points.txt,sha256=bDChdBpn7VhTqozFCksXOANkUZLE79aDft5BKndBeWU,60
+django_default-0.0.3.dist-info/top_level.txt,sha256=ZoUcRbFxIAazo9hYY6q-c23tLVZcXVAphSjJhWsKTvo,11
+django_default-0.0.3.dist-info/RECORD,,
