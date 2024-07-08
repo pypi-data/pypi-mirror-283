@@ -1,0 +1,9 @@
+GmailBox/__init__.py,sha256=fCDfQA7Xvmv-vaA291QRuAmh2hr71CJTyzEdwwzuG6A,5633
+GmailBox/async_session.py,sha256=Au1iUpTan_ZbQjij4QXmeR6xWLdg2k6VMenROmjLEIc,1627
+GmailBox/asyncio.py,sha256=i5_y0XgQmlovcFuHKuj9APAWxENz1q5ioskmfOCzooI,5744
+GmailBox/my_types.py,sha256=h0YCyj2ZKIE_UXb84t1McW4xcQxMULvpn5TOBDpjbk4,1090
+GmailBox/session.py,sha256=3tWlMDG73Gcpq_t9WbV3wFxg2JC2kA3C7tZli01OcFE,1474
+GmailBox-1.0.0.dist-info/METADATA,sha256=1u0eghkVsMsO5f8sL60MD_SknkghcZAcaAzEjIcuFHQ,2753
+GmailBox-1.0.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+GmailBox-1.0.0.dist-info/top_level.txt,sha256=Um42jJj9jahTfVicKwP1pSnMKB4Kunrh7Rq99NIL9KU,9
+GmailBox-1.0.0.dist-info/RECORD,,
