@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/dban/__init__.py
+src/dban/__main__.py
+src/dban.egg-info/PKG-INFO
+src/dban.egg-info/SOURCES.txt
+src/dban.egg-info/dependency_links.txt
+src/dban.egg-info/requires.txt
+src/dban.egg-info/top_level.txt
