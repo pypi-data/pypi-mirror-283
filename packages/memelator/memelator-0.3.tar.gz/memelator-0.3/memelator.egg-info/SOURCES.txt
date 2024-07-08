@@ -1,0 +1,5 @@
+setup.py
+memelator.egg-info/PKG-INFO
+memelator.egg-info/SOURCES.txt
+memelator.egg-info/dependency_links.txt
+memelator.egg-info/top_level.txt
