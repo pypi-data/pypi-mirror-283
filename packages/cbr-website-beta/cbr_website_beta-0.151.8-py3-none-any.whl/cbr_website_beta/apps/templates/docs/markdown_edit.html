@@ -1,0 +1,82 @@
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    window.mermaid = mermaid
+    mermaid.initialize({ startOnLoad: true });
+</script>
+
+
+<div class="container-fluid" id="doc-page">
+    <div class="row">
+        <div class="col-12" id="doc-navigation">
+            <h2>Markdown Edit</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body" id="doc-content">
+                    <textarea id="markdown-input" class="form-control" rows="20" placeholder="Enter Markdown here...">
+## before
+
+```mermaid
+flowchart TD
+    A[Christmas] -->|Get money| B(Go shopping)
+    B --> C{Let me think}
+    C -->|One| D[Laptop]
+    C -->|Two| E[iPhone]
+    C -->|Three| F[fa:fa-car Car]
+```
+
+## after
+
+                    </textarea>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body" id="doc-content">
+                    <div id="html-output">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+$(document).ready(function() {
+    let timeout = null;
+
+    function renderMarkdown() {
+        const markdownText = $('#markdown-input').val();
+        $.ajax({
+            url: 'http://localhost:5001/markdown/render/markdown-to-html',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({ text: markdownText }),
+            success: function(response) {
+                $('#html-output').html(response);
+                window.mermaid.contentLoaded();
+            },
+            error: function(error) {
+                console.error('Error:', error);
+            }
+        });
+    }
+
+    $('#markdown-input').on('input', function() {
+        clearTimeout(timeout);
+        timeout = setTimeout(renderMarkdown, 100); // 500ms delay after the user stops typing
+    });
+
+    // Call renderMarkdown on page load
+    renderMarkdown();
+});
+</script>
+
