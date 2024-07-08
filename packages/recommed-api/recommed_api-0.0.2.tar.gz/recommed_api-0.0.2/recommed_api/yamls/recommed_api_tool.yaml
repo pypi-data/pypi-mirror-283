@@ -1,0 +1,10 @@
+recommed_api.tools.recommed_api_tool.get_recommend:
+  function: get_recommend
+  inputs:
+    recommend_url:
+      type:
+      - string
+  module: recommed_api.tools.recommed_api_tool
+  name: recommend_api
+  description: recommend
+  type: python
