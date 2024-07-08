@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pypi-workflow
+Version: 0.1.0
+Summary: 
+Author: SpaceShaman
+Author-email: spaceshaman@tuta.io
+Requires-Python: >=3.10.0,<4.0.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# pypi-workflow
+
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+![GitHub License](https://img.shields.io/github/license/SpaceShaman/pypi-workflow)
+![Tests](https://img.shields.io/github/actions/workflow/status/SpaceShaman/pypi-workflow/tests.yml?label=tests)
+![Codecov](https://img.shields.io/codecov/c/github/SpaceShaman/pypi-workflow)
+
