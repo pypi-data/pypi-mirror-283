@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "maskerlogger"
+version = "0.0.0-dev"
+description = ""
+authors = ["Tamar Galer <tamar@ox.security>"]
+readme = "README.md"
+packages = [{include = "maskerlogger"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pyahocorasick = "^2.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
