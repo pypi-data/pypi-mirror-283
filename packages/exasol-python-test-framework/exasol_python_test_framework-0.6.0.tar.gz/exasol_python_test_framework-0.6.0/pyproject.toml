@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "exasol-python-test-framework"
+version = "0.6.0"
+description = "Python Test framework for Exasol database tests"
+
+license = "MIT"
+
+authors = [
+    "Exasol AG <opensource@exasol.com>"
+]
+
+readme = 'README.md'  # Markdown files are supported
+
+repository = "https://github.com/exasol/exasol-python-test-framework"
+homepage = "https://github.com/exasol/exasol-python-test-framework"
+
+include = ["exatest","udf"]
+keywords = ['exasol', 'testing']
+
+exclude = ["lang"]
+
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+pyodbc = "^5.1.0"
+numpy = ">=1.26"
+scipy = "^1.13.0"
+# The `sys_platform` marker makes sure the docker dependency is only installed on
+# non windows platforms.
+docker = { version = ">=5.0.3", markers = "sys_platform != 'win32'"}
+pyftpdlib = ">=1.5.6"
+
+[tool.poetry.dev-dependencies]
+toml = ">=0.10.2"
+gitpython = ">=3.1.0"
+[tool.poetry.group.dev.dependencies]
+exasol-integration-test-docker-environment = "^3.0.0"
+
