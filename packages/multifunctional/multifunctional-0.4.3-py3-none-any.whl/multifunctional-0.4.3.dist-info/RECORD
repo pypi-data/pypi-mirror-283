@@ -1,0 +1,13 @@
+multifunctional/__init__.py,sha256=ycpV9lkGnfyfTb7AFdI2teK5uiJnwlTwp185l_w7kiM,1323
+multifunctional/allocation.py,sha256=O7J_JuP4653xjIs3Dbi4Zddlnv1UjNONdvX9dyROPTg,6598
+multifunctional/database.py,sha256=_2lXvhi_pQhPz2vDd-EJUKUvHrn1Mofgzkb1BSndDnk,2789
+multifunctional/edge_classes.py,sha256=0jE-sguCWw1wycElE2MJRfIkVLNDDuGCo61J5z4ALTw,752
+multifunctional/errors.py,sha256=X_exHU9tC-14Z5OttUOdulkHBMauDcj0QCeDD3-NgLM,35
+multifunctional/node_classes.py,sha256=JQj_znpUN1Efl0JrcYwhw6VXk8k5FPYhAjJfEZn_mKs,4606
+multifunctional/node_dispatch.py,sha256=FFzVwO5WEYYBlsIC5SGIGG02S0YjDTXsO0DtfKadBKQ,530
+multifunctional/utils.py,sha256=WnS7DewaLuFs7lF38C_mZzUmJ0lIyAQJJe3rl25P1kA,3218
+multifunctional-0.4.3.dist-info/LICENSE,sha256=lm1ISrt8lgHTizeXaVvkzNJBmelbPEM0b8ZoIErWItU,1456
+multifunctional-0.4.3.dist-info/METADATA,sha256=Zc50lMj2qP0EJ0inIEAVjvHm7EcuqcCdmQMYVjbEJVk,13587
+multifunctional-0.4.3.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+multifunctional-0.4.3.dist-info/top_level.txt,sha256=e9ChIFzoPXKZVVzOZic7b6rY2pKzw-gxnRsEWFFKQzs,16
+multifunctional-0.4.3.dist-info/RECORD,,
