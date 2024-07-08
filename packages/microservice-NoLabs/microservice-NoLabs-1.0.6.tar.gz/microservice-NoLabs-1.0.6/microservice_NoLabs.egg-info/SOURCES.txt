@@ -1,0 +1,11 @@
+README.md
+setup.py
+microservice/__init__.py
+microservice/exceptions.py
+microservice/fastapi_middlewares.py
+microservice/shared.py
+microservice_NoLabs.egg-info/PKG-INFO
+microservice_NoLabs.egg-info/SOURCES.txt
+microservice_NoLabs.egg-info/dependency_links.txt
+microservice_NoLabs.egg-info/requires.txt
+microservice_NoLabs.egg-info/top_level.txt
