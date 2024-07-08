@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: drugdetector
+Version: 0.1.0
+Summary: A simple wrapper to support drug detection in medical texts.
+Home-page: https://github.com/yourusername/my_project
+Author: Fabrice Harel-Canada
+Author-email: fabricehc@cs.ucla.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: guidance
+Requires-Dist: accelerate
+Requires-Dist: auto-gptq
+Requires-Dist: transformers==4.38.2
+Requires-Dist: optimum
+
+# drugdetector
