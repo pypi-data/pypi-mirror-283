@@ -1,0 +1,3 @@
+include README.md
+recursive-include drfapigenerator/templates *
+recursive-include drfapigenerator/static *
