@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/basic_text_effects_biomass2857/__init__.py
+src/basic_text_effects_biomass2857/basic_text_effects.py
+src/basic_text_effects_biomass2857.egg-info/PKG-INFO
+src/basic_text_effects_biomass2857.egg-info/SOURCES.txt
+src/basic_text_effects_biomass2857.egg-info/dependency_links.txt
+src/basic_text_effects_biomass2857.egg-info/top_level.txt
