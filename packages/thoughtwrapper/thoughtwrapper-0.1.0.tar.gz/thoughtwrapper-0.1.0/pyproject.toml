@@ -1,0 +1,78 @@
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[project]
+name = "thoughtwrapper"
+description = "A Static Site Generator for Tinkerers"
+authors = [
+    { name = "Lucas Hinderberger", email = "mail@lucas-hinderberger.de" },
+]
+dependencies = [
+    "beautifulsoup4>=4.12.3",
+]
+requires-python = ">=3.12"
+readme = "README.md"
+dynamic = []
+version = "0.1.0"
+
+[project.license]
+text = "Apache-2.0"
+
+[project.license-files]
+paths = [
+    "LICENSE.txt",
+]
+
+[project.optional-dependencies]
+md = [
+    "marko>=2.1.0",
+]
+syntax = [
+    "Pygments>=2.18.0",
+]
+template = [
+    "Jinja2>=3.1.4",
+]
+
+[project.scripts]
+thoughtwrapper = "thoughtwrapper._cli:main"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.version]
+source = "file"
+path = "src/thoughtwrapper/__init__.py"
+
+[tool.pdm.dev-dependencies]
+test = [
+    "pytest>=8.1.1",
+]
+lint = [
+    "reuse>=4.0.2",
+    "pycodestyle>=2.12.0",
+    "pydocstyle>=6.3.0",
+    "pylint>=3.2.5",
+]
+
+[tool.pdm.scripts]
+lint = "scripts/lint.sh"
+test = "pytest"
+
+[tool.pdm.scripts.docpreview]
+cmd = "thoughtwrapper -b doc/build.py serve"
+
+[tool.pdm.scripts.docpreview.env]
+TW_IMPRINT_URL = "omit"
+TW_PRIVACY_URL = "omit"
+
+[tool.pylint]
+disable = [
+    "C0114",
+    "C0115",
+    "C0116",
+    "W0511",
+]
