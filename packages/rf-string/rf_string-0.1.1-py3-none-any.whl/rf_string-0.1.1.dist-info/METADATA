@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: rf-string
+Version: 0.1.1
+Summary: rf-string provides round trip string support via complimentary regex parsing to fstring formatting.
+Author: Jared Cuteri
+Author-email: jaredcuteri@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+
