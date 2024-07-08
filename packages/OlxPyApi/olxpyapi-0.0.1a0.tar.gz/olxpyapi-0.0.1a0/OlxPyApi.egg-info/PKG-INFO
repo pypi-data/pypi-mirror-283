@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: OlxPyApi
+Version: 0.0.1a0
+Home-page: https://github.com/Vladislavus1/OlxPyApi
+Author: Vladislavus1
+Author-email: vlydgames@gmail.com
+Requires-Dist: beautifulsoup4==4.12.3
+Requires-Dist: requests==2.31.0
