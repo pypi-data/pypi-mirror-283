@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: openstack.debugger
+Version: 0.1.0
+Summary: OpenStack Configuration for Debugging
+Home-page: https://gitlabix.gabia.io/cloud/openstack/
+Author: Sean
+Author-email: pjw@gabia.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.8
+License-File: AUTHORS
+Requires-Dist: pbr >=3.1.1
+Requires-Dist: oslo.config >=8.1.0
+Requires-Dist: oslo.log >=4.5.0
+Requires-Dist: debugpy >=1.8.2
+
+# debugger
+
+오픈스택 프로젝트에서 공통 라이브러리
+
