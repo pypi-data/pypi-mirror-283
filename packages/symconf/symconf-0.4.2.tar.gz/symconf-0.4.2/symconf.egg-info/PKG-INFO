@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: symconf
+Version: 0.4.2
+Summary: Local app configuration manager
+Author-email: Sam Griesemer <samgriesemer+git@gmail.com>
+Project-URL: Homepage, https://doc.olog.io/symconf
+Project-URL: Documentation, https://doc.olog.io/symconf
+Project-URL: Repository, https://git.olog.io/olog/symconf
+Project-URL: Issues, https://git.olog.io/olog/symconf/issues
+Keywords: config
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyxdg
+Requires-Dist: colorama
+Provides-Extra: tests
+Requires-Dist: pytest; extra == "tests"
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx-togglebutton; extra == "docs"
+Requires-Dist: sphinx-autodoc-typehints; extra == "docs"
+Requires-Dist: furo; extra == "docs"
+Requires-Dist: myst-parser; extra == "docs"
+Provides-Extra: build
+Requires-Dist: build; extra == "build"
+Requires-Dist: twine; extra == "build"
+
+# Overview
+`symconf` is a CLI tool for managing local application configuration. It uses a simple
+operational model that symlinks centralized config files to their expected locations across
+the system. This central config directory can then be version controlled.
+
+`symconf` also facilitates dynamically setting system and application "themes," symlinking
+matching theme config files for registered apps and running config reloading scripts. 
+
+For
+example, the following `symconf` call coordinates a light to dark mode switch
+
