@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: pygcloud
+Version: 0.0.4
+Summary: Python helper around gcloud
+Author-email: Jean-Lou Dupont <jld@jldupont.com>
+Project-URL: Repository, https://github.com/jldupont/pygcloud
+Project-URL: Pypi, https://pypi.org/project/pygcloud/
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# Purpose
+
+Wouldn't be nice to script your GCP infrastructure without having to learn a new language ?
+
+# Description
+
+This package simplifies the deployment of GCP services through the gcloud command line.
+
+# Installation
+
+`pip install pygcloud`
+
+# Requirements
+
+* Leverage `gcloud` command line tool
+* Be as transparent to `gcloud` as possible
+* Capability to group deployment of services together
+* Capability to describe relationships between services
+* Capability to perform trial run
+
+# Enabling Features 
+
+* Infrastructure governance
+* Diagramming
+
+The above features are supported by employing the `after_*` methods of the `GCPService` class.
+
+# How to use
+
+TODO
+
+# Links
+
+* [Repository](https://github.com/jldupont/pygcloud)
+* [Pypi](https://pypi.org/project/pygcloud/)
+
