@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests"
+]
+pythonpath = [
+    './'
+]
+
+[project]
+name = "bs4_html2json"
+version = "0.0.2"
+authors = [
+    { name = "Jason Jiménez Cruz", email = "jasonjimenezcruz@gmail.com" },
+]
+description = "A simple wrapper for adding a simple way for storing parsed HTML content"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3.9",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+]
+dependencies = [
+    "beautifulsoup4",
+    "requests"
+]
+license = {file = "LICENSE"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["html2json"]  # alternatively: `exclude = ["additional*"]`
+namespaces = false
+
+[project.urls]
+Homepage = "https://github.com/jasonjimnz/beautiful_soup4_html2json"
+Issues = "https://github.com/jasonjimnz/beautiful_soup4_html2json/issues"
