@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: IMKernel
+Version: 0.1.0
+Summary: A brief description of IMKernel
+Home-page: https://github.com/MermengM/im_kernel_python
+Author: ermeng
+Author-email: ermeng@ermeng.fun
+License: GNU General Public License v3 or later (GPLv3+)
+Project-URL: Bug Tracker, https://github.com/yourusername/IMKernel/issues
+Keywords: IMKernel kernel image processing
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.11
+License-File: LICENSE
+
+A long description of IMKernel
