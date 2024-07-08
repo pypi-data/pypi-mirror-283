@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: boardwalk
+Version: 0.0.1
+Summary: A client library for Boardwalk Cloud
+Author: Boardwalk
+Author-email: support@boardwalk.cloud
+License: Apache 2.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Boardwalk SDK - Python
+
+## Installation
+
+You can install the Boardwalk SDK via pip:
+
+```bash
+pip install boardwalk
+```
+
+## Repository Setup
+
+If you don’t have Python installed, [download it here](https://www.python.org/downloads/).
+
+1. Clone this repository.
+
+2. Navigate to the project directory:
+
+```bash
+cd BoardwalkPythonSDK
+```
+
+3. Create a new virtual environment:
+
+```bash
+virtualenv virt
+source virt/bin/activate
+```
+
+4. Install the requirements:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Deployment
+
+Execute setup.py
+
+```bash
+python3 setup.py bdist_wheel 
+```
+
+Upload to PyPI
+
+```bash
+twine upload dist/* 
+```
