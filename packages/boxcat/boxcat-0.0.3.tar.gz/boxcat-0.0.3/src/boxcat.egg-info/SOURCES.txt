@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/boxcat/Either.py
+src/boxcat/Option.py
+src/boxcat/Seq.py
+src/boxcat/__init__.py
+src/boxcat.egg-info/PKG-INFO
+src/boxcat.egg-info/SOURCES.txt
+src/boxcat.egg-info/dependency_links.txt
+src/boxcat.egg-info/top_level.txt
+test/test_Eithers.py
+test/test_Option.py
+test/test_Seq.py
