@@ -1,0 +1,4 @@
+[plain.cli]
+code=plain.code:cli
+fix=plain.code.cli:fix
+
