@@ -1,0 +1,6 @@
+setup.cfg
+setup.py
+koerce.egg-info/PKG-INFO
+koerce.egg-info/SOURCES.txt
+koerce.egg-info/dependency_links.txt
+koerce.egg-info/top_level.txt
