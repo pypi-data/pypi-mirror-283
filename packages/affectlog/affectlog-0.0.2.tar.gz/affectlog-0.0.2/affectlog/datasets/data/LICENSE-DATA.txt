@@ -1,0 +1,29 @@
+This software is licensed under the GNU GENERAL PUBLIC LICENSE Version 3
+See file LICENSE. As for some preprocessed data:
+
+**** DataScientist.csv **************************************
+source: https://www.kaggle.com/datasets/andrewmvd/data-scientist-jobs
+This data is licensed under the CC BY 4.0 License
+https://creativecommons.org/licenses/by/4.0/
+
+**** ds_salaries.csv **************************************
+source: https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries
+This data is licensed under the CC BY 4.0 License
+https://creativecommons.org/licenses/by/4.0/
+
+**** HR-Employee-Attrition.csv **************************************
+source: https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset
+This data is licensed under the CC BY 4.0 License
+https://creativecommons.org/licenses/by/4.0/
+
+**** Online_Courses.csv **************************************
+source: https://www.kaggle.com/datasets/khaledatef1/online-courses
+This data is licensed under the CC BY 4.0 License
+https://creativecommons.org/licenses/by/4.0/
+
+**** Salary-Data.csv **************************************
+source: https://www.kaggle.com/datasets/rkiattisak/salaly-prediction-for-beginer
+This data is licensed under the CC BY 4.0 License
+https://creativecommons.org/licenses/by/4.0/
+
+******************************************************
