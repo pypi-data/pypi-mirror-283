@@ -1,0 +1,16 @@
+README.md
+setup.py
+wauo/__init__.py
+wauo/exceptions.py
+wauo/test.py
+wauo.egg-info/PKG-INFO
+wauo.egg-info/SOURCES.txt
+wauo.egg-info/dependency_links.txt
+wauo.egg-info/not-zip-safe
+wauo.egg-info/requires.txt
+wauo.egg-info/top_level.txt
+wauo/spiders/__init__.py
+wauo/spiders/response.py
+wauo/spiders/spiders.py
+wauo/tools/__init__.py
+wauo/tools/pool_manager.py
