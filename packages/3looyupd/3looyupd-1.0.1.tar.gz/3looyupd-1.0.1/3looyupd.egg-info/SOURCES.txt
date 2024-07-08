@@ -1,0 +1,10 @@
+LICENCE
+README.md
+setup.py
+3looyupd/__init__.py
+3looyupd/check_update.py
+3looyupd/version.py
+3looyupd.egg-info/PKG-INFO
+3looyupd.egg-info/SOURCES.txt
+3looyupd.egg-info/dependency_links.txt
+3looyupd.egg-info/top_level.txt

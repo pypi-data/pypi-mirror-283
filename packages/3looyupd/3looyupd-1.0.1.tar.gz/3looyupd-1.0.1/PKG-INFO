@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: 3looyupd
+Version: 1.0.1
+Summary: updating the app
+Home-page: https://github.com/3looybh/tools-downloader/
+Author: 3looybh
+Author-email: your_email@example.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+There is nothing to read
