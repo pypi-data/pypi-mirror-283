@@ -1,0 +1,15 @@
+duplicate_url_discarder/__init__.py,sha256=OJnnHyINx9F17sQdH7cXPhwqOIF1imltweKghMHgXF8,91
+duplicate_url_discarder/_addon.py,sha256=yPaf5fP82auhM8nNFtzC6ZSr20F3o3bi9hWmYUO7HuQ,512
+duplicate_url_discarder/_fingerprinter.py,sha256=OUElrwMN6EuvIkeXVMK161NHUk3MGDDAiJrCyReFzLc,2636
+duplicate_url_discarder/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+duplicate_url_discarder/rule.py,sha256=7G_kGwlXgDyqzBsQxewmJvURJoR_ZuwMxX_qGRwoZl8,1600
+duplicate_url_discarder/url_canonicalizer.py,sha256=IEZGOv4w4Rga3hrGSuEy62RvL4td9vYVQ1DkGYo6JlU,1683
+duplicate_url_discarder/processors/__init__.py,sha256=NZwg6WLuJ3fJ-LblvD-1cA9vZ_BCD2TbwRBWiV1sQMg,670
+duplicate_url_discarder/processors/base.py,sha256=Y6u5eDpxEzFRdpUnbX-WF00H_nlFZdps-lmvftEhrUk,503
+duplicate_url_discarder/processors/query_removal.py,sha256=1GxuAVmwu1IuYs-rATkC_Md7oTD6vSkkxuKxtLa5qtw,537
+duplicate_url_discarder/processors/query_removal_except.py,sha256=nBo4NA9NtVYDtReEX1wGbl59b6zTSzqGdJdGvgRYcUM,536
+duplicate_url_discarder-0.1.0.dist-info/LICENSE,sha256=kpjNvvmhbqZ-CA2Uue93PYS2wHTPhRiRgyDAWYHbMlo,1081
+duplicate_url_discarder-0.1.0.dist-info/METADATA,sha256=g51E_4jyKIaz1TMStqiFWLheHh18Zqv2vh5zWXTvh5s,7646
+duplicate_url_discarder-0.1.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+duplicate_url_discarder-0.1.0.dist-info/top_level.txt,sha256=jLc7gQ-PrbtD6Ym1I0k7yHLu1neSMBGXga_lWCZ4GKs,24
+duplicate_url_discarder-0.1.0.dist-info/RECORD,,
