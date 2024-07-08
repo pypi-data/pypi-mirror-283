@@ -1,0 +1,8 @@
+README.md
+setup.py
+base64imageCompress.egg-info/PKG-INFO
+base64imageCompress.egg-info/SOURCES.txt
+base64imageCompress.egg-info/dependency_links.txt
+base64imageCompress.egg-info/entry_points.txt
+base64imageCompress.egg-info/requires.txt
+base64imageCompress.egg-info/top_level.txt
