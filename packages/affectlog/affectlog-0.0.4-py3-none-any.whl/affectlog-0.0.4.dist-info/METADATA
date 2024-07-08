@@ -1,0 +1,128 @@
+Metadata-Version: 2.1
+Name: affectlog
+Version: 0.0.4
+Summary: Trustworthy Machine Learning Assessment
+Home-page: https://affectlog.com/
+Author: AffectLog Developer Team
+Author-email: developer@affectlog.com
+Maintainer: AffectLog Developer Team
+Maintainer-email: developer@affectlog.com
+License: UNKNOWN
+Project-URL: Documentation, https://affectlog.com/python/
+Project-URL: Code, https://github.com/AffectLog360/AffectLog/tree/master/python/affectlog
+Project-URL: Issue tracker, https://github.com/AffectLog360/AffectLog/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setuptools
+Requires-Dist: pandas >=1.5.0
+Requires-Dist: numpy >=1.23.3
+Requires-Dist: scipy >=1.6.3
+Requires-Dist: plotly >=5.1.0
+Requires-Dist: tqdm >=4.61.2
+Provides-Extra: full
+Requires-Dist: lime >=0.2.0.1 ; extra == 'full'
+Requires-Dist: scikit-learn >=0.22.0 ; extra == 'full'
+Requires-Dist: statsmodels >=0.11.1 ; extra == 'full'
+Requires-Dist: shap >=0.35.0 ; extra == 'full'
+Requires-Dist: flask >=1.1.2 ; extra == 'full'
+Requires-Dist: flask-cors >=3.0.8 ; extra == 'full'
+Requires-Dist: requests >=2.24.0 ; extra == 'full'
+Requires-Dist: kaleido >=0.2.1 ; extra == 'full'
+Requires-Dist: ppscore >=1.2.0 ; extra == 'full'
+Requires-Dist: ipywidgets >=7.6.3 ; extra == 'full'
+
+# AffectLog
+
+[AffectLog: Trustworthy Machine Learning Assessment](http://affectLog.com/python)
+
+[![Python-check](https://github.com/AffectLog360/AffectLog/workflows/Python-check/badge.svg)](https://github.com/AffectLog360/AffectLog/actions?query=workflow%3APython-check)
+[![Supported Python
+versions](https://img.shields.io/pypi/pyversions/affectlog.svg)](https://pypi.org/project/affectlog/)
+[![PyPI version](https://badge.fury.io/py/affectlog.svg)](https://badge.fury.io/py/affectlog)
+[![Downloads](https://pepy.tech/badge/affectlog)](https://pepy.tech/project/affectlog)
+
+## Overview
+
+Unverified black box models are destined for failure. Lack of transparency breeds distrust, leading to neglect and eventual rejection.
+
+The 'affectlog' package offers a suite of tools to dissect and explain the behavior of any predictive model. The central component, the Explainer object, wraps around the model, facilitating detailed exploration and comparison through various model-level and prediction-level explanations. Additionally, 'affectlog' provides methods for assessing fairness and interactive dashboards for comprehensive analysis.
+
+## Installation
+
+The `affectlog` package is available on [PyPI](https://pypi.org/project/affectlog/) and [conda-forge](https://anaconda.org/conda-forge/affectlog).
+
+```console
+pip install affectlog -U
+
+conda install -c conda-forge affectlog
+
+One can install optional dependencies for all additional features using pip install affectlog[full].
+
+Resources: https://affectlog.com/research.html
+API reference: https://affectlog.com/research/api
+
+## Authors
+The authors of the affectlog package are:
+
+AffectLog Developer Team
+We welcome contributions: start by opening an issue on GitHub.
+
+## Citation
+If you use affectlog, please cite our research:
+@article{AffectLog360,
+  author  = {AffectLog Developer Team},
+  title   = {AffectLog: Trustworthy Machine Learning
+             with Interactive Explainability and Fairness in Python},
+  journal = {Research- AffectLog360°},
+  year    = {n.d.},
+  url     = {https://affectlog.com/research.html}
+}
+```
+
+
+## Changelog
+
+### v0.0.2 (2024-02-28)
+
+* **Dependencies:**
+  * Increased the dependencies to `python>=3.8`, `pandas>=1.5.0`, `numpy>=1.23.3`.
+  * Added `python==3.11` to CI.
+* **TensorFlow/Keras Compatibility:**
+  * Added `keras.src.models.sequential.Sequential` to classes with a known `predict_function`; this fixes changes in `keras==3.0.0` and `tensorflow==2.16.0`.
+  * Turned off `verbose` in the predict method of tensorflow/keras models to address changes in `tensorflow>=2.9.0`.
+* **Warnings and Errors:**
+  * Updated the warning occurring when specifying `variable_splits`.
+  * Fixed an error occurring in `predict_profile()` when a DataFrame has MultiIndex in `pandas>=1.3.0`.
+  * Fixed Gaussian `norm()` calculation in `model_profile()` from `pi*sqrt(2)` to `sqrt(2*pi)`.
+  * Fixed a warning (future error) between `prepare_numerical_categorical()` and `prepare_x()` with `pandas==2.1.0`.
+  * Fixed a warning (future error) concerning the default value of `numeric_only` in `pandas.DataFrame.corr()` in `affectlog.aspect.calculate_assoc_matrix()`.
+* **Explainer Enhancements:**
+  * Improved `Explainer` object to better handle new dependencies and compatibility issues.
+
+### v0.0.1 (2023-12-16) 
+
+* **Precision and Recall Functions:**
+  * Added handling for `ZeroDivisionError` in precision and recall functions to prevent crashes.
+* **Warnings and Alerts:**
+  * Added a warning to `calculate_depend_matrix()` when there is a variable with only one value to notify users of potential issues.
+* **Exploratory Data Analysis (EDA) Plots:**
+  * Fixed missing EDA plots in the AL360 module, enhancing the visualization and analysis capabilities.
+* **Predict Parts Explanations:**
+  * Fixed baseline positions in the subplots of the predict parts explanations: BreakDown, Shap, ensuring accurate visual representation.
+* **Model and Predict Enhancements:**
+  * Improved model and predict functionalities to align with the latest updates and user feedback.
+
+
