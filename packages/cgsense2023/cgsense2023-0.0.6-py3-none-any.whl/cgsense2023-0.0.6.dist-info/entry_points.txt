@@ -1,0 +1,5 @@
+[mkdocs.plugins]
+rm_num_prefix = nbdev.mkdocs:RmNumPrefix
+
+[nbdev]
+cgsense2023 = cgsense2023._modidx:d
