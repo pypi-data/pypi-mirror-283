@@ -1,0 +1,8 @@
+gouba.py
+setup.py
+gouba.egg-info/PKG-INFO
+gouba.egg-info/SOURCES.txt
+gouba.egg-info/dependency_links.txt
+gouba.egg-info/entry_points.txt
+gouba.egg-info/requires.txt
+gouba.egg-info/top_level.txt

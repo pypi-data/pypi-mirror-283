@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: gouba
+Version: 1.0.0
+Summary: The SouGou Searcher On Python|Python 搜狗搜索工具
+Home-page: UNKNOWN
+Author: Python学霸
+Author-email: python@xueba.com
+License: UNKNOWN
+Description: ## 介绍
+        `GouBa` python 搜狗搜索引擎|Python Sougou Searcher
+        
+        ## 安装
+        ``` bush
+        pip install gouba
+        ```
+        ## 使用
+        **1.命令方式** | **Bush**
+        ``` bush
+        woof [keyword] 
+        ```
+        **2.Pyhton使用** 
+        ``` python
+        import gouba
+        s=gouba.woof("python教程")
+        print(s)
+        ```
+        **喜欢关注python学霸微信公众号!**
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
