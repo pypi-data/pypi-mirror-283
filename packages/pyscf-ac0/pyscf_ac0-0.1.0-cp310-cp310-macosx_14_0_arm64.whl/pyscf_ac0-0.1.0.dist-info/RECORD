@@ -1,0 +1,13 @@
+pyscf_ac0-0.1.0.dist-info/RECORD,,
+pyscf_ac0-0.1.0.dist-info/WHEEL,sha256=zCXFIbfvv8Od2SYb14JKIeIyLKyYTLqtA-apJp3xTLo,113
+pyscf_ac0-0.1.0.dist-info/entry_points.txt,sha256=SG6vEzaF7jbb78-3itg2aMp0yqDsH5a76r0XBXvPYJs,56
+pyscf_ac0-0.1.0.dist-info/METADATA,sha256=gXKjqdmF0Kzv4Ctx5EB1Cb7iYaTItlfOuGJHJmBTNjQ,42418
+pyscf_ac0-0.1.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pyscf_ac0.dylibs/libgfortran.5.dylib,sha256=41zHuWmd4JveHf5qRMefY7ytQqg1657Ux2CxPTHrV5A,1842176
+pyscf_ac0.dylibs/libquadmath.0.dylib,sha256=ukRBHEubXwBmfVUT2IX3nmwfQ6uh7QLZBh4r3afGFT4,352064
+pyscf_ac0.dylibs/libgcc_s.1.1.dylib,sha256=1jb8GxUZTVCjm6VvMmTmVkS3B-nJli4AdisSEky7R2A,141120
+pyscf/cas_ac0/ac0_lib.cpython-310-darwin.so,sha256=PMM7gsSPIXeXrys_V4CrZ5uzCtKZMkQWwNJvyLQxowQ,159232
+pyscf/cas_ac0/_version.py,sha256=IMl2Pr_Sy4LVRKy_Sm4CdwUl1Gryous6ncL96EMYsnM,411
+pyscf/cas_ac0/_cli.py,sha256=HIC9-rtydaWuZGcfF5fmEArGnGzNfcG9QqJmqv7N6j8,582
+pyscf/cas_ac0/__init__.py,sha256=ePNOko0BPQvc2HzWnvjZVSN2kjXS6zCJjClPoCZ32S4,54
+pyscf/cas_ac0/accas.py,sha256=0KcgJv4F392OG2EXGvq-_vfU-I5K_KCKQNNDNhobN9I,4699

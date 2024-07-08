@@ -1,0 +1,3 @@
+[console_scripts]
+rdm_ac0 = pyscf.cas_ac0._cli:rdm_ac0
+
