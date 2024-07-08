@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: user_envs
+Version: 0.0.1
+Summary: An openAI gym environment from user
+Description-Content-Type: text/markdown
+Requires-Dist: gymnasium >=0.26.0
+Requires-Dist: pygame >=2.1.0
+
