@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: extended-comm
+Version: 0.1.1
+Summary: wrapper for communication between external apis
+Home-page: https://github.com/karunkrishna/extended_comm
+Author: Karun Krishna
+Author-email: karun.krishna@gmail.com
+License: MIT
+Requires-Dist: google-api-python-client
+Requires-Dist: python-dotenv
+Requires-Dist: google-auth-httplib2
+Requires-Dist: google-auth-oauthlib
+
