@@ -1,0 +1,32 @@
+version: 1
+disable_existing_loggers: False
+formatters:
+  precise:
+    format: '%(asctime)s.%(msecs)03d %(levelname)8s %(name)14s@%(lineno)03d :: %(message)s'
+    datefmt: '%Y-%m-%dT%H:%M:%S'
+    #datefmt: '%H:%M:%S'
+    class: logging.Formatter
+  compact:
+    format: '[%(levelname)s] %(message)s'
+  colored:
+    format: '%(asctime)s.%(msecs)03d [%(levelname)s] %(message)s'
+    datefmt: '%Y-%m-%dT%H:%M:%S'
+    class: climdex.utils.ColoredFormatter
+  colored_custom:
+    (): climdex.utils.coloredFormatterFactory
+    format: '%(asctime)s.%(msecs)03d [%(levelname)s] %(message)s'
+    datefmt: '%Y-%m-%dT%H:%M:%S'
+    color_msg: True
+    color_time: False
+handlers:
+  console:
+    class: logging.StreamHandler
+    formatter: colored_custom
+    stream: ext://sys.stdout
+  file:
+    class: logging.FileHandler
+    formatter: precise
+    filename: climdex.log
+root:
+  handlers: [file, console]
+  level: INFO

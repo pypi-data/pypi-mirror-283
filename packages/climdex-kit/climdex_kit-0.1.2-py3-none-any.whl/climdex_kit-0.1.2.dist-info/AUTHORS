@@ -1,0 +1,11 @@
+Main (and so far, only) developer for the package is:
+Piero Campalani <piero.campalani@eurac.edu>
+
+The whole idea of a package for the computation and analysis
+of climate indices of future climate projection started from
+Alice Crespi <alice.crespi@eurac.edu>, which is also the mastermind
+behind the definition and tuning of the preconfigured set of climate indices 
+available that are available under:
+
+    ./src/climdex/etc/indices.ini
+
