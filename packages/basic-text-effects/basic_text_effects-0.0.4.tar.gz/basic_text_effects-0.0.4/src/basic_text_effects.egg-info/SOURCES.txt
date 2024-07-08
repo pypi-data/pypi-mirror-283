@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/basic_text_effects/__init__.py
+src/basic_text_effects/basic_text_effects.py
+src/basic_text_effects.egg-info/PKG-INFO
+src/basic_text_effects.egg-info/SOURCES.txt
+src/basic_text_effects.egg-info/dependency_links.txt
+src/basic_text_effects.egg-info/top_level.txt

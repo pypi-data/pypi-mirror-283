@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: basic-text-effects
+Version: 0.0.4
+Summary: basic text effects
+Author-email: Tom Reinhardt <tomreinhardt3120@gmail.com>
+Project-URL: Homepage, https://github.com/Biomass2857/basic-text-effects
+Project-URL: Issues, https://github.com/Biomass2857/basic-text-effects/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: The Unlicense (Unlicense)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# To Be Created
