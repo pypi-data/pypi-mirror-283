@@ -1,0 +1,17 @@
+kan/KAN.py,sha256=35rXrhMGME2xERiXCb29EkYZzucn744_F9hlXw4Mklw,52074
+kan/KANLayer.py,sha256=Bv785tEpgp4bkPwxnWspBdr8uElFcsxoaGv4ZIZQNmQ,13056
+kan/LBFGS.py,sha256=nMPmpsNSrpK4Zjkx2-iL5-98uzEFbSbMS83e1Bu9twU,17606
+kan/MultKAN.py,sha256=nA5ScqA91QlzvEZxG8dbdLoapL3vTFUCJvKwvbTD_G0,63593
+kan/Symbolic_KANLayer.py,sha256=vj5M9f9CXKCV-FMUTTMiJcil3wDT3W8LPy-oNQ17ekU,8883
+kan/__init__.py,sha256=sSBSuudsZ0i7xl3dBi24U4qcRAukRzr2awKy-qeF1j0,23
+kan/ckpt.py,sha256=4VmTBCEX6bG-xvLyZnT33Y8FmLZ3TnGcIpE_q4ltrV4,2659
+kan/compiler.py,sha256=69E-raSFxb8nTFLqzBoHNRcdUSdVfaue0J8LRRmWU9s,17663
+kan/feynman.py,sha256=Eisf69K49s4C6UlPEi5LnNK_p5TUJQLBKxMp-sW0a9w,33687
+kan/spline.py,sha256=c4318010sKB09MdFtBa4xvS9HQPg3D4YQY3CbCC0_Hs,6792
+kan/utils.py,sha256=qPR54fAV9IoO0O6IwCQHl-iaCDMHgz6SnjxBhOf7M0w,13440
+kan/figures/lock.png,sha256=UbX1rePe_aQKq87l1Ga_jXNbl2F-qRFfraL0etUlHOs,11207
+pykan-0.1.1.dist-info/LICENSE,sha256=BJXDWyF4Groqtnp4Gi9puH4aLg7A2IC3MpHmC-cSxwc,1067
+pykan-0.1.1.dist-info/METADATA,sha256=aas3H3SpYxVh_w7IrbSa0PwmqPT33kjH7BiOgNzNue8,13073
+pykan-0.1.1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+pykan-0.1.1.dist-info/top_level.txt,sha256=0rV6J6CURIMy6HIrU46fEdFl_7virDuZKHRa8tmG2Rc,4
+pykan-0.1.1.dist-info/RECORD,,
