@@ -1,0 +1,8 @@
+Name                                      Stmts   Miss  Cover
+-------------------------------------------------------------
+pkrhistoryconverter/__init__.py               0      0   100%
+pkrhistoryconverter/converter.py            204     18    91%
+pkrhistoryconverter/utils/__init__.py         0      0   100%
+pkrhistoryconverter/utils/exceptions.py       4      0   100%
+-------------------------------------------------------------
+TOTAL                                       208     18    91%
