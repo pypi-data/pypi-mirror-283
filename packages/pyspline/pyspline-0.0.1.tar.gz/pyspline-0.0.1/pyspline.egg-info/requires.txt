@@ -1,0 +1,15 @@
+numpy<2,>=1.24.0
+scikit-learn>=1.2.0
+
+[docs]
+matplotlib
+numpydoc
+pydata-sphinx-theme
+scikit-learn
+scipy
+setuptools>=41.2
+sphinx>=3
+sphinxawesome-theme
+sphinx-gallery
+
+[test]
