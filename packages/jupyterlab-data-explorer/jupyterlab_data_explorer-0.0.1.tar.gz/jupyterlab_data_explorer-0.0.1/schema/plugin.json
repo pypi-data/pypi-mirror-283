@@ -1,0 +1,8 @@
+{
+  "jupyter.lab.shortcuts": [],
+  "title": "jupyterlab-data-explorer",
+  "description": "jupyterlab-data-explorer settings.",
+  "type": "object",
+  "properties": {},
+  "additionalProperties": false
+}
