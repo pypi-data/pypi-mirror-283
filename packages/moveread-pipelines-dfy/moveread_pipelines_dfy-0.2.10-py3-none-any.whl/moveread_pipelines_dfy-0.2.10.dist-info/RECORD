@@ -1,0 +1,14 @@
+moveread/pipelines/dfy/__init__.py,sha256=QEp1_9pvy6RIRpFYByriGipemGwCot0el1pW1KIFY6A,164
+moveread/pipelines/dfy/__init__.pyi,sha256=umECanKoT-xPPNBiwQUxbWqNbvPHtO11n8ATacOb27E,208
+moveread/pipelines/dfy/cli.py,sha256=jL2eI0IsUL6Fk5CJTnf1v4fDMjvRepzKUqVM8RRyYF4,4148
+moveread/pipelines/dfy/local.py,sha256=aQZtSHhgjGzmcRHb7vEokVZs8WiskwIxZAEWopAiyMM,1075
+moveread/pipelines/dfy/spec.py,sha256=iRpCN356-UZ-NLZMSGHVgrsnwtak07pLJDl6fmUtJOA,6487
+moveread/pipelines/dfy/core/__init__.py,sha256=mF4M_d6EiHbB9U9W_oKlKXYIyh8ZFn3gxe_382VXiLI,95
+moveread/pipelines/dfy/core/__init__.pyi,sha256=zSwvQXachIYRJbuwWvnroUSgCbiM8QMN-4AGrRgsdBY,98
+moveread/pipelines/dfy/core/input.py,sha256=zQuQCF3qEGdrCHs6eiBhy2bGAFWQeE1bZ5M7FDvqiLM,1950
+moveread/pipelines/dfy/core/output.py,sha256=IwVDpBiDq2azY7CPrrXI9YdB6t563o3jZgrP-wFG3Yo,1436
+moveread_pipelines_dfy-0.2.10.dist-info/METADATA,sha256=RRU_tzhVJyGDCQLKXVdvTzhBwOLecLllk7vqjkxjr2Q,631
+moveread_pipelines_dfy-0.2.10.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+moveread_pipelines_dfy-0.2.10.dist-info/entry_points.txt,sha256=f78LNu0BorW18GM0n8ujmzBNl_ZBBS1D1HQd5buHvAI,65
+moveread_pipelines_dfy-0.2.10.dist-info/top_level.txt,sha256=Nf4zr37sbhc5sbPztUq8FfXD7iyRYJ9bjMTU09166ig,9
+moveread_pipelines_dfy-0.2.10.dist-info/RECORD,,
