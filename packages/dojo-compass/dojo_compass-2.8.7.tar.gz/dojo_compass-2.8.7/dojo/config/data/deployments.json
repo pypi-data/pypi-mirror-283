@@ -1,0 +1,1165 @@
+{
+    "ethereum": {
+        "UniswapV3": {
+            "Factory": {
+                "address": "0x1F98431c8aD98523631AE4a59f267346ea31F984",
+                "abi": "UniV3Factory"
+            },
+            "SwapRouter": {
+                "address": "0xE592427A0AEce92De3Edee1F18E0157C05861564",
+                "abi": "SwapRouter"
+            },
+            "NonfungibleTokenPositionDescriptor": {
+                "address": "0x91ae842A5Ffd8d12023116943e72A606179294f3",
+                "abi": "NonfungibleTokenPositionDescriptor"
+            },
+            "NonfungiblePositionManager": {
+                "address": "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
+                "abi": "NonfungiblePositionManager"
+            },
+            "WBTC/WETH-0.01": {
+                "address": "0x6Ab3bba2F41e7eAA262fa5A1A9b3932fA161526F",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "WBTC",
+                    "WETH"
+                ],
+                "fee": 100
+            },
+            "WBTC/WETH-0.05": {
+                "address": "0x4585FE77225b41b697C938B018E2Ac67Ac5a20c0",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "WBTC",
+                    "WETH"
+                ],
+                "fee": 500
+            },
+            "WBTC/WETH-0.3": {
+                "address": "0xCBCdF9626bC03E24f779434178A73a0B4bad62eD",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "WBTC",
+                    "WETH"
+                ],
+                "fee": 3000
+            },
+            "USDC/WETH-0.05": {
+                "address": "0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "USDC",
+                    "WETH"
+                ],
+                "fee": 500
+            },
+            "USDC/WETH-0.3": {
+                "address": "0x8ad599c3A0ff1De082011EFDDc58f1908eb6e6D8",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "USDC",
+                    "WETH"
+                ],
+                "fee": 3000
+            },
+            "USDC/WETH-1": {
+                "address": "0x7BeA39867e4169DBe237d55C8242a8f2fcDcc387",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "USDC",
+                    "WETH"
+                ],
+                "fee": 10000
+            },
+            "DAI/USDC-0.01": {
+                "address": "0x5777d92f208679DB4b9778590Fa3CAB3aC9e2168",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "DAI",
+                    "USDC"
+                ],
+                "fee": 100
+            },
+            "DAI/USDC-0.05": {
+                "address": "0x6c6Bc977E13Df9b0de53b251522280BB72383700",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "DAI",
+                    "USDC"
+                ],
+                "fee": 500
+            },
+            "WETH/StETH-0.3": {
+                "address": "0x7379e81228514a1D2a6Cf7559203998E20598346",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "WETH",
+                    "StETH"
+                ],
+                "fee": 3000,
+                "descriptor": "weth-seth-0.3"
+            },
+            "WETH/USDT-0.05": {
+                "address": "0x11b815efB8f581194ae79006d24E0d814B7697F6",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "WETH",
+                    "USDT"
+                ],
+                "fee": 500
+            },
+            "WETH/USDT-0.3": {
+                "address": "0x4e68Ccd3E89f51C3074ca5072bbAC773960dFa36",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "WETH",
+                    "USDT"
+                ],
+                "fee": 3000
+            },
+            "UNI/WETH-0.3": {
+                "address": "0x1d42064Fc4Beb5F8aAF85F4617AE8b3b5B8Bd801",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "UNI",
+                    "WETH"
+                ],
+                "fee": 3000
+            },
+            "UNI/USDC-0.3": {
+                "address": "0xD0fC8bA7E267f2bc56044A7715A489d851dC6D78",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "UNI",
+                    "USDC"
+                ],
+                "fee": 3000
+            },
+            "MATIC/WETH-0.3": {
+                "address": "0x290A6a7460B308ee3F19023D2D00dE604bcf5B42",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "MATIC",
+                    "WETH"
+                ],
+                "fee": 3000
+            },
+            "WBTC/USDC-0.05": {
+                "address": "0x9a772018FbD77fcD2d25657e5C547BAfF3Fd7D16",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "WBTC",
+                    "USDC"
+                ],
+                "fee": 500
+            },
+            "WBTC/USDC-0.3": {
+                "address": "0x99ac8cA7087fA4A2A1FB6357269965A2014ABc35",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "WBTC",
+                    "USDC"
+                ],
+                "fee": 3000
+            },
+            "WBTC/USDT-0.3": {
+                "address": "0x9Db9e0e53058C89e5B94e29621a205198648425B",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "WBTC",
+                    "USDT"
+                ],
+                "fee": 3000
+            },
+            "DAI/WETH-0.05": {
+                "address": "0x60594a405d53811d3BC4766596EFD80fd545A270",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "DAI",
+                    "WETH"
+                ],
+                "fee": 500
+            },
+            "DAI/WETH-0.3": {
+                "address": "0xC2e9F25Be6257c210d7Adf0D4Cd6E3E881ba25f8",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "DAI",
+                    "WETH"
+                ],
+                "fee": 3000
+            },
+            "USDC/USDT-0.01": {
+                "address": "0x3416cF6C708Da44DB2624D63ea0AAef7113527C6",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "USDC",
+                    "USDT"
+                ],
+                "fee": 100
+            },
+            "USDC/USDT-0.05": {
+                "address": "0x7858E59e0C01EA06Df3aF3D20aC7B0003275D4Bf",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "USDC",
+                    "USDT"
+                ],
+                "fee": 500
+            },
+            "DAI/USDT-0.01": {
+                "address": "0x48DA0965ab2d2cbf1C17C09cFB5Cbe67Ad5B1406",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "DAI",
+                    "USDT"
+                ],
+                "fee": 100
+            },
+            "DUSK/USDT-0.3": {
+                "address": "0xFf29D3E552155180809ea3A877408A4620058086",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "DUSK",
+                    "USDT"
+                ],
+                "fee": 3000
+            },
+            "SKL/WETH-0.01": {
+                "address": "0x12CC685eEb95D3fCDfAe0a996e214e51FA6f7548",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "SKL",
+                    "WETH"
+                ],
+                "fee": 100
+            },
+            "PRO/WETH-0.01": {
+                "address": "0xC7Cf089FB4BC91F1981dF2285ca019Ab09A5dd3B",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "PRO",
+                    "WETH"
+                ],
+                "fee": 100
+            },
+            "PEPE/WETH-0.3": {
+                "address": "0x11950d141EcB863F01007AdD7D1A342041227b58",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "PEPE",
+                    "WETH"
+                ],
+                "fee": 3000
+            },
+            "PEPE/WETH-1": {
+                "address": "0xF239009A101B6B930A527DEaaB6961b6E7deC8a6",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "PEPE",
+                    "WETH"
+                ],
+                "fee": 10000
+            },
+            "PEPE/USDC-1": {
+                "address": "0xcEE31C846CbF003F4cEB5Bbd234cBA03C6e940C7",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "PEPE",
+                    "USDC"
+                ],
+                "fee": 10000
+            },
+            "FRAX/USDC-0.05": {
+                "address": "0xc63B0708E2F7e69CB8A1df0e1389A98C35A76D52",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "FRAX",
+                    "USDC"
+                ],
+                "fee": 500
+            },
+            "DAI/FRAX-0.05": {
+                "address": "0x97e7d56A0408570bA1a7852De36350f7713906ec",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "DAI",
+                    "FRAX"
+                ],
+                "fee": 500
+            },
+            "LDO/WETH-0.3": {
+                "address": "0xa3f558aebAecAf0e11cA4b2199cC5Ed341edfd74",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "LDO",
+                    "WETH"
+                ],
+                "fee": 3000
+            },
+            "LDO/WETH-0.05": {
+                "address": "0xcFeCC1C9F3cB6190CB1Ff7F65a130BFbE5107D38",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "LDO",
+                    "WETH"
+                ],
+                "fee": 500
+            },
+            "LDO/WETH-1": {
+                "address": "0xf4aD61dB72f114Be877E87d62DC5e7bd52DF4d9B",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "LDO",
+                    "WETH"
+                ],
+                "fee": 10000
+            },
+            "SHIB/WETH-0.3": {
+                "address": "0x2F62f2B4c5fcd7570a709DeC05D68EA19c82A9ec",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "SHIB",
+                    "WETH"
+                ],
+                "fee": 3000
+            },
+            "SHIB/WETH-1": {
+                "address": "0x5764a6F2212D502bC5970f9f129fFcd61e5D7563",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "SHIB",
+                    "WETH"
+                ],
+                "fee": 10000
+            }
+        },
+        "AaveV3": {
+            "ACLManager": {
+                "address": "0xc2aaCf6553D20d1e9d78E365AAba8032af9c85b0",
+                "abi": "ACLManager"
+            },
+            "Pool": {
+                "address": "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2",
+                "abi": "Pool"
+            },
+            "PoolConfigurator": {
+                "address": "0x64b761D848206f447Fe2dd461b0c635Ec39EbB27",
+                "abi": "PoolConfigurator"
+            },
+            "PoolAddressesProvider": {
+                "address": "0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e",
+                "abi": "PoolAddressesProvider"
+            },
+            "Incentives": {
+                "address": "0x8164Cc65827dcFe994AB23944CBC90e0aa80bFcb",
+                "abi": "Incentives"
+            },
+            "WalletBalanceProvider": {
+                "address": "0xC7be5307ba715ce89b152f3Df0658295b3dbA8E2",
+                "abi": "WalletBalanceProvider"
+            },
+            "AaveOracle": {
+                "address": "0x54586bE62E3c3580375aE3723C145253060Ca0C2",
+                "abi": "AaveOracle"
+            },
+            "FlashLoanReciever": {
+                "address": "0x0000000000000000000000000000000000000000",
+                "abi": "FlashLoanReciever"
+            },
+            "CompassOracle": {
+                "address": "0x0000000000000000000000000000000000000000",
+                "abi": "CompassOracle"
+            },
+            "UiPoolDataProviderV3": {
+                "address": "0x91c0eA31b49B69Ea18607702c5d9aC360bf3dE7d",
+                "abi": "UiPoolDataProviderV3"
+            }
+        },
+        "Tokens": {
+            "ETH": {
+                "address": "0x0000000000000000000000000000000000000000",
+                "abi": "",
+                "decimals": 18,
+                "sources": [
+                    "",
+                    ""
+                ]
+            },
+            "USDC": {
+                "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+                "abi": "ERC20",
+                "decimals": 6,
+                "sources": [
+                    "0x40ec5B33f54e0E8A33A975908C5BA1c14e5BbbDf",
+                    "0x5414d89a8bF7E99d732BC52f3e6A3Ef461c0C078"
+                ]
+            },
+            "USDT": {
+                "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+                "abi": "ERC20",
+                "decimals": 6,
+                "sources": [
+                    "0xF977814e90dA44bFA03b6295A0616a897441aceC",
+                    "0x47ac0Fb4F2D84898e4D9E7b4DaB3C24507a6D503"
+                ]
+            },
+            "BUSD": {
+                "addresss": "0x4Fabb145d64652a948d72533023f6E7A623C7C53",
+                "abi": "ERC20",
+                "sources": [
+                    "0x47ac0Fb4F2D84898e4D9E7b4DaB3C24507a6D503",
+                    "0xF977814e90dA44bFA03b6295A0616a897441aceC"
+                ]
+            },
+            "DAI": {
+                "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "0x075e72a5eDf65F0A5f44699c7654C1a76941Ddc8",
+                    "0xA10c7CE4b876998858b1a9E12b10092229539400"
+                ]
+            },
+            "BNB": {
+                "address": "0xB8c77482e45F1F44dE1745F52C74426C631bDD52",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "0x28C6c06298d514Db089934071355E5743bf21d60",
+                    "0x480234599362dC7a76cd99D09738A626F6d77e5F"
+                ]
+            },
+            "WBTC": {
+                "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+                "abi": "ERC20",
+                "decimals": 8,
+                "sources": [
+                    "0x9ff58f4fFB29fA2266Ab25e75e2A8b3503311656",
+                    "0xccF4429DB6322D5C611ee964527D42E5d685DD6a"
+                ]
+            },
+            "WETH": {
+                "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "0xF04a5cC80B1E94C69B48f5ee68a08CD2F09A7c3E",
+                    "0x2F0b23f53734252Bda2277357e97e1517d6B042A"
+                ]
+            },
+            "stETH": {
+                "address": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+                    "0x1982b2F5814301d4e9a8b0201555376e62F82428"
+                ]
+            },
+            "MATIC": {
+                "address": "0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "0x5e3Ef299fDDf15eAa0432E6e66473ace8c13D908",
+                    "0x401F6c983eA34274ec46f84D70b31C151321188b"
+                ]
+            },
+            "UNI": {
+                "address": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "0x1a9C8182C09F50C8318d769245beA52c32BE35BC",
+                    "0x4b4e140D1f131fdaD6fb59C13AF796fD194e4135"
+                ]
+            },
+            "BAL": {
+                "address": "0xba100000625a3754423978a60c9317c58a424e3D",
+                "abi": "ERC20",
+                "sources": [
+                    "0x10A19e7eE7d7F8a52822f6817de8ea18204F2e4f",
+                    "0xB129F73f1AFd3A49C701241F374dB17AE63B20Eb"
+                ]
+            },
+            "GRT": {
+                "address": "0xc944E90C64B2c07662A292be6244BDf05Cda44a7",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "0xF55041E37E12cD407ad00CE2910B8269B01263b9",
+                    "0x32Ec7A59549b9F114c9D7d8b21891d91Ae7F2ca1"
+                ]
+            },
+            "UNI-V3-POS": {
+                "address": "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
+                "abi": "ERC721",
+                "sources": [
+                    "0x0000000000000000000000000000000000000000",
+                    "0x6dD91BdaB368282dc4Ea4f4beFc831b78a7C38C0"
+                ]
+            },
+            "B-50USDC-50WETH": {
+                "address": "0x96646936b91d6B9D7D0c47C496AfBF3D6ec7B6f8",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "0x7818A1DA7BD1E64c199029E86Ba244a9798eEE10",
+                    "0x9AB7B0C7b154f626451c9e8a68dC04f58fb6e5Ce"
+                ]
+            },
+            "B-50WBTC-50WETH": {
+                "address": "0xA6F548DF93de924d73be7D25dC02554c6bD66dB5",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "0x4E3c048BE671852277Ad6ce29Fd5207aA12fabff",
+                    "0x8180D59b7175d4064bDFA8138A58e9baBFFdA44a"
+                ]
+            },
+            "B-80BAL-20WETH": {
+                "address": "0x5c6Ee304399DBdB9C8Ef030aB642B10820DB8F56",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "0xC128a9954e6c874eA3d62ce62B468bA073093F25",
+                    "0x24FAf482304Ed21F82c86ED5fEb0EA313231a808"
+                ]
+            },
+            "B-stETH-STABLE": {
+                "address": "0x32296969Ef14EB0c6d29669C550D4a0449130230",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "0xcD4722B7c24C29e0413BDCd9e51404B4539D14aE",
+                    "0x7818A1DA7BD1E64c199029E86Ba244a9798eEE10"
+                ]
+            },
+            "staBAL3": {
+                "address": "0x06Df3b2bbB68adc8B0e302443692037ED9f91b42",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "0x3B640748D96c6EC3E0148d41A25a311042e5Cd73",
+                    "0xB49d12163334f13C2A1619B6B73659Fe6e849E30"
+                ]
+            },
+            "DUSK": {
+                "address": "0x940a2dB1B7008B6C776d4faaCa729d6d4A4AA551",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "0x618bb3b255928aE6B2046dF5c828fA1Dc7e3C5F0",
+                    "0xE75Df3C68906f6AdbE17e87d4e22509Fde24C339"
+                ]
+            },
+            "SKL": {
+                "address": "0x00c83aeCC790e8a4453e5dD3B0B4b3680501a7A7",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "0xc89f7740Ed79bbD34746647b23A63De659386918",
+                    "0xF977814e90dA44bFA03b6295A0616a897441aceC"
+                ]
+            },
+            "PRO": {
+                "address": "0x226bb599a12C826476e3A771454697EA52E9E220",
+                "abi": "ERC20",
+                "decimals": 8,
+                "sources": [
+                    "0x3c0F464DB20d60b8D94F3c2810529015507DAADB",
+                    "0x89F266DBA1eF608B4E431C30037f925273dA3cB3"
+                ]
+            },
+            "PEPE": {
+                "address": "0x6982508145454Ce325dDbE47a25d4ec3d2311933",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "0xF977814e90dA44bFA03b6295A0616a897441aceC",
+                    "0x6cC5F688a315f3dC28A7781717a9A798a59fDA7b"
+                ]
+            },
+            "FRAX": {
+                "address": "0x853d955aCEf822Db058eb8505911ED77F175b99e",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "0xB1748C79709f4Ba2Dd82834B8c82D4a505003f27",
+                    "0xDcEF968d416a41Cdac0ED8702fAC8128A64241A2"
+                ]
+            },
+            "LDO": {
+                "address": "0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "0x3e40D73EB977Dc6a537aF587D48316feE66E9C8c",
+                    "0x820fb25352BB0c5E03E07AFc1d86252fFD2F0A18"
+                ]
+            },
+            "SHIB": {
+                "address": "0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "0xdEAD000000000000000042069420694206942069",
+                    "0xf3B0073E3a7F747C7A38B36B805247B222C302A3"
+                ]
+            }
+        }
+    },
+    "arbitrum": {
+        "UniswapV3": {
+            "Factory": {
+                "address": "0x1F98431c8aD98523631AE4a59f267346ea31F984",
+                "abi": "UniV3Factory"
+            },
+            "SwapRouter": {
+                "address": "0xE592427A0AEce92De3Edee1F18E0157C05861564",
+                "abi": "SwapRouter"
+            },
+            "NonfungibleTokenPositionDescriptor": {
+                "address": "0x91ae842A5Ffd8d12023116943e72A606179294f3",
+                "abi": "NonfungibleTokenPositionDescriptor"
+            },
+            "NonfungiblePositionManager": {
+                "address": "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
+                "abi": "NonfungiblePositionManager"
+            },
+            "WBTC/WETH-0.01": {
+                "address": "0x03a3bE7Ab4aa263D42d63B6CC594F4fb3D3F3951",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "WBTC",
+                    "WETH"
+                ],
+                "fee": 100
+            },
+            "WBTC/WETH-0.05": {
+                "address": "0x2f5e87C9312fa29aed5c179E456625D79015299c",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "WBTC",
+                    "WETH"
+                ],
+                "fee": 500
+            },
+            "WBTC/WETH-0.3": {
+                "address": "0x149e36E72726e0BceA5c59d40df2c43F60f5A22D",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "WBTC",
+                    "WETH"
+                ],
+                "fee": 3000
+            },
+            "USDC/WETH-0.05": {
+                "address": "0xC6962004f452bE9203591991D15f6b388e09E8D0",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "USDC",
+                    "WETH"
+                ],
+                "fee": 500
+            },
+            "USDC/WETH-0.3": {
+                "address": "0xc473e2aEE3441BF9240Be85eb122aBB059A3B57c",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "USDC",
+                    "WETH"
+                ],
+                "fee": 3000
+            },
+            "USDC/WETH-1": {
+                "address": "0x42FC852A750BA93D5bf772ecdc857e87a86403a9",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "USDC",
+                    "WETH"
+                ],
+                "fee": 10000
+            },
+            "DAI/USDC-0.01": {
+                "address": "0x7CF803e8d82A50504180f417B8bC7a493C0a0503",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "DAI",
+                    "USDC"
+                ],
+                "fee": 100
+            },
+            "DAI/USDC-0.05": {
+                "address": "0x9264e764e6D5D252a5c17C457C9Bb059b8831Bb1",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "DAI",
+                    "USDC"
+                ],
+                "fee": 500
+            },
+            "WETH/StETH-0.3": {
+                "address": "0x7379e81228514a1D2a6Cf7559203998E20598346",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "WETH",
+                    "StETH"
+                ],
+                "fee": 3000,
+                "descriptor": "weth-seth-0.3"
+            },
+            "WETH/USDT-0.05": {
+                "address": "0x641C00A822e8b671738d32a431a4Fb6074E5c79d",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "WETH",
+                    "USDT"
+                ],
+                "fee": 500
+            },
+            "WETH/USDT-0.3": {
+                "address": "0xc82819F72A9e77E2c0c3A69B3196478f44303cf4",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "WETH",
+                    "USDT"
+                ],
+                "fee": 3000
+            },
+            "UNI/WETH-0.3": {
+                "address": "0xC24f7d8E51A64dc1238880BD00bb961D54cbeb29",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "UNI",
+                    "WETH"
+                ],
+                "fee": 3000
+            },
+            "UNI/USDC-0.3": {
+                "address": "0x05477c22a5349ceE601500Da0489daD137fd6BfA",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "UNI",
+                    "USDC"
+                ],
+                "fee": 3000
+            },
+            "MATIC/WETH-0.3": {
+                "address": "0x37Af2c75A71f90e4E289a5eE56C13111bf4ddFf4",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "MATIC",
+                    "WETH"
+                ],
+                "fee": 3000
+            },
+            "WBTC/USDC-0.05": {
+                "address": "0x0E4831319A50228B9e450861297aB92dee15B44F",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "WBTC",
+                    "USDC"
+                ],
+                "fee": 500
+            },
+            "WBTC/USDC-0.3": {
+                "address": "0x6985cb98CE393FCE8d6272127F39013f61e36166",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "WBTC",
+                    "USDC"
+                ],
+                "fee": 3000
+            },
+            "WBTC/USDT-0.3": {
+                "address": "0x53C6ca2597711Ca7a73b6921fAf4031EeDf71339",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "WBTC",
+                    "USDT"
+                ],
+                "fee": 3000
+            },
+            "DAI/WETH-0.05": {
+                "address": "0x31Fa55e03bAD93C7f8AFfdd2eC616EbFde246001",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "DAI",
+                    "WETH"
+                ],
+                "fee": 500
+            },
+            "DAI/WETH-0.3": {
+                "address": "0xA961F0473dA4864C5eD28e00FcC53a3AAb056c1b",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "DAI",
+                    "WETH"
+                ],
+                "fee": 3000
+            },
+            "USDC/USDT-0.01": {
+                "address": "0xbE3aD6a5669Dc0B8b12FeBC03608860C31E2eef6",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "USDC",
+                    "USDT"
+                ],
+                "fee": 100
+            },
+            "USDC/USDT-0.05": {
+                "address": "0xbcE73c2e5A623054B0e8e2428E956f4b9d0412a5",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "USDC",
+                    "USDT"
+                ],
+                "fee": 500
+            },
+            "DAI/USDT-0.01": {
+                "address": "0x7f580f8A02b759C350E6b8340e7c2d4b8162b6a9",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "DAI",
+                    "USDT"
+                ],
+                "fee": 100
+            },
+            "DUSK/USDT-0.3": {
+                "address": "0xFf29D3E552155180809ea3A877408A4620058086",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "DUSK",
+                    "USDT"
+                ],
+                "fee": 3000
+            },
+            "SKL/WETH-0.01": {
+                "address": "0x12CC685eEb95D3fCDfAe0a996e214e51FA6f7548",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "SKL",
+                    "WETH"
+                ],
+                "fee": 100
+            },
+            "PRO/WETH-0.01": {
+                "address": "0xC7Cf089FB4BC91F1981dF2285ca019Ab09A5dd3B",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "PRO",
+                    "WETH"
+                ],
+                "fee": 100
+            },
+            "PEPE/WETH-0.3": {
+                "address": "0x7f153bDd5328Ad8e30127A1bF2E5530bED33427A",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "PEPE",
+                    "WETH"
+                ],
+                "fee": 3000
+            },
+            "PEPE/WETH-1": {
+                "address": "0x1944AC04bD9FED9a2BcDB38b70C35949c864ec35",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "PEPE",
+                    "WETH"
+                ],
+                "fee": 10000
+            },
+            "PEPE/USDC-1": {
+                "address": "0xf18D4753f7473496E818F38E0cFDdB0eae8739b0",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "PEPE",
+                    "USDC"
+                ],
+                "fee": 10000
+            },
+            "FRAX/USDC-0.05": {
+                "address": "0x0000000000000000000000000000000000000000",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "FRAX",
+                    "USDC"
+                ],
+                "fee": 500
+            },
+            "DAI/FRAX-0.05": {
+                "address": "0x3319928bfaAC6492960BA482C7B51c89101EA3e3",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "DAI",
+                    "FRAX"
+                ],
+                "fee": 500
+            },
+            "LDO/WETH-0.3": {
+                "address": "0x52F9d14Bed8Ce6536dA063aaf274Ae2747ef4853",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "LDO",
+                    "WETH"
+                ],
+                "fee": 3000
+            },
+            "LDO/WETH-0.05": {
+                "address": "0xE4Cd69C5F4bc7803b2Fb745C984446b935b54249",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "LDO",
+                    "WETH"
+                ],
+                "fee": 500
+            },
+            "LDO/WETH-1": {
+                "address": "0x25aB7DC4dDcACB6fE75694904db27602175245f1",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "LDO",
+                    "WETH"
+                ],
+                "fee": 10000
+            },
+            "SHIB/WETH-0.3": {
+                "address": "0x2F62f2B4c5fcd7570a709DeC05D68EA19c82A9ec",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "SHIB",
+                    "WETH"
+                ],
+                "fee": 3000
+            },
+            "SHIB/WETH-1": {
+                "address": "0x5764a6F2212D502bC5970f9f129fFcd61e5D7563",
+                "abi": "UniV3Pool",
+                "tokens": [
+                    "SHIB",
+                    "WETH"
+                ],
+                "fee": 10000
+            }
+        },
+        "AaveV3": {
+            "ACLManager": {
+                "address": "0xa72636CbcAa8F5FF95B2cc47F3CDEe83F3294a0B",
+                "abi": "ACLManager"
+            },
+            "Pool": {
+                "address": "0x794a61358D6845594F94dc1DB02A252b5b4814aD",
+                "abi": "Pool"
+            },
+            "PoolConfigurator": {
+                "address": "0x8145eddDf43f50276641b55bd3AD95944510021E",
+                "abi": "PoolConfigurator"
+            },
+            "PoolAddressesProvider": {
+                "address": "0xa97684ead0e402dC232d5A977953DF7ECBaB3CDb",
+                "abi": "PoolAddressesProvider"
+            },
+            "Incentives": {
+                "address": "0x929EC64c34a17401F460460D4B9390518E5B473e",
+                "abi": "Incentives"
+            },
+            "WalletBalanceProvider": {
+                "address": "0xBc790382B3686abffE4be14A030A96aC6154023a",
+                "abi": "WalletBalanceProvider"
+            },
+            "AaveOracle": {
+                "address": "0xb56c2F0B653B2e0b10C9b928C8580Ac5Df02C7C7",
+                "abi": "AaveOracle"
+            },
+            "FlashLoanReciever": {
+                "address": "0x0000000000000000000000000000000000000000",
+                "abi": "FlashLoanReciever"
+            },
+            "CompassOracle": {
+                "address": "0x0000000000000000000000000000000000000000",
+                "abi": "CompassOracle"
+            },
+            "UiPoolDataProviderV3": {
+                "address": "0x145dE30c929a065582da84Cf96F88460dB9745A7",
+                "abi": "UiPoolDataProviderV3"
+            }
+        },
+        "Tokens": {
+            "ETH": {
+                "address": "0x0000000000000000000000000000000000000000",
+                "abi": "",
+                "decimals": 18,
+                "sources": [
+                    "",
+                    ""
+                ]
+            },
+            "USDC": {
+                "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+                "abi": "ERC20",
+                "decimals": 6,
+                "sources": [
+                    "0x2Df1c51E09aECF9cacB7bc98cB1742757f163dF7",
+                    "0x47c031236e19d024b42f8AE6780E44A573170703"
+                ]
+            },
+            "USDT": {
+                "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+                "abi": "ERC20",
+                "decimals": 6,
+                "sources": [
+                    "TODO",
+                    "TODO"
+                ]
+            },
+            "BUSD": {
+                "addresss": "0x52095F518048fAFCfba0Ec9F93962df449Bc604e",
+                "abi": "ERC20",
+                "sources": [
+                    "TODO",
+                    "TODO"
+                ]
+            },
+            "DAI": {
+                "address": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "TODO",
+                    "TODO"
+                ]
+            },
+            "BNB": {
+                "address": "0x20865e63B111B2649ef829EC220536c82C58ad7B",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "TODO",
+                    "TODO"
+                ]
+            },
+            "WBTC": {
+                "address": "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
+                "abi": "ERC20",
+                "decimals": 8,
+                "sources": [
+                    "TODO",
+                    "TODO"
+                ]
+            },
+            "WETH": {
+                "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "0x70d95587d40A2caf56bd97485aB3Eec10Bee6336",
+                    "0xe50fA9b3c56FfB159cB0FCA61F5c9D750e8128c8"
+                ]
+            },
+            "stETH": {
+                "address": "0x0fBcbaEA96Ce0cF7Ee00A8c19c3ab6f5Dc8E1921",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "TODO",
+                    "TODO"
+                ]
+            },
+            "MATIC": {
+                "address": "0x561877b6b3DD7651313794e5F2894B2F18bE0766",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "TODO",
+                    "TODO"
+                ]
+            },
+            "UNI": {
+                "address": "0xFa7F8980b0f1E64A2062791cc3b0871572f1F7f0",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "TODO",
+                    "TODO"
+                ]
+            },
+            "BAL": {
+                "address": "0x040d1EdC9569d4Bab2D15287Dc5A4F10F56a56B8",
+                "abi": "ERC20",
+                "sources": [
+                    "TODO",
+                    "TODO"
+                ]
+            },
+            "GRT": {
+                "address": "0x9623063377AD1B27544C965cCd7342f7EA7e88C7",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "TODO",
+                    "TODO"
+                ]
+            },
+            "UNI-V3-POS": {
+                "address": "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
+                "abi": "ERC721",
+                "sources": [
+                    "TODO",
+                    "TODO"
+                ]
+            },
+            "PEPE": {
+                "address": "0x25d887Ce7a35172C62FeBFD67a1856F20FaEbB00",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "TODO",
+                    "TODO"
+                ]
+            },
+            "FRAX": {
+                "address": "0x17FC002b466eEc40DaE837Fc4bE5c67993ddBd6F",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "TODO",
+                    "TODO"
+                ]
+            },
+            "LDO": {
+                "address": "0x13Ad51ed4F1B7e9Dc168d8a00cB3f4dDD85EfA60",
+                "abi": "ERC20",
+                "decimals": 18,
+                "sources": [
+                    "TODO",
+                    "TODO"
+                ]
+            }
+        }
+    },
+    "polygon": {
+        "BalancerV2": {
+            "vault": {
+                "address": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
+                "abi": "Vault"
+            }
+        },
+        "Tokens": {
+            "USDC": {
+                "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+                "abi": "ERC20"
+            },
+            "WBTC": {
+                "address": "0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6",
+                "abi": "ERC20"
+            },
+            "WETH": {
+                "address": "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619",
+                "abi": "ERC20"
+            }
+        }
+    }
+}
