@@ -1,0 +1,10 @@
+LICENCE
+README.md
+setup.py
+alooyupd/__init__.py
+alooyupd/check_update.py
+alooyupd/version.py
+alooyupd.egg-info/PKG-INFO
+alooyupd.egg-info/SOURCES.txt
+alooyupd.egg-info/dependency_links.txt
+alooyupd.egg-info/top_level.txt
