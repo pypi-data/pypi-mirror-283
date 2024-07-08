@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: slicertools
+Version: 0.1.0
+Summary: A library for slicing 3D models for 3D printing.
+Home-page: https://github.com/pysashapy/slicertools
+Author: Alexander Ibragimov
+Author-email: sasha.2000ibr@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: trimesh[easy]
