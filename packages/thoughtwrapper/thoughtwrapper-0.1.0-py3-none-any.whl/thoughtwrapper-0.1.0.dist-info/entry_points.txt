@@ -1,0 +1,3 @@
+[console_scripts]
+thoughtwrapper = thoughtwrapper._cli:main
+
