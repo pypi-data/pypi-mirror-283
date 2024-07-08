@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+transformars/__init__.py
+transformars/bert.safertensors
+transformars/utils.py
+transformars.egg-info/PKG-INFO
+transformars.egg-info/SOURCES.txt
+transformars.egg-info/dependency_links.txt
+transformars.egg-info/requires.txt
+transformars.egg-info/top_level.txt
