@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/danny_db_connect.egg-info/PKG-INFO
+src/danny_db_connect.egg-info/SOURCES.txt
+src/danny_db_connect.egg-info/dependency_links.txt
+src/danny_db_connect.egg-info/requires.txt
+src/danny_db_connect.egg-info/top_level.txt
+src/db_connect/__init__.py
+src/db_connect/mongo_crud.py
+src/db_connect/sql_crud.py

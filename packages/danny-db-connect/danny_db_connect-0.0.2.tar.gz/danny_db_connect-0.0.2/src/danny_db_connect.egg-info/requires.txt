@@ -1,0 +1,17 @@
+pymongo
+mysql-connector-python
+pymongo
+pymongo[srv]
+dnspython
+pandas
+numpy
+ensure
+pytest
+mysql-connector-python
+
+[testing]
+pytest>=7.1.3
+mypy>=0.971
+flake8>=5.0.4
+tox>=3.25.1
+black>=22.8.0
