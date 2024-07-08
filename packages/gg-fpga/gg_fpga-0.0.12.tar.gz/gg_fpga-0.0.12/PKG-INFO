@@ -1,0 +1,25 @@
+Metadata-Version: 2.3
+Name: gg_fpga
+Version: 0.0.12
+Summary: FPGA ultra low latency options triggering
+Author: gg
+License-File: LICENSE
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: cocotb
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: xlwt
+Description-Content-Type: text/markdown
+
+# ggs little fpga
+
+### Note:
+Currently set up to only work on Linux platforms
+In addition to dependencies in pyproject also requires 
+    - iverilog  
+And for simulation
+    - verilator (only easily available for Linux systems)
+
