@@ -1,0 +1,36 @@
+-c requirements.txt
+-c requirements-test.txt
+
+autoflake
+bandit
+black
+bump2version
+coloredlogs
+flake8
+flake8-bugbear
+isort
+liccheck
+mypy
+pip-tools
+pipdeptree
+pylint<3
+pylint-flask
+pylint-flask-sqlalchemy
+radon
+sqlalchemy-stubs
+tox
+
+types-cryptography
+types-pyOpenSSL
+types-redis
+types-requests
+types-urllib3
+types-waitress
+types-setuptools<57.4.17
+types-xmltodict
+types-python-dateutil
+types-PyYAML
+
+# constraints
+#
+safety<2.3.5
