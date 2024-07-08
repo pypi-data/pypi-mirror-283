@@ -1,0 +1,12 @@
+crimson/auto_pydantic/__init__.py,sha256=3LsdcN0Sy0_ToVkHjGBXJfq78A7vr8ACZTlo059xs8Y,555
+crimson/auto_pydantic/generator.py,sha256=FI0BUcUMVsALb9idOp1Xt5Yj7By2lfRasd3eXQ_XN8o,7953
+crimson/auto_pydantic/generator_model.py,sha256=SEoAlJd9m5ieLGDQ0_Viq5ttbxnqJe-d5B0GaWheNYo,3398
+crimson/auto_pydantic/test.zip,sha256=RlCNLXzChWgx7uGe7nXiD2ZwrnkoBs-8ky5BO1gyG5o,2072
+crimson/auto_pydantic/validator.py,sha256=mBPJHYUirN1M79fdMmtIqWeTKtrA2RQ-1DtwnS_vlUU,2056
+crimson/auto_pydantic/beta/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+crimson/auto_pydantic/beta/test_loader/__init__.py,sha256=shRMbi2JhK91jSzIWukHtoIeOTPcjTqRE0Z4ylwT6hM,1798
+crimson_auto_pydantic-0.1.8.dist-info/LICENSE,sha256=NAak_CnMzIX1nKL0QMNQzLO3acKR6tIJ1ErfKSeFkv4,1067
+crimson_auto_pydantic-0.1.8.dist-info/METADATA,sha256=r7AkFYdMPQMy2eRhuLyDufHhZT0sf4-S2lmE2Rn8IRg,2652
+crimson_auto_pydantic-0.1.8.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+crimson_auto_pydantic-0.1.8.dist-info/top_level.txt,sha256=UjHBjSiQhr7eEWh0dB9e3WZ617y7vLEywXhGYfnzbw8,8
+crimson_auto_pydantic-0.1.8.dist-info/RECORD,,
