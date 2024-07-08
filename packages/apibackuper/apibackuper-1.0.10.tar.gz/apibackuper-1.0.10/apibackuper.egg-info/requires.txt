@@ -1,0 +1,6 @@
+pymongo
+click
+lxml
+urllib3
+requests
+xmltodict
