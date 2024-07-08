@@ -1,0 +1,9 @@
+parquet_py-0.0.4a0.dist-info/METADATA,sha256=aigh8F5PbFZXPPK01rBJddx4MZLf_9EkLijxx4gB8AY,444
+parquet_py-0.0.4a0.dist-info/WHEEL,sha256=-BPqgpAlX7g9T9F7Ph22vCmt5MZ8y67VHNAygbU_sFc,136
+parquet_py-0.0.4a0.dist-info/entry_points.txt,sha256=DNFtcBs8GggfUVxIgn7fYNc_jZEbHBFMQs4pdS05csI,50
+parquet_py-0.0.4a0.dist-info/license_files/LICENSE,sha256=Oazm6mk0cZ9n89geH_lRKRtpha9h0hlbO1WaJvMF7TQ,1069
+parq/cli/__main__.py,sha256=gKZhfDMmArDSatKOmNCOdzhkUtUSlBeuuybVOiXRcUo,933
+parq/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+parq/__init__.py,sha256=jpD_OquOyaG3CHCPAtjyudOgXudyDMFknkKoR2OzyRE,47
+parq/lib.pypy310-pp73-x86_64-linux-gnu.so,sha256=5v3p2XYKjMZTukO9QWxwCmQ_XAdpfUKURo7htICQfoQ,3993704
+parquet_py-0.0.4a0.dist-info/RECORD,,
