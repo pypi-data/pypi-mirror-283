@@ -1,0 +1,12 @@
+numpy>=1.20.0
+
+[docs]
+sphinx
+pydata-sphinx-theme
+numpydoc
+
+[test]
+pytest
+pytest-cov
+pytest-profiling
+coverage[toml]
