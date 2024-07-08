@@ -1,0 +1,3 @@
+[console_scripts]
+finetuna = finetuna.__main__:main
+
