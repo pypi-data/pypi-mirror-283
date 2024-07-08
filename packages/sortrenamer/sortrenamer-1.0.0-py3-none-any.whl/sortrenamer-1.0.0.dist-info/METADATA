@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: sortrenamer
+Version: 1.0.0
+Summary: Cross-platform desktop GUI app, that renames/moves (sorts) images and other files, and finds and moves duplicates.
+Author-email: DrSugak <dr.sugak.dev@gmail.com>
+Project-URL: Homepage, https://github.com/DrSugak/sortrenamer
+Keywords: exif,rename,move,duplicates
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PyQt6
+Requires-Dist: pillow
+
+# SortRenamer
+
+## Tools:
+
+- [X] Renames images by the date they were created (uses exif, if not, then the date issued by the operating system).
+- [X] Renames files according to a given pattern.
+- [X] Moves files by extension into folders (only within 1 file system; also, with any movement, files are renamed).
+- [X] Moves images by creation date into year/month folders (images are also renamed).
+- [X] Finds duplicate files and moves them all into 1 folder.
+
+## Install
+
+    pip install sortrenamer
+
+## Run
+
+    sortrenamer
+
