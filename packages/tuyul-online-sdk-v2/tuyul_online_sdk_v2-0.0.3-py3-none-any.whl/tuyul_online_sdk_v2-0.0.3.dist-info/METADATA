@@ -1,0 +1,111 @@
+Metadata-Version: 2.1
+Name: tuyul-online-sdk-v2
+Version: 0.0.3
+Summary: 
+Author: DesKaOne
+Author-email: 37358597+DesKaOne@users.noreply.github.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aiohttp (==3.9.5)
+Requires-Dist: aiohttp-proxy (==0.1.2)
+Requires-Dist: base58 (==2.1.1)
+Requires-Dist: bs4 (==0.0.2)
+Requires-Dist: certifi (==2024.6.2)
+Requires-Dist: chardet (==5.2.0)
+Requires-Dist: colorama (==0.4.6)
+Requires-Dist: google-api-python-client (==2.131.0)
+Requires-Dist: hexbytes (==1.2.1)
+Requires-Dist: httpx[http2,socks] (==0.27.0)
+Requires-Dist: loguru (==0.7.2)
+Requires-Dist: lxml (==5.2.2)
+Requires-Dist: passlib (==1.7.4)
+Requires-Dist: proxy-sdk (>=0.0.1,<0.0.2)
+Requires-Dist: pycryptodomex (==3.20.0)
+Requires-Dist: pydantic (==2.7.4)
+Requires-Dist: pydantic-core (==2.18.4)
+Requires-Dist: pydantic-settings (==2.3.3)
+Requires-Dist: pyjwt (==2.8.0)
+Requires-Dist: pyrogram (==2.0.106)
+Requires-Dist: python-dotenv (==1.0.1)
+Requires-Dist: random-user-agent (==1.0.1)
+Requires-Dist: requests (==2.31.0)
+Requires-Dist: requests-toolbelt (==0.10.1)
+Requires-Dist: rich (==13.7.1)
+Requires-Dist: sqlalchemy (==2.0.30)
+Requires-Dist: sqlalchemy-utils (==0.41.2)
+Requires-Dist: tgcrypto (==1.2.5)
+Requires-Dist: urllib3 (==1.26.15)
+Requires-Dist: useragenter (==1.3.1)
+Requires-Dist: wget (==3.2)
+Description-Content-Type: text/markdown
+
+
+# Tuyul-Online-SDK-V2
+
+Support Termux, Windows and Ubuntu
+
+## Termux
+`Python 3.11.9 (64 bit)`
+
+
+## Windows
+`Python 3.8.0 (32 bit and 64 bit)`
+
+`Python 3.9.4 (64 bit)`
+
+`Python 3.11.9 (64 bit)`
+
+`Python 3.12.4 (64 bit)`
+
+
+## Ubuntu
+`Python 3.12.3 (64 bit)`
+
+
+## Environment Variables
+To run this project, you will need to add the following environment variables to your .env file
+
+`API_KEY`
+
+`LIGHTNING_ADDRESS`
+
+`REFERRAL_CODE`
+
+`AUTH_PROXY_WEBSHARE`
+
+`MAIN_ACCOUNT`
+
+
+## Install in Termux
+```bash
+  pkg update
+
+  pkg upgrade
+
+  pkg install x11-repo
+
+  pkg install opencv
+
+  pkg install rust
+
+  pkg install python-cryptography
+
+  pkg install python-numpy
+
+  pkg install python-lxml
+
+  pkg install binutils-is-llvm
+
+  aarch64-linux-android-ar
+
+  python -m pip install -U tuyul-online-sdk-v2
+
+    or
+
+  pip install -U tuyul-online-sdk-v2
+```
