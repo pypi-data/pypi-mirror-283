@@ -1,0 +1,11 @@
+videostudio/__init__.py,sha256=Lo84Lc-LXU-mcMCmtVKPGjlvmfqidGK8nYboekuGSJ0,255
+videostudio/audio_analyzer.py,sha256=CscQg4Wm1YPeG6Cm7hQifqKNm49SQklVk6BXs-jrdqE,2337
+videostudio/canvas.py,sha256=CUJAAxUodnB13uSrT5he4GqBD3BvyZ8l6_gpqVBC9NU,1510
+videostudio/elements.py,sha256=45c1SpNmOgNB5aognn7U7uLeCt0xvyyhQ8GGx-yVddE,5406
+videostudio/export.py,sha256=YXwKI5-ZS-fV1qIlv1j0-nm1sHlyuX0Y2by82VFjh60,151
+videostudio/manipulators.py,sha256=EdWfUJ7BEXowx2rpRC6mjgISr0ssu7A4tzzp6U5uMTo,1706
+videostudio/transitions.py,sha256=Q4Rbgg9VzOM8h20shr_nsfG5Ey_377dIl8a8_yfWl0E,1135
+videostudio-0.1.0.dist-info/METADATA,sha256=VIPbHIKAoCGTi-y66Jc6jo8nU43sE51AJt0RS5ZQKPk,9742
+videostudio-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+videostudio-0.1.0.dist-info/top_level.txt,sha256=8uPEDsfGQyIEl2ai_y6hfS9RsiqkJ95rtigTzWiNlPc,12
+videostudio-0.1.0.dist-info/RECORD,,
