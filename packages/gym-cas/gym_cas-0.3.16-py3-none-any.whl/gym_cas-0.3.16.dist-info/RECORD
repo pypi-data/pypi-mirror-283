@@ -1,0 +1,16 @@
+gym_cas/__about__.py,sha256=W938aVjHvaKz5dzzijbIgUnwZkpu94ay7STycMzxFn8,118
+gym_cas/__init__.py,sha256=d1DNyrF5wOVcEa8TDQPdmosue9ZEqGa-R62B5-kLEUY,1318
+gym_cas/config.py,sha256=cBs2xDjKuNoaqLLsCBCo9E2rnQ1ZnUnAcRN2hKgcB0M,118
+gym_cas/globals.py,sha256=5wL-RO_D2y8Y-YHyiB0Tjj6t9q9aOiXhqw0Y02VHr9A,268
+gym_cas/logarithm.py,sha256=_cgdHAZt9EhLfBF3N8mWJAl5rnWuEUoLvBQ--A2GGIo,495
+gym_cas/ode.py,sha256=i7ypoOXc6xHFJ-GqOHPRdcMPuIDS5jczbA_rvDbFotU,1572
+gym_cas/plot_helpers.py,sha256=sWYodyiuE7G9YbOj4TKvBLiLW8lUScnt_y19UG-uaBU,379
+gym_cas/regression.py,sha256=oT3hyIUdil6MOB89VPftRC6PH5FW5ckVow9Y-SCV4vM,4047
+gym_cas/stat_plot.py,sha256=9bJK38GJf1ceJO4AmR7884IdmP_CyKQH312mN-l6TKg,11578
+gym_cas/stats.py,sha256=_Xp4XxWQTgFoewwFY4UZFcMBjbDW7z38EHMBRhRqO2Q,10540
+gym_cas/trigonometry.py,sha256=KAwOrUngMKRHM_w_e6NyYkP-Xn4nio0E6zW9CQkTGAw,1974
+gym_cas/vector.py,sha256=_qOeE88l7Lyok0IFXV69NrFmNPEYSjCUs-WGWT6Usbg,14785
+gym_cas-0.3.16.dist-info/METADATA,sha256=ZsoH-QFNAW88ZfkSCm-mGwsfAjDCbNHe5bhfOMFIYFQ,4168
+gym_cas-0.3.16.dist-info/WHEEL,sha256=KGYbc1zXlYddvwxnNty23BeaKzh7YuoSIvIMO4jEhvw,87
+gym_cas-0.3.16.dist-info/licenses/LICENSE.txt,sha256=wegMMdxLWq2RSeAStNh2w0YsNcf0IqbLAZFqPmYvefM,1092
+gym_cas-0.3.16.dist-info/RECORD,,
