@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+PythonSDK/SparkySDK.py
+SparkySDK.egg-info/PKG-INFO
+SparkySDK.egg-info/SOURCES.txt
+SparkySDK.egg-info/dependency_links.txt
+SparkySDK.egg-info/top_level.txt
