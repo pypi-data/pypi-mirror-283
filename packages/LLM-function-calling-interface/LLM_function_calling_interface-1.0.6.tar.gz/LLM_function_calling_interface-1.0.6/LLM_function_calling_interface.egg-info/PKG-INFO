@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: LLM-function-calling-interface
+Version: 1.0.6
+Summary: LLM function calling interface
+Author: KillT
+Author-email: vqtoan1807@gmail.com
+Keywords: python,LLM,function calling
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+
+A package that allows you to call functions in LLM
