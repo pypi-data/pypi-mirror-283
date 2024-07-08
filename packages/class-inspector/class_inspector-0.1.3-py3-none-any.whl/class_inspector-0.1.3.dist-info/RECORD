@@ -1,0 +1,13 @@
+class_inspector/__init__.py,sha256=11meUUmuRnYKC0sfst4gDd3PmAkI4F0WNFBcf2Zi2NY,915
+class_inspector/_logger.py,sha256=z7G4whg_u7NIXO-leR3suI28ew_GEq5HI73PLt--ZXU,1102
+class_inspector/_utils.py,sha256=V8-PvVIw6G3nHJn7DBv1a2yuz2Ba4UGNIXktBjWGNfo,3909
+class_inspector/attr_generator.py,sha256=QOl0aBS0IXqYoM3I9r-J1BG_7fxI_a4bKLz8PuvCTJE,11258
+class_inspector/class_inspector.py,sha256=uxTZZF2CtJnd6ra5YYAQr1lHFTVA3mx5HDN_C5rmy_Y,9228
+class_inspector/custom_validators.py,sha256=lSBJg4hNHACthkOCFFv8L8D_-klyQfWsmC96V7xOvI8,8379
+class_inspector/function_inspector.py,sha256=219Gr3-Zbcq_KtpinN8LQm07RyjjGITRTpu-XKYnOEo,12497
+class_inspector/module_inspector.py,sha256=Vg5wSEL5uYJQcS65fXEH8Pju44kAeEsgqB-GRcn-qsg,1995
+class_inspector-0.1.3.dist-info/LICENSE,sha256=SydHBgjziQI13aKu6pgStkUOorty0FeVg7O6aHGu2vQ,1063
+class_inspector-0.1.3.dist-info/METADATA,sha256=rVPYF6N9I9894DihK6PipUXxN5c_yjCDO_7EwDcDUoY,6926
+class_inspector-0.1.3.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+class_inspector-0.1.3.dist-info/top_level.txt,sha256=vYd2bkKEQBgAt2OgUN61mp_rW_5X5I7250N9P5qMML0,16
+class_inspector-0.1.3.dist-info/RECORD,,
