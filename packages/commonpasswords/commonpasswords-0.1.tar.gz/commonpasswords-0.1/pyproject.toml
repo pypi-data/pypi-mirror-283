@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "commonpasswords"
+version = "0.1"
+description = 'A way to detect common and unsecure passwords. (Warning: This is just a passion project and I would highly reccomend using an actual Common Password Detector in an real environment, or use another project ontop of this)'
+requires-python = ">=3.12"
+license = "MIT"
+keywords = ['Passwords']
+classifiers = [
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = []
+
+[project.urls]
+Documentation = "https://github.com/TommyBoiss/commonpasswords#readme"
+Issues = "https://github.com/TommyBoiss/commonpasswords/issues"
+Source = "https://github.com/TommyBoiss/commonpasswords"
+
+
+
+[tool.coverage.run]
+source_pkgs = ["commonpasswords"]
+
+
+[tool.coverage.paths]
+commonpasswords = ["src/commonpasswords", "*/src/commonpasswords"]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+]
+
+[tool.hatchling]
+SRC = "src"

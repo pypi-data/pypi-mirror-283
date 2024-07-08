@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: commonpasswords
+Version: 0.1
+Summary: A way to detect common and unsecure passwords. (Warning: This is just a passion project and I would highly reccomend using an actual Common Password Detector in an real environment, or use another project ontop of this)
+Project-URL: Documentation, https://github.com/TommyBoiss/commonpasswords#readme
+Project-URL: Issues, https://github.com/TommyBoiss/commonpasswords/issues
+Project-URL: Source, https://github.com/TommyBoiss/commonpasswords
+License-Expression: MIT
+License-File: LICENSE
+Keywords: Passwords
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
