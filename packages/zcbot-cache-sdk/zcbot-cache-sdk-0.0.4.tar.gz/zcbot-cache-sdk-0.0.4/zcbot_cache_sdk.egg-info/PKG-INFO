@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: zcbot-cache-sdk
+Version: 0.0.4
+Summary: zcbot cache for zsodata
+Home-page: http://www.zsodata.com
+Author: zsodata
+Author-email: team@zso.io
+License: BSD License
+Description: pip uninstall zcbot-cache-sdk
+        
+        pip install --upgrade zcbot-cache-sdk -i https://pypi.python.org/simple
+        pip show zcbot-cache-sdk
+        
+Platform: all
+Requires-Python: >=3.7
