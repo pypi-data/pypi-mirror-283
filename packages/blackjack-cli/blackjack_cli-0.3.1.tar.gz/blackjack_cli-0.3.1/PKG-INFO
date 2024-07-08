@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: blackjack-cli
+Version: 0.3.1
+Summary: This is a cli-based blackjack game! Woo!
+License: GPLv3
+Author: Vlek
+Author-email: derek@mccammond.org
+Requires-Python: >=3.10,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: rich-click (>=1.6.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# Blackjack
+A node.js Blackjack library
+
