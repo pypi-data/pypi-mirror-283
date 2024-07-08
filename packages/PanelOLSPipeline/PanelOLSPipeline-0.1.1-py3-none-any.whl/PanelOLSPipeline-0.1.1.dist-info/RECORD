@@ -1,0 +1,9 @@
+OLS_pipeline/__init__.py,sha256=2AvWlaNotwPqWa1nQo8bw-KMy7RCPMz5tMxTSXU7OmA,41
+OLS_pipeline/pipeline.py,sha256=6DitYRSaUgnoZ7HsX9K65TtoH1rkFN6kISzwqc6vo9k,3555
+tests/__init__.py,sha256=2AvWlaNotwPqWa1nQo8bw-KMy7RCPMz5tMxTSXU7OmA,41
+tests/test_pipeline.py,sha256=QIlDO54w8DFfOK2RGlD7EhZ2xSjdELF-dSnuajzIwMk,2107
+PanelOLSPipeline-0.1.1.dist-info/LICENSE,sha256=6Z9zcIR8ZUsF8baNYPiR5wvXgtfzl544630K7jznfjY,1078
+PanelOLSPipeline-0.1.1.dist-info/METADATA,sha256=y0aKNBv9l5lpLS5gVeSxfL3kBd-sjuOBWaPyTn0zNC0,1489
+PanelOLSPipeline-0.1.1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+PanelOLSPipeline-0.1.1.dist-info/top_level.txt,sha256=xcu_Kyr3zZFDsHvnWNsNxqFVebJU3IMlZ17ZaOyyCHo,19
+PanelOLSPipeline-0.1.1.dist-info/RECORD,,
