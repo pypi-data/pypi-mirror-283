@@ -1,0 +1,4 @@
+[console_scripts]
+serve_agent=timestep.agent:main
+timestep=timestep.main:app
+
