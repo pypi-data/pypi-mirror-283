@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: xlsx-exporter
+Version: 1.0.3
+Summary: Plugin for exporting test cases to XLSX format
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pandas
+Requires-Dist: django
+
+UNKNOWN
+
