@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+generate_email/__init__.py
+generate_email/account_generator.py
+generate_email/check_availability.py
+generate_email/chrome_driver.py
+generate_email/fake_account_data.py
+generate_email/proxy_generator.py
+generate_email/user_agent_handler.py
+generate_email.egg-info/PKG-INFO
+generate_email.egg-info/SOURCES.txt
+generate_email.egg-info/dependency_links.txt
+generate_email.egg-info/requires.txt
+generate_email.egg-info/top_level.txt
