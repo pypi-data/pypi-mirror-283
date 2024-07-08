@@ -1,0 +1,7 @@
+openai
+google-generativeai
+google-cloud-translate
+modernmt
+azure-ai-translation-text
+boto3
+pillow
