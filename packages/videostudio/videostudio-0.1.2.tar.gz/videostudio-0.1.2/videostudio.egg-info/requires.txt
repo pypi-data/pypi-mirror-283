@@ -1,0 +1,6 @@
+moviepy
+pydub
+numpy
+scipy
+speechrecognition
+Pillow
