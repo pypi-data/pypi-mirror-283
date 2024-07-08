@@ -1,0 +1,7 @@
+generic_consumer/__init__.py,sha256=W5yxTTLjkPysMQW7lH1BUa3fpHhdDgpPszzgksSG-iw,134
+generic_consumer/basic_consumer.py,sha256=SpLY-mDQbRDw-38zMJrD4kZBzS4FTVrvs8XZzfu-yH4,2050
+generic_consumer/generic_consumer.py,sha256=AMZSxL9ymXwb0l3JhfzyiJ-i-ClHcppMHqX9OroP9Ak,11613
+generic_consumer/passive_consumer.py,sha256=ouCU8WjT6CIpyfs3rMzFWEik0K5LNLTYguufFHx3NtI,491
+generic_consumer-0.11.0.dist-info/METADATA,sha256=JoAtjBg-e15fthu-cAGTCIXpDqIZQwcZ_v550Y1N-pk,596
+generic_consumer-0.11.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+generic_consumer-0.11.0.dist-info/RECORD,,
