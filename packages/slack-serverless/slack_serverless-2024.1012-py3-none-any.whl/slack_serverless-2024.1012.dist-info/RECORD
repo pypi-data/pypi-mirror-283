@@ -1,0 +1,8 @@
+slack_deferred_gcp.py,sha256=6vY1866sK0t8FRvw0kuPEPOqsF3L5KqJVDsu2JK4kZo,3766
+slack_messaging.py,sha256=8N8zgA730U3to5m2MiwGW6Next_KsXm24lCi3HR8O5I,5281
+slack_serverless.py,sha256=3c1aN3HEY3dW0oCVqi5Au_BfcsboYCwne4b2PxJyKms,10413
+slack_serverless-2024.1012.dist-info/LICENSE.md,sha256=4OzoyTDCDufaFMDPha75H7CodMYeFvGXQrQ6ZuF0604,1074
+slack_serverless-2024.1012.dist-info/METADATA,sha256=ljZqkVvm3q6rMXgi_Dj_TeFoFptwJs93zVB0LOJaUf4,5510
+slack_serverless-2024.1012.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+slack_serverless-2024.1012.dist-info/top_level.txt,sha256=jNYqfCjQGf9jVGm4mUxoU2DJvtsucjVF1Qz_AurHQds,52
+slack_serverless-2024.1012.dist-info/RECORD,,
