@@ -1,0 +1,9 @@
+README.md
+_chilkat.pyd
+chilkat.py
+license.pdf
+setup.py
+chilkat.egg-info/PKG-INFO
+chilkat.egg-info/SOURCES.txt
+chilkat.egg-info/dependency_links.txt
+chilkat.egg-info/top_level.txt
