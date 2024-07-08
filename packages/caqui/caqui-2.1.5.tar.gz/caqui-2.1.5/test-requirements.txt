@@ -1,0 +1,6 @@
+pytest
+pytest-xdist
+selenium
+coverage
+tox
+pytest-asyncio
