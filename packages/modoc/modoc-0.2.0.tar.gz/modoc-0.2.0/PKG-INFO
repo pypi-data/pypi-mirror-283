@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: modoc
+Version: 0.2.0
+Summary: 
+Author: uigctaw
+Author-email: uigctaw@metadata.social
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# Modest Documentation
+
