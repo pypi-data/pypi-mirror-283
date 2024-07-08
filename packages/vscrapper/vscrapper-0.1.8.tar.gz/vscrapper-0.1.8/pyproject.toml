@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "vscrapper"
+version = "0.1.8"
+description = ""
+authors = ["vikyw89 <vikyw89@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+nest-asyncio = "^1.6.0"
+validators = "^0.30.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+lint = "scripts.lint:run"
+publish = "scripts.publish:run"
