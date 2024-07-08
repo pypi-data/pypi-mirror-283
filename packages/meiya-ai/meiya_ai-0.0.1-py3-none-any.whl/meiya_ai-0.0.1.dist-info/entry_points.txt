@@ -1,0 +1,2 @@
+[console_scripts]
+meiya_ai.tools.filter = meiya_ai.main:main
