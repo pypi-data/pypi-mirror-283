@@ -1,0 +1,10 @@
+tls_client.py,sha256=BI-Tk-i1CudGDo_lANiwR4Fio259I8uQ8UuvpsfZUKY,1541
+veeder_root_tls_socket_library/__init__.py,sha256=9P8BA6XqAdkEA0QYLKahRunehSRVpBNVRGJqSmC6vzs,127
+veeder_root_tls_socket_library/format.py,sha256=ZU2WGx2FKngynujPI8gbLcUh0ZDJ25RNp2cSprOwg8o,1649
+veeder_root_tls_socket_library/socket.py,sha256=q224MSTxhxZpO_eXjSNgPt7Z6Jl5LJJn2gHla_JbPFQ,5943
+veeder_root_tls_socket_library/tls_3xx.py,sha256=HQ5T_SVjMevL24k7RW5j4m_N1EcdY1rFhuyenouchl0,43925
+veeder_root_tls_socket_library-1.0.0.dist-info/LICENSE,sha256=Dv-gtuHH6gp2vGnFO07Z-i3O3FeTeLZ8xLqVoGUPNJU,1090
+veeder_root_tls_socket_library-1.0.0.dist-info/METADATA,sha256=xqxo143oMvblcZOoQ2ey5CBctWwH7gAkYEeEGKkC0pU,7561
+veeder_root_tls_socket_library-1.0.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+veeder_root_tls_socket_library-1.0.0.dist-info/top_level.txt,sha256=7cRseooiyyrhx_9S1I6wnJDY-Y0ys6AxqLetzo1qdfk,42
+veeder_root_tls_socket_library-1.0.0.dist-info/RECORD,,
