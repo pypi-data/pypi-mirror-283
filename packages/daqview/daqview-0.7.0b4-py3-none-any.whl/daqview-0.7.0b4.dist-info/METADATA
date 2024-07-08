@@ -1,0 +1,95 @@
+Metadata-Version: 2.1
+Name: daqview
+Version: 0.7.0b4
+Summary: DAQ Data Analysis Software
+License: GPL-3.0-only
+Author: Adam Greig
+Author-email: adam@ael.co.uk
+Requires-Python: >=3.9,<3.13
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Dist: PySide6 (>=6.6.2,<7.0.0)
+Requires-Dist: colour (>=0.1,<0.2)
+Requires-Dist: h5py (>=3.6,<4.0)
+Requires-Dist: importlib-resources (>=6.1.2,<7.0.0)
+Requires-Dist: numexpr (>=2.8,<3.0)
+Requires-Dist: numpy (>=1.26.4,<2.0.0)
+Requires-Dist: platformdirs (>=4.2,<5.0)
+Requires-Dist: pyqtgraph (>=0.13,<0.14)
+Requires-Dist: pyyaml (>=6.0,<7.0)
+Requires-Dist: scipy (>=1.8,<2.0)
+Description-Content-Type: text/markdown
+
+# DAQview
+
+DAQview is a desktop application for viewing live and historic DAQ data.
+
+It connects to a DAQd server which can stream it live data from a DAQ system,
+or make a list of historic datasets available for download and viewing.
+
+Written in Python using PyQt5 and pyqtgraph.
+
+Licensed under the GPL 3.0 license.
+
+## Installation
+
+The recommended way to install is to use `pipx` to install from the published
+version on PyPI:
+
+```
+pipx install daqview
+```
+
+To run after installation:
+
+```
+daqview
+```
+
+## Development Environment
+
+First ensure poetry is installed:
+
+```
+pip install --user poetry
+```
+
+Then you should be able to install all dependencies using:
+
+```
+poetry install
+```
+
+Run using:
+```
+poetry run python -m daqview
+```
+
+Run tests with:
+```
+poetry run pytest
+```
+
+Run linters with:
+```
+poetry run flake8 daqview
+poetry run pylint --rcfile=pylint.rc daqview
+```
+
+Generally flake8 should always pass cleanly, while pylint is much
+harsher and its output should be checked over for any useful suggestions.
+
+## Release
+
+When ready to cut a release, ensure `daqview/__init__.py` has the correct
+version number at the top, and then make a commit to master. Tag the commit
+with `release-VERSION`, e.g. `release-0.1.0`, and push the commit and the
+tag to GitLab, which will trigger a release build.
+
