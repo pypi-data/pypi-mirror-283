@@ -1,0 +1,25 @@
+[project]
+name = "radman"
+version = "0.0.3"
+authors = [
+  { name="Daniel Carrion", email="daniel.carrion@monashhealth.org" },
+]
+description = "Python Package for interfacing with Radman APIs"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  'requests >= 2',
+]
+
+[project.urls]
+Homepage = "https://github.com/mhmedphys/radman-python"
+Issues = "https://github.com/mhmedphys/radman-python/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
