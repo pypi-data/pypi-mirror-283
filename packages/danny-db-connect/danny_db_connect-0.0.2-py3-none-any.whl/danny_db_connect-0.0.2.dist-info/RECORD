@@ -1,0 +1,8 @@
+db_connect/__init__.py,sha256=ddaKbUPRkz55hwZuV2_QbdTRWDuHaq4wWbqAcgCYbtE,80
+db_connect/mongo_crud.py,sha256=l6031RyhOmPiWwS09FftwH-zUOI9O0pLOlAHccX5NOs,7266
+db_connect/sql_crud.py,sha256=mUMkaXbE2xRuFSvcIV83QbKVW11DZgGF8TmQYKOY9vY,6275
+danny_db_connect-0.0.2.dist-info/LICENSE,sha256=eR0C1pfHhPS7mnWCIt0aITYKgcKmPAfCTLKgupXSXDc,1070
+danny_db_connect-0.0.2.dist-info/METADATA,sha256=ffz8rw2_7WoYrc-UijlCZLzX3O3ASObQPEO06KD_uOo,1382
+danny_db_connect-0.0.2.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+danny_db_connect-0.0.2.dist-info/top_level.txt,sha256=RnYVWeZGsfI5U0DzkXpuOy2EBNfb4cQIxJgcL4KSopw,11
+danny_db_connect-0.0.2.dist-info/RECORD,,
