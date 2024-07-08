@@ -1,0 +1,3 @@
+[console_scripts]
+bb = pybiosis.__main__:main
+pybiosis = pybiosis.__main__:main
