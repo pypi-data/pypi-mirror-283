@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+blitz_player.egg-info/PKG-INFO
+blitz_player.egg-info/SOURCES.txt
+blitz_player.egg-info/dependency_links.txt
+blitz_player.egg-info/entry_points.txt
+blitz_player.egg-info/requires.txt
+blitz_player.egg-info/top_level.txt
