@@ -1,0 +1,41 @@
+Metadata-Version: 2.3
+Name: orchestria
+Version: 0.0.2
+Project-URL: Documentation, https://github.com/silvanocerza/orchestria#readme
+Project-URL: Issues, https://github.com/silvanocerza/orchestria/issues
+Project-URL: Source, https://github.com/silvanocerza/orchestria
+Author-email: Silvano Cerza <silvanocerza@gmail.com>
+License-Expression: BSD-3-Clause
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.12
+Requires-Dist: click
+Requires-Dist: dulwich
+Requires-Dist: jinja2
+Requires-Dist: ollama
+Requires-Dist: rich
+Description-Content-Type: text/markdown
+
+# OrchestrIA 🎻
+
+---
+
+Experimental Agents orchestrator from the command line.
+
+## Installation
+
+```console
+pip install orchestria
+```
+
+## Usage
+
+TODO
+
+## License
+
+`orchestria` is distributed under the terms of the [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause.html) license.
