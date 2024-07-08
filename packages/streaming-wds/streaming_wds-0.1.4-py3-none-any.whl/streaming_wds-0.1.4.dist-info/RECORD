@@ -1,0 +1,9 @@
+streaming_wds/__init__.py,sha256=R84an8s8qLiO4wdUec9msPBhbDFyKgDFET4YHz2lWTA,196
+streaming_wds/_version.py,sha256=9GTNkADgEYZ6fEjCvZZUdKyqxiPIgtskLFZNJz7nq_U,411
+streaming_wds/decoders.py,sha256=Ls3EXqfMy3RWtOMA8wuHWdd1BZB83IC2rSchff8jxWk,1858
+streaming_wds/streaming_dataset.py,sha256=9c93Ge3A3FfMaqx3wpLqEU4FsspieMNmX5sTRsCvzd8,7925
+streaming_wds/utils.py,sha256=hoei00BwHopoyvDxlXr0lukSVgJSEVKm4matRd3rFKI,1476
+streaming_wds-0.1.4.dist-info/METADATA,sha256=olHr3WfdgInOdmIkjxmXABefjDFOQg_N8LIkgKmkDdo,4139
+streaming_wds-0.1.4.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+streaming_wds-0.1.4.dist-info/top_level.txt,sha256=_hGaN-GI3aXhzzkMtTGPGg0Y5ca8CgB5wBL8wsEL8Po,14
+streaming_wds-0.1.4.dist-info/RECORD,,
