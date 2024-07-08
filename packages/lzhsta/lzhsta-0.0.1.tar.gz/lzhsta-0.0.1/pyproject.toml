@@ -1,0 +1,13 @@
+[project]
+name="lzhsta"
+version="0.0.1"
+authors=[
+    { name="zhlei", email="leizuoho@mail.ustc.edu.cn" }
+]
+dependencies=[
+    "numpy",
+    "pandas",
+    "lmfit"
+]
+description="A package for statistical analysis"
+requires-python=">=3.0"
