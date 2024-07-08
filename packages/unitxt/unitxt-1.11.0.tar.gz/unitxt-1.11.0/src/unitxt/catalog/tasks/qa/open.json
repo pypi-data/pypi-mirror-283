@@ -1,0 +1,13 @@
+{
+    "__type__": "task",
+    "inputs": {
+        "question": "str"
+    },
+    "outputs": {
+        "answers": "List[str]"
+    },
+    "prediction_type": "str",
+    "metrics": [
+        "metrics.rouge"
+    ]
+}
