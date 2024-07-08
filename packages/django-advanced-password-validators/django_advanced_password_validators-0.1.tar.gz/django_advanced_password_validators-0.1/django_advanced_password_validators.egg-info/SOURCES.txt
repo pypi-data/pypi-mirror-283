@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+django_advanced_password_validators/__init__.py
+django_advanced_password_validators.egg-info/PKG-INFO
+django_advanced_password_validators.egg-info/SOURCES.txt
+django_advanced_password_validators.egg-info/dependency_links.txt
+django_advanced_password_validators.egg-info/requires.txt
+django_advanced_password_validators.egg-info/top_level.txt
+django_advanced_password_validators/validators/__init__.py
+django_advanced_password_validators/validators/password_validators.py
