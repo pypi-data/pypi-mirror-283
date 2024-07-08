@@ -1,0 +1,2 @@
+[jupyter_serverproxy_servers]
+marimo = jupyter_marimo_proxy:setup_marimoserver
