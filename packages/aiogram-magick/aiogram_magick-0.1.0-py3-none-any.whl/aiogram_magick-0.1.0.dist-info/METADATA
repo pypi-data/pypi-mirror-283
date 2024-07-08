@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: aiogram_magick
+Version: 0.1.0
+Summary: Magick for Aiogram 3.x-based Telegram bots
+Home-page: https://github.com/arichr/aiogram-magick
+License: MIT
+Keywords: aiogram,storage,sqlite,compontents,component,telegram,bot,async,asynchronous,api,messaging
+Author: Arisu Wonderland
+Author-email: arisuchr@riseup.net
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Classifier: Topic :: Database
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: aiogram (>=3.10.0,<4.0.0)
+Project-URL: Documentation, https://arichr.github.io/aiogram-magick/
+Project-URL: Repository, https://github.com/arichr/aiogram-magick
+Description-Content-Type: text/markdown
+
+<p align="center">
+    <h1 align="center">Aiogram Magick</h1>
+    <p align="center">
+        <a href="https://pypi.org/project/aiogram_magick/"><img alt="PyPI" src="https://img.shields.io/pypi/v/aiogram_magick?style=flat&logo=python&logoColor=white"></a>
+    </p>
+    <p align="center">Magick for Aiogram 3.x-based Telegram bots.</p>
+    <p align="center">
+        <a href="https://arichr.github.io/aiogram_magick/"><img alt="Read documentation" src="https://img.shields.io/badge/read-documentation-cyan?style=for-the-badge&logo=python&logoColor=white"></a>
+    </p>
+</p>
+
+**Compontents:**
+
+* [SQLite-based storage with caching & automatic commits](https://arichr.github.io/aiogram-magick/2_-_SQLite_storage.html)
+
+## Getting started!
+
+1. Install `aiogram_magick` and dependencies for submodules:
+```console
+pip install aiogram_magick
+
+# For aiogram_magick.sqlite
+pip install aiosqlite jsonpickle
+```
+2. Import submodules that provide needed functionality ([see examples below](#examples) or [read documentation](https://arichr.github.io/aiogram-magick/))
+
+## Examples
+
+### SQLite storage
+```python
+from aiogram_magick.sqlite import SqliteStorage
+
+# By default, SqliteStorage is configured to:
+#    - Commit changes on 30 minute idle and on shutdown;
+#    - Cache states (up to 20 entries) and data (up to 10 entries);
+#    - Ignore any exceptions;
+#    - To avoid file corruptions on shutdown any `sqlite3.OperationalError`s
+#      are printed using `traceback.print_exception` instead of raised normally.
+dp = Dispatcher(storage=SqliteStorage('aiogram.sqlite'))
+```
+
