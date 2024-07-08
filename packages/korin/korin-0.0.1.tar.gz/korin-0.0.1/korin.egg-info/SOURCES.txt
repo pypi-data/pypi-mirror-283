@@ -1,0 +1,7 @@
+README.rst
+pyproject.toml
+korin.egg-info/PKG-INFO
+korin.egg-info/SOURCES.txt
+korin.egg-info/dependency_links.txt
+korin.egg-info/requires.txt
+korin.egg-info/top_level.txt
