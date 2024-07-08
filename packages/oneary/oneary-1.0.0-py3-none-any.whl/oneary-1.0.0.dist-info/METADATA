@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: oneary
+Version: 1.0.0
+Summary: Merge your multi-format Sonarr/Radarr libraries into one.
+Home-page: https://github.com/itsnebulalol/oneary
+License: GPLv3
+Author: Nebula
+Author-email: me@itsnebula.net
+Requires-Python: >=3.9,<4.0
+Classifier: Environment :: Console
+Classifier: License :: Other/Proprietary License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Utilities
+Requires-Dist: flask (>=3.0.3,<4.0.0)
+Requires-Dist: gevent (>=24.2.1,<25.0.0)
+Project-URL: Repository, https://github.com/itsnebulalol/oneary
+Description-Content-Type: text/markdown
+
+# Oneary
+
+Merge your multi-format Sonarr/Radarr libraries into one.
+
+# Usage 
+
+```
+usage: oneary [-h] [-d] [-v]
+
+options:
+  -h, --help     show this help message and exit
+  -d, --debug    shows debug info, useful for testing
+  -v, --version  show current version and exit
+```
+

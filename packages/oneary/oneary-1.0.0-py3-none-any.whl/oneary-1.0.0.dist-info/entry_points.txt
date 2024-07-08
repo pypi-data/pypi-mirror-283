@@ -1,0 +1,3 @@
+[console_scripts]
+oneary=oneary.__main__:main
+
