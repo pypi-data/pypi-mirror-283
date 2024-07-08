@@ -1,0 +1,11 @@
+neem_query/__init__.py,sha256=ZH7uh6wa8yHNhUJTHA-llzOvy-jwPPOvyKy6iFiOrCE,91
+neem_query/enums.py,sha256=6gAOPIoEB52-qVBdMJ_dQJcrRN7nCImiQSwEylPOXEM,8897
+neem_query/neem_interface.py,sha256=yrmE4vCDi-Xrvp0Yhmm6SAXL1HvlLnw-jrA5oJEeAL8,10513
+neem_query/neem_query.py,sha256=2Md2vY89DUSUmbfy-p9LQDsO_lfFCCZ2cCKVJXy6eOs,82592
+neem_query/neems_database.py,sha256=rHD421KX4dng74Lk2nqJFlNt7IA2elp2ooo7zDk5XRo,79099
+neem_query/query_result.py,sha256=xywK40nRzxLE7huImPbkVrhhEbtT-yJzAw7okjvS8p0,26835
+NEEMQuery-1.1.2.dist-info/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+NEEMQuery-1.1.2.dist-info/METADATA,sha256=K1lqm0hJ_u0KvgO2JU97Tx14wIFSCz6CkTE2lVgkNok,45324
+NEEMQuery-1.1.2.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+NEEMQuery-1.1.2.dist-info/top_level.txt,sha256=NqMsypPzv9-BlJuOyuKVJCtMG_kXLFKG7MBq2GCcVsA,11
+NEEMQuery-1.1.2.dist-info/RECORD,,
