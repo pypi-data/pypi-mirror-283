@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+Paginator/Paginate.py
+Paginator/__init__.py
+disnake_pagination.egg-info/PKG-INFO
+disnake_pagination.egg-info/SOURCES.txt
+disnake_pagination.egg-info/dependency_links.txt
+disnake_pagination.egg-info/requires.txt
+disnake_pagination.egg-info/top_level.txt
