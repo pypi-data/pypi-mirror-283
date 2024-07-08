@@ -1,0 +1,32 @@
+
+
+<h1 align="center">pazok</h1>
+
+
+### What is pazok library?
+
+The pazok library is a library that summarizes some large commands from several other libraries. This is to simplify some large codes and reduce them to one line or less.
+
+%D9%85%D9%83%D8%AA%D8%A8%D9%87%20%D8%A8%D8%A7%D8%B2%D9%88%D9%83%20%D9%87%D9%8A%20%D9%85%D9%83%D8%AA%D8%A8%D9%87%20%D8%AA%D8%AE%D8%AA%D8%B5%D8%B1%20%D8%A8%D8%B9%D8%B6%20%D8%A7%D9%84%D8%A7%D9%88%D8%A7%D9%85%D8%B1%20%D8%A7%D9%84%D9%83%D8%A8%D9%8A%D8%B2%D9%87%20%D9%85%D9%86%20%D8%B9%D8%AF%D8%A9%20%D9%85%D9%83%D8%A7%D8%AA%D8%A8%20%D8%A7%D8%AE%D8%B1%D9%89%20%D9%88%D9%87%D8%B0%D8%A7%20%D9%84%D8%AA%D8%A8%D8%B3%D9%8A%D8%B7%20%D8%A8%D8%B9%D8%B6%20%D8%A7%D9%84%D8%A7%D9%83%D9%88%D8%AF%20%D8%A7%D9%84%D9%83%D8%A8%D9%8A%D8%B1%D9%87%20%D9%88%D8%A7%D8%AE%D8%AA%D8%B5%D8%A7%D8%B1%D9%87%D8%A7%20%D8%A8%D8%B3%D8%B7%D8%B1%20%D9%88%D8%A7%D8%AD%D8%AF%20%D8%A7%D9%88%20%D8%A7%D9%82%D9%84
+
+### Support
++ python
++ termux
+
+### Install
+
+Just write this code on terminal:
+
+```shell
+pip3 install pazok
+```
+
+___
+
+<p align="center">
+<strong>For more information and explanation</strong>
+</p>
+
+<p align="center">
+<a href="https://t.me/p_azok"><label style="display: block;"><strong>https://t.me/p_azok</strong></label></a>
+</p>
