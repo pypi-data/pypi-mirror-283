@@ -1,0 +1,10 @@
+mfbatch/__init__.py,sha256=z5Oho16KL3250XHDEjSVJ6-wWvxs96RTQCNjFJmqZgE,39
+mfbatch/__main__.py,sha256=HWT-2TwwDTVZLRMh3z1-s45Jr5eZAUfqnwzjOX6XRPs,4835
+mfbatch/commands.py,sha256=7nlcihjz4OzRord45GaEpvPisz_K2N2KFZ9IzICRerw,9935
+mfbatch/metaflac.py,sha256=KgiKhWVE0QnDbWYAHlhRXsogt78f8ebtTIKlDBQ1Q3c,1788
+mfbatch/util.py,sha256=3qisJSE7Ja5iXoAqvo2z-zCdNI2te6QeLpkCaX6QIx8,530
+mfbatch-0.4.1.dist-info/LICENSE,sha256=T7ieiIHxG353vjxO7bJ-Nz_SzSrjTHCLUP8bHCvyGJ0,1068
+mfbatch-0.4.1.dist-info/METADATA,sha256=jN-suTk_78lPnd6o41CF3gtGafdeUTIsKQ5js2Zv7IY,3978
+mfbatch-0.4.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+mfbatch-0.4.1.dist-info/entry_points.txt,sha256=h8h65jWFqJso2cFmcEmnxrjYrYAGpzDLFOxngoH5h10,49
+mfbatch-0.4.1.dist-info/RECORD,,
