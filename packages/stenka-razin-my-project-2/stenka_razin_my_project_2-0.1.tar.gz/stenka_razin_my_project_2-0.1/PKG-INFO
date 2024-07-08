@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: stenka_razin_my_project_2
+Version: 0.1
+Summary: Un esempio di progetto con namespace
+Home-page: https://github.com/stenka_razin/my_project_2
+Author: Stenka Razin
+Author-email: stenka_razin1234@mailinator.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# My Project 2 ( python setup.py sdist bdist_wheel )
+Questo è un esempio super banale di un pacchetto Python.
+
+# Pubblicare il Pacchetto in un Repository Pubblico (PyPI)
+Per pubblicare un pacchetto organizzato come my_project_2 ho seguito i seguenti passi:
+
+1.  Mi sono registrato su PyPI
+
+2.  Ho installato twine: pip install twine
+
+3.  Ho creato un pacchetto distribuibile: source distribution e una wheel 
+    mettendo in my_project_2 setup.py e utilizzando setuptools
+    python setup.py sdist bdist_wheel
+
+4. Caricare i pacchetti su PyPI: twine upload dist/*
+
+# Source Distribution e Wheel  
+
+Una Source Distribution cioè una distribuzione del codice sorgente, è un pacchetto che contiene il codice sorgente del progetto insieme ai file per la sua costruzione e installazione. I file tipicamente inclusi sono:
+
+Il codice sorgente del progetto
+Il file setup.py
+file di documentazione
+
+La source distribution è utile perché permette agli utenti di costruire e installare il pacchetto su diverse piattaforme e ambienti.
+
+La si crea con: python setup.py sdist
+
+Questo comando genera un archivio (come un file .tar.gz o .zip) nella directory dist.
+
+Una Wheel è un formato di distribuzione binaria per pacchetti Python. Contiene tutti i file necessari per installare il pacchetto in una forma precompilata, il che rende l'installazione molto più veloce rispetto alla source distribution. Le wheel sono specifiche per la piattaforma e la versione di Python.
+
+python setup.py bdist_wheel
+
+# Namespace del Progetto
+Per evitare conflitti di nomi su PyPI, è una buona idea usare un namespace unico per il tuo progetto. Un metodo comune è usare il tuo username o il nome della tua organizzazione come prefisso del namespace.
+
+Supponiamo che il tuo username sia tuo_username. Puoi organizzare il tuo progetto in modo da usare questo prefisso come namespace.
+
+Esempio di Namespace
+
+Ecco come puoi strutturare il tuo progetto con un namespace:
+
+my_project_2/
+├── tuo_username/
+│   └── my_project_2/
+│       ├── packages/
+│       │   ├── my_package_1/
+│       │   │   ├── arithmetic.py
+│       │   │   ├── geometry.py
+│       │   │   ├── __init__.py
+│       │   └── my_package_2/
+│       │       ├── __init__.py
+│       ├── scripts/
+│       │   ├── main.py
+│       └── tests/
+│           ├── __init__.py
+│           ├── test_geometry.py
+├── README.md
+├── setup.py
+
+inoltre setup.py: 
+
+from setuptools import setup, find_packages
+
+setup(
+    name='tuo_username_my_project_2',
+    version='0.1',
+    packages=find_packages(),
+    install_requires=[],
+    author='Il Tuo Nome',
+    author_email='tuo.email@example.com',
+    description='Un esempio di progetto con namespace',
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
+    url='https://github.com/tuo_username/my_project_2',
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+    ],
+    python_requires='>=3.6',
+)
+
+
+Quando esegui pip install my_project, pip cerca il pacchetto my_project su PyPI (o su un repository specificato). Se trova il pacchetto, pip scarica e installa la versione disponibile. La procedura di installazione dipende dai file di distribuzione disponibili per il pacchetto:
+
+Wheel (.whl): Se è disponibile una wheel compatibile con la piattaforma e la versione di Python in uso, pip scarica e installa la wheel. L'installazione da wheel è molto veloce perché la wheel contiene già i file precompilati.
+Source Distribution (.tar.gz, .zip): Se una wheel non è disponibile, pip scarica e installa la source distribution. Questo processo può richiedere più tempo poiché potrebbe essere necessario compilare codice o eseguire script di installazione aggiuntivi.
+
+

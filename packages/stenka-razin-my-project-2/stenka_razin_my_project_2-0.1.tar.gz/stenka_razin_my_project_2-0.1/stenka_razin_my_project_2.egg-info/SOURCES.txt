@@ -1,0 +1,6 @@
+README.md
+setup.py
+stenka_razin_my_project_2.egg-info/PKG-INFO
+stenka_razin_my_project_2.egg-info/SOURCES.txt
+stenka_razin_my_project_2.egg-info/dependency_links.txt
+stenka_razin_my_project_2.egg-info/top_level.txt
