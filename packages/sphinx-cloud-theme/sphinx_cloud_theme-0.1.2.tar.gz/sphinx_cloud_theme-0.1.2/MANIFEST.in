@@ -1,0 +1,11 @@
+include *.txt
+include LICENSE
+recursive-include sphinx_cloud_theme *.conf
+recursive-include sphinx_cloud_theme *.css
+recursive-include sphinx_cloud_theme *.eot
+recursive-include sphinx_cloud_theme *.html
+recursive-include sphinx_cloud_theme *.js
+recursive-include sphinx_cloud_theme *.svg
+recursive-include sphinx_cloud_theme *.ttf
+recursive-include sphinx_cloud_theme *.woff
+recursive-include sphinx_cloud_theme *.woff2
