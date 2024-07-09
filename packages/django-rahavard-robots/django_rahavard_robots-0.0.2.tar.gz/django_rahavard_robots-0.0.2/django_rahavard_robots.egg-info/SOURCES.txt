@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+django_rahavard_robots/__init__.py
+django_rahavard_robots/apps.py
+django_rahavard_robots/urls.py
+django_rahavard_robots/views.py
+django_rahavard_robots.egg-info/PKG-INFO
+django_rahavard_robots.egg-info/SOURCES.txt
+django_rahavard_robots.egg-info/dependency_links.txt
+django_rahavard_robots.egg-info/requires.txt
+django_rahavard_robots.egg-info/top_level.txt
+django_rahavard_robots/migrations/__init__.py
