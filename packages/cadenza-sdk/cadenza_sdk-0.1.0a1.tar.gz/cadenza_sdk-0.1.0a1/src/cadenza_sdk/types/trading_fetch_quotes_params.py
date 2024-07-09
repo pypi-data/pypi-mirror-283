@@ -1,0 +1,19 @@
+# File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
+
+from __future__ import annotations
+
+from typing import Union
+from typing_extensions import Required, TypedDict
+
+__all__ = ["TradingFetchQuotesParams", "Variant0", "Variant1"]
+
+
+class Variant0(TypedDict, total=False):
+    body: Required[object]
+
+
+class Variant1(TypedDict, total=False):
+    body: Required[object]
+
+
+TradingFetchQuotesParams = Union[Variant0, Variant1]
