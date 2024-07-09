@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+src/urlconfirm/__init__.py
+src/urlconfirm/urlconfirm.py
+src/urlconfirm.egg-info/PKG-INFO
+src/urlconfirm.egg-info/SOURCES.txt
+src/urlconfirm.egg-info/dependency_links.txt
+src/urlconfirm.egg-info/top_level.txt
