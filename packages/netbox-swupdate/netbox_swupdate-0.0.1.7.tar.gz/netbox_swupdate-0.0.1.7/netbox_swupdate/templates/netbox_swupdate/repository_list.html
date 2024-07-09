@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Repository List</h2>
+  <ul>
+    {% for repository in object_list %}
+      <li><a href="{% url 'repository_detail' repository.pk %}">{{ repository.name }}</a></li>
+    {% empty %}
+      <li>No repositories available.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
