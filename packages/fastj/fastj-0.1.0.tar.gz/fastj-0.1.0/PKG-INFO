@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: fastj
+Version: 0.1.0
+Summary: fast json
+License: MIT
+Author: Alyetama
+Author-email: malyetama@pm.me
+Requires-Python: >=3.0,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# FastJ
+
+🚀 quick json.
+
+[![Supported Python versions](https://img.shields.io/badge/Python-%3E=3.6-blue.svg)](https://www.python.org/downloads/) [![PEP8](https://img.shields.io/badge/Code%20style-PEP%208-orange.svg)](https://www.python.org/dev/peps/pep-0008/) 
+
+
+## Requirements
+- 🐍 [python>=3.6](https://www.python.org/downloads/)
+
+
+## ⬇️ Installation
+
+```sh
+pip install fastj
+```
+
+
+## ⌨️ Usage
+
+```
+➜ fastj --help
+
+
+```
+
+
+## 📕 Examples
+
