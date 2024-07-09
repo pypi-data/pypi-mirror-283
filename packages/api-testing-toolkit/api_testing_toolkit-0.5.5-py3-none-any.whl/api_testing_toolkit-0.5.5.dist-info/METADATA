@@ -1,0 +1,72 @@
+Metadata-Version: 2.3
+Name: api-testing-toolkit
+Version: 0.5.5
+Summary: A set of functions to facilitate API testing with jupyter lab.
+Project-URL: Documentation, https://github.com/Belkonar/api-testing-toolkit#readme
+Project-URL: Issues, https://github.com/Belkonar/api-testing-toolkit/issues
+Project-URL: Source, https://github.com/Belkonar/api-testing-toolkit
+Author: Tom
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Jupyter :: JupyterLab
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: jupyterlab>=4.2.3
+Requires-Dist: requests>=2.32.3
+Description-Content-Type: text/markdown
+
+# API Testing Toolkit
+
+[![PyPI - Version](https://img.shields.io/pypi/v/api-testing-toolkit.svg)](https://pypi.org/project/api-testing-toolkit)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/api-testing-toolkit.svg)](https://pypi.org/project/api-testing-toolkit)
+
+-----
+
+## Installation
+
+Mac or Linux (inside `$HOME` or another directory of your choice)
+```sh
+python3 -m venv api-testing
+source api-testing/bin/activate
+pip install --upgrade pip
+pip install api-testing-toolkit
+```
+
+Windows TBD
+
+## Development
+
+Clone this repository and do this (for mac or linux, nothing for windows yet).
+
+```sh
+python3 -m venv .env
+source .env/bin/activate
+pip install --upgrade pip
+pip install --editable .
+```
+
+Set your IDE to that .env venv and use the same to pull up jupyter in your target directory. If you change the code,
+you'll need to reset the jupyter kernel.
+
+## Usage
+
+This package is meant to be used with Jupyter Lab. Installing this package will also
+install Jupyter Lab, so you only need to install the one package. You can either run
+Jupyter via CLI with the venv activated or point the desktop version at the venv
+(that's my recommendation).
+
+The toolkit provides a few utility functions that can be ignored if you don't want to
+use them. The important part is the pattern, not the details.
+
+## License
+
+`api-testing-toolkit` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
