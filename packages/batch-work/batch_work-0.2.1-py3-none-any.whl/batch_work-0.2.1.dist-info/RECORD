@@ -1,0 +1,11 @@
+batch_work/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+batch_work/bw_delempty.py,sha256=Cd1Xr2VoogYkLYGhVxdsdgaPQp6xAW0f0NnfA7Gebac,758
+batch_work/bw_rename.py,sha256=VotUxOUvKs6kgHEZBVwU_n9ODi-tAr96yZ0-p9SuxQg,936
+batch_work/bw_sort.py,sha256=Vcw6VcmZVHAKT7yDVSrZzjBrLFqoELrT_bUA_ofsqwQ,3146
+batch_work/main.py,sha256=LSgQpQlv_Nm0oqz6okUDazXUFwMfmJWAIYYMiMGr2vo,972
+batch_work-0.2.1.dist-info/LICENSE,sha256=eyZFrMkmMR7jB48DJl2FqOG6aIUmC17DO6Fnr5_3FLI,1068
+batch_work-0.2.1.dist-info/METADATA,sha256=7IdyoxdAk7W8Z8OuQVo3OnlzW1hpgmBbuaecMUPMptU,3613
+batch_work-0.2.1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+batch_work-0.2.1.dist-info/entry_points.txt,sha256=38y7hikWumgRpDHt7b8r-Cq4O0OD8vYgTa_wbmwde3c,117
+batch_work-0.2.1.dist-info/top_level.txt,sha256=m5wY63JIHP-dzMH4kgSHnDswfapSFNi3aVP1joD5_OU,11
+batch_work-0.2.1.dist-info/RECORD,,
