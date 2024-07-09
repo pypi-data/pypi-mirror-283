@@ -1,0 +1,12 @@
+rule infer
+  command = /Library/Developer/CommandLineTools/usr/bin/python3 -m pytype.main --imports_info $imports --module-name $module --platform darwin -V 3.9 -o $out --no-report-errors --nofail --quick $in
+  description = infer $module
+rule check
+  command = /Library/Developer/CommandLineTools/usr/bin/python3 -m pytype.main --imports_info $imports --module-name $module --platform darwin -V 3.9 -o $out --analyze-annotated --nofail --quick $in
+  description = check $module
+build /Users/danielmyers/evolutionhttp-1/client/.pytype/pyi/src/evolutionhttp/client.pyi: infer /Users/danielmyers/evolutionhttp-1/client/src/evolutionhttp/client.py
+  imports = /Users/danielmyers/evolutionhttp-1/client/.pytype/imports/src.evolutionhttp.client.imports
+  module = src.evolutionhttp.client
+build /Users/danielmyers/evolutionhttp-1/client/.pytype/pyi/src/evolutionhttp/local_client.pyi: check /Users/danielmyers/evolutionhttp-1/client/src/evolutionhttp/local_client.py | /Users/danielmyers/evolutionhttp-1/client/.pytype/pyi/src/evolutionhttp/client.pyi
+  imports = /Users/danielmyers/evolutionhttp-1/client/.pytype/imports/src.evolutionhttp.local_client.imports
+  module = src.evolutionhttp.local_client
