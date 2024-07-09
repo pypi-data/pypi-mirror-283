@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: myinternshipcalculator2024
+Version: 0.3.7
+Summary: A simple internship hours calculator.
+Home-page: https://github.com/aabdelsameia1/myinternshipcalculator2024
+Author: Abdallah Abdelsameia
+Author-email: aabdelsameia1@gmail.com
+Maintainer: Abdallah Abdelsameia
+Maintainer-email: aabdelsameia1@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: statsmodels~=0.14.2
+Requires-Dist: pytest~=8.2.2
+Requires-Dist: numpy~=2.0.0
+Requires-Dist: setuptools~=69.5.1
+Requires-Dist: scipy~=1.13.1
+Requires-Dist: plotly~=5.22.0
+Requires-Dist: scikit-learn~=1.5.0
+Requires-Dist: sphinx
+Requires-Dist: sphinx_rtd_theme
+
+# myinternshipcalculator2024
+
+A simple internship hours calculator.
+
+## Installation
+
+```bash
+pip install myinternshipcalculator2024
+```
