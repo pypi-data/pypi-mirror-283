@@ -1,0 +1,75 @@
+[tool.poetry]
+name = "daisybell"
+version = "0.4.4"
+description = "A scanner that will scan your AI models for problems. Currently it focuses on bias testing. It is currently alpha."
+authors = ["Your Name <you@example.com>"]
+license = "Apache-2.0"
+readme = "README.rst"
+classifiers=[
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3 :: Only",
+    "Operating System :: OS Independent",
+]
+
+[virtualenvs]
+in-project = true
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.13"
+torch = "2.3.1"
+transformers = "^4.42.3"
+pandas = "^2.0.2"
+tabulate = "^0.9.0"
+types-tabulate = "^0.9.0.3"
+dataframe-image = "^0.2.2"
+seqeval = "^1.2.2"
+datasets = "^2.20.0"
+tensorboard = "^2.13.0"
+pysbd = "^0.3.4"
+grpcio = "<1.64.2"
+sentencepiece = "^0.2.0"
+protobuf = "^5.27.2"
+
+pytest = { version = "8.2.2", optional = true, extras = ["test"] }
+pytest-cov = { version = "5.0.0", optional = true, extras = ["test"] }
+pdbpp = {version = "^0.10.3", optional = true, extras = ["test"]}
+ruff = {version = "^0.5.1", optional = true, extras = ["test"]}
+black = {version = "^24.3.0", optional = true, extras = ["test"]}
+pyright = "1.1.370"
+
+[tool.poetry.extras]
+test = [
+"pytest",
+"pytest-cov",
+"pdbpp",
+"ruff",
+"black",
+"pyright",
+]
+
+[tool.ruff]
+# increase the maximum line length to 110 characters.
+line-length = 127
+select = ["E", "F", "W", "C901"]
+exclude = [ ".git", ".venv" ]
+src = ["daisybell"]
+
+[tool.black]
+line-length = 127
+target-version = ['py38']
+include = '\.pyi?$'
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+
+
+[tool.poetry.scripts]
+daisybell = 'daisybell.__main__:main'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

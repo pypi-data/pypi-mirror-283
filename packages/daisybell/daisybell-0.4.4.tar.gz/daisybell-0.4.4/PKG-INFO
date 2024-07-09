@@ -1,0 +1,108 @@
+Metadata-Version: 2.1
+Name: daisybell
+Version: 0.4.4
+Summary: A scanner that will scan your AI models for problems. Currently it focuses on bias testing. It is currently alpha.
+License: Apache-2.0
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.8,<3.13
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Provides-Extra: test
+Requires-Dist: black[test] (>=24.3.0,<25.0.0) ; extra == "test"
+Requires-Dist: dataframe-image (>=0.2.2,<0.3.0)
+Requires-Dist: datasets (>=2.20.0,<3.0.0)
+Requires-Dist: grpcio (<1.64.2)
+Requires-Dist: pandas (>=2.0.2,<3.0.0)
+Requires-Dist: pdbpp[test] (>=0.10.3,<0.11.0) ; extra == "test"
+Requires-Dist: protobuf (>=5.27.2,<6.0.0)
+Requires-Dist: pyright (==1.1.370) ; extra == "test"
+Requires-Dist: pysbd (>=0.3.4,<0.4.0)
+Requires-Dist: pytest-cov[test] (==5.0.0) ; extra == "test"
+Requires-Dist: pytest[test] (==8.2.2) ; extra == "test"
+Requires-Dist: ruff[test] (>=0.5.1,<0.6.0) ; extra == "test"
+Requires-Dist: sentencepiece (>=0.2.0,<0.3.0)
+Requires-Dist: seqeval (>=1.2.2,<2.0.0)
+Requires-Dist: tabulate (>=0.9.0,<0.10.0)
+Requires-Dist: tensorboard (>=2.13.0,<3.0.0)
+Requires-Dist: torch (==2.3.1)
+Requires-Dist: transformers (>=4.42.3,<5.0.0)
+Requires-Dist: types-tabulate (>=0.9.0.3,<0.10.0.0)
+Description-Content-Type: text/x-rst
+
+daisybell
+~~~~~~~~~~
+
+A scanner that will scan your AI models for problems. Currently it focuses on bias testing. It is currently alpha.
+
+
+How to Use
+~~~~~~~~~~
+
+First install it:
+
+::
+
+    pip install daisybell
+
+
+Run it in this manner (currently supports models from HuggingFace's repository):
+
+::
+
+    daisybell roberta-base
+
+
+The scan can output files for further analysis:
+
+::
+
+    daisybell roberta-base --output results/roberta-base
+
+We will infer the task(s) of model by default but to provide specific tasks to test explicitly use the --task switch:
+
+::
+
+    daisybell cross-encoder/nli-distilroberta-base --task zero-shot-classification
+
+
+Daisybell can even scan chatbot models like StableLM for AI safety and alignment issues:
+
+::
+
+    daisybell StabilityAI/stablelm-tuned-alpha-3b -d cuda:0
+
+That's it for now. More will come.
+
+
+Future Work
+~~~~~~~~~~~~
+
+* More bias tests. More metrics for bias testing based on the research in the field.
+* Integration with other types of testing (eg. adversarial robustness)
+* More kinds of models besides HuggingFace models. We are especially interested in MLFlow integration.
+* Documentation.
+
+Please contribute if you can. Help is always helpful.
+
+License
+~~~~~~~
+
+Apache
+
+Credit
+~~~~~~
+
+A project of IQT Labs.
+
