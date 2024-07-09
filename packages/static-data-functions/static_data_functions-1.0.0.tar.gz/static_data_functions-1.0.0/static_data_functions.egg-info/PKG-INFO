@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: static_data_functions
+Version: 1.0.0
+Author-email: J J <jai.jalah@krakenflex.com>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: sys
