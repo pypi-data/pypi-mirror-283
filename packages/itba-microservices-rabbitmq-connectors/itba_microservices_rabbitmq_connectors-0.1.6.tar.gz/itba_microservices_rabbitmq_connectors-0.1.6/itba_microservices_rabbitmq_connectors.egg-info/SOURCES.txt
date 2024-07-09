@@ -1,0 +1,11 @@
+setup.py
+itba_microservices_rabbitmq_connectors/__init__.py
+itba_microservices_rabbitmq_connectors/rabbitmq_connectors.py
+itba_microservices_rabbitmq_connectors/rabbitmq_consumers.py
+itba_microservices_rabbitmq_connectors/rabbitmq_dtos.py
+itba_microservices_rabbitmq_connectors/rabbitmq_producers.py
+itba_microservices_rabbitmq_connectors.egg-info/PKG-INFO
+itba_microservices_rabbitmq_connectors.egg-info/SOURCES.txt
+itba_microservices_rabbitmq_connectors.egg-info/dependency_links.txt
+itba_microservices_rabbitmq_connectors.egg-info/requires.txt
+itba_microservices_rabbitmq_connectors.egg-info/top_level.txt
