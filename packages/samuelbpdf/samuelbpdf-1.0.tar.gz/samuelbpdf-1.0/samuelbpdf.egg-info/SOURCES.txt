@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+samuelbpdf.egg-info/PKG-INFO
+samuelbpdf.egg-info/SOURCES.txt
+samuelbpdf.egg-info/dependency_links.txt
+samuelbpdf.egg-info/top_level.txt
