@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "digikala_bi_utils"
+version = "0.0.1"
+authors = [
+  { name="Meysam Aghili", email="m.aghili@digikala.com" },
+]
+description = "digikala bi code utils package"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://git.digikala.com/bi/digikala_bi_utils"
+Issues = "https://git.digikala.com/bi/digikala_bi_utils/-/issues"
