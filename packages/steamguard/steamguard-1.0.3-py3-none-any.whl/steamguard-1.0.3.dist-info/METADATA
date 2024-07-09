@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: steamguard
+Version: 1.0.3
+Summary: Simple python module to add a phone number to your steam account and enable mobile auth. Also generate steam guard codes.
+Home-page: https://github.com/th3poli/steamguard
+Author: th3poli
+Author-email: 
+License: MIT
+Keywords: steam,mobile,auth,guard,steamcommunity
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: rsa
+
