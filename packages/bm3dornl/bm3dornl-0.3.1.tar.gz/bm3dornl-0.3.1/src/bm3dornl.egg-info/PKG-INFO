@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: bm3dornl
+Version: 0.3.1
+Summary: BM3D for streak artifact removal in neutron imaging
+License: MIT
+Project-URL: homepage, https://github.com/neutrons/python_project_template/
+Project-URL: repository, https://github.com/ornlneutronimaging/bm3dornl
+Project-URL: documentation, https://bm3dornl.readthedocs.io/en/latest/
+Project-URL: issues, https://github.com/ornlneutronimaging/bm3dornl/issues
+Keywords: BM3D,image processing,neutron imaging,denoising,CuPy,Numba
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy<1.13
+Requires-Dist: numba
+Requires-Dist: cupy-cuda12x
+Requires-Dist: scikit-image
+
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/ornlneutronimaging/bm3dornl/next.svg)](https://results.pre-commit.ci/latest/github/ornlneutronimaging/bm3dornl/next)
+[![Documentation Status](https://readthedocs.org/projects/bm3dornl/badge/?version=latest)](https://bm3dornl.readthedocs.io/en/latest/?badge=latest)
+
+BM3D ORNL
+=========
+
+This repository contains the BM3D ORNL code, which is a Python implementation of the BM3D denoising algorithm. The BM3D algorithm was originally proposed by K. Dabov, A. Foi, V. Katkovnik, and K. Egiazarian in the paper "Image Denoising by Sparse 3D Transform-Domain Collaborative Filtering" (2007).
+The BM3D algorithm is a state-of-the-art denoising algorithm that is widely used in the image processing community.
+The BM3D ORNL code is a Python implementation of the BM3D algorithm that has been optimized for performance using both `Numba` and `CuPy`.
+The BM3D ORNL code is designed to be easy to use and easy to integrate into existing Python workflows.
+The BM3D ORNL code is released under an open-source license, and is freely available for download and use.
+
+For more information, check out our [FAQ](docs/FAQ.md).

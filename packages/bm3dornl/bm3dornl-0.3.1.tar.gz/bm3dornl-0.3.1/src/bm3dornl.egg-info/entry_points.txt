@@ -1,0 +1,5 @@
+[console_scripts]
+packagename-cli = packagenamepy.packagename:main
+
+[gui_scripts]
+packagenamepy = packagenamepy.packagename:gui
