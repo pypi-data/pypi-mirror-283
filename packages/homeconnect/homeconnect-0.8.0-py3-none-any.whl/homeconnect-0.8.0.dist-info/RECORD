@@ -1,0 +1,11 @@
+homeconnect/__init__.py,sha256=WNo9sX5FMspbwHDefGI4bbXHtPu4axbwUKX0ZsNCIGk,45
+homeconnect/api.py,sha256=5ocW5O8ywsJi8v_XO1uIJrypWCXkiodmPOcwT0qTkbU,14613
+homeconnect/sseclient.py,sha256=BdrPmtT-Fslz-X7Qqm1e-Lw1Ddokl3uqayTP8mH5wSA,6125
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/homeconnect/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/homeconnect/test_api.py,sha256=MULYKvAsXJDKgK-iYOlbK6Z-H9XonUt2sDTJGD-ldJ8,2654
+homeconnect-0.8.0.dist-info/LICENSE,sha256=nCQtDvt6W9Xm97g8fWt5o4130Gg3cT24YVUmgQIcKJY,1069
+homeconnect-0.8.0.dist-info/METADATA,sha256=ximy6fKWjkp1e6x8hlN5scs-pTeCnH3I6svWdB5Erfk,1279
+homeconnect-0.8.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+homeconnect-0.8.0.dist-info/top_level.txt,sha256=QtYvMB9BevZOTZ6ZDJv243NOS9fi2EZm71vDk9Vad20,18
+homeconnect-0.8.0.dist-info/RECORD,,
