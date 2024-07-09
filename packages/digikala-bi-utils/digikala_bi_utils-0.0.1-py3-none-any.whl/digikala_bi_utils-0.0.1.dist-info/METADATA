@@ -1,0 +1,19 @@
+Metadata-Version: 2.3
+Name: digikala_bi_utils
+Version: 0.0.1
+Summary: digikala bi code utils package
+Project-URL: Homepage, https://git.digikala.com/bi/digikala_bi_utils
+Project-URL: Issues, https://git.digikala.com/bi/digikala_bi_utils/-/issues
+Author-email: Meysam Aghili <m.aghili@digikala.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Example Package
+
+This is a simple example package. You can use
+[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
