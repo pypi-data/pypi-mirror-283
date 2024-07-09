@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: insurance-calculator
+Version: 0.1.0
+Summary: A library to calculate car insurance assurance amounts
+Home-page: https://github.com/baluthota2012/test_pypl
+Author: baluthota
+Author-email: baluthota2012@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Insurance Calculator
+
+A library to calculate car insurance assurance amounts based on car damage and policy limits.
+
+## Installation
+
+```bash
+pip install insurance_calculator
+
+
+
