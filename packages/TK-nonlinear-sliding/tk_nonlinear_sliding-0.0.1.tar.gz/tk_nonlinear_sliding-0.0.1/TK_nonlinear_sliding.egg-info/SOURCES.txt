@@ -1,0 +1,8 @@
+LICENSE.txt
+README.md
+setup.py
+TK_nonlinear_sliding.egg-info/PKG-INFO
+TK_nonlinear_sliding.egg-info/SOURCES.txt
+TK_nonlinear_sliding.egg-info/dependency_links.txt
+TK_nonlinear_sliding.egg-info/top_level.txt
+tkns/__init__.py

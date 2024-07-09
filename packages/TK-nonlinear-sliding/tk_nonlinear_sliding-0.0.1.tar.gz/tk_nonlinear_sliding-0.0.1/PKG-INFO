@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: TK_nonlinear_sliding
+Version: 0.0.1
+Summary: Implementing nonlinear sliding of tkiner components
+Home-page: https://github.com/leletxh/TK-nonlinear-sliding
+Author: Liu Zichang
+Author-email: 1926341659@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+
+This is a simple TK nonlinear sliding package.You can use
+```python
+move(currently_x,currently_y,to_x,to_y,n,win,debug = False,sleep = 0.01,wait_on_startup = True)
+```
+make a call
+
+Parameter Introduction
+move(
+currently_x  The x-coordinate of the current component
+currently_y  The y-coordinate of the current component
+to_x  Move to x coordinate
+to_y  Move to y coordinate
+n  component
+win  window
+debug=False  debug
+sleep=0.01  Sliding waiting
+wait_on_startup=True  Wait for 0.5 seconds at startup
+)
