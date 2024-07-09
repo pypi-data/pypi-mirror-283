@@ -1,0 +1,5 @@
+fastparquet
+h3
+pandas
+pyarrow
+rasterio >=1.3
