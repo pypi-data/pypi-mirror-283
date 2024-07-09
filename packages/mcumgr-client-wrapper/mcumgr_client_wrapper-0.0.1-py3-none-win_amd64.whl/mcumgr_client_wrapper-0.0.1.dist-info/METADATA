@@ -1,0 +1,40 @@
+Metadata-Version: 2.3
+Name: mcumgr-client-wrapper
+Version: 0.0.1
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Summary: Run MCUmgr commands for uploading firmware updates from a PC to an embedded device
+License: Apache-2.0
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Repository, https://github.com/comap-smart-home/mcumgr-client-wrapper
+
+# mcumgr-client-wrapper
+
+A python wrapper for the rust program [mcumgr-client](https://github.com/vouch-opensource/mcumgr-client).
+This allows sending MCUmgr commands to a device connected to a serial port from Python.
+
+# How to use
+
+```
+import mcumgr_client_wrapper
+
+s = mcumgr_client_wrapper.Session(device='/dev/ttyUSB0', baudrate=576000)
+# Get a dictionnary of properties 
+d = s.list()
+print(d)
+
+# Upload image to device
+s.upload('/path/to/image/bin')
+
+# Reset the device
+s.reset()
+```
+
+see `help(mcumgr_client_wrapper)` for more
+
