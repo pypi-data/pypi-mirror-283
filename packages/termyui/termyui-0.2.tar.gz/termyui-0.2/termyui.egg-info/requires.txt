@@ -1,0 +1,4 @@
+windows-curses
+pyfiglet
+termcolor
+term-image

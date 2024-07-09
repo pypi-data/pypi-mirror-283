@@ -1,0 +1,9 @@
+README.md
+setup.py
+termyui/__init__.py
+termyui/termyui.py
+termyui.egg-info/PKG-INFO
+termyui.egg-info/SOURCES.txt
+termyui.egg-info/dependency_links.txt
+termyui.egg-info/requires.txt
+termyui.egg-info/top_level.txt
