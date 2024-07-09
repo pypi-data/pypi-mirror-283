@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+ak_ifa.egg-info/PKG-INFO
+ak_ifa.egg-info/SOURCES.txt
+ak_ifa.egg-info/dependency_links.txt
+ak_ifa.egg-info/top_level.txt
+ifa/__init__.py
+ifa/api.py
+ifa/ci.py
+ifa/math.py
+ifa/segmentor.py
+test/__init__.py
+test/test_api.py
+test/test_math.py
+test/test_segmentor.py
