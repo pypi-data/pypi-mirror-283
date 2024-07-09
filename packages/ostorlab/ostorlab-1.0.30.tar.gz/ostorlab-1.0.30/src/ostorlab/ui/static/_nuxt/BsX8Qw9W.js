@@ -1,0 +1,1 @@
+import{cg as t,cj as a}from"./D3CI8m9t.js";const i=t("scanners",{state:()=>({scanners:[]}),actions:{addOrUpdateScanner(e){const s=this.scanners.findIndex(n=>n.endpoint===e.endpoint);s===-1?this.scanners.push(e):this.scanners[s]=e},deleteScanner(e){this.scanners=this.scanners.filter(s=>s.endpoint!==e)}},persist:{storage:a.localStorage}});export{i as u};

@@ -1,0 +1,1 @@
+import{d as s,o,q as e,t as r,L as a}from"./D3CI8m9t.js";import{u as t}from"./BsX8Qw9W.js";import{S as c}from"./Cwqc5vN0.js";import"./DlAUqK2U.js";const S=s({__name:"index",setup(i){const n=t().scanners;return o(()=>{n.length===0?e("/scanners"):e("/scan/list")}),(p,_)=>(r(),a(c))}});export{S as default};
