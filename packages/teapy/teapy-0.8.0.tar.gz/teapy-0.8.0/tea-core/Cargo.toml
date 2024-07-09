@@ -1,0 +1,57 @@
+[package]
+name = "tea-core"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+repository.workspace = true
+license.workspace = true
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[features]
+# default = ["time", "method_1d", "ops", "blas", "concat", "arw"]
+default = ["time", "method_1d"]
+# default = []
+
+method_1d = []
+time = ["tea-dyn/time", "numpy"]
+ops = []
+srd = ["ndarray/serde"]
+# srd = ["tea-dtype/srd", "ndarray/serde"]
+blas = ["ndarray/blas", "ops", "lapack-sys", "intel-mkl"]
+concat = []
+arw = ["arrow", "concat"]
+
+# blas choices
+openblas = ["openblas-static"]
+intel-mkl = ["intel-mkl-static"]
+
+openblas-static = ["openblas-src/static"]
+openblas-system = ["openblas-src/system"]
+
+intel-mkl-static = ["intel-mkl-src/mkl-static-lp64-seq"]
+intel-mkl-system = ["intel-mkl-src/mkl-dynamic-lp64-seq"]
+
+[dependencies]
+derive_more = { workspace = true }
+tea-utils = { path = "../tea-utils" }
+tea-macros = { path = "../tea-macros", default-features = false }
+
+tea-dyn = { workspace = true, features = [
+    "ndarray",
+    "py",
+    # "ffi",
+], default-features = false }
+
+ndarray = { workspace = true }
+num = { workspace = true }
+rayon = { workspace = true }
+libc = { workspace = true }
+
+pyo3 = { workspace = true }
+numpy = { workspace = true, optional = true }
+lapack-sys = { version = "0.14.0", optional = true }
+intel-mkl-src = { version = "0.8.1", default-features = false, optional = true }
+openblas-src = { version = "0.10.4", optional = true, default-features = false, features = [
+    "cblas",
+] }
+arrow = { workspace = true, default-features = false, optional = true }

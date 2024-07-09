@@ -1,0 +1,20 @@
+[package]
+name = "tea-hash"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[features]
+default = ["time", "ahasher"]
+time = ["tea-dyn/time"]
+
+ahasher = ["ahash"]
+gxhasher = ["gxhash"] # not implemented yet
+
+[dependencies]
+# tea-dtype = {path = "../tea-dtype"}
+tea-dyn = { workspace = true, optional = true }
+ahash = { workspace = true, optional = true }
+gxhash = { version = "3.4.1", optional = true }
