@@ -1,0 +1,5 @@
+matplotlib>=3.4.3
+FreeSimpleGUI>=5.1.0
+numpy>=1.22.4
+lmfit>=1.0.3
+Pillow>=9.1.1
