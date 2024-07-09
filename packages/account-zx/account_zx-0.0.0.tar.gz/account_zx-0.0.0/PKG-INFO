@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: account_zx
+Version: 0.0.0
+Summary: Description in here.
+Home-page: http://example.com
+Author: zx
+Author-email: zx@example.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+
+Example project
+===============
+
+Project description in here ...
