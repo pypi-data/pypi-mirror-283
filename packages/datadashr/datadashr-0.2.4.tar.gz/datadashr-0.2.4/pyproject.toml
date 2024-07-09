@@ -1,0 +1,86 @@
+[tool.poetry]
+name = "datadashr"
+version = "0.2.4"
+description = "Engage with your data (SQL, CSV, pandas, polars, mongodb, noSQL, etc.) using Ollama, an open-source tool that operates locally. Datadashr transforms data analysis into a conversational experience powered by Ollama LLMs and RAG."
+authors = ["Datadashr <dev@datadashr.com>"]
+readme = "README.md"
+license = "MIT"
+packages = [
+    { include = "datadashr" }
+]
+
+[project]
+name = "datadashr"
+version = "0.1.7"
+description = "Engage with your data (SQL, CSV, pandas, polars, mongodb, noSQL, etc.) using Ollama, an open-source tool that operates locally. Datadashr transforms data analysis into a conversational experience powered by Ollama LLMs and RAG."
+authors = ["Datadashr <dev@datadashr.com>"]
+readme = "README.md"
+license = "MIT"
+packages = [
+    { include = "datadashr" }
+]
+maintainers = ["Datadashr <dev@datadashr.com>"]
+
+[project.urls]
+homepage = "https://www.datadashr.com"
+documentation = "https://docs.datadashr.com"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+pandas = "^2.2.2"
+ollama = "^0.2.0"
+openai = "^1.34.0"
+requests = "^2.32.3"
+poetry-core = "^1.9.0"
+restrictedpython = "^7.1"
+jinja2 = "^3.1.4"
+loguru = "^0.7.2"
+numpy = "^1.26.4"
+sentence-transformers = "^3.0.0"
+astor = "^0.8.1"
+streamlit = "^1.35.0"
+matplotlib = "^3.9.0"
+panel = "^1.4.4"
+duckdb = "^1.0.0"
+mpld3 = "^0.5.10"
+polars = "^0.20.31"
+sqlalchemy = "^2.0.30"
+pymysql = "^1.1.1"
+cryptography = "^42.0.8"
+groq = "^0.9.0"
+sqlparse = "^0.5.0"
+pydantic = "^2.7.4"
+lancedb = "^0.8.2"
+python-dotenv = "^1.0.1"
+elasticsearch = "^8.14.0"
+opentelemetry-api = "^1.25.0"
+langchain = "^0.2.5"
+tantivy = "^0.22.0"
+langchain-community = "^0.2.5"
+langchainhub = "^0.1.20"
+langchain-chroma = "^0.1.1"
+langchain-openai = "^0.1.8"
+fastembed = "^0.3.1"
+langchain-huggingface = "^0.0.3"
+langchain-google-genai = "^1.0.6"
+langchain-groq = "^0.1.5"
+langchain-aws = "^0.1.6"
+langchain-anthropic = "^0.1.15"
+langchain-experimental = "^0.0.61"
+trafilatura = "^1.10.0"
+unstructured = {extras = ["all-docs"], version = "^0.14.6"}
+pinecone = "^4.0.0"
+langchain-qdrant = "^0.1.1"
+faiss-cpu = "^1.8.0.post1"
+chromadb = "^0.5.3"
+openpyxl = "^3.1.5"
+docx2txt = "^0.8"
+[tool.poetry.scripts]
+datadashr = "datadashr.main:main"
+
+[tool.poetry.group.dev.dependencies]
+sourcery = "^1.19.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
