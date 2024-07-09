@@ -1,0 +1,15 @@
+Metadata-Version: 2.3
+Name: test_rye
+Version: 0.1.2
+Summary: Add your description here
+Author: xiaohuohumax
+License: MIT
+License-File: LICENSE
+Keywords: rye,test
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# test
