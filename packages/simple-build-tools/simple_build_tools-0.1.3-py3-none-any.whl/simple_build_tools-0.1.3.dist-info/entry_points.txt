@@ -1,0 +1,3 @@
+[console_scripts]
+bt=simple_build_tools.cli:main
+
