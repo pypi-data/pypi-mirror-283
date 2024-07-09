@@ -1,0 +1,6 @@
+setup.py
+symantic.egg-info/PKG-INFO
+symantic.egg-info/SOURCES.txt
+symantic.egg-info/dependency_links.txt
+symantic.egg-info/requires.txt
+symantic.egg-info/top_level.txt
