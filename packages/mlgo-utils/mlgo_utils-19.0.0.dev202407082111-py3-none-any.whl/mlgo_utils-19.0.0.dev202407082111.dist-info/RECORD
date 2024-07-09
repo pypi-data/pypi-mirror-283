@@ -1,0 +1,13 @@
+mlgo/__init__.py,sha256=BfVdE9dnlKndXaNnfuSYIwtvu9bJw8zxTTsB4_RuFrc,388
+mlgo/corpus/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mlgo/corpus/combine_training_corpus.py,sha256=RJbrEjFS8w2StTTPCWAUSK4BynvS6BB3R4ByeUYwEKY,1316
+mlgo/corpus/combine_training_corpus_lib.py,sha256=jcHlTdNXUFqCGSLNzTH29GjyeUxdl5e2D2_LrnI8-ps,1456
+mlgo/corpus/extract_ir.py,sha256=eZh9jdMtO92T1d-_pI6BgP5jBvUeV8sfQiCF0DmrsKU,6712
+mlgo/corpus/extract_ir_lib.py,sha256=R_G_F_IPsFX5n8UuyOYYyQVv1BotrtRbyycTVFxhtAc,15446
+mlgo/corpus/make_corpus.py,sha256=tVVrj4xB9aC5ScFU-6YYNfQCGpYZKTMmWlrU_5hRSUE,1824
+mlgo/corpus/make_corpus_lib.py,sha256=_aTQnf6GxEhNmXMXtMtaG5yCcSTo7WmSh1eMKpzP7Ug,2834
+mlgo_utils-19.0.0.dev202407082111.dist-info/METADATA,sha256=U2OFugo7evwnWW5UmySSdphQBzRY3Aw2kEOEHu3aKeI,581
+mlgo_utils-19.0.0.dev202407082111.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+mlgo_utils-19.0.0.dev202407082111.dist-info/entry_points.txt,sha256=ejgkkWdHtwDOB4pX8Nl1ZwyjexjwoS0DI16cenu1bB4,166
+mlgo_utils-19.0.0.dev202407082111.dist-info/top_level.txt,sha256=1sakAq8q-NJZGYPyOAYR9emImWZG9HjbSCKtS1oud2s,5
+mlgo_utils-19.0.0.dev202407082111.dist-info/RECORD,,
