@@ -1,0 +1,3 @@
+[console_scripts]
+presoutput=presoutput.cli.cli:_cli
+
