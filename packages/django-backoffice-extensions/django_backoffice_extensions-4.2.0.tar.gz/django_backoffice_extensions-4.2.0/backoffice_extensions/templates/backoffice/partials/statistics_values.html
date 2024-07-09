@@ -1,0 +1,14 @@
+{% load backoffice %}
+
+<div class="grid grid-cols-4 gap-8">
+  {% for label, value in statistics.items %}
+  <div class="rounded shadow p-6 bg-white text-center">
+      <div class="text-3xl font-bold">{{ value | statistics_value }}</div>
+      <div class="text-md uppercase text-gray-500">{{ label }}</div>
+      {% if value.help_text %}
+      <hr class="my-4" />
+      <div class="text-sm text-gray-500">{{ value.help_text }}</div>
+      {% endif %}
+  </div>
+  {% endfor %}
+</div>
