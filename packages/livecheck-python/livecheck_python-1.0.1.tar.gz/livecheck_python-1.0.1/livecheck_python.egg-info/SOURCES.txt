@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+livecheck_python.egg-info/PKG-INFO
+livecheck_python.egg-info/SOURCES.txt
+livecheck_python.egg-info/dependency_links.txt
+livecheck_python.egg-info/requires.txt
+livecheck_python.egg-info/top_level.txt
