@@ -1,0 +1,9 @@
+description: The ADE provides a maximum dependent child credit of this amount
+
+values:
+  0000-01-01: 1_350
+
+metadata:
+  unit: currency-EUR
+  label: Dependent child credit amount, disabled
+  period: year
