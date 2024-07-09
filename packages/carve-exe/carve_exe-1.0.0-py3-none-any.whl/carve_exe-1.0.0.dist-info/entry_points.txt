@@ -1,0 +1,3 @@
+[console_scripts]
+carve-exe=carve_exe.app:app
+
