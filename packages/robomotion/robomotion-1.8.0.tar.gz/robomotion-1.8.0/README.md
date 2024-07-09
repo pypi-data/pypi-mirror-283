@@ -1,0 +1,25 @@
+# Build and deploy
+python setup.py sdist bdist_wheel
+
+pip install twine
+
+twine upload dist/*
+
+# Test without uploading
+python setup.py sdist bdist_wheel
+
+pip install dist/robomotion-1.8.0-py3-none-any.whl
+
+import robomotion
+
+# better under an environment
+python -m venv testenv
+source testenv/bin/activate  # On Windows use `testenv\Scripts\activate`
+pip install dist/robomotion-1.8.0-py3-none-any.whl
+python -c "import robomotion; print('Library installed and imported successfully')"
+deactivate
+
+
+# Compile
+cd robomotion
+protoc --proto_path=./protobuf/src --proto_path=./proto --python_out=. proto/*.proto
