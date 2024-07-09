@@ -1,0 +1,14 @@
+gmft/__init__.py,sha256=X3COpEZLbN5IOFWVPNorCtLUDigFiRbnOa4tLDAj2ck,1475
+gmft/common.py,sha256=t5DkUzAn7j2EMXZIGLV0Olfc26JOQleZMZ7V7tHsXRo,1582
+gmft/presets.py,sha256=SBDb7gF9biq6v8TkqHPXcfNxPiWanTeNNQeVy0RYVm0,775
+gmft/table_detection.py,sha256=wq9zD9vsSSk8FHSX-LBbOcZZt_vNEgJR4eHzaRTnMCI,17227
+gmft/table_function.py,sha256=FaHMxTkKhoHYDviw2fF2LfXaVFFv2-urkOkq-0Gb9jo,20944
+gmft/table_function_algorithm.py,sha256=CD2t1qBAX3NlUbB2RiLHj0HhPm68kDa-HSHotG1bVhI,35897
+gmft/table_visualization.py,sha256=TI5zT7wymwHLJJ89OdPObkSHn2Wq5Vu6X1RDpS6oQzc,3345
+gmft/pdf_bindings/__init__.py,sha256=el0447wGsT9-I-OlNbQxB5q6JqSNfHraicT2dfmHFig,157
+gmft/pdf_bindings/bindings_pdfium.py,sha256=kM2H7owTN0lfl6gKonDQTru2QEnulkkrKtSlbgedfTg,6306
+gmft/pdf_bindings/common.py,sha256=DADpG2cvz6HYLrZjitwYza6QFstxsqIN7R4Mc5FrQJY,2295
+gmft-0.2.0rc1.dist-info/LICENSE,sha256=hNsLsmp0shnNRyoDaXoHvFU244Z8U68pEcnIkmwBK6I,1065
+gmft-0.2.0rc1.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+gmft-0.2.0rc1.dist-info/METADATA,sha256=7aM_Z6fPqbdsBzQUZmZ7s_S6KUgVZlnUfBJCo__v1ho,8368
+gmft-0.2.0rc1.dist-info/RECORD,,
