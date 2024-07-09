@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/hyperfile/__init__.py
+src/hyperfile/__main__.py
+src/hyperfile/cli.py
+src/hyperfile/py.typed
+src/hyperfile.egg-info/PKG-INFO
+src/hyperfile.egg-info/SOURCES.txt
+src/hyperfile.egg-info/dependency_links.txt
+src/hyperfile.egg-info/entry_points.txt
+src/hyperfile.egg-info/requires.txt
+src/hyperfile.egg-info/top_level.txt

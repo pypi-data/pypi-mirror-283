@@ -1,0 +1,2 @@
+[console_scripts]
+hyperfile = hyperfile.cli:cli
