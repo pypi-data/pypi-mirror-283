@@ -1,0 +1,41 @@
+The available tables and their structures are as follows:
+
+{% for table, info in table_info.items() %}
+Table: {{ table }} ({{ descriptions.get(table, 'No description available') }})
+Columns:
+{% for _, row in info.iterrows() %}
+- {{ row['name'] }} ({{ row['type'] }})
+{% endfor %}
+
+{% endfor %}
+
+The tables are related as follows:
+
+{% for relation in relations %}
+- {{ relation.source1 }}.{{ relation.key1 }} -> {{ relation.source2 }}.{{ relation.key2 }} (Foreign Key Relationship)
+{% endfor %}
+
+This is the request you received: {{ question }}
+
+1) Analyze the request and decompose it into individual blocks, if is necessary.
+2) Each block is enclosed in #### START and #### END. Always use this format even if it is just one block.
+3) Each block should be preceded by the type of data it generates (`## Chart` or `## Table`).
+4) Ensure each query is enclosed in ```sql```.
+5) Ensure that the query includes clear and descriptive column aliases for the results. Use the column name directly from the table if it is unique. If column names conflict, use unique names in lowercase with underscores instead of spaces.
+6) Use the table structures and relationships provided above.
+7) Respect the following format for the response.
+
+#### START
+## Table: description
+```sql
+the duckdb query you generated for the tabular data
+```
+#### END
+#### START
+## Chart: description
+```sql
+the duckdb query you generated for the chart data
+```
+#### END
+
+8) IMPORTANT: Provide only with the formatted response. Do not include any additional information or comments.
