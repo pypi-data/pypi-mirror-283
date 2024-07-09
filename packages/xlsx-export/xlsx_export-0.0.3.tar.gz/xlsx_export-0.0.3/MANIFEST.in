@@ -1,0 +1,2 @@
+include src/xlsx_export/templates/*
+recursive-include src/xlsx_export/static *
