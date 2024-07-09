@@ -1,0 +1,7 @@
+FROM python:3.12
+
+COPY . .
+RUN pip install ./dist/silero_vad-5.0.1b1-py3-none-any.whl
+RUN pip install soundfile
+#WORKDIR /usr/src/app
+CMD [ "python", "./test.py" ]
