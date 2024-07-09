@@ -1,0 +1,208 @@
+- name: No children in household
+  period: 2024
+  input:
+    people:
+      parent1:
+        age: 45
+        is_head: true
+    households:
+      household:
+        members: [parent1]
+        household_market_income: 50_000
+        spouse_market_income: 20_000
+        head_market_income: 30_000
+  output:
+    dependent_child_eligible: false
+
+- name: No children in household
+  period: 2024
+  input:
+    people:
+      parent2:
+        age: 43
+        is_spouse: true
+    households:
+      household:
+        members: [parent2]
+        household_market_income: 50_000
+        spouse_market_income: 20_000
+        head_market_income: 30_000
+  output:
+    dependent_child_eligible: false
+
+- name: Child under 21, not eligible
+  period: 2024
+  input:
+    people:
+      child1:
+        is_dependent: true
+        age: 19
+        total_individual_pre_tax_income: 0
+    households:
+      household:
+        members: [child1]
+        household_market_income: 50_000
+        spouse_market_income: 20_000
+        head_market_income: 30_000
+  output:
+    dependent_child_eligible: false
+
+- name: Child 21-23, income under 4000, eligible
+  period: 2024
+  input:
+    people:
+      child1:
+        is_dependent: true
+        age: 22
+        total_individual_pre_tax_income: 3_900
+        is_disabled: false
+    households:
+      household:
+        members: [child1]
+        household_market_income: 50_000
+        spouse_market_income: 20_000
+        head_market_income: 30_000
+  output:
+    dependent_child_eligible: true
+
+- name: Child 21-23, income over 4000, not eligible
+  period: 2024
+  input:
+    people:
+      child1:
+        is_dependent: true
+        age: 23
+        total_individual_pre_tax_income: 4_100
+        is_disabled: false
+    households:
+      household:
+        members: [child1]
+        household_market_income: 50_000
+        spouse_market_income: 20_000
+        head_market_income: 30_000
+  output:
+    dependent_child_eligible: false
+
+- name: Child 24, income under 2340.51, eligible
+  period: 2024
+  input:
+    people:
+      child1:
+        is_dependent: true
+        age: 24
+        total_individual_pre_tax_income: 2_300
+        is_disabled: false
+    households:
+      household:
+        members: [child1]
+        household_market_income: 50_000
+        spouse_market_income: 20_000
+        head_market_income: 30_000
+  output:
+    dependent_child_eligible: true
+
+- name: Child 24, income over 2340.51, not eligible
+  period: 2024
+  input:
+    people:
+      child1:
+        is_dependent: true
+        age: 24
+        total_individual_pre_tax_income: 2_900
+        is_disabled: false
+    households:
+      household:
+        members: [child1]
+        household_market_income: 50_000
+        spouse_market_income: 20_000
+        head_market_income: 30_000
+  output:
+    dependent_child_eligible: false
+
+- name: Child over 24, income under 2340.51, eligible
+  period: 2024
+  input:
+    people:
+      child1:
+        is_dependent: true
+        age: 25
+        total_individual_pre_tax_income: 2_300
+        is_disabled: false
+    households:
+      household:
+        members: [child1]
+        household_market_income: 60_000
+        spouse_market_income: 20_000
+        head_market_income: 40_000
+  output:
+    dependent_child_eligible: true
+
+- name: Child over 24, income over 2340.51, not eligible
+  period: 2024
+  input:
+    people:
+      child1:
+        is_dependent: true
+        age: 25
+        total_individual_pre_tax_income: 2_850
+        is_disabled: false
+    households:
+      household:
+        members: [child1]
+        household_market_income: 60_000
+        spouse_market_income: 20_000
+        head_market_income: 40_000
+  output:
+    dependent_child_eligible: false
+
+- name: Household income lower than spouse income, not eligible
+  period: 2024
+  input:
+    people:
+      child1:
+        is_dependent: true
+        age: 22
+        total_individual_pre_tax_income: 3_000
+        is_disabled: false
+    households:
+      household:
+        members: [child1]
+        spouse_market_income: 45_000
+        head_market_income: 5_000
+  output:
+    dependent_child_eligible: false
+
+- name: Disabled child 21-23, income under 4000, eligible
+  period: 2024
+  input:
+    people:
+      child1:
+        is_dependent: true
+        age: 23
+        total_individual_pre_tax_income: 3_900
+        is_disabled: true
+    households:
+      household:
+        members: [child1]
+        spouse_market_income: 20_000
+        head_market_income: 30_000
+  output:
+    dependent_child_eligible: true
+
+- name: Disabled child 24 and over, income under 2340.51, eligible
+  period: 2024
+  input:
+    people:
+      child1:
+        is_dependent: true
+        age: 24
+        total_individual_pre_tax_income: 2_300
+        is_disabled: true
+    households:
+      household:
+        members: [child1]
+        household_market_income: 50_000
+        spouse_market_income: 20_000
+        head_market_income: 30_000
+  output:
+    dependent_child_eligible: true

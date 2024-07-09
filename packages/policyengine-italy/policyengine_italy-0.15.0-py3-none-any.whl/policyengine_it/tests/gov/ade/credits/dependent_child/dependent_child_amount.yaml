@@ -1,0 +1,159 @@
+- name: No deduction for child under 21
+  period: 2024
+  input:
+    people:
+      child1:
+        age: 20
+        total_individual_pre_tax_income: 3_000
+        is_disabled: false
+        is_dependent: true
+    households:
+      household:
+        head_market_income: 50_000
+        spouse_market_income: 30_000
+  output:
+    dependent_child_credit: 0
+
+- name: Deduction for non-disabled child aged 21
+  period: 2024
+  input:
+    people:
+      child1:
+        age: 21
+        total_individual_pre_tax_income: 3_000
+        is_disabled: false
+        is_dependent: true
+    households:
+      household:
+        head_market_income: 50_000
+        spouse_market_income: 30_000
+  output:
+    dependent_child_credit: 950
+
+- name: Deduction for disabled child aged 21
+  period: 2024
+  input:
+    people:
+      child1:
+        age: 21
+        total_individual_pre_tax_income: 3_000
+        is_disabled: true
+        is_dependent: true
+    households:
+      household:
+        head_market_income: 50_000
+        spouse_market_income: 30_000
+  output:
+    dependent_child_credit: 1_350
+
+- name: No deduction for child aged 21 with income over threshold
+  period: 2024
+  input:
+    people:
+      child1:
+        age: 21
+        total_individual_pre_tax_income: 4_500
+        is_disabled: false
+        is_dependent: true
+    households:
+      household:
+        head_market_income: 50_000
+        spouse_market_income: 30_000
+  output:
+    dependent_child_credit: 0
+
+- name: Deduction for non-disabled child aged 22
+  period: 2024
+  input:
+    people:
+      child1:
+        age: 22
+        total_individual_pre_tax_income: 3_000
+        is_disabled: false
+        is_dependent: true
+    households:
+      household:
+        head_market_income: 50_000
+        spouse_market_income: 30_000
+  output:
+    dependent_child_credit: 950
+
+- name: Deduction for non-disabled child aged 24
+  period: 2024
+  input:
+    people:
+      child1:
+        age: 24
+        total_individual_pre_tax_income: 2_000
+        is_disabled: false
+        is_dependent: true
+    households:
+      household:
+        head_market_income: 50_000
+        spouse_market_income: 30_000
+  output:
+    dependent_child_credit: 950
+
+- name: Deduction for non-disabled child aged 25
+  period: 2024
+  input:
+    people:
+      child1:
+        age: 25
+        total_individual_pre_tax_income: 2_000
+        is_disabled: false
+        is_dependent: true
+    households:
+      household:
+        head_market_income: 50_000
+        spouse_market_income: 30_000
+  output:
+    dependent_child_credit: 950
+
+- name: Deduction for disabled child aged 25
+  period: 2024
+  input:
+    people:
+      child1:
+        age: 25
+        total_individual_pre_tax_income: 2_000
+        is_disabled: true
+        is_dependent: true
+    households:
+      household:
+        head_market_income: 50_000
+        spouse_market_income: 30_000
+  output:
+    dependent_child_credit: 1_350
+
+- name: No deduction for child aged 25 with income over threshold
+  period: 2024
+  input:
+    people:
+      child1:
+        age: 25
+        total_individual_pre_tax_income: 3_000
+        is_disabled: false
+        is_dependent: true
+    households:
+      household:
+        head_market_income: 50_000
+        spouse_market_income: 30_000
+  output:
+    dependent_child_credit: 0
+
+- name: No deduction when head income is less than spouse income
+  period: 2024
+  input:
+    people:
+      child1:
+        age: 22
+        total_individual_pre_tax_income: 3_000
+        is_disabled: false
+        is_dependent: true
+    households:
+      household:
+        head_market_income: 30_000
+        spouse_market_income: 50_000
+  output:
+    dependent_child_credit: 0

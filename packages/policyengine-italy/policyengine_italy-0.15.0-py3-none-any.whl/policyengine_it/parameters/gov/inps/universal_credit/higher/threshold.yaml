@@ -1,0 +1,11 @@
+description: Monthly income threshold for the higher-income portion of the single and universal allowance for dependent children
+values:
+  0000-01-01: 3_333.33
+
+# Note that the standard/higher distinction appears to exist
+# in the law, but our reference material does not define it clearly,
+# hence the generic terminology in use in these params
+metadata:
+  unit: currency-EUR
+  label: Higher-income threshold, single and universal allowance for dependent children
+  period: month

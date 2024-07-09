@@ -1,0 +1,6 @@
+- name: Total income tax includes all subsets of income tax
+  period: 2024
+  input:
+    income_tax_before_credits: 15_000
+  output:
+    income_tax: 15_000
