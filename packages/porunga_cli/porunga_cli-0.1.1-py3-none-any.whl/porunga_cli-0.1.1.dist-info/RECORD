@@ -1,0 +1,13 @@
+porunga_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+porunga_cli/cli.py,sha256=Z33qjkBPvEGhnsmW7V8noX8sZ5GicJEiK2ya9wCYSKI,7134
+porunga_cli/llm.py,sha256=EiXbC1_miEV4YKYMDYa-MkTiIWDbto9lXPxRJpn7bcM,3868
+porunga_cli/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+porunga_cli/utils/examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+porunga_cli/utils/examples/few_shot_examples.py,sha256=XcbdhjY9gOgMUilvl_2qTOkLsRXVEzztpvSxyNwGiVE,1696
+porunga_cli/utils/exceptions/parse_error.py,sha256=Vn5WexX4ruGDRygpVBgA7m7jAUToG9WR67w-z7hnGlk,212
+porunga_cli/utils/parse_messages.py,sha256=lro39yWGb41mD8vGFL3jNFACU93hLd4S0jtwYoTHbLM,166
+porunga_cli/utils/schema/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+porunga_cli-0.1.1.dist-info/METADATA,sha256=KpEbsGLdzgm2w4MFHcfY0uXklrGYuzvOwfkhH-_zG4w,2163
+porunga_cli-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+porunga_cli-0.1.1.dist-info/entry_points.txt,sha256=kpPZD0J6WWVhGLjLIJl2tIKKD9HBLpKOOvIuMop32lo,47
+porunga_cli-0.1.1.dist-info/RECORD,,
