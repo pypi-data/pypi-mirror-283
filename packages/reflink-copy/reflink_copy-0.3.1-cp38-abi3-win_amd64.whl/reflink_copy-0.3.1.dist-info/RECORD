@@ -1,0 +1,8 @@
+reflink_copy-0.3.1.dist-info/METADATA,sha256=yiAN8UMTd_9X7o3mIU8UdHc9RB0A0Pz4_ROQQ_gM28A,2026
+reflink_copy-0.3.1.dist-info/WHEEL,sha256=AIJRCpHlPkmNqwQG-VvbmvNUTaAlmozkR8WHjPH8Bi4,94
+reflink_copy-0.3.1.dist-info/license_files/LICENSE,sha256=qBP0KpML_dkVG5MJI17kx4F6-FaUEXzy98yu4Ww9cto,11551
+reflink_copy/__init__.py,sha256=y4mWD1M4UTEShnz5CodIP7EkmlQpmpwjiwdytavThxM,131
+reflink_copy/__init__.pyi,sha256=hE4nJ1gghn66lxQwHYFTIS8j9m3iXVM-2TdY_ZItgoI,191
+reflink_copy/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+reflink_copy/reflink_copy.pyd,sha256=lOyusJjWlW90jM7OP81lwlakPQXG2LVyeY-q-xFX5sk,207872
+reflink_copy-0.3.1.dist-info/RECORD,,
