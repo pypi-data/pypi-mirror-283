@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+apitoolkit_python/__init__.py
+apitoolkit_python.egg-info/PKG-INFO
+apitoolkit_python.egg-info/SOURCES.txt
+apitoolkit_python.egg-info/dependency_links.txt
+apitoolkit_python.egg-info/requires.txt
+apitoolkit_python.egg-info/top_level.txt
