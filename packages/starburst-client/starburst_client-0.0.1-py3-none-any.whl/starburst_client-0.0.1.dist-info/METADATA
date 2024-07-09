@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: starburst-client
+Version: 0.0.1
+Summary: Starburst Enterprise REST API Client
+Home-page: https://github.com/aksakalli/starburst-python-client
+Author: Can Güney Aksakalli
+Author-email: cgaksakalli@gmail.com
+License: Apache 2.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
+# Starburst Python Client
+
+Typed interaction with [Starburst Enterprise API](https://docs.starburst.io/latest/api/index.html).
+
+## License
+
+Released under [the Apache License 2.0](LICENSE).
