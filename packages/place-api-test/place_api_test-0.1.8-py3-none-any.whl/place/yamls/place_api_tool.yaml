@@ -1,0 +1,13 @@
+place.tools.place_api_tool.get_place_intelligence_flow_api:
+  function: get_place_intelligence_flow_api
+  inputs:
+    allowed:
+      type:
+      - bool
+    chat_input:
+      type:
+      - string
+  module: place.tools.place_api_tool
+  name: place intelligence test
+  description: This is place intelligence test tool
+  type: python
