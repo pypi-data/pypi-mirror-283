@@ -1,0 +1,3 @@
+[console_scripts]
+smoltex=smoltex.main:main
+
