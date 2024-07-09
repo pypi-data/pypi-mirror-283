@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# hmc-unhide cron script
+#
+# This script starts the hmc-unhide harvesting process
+# For this to work the poetry environment that keeps the hmc-unhide project needs to be in the PATH variable
+
+# need to include the poetry path
+export PATH="$HOME/.local/bin:/.poetry/bin/poetry"
+
+cd "${0%/*}"/.. && poetryPath=$(poetry env info --path) || exit 0
+source "${poetryPath}"/bin/activate
+hmc-unhide harvester run

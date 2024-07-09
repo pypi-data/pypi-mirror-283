@@ -1,0 +1,284 @@
+# Default UnHIDE config, for a different project you want to change this
+# In the future one might want to have a schema or something for this
+# right now, content is not checked, so be very careful when you add something!
+# Each Harvester class looks up if it finds something for its name
+metadata:
+  name: "Helmholtz Knowledge Graph config"
+  description: "This file defines from which sources the harvester harvest and "
+
+# This is global, i.e. read and applied by any aggregator instance, which uses this config
+#  i.e. all aggregations/inferences here are applied to all datasets.
+# file paths can be relative to this config file, or to a given base folder.
+# if not given this will be the default: data_harvesting/data_enrichment/ folder
+# python function needs to have this signature: func(data: dict, *args, **kwargs)
+Aggregator:
+  stack:
+    - type: python
+      method: data_harvesting.util.json_ld_util:add_missing_uris
+      kwargs: {'path_prefix': 'https://helmholtz-metadaten.de/.well-known/genid', 'alternative_ids': ['email']}
+    - type: sparql
+      file: schema_infer_person.rd
+    - type: sparql
+      file: schema_infer_org.rd
+    - type: sparql
+      file: schema_infer_org_id.rd
+
+# Pipeline source and configs
+GitHarvester:
+  sources:
+    AWI:
+    - name: git_awi
+      url: https://gitlab.awi.de
+    CISPA:
+    - name: cispa_saarland
+      url: https://projects.cispa.saarland
+    DESY:
+    - name: gitlab_desy
+      url: https://gitlab.desy.de
+    - name: eosc_pan_git_desy
+      url: https://eosc-pan-git.desy.de
+    - name: gitlab_zeuthen
+      url: https://gitlab.zeuthen.desy.de
+    - comment: DESY is Partner only
+      name: gitlab_cta
+      url: https://gitlab.cta-observatory.org
+    DLR:
+    - name: gitlab_dlr
+      url: https://gitlab.dlr.de
+    - name: dlras
+      url: https://gitlab.as.dlr.de
+    FZJ:
+    - name: jugit
+      url: https://jugit.fz-juelich.de
+    - name: gitlab_jsc
+      url: https://gitlab.jsc.fz-juelich.de/
+    - name: iffgit
+      url: https://iffgit.fz-juelich.de/
+    - name: cosy_gitlab
+      url: https://gitlab.cce.kfa-juelich.de/
+    GEOMAR:
+    - name: git_geomar
+      url: https://git.geomar.de/
+    GFZ:
+    - name: git_gfz-potsdam
+      url: https://git.gfz-potsdam.de/
+    GSI:
+    - name: git_gsi
+      url: https://git.gsi.de
+    - name: cbm_gsi
+      url: https://git.cbm.gsi.de
+    - name: panda_gsi
+      url: https://git.panda.gsi.de
+    HZB:
+    - name: gitlab_helmholtz-berlin
+      url: https://gitlab.helmholtz-berlin.de/
+    HZDR:
+    - name: gitlab_hzdr
+      url: https://codebase.helmholtz.cloud/
+    Helmholtz-muenchen:
+    - name: ascgitlab
+      url: https://ascgitlab.helmholtz-muenchen.de/
+    KIT:
+    - name: git_scc_kit
+      url: https://git.scc.kit.edu
+    - name: itiv_kit
+      url: https://gitlab.itiv.kit.edu
+
+SitemapHarvester:
+  sources:
+    # Maybe get rid of the HGF center layer, but we can also use these for fixed links...
+    FZJ:
+    - name: Jülich Data
+      url: https://data.fz-juelich.de/sitemap.xml
+      match_pattern: '.*/dataset.xhtml.*'
+      url_transforms: 
+        - replace: ["dataset.xhtml?", "api/datasets/export?exporter=schema.org&"]
+    HZDR:
+    - name: RODARE
+      url: https://rodare.hzdr.de/sitemap.xml
+      match_pattern: '.*/record/\d'
+    AWI:
+    - name: PANGAEA
+      url: https://doi.pangaea.de/sitemap.xml
+
+# These are the libraries
+OAIHarvester:
+  sources:
+      AWI:
+        name: epic
+        oai_endpoint: https://epic.awi.de/cgi/oai2
+        convert: True
+        metadataPrefix: oai_dc
+      CISPA: 
+        name: publications
+        oai_endpoint: https://publications.cispa.saarland/cgi/oai2
+        convert: True
+        metadataPrefix: oai_dc
+      DESY:
+        name: pubdb
+        oai_endpoint: https://bib-pubdb1.desy.de/oai2d
+        convert: True
+        metadataPrefix: oai_dc
+      DLR:
+        name: elib
+        oai_endpoint: https://elib.dlr.de/cgi/oai2
+        convert: True
+        metadataPrefix: oai_dc
+      DZNE:
+        name: dzne
+        oai_endpoint: https://pub.dzne.de/oai2d
+        convert: True
+        metadataPrefix: oai_dc
+      FZJ: 
+        name: juser
+        oai_endpoint: https://juser.fz-juelich.de/oai2d
+        convert: True
+        metadataPrefix: oai_dc
+      GEOMAR:
+        name: oceanrep
+        oai_endpoint: https://oceanrep.geomar.de/cgi/oai2
+        convert: True
+        metadataPrefix: oai_dc
+      GSI:
+        name: gsi_repository
+        oai_endpoint: https://repository.gsi.de/oai2d
+        convert: True
+        metadataPrefix: oai_dc
+      HZB:
+        name: hzb_repository
+        oai_endpoint: https://www.helmholtz-berlin.de/pubbin/oai
+        convert: True
+        metadataPrefix: oai_dc
+      HZDR:
+        name: robis
+        oai_endpoint: https://www.hzdr.de/publications/OAI-PMH
+        convert: True
+        metadataPrefix: oai_dc
+      #HEREON : name: publikationsdatenbank, oai_endpoint : 
+      HZI:
+        name: hzi_openrepository
+        oai_endpoint: https://repository.helmholtz-hzi.de/oai/request
+        convert: True
+        metadataPrefix: oai_dc
+      UFZ: 
+        name: publikationsverzeichnis, 
+        oai_endpoint : https://www.ufz.de/index.php?de=16406
+        convert: True
+        metadataPrefix: oai_dc
+      HMGU:
+        name: push
+        oai_endpoint: https://push-zb.helmholtz-muenchen.de/oai2/oai2.php
+        convert: True
+        metadataPrefix: oai_dc
+      GFZ:
+        name: gfzpublic
+        oai_endpoint: https://gfzpublic.gfz-potsdam.de/oai/provider
+        convert: True
+        metadataPrefix: oai_dc
+      KIT:
+        name: kitopen
+        oai_endpoint : https://dbkit.bibliothek.kit.edu/oai/eva/
+        convert: True
+        metadataPrefix: oai_dc
+      MDC: 
+        name: MDC_repository
+        oai_endpoint : https://edoc.mdc-berlin.de/cgi/oai2
+        convert: True
+        metadataPrefix: oai_dc
+
+
+DataciteHarvester:
+  follow_children: true
+  sources:
+    CISPA:
+      name: CISPA
+      ror: https://ror.org/02njgxr09
+    DESY: 
+      name: DESY
+      ror: https://ror.org/01js2sh04
+    DLR:
+      name: DLR
+      ror: https://ror.org/04bwf3e34
+    DKFZ:
+      name: DKFZ
+      ror: https://ror.org/04cdgtt98
+    DZNE:
+      name: DZNE
+      ror: https://ror.org/043j0f473
+    FZJ:
+      name: FZJ
+      ror: https://ror.org/02nv7yv05
+    GSI: 
+      name: GSI
+      ror: https://ror.org/02k8cbn47
+    HZB: 
+      name: HZB
+      ror: https://ror.org/02aj13c28
+    HZDR: 
+      name: HZDR
+      ror: https://ror.org/01zy2cs03
+    HEREON: 
+      name: HEREON
+      ror: https://ror.org/03qjp1d79
+    HZI: 
+      name: HZI
+      ror: https://ror.org/03d0p2685
+    UFZ: 
+      name: UFZ
+      ror: https://ror.org/000h6jb29
+    HMGU: 
+      name: HMGU
+      ror: https://ror.org/00cfam450
+    GFZ: 
+      name: GFZ
+      ror: https://ror.org/04z8jg394
+    KIT: 
+      name: KIT
+      ror: https://ror.org/04t3en479
+    MDC: 
+      name: MDC
+      ror: https://ror.org/04p5ggc03
+    GEOMAR: 
+      name: GEOMAR
+      ror: https://ror.org/02h2x0161
+    AWI: 
+      name: AWI
+      ror: https://ror.org/032e6b942
+    HGF: 
+      name: HGF
+      ror: https://ror.org/0281dp749
+      follow_children: false
+
+SchoolixHarvester:
+
+OpenaireHarvester:
+
+IndicoHarvester:
+  sources:
+    HIFIS:
+      categories: [150,162,12,161]
+      url: https://events.hifis.net
+      token: 'indp_3SicijJvemsUSbm18kl9dEDk2OmAPXK1h2r4OtJQAF'
+    KIT:
+      categories: []
+      url: https://indico.scc.kit.edu
+
+FeedHarvester:
+  sources:
+    KIT:
+      urls:
+        - "https://indico.scc.kit.edu/category/1/events.atom"
+        - "https://indico.scc.kit.edu/category/2/events.atom"
+        - "https://indico.scc.kit.edu/category/22/events.atom"
+        - "https://indico.scc.kit.edu/category/15/events.atom"
+    HIFIS:
+      urls: 
+        - "https://events.hifis.net/category/150/events.atom"
+        - "https://events.hifis.net/category/162/events.atom"
+        - "https://events.hifis.net/category/12/events.atom"
+        - "https://events.hifis.net/category/161/events.atom"
+
+
+Indexer:
+
+Uploader:
