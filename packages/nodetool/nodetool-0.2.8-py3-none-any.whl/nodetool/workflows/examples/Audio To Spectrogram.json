@@ -1,0 +1,292 @@
+{
+  "id": "24db1b353bbd11efb921000026ba0cfe",
+  "access": "private",
+  "created_at": "2024-07-06T19:28:22.497157",
+  "updated_at": "2024-07-06T20:04:04.210928",
+  "name": "Audio To Spectrogram",
+  "description": "Ceate a spectrogram from an audio file and use creative upscaling, then hang it on your wall.",
+  "thumbnail": "",
+  "thumbnail_url": "/examples/audio_to_spectrogram.png",
+  "graph": {
+    "nodes": [
+      {
+        "id": "1",
+        "parent_id": null,
+        "type": "nodetool.constant.Audio",
+        "data": {
+          "value": {
+            "type": "audio",
+            "uri": "https://upload.wikimedia.org/wikipedia/commons/transcoded/4/4f/An_address_by_Opposition_Leader_Anthony_Albanese.ogg/An_address_by_Opposition_Leader_Anthony_Albanese.ogg.mp3?download",
+            "asset_id": null,
+            "temp_id": null
+          }
+        },
+        "ui_properties": {
+          "selected": false,
+          "position": {
+            "x": 91,
+            "y": 54
+          },
+          "zIndex": 0,
+          "selectable": true
+        }
+      },
+      {
+        "id": "2",
+        "parent_id": null,
+        "type": "nodetool.audio.analysis.MelSpectrogram",
+        "data": {
+          "audio": {
+            "type": "audio",
+            "uri": "http://localhost:8000/api/storage/temp/20d3427d37a24accb7b8055225b2ab62.mp3",
+            "asset_id": null,
+            "temp_id": "20d3427d37a24accb7b8055225b2ab62.mp3"
+          },
+          "n_fft": 2048,
+          "hop_length": 4096,
+          "n_mels": 128,
+          "fmin": 0,
+          "fmax": 1000
+        },
+        "ui_properties": {
+          "selected": false,
+          "position": {
+            "x": 383,
+            "y": 54
+          },
+          "zIndex": 0,
+          "selectable": true
+        }
+      },
+      {
+        "id": "4",
+        "parent_id": null,
+        "type": "nodetool.workflows.base_node.Preview",
+        "data": {
+          "name": "image_output",
+          "value": {
+            "type": "image",
+            "uri": "",
+            "asset_id": null,
+            "temp_id": "ba1cf02050a446f68a04b59a1d1ce8c6"
+          }
+        },
+        "ui_properties": {
+          "selected": false,
+          "position": {
+            "x": 722,
+            "y": 54
+          },
+          "zIndex": 0,
+          "width": 159,
+          "height": 162,
+          "selectable": true
+        }
+      },
+      {
+        "id": "5",
+        "parent_id": null,
+        "type": "nodetool.audio.transform.SliceAudio",
+        "data": {
+          "audio": {
+            "type": "audio",
+            "uri": "https://upload.wikimedia.org/wikipedia/commons/transcoded/4/4f/An_address_by_Opposition_Leader_Anthony_Albanese.ogg/An_address_by_Opposition_Leader_Anthony_Albanese.ogg.mp3?download",
+            "asset_id": null,
+            "temp_id": null
+          },
+          "start": 0,
+          "end": 5
+        },
+        "ui_properties": {
+          "selected": false,
+          "position": {
+            "x": 241,
+            "y": 54
+          },
+          "zIndex": 0,
+          "selectable": true
+        }
+      },
+      {
+        "id": "6",
+        "parent_id": null,
+        "type": "nodetool.image.ConvertTensorToImage",
+        "ui_properties": {
+          "selected": false,
+          "position": {
+            "x": 538,
+            "y": 54
+          },
+          "zIndex": 0,
+          "selectable": true
+        }
+      },
+      {
+        "id": "7",
+        "parent_id": null,
+        "type": "replicate.image.upscale.ClarityUpscaler",
+        "data": {
+          "mask": null,
+          "seed": 2534742765,
+          "image": {
+            "type": "image",
+            "uri": "",
+            "asset_id": null,
+            "temp_id": "ba1cf02050a446f68a04b59a1d1ce8c6"
+          },
+          "prompt": "tokyo city, neon lights, global illumination",
+          "dynamic": 6,
+          "handfix": "disabled",
+          "sharpen": 2,
+          "sd_model": "juggernaut_reborn.safetensors [338b85bc4f]",
+          "scheduler": "DPM++ 3M SDE Karras",
+          "creativity": 0.37,
+          "lora_links": "",
+          "downscaling": false,
+          "resemblance": 0.5,
+          "scale_factor": 12,
+          "tiling_width": 112,
+          "output_format": "png",
+          "tiling_height": 144,
+          "custom_sd_model": "",
+          "negative_prompt": "bad",
+          "num_inference_steps": 20,
+          "downscaling_resolution": 768
+        },
+        "ui_properties": {
+          "selected": false,
+          "position": {
+            "x": 722,
+            "y": 281
+          },
+          "zIndex": 0,
+          "selectable": true
+        }
+      },
+      {
+        "id": "8",
+        "parent_id": null,
+        "type": "nodetool.workflows.base_node.Preview",
+        "data": {
+          "value": {
+            "type": "image",
+            "uri": "",
+            "asset_id": null,
+            "temp_id": null
+          },
+          "name": "image_output_2024-07-06"
+        },
+        "ui_properties": {
+          "selected": false,
+          "position": {
+            "x": 1001,
+            "y": 281
+          },
+          "zIndex": 0,
+          "width": 382,
+          "height": 395,
+          "selectable": true
+        }
+      },
+      {
+        "id": "9",
+        "parent_id": null,
+        "type": "nodetool.workflows.base_node.Comment",
+        "data": {
+          "headline": "Audio To Spectrogram",
+          "comment": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "Turn an audio file into a spetrogram, then turn it into art."
+                }
+              ]
+            }
+          ]
+        },
+        "ui_properties": {
+          "selected": false,
+          "position": {
+            "x": 0,
+            "y": -91
+          },
+          "zIndex": 0,
+          "width": 325,
+          "height": 81,
+          "selectable": true
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "10838350-8991-4ac5-94ba-4fabccf77279",
+        "source": "2",
+        "sourceHandle": "output",
+        "target": "6",
+        "targetHandle": "tensor",
+        "ui_properties": {
+          "className": "tensor"
+        }
+      },
+      {
+        "id": "0047f77f-0fb1-4c3c-aeb1-b64246646e1b",
+        "source": "5",
+        "sourceHandle": "output",
+        "target": "2",
+        "targetHandle": "audio",
+        "ui_properties": {
+          "className": "audio"
+        }
+      },
+      {
+        "id": "f49fa87f-6a65-4ddb-a873-24c845f0af81",
+        "source": "6",
+        "sourceHandle": "output",
+        "target": "4",
+        "targetHandle": "value",
+        "ui_properties": {
+          "className": "image"
+        }
+      },
+      {
+        "id": "4b381f6e-d297-4c9e-bae6-b3f04a311fe7",
+        "source": "6",
+        "sourceHandle": "output",
+        "target": "7",
+        "targetHandle": "image",
+        "ui_properties": {
+          "className": "image"
+        }
+      },
+      {
+        "id": "10838351",
+        "source": "7",
+        "sourceHandle": "output",
+        "target": "8",
+        "targetHandle": "value",
+        "ui_properties": {
+          "className": "image"
+        }
+      },
+      {
+        "id": "6a3890ca-beaf-4d63-90d5-5cb2b64d97ae",
+        "source": "1",
+        "sourceHandle": "output",
+        "target": "5",
+        "targetHandle": "audio",
+        "ui_properties": {
+          "className": "audio"
+        }
+      }
+    ]
+  },
+  "input_schema": {
+    "type": "object",
+    "properties": {}
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {}
+  }
+}
