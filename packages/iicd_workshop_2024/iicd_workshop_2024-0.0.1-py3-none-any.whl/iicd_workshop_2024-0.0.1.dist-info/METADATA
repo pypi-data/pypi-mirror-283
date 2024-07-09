@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: iicd_workshop_2024
+Version: 0.0.1
+Summary: Code accompanying the iicd workshop 2024
+Home-page: https://github.com/anazaret/iicd-workshop-2024
+Author: Achille Nazaret
+Author-email: fachille.nazaret@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: matplotlib (>=3.4.0,<4.0.0)
+Requires-Dist: notebook (>=6.4.0,<7.0.0)
+Requires-Dist: scanpy (>=1.10.0,<2.0.0)
+Requires-Dist: scvi-tools (>=1.1.0,<2.0.0)
+Requires-Dist: seaborn (>=0.13.0,<0.14.0)
+Requires-Dist: torch (>=2.0.0,<3.0.0)
+Project-URL: Documentation, https://anazaret.github.io/iicd-workshop-2024/
+Project-URL: Repository, https://github.com/anazaret/iicd-workshop-2024
+Description-Content-Type: text/markdown
+
+# iicd-workshop-2024
+
+[![Release](https://img.shields.io/github/v/release/anazaret/iicd-workshop-2024)](https://img.shields.io/github/v/release/anazaret/iicd-workshop-2024)
+[![Build status](https://img.shields.io/github/actions/workflow/status/anazaret/iicd-workshop-2024/main.yml?branch=main)](https://github.com/anazaret/iicd-workshop-2024/actions/workflows/main.yml?query=branch%3Amain)
+[![codecov](https://codecov.io/gh/anazaret/iicd-workshop-2024/branch/main/graph/badge.svg)](https://codecov.io/gh/anazaret/iicd-workshop-2024)
+[![Commit activity](https://img.shields.io/github/commit-activity/m/anazaret/iicd-workshop-2024)](https://img.shields.io/github/commit-activity/m/anazaret/iicd-workshop-2024)
+[![License](https://img.shields.io/github/license/anazaret/iicd-workshop-2024)](https://img.shields.io/github/license/anazaret/iicd-workshop-2024)
+
+Code accompanying the iicd workshop 2024
+
+- **Github repository**: <https://github.com/anazaret/iicd-workshop-2024/>
+- **Documentation** <https://anazaret.github.io/iicd-workshop-2024/>
+
+
