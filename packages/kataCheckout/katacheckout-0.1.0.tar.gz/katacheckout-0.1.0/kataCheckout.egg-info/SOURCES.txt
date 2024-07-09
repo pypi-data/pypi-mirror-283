@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+kataCheckout/__init__.py
+kataCheckout/kataCheckout.py
+kataCheckout.egg-info/PKG-INFO
+kataCheckout.egg-info/SOURCES.txt
+kataCheckout.egg-info/dependency_links.txt
+kataCheckout.egg-info/top_level.txt
+tests/test.py
