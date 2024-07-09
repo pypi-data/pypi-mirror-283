@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: thedns
+Version: 1.0.9
+Summary: Simple Python client library for TheDNS.cn
+Home-page: https://github.com/xizhendu/thedns-sdk-python
+Author: Xizhen Du
+Author-email: xizhendu@gmail.com
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# thedns-sdk-python
+
+
+
+### Proposal
+
+The module is to register your device with public names.
+
+### Example Code
+
+```text
+>>> 
+>>> import thedns
+>>> ddns = thedns.DDNS()
+>>> ddns.update()
+{'9fa4b54b7013e04640fc064396617e1f.public.thedns.cn': '81.71.103.82', '9fa4b54b7013e04640fc064396617e1f.private.thedns.cn': '10.103.0.12'}
+>>> 
+
+
+```
