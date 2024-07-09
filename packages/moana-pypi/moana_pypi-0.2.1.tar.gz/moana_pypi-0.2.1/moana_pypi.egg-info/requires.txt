@@ -1,0 +1,4 @@
+wheel==0.43.0
+scipy==1.13.1
+sphinx==7.3.7
+sphinx_press_theme==0.9.1
