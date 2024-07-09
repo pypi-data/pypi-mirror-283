@@ -1,0 +1,17 @@
+name: burst2safe
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python>=3.9
+  - pip
+  - gdal
+  - shapely>=2
+  - numpy
+  - lxml
+  - tifffile>=2024.0.0
+  - asf_search
+  - dateparser!=1.1.0
+  # For packaging, and testing
+  - pytest
+  - pytest-cov
