@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: hacca
+Version: 0.0.1
+Summary: A short description of your package
+Author-email: XiaoTian Shen <14301050178@fudan.edu.cn>
+Project-URL: Homepage, https://github.com/shenxiaotianCNS/APC-MSI
+Project-URL: Repository, https://github.com/shenxiaotianCNS/APC-MSI.git
+Project-URL: Issues, https://github.com/shenxiaotianCNS/APC-MSI/issues
+Keywords: hacca
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: anndata
+Requires-Dist: scipy
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scanpy
+Requires-Dist: scikit-learn
+Requires-Dist: matplotlib
+Requires-Dist: natsort
+Requires-Dist: seaborn
+
+## Coming soon
