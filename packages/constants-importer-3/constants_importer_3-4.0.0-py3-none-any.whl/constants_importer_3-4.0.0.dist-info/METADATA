@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: constants-importer-3
+Version: 4.0.0
+Summary: A package for initialising the path to the Constants.py file in a root repo, and then importing said constants into the current directory
+Author: J J
+Author-email: jai.jalah@krakenflex.com
+Description-Content-Type: text/markdown
+
