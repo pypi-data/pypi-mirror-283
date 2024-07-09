@@ -1,0 +1,50 @@
+[DEFAULT]
+features=RSAM,SSAM,DSAR,SpectralFeatures,EnergyExplainedByRSAM
+volcanoes=Whakaari,Tongariro,Ruapehu,Ngauruhoe,Raoul Island,Taupo
+interval=600
+datasources=sds,fdsn,s3
+sds_dir=/home/vumt/data/sds_archive
+fdsn_urls=https://service.geonet.org.nz,https://service-nrt.geonet.org.nz
+outdir=/home/vumt/data
+logdir = /home/vumt/data
+cronschedule = */10 * * * *
+
+[RSAM]
+filtertype=bandpass
+filterfreq=2,5
+
+[SSAM]
+interval=60
+timestamp=start
+frequencies=0,25.1,0.1
+resample_int=(None, 10min)
+
+[DSAR]
+filtertype=bandpass
+lowerfreqband=4.5,8
+higherfreqband=8,16
+
+[Insta_Band]
+fil_coef=-1.0, 0.0, 1.0
+
+[Insta_Freq]
+fil_coef=-1.0, 0.0, 1.0
+
+[Norm_Env]
+window = 10
+fil_coef=-1.0, 0.0, 1.0
+
+[SpectralFeatures]
+filtertype=highpass
+filterfreq=0.5,None
+num_cepstral=8
+
+[PCA]
+features=rsam,central_freq,bandwidth,predom_freq,half_octave_band_0,half_octave_band_1,half_octave_band_2,half_octave_band_3,half_octave_band_4,half_octave_band_5,half_octave_band_6,half_octave_band_7
+fit_pca=True
+
+[AUTOENCODER]
+layers = 2000,500,200,6
+epochs = 5
+patience = 10
+
