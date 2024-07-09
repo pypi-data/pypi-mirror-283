@@ -1,0 +1,34 @@
+- name: Correct income tax calculation, bracket 1
+  period: 2024
+  input:
+    total_individual_pre_tax_income: 15_000
+  output:
+    income_tax: 3_450
+
+- name: Correct income tax calculation, bracket 2
+  period: 2024
+  input:
+    total_individual_pre_tax_income: 28_000
+  output:
+    income_tax: 6_960
+
+- name: Correct income tax calculation, bracket 3
+  period: 2024
+  input:
+    total_individual_pre_tax_income: 55_000
+  output:
+    income_tax: 17_220
+
+- name: Correct income tax calculation, bracket 4
+  period: 2024
+  input:
+    total_individual_pre_tax_income: 75_000
+  output:
+    income_tax: 25_420
+
+- name: Correct income tax calculation, bracket 5
+  period: 2024
+  input:
+    total_individual_pre_tax_income: 100_000
+  output:
+    income_tax: 35_920
