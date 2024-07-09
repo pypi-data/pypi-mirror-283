@@ -1,0 +1,5 @@
+pinjected_wandb/__init__.py,sha256=ekZaUSqKqSlJ3bnFbMmF1SCVSL5Nk3AOzpxPirRFdtk,76
+pinjected_wandb/artifact_util.py,sha256=KDNmDTUzNqdYdwZT8S_L7smh4t5nAa5iNAB5N4Kawzs,2855
+pinjected_wandb-0.1.0.dist-info/METADATA,sha256=SpYd0MOQN0v8VAXqpBv0WqTqlNOMSxoe0XYojUdVpJo,316
+pinjected_wandb-0.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+pinjected_wandb-0.1.0.dist-info/RECORD,,
