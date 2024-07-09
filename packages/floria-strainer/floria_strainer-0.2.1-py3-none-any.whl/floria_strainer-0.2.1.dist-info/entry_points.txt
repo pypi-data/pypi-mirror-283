@@ -1,0 +1,3 @@
+[console_scripts]
+floria-strainer=floria_strainer.cli:cli
+
