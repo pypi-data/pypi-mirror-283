@@ -1,0 +1,31 @@
+name: Fix Python code style issues
+
+on:
+  push:
+    paths:
+      - '**.py'
+      - 'pyproject.toml'
+
+permissions:
+  contents: write
+
+jobs:
+  python-code-styling:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Fix Python code style issues
+        uses: psf/black@stable
+        with:
+          options: "--config=pyproject.toml"
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Fix styling
