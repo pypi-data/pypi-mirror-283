@@ -1,0 +1,57 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:8000/v1/functions/by_path/test_client_raises_timeout_error
+  response:
+    body:
+      string: '{"id":294,"uuid":"26ef53e2-b288-4861-b3ac-26c63bdc573e","dataset_uuid":"c99d74ec-4b3a-4e21-a54d-41554cbf8887","description":null,"few_shot_count":2,"few_shot":false,"index_ids":[],"input_schema":null,"instructions":"test","language_model_id":null,"model":"azure/gpt4-eu","out_schema":null,"path":"test_client_raises_timeout_error","project":{"uuid":"87974e8e-8f5f-4a50-8443-19c6e230d8b0","name":"vcr"},"revision":1,"use_semantic_search":false}'
+    headers:
+      content-length:
+      - '443'
+      content-type:
+      - application/json
+      date:
+      - Mon, 01 Jul 2024 09:02:40 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"uuid": "26ef53e2-b288-4861-b3ac-26c63bdc573e", "path": "test_client_raises_timeout_error",
+      "description": null, "input_schema": null, "out_schema": null, "instructions":
+      "test", "model": null, "index_ids": [], "use_semantic_search": false, "few_shot":
+      false, "few_shot_count": 2, "cache_configuration": null}'
+    headers:
+      accept:
+      - '*/*'
+      connection:
+      - keep-alive
+      content-length:
+      - '310'
+      content-type:
+      - application/json
+    method: PATCH
+    uri: http://localhost:8000/v1/functions/26ef53e2-b288-4861-b3ac-26c63bdc573e
+  response:
+    body:
+      string: '{"id":294,"uuid":"26ef53e2-b288-4861-b3ac-26c63bdc573e","dataset_uuid":"c99d74ec-4b3a-4e21-a54d-41554cbf8887","description":null,"few_shot_count":2,"few_shot":false,"index_ids":[],"input_schema":null,"instructions":"test","language_model_id":null,"model":"azure/gpt4-eu","out_schema":null,"path":"test_client_raises_timeout_error","project":{"uuid":"87974e8e-8f5f-4a50-8443-19c6e230d8b0","name":"vcr"},"revision":1,"use_semantic_search":false}'
+    headers:
+      content-length:
+      - '443'
+      content-type:
+      - application/json
+      date:
+      - Mon, 01 Jul 2024 09:02:40 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+version: 1

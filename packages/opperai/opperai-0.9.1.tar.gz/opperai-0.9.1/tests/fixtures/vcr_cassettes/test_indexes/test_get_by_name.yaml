@@ -1,0 +1,79 @@
+interactions:
+- request:
+    body: '{"name": "test_get_by_name"}'
+    headers:
+      accept:
+      - '*/*'
+      connection:
+      - keep-alive
+      content-length:
+      - '28'
+      content-type:
+      - application/json
+    method: POST
+    uri: http://localhost:8000/v1/indexes
+  response:
+    body:
+      string: '{"id":311,"uuid":"d17ed86c-fc03-41ea-81cd-746c49fad560","name":"test_get_by_name","project":{"uuid":"87974e8e-8f5f-4a50-8443-19c6e230d8b0","name":"vcr"},"files":[],"created_at":"2024-07-01T09:03:18.130799Z"}'
+    headers:
+      content-length:
+      - '207'
+      content-type:
+      - application/json
+      date:
+      - Mon, 01 Jul 2024 09:03:17 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:8000/v1/indexes
+  response:
+    body:
+      string: '[{"id":311,"uuid":"d17ed86c-fc03-41ea-81cd-746c49fad560","org_id":1,"org_name":null,"name":"test_get_by_name","created_by":"Alexandre
+        Pesant","created_at":"2024-07-01T09:03:18.130799Z","updated_at":"2024-07-01T09:03:18.130799Z","count":0,"project":{"uuid":"87974e8e-8f5f-4a50-8443-19c6e230d8b0","name":"vcr"}}]'
+    headers:
+      content-length:
+      - '310'
+      content-type:
+      - application/json
+      date:
+      - Mon, 01 Jul 2024 09:03:17 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      connection:
+      - keep-alive
+    method: DELETE
+    uri: http://localhost:8000/v1/indexes/d17ed86c-fc03-41ea-81cd-746c49fad560
+  response:
+    body:
+      string: 'true'
+    headers:
+      content-length:
+      - '4'
+      content-type:
+      - application/json
+      date:
+      - Mon, 01 Jul 2024 09:03:17 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+version: 1

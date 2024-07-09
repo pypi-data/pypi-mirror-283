@@ -1,0 +1,143 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:8000/v1/functions/by_path/test/sdk/test_image
+  response:
+    body:
+      string: '{"errors":[{"type":"HTTPException","message":"Function not found","detail":"Function
+        not found"}]}'
+    headers:
+      content-length:
+      - '98'
+      content-type:
+      - application/json
+      date:
+      - Mon, 01 Jul 2024 09:02:11 GMT
+      server:
+      - uvicorn
+    status:
+      code: 404
+      message: Not Found
+- request:
+    body: '{"uuid": null, "path": "test/sdk/test_image", "description": null, "input_schema":
+      null, "out_schema": null, "instructions": "describe the image", "model": "openai/gpt4-turbo",
+      "index_ids": [], "use_semantic_search": null, "few_shot": null, "few_shot_count":
+      null, "cache_configuration": null}'
+    headers:
+      accept:
+      - '*/*'
+      connection:
+      - keep-alive
+      content-length:
+      - '293'
+      content-type:
+      - application/json
+    method: POST
+    uri: http://localhost:8000/v1/functions
+  response:
+    body:
+      string: '{"id":317,"uuid":"125e31eb-1773-47bf-86ff-83e10d4e3f1a","dataset_uuid":"f2800f01-4cc7-4cf4-89be-f828d24f6804","description":null,"few_shot_count":2,"few_shot":false,"index_ids":[],"input_schema":null,"instructions":"describe
+        the image","language_model_id":null,"model":"openai/gpt4-turbo","out_schema":null,"path":"test/sdk/test_image","project":{"uuid":"87974e8e-8f5f-4a50-8443-19c6e230d8b0","name":"vcr"},"revision":1,"use_semantic_search":false}'
+    headers:
+      content-length:
+      - '448'
+      content-type:
+      - application/json
+      date:
+      - Mon, 01 Jul 2024 09:02:11 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:8000/v1/functions/125e31eb-1773-47bf-86ff-83e10d4e3f1a
+  response:
+    body:
+      string: '{"id":317,"uuid":"125e31eb-1773-47bf-86ff-83e10d4e3f1a","dataset_uuid":"f2800f01-4cc7-4cf4-89be-f828d24f6804","description":null,"few_shot_count":2,"few_shot":false,"index_ids":[],"input_schema":null,"instructions":"describe
+        the image","language_model_id":null,"model":"openai/gpt4-turbo","out_schema":null,"path":"test/sdk/test_image","project":{"uuid":"87974e8e-8f5f-4a50-8443-19c6e230d8b0","name":"vcr"},"revision":1,"use_semantic_search":false}'
+    headers:
+      content-length:
+      - '448'
+      content-type:
+      - application/json
+      date:
+      - Mon, 01 Jul 2024 09:02:11 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"parent_span_uuid": null, "messages": [{"role": "user", "content": [{"type":
+      "image_url", "image_url": {"url": "https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/e1/d3/e1d3fee9-9aaa-4599-ba67-1c71a6d0ed03/1200px-seymouria_fossil.jpg"}}]}]}'
+    headers:
+      accept:
+      - '*/*'
+      connection:
+      - keep-alive
+      content-length:
+      - '251'
+      content-type:
+      - application/json
+    method: POST
+    uri: http://localhost:8000/v1/chat/test/sdk/test_image
+  response:
+    body:
+      string: '{"span_id":"a66c2e20-9b49-4149-9884-561252235fae","message":"The image
+        shows a fossil of a creature resembling a dinosaur, embedded in a large, flat
+        rock. The fossil is complete, displaying the skeletal structure very clearly.
+        You can see the skull, vertebral column, ribs, limbs, and tailbones. The bones
+        are well-preserved and stand out against the lighter color of the surrounding
+        matrix. The setting suggests this may be in a museum or a similar location
+        where such paleontological findings are exhibited for educational or scientific
+        purposes. The lighting accentuates the details of the fossil, enhancing the
+        texture and the three-dimensional appearance of the skeleton.","json_payload":null,"context":null,"cached":false}'
+    headers:
+      content-length:
+      - '728'
+      content-type:
+      - application/json
+      date:
+      - Mon, 01 Jul 2024 09:02:11 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      connection:
+      - keep-alive
+    method: DELETE
+    uri: http://localhost:8000/v1/functions/125e31eb-1773-47bf-86ff-83e10d4e3f1a
+  response:
+    body:
+      string: ''
+    headers:
+      content-type:
+      - application/json
+      date:
+      - Mon, 01 Jul 2024 09:02:21 GMT
+      server:
+      - uvicorn
+    status:
+      code: 204
+      message: No Content
+version: 1

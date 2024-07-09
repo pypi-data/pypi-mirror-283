@@ -1,0 +1,54 @@
+interactions:
+- request:
+    body: '{"name": "test_create_index"}'
+    headers:
+      accept:
+      - '*/*'
+      connection:
+      - keep-alive
+      content-length:
+      - '29'
+      content-type:
+      - application/json
+    method: POST
+    uri: http://localhost:8000/v1/indexes
+  response:
+    body:
+      string: '{"id":299,"uuid":"b7f50935-233d-4b20-82cc-48a45e081f26","name":"test_create_index","project":{"uuid":"87974e8e-8f5f-4a50-8443-19c6e230d8b0","name":"vcr"},"files":[],"created_at":"2024-07-01T09:02:38.851530Z"}'
+    headers:
+      content-length:
+      - '208'
+      content-type:
+      - application/json
+      date:
+      - Mon, 01 Jul 2024 09:02:38 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      connection:
+      - keep-alive
+    method: DELETE
+    uri: http://localhost:8000/v1/indexes/b7f50935-233d-4b20-82cc-48a45e081f26
+  response:
+    body:
+      string: 'true'
+    headers:
+      content-length:
+      - '4'
+      content-type:
+      - application/json
+      date:
+      - Mon, 01 Jul 2024 09:02:38 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,136 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:8000/v1/functions/by_path/test/sdk/test_chat
+  response:
+    body:
+      string: '{"errors":[{"type":"HTTPException","message":"Function not found","detail":"Function
+        not found"}]}'
+    headers:
+      content-length:
+      - '98'
+      content-type:
+      - application/json
+      date:
+      - Mon, 01 Jul 2024 09:03:10 GMT
+      server:
+      - uvicorn
+    status:
+      code: 404
+      message: Not Found
+- request:
+    body: '{"uuid": null, "path": "test/sdk/test_chat", "description": "Translate
+      to French", "input_schema": null, "out_schema": null, "instructions": "Translate
+      to French", "model": null, "index_ids": [], "use_semantic_search": null, "few_shot":
+      null, "few_shot_count": null, "cache_configuration": null}'
+    headers:
+      accept:
+      - '*/*'
+      connection:
+      - keep-alive
+      content-length:
+      - '295'
+      content-type:
+      - application/json
+    method: POST
+    uri: http://localhost:8000/v1/functions
+  response:
+    body:
+      string: '{"id":330,"uuid":"0ea2b62b-7648-4173-8769-4de75345830a","dataset_uuid":"e5652509-50b1-4058-9c43-7361db030825","description":"Translate
+        to French","few_shot_count":2,"few_shot":false,"index_ids":[],"input_schema":null,"instructions":"Translate
+        to French","language_model_id":null,"model":"azure/gpt4-eu","out_schema":null,"path":"test/sdk/test_chat","project":{"uuid":"87974e8e-8f5f-4a50-8443-19c6e230d8b0","name":"vcr"},"revision":1,"use_semantic_search":false}'
+    headers:
+      content-length:
+      - '461'
+      content-type:
+      - application/json
+      date:
+      - Mon, 01 Jul 2024 09:03:10 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:8000/v1/functions/0ea2b62b-7648-4173-8769-4de75345830a
+  response:
+    body:
+      string: '{"id":330,"uuid":"0ea2b62b-7648-4173-8769-4de75345830a","dataset_uuid":"e5652509-50b1-4058-9c43-7361db030825","description":"Translate
+        to French","few_shot_count":2,"few_shot":false,"index_ids":[],"input_schema":null,"instructions":"Translate
+        to French","language_model_id":null,"model":"azure/gpt4-eu","out_schema":null,"path":"test/sdk/test_chat","project":{"uuid":"87974e8e-8f5f-4a50-8443-19c6e230d8b0","name":"vcr"},"revision":1,"use_semantic_search":false}'
+    headers:
+      content-length:
+      - '461'
+      content-type:
+      - application/json
+      date:
+      - Mon, 01 Jul 2024 09:03:10 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"parent_span_uuid": null, "messages": [{"role": "user", "content": "hello"}]}'
+    headers:
+      accept:
+      - '*/*'
+      connection:
+      - keep-alive
+      content-length:
+      - '78'
+      content-type:
+      - application/json
+    method: POST
+    uri: http://localhost:8000/v1/chat/test/sdk/test_chat
+  response:
+    body:
+      string: '{"span_id":"aa2d0c99-1dbc-455e-bd68-704436b3aa5a","message":"Bonjour","json_payload":null,"context":null,"cached":false}'
+    headers:
+      content-length:
+      - '120'
+      content-type:
+      - application/json
+      date:
+      - Mon, 01 Jul 2024 09:03:10 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      connection:
+      - keep-alive
+    method: DELETE
+    uri: http://localhost:8000/v1/functions/0ea2b62b-7648-4173-8769-4de75345830a
+  response:
+    body:
+      string: ''
+    headers:
+      content-type:
+      - application/json
+      date:
+      - Mon, 01 Jul 2024 09:03:11 GMT
+      server:
+      - uvicorn
+    status:
+      code: 204
+      message: No Content
+version: 1

@@ -1,0 +1,110 @@
+interactions:
+- request:
+    body: '{"name": "test_retrieve_document"}'
+    headers:
+      accept:
+      - '*/*'
+      connection:
+      - keep-alive
+      content-length:
+      - '34'
+      content-type:
+      - application/json
+    method: POST
+    uri: http://localhost:8000/v1/indexes
+  response:
+    body:
+      string: '{"id":315,"uuid":"6a185b5a-bac6-4880-b56e-117546468964","name":"test_retrieve_document","project":{"uuid":"87974e8e-8f5f-4a50-8443-19c6e230d8b0","name":"vcr"},"files":[],"created_at":"2024-07-01T09:03:21.741717Z"}'
+    headers:
+      content-length:
+      - '213'
+      content-type:
+      - application/json
+      date:
+      - Mon, 01 Jul 2024 09:03:20 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"key": null, "content": "Hello", "metadata": {"source": "test"}}'
+    headers:
+      accept:
+      - '*/*'
+      connection:
+      - keep-alive
+      content-length:
+      - '65'
+      content-type:
+      - application/json
+    method: POST
+    uri: http://localhost:8000/v1/indexes/6a185b5a-bac6-4880-b56e-117546468964/index
+  response:
+    body:
+      string: '{"id":2033,"uuid":"bff5d28c-13f2-49e1-819d-ce4f2a5fc88e","key":"bff5d28c-13f2-49e1-819d-ce4f2a5fc88e"}'
+    headers:
+      content-length:
+      - '102'
+      content-type:
+      - application/json
+      date:
+      - Mon, 01 Jul 2024 09:03:21 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"q": "Hello", "k": 1, "filters": null, "parent_span_uuid": null}'
+    headers:
+      accept:
+      - '*/*'
+      connection:
+      - keep-alive
+      content-length:
+      - '65'
+      content-type:
+      - application/json
+    method: POST
+    uri: http://localhost:8000/v1/indexes/6a185b5a-bac6-4880-b56e-117546468964/query
+  response:
+    body:
+      string: '[{"uuid":"fccc21ab-082a-4a60-a73f-9a159abfa7f6","content":"Hello","metadata":{"source":"test"},"document_id":2033,"score":0.0,"source_uuids":["fccc21ab-082a-4a60-a73f-9a159abfa7f6"]}]'
+    headers:
+      content-length:
+      - '183'
+      content-type:
+      - application/json
+      date:
+      - Mon, 01 Jul 2024 09:03:21 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      connection:
+      - keep-alive
+    method: DELETE
+    uri: http://localhost:8000/v1/indexes/6a185b5a-bac6-4880-b56e-117546468964
+  response:
+    body:
+      string: 'true'
+    headers:
+      content-length:
+      - '4'
+      content-type:
+      - application/json
+      date:
+      - Mon, 01 Jul 2024 09:03:23 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+version: 1
