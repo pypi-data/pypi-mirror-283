@@ -1,0 +1,21 @@
+pl_intelligence.tools.pl_intelligence_tool.get_place_intelligence_api:
+  function: get_place_intelligence_api
+  inputs:
+      chat_input:
+        type:
+        - dict
+        description: Input dictionary for chat input
+  module: pl_intelligence.tools.pl_intelligence_tool
+  name: pl_intelligence tool
+  description: Import pl_intelligence flow
+  type: python
+pl_intelligence.tools.pl_intelligence_tool.allowSelfSignedHttps:
+  function: allowSelfSignedHttps
+  inputs:
+      allowed:
+        type:
+        - boolean
+  module: pl_intelligence.tools.pl_intelligence_tool
+  name: pl_intelligence tool
+  description: Import pl_intelligence flow
+  type: python

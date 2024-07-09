@@ -1,0 +1,2 @@
+[package_tools]
+pl_intelligence_tool = pl_intelligence.tools.utils:list_package_tools
