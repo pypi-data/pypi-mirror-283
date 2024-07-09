@@ -1,0 +1,11 @@
+LICENSE.md
+pyproject.toml
+setup.cfg
+skomerchecker/__init__.py
+skomerchecker/const.py
+skomerchecker/skomerchecker.py
+skomerchecker.egg-info/PKG-INFO
+skomerchecker.egg-info/SOURCES.txt
+skomerchecker.egg-info/dependency_links.txt
+skomerchecker.egg-info/requires.txt
+skomerchecker.egg-info/top_level.txt
