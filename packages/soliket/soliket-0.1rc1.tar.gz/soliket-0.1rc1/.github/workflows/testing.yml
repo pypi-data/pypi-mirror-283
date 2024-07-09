@@ -1,0 +1,52 @@
+name: Testing
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+
+          - name: latest supported versions
+            os: ubuntu-latest
+            python-version: '3.11'
+            toxenv: py311-test-all-latest-cov
+
+          - name: oldest supported versions
+            os: ubuntu-latest
+            python-version: '3.8'
+            toxenv: py38-test-oldest
+
+          - name: macOS latest
+            os: macos-latest
+            python-version: '3.11'
+            toxenv: py311-test-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Install Conda w/ Python ${{ matrix.python-version }}
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          auto-activate-base: false
+          python-version: ${{ matrix.python-version }}
+          channels: conda-forge
+      - name: Install Dependencies
+        shell: bash -el {0}
+        run: |
+          pip install tox-conda
+      - name: Run Tests
+        shell: bash -el {0}
+        run: |
+           tox -e ${{ matrix.toxenv }} ${{ matrix.toxargs }} -- ${{ matrix.toxposargs }}
+      - if: contains(matrix.toxenv, '-cov')
+        name: Report Coverage
+        uses: codecov/codecov-action@v3
