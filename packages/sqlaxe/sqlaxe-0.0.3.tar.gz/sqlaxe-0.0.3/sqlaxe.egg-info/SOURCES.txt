@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+sqlaxe/sqlaxe.py
+sqlaxe.egg-info/PKG-INFO
+sqlaxe.egg-info/SOURCES.txt
+sqlaxe.egg-info/dependency_links.txt
+sqlaxe.egg-info/entry_points.txt
+sqlaxe.egg-info/top_level.txt
