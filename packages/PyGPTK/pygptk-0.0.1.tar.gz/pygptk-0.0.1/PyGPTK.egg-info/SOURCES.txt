@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+PyGPTK/__init__.py
+PyGPTK/extraction.py
+PyGPTK/read.py
+PyGPTK.egg-info/PKG-INFO
+PyGPTK.egg-info/SOURCES.txt
+PyGPTK.egg-info/dependency_links.txt
+PyGPTK.egg-info/requires.txt
+PyGPTK.egg-info/top_level.txt
