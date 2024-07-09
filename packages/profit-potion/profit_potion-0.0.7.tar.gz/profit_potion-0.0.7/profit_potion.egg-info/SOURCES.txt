@@ -1,0 +1,10 @@
+README.md
+setup.py
+profit_potion/__init__.py
+profit_potion.egg-info/PKG-INFO
+profit_potion.egg-info/SOURCES.txt
+profit_potion.egg-info/dependency_links.txt
+profit_potion.egg-info/requires.txt
+profit_potion.egg-info/top_level.txt
+profit_potion/magic/__init__.py
+profit_potion/magic/index.py
