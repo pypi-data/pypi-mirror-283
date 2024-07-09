@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+unique_print_lib/__init__.py
+unique_print_lib.egg-info/PKG-INFO
+unique_print_lib.egg-info/SOURCES.txt
+unique_print_lib.egg-info/dependency_links.txt
+unique_print_lib.egg-info/top_level.txt
