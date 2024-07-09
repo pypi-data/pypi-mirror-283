@@ -1,0 +1,3 @@
+[certbot.plugins]
+dns-synergy-wholesale=certbot_dns_synergy_wholesale:Authenticator
+
