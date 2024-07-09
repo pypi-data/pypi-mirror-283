@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "deploybot"
+version = "0.1.0"
+description = "A CLI tool for deploying ECS and Lambda services"
+authors = ["Waseem Ahmad <waseem_ahmad63@yahoo.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+click = "^8.0.1"
+python-dotenv = "^0.19.0"
+configparser = "^5.0.2"
+InquirerPy = "^0.3.4"
+
+[tool.poetry.dev-dependencies]
+pytest = ">=6.2,<8.0"
+
+[tool.poetry.scripts]
+deploybot = 'deploybot.cli:cli'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
