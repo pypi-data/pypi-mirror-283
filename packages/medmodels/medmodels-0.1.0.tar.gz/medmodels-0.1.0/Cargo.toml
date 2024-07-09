@@ -1,0 +1,23 @@
+[workspace]
+members = ["crates/*", "rustmodels"]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/limebit/medmodels"
+license = "BSD-3-Clause"
+readme = "README.md"
+description = "Limebit MedModels Crate"
+
+[workspace.dependencies]
+hashbrown = { version = "0.14.5", features = ["serde"] }
+serde = { version = "1.0.203", features = ["derive"] }
+ron = "0.8.1"
+pyo3 = "0.21.2"
+polars = { version = "0.40.0", features = ["polars-io"] }
+pyo3-polars = "0.14.0"
+
+medmodels = { version = "0.1.0", path = "crates/medmodels" }
+medmodels-core = { version = "0.1.0", path = "crates/medmodels-core" }
+medmodels-utils = { version = "0.1.0", path = "crates/medmodels-utils" }
