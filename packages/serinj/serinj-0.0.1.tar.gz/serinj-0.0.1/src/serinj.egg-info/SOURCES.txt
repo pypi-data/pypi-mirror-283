@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/serinj/__init__.py
+src/serinj/arc.py
+src/serinj.egg-info/PKG-INFO
+src/serinj.egg-info/SOURCES.txt
+src/serinj.egg-info/dependency_links.txt
+src/serinj.egg-info/top_level.txt
