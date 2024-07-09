@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+kgcpy/__init__.py
+kgcpy/test_functions.py
+kgcpy.egg-info/PKG-INFO
+kgcpy.egg-info/SOURCES.txt
+kgcpy.egg-info/dependency_links.txt
+kgcpy.egg-info/requires.txt
+kgcpy.egg-info/top_level.txt
