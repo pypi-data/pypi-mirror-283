@@ -1,0 +1,2 @@
+[console_scripts]
+weedeia-greenbox-core = main:main
