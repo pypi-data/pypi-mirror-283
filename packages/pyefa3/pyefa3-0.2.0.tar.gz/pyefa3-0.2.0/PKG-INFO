@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pyefa3
+Version: 0.2.0
+Summary: Python-Bindings for online train connection APIs.
+Home-page: https://github.com/Tanikai/pyefa3
+Author: Nils Martin Klünder, Kai Anter
+Author-email: nomoketo@nomoketo.de, kai@anter.dev
+License: Apache
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: Apache Software License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: beautifulsoup4
+Requires-Dist: colorama
+
+README.md
