@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: bohrium-open-sdk
+Version: 0.1.0a15
+Summary: bohrium-open-sdk
+Home-page: https://bohrium.dp.tech/developer
+Author: Bohrium Team
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: httpx==0.27.0
+Requires-Dist: requests==2.32.3
+Requires-Dist: tqdm==4.66.4
+Requires-Dist: distro==1.9.0
+Requires-Dist: python-dotenv==1.0.0
+Requires-Dist: glom==23.5.0
+Requires-Dist: pytest==8.2.2
+Requires-Dist: gradio-materialviewer==0.0.4
+Requires-Dist: gradio-mapping==0.0.2
+Requires-Dist: gradio-perturbation-graph==0.0.1
+Requires-Dist: gradio-fep-result-table==0.0.1
+Requires-Dist: gradio-fep-pair-table==0.0.1
+Requires-Dist: gradio-dp-project==0.0.1
+Requires-Dist: gradio-dp-machine==0.0.1
+Requires-Dist: dp-sequence-editor==0.0.1
+Requires-Dist: gradio-uni-view==0.0.2
+Requires-Dist: dp-launching-app==0.1.0-alpha.1

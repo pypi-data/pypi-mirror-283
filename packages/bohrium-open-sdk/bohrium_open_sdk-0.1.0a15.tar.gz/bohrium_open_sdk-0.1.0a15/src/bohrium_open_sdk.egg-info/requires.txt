@@ -1,0 +1,17 @@
+httpx==0.27.0
+requests==2.32.3
+tqdm==4.66.4
+distro==1.9.0
+python-dotenv==1.0.0
+glom==23.5.0
+pytest==8.2.2
+gradio-materialviewer==0.0.4
+gradio-mapping==0.0.2
+gradio-perturbation-graph==0.0.1
+gradio-fep-result-table==0.0.1
+gradio-fep-pair-table==0.0.1
+gradio-dp-project==0.0.1
+gradio-dp-machine==0.0.1
+dp-sequence-editor==0.0.1
+gradio-uni-view==0.0.2
+dp-launching-app==0.1.0-alpha.1
