@@ -1,0 +1,3 @@
+[flake8.extension]
+F821 = flake8_py2builtins.checker:Py2BuiltinsChecker
+

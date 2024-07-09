@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: flake8-py2builtins
+Version: 0.0.0.1
+Summary: flake8 plugin to warn Python2 builtins
+Home-page: https://github.com/cielavenir/flake8_py2builtins
+Author: cielavenir
+Author-email: cielartisan@gmail.com
+License: 0BSD
+Description: ## flake8_py2builtins
+        
+        flake8 plugin to warn Python2 builtins
+        
+        (When executed by Python2) this does not handle except-as or print-parens. For those check, please use [hacking](https://pypi.org/project/hacking/) (==2.0.0 for python2).
+        
+        cf https://docs.openstack.org/hacking/latest/user/hacking.html#python-3-x-compatibility
+        
+Keywords: flake8
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: Public Domain
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Description-Content-Type: text/markdown
