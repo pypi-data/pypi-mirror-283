@@ -1,0 +1,11 @@
+shplot/__init__.py,sha256=BN-Q1-75BWksgMDRKErbnmgEOYDQiP80jCqP3QbotmE,114
+shplot/_shplot.py,sha256=RYjGUs71gDz4uEG9I4_e5bKtrvJYchWH0j15OtM8Jec,11180
+shplot/_version.py,sha256=4ReAPtjzFhLjJF_MuUgcTpHSTngyqjaWdIWrX5rwsn8,64
+shplot/profiles/__init__.py,sha256=1G2g2QzTfCwVIIiQ5jQPYZp8QlhHpeBiTxPzOG2PZf4,86
+shplot/profiles/_interface.py,sha256=Ygv2oXAf26LFS4RsNhtFbnJgcoQhv7KJEiFOzH08cOQ,24485
+shplot/profiles/builtin.py,sha256=Id2hURZ4z9yGucPsLfx70U78VXu9J8wqSotxyvY9p4o,17411
+shplot/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shplot-1.0.0.dist-info/LICENSE.md,sha256=VAabzwvvcklX_ESxODwY5-Y9OjxKKpycTB07OgF6nYk,1069
+shplot-1.0.0.dist-info/METADATA,sha256=HHP6EWasC7TlJ_p0RtCHZfFfIFY3mhXt7fpommwBWy0,3784
+shplot-1.0.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+shplot-1.0.0.dist-info/RECORD,,
