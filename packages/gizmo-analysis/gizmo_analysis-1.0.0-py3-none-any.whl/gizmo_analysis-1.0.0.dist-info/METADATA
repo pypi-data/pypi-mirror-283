@@ -1,0 +1,174 @@
+Metadata-Version: 2.1
+Name: gizmo_analysis
+Version: 1.0.0
+Summary: read and analyze Gizmo simulations
+Author: Shea Garrison-Kimmel, Andrew Emerick, Zach Hafen, Isaiah Santistevan, Nico Garavito-Camargo
+Author-email: Andrew Wetzel <arwetzel@gmail.com>
+Maintainer-email: Andrew Wetzel <arwetzel@gmail.com>
+License: Copyright 2014-2024 by Andrew Wetzel <arwetzel@gmail.com>, Shea Garrison-Kimmel, Andrew Emerick, Zach Hafen, Isaiah Santistevan, Nico Garavito-Camargo
+        
+        If you use this package, please cite it, along the lines of: 'This work used GizmoAnalysis (http://ascl.net/2002.015), which first was used in Wetzel et al 2016 (https://ui.adsabs.harvard.edu/abs/2016ApJ...827L..23W).'
+        
+        You are free to use, edit, share, and do whatever you want. But please cite it and report bugs!
+        
+        Less succinctly, this software is governed by the MIT License:
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of
+        this software and associated documentation files (the 'Software'), to deal in
+        the Software without restriction, including without limitation the rights to
+        use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+        the Software, and to permit persons to whom the Software is furnished to do so,
+        subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+        FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE aAUTHORS OR
+        COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+        IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+        CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+        
+Project-URL: Repository, https://bitbucket.org/awetzel/gizmo_analysis/src/master/
+Project-URL: Issues, https://bitbucket.org/awetzel/gizmo_analysis/issues?status=new&status=open&status=submitted
+Keywords: gizmo,astronomy,astrophysics,cosmology,galaxies,stars,dark matter
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: numpy >=1.22.2
+Requires-Dist: scipy >=1.13.1
+Requires-Dist: h5py >=3.9.0
+Requires-Dist: matplotlib >=3.8
+Requires-Dist: utilities-awetzel >=1.0
+
+# Description
+
+Python package for reading and analyzing simulations generated using the Gizmo code, in particular, the FIRE cosmological simulations.
+
+
+---
+# Requirements
+
+python 3, numpy, scipy, h5py, matplotlib
+
+This package also requires the [utilities/](https://bitbucket.org/awetzel/utilities) Python package for low-level utility functions.
+
+
+---
+# Contents
+
+## gizmo_analysis
+
+### gizmo_io.py
+* read particles from Gizmo snapshot files
+
+### gizmo_plot.py
+* analyze and plot particle data
+
+### gizmo_track.py
+* track star particles and gas cells across snapshots
+### gizmo_file.py
+* clean, compress, delete, or transfer Gizmo snapshot files
+
+### gizmo_diagnostic.py
+* run diagnostics on Gizmo simulations
+
+### gizmo_ic.py
+* generate cosmological zoom-in initial conditions from existing snapshot files
+
+### gizmo_star.py
+* models of stellar evolution as implemented in FIRE-2 and FIRE-3: rates and yields from supernovae (core-collapse and white-dwarf) and stellar winds
+
+### gizmo_elementtracer.py
+* generate elemental abundances in star particles and gas cells in post-processing, using the element-tracer module
+
+
+## tutorials
+
+### gizmo_tutorial_read.ipynb
+* Jupyter notebook tutorial for reading particle data, understanding its data structure and units
+
+### gizmo_tutorial_analysis.ipynb
+* Jupyter notebook tutorial for analyzing and plotting particle data
+
+### transcript.txt
+* Transcript of Zach Hafen's video tutorial (https://www.youtube.com/watch?v=bl-rpzE8hrU) on using this package to read FIRE simulations.
+
+
+## data
+
+### snapshot_times.txt
+* example file for storing information about snapshots: scale-factors, redshifts, times, etc
+
+
+---
+# Units
+
+Unless otherwise noted, this package stores all quantities in (combinations of) these base units
+* mass [M_sun]
+* position [kpc comoving]
+* distance, radius [kpc physical]
+* time [Gyr]
+* temperature [K]
+* magnetic field [Gauss]
+* elemental abundance [linear mass fraction]
+
+These are the common exceptions to those standards
+* velocity [km/s]
+* acceleration [km/s / Gyr]
+* gravitational potential [km^2 / s^2]
+* rates (star formation, cooling, accretion) [M_sun / yr]
+* metallicity (if converted from stored massfraction) [log10(mass_fraction / mass_fraction_solar)], using Asplund et al 2009 for Solar
+
+
+---
+# Installing
+
+The easiest way to install this packages and all its dependencies is by using `pip` or conda.
+
+```
+python -m pip install gizmo_analysis
+
+```
+
+To install from source, you can clone the latest version of `gizmo_analysis` from `bitbucket` using `git`:
+
+```
+git clone git://bitbucket.org/awetzel/gizmo_analysis.git
+```
+
+To build and install the project, inside the cloned `gizmo_analysis` directory:
+
+```
+python -m pip install .
+```
+
+
+---
+# Using
+
+Once installed, you can call individual modules like this:
+
+```
+import gizmo_analysis
+gizmo_analysis.gizmo_io
+```
+
+or more succinctly like this
+
+```
+import gizmo_analysis as gizmo
+gizmo.io
+```
+
+
+---
+# Citing
+
+If you use this package, please cite it, along the lines of: 'This work used GizmoAnalysis (http://ascl.net/2002.015), which first was used in Wetzel et al 2016 (https://ui.adsabs.harvard.edu/abs/2016ApJ...827L..23W).'
