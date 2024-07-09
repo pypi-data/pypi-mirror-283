@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: just-d4rl
+Version: 0.2407.0
+Summary: Easy-to-use D4RL offline dataset loader
+Author-email: fuyutarow <fuyutarow@gmail.com>
+Project-URL: Homepage, https://github.com/fuyutarow/just-d4rl
+Project-URL: Repository, https://github.com/fuyutarow/just-d4rl
+Keywords: D4RL
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: h5py >=3.11.0
+Requires-Dist: tqdm >=4.66.4
+
+# just-d4rl
+
+Describe your project here.
