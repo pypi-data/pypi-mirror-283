@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: wallbox_modbus
+Version: 0.0.1
+Summary: Control your Wallbox Quasar EV charger using Modbus commands
+Author-email: Ronald Pijnacker <ronald.pijnacker+pypi@gmail.com>
+License-File: LICENSE
