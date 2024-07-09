@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: sparkfun_qwiic_kx13x
+Version: 1.0.1
+Summary: SparkFun Electronics Qwiic KX13X package
+Home-page: https://www.sparkfun.com/products/17589
+Author: SparkFun Electronics
+Author-email: info@sparkfun.com
+License: MIT
+Keywords: electronics,maker,accelerometer
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+License-File: LICENSE
+
+Qwiic <Example Package Title>
+=============================================
+
+This is a short description of this package.
+
+
