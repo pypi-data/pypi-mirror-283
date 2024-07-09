@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: optimizacionelipq
+Version: 0.0.1
+Summary: Métodos de optimización
+Author: Eli
+Author-email: tuemail@email.com
+Keywords: Python,optimización,funciones,gráficas
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+Paquete de Python para compartir los algoritmos de optimización univariable y multivariable y funciones objetivo que se desarrollen en clase.
