@@ -1,0 +1,15 @@
+a9x_webstatistics/__init__.py,sha256=u1Z9FR7irP5CuqTglCbS5b-z4S1dl4nlr_69JABQrDg,101
+a9x_webstatistics/gencockpit.py,sha256=Aep6325YEwQCmbSedGzFqcKkF6wj5tpxY9uTW_pIdyM,19803
+a9x_webstatistics/gencockpitV0001.py,sha256=xgPNWIFEF7VEamZlFSCYx_PumJjHefXW8-WfxP6O8h4,19871
+a9x_webstatistics/main.py,sha256=5QDJ5Dk8YR7HRFSBMh7AwWe8uEk6yXVDIvAecPylnbs,7100
+a9x_webstatistics/migratev0001.py,sha256=ly2A_yZfmSmjt0bwIrlMB3yDq8czMhkQPIzOD9YSnXA,2965
+a9x_webstatistics/module1.py,sha256=1DrZx5xFkgUAbsTcapXRLslxnWaY1_XyiEyPRadIlSc,464
+a9x_webstatistics/summarizemonth.py,sha256=q0JPJmdM-dWwOdjK2oVEy0bxBY61mMigPvN49Zgk-aI,5456
+a9x_webstatistics/summarizemonthV0001.py,sha256=P1Biwq_eJ77piHWAwjlKzuTEXmRfGHZBOrbcpL3c_F4,7688
+a9x_webstatistics/updateStatisticsV0001.py,sha256=p-4lSltIKCsjEuNg8pN3-tDQQgjdhJGfXV89HTJWtnw,8197
+a9x_webstatistics/updatestatistics.py,sha256=_lCpEPjWIBIUCCfVHCSKax8nXbF7p1AAOJx_6ojw11I,6412
+a9x_webstatistics-0.6.20.dist-info/LICENSE,sha256=5gqwshqM_qRxZ-q2f-Lu8FO8E4w7BRs5ipYhgpkIZqQ,1086
+a9x_webstatistics-0.6.20.dist-info/METADATA,sha256=eH95xBtDF-_9BrY4MUqGHiL8cVhGPUT5NsM-kRl_5vc,17488
+a9x_webstatistics-0.6.20.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+a9x_webstatistics-0.6.20.dist-info/top_level.txt,sha256=RWvU2in62xvB1d2fUXkAaqifIrcKlq6zqMKschLMAss,18
+a9x_webstatistics-0.6.20.dist-info/RECORD,,
