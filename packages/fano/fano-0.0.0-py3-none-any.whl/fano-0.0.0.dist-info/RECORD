@@ -1,0 +1,10 @@
+fano/__init__.py,sha256=KZhfHd4rZpxPR9A4sicHd_BrGNwEhhQU-XGt1CuiPY4,137
+fano/photons/__init__.py,sha256=6yl1ifCSuijg6P5iC8joK2rsC4-ZuqHdvf5BiAWgHT8,108
+fano/photons/areas/__init__.py,sha256=mKHYofIgaVHgR8JTme2_PDgOKrvmjZlsaZS5g9xArq4,2240
+fano/photons/areas/_ionization.py,sha256=EHxKGxAjmjCrKKew_a8HW4H0T3USy-lS1pszp_XL140,5971
+fano/photons/areas/_ionization_test.py,sha256=tmJv7uXasfXFhBBab6z2sBtkIZFueRUntdgiBBgXg1I,913
+fano/photons/areas/epdl-silicon.endf,sha256=y72_zNh5_BlCkFEB1SeAydB53PbiIHrn79TAUVzbVC8,602964
+fano-0.0.0.dist-info/METADATA,sha256=dCoAMmjwvKc0RhuMb_HsHsP3Y8lUI558-Q_btREmZac,1985
+fano-0.0.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+fano-0.0.0.dist-info/top_level.txt,sha256=aTVFfnBNHs08nInOF--bTXSXgBgCA7HfL_GoMzLa3gw,5
+fano-0.0.0.dist-info/RECORD,,
