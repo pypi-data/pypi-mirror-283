@@ -1,0 +1,9 @@
+pronoundb/__init__.py,sha256=p1kZzSymaMWgsLjjJE11-bVpJPpf0Lb77bDVL_CuxUc,291
+pronoundb/client.py,sha256=GFx2lKM3hsLblGNhIDWwdOUtqPp1ADyDDbgxQa-Ab0M,6568
+pronoundb/platform.py,sha256=i5V42PV8No5ETXvUQUXXWMcq-ZqiePxMHoqdFGI0FgU,175
+pronoundb/pronoun_response.py,sha256=f8qNLmH0w6SCUdh7KghCVZxuWkyDxydxLQY8PQXAHns,280
+pronoundb/translations.py,sha256=edGt3XbzWkwCw3FKGsToDVGUnjKXFhivr_zD5pv6gdo,802
+pronoundb-3.0.1.dist-info/LICENSE,sha256=ZHfkogEQn3jDM6lK_NPmjghm-RVN6TEKfbZwNpYm4B0,1091
+pronoundb-3.0.1.dist-info/METADATA,sha256=EkWN5DBJBSql-WdSX26kJrVC8Si5DVSpfmf9G0SHu4g,4339
+pronoundb-3.0.1.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+pronoundb-3.0.1.dist-info/RECORD,,
