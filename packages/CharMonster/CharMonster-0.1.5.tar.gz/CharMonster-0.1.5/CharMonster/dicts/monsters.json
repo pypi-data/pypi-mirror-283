@@ -1,0 +1,557 @@
+{
+    "0": {
+        "monster_name": "Goblin",
+        "level": 1,
+        "hitpoints": 12,
+        "ability_scores": {
+            "Strength": 8,
+            "Dexterity": 14,
+            "Constitution": 10,
+            "Intelligence": 10,
+            "Wisdom": 8,
+            "Charisma": 8
+        },
+        "armor_class": 13,
+        "attack_bonus": 2,
+        "saving_throws": {
+            "fortitude": 2,
+            "reflex": 4,
+            "will": 1
+        },
+        "damage": {
+            "number_of_dice": 1,
+            "dice_value": 6
+        },
+        "initiative": 2,
+        "speed": {
+            "walk": 30,
+            "fly": 0
+        },
+        "size": "Small",
+        "monster_type": "Humanoid",
+        "subtype": "Goblinoid",
+        "alignment": "Neutral Evil",
+        "special_abilities": {
+            "Nimble Escape": "The goblin can take the Disengage or Hide action as a bonus action on each of its turns."
+        },
+        "description": "A small, sneaky humanoid that prefers to fight from the shadows."
+    },
+    "1": {
+        "monster_name": "Kobold",
+        "level": 1,
+        "hitpoints": 10,
+        "ability_scores": {
+            "Strength": 7,
+            "Dexterity": 15,
+            "Constitution": 9,
+            "Intelligence": 8,
+            "Wisdom": 7,
+            "Charisma": 8
+        },
+        "armor_class": 12,
+        "attack_bonus": 1,
+        "saving_throws": {
+            "fortitude": 1,
+            "reflex": 5,
+            "will": 0
+        },
+        "damage": {
+            "number_of_dice": 1,
+            "dice_value": 4
+        },
+        "initiative": 3,
+        "speed": {
+            "walk": 30,
+            "fly": 0
+        },
+        "size": "Small",
+        "monster_type": "Humanoid",
+        "subtype": "Reptilian",
+        "alignment": "Lawful Evil",
+        "special_abilities": {
+            "Pack Tactics": "The kobold has advantage on an attack roll against a creature if at least one of the kobold's allies is within 5 feet of the creature and the ally isn't incapacitated."
+        },
+        "description": "A small, reptilian humanoid known for its cunning and cowardice."
+    },
+    "2": {
+        "monster_name": "Bandit",
+        "level": 1,
+        "hitpoints": 11,
+        "ability_scores": {
+            "Strength": 11,
+            "Dexterity": 12,
+            "Constitution": 12,
+            "Intelligence": 10,
+            "Wisdom": 10,
+            "Charisma": 10
+        },
+        "armor_class": 12,
+        "attack_bonus": 2,
+        "saving_throws": {
+            "fortitude": 1,
+            "reflex": 2,
+            "will": 0
+        },
+        "damage": {
+            "number_of_dice": 1,
+            "dice_value": 6
+        },
+        "initiative": 1,
+        "speed": {
+            "walk": 30,
+            "fly": 0
+        },
+        "size": "Medium",
+        "monster_type": "Humanoid",
+        "subtype": "Human",
+        "alignment": "Neutral Evil",
+        "special_abilities": {
+            "Surprise Attack": "If the bandit surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 2d6 damage."
+        },
+        "description": "A ruthless human bandit who preys on the weak and unsuspecting."
+    },
+    "3": {
+        "monster_name": "Skeleton",
+        "level": 1,
+        "hitpoints": 13,
+        "ability_scores": {
+            "Strength": 10,
+            "Dexterity": 14,
+            "Constitution": 15,
+            "Intelligence": 6,
+            "Wisdom": 8,
+            "Charisma": 5
+        },
+        "armor_class": 13,
+        "attack_bonus": 3,
+        "saving_throws": {
+            "fortitude": 2,
+            "reflex": 4,
+            "will": 0
+        },
+        "damage": {
+            "number_of_dice": 1,
+            "dice_value": 6
+        },
+        "initiative": 2,
+        "speed": {
+            "walk": 30,
+            "fly": 0
+        },
+        "size": "Medium",
+        "monster_type": "Undead",
+        "subtype": "",
+        "alignment": "Lawful Evil",
+        "special_abilities": {
+            "Undead Fortitude": "If damage reduces the skeleton to 0 hit points, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, the skeleton drops to 1 hit point instead."
+        },
+        "description": "A reanimated skeleton that serves dark masters and never tires."
+    },
+    "4": {
+        "monster_name": "Zombie",
+        "level": 1,
+        "hitpoints": 22,
+        "ability_scores": {
+            "Strength": 13,
+            "Dexterity": 6,
+            "Constitution": 16,
+            "Intelligence": 3,
+            "Wisdom": 6,
+            "Charisma": 5
+        },
+        "armor_class": 8,
+        "attack_bonus": 3,
+        "saving_throws": {
+            "fortitude": 5,
+            "reflex": -1,
+            "will": 0
+        },
+        "damage": {
+            "number_of_dice": 1,
+            "dice_value": 6
+        },
+        "initiative": -2,
+        "speed": {
+            "walk": 20,
+            "fly": 0
+        },
+        "size": "Medium",
+        "monster_type": "Undead",
+        "subtype": "",
+        "alignment": "Neutral Evil",
+        "special_abilities": {
+            "Undead Fortitude": "If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead."
+        },
+        "description": "A mindless undead creature driven by dark magic and insatiable hunger."
+    },
+    "5": {
+        "monster_name": "Orc",
+        "level": 2,
+        "hitpoints": 15,
+        "ability_scores": {
+            "Strength": 16,
+            "Dexterity": 12,
+            "Constitution": 14,
+            "Intelligence": 7,
+            "Wisdom": 11,
+            "Charisma": 10
+        },
+        "armor_class": 13,
+        "attack_bonus": 5,
+        "saving_throws": {
+            "fortitude": 5,
+            "reflex": 2,
+            "will": 1
+        },
+        "damage": {
+            "number_of_dice": 1,
+            "dice_value": 8
+        },
+        "initiative": 1,
+        "speed": {
+            "walk": 30,
+            "fly": 0
+        },
+        "size": "Medium",
+        "monster_type": "Humanoid",
+        "subtype": "Orc",
+        "alignment": "Chaotic Evil",
+        "special_abilities": {
+            "Aggressive": "As a bonus action, the orc can move up to its speed toward a hostile creature that it can see."
+        },
+        "description": "A fierce, warlike humanoid known for its Strength and aggression."
+    },
+    "6": {
+        "monster_name": "Hobgoblin",
+        "level": 2,
+        "hitpoints": 19,
+        "ability_scores": {
+            "Strength": 13,
+            "Dexterity": 12,
+            "Constitution": 12,
+            "Intelligence": 10,
+            "Wisdom": 10,
+            "Charisma": 9
+        },
+        "armor_class": 18,
+        "attack_bonus": 3,
+        "saving_throws": {
+            "fortitude": 3,
+            "reflex": 2,
+            "will": 1
+        },
+        "damage": {
+            "number_of_dice": 1,
+            "dice_value": 8
+        },
+        "initiative": 1,
+        "speed": {
+            "walk": 30,
+            "fly": 0
+        },
+        "size": "Medium",
+        "monster_type": "Humanoid",
+        "subtype": "Goblinoid",
+        "alignment": "Lawful Evil",
+        "special_abilities": {
+            "Martial Advantage": "Once per turn, the hobgoblin can deal an extra 7 (2d6) damage to a creature it hits with a weapon attack if that creature is within 5 feet of an ally of the hobgoblin that isn't incapacitated."
+        },
+        "description": "A disciplined and strategic warrior, the hobgoblin is a formidable opponent."
+    },
+    "7": {
+        "monster_name": "Gnoll",
+        "level": 2,
+        "hitpoints": 22,
+        "ability_scores": {
+            "Strength": 14,
+            "Dexterity": 12,
+            "Constitution": 11,
+            "Intelligence": 6,
+            "Wisdom": 10,
+            "Charisma": 7
+        },
+        "armor_class": 15,
+        "attack_bonus": 4,
+        "saving_throws": {
+            "fortitude": 2,
+            "reflex": 2,
+            "will": 1
+        },
+        "damage": {
+            "number_of_dice": 1,
+            "dice_value": 6
+        },
+        "initiative": 1,
+        "speed": {
+            "walk": 30,
+            "fly": 0
+        },
+        "size": "Medium",
+        "monster_type": "Humanoid",
+        "subtype": "Gnoll",
+        "alignment": "Chaotic Evil",
+        "special_abilities": {
+            "Rampage": "When the gnoll reduces a creature to 0 hit points with a melee attack on its turn, the gnoll can take a bonus action to move up to half its speed and make a bite attack."
+        },
+        "description": "A savage and hyena-like humanoid that revels in slaughter."
+    },
+    "8": {
+        "monster_name": "Bugbear",
+        "level": 2,
+        "hitpoints": 27,
+        "ability_scores": {
+            "Strength": 16,
+            "Dexterity": 14,
+            "Constitution": 13,
+            "Intelligence": 8,
+            "Wisdom": 11,
+            "Charisma": 9
+        },
+        "armor_class": 16,
+        "attack_bonus": 4,
+        "saving_throws": {
+            "fortitude": 3,
+            "reflex": 2,
+            "will": 1
+        },
+        "damage": {
+            "number_of_dice": 2,
+            "dice_value": 8
+        },
+        "initiative": 2,
+        "speed": {
+            "walk": 30,
+            "fly": 0
+        },
+        "size": "Medium",
+        "monster_type": "Humanoid",
+        "subtype": "Goblinoid",
+        "alignment": "Chaotic Evil",
+        "special_abilities": {
+            "Brute": "A melee weapon deals one extra die of its damage when the bugbear hits with it (included in the attack)."
+        },
+        "description": "A large and muscular goblinoid known for its stealth and Strength."
+    },
+    "9": {
+        "monster_name": "Lizardfolk",
+        "level": 2,
+        "hitpoints": 22,
+        "ability_scores": {
+            "Strength": 15,
+            "Dexterity": 10,
+            "Constitution": 13,
+            "Intelligence": 7,
+            "Wisdom": 12,
+            "Charisma": 7
+        },
+        "armor_class": 15,
+        "attack_bonus": 4,
+        "saving_throws": {
+            "fortitude": 3,
+            "reflex": 0,
+            "will": 2
+        },
+        "damage": {
+            "number_of_dice": 1,
+            "dice_value": 8
+        },
+        "initiative": 0,
+        "speed": {
+            "walk": 30,
+            "swim": 30
+        },
+        "size": "Medium",
+        "monster_type": "Humanoid",
+        "subtype": "Lizardfolk",
+        "alignment": "Neutral",
+        "special_abilities": {
+            "Hold Breath": "The lizardfolk can hold its breath for 15 minutes."
+        },
+        "description": "A reptilian humanoid with natural armor and a fierce demeanor."
+    },
+    "10": {
+        "monster_name": "Ogre",
+        "level": 3,
+        "hitpoints": 34,
+        "ability_scores": {
+            "Strength": 19,
+            "Dexterity": 8,
+            "Constitution": 16,
+            "Intelligence": 5,
+            "Wisdom": 7,
+            "Charisma": 7
+        },
+        "armor_class": 11,
+        "attack_bonus": 6,
+        "saving_throws": {
+            "fortitude": 6,
+            "reflex": 1,
+            "will": 2
+        },
+        "damage": {
+            "number_of_dice": 2,
+            "dice_value": 8
+        },
+        "initiative": -1,
+        "speed": {
+            "walk": 40,
+            "fly": 0
+        },
+        "size": "Large",
+        "monster_type": "Giant",
+        "subtype": "",
+        "alignment": "Chaotic Evil",
+        "special_abilities": {
+            "Brute": "A melee weapon deals one extra die of its damage when the ogre hits with it (included in the attack)."
+        },
+        "description": "A large and brutish giant known for its Strength and brutality."
+    },
+    "11": {
+        "monster_name": "Wight",
+        "level": 3,
+        "hitpoints": 45,
+        "ability_scores": {
+            "Strength": 15,
+            "Dexterity": 14,
+            "Constitution": 16,
+            "Intelligence": 10,
+            "Wisdom": 13,
+            "Charisma": 15
+        },
+        "armor_class": 14,
+        "attack_bonus": 5,
+        "saving_throws": {
+            "fortitude": 3,
+            "reflex": 4,
+            "will": 2
+        },
+        "damage": {
+            "number_of_dice": 1,
+            "dice_value": 8
+        },
+        "initiative": 2,
+        "speed": {
+            "walk": 30,
+            "fly": 0
+        },
+        "size": "Medium",
+        "monster_type": "Undead",
+        "subtype": "",
+        "alignment": "Neutral Evil",
+        "special_abilities": {
+            "Life Drain": "Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 10 (2d6 + 3) necrotic damage. The target must succeed on a DC 13 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0."
+        },
+        "description": "A vengeful spirit that drains the life force of its victims."
+    },
+    "12": {
+        "monster_name": "Manticore",
+        "level": 3,
+        "hitpoints": 52,
+        "ability_scores": {
+            "Strength": 17,
+            "Dexterity": 16,
+            "Constitution": 17,
+            "Intelligence": 7,
+            "Wisdom": 12,
+            "Charisma": 8
+        },
+        "armor_class": 14,
+        "attack_bonus": 5,
+        "saving_throws": {
+            "fortitude": 3,
+            "reflex": 3,
+            "will": 1
+        },
+        "damage": {
+            "number_of_dice": 2,
+            "dice_value": 6
+        },
+        "initiative": 3,
+        "speed": {
+            "walk": 30,
+            "fly": 50
+        },
+        "size": "Large",
+        "monster_type": "Monstrosity",
+        "subtype": "",
+        "alignment": "Lawful Evil",
+        "special_abilities": {
+            "Tail Spikes": "Ranged Weapon Attack: +5 to hit, range 100/200 ft., one target. Hit: 7 (1d8 + 3) piercing damage."
+        },
+        "description": "A fearsome beast with a lion's body, a human's head, and a tail that shoots deadly spikes."
+    },
+    "13": {
+        "monster_name": "Minotaur",
+        "level": 3,
+        "hitpoints": 76,
+        "ability_scores": {
+            "Strength": 18,
+            "Dexterity": 11,
+            "Constitution": 16,
+            "Intelligence": 6,
+            "Wisdom": 16,
+            "Charisma": 9
+        },
+        "armor_class": 14,
+        "attack_bonus": 6,
+        "saving_throws": {
+            "fortitude": 5,
+            "reflex": 0,
+            "will": 5
+        },
+        "damage": {
+            "number_of_dice": 2,
+            "dice_value": 12
+        },
+        "initiative": 0,
+        "speed": {
+            "walk": 40,
+            "fly": 0
+        },
+        "size": "Large",
+        "monster_type": "Monstrosity",
+        "subtype": "",
+        "alignment": "Chaotic Evil",
+        "special_abilities": {
+            "Charge": "If the minotaur moves at least 10 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) piercing damage."
+        },
+        "description": "A savage, bull-headed monster known for its Strength and ferocity."
+    },
+    "14": {
+        "monster_name": "Ghoul",
+        "level": 3,
+        "hitpoints": 22,
+        "ability_scores": {
+            "Strength": 13,
+            "Dexterity": 15,
+            "Constitution": 10,
+            "Intelligence": 7,
+            "Wisdom": 10,
+            "Charisma": 6
+        },
+        "armor_class": 12,
+        "attack_bonus": 3,
+        "saving_throws": {
+            "fortitude": 2,
+            "reflex": 2,
+            "will": 1
+        },
+        "damage": {
+            "number_of_dice": 1,
+            "dice_value": 6
+        },
+        "initiative": 2,
+        "speed": {
+            "walk": 30,
+            "fly": 0
+        },
+        "size": "Medium",
+        "monster_type": "Undead",
+        "subtype": "",
+        "alignment": "Chaotic Evil",
+        "special_abilities": {
+            "Paralyzing Touch": "If a ghoul hits a target with its claws, the target must succeed on a DC 10 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+        },
+        "description": "An undead creature that paralyzes its victims with a touch."
+    }
+}    
