@@ -1,0 +1,3 @@
+[console_scripts]
+fragscan_ct=fragscan_ct.main:app
+

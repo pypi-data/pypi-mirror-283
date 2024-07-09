@@ -1,0 +1,178 @@
+Metadata-Version: 2.1
+Name: fragscan_ct
+Version: 0.1.0
+Summary: This Python package, is designed to calculate the fragment length ratios from a BAM file using the input BED and reference genome files. The script provides several options for manipulating the input intervals and applying GC content correction to the coverage analysis.
+Author: Ronak Shah
+Author-email: shahr2@mskcc.org
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: numpy (>=2.0.0,<3.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: plotly (>=5.22.0,<6.0.0)
+Requires-Dist: scipy (>=1.7.3,<2.0.0)
+Requires-Dist: statsmodels (>=0.14.2,<0.15.0)
+Requires-Dist: typer[all] (>=0.12.3,<0.13.0)
+Description-Content-Type: text/markdown
+
+# fragscan_ct
+
+This Python package, is designed to calculate the fragment length ratios from a BAM file using the input BED and reference genome files. The script provides several options for manipulating the input intervals and applying GC content correction to the coverage analysis.
+
+## Features
+
+1. Fragment Ratio Calculation: The script calculates the ratio of short to long fragments based on the input BAM file.
+2. Interval Manipulation: Users can choose to merge or split the intervals in the input BED file, as well as pad the coordinates before binning.
+3. GC Content Correction: The script applies a LOWESS (Locally Weighted Scatterplot Smoothing) algorithm to correct the coverage based on the GC content of the fragments.
+4. Visualization: The script generates plots to visualize the fragment length distribution and the GC-corrected coverage.
+5. Output: The script generates a text file containing the calculated fragment counts, ratios, z-scores, and coverage information.
+
+## Dependencies
+
+The script requires the following Python 3 libraries:
+
+* typer: For command-line interface
+* pathlib: For handling file paths
+* rich: For progress bar and console output
+* plotly: For generating interactive plots
+* pandas: For data manipulation
+* numpy: For numerical operations
+* scipy: For statistical functions
+
+## Usage
+
+### Main
+
+```bash
+
+❯ python fragscan_ct --help
+
+ Usage: fragscan_ct [OPTIONS] COMMAND [ARGS]...
+
+ ╭─ Options ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+ │ --install-completion          Install completion for the current shell.                                                                                  │
+ │ --show-completion             Show completion for the current shell, to copy it or customize the installation.                                           │
+ │ --help                        Show this message and exit.                                                                                                │
+ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ ╭─ Commands ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+ │ generate-fragment-ratios  The `generate_fragment_ratios` function generates a new TXT file by processing a BED file and calculating fragment length      │
+ │                           ratios from a BAM file.                                                                                                        │
+ │ plot-fragment-ratios      The `plot_fragment_ratios` function takes in a file of files or a list of input TXT files, reads the data from the files into  │
+ │                           a Pandas DataFrame, and plots a line plot of the "Ratio" column against the "Id" column, with different colors for each        │
+ │                           "Sample_Id". The resulting plot is saved as an HTML file.                                                                      │
+ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+```
+
+### Generate Ratios
+
+The `generate_fragment_ratios` function calculates fragment ratios from a BAM file using input BED and reference genome files, with options for interval manipulation and GC correction.
+
+```bash
+
+❯ python fragscan_ct generate-fragment-ratios --help
+
+Usage: fragscan_ct generate_fragment_ratios [OPTIONS]
+
+╭─ Options ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ *  --reference-file         -r        FILE                  Input reference genome FASTA file to be used while traversing the BAM file [default: None] [required]                                                                                                                  │
+│ *  --input-bed              -i        FILE                  Input BED file to be used to traverse the BAM file [default: None] [required]                                                                                                                                          │
+│ *  --input-bam              -bam      FILE                  Input BAM file to be used to calculate fragment length [default: None] [required]                                                                                                                                      │
+│    --output-txt             -o        TEXT                  Output TXT file after traversing the BAM file [default: fragment_counts.txt]                                                                                                                                           │
+│ *  --sample-id              -id       TEXT                  Sample Identifier [default: None] [required]                                                                                                                                                                           │
+│    --merge-interval         -m                              Merge interval in the BED file by splitting the 4th column with `:` and using the first value                                                                                                                          │
+│    --split-interval         -s                              Split the BED interval based on the BIN size specified in the `bin_size` option.                                                                                                                                       │
+│    --short-fragment-length  -sfl      <INTEGER INTEGER>...  Define which fragments should be called as short fragment, provide two integers separated by a comma, the first value in the tuple is the lower bound of the fragment length range for short fragments, and the second │
+│                                                             value is the upper bound of the fragment length range for short fragments                                                                                                                                              │
+│                                                             [default: 100, 150]                                                                                                                                                                                                    │
+│    --long-fragment-length   -lfl      <INTEGER INTEGER>...  Define which fragments should be called as long fragment, provide two integers separated by a comma, the first value in the tuple is the lower bound of the fragment length range for long fragments, and the second   │
+│                                                             value is the upper bound of the fragment length range for long fragments                                                                                                                                               │
+│                                                             [default: 151, 220]                                                                                                                                                                                                    │
+│    --bin-size               -b        INTEGER               Bin size to split the BED file, only used when `split_interval` is True [default: 50]                                                                                                                                  │
+│    --pad-size               -p        INTEGER               Pad the coordinates with the given pad size in the BED file, before binning [default: 50]                                                                                                                              │
+│    --lowess-fraction        -l        FLOAT                 When running lowess GC correction of coverage, the fraction of the data used when estimating each y-value [default: 0.75]                                                                                              │
+│    --help                                                   Show this message and exit.                                                                                                                                                                                            │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+```
+
+The required inputs are:
+
+* --reference-file: The reference genome FASTA file.
+* --input-bed: The input BED file containing the genomic intervals of interest.
+* --input-bam: The input BAM file containing the sequencing reads.
+* --sample-id: The identifier for the sample being processed.
+
+The optional parameters allow you to customize the interval manipulation and GC content correction:
+
+* --merge-interval: Merges the intervals in the BED file.
+* --split-interval: Splits the intervals in the BED file based on the --bin-size parameter.
+* --bin-size: The size of the bins used when --split-interval is enabled.
+* --pad-size: The size of the padding applied to the coordinates in the BED file.
+* --lowess-fraction: The fraction of data used for the LOWESS GC content correction.
+
+#### Example Command:
+
+```bash
+python fragscan_ct generate_fragment_ratios \
+    --reference-file=hg38.fa \
+    --input-bed=target_regions.bed \
+    --input-bam=sample_data.bam \
+    --output-txt=fragment_counts.txt \
+    --sample-id=sample_1 \
+    --short-fragment-length=100,150 \
+    --long-fragment-length=151,220 \
+    --lowess-fraction=0.75
+```
+
+#### Output
+
+The script generates a text file named fragment_counts.txt (or the value specified in the --output-txt option) containing the following information:
+
+* Chromosome
+* Start position
+* End position
+* Additional information from the BED file
+* Strand
+* Score
+* Short fragment counts
+* Long fragment counts
+* Raw ratio
+* Coverage for short fragments
+* Coverage for long fragments
+* GC content for short fragments
+* GC content for long fragments
+
+### Plot Ratios
+
+ The `plot_fragment_ratios` function takes in a file of files or a list of input TXT files, reads the data from the files into a Pandas DataFrame, and plots a line plot of the "Ratio" column against the "Id" column, with different colors for each "Sample_Id". The resulting plot is saved as an HTML file.
+
+```bash
+
+❯ python fragscan_ct plot-fragment-ratios --help
+
+ Usage: fragscan_ct plot-fragment-ratios
+             [OPTIONS]
+
+╭─ Options ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ --list           -l      PATH  File of files, List of txt files to be used for plotting [default: None]                                                                                                                                                                            │
+│ --input-txt      -i      FILE  Input TXT file that was generated using generate_fragment_counts [default: None]                                                                                                                                                                    │
+│ --output-prefix  -o      TEXT  Output HTML file prefix for the line and box plot [default: fragment_counts]                                                                                                                                                                        │
+│ --help                         Show this message and exit.                                                                                                                                                                                                                         │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+```
+
+#### Output
+
+* Fragment length distribution
+* GC-corrected coverage
+
+These plots are saved as fragment_length_distribution.html and gc_corrected_coverage.html, respectively.
+
+
+## License
+
+This project is licensed under the GPL3 License.
