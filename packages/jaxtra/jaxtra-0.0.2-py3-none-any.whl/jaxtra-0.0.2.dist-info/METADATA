@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: jaxtra
+Version: 0.0.2
+Summary: JAXTRA
+Home-page: https://github.com/amirhosseinghanipour/jaxtra
+Author: Amirhossein Ghanipour
+Author-email: <amirhosseinghanipour@fgn.ui.ac.ir>
+Keywords: jax,deep learning,neural networks,artificial intelligence
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.11.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: jax
+
+A package for building and training neural networks with JAX.
