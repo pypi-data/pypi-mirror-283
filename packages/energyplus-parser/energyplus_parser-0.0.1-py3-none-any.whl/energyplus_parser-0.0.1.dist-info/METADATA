@@ -1,0 +1,87 @@
+Metadata-Version: 2.1
+Name: energyplus_parser
+Version: 0.0.1
+Summary: A simple toolkit for parsing EnergyPlus IDF files and generating 2D/3D visualisations of the geometry. Based on the parseidf module by Daren Thomas.
+Author-email: Dillon Loh <loh.dillon@gmail.com>
+License: The MIT License (MIT)
+        
+        Copyright (c) 2014 Daren Thomas, SuAT (http://suat.arch.ethz.ch)
+        Copyright (c) 2023 Dillon Loh
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in
+        all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+        THE SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/dillonloh/energyplus_parser
+Keywords: simulation,parsing,energyplus,idf
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: matplotlib
+Requires-Dist: ply
+Requires-Dist: numpy ==1.26.4
+Requires-Dist: plotly
+
+# IDF Parser and Geometry 2D/3D Visualiser
+
+Parses an IDF file and provides a JSON-like dictionary of lists. Refer to original README below for information on format.
+
+Also provides functions to generate 2D Projections, 3D Point Clouds, and 3D Mesh visualisations of the
+geometry in the IDF file. This is the main feature that sets it apart from the original repo.
+
+
+# ORIGINAL README
+# parseidf.py
+
+Parses an IDF file (as used by EnergyPlus) into a dictionary of lists in the following manner:
+
+- each IDF object is represented by a list of its fields, with the first field being the object type.
+
+- each such list is appended to a list of objects with the same type in the dictionary, indexed by type:
+
+   { A => [[A, x, y, z], [A, a, b, c]],
+     B => [[B, 1, 2], [B, 1, 2, 3]] }
+
+- the index keys are all capitalized.
+
+- also, all field values are strings, i.e. no interpretation of the values is made.
+
+# Example
+
+```python
+import parseidf
+
+with open(r'in.idf', 'r') as f:
+    idf = parseidf.parse(f.read())
+print idf.keys()  # lists the object types in the idf file
+print idf['OUTPUT:VARIABLE']  # lists all the Output:Variable objects in the idf file
+```
+
+# Dependencies
+
+parseidf depends on PLY (Python Lex & Yacc): https://pypi.python.org/pypi/ply/3.4
+
+# License & Credit
+
+This project is licensed under the terms of the MIT license. See the file "LICENSE" in the project root for more information.
+
+This module was developed by Daren Thomas at the assistant chair for [Sustainable Architecture and Building Technologies (SuAT)](http://suat.arch.ethz.ch)
+at the [Institute of Technology in Architecture](http://ita.arch.ethz.ch), ETH Zürich.
+
