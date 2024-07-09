@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: shared-lru-cache
+Version: 0.1.1
+Summary: 
+Author: Richard Löwenström
+Author-email: samedii@gmail.com
+Requires-Python: >=3.9,<3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+
+# shared lru cache
+
+## Install
+
+```bash
+poetry add shared-lru-cache
+```
+
+## Usage
+
+```
+from shared_lru_cache import shared_lru_cache
+
+
+@shared_lru_cache(maxsize=8)
+def load_image():
+    pass
+```
+
