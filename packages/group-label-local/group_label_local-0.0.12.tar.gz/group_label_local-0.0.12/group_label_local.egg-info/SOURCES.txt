@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+group_label_local.egg-info/PKG-INFO
+group_label_local.egg-info/SOURCES.txt
+group_label_local.egg-info/dependency_links.txt
+group_label_local.egg-info/requires.txt
+group_label_local.egg-info/top_level.txt
+group_label_local/src/GroupLabel.py
+group_label_local/src/LabelConstants.py
+group_label_local/src/__init__.py
