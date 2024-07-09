@@ -1,0 +1,9 @@
+templates:
+  - mmap_segment.template
+  - read_mmap_segment.template
+  - write_mmap_segment.template
+
+modules:
+  - mmap_segment.h
+  - read_mmap_segment.c
+  - write_mmap_segment.c

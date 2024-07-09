@@ -1,0 +1,57 @@
+/* -*- Mode: H; indent-tabs-mode: t; c-basic-offset: 4; tab-width: 4 -*-  */
+/*
+ * mmap_segment.h
+ * Copyright (C) ${YEAR} Vladimir Roncevic <elektron.ronca@gmail.com>
+ *
+ * ${PRO} is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the
+ * Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * ${PRO} is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+#pragma once
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/mman.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <string.h>
+#include <sys/stat.h>
+
+//////////////////////////////////////////////////////////////////////////////
+/// @brief Shared memory segment storage id (location)
+#define MMAP_STORAGE_ID "/SHM_${PRO}"
+
+//////////////////////////////////////////////////////////////////////////////
+/// @brief Shared memory segment size
+#define MMAP_STORAGE_SIZE 4096
+
+//////////////////////////////////////////////////////////////////////////////
+/// @brief Shared memory segment error code
+#define MMAP_ERROR -1
+
+//////////////////////////////////////////////////////////////////////////////
+/// @brief Shared memory segment success code
+#define MMAP_SUCCESS 0
+
+//////////////////////////////////////////////////////////////////////////////
+/// @brief Writes data to a shared memory segment
+/// @param storage_id Shared memory segment location (MMAP_STORAGE_ID)
+/// @param buffer Buffer with data to write to shread memory segment
+/// @return 0 on success or -1 on error
+int write_mmap_segment(const char *storage_id, void *buffer);
+
+//////////////////////////////////////////////////////////////////////////////
+/// @brief Reads a data from shared memory segment
+/// @param storage_id Shared memory segment location (MMAP_STORAGE_ID)
+/// @param buffer Buffer for read bytes from shared memory segment
+/// @return 0 for success or -1 on error
+int read_mmap_segment(const char *storage_id, void *buffer);
