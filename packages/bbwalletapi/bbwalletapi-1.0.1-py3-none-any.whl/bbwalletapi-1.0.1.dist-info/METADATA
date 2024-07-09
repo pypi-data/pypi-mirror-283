@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: bbwalletapi
+Version: 1.0.1
+Summary: Simple Python Wrapper for scraping and accessing Wallet App by Budgetbakers Data
+Home-page: https://github.com/cherdon/WalletAPI
+Author: Liew Cher Don
+Author-email: liewcherdon@gmail.com
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# WalletAPI
+API Library for interaction with Wallet App by Budgetbakers.
+
+This is not an official API, since they had removed their official REST API.
