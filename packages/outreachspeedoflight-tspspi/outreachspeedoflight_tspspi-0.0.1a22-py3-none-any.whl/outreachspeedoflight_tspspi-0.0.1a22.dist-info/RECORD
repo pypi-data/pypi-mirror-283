@@ -1,0 +1,13 @@
+outreachspeedoflight/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+outreachspeedoflight/daq.py,sha256=rVG1qZm3EX1_uwJ7CiY4nhJA3-aG88AYRjgTt9zlSRg,14340
+outreachspeedoflight/highscorewindow.py,sha256=QwKaEViZTGuFLSC0PdDjqxtZ6X1rlDcfjMqd7glyjDI,11425
+outreachspeedoflight/logo01.png,sha256=ET2s8c5VMUTNmhPi6Sq1KqgA2CHjiIkHOekQVgz-ZDg,58217
+outreachspeedoflight/logo02.png,sha256=_4CItCMhHi-Sfx9Ac68zjkfQ7fz-s7KbEF6XiZ9KVBQ,103191
+outreachspeedoflight/speedoflightgui.py,sha256=EUnHjnzT_6cUtjf7J5HSTRY4ayDmVtSzDtdysr9qrUM,21500
+outreachspeedoflight/strings.py,sha256=rvLrLuaVFmO7ANEQnI-41JkpgkePTDW_PhOyoJDFjk4,3589
+outreachspeedoflight_tspspi-0.0.1a22.dist-info/LICENSE.md,sha256=wiGiYkY3ZiN8dNHiZMqDH9zJ_CscFWcrzhQ6EPnq3xM,1411
+outreachspeedoflight_tspspi-0.0.1a22.dist-info/METADATA,sha256=tSDQSKyV6exWFPuEa-RUVFlUsD9TbQ9eboUUUCnO9tA,10872
+outreachspeedoflight_tspspi-0.0.1a22.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+outreachspeedoflight_tspspi-0.0.1a22.dist-info/entry_points.txt,sha256=6THsia7JWU_KWpboiu1RV2tCYDTZen5TVcIIaOaQJJg,93
+outreachspeedoflight_tspspi-0.0.1a22.dist-info/top_level.txt,sha256=2Od4DjgLWx52srwFOkbmmnq6X9lnNvGE0Ct5KEP5mx0,21
+outreachspeedoflight_tspspi-0.0.1a22.dist-info/RECORD,,
