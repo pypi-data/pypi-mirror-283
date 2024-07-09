@@ -1,0 +1,7 @@
+__title__ = "starburst-client"
+__description__ = "Starburst Enterprise REST API Client"
+__url__ = "https://github.com/aksakalli/starburst-python-client"
+__version__ = "0.0.1"
+__author__ = "Can Güney Aksakalli"
+__author_email__ = "cgaksakalli@gmail.com"
+__license__ = "Apache 2.0"
