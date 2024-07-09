@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+fastapi_base/app.py
+fastapi_base/main.py
+fastapi_base/project.py
+fastapi_base/utils.py
+fastapi_base.egg-info/PKG-INFO
+fastapi_base.egg-info/SOURCES.txt
+fastapi_base.egg-info/dependency_links.txt
+fastapi_base.egg-info/entry_points.txt
+fastapi_base.egg-info/top_level.txt
