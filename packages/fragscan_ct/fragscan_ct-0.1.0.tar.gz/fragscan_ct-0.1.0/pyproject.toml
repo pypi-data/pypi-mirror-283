@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "fragscan_ct"
+version = "0.1.0"
+description = "This Python package, is designed to calculate the fragment length ratios from a BAM file using the input BED and reference genome files. The script provides several options for manipulating the input intervals and applying GC content correction to the coverage analysis."
+authors = ["Ronak Shah <shahr2@mskcc.org>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+fragscan_ct = "fragscan_ct.main:app"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+typer = {extras = ["all"], version = "^0.12.3"}
+plotly = "^5.22.0"
+pandas = "^2.2.2"
+numpy = "^2.0.0"
+scipy = "^1.7.3"
+statsmodels = "^0.14.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
