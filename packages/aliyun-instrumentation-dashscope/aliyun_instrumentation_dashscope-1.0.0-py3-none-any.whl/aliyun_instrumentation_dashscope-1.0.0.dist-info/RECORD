@@ -1,0 +1,11 @@
+aliyun/instrumentation/dashscope/__init__.py,sha256=4cZQmopLn_4xXJjXGCg-fZLTRuPW4KA8yKkfwa3hoNA,1418
+aliyun/instrumentation/dashscope/_request_attributes_extractor.py,sha256=HAuL30gKHj5bZuoeA0rnjLVuVXohmjplQgOsHxV91aA,4708
+aliyun/instrumentation/dashscope/_response_attributes_extractor.py,sha256=CvK3dsYnWD1w_B4n0gm3COQObkVG0SkPeFhgMxSegnk,5050
+aliyun/instrumentation/dashscope/_with_span.py,sha256=6e_qm1riTIHaVJT--EWNZnQG1JvWOKPMrD57HwlNtuQ,2449
+aliyun/instrumentation/dashscope/_wrapper.py,sha256=QvAerR4UH1l_y05055NxrDVhsFgAg-6btNuxHjNaDaw,6653
+aliyun/instrumentation/dashscope/package.py,sha256=PfW0NknH2HZi7bedUzqV1_n-NSedRkgXBGRumgJN0Vw,65
+aliyun/instrumentation/dashscope/utils.py,sha256=L1R2wpp89Tx2Kw3bBstp_uqTUAQI3066Dsmhi_N_j-s,215
+aliyun/instrumentation/dashscope/version.py,sha256=uyfGiipFnhOCQlqywx7wsgp6d-SYnqPqsPQd_xePZl8,23
+aliyun_instrumentation_dashscope-1.0.0.dist-info/METADATA,sha256=SddChvM3a6XWqfjR_DlBE0M3HgR0jtlnYd2mHh6WRZM,1722
+aliyun_instrumentation_dashscope-1.0.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+aliyun_instrumentation_dashscope-1.0.0.dist-info/RECORD,,
