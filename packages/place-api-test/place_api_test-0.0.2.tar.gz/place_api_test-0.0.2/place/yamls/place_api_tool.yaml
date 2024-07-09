@@ -1,0 +1,14 @@
+place.tools.place_api_tool.get_place_intelligence_flow_api:
+  function: get_place_intelligence_flow_api
+  inputs:
+      allowed:
+        type:
+        - boolean
+      chat_input:
+        type:
+        - dict
+        description: Input dictionary for chat input
+  module: pl_intelligence.tools.pl_intelligence_tool
+  name: pl_intelligence tool
+  description: Import pl_intelligence flow
+  type: python
