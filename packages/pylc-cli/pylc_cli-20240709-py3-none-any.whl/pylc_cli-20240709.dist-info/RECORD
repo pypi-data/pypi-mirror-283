@@ -1,0 +1,14 @@
+pylc_cli/__init__.py,sha256=spQ3k85etCVeXIKC4_676e3IAg402S10AHnOXhHBm5s,1505
+pylc_cli/cache.py,sha256=UQf8gC0KyRoql8MbAaWbRvUbA4jPFFO0DkriCs5lFgM,1416
+pylc_cli/display_problem.py,sha256=XmrwqEzSeMDDMLN0Irnl0baHaWnWoHpn-YlXz2qv3bA,1602
+pylc_cli/main.py,sha256=dBFxlYkAnjo117n7PzGw_Q-J16lhhJzOQS_QWabRb44,2534
+pylc_cli/run_solution.py,sha256=gwLkNDka4R5jXQEcRnv7ici-MpSyOE3kzvyKV-vMxNo,4288
+pylc_cli/solve_problem.py,sha256=_sU7X_WW8wBbEqD7wFDkmhBl8XnFbloHc0RVxTgVKnc,1137
+pylc_cli/queries/__init__.py,sha256=PFR6-QkZhiActFgti3aRk-D9DJk9BuE_Gyo7pLOGj7I,421
+pylc_cli/queries/graphql.py,sha256=h__ukXdafp2-IZtO4psrd7il1oJ7MmaufRA1UYpwcow,5757
+pylc_cli/queries/judge.py,sha256=YXYFB15-penTrnccYCrBqBDHJ15qZuGaikH18aqzki0,1192
+pylc_cli/queries/status.py,sha256=drBpUUCYVRatdErXDAkAiOfUYRJw5pX66rKlPpdsVow,639
+pylc_cli-20240709.dist-info/METADATA,sha256=-GrVA68OKEWqKlxaG5ddZFTGfXwjTlCw3B10Sup3qc4,1295
+pylc_cli-20240709.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+pylc_cli-20240709.dist-info/entry_points.txt,sha256=lG0Gy-kViQHN2IWTaIi1wEMvnBEjPWtor07OcuAv7uY,44
+pylc_cli-20240709.dist-info/RECORD,,
