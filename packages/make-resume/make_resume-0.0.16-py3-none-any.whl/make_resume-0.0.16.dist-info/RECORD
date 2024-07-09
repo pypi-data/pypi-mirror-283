@@ -1,0 +1,8 @@
+make_resume/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+make_resume/make_resume.py,sha256=pV0EF1BlPYi82IxkNDAxSuS6O2V5cGs92jvMq1mubuQ,1304
+make_resume/template.html,sha256=ZC2cPzMrM5ejawJAtV1FmddlqThXd13cD4VWw1trsbE,5203
+make_resume-0.0.16.dist-info/METADATA,sha256=3BTWjpjxqVgpgtwhbrOi-2ehiFbsauRAqu2wY3AF1Bs,973
+make_resume-0.0.16.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+make_resume-0.0.16.dist-info/entry_points.txt,sha256=AyKt-X9__Tr9WRVMq-rAWN-fmiAe6mLUAW53f11YkvQ,68
+make_resume-0.0.16.dist-info/licenses/LICENSE,sha256=XIgzTUg9-jsZlogbUb0DlZzTqc3Tx-a4y8GBFO7UnbU,1068
+make_resume-0.0.16.dist-info/RECORD,,
