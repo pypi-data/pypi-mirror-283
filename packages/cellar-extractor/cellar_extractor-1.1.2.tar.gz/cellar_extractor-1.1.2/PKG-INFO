@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: cellar_extractor
+Version: 1.1.2
+Summary: Library for extracting cellar data
+Home-page: UNKNOWN
+Author: LawTech Lab
+Author-email: p.lewandowski@student.maastrichtuniversity.nl
+License: MIT
+Project-URL: Bug Tracker, https://github.com/maastrichtlawtech/extraction_libraries
+Project-URL: Build Source, https://github.com/maastrichtlawtech/extraction_libraries
+Keywords: cellar,extractor
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# extraction_libraries
+Python library for extracting caselaw data from Cellar.
+Full documentation available at [cellar-extractor](https://pypi.org/project/cellar-extractor/).
+
+

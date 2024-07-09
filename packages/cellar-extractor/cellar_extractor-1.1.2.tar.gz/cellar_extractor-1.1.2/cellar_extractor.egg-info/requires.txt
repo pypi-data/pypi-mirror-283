@@ -1,0 +1,6 @@
+SPARQLWrapper
+bs4
+pandas
+requests
+tqdm
+xmltodict>=0.9.0
