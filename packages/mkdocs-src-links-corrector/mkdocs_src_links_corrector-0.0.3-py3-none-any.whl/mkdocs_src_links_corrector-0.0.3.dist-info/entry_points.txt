@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+img_src_corrector = mkdocs_src_links_corrector.plugin:ImgSrcPlugin
