@@ -1,0 +1,241 @@
+- # KT AI IOT Python 라이브러리
+
+  ## 개요
+
+  - 교육용 KT AI IOT 디바이스를 제어하는 Python기반 라이브러리입니다.
+
+  - 설치: pip install kt_ai_iot
+
+  - import: kt_ai_iot
+
+  - 요구사항: numpy, pyserial
+
+  - 사용 예제:
+
+    ```python
+    import kt_ai_iot
+    import time
+    
+    def main():
+        kt_ai_iot.set_debug(True)
+        kt_ai_iot.get_serial_list()
+        conn, reader = kt_ai_iot.open('COM3', 38400)
+    
+        try:
+            while True:
+                # 디지털 입력 1번핀 입력이 있을 경우 GPIO 1번 출력 핀을 1로 설정
+                if reader.get_digit_in1() == 0:
+                    kt_ai_iot.gpio_out(1, 1)
+                # 디지털 입력 1번핀 입력이 없을 경우 GPIO 1번 출력 핀을 0으로 설정
+                else:
+                    kt_ai_iot.gpio_out(1, 0)
+        except KeyboardInterrupt:
+            print("Program interrupted by user")
+        finally:
+            conn.close()
+    
+    
+    if __name__ == '__main__':
+        main()
+    ```
+
+  
+
+  ## 명령어 Summary
+
+  - set_debug: 라이브러리 동작 출력 확인
+
+  - get_serial_list: 통신 포트 리스트 확인
+
+  - open: 디바이스와 통신 연결
+
+  - close: 디바이스와 통신 끊기
+
+  - gpio_out: GPIO 출력.
+
+  - servo_motor: 서버모터 동작
+
+  - dc_motor_all_on: DC모터 동작
+
+  - dc_motor_all_off: DC모터 중지
+
+  - dc_motor1_on: DC모터1 동작
+
+  - dc_motor2_on: DC모터2 동작
+
+  - set_digit_in_trigger: GPIO 디지털 입력 트리거 레벨 설정
+
+  - reader.get_digit_in1: GPIO 포트 1 디지털 입력 읽기
+
+  - reader.get_digit_in2: GPIO 포트 2 디지털 입력 읽기
+
+  - reader.get_digit_in3: GPIO 포트 3 디지털 입력 읽기
+
+  - reader.get_digit_in4: GPIO 포트 4 디지털 입력 읽기
+
+  - reader.get_analog_in1: GPIO 포트 1 아날로그 입력 읽기
+
+  - reader.get_analog_in2: GPIO 포트 2 아날로그 입력 읽기
+
+  - reader.get_analog_in3: GPIO 포트 3 아날로그 입력 읽기
+
+  - reader.get_analog_in4: GPIO 포트 4 아날로그 입력 읽기
+
+  - reader.get_remocon: 리모컨 입력 값 읽기
+
+    
+
+  ## 통신 명령어
+
+  - 설명: 디바이스와 통신 연결을 위한 명령어 모음 입니다.
+
+  #### get_serial_list()
+
+  - 설명: 컴퓨터에 연결된 시리얼 통신 포트 리스트를 출력합니다. KT-AI-IOT 디바이스 포트 번호를 확인하세요.
+  - 입력: 없음
+  - 응답: 터미널 창에 통신 포트 리스트를 출력
+
+  #### open(port, baud)
+
+  - 설명: 디바이스와 시리얼 통신 연결을 합니다.
+  - 입력:
+    - port: 디바이스의 포트 번호 문자열 예) 'COM3'
+    - baud: 통신 속도 (기본: 38400)
+  - 응답: conn, reader
+    - conn: 연결된 통신 객체, 연결을 끊을 때 필요합니다.
+    - reader: 디바이스로부터 수신되는 입력 데이터 집합 객체, 입력 값 확인 시, 필요합니다.
+
+  #### conn.close()
+
+  - 설명: 디바이스와 통신을 해제합니다.
+
+  - 입력: 없음
+
+  - 응답: 없음
+
+    
+
+  ### 동작 명령어
+
+  - 설명: 디바이스를 동작 시키는 명령어입니다.
+
+  #### gpio_out(pin, logic)
+
+  - 설명: GPIO 포트핀으로 출력을 High, Low로 설정합니다.
+  - 입력: 
+    - pin: GPIO핀 번호(범위: 1 ~ 6)
+    - logic: 0(low) 또는 1(high)
+  - 응답: 전송 성공 여부
+
+  #### servo_motor(pin, angle, speed)
+
+  - 설명: 서버모터의 포트핀으로 각도와 속도를 설정합니다.
+  - 입력: 
+    - pin: 서버모터 핀 번호(범위: 3 ~ 6)
+    - angle: 동작 각도를 설정합니다. (범위: -90 ~ 90)
+    - speed: 동작 속도를 설정합니다. (범위: 0 ~ 30)
+  - 응답: 전송 성공 여부
+
+  #### dc_motor_all_on(l1, r1, l2, r2)
+
+  - 설명: DC모터 1번과 2번을 동시에 동작하도록 설정합니다.
+  - 입력: 
+    - l1: LEFT 1번의 모터 속도를 설정합니다. (범위: -100 ~ 100)
+    - r1: RIGHT 1번의 모터 속도를 설정합니다. (범위: -100 ~ 100)
+    - l2: LEFT 2번의 모터 속도를 설정합니다. (범위: -100 ~ 100)
+    - r2: RIGHT 2번의 모터 속도를 설정합니다. (범위: -100 ~ 100)
+  - 응답: 전송 성공 여부
+
+  #### dc_motor_all_off()
+
+  - 설명: DC모터 1번과 2번의 동작을 동시에 중지합니다.
+  - 입력: 없음
+  - 응답: 전송 성공 여부
+
+  #### dc_motor1_on(l1, l2)
+
+  - 설명: DC모터 1번을 동작하도록 설정합니다.
+  - 입력: 
+    - l1: LEFT 1번의 모터 속도를 설정합니다. (범위: -100 ~ 100)
+    - r1: RIGHT 1번의 모터 속도를 설정합니다. (범위: -100 ~ 100)
+  - 응답: 전송 성공 여부
+
+  #### dc_motor2_on(l2, r2)
+
+  - 설명: DC모터 2번을 동작하도록 설정합니다.
+
+  - 입력: 
+
+    - l2: LEFT 2번의 모터 속도를 설정합니다. (범위: -100 ~ 100)
+    - r2: RIGHT 2번의 모터 속도를 설정합니다. (범위: -100 ~ 100)
+
+  - 응답: 전송 성공 여부
+
+    
+
+  ### 입력 포트 읽기 명령어
+
+  - 디바이스로 입력된 상태 값을 읽는 명령어 입니다. open 함수에서 반환된 reader와 같은 객체를 통해 입력 포트를 확인할 수 있습니다.
+  - 여기서는 reader로 설명합니다. 객체 변수명은 지정에 따라 다를 수 있습니다.
+
+  #### set_digit_in_trigger(level)
+
+  - 설명: 디지털 입력 트리거 레벨을 설정합니다. level이 100으로 설정 시, reader.get_digit_in1~4 수행 시, ADC값이 100미만인 경우 0, 100 이상인 경우에는 1로 리턴됩니다. 설정하지 않으면 기본 100으로 설정 됩니다.
+  - 입력: 
+    - level: 트리거 레벨을 설정합니다. (범위: 0 ~255)
+
+  - 응답: 전송 성공 여부
+
+  #### reader.get_digit_in1()
+
+  - 설명: 포트1번의 디지털 입력 값을 읽어 옵니다. HIGH, LOW 값으로 1 또는 0으로 읽습니다.
+  - 입력: 없음
+  - 응답: 값 (0 또는 1)
+
+  #### reader.get_digit_in2()
+
+  - 설명: 포트2번의 디지털 입력 값을 읽어 옵니다. HIGH, LOW 값으로 1 또는 0으로 읽습니다.
+  - 입력: 없음
+  - 응답: 값 (0 또는 1)
+
+  #### reader.get_digit_in3()
+
+  - 설명: 포트3번의 디지털 입력 값을 읽어 옵니다. HIGH, LOW 값으로 1 또는 0으로 읽습니다.
+  - 입력: 없음
+  - 응답: 값 (0 또는 1)
+
+  #### reader.get_digit_in4()
+
+  - 설명: 포트4번의 디지털 입력 값을 읽어 옵니다. HIGH, LOW 값으로 1 또는 0으로 읽습니다.
+  - 입력: 없음
+  - 응답: 값 (0 또는 1)
+
+  #### reader.get_analog_in1()
+
+  - 설명: 포트1번의 아날로그 입력 값을 읽어 옵니다. ADC 값으로 0~255의 값을 수신합니다.
+  - 입력: 없음
+  - 응답: 값 (0~255)
+
+  #### reader.get_analog_in2()
+
+  - 설명: 포트2번의 아날로그 입력 값을 읽어 옵니다. ADC 값으로 0~255의 값을 수신합니다.
+  - 입력: 없음
+  - 응답: 값 (0~255)
+
+  #### reader.get_analog_in3()
+
+  - 설명: 포트3번의 아날로그 입력 값을 읽어 옵니다. ADC 값으로 0~255의 값을 수신합니다.
+  - 입력: 없음
+  - 응답: 값 (0~255)
+
+  #### reader.get_analog_in4()
+
+  - 설명: 포트4번의 아날로그 입력 값을 읽어 옵니다. ADC 값으로 0~255의 값을 수신합니다.
+  - 입력: 없음
+  - 응답: 값 (0~255)
+
+  #### reader.get_remocon()
+
+  - 설명: 디바이스의 IR로 입력되는 리모컨 입력 값을 읽어 옵니다. 0~255의 값을 수신합니다.
+  - 입력: 없음
+  - 응답: 값 (0~255)
