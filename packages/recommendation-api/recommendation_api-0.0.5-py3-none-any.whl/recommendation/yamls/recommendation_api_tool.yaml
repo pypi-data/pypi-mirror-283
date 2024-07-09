@@ -1,0 +1,42 @@
+recommendation.tools.recommendation_api_tool.get_recommendation_api:
+  function: get_recommendation_api
+  inputs:
+    http_method:
+      type:
+      - string
+      enum:
+        - POST
+      description: "HTTP method to use for the request"
+    api_url:
+      type:
+      - string
+      description: "The API endpoint URL"
+    content_type:
+      type:
+      - string
+      default: application/json
+      description: "The content type for the request"
+    requestId:
+      type:
+      - string
+      description: "Unique request identifier"
+    country:
+      type:
+      - string
+      description: "Country code"
+    num:
+      type:
+      - string
+      description: "Number of items"
+    pageType:
+      type:
+      - string
+      description: "Page Type, required for POST requests"
+    guid:
+      type:
+      - string
+      description: "GUID, required for POST requests"
+  module: recommendation.tools.recommendation_api_tool
+  name: Samsung products recommendation tool
+  description: This is Samsung products recommendation tool
+  type: python
