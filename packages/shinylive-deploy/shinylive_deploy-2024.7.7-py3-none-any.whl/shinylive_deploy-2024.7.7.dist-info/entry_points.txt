@@ -1,0 +1,2 @@
+[console_scripts]
+shinylive_deploy = shinylive_deploy.app:cli
