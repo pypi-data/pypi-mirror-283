@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+cellar_extractor.egg-info/PKG-INFO
+cellar_extractor.egg-info/SOURCES.txt
+cellar_extractor.egg-info/dependency_links.txt
+cellar_extractor.egg-info/requires.txt
+cellar_extractor.egg-info/top_level.txt
