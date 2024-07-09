@@ -1,0 +1,15 @@
+conllu_path/__init__.py,sha256=fAefZHfG6pGIttUyt2Yh7NROhJIzPbSSgDWDyiyMVqI,368
+conllu_path/conllu.py,sha256=KBuGZFWGLTrXWeApWVclNSffAzFWg0Dr6IOCGjoOZK8,5420
+conllu_path/exception.py,sha256=4tjRIEUu16F8oo6XxB7WNsKAUg_-kHg4jpsjNYWgLPg,408
+conllu_path/expr_parser.py,sha256=SAa-2GhXmGFl4ZBKm1sZDIOcAPg2RNNQeTIj6P0uWtc,3123
+conllu_path/node_data.py,sha256=SS7chJPtm-L8FcvbYXw12u0ev72ccC8F9U8XuxZ8lJI,7021
+conllu_path/node_id.py,sha256=S8oYqB8UwUBiwPert73YvR9gAiWBRT_50BZn2tG7jNU,2229
+conllu_path/search.py,sha256=gWGuEZMWvCZH6wTUryDlR5Hh2Sb7EaTPe3htVx-Peqo,3915
+conllu_path/search_evaluator.py,sha256=J489ejmfdJ_mSUGYUfopwDUwWb3wkSGY3Ki1YWVkq6U,4523
+conllu_path/sentence.py,sha256=uIBsRoSd42t60vy7KjYkEBb-Fvbcst3MxCJNaK1T794,8136
+conllu_path/tree.py,sha256=-fguwtkIV_sMwFZrhNK0iDW3CTACwdOOcfDczYaipUY,3114
+conllu_path/utils.py,sha256=JFYhXSIENdieqVWWeCdlP8qV_56ux9Q6dXL3EBjotU0,688
+conllu_path-0.0.5.dist-info/METADATA,sha256=gMdBPe3J7j9PLL5nrfw4NGpKXICAOuvwXy_uDZ4JJME,506
+conllu_path-0.0.5.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+conllu_path-0.0.5.dist-info/licenses/LICENSE,sha256=RBhg5hIyHCQyj9Hd6pdx4QVzRdIfplLdnbuNB0fm2H4,1093
+conllu_path-0.0.5.dist-info/RECORD,,
