@@ -1,0 +1,12 @@
+place/__init__.py,sha256=bpT73UG7mZL_JjEqMwbYx6q69jA8J5Jcoul1LcDokhA,81
+place/tools/__init__.py,sha256=bpT73UG7mZL_JjEqMwbYx6q69jA8J5Jcoul1LcDokhA,81
+place/tools/place_api_tool.py,sha256=dVk2ZlkqMZaKOasRZyQbfDoEas6fNOH9EIqaQZDCgK0,2163
+place/tools/utils.py,sha256=JfavnyUYcJGy1XlVOOlkRB-FFWuMOaRSRWpYGieMxTQ,535
+place/yamls/place_api_tool.yaml,sha256=-JcNvN3U86oWDMVNCHzjmeZCiuQdU-UvZxGHUep0Dy0,330
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_place_api_tool.py,sha256=I90Zq2e7WtIZ_oH07-JtGtMoO8IZmka5P0-XadOds9g,777
+place_api_test-0.1.5.dist-info/METADATA,sha256=w6alzx7BLj3t_lx21j1WOk4znFNGje5rmNS0MNaGoOs,93
+place_api_test-0.1.5.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+place_api_test-0.1.5.dist-info/entry_points.txt,sha256=9NZAjylU3muiLTJ4WNSb6MfCkKAjuekwni6D8eXrETQ,70
+place_api_test-0.1.5.dist-info/top_level.txt,sha256=nIlGqKX8Ynim4IibvfLm1fOJ04lApNXcnOsMv2STdFM,12
+place_api_test-0.1.5.dist-info/RECORD,,
