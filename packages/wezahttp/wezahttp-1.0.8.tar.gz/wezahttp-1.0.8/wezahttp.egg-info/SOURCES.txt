@@ -1,0 +1,7 @@
+setup.py
+wezahttp.py
+wezahttp.egg-info/PKG-INFO
+wezahttp.egg-info/SOURCES.txt
+wezahttp.egg-info/dependency_links.txt
+wezahttp.egg-info/requires.txt
+wezahttp.egg-info/top_level.txt

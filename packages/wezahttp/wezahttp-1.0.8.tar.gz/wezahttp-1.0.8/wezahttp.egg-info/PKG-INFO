@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: wezahttp
+Version: 1.0.8
+Summary: A simple async HTTP client module.
+Home-page: https://github.com/wezaxy/wezahttp
+Author: wezaxyy
+Author-email: wezababass@gmail.com
+Requires-Dist: aiohttp
+Requires-Dist: asyncio
