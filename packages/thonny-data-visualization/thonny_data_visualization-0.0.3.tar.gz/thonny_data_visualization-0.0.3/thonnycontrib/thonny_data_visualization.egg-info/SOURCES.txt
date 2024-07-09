@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+thonnycontrib/thonny_data_visualization.egg-info/PKG-INFO
+thonnycontrib/thonny_data_visualization.egg-info/SOURCES.txt
+thonnycontrib/thonny_data_visualization.egg-info/dependency_links.txt
+thonnycontrib/thonny_data_visualization.egg-info/requires.txt
+thonnycontrib/thonny_data_visualization.egg-info/top_level.txt
