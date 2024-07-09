@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+wow_login_messages/__init__.py
+wow_login_messages/all.py
+wow_login_messages/util.py
+wow_login_messages/version2.py
+wow_login_messages/version3.py
+wow_login_messages/version5.py
+wow_login_messages/version6.py
+wow_login_messages/version7.py
+wow_login_messages/version8.py
+wow_login_messages.egg-info/PKG-INFO
+wow_login_messages.egg-info/SOURCES.txt
+wow_login_messages.egg-info/dependency_links.txt
+wow_login_messages.egg-info/top_level.txt
