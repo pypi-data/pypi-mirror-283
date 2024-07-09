@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: hosttimer1py
+Version: 0.1
+Summary: Uma biblioteca para estilizar interfaces e texto em Python, tornando-os mais bonitos e atraentes
+Home-page: https://github.com/seunome/hosttimer1py
+Author: bruno
+Author-email: miguel100eduardoluiz@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: User Interfaces
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: colorama
+
+# pyBeauty
+
+pyBeauty Ã© uma biblioteca para estilizar interfaces e texto em Python, tornando-os mais bonitos e atraentes.
+
+## InstalaÃ§Ã£o
+
+VocÃª pode instalar a biblioteca usando pip:
+
+```bash
+pip install pyBeauty
