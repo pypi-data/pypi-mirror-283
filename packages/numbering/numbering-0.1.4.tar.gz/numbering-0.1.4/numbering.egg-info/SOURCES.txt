@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+numbering/__init__.py
+numbering/convert.py
+numbering/enums.py
+numbering/numbering.py
+numbering.egg-info/PKG-INFO
+numbering.egg-info/SOURCES.txt
+numbering.egg-info/dependency_links.txt
+numbering.egg-info/requires.txt
+numbering.egg-info/top_level.txt
