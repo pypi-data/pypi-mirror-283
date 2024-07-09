@@ -1,0 +1,15 @@
+pywaybackup/Exception.py,sha256=3VNtIy710bmWhMxjnfg1IlmZt0r1hiZ7xR1XcY6izoY,4410
+pywaybackup/SnapshotCollection.py,sha256=TFZxSxW8bu_tsXxo6Exw84b3D4v6picBYYuCVxQenSs,3366
+pywaybackup/Verbosity.py,sha256=Yk68XMd1JXXZpXKr0Mc7ljXb6mZgKn14pIKHivskoF4,1475
+pywaybackup/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pywaybackup/__version__.py,sha256=SaCuJWZ-68Et3IkL8k2vRusXwqI1L-apCgY5ghxuxsE,21
+pywaybackup/archive.py,sha256=A-HYYSoN8lQ68aX70IB7CzuproosxZ2zmfzlpgmOhyQ,19152
+pywaybackup/arguments.py,sha256=B2WEbthNdJKv_tmGXjJ3vy4ZbvgEKKwJNzkJPNYdrRI,3537
+pywaybackup/helper.py,sha256=a7_i1VNE0YnzJJVixtADyNnnBkJzcCS-ge5AeqSkEWY,3107
+pywaybackup/main.py,sha256=dilScOT5Lsdd7G4uuGJz45r_R4EtDWDMBZBJwrnuAGo,1954
+pywaybackup-1.3.2.dist-info/LICENSE,sha256=ZQtS7nJ9j30EbPLxK4DiDdeJrLdYBciWUOFReXIiVC0,1065
+pywaybackup-1.3.2.dist-info/METADATA,sha256=oq27wmJJIpJWeVPMMsuFGqD-f1sdG3vVMNX238wJFuk,9429
+pywaybackup-1.3.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pywaybackup-1.3.2.dist-info/entry_points.txt,sha256=ZmF_VKgIYENo5P4wHdmW6GsgTDrJ6hDGx8rYT2lI8y0,52
+pywaybackup-1.3.2.dist-info/top_level.txt,sha256=4wVBZuqGxJVPt63G09FzoOGsB_yWzRJLqmLDEZbz_ck,12
+pywaybackup-1.3.2.dist-info/RECORD,,
