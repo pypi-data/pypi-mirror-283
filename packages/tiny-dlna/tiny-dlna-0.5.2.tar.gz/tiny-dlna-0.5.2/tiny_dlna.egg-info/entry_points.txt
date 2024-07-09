@@ -1,0 +1,3 @@
+[console_scripts]
+tiny-cli = tiny_cli:main
+tiny-render = tiny_render:main
