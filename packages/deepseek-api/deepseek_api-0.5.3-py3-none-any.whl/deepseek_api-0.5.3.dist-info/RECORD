@@ -1,0 +1,9 @@
+deepseek_api/__init__.py,sha256=SzbB8c4Ve1l7GVdOkG4pD08yyrRh9SSHkGZsx8STo-g,55
+deepseek_api/constants.py,sha256=iPs8uc1UqvsAZblYf74b33y3YESJqtIIIDE5FLbuW-g,1073
+deepseek_api/deepseek_api.py,sha256=b3YXnRA2WXm347tdJcuiqB-_wi_k9W0EaSzGRp00xPI,15041
+deepseek_api/errors.py,sha256=Ej6SRazoNyrnsDHAMSgAVTWE2OjGcdLSnDPbqlEBeVA,488
+deepseek_api-0.5.3.dist-info/LICENSE,sha256=V-H0hsIgId0vs4qWRj1yYeAt8yNcLTXOXBBKuxel30s,20857
+deepseek_api-0.5.3.dist-info/METADATA,sha256=y_RoVWxkjS_hdbFUno3uHKTOjYQGlxovPuGEVdMvybw,364
+deepseek_api-0.5.3.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+deepseek_api-0.5.3.dist-info/top_level.txt,sha256=0u8Q74ISITZJGiyE65PWm3U2yHrO5QYbm5WtpTMgadY,13
+deepseek_api-0.5.3.dist-info/RECORD,,
