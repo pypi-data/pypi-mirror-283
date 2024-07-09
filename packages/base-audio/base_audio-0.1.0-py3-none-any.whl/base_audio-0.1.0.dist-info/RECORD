@@ -1,0 +1,13 @@
+base_audio/__init__.py,sha256=c4Wf34RZnsTTxVs_GdnXhgd8jjrCV0TCJF5MaUSByz4,147
+base_audio/audio_helper.py,sha256=fBAOfMeNQRcs-QweNUtUpVEfPSkLZzDEjejeKH9H67E,2342
+base_audio/common_plot.py,sha256=JFOuxOjDAexq4LnARDIx_522h5jv7BOfcZgSJ8V220Q,3533
+base_audio/errors.py,sha256=4zg6clnjHwuQD752Uzbkdqz4u6Vr2QdYPJRFHGRLabU,498
+base_audio/example.py,sha256=7dD-7d7OBN9Z9potO8T6EPlYljpEbalDsCoRMtXXKXk,1215
+base_audio/signal_to_spectrogram.py,sha256=1-JG6jKiAeuo4HPOSKdJiS5pq7Al9i-s0rzk8KMg424,9964
+base_audio/spectrogram_to_signal.py,sha256=if4FZ4qLB-1F4PldXrQZMpb89mDwMu824slAMolhlv0,2750
+base_audio-0.1.0.dist-info/AUTHORS,sha256=s34L8b_ermIabiCfSfmbLgOgU9csOnx_Knq2Y0jXhKU,26
+base_audio-0.1.0.dist-info/LICENSE.md,sha256=l3iWVheCJfHpdUkaqC0bvTJ50QhEpWVOytD8bUMr8cY,1516
+base_audio-0.1.0.dist-info/METADATA,sha256=FqP8t-pcHnzyxvA2ldqFsJ4zE7BXHZEX9py22NAYVK0,1248
+base_audio-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+base_audio-0.1.0.dist-info/top_level.txt,sha256=OPCQ3CuOdO0Xu5tkmxOIkp5-b5Pv-FGapxs8tuJ-rfA,11
+base_audio-0.1.0.dist-info/RECORD,,
