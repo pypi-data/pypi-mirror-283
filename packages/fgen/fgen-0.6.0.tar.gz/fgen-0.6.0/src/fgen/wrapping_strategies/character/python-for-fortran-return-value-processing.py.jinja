@@ -1,0 +1,7 @@
+{{ result_name }}: {{ return_type }} = {{ fortran_module_callable }}(
+{% for arg in fortran_module_callable_args %}
+    {{ arg }},
+{% endfor %}
+).decode()
+
+return {{ result_name }}

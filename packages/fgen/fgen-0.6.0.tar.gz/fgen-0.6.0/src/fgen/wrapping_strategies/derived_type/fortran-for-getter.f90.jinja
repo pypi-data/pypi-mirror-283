@@ -1,0 +1,44 @@
+{% set return_value_name = return_value.definition.name %}
+{% set return_value_is_pointer=return_value.definition.as_fortran_data_type().is_pointer %}
+{####}
+subroutine {{ fortran_wrapper_module_callable }}( &
+    instance_index, &
+    {{ return_value_name }}{{ instance_index_suffix }} &
+    )
+
+    integer, intent(in) :: instance_index
+
+{# Always return the instance index, an integer, Python handles joining things back up #}
+    integer, intent(out) :: {{ return_value_name }}{{ instance_index_suffix }}
+    ! Returning of {{ return_value_name }}
+
+    type({{ class_being_wrapped }}), pointer :: instance
+    {{ wrapper_module_type_attribute_declaration }} :: {{ return_value_name }}
+
+    call manager_get_instance(instance_index, instance)
+
+{% if return_value_is_pointer %}
+    {{ return_value_name }} => instance % {{ fortran_module_attribute }}
+    {{ return_value_name }}{{ instance_index_suffix }} = {{ return_value_name }} % instance_index
+{% else %}
+    ! Get a new instance to use for returning.
+    ! We can't return the allocatable attribute
+    ! because then Python has no idea what to refer to
+    ! if the user asks to see the state of the allocatable attribute
+    ! (because the allocatable attribute is not managed by our manager).
+{#
+    We could probably hold a mapping of derived_type_via_allocatable indexes
+    to derived_type indexes so we didn't create a new object everytime,
+    but that is probably a lot of mucking around for little gain.
+    The current solution will chew through available instances though if you request the attribute many times
+    because there is no clean up of the created objects
+    (or it will leak memory, once we stop pre-allocating all our derived type instances).
+#}
+    {{ return_value_name }}{{ instance_index_suffix }} = {{ manager_get_free_instance_number }}()
+    call {{ manager_get_instance }}({{ return_value_name }}{{ instance_index_suffix }}, {{ return_value_name }})
+
+    {{ return_value_name }} = instance % {{ fortran_module_attribute }}
+    {{ return_value_name }} % instance_index = {{ return_value_name }}{{ instance_index_suffix }}
+{% endif %}
+
+end subroutine {{ fortran_wrapper_module_callable }}

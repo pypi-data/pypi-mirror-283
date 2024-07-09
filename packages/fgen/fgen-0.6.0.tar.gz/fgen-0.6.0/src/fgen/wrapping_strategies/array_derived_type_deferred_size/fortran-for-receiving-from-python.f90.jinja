@@ -1,0 +1,10 @@
+do {{ loop_helper_variable }} = 1, size({{ variable_instance_indexes }})
+
+    call {{ variable_type_manager_get_instance }}( &
+        {{ variable_instance_indexes }}({{ loop_helper_variable }}), &
+        {{ variable_intermediate }} &
+        )
+
+    {{ variable }}({{ loop_helper_variable }}) = {{ variable_intermediate }}
+
+end do

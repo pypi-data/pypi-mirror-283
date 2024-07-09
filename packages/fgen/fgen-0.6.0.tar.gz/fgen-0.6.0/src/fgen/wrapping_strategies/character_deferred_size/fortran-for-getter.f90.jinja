@@ -1,0 +1,41 @@
+{% set return_value_name = return_value.definition.name %}
+{####}
+subroutine {{ fortran_wrapper_module_callable }}{{ length_callable_suffix }}( &
+    instance_index, &
+    {{ return_value_name }}{{ length_suffix }} &
+    )
+
+    integer, intent(in) :: instance_index
+
+    integer, intent(out) :: {{ return_value_name }}{{ length_suffix }}
+    ! {{ return_value_name }}'s length
+
+    type({{ class_being_wrapped }}), pointer :: instance
+
+    call manager_get_instance(instance_index, instance)
+
+    {{ return_value_name }}{{ length_suffix }} = len(instance % {{ fortran_module_attribute }})
+
+end subroutine {{ fortran_wrapper_module_callable }}{{ length_callable_suffix }}
+
+subroutine {{ fortran_wrapper_module_callable }}( &
+    instance_index, &
+    {# TODO: rename to {{ return_value_name }}{{ length_suffix }} #}
+    n, &
+    {{ return_value_name }} &
+    )
+
+    integer, intent(in) :: instance_index
+
+    integer, intent(in) :: n
+
+    character(len=n), intent(out) :: {{ return_value_name }}
+    ! Returning of {{ return_value_name }}
+
+    type({{ class_being_wrapped }}), pointer :: instance
+
+    call manager_get_instance(instance_index, instance)
+
+    {{ return_value_name }} = instance % {{ fortran_module_attribute }}
+
+end subroutine {{ fortran_wrapper_module_callable }}

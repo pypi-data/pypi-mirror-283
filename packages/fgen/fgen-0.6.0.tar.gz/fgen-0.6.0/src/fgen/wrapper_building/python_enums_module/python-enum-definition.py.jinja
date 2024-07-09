@@ -1,0 +1,10 @@
+class {{ enum_definition.name }}(Enum):
+    """
+    {{ enum_definition.description }}
+    """
+
+{% for value in enum_definition.values %}
+    {{ value.str_value }} = {{ value.integer_value }}
+    """{{ value.description }}"""
+
+{% endfor %}

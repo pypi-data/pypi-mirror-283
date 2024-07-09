@@ -1,0 +1,9 @@
+{# TODO: use a suffix that is passed in rather than hard-coded _instance_index #}
+{{ result_name }}_instance_index = {{ fortran_module_callable }}(
+{% for arg in fortran_module_callable_args %}
+    {{ arg }},
+{% endfor %}
+)
+{{ result_name }}: {{ return_type }} = {{ return_type }}({{ result_name }}_instance_index)
+
+return {{ result_name }}

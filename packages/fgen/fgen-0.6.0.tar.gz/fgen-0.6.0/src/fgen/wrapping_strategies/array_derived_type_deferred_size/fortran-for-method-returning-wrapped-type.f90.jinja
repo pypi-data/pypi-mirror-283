@@ -1,0 +1,156 @@
+{% set four_spaces="    " %}
+{% set return_value_name = return_value.definition.name %}
+{####}
+subroutine {{ fortran_wrapper_module_callable }}{{ shape_callable_suffix }}( &
+    instance_index, &
+{% for param in input_params %}
+    {{ param }}, &
+{% endfor %}
+    nd, &
+    dtype, &
+    dshape &
+    )
+    ! Get information about the array returned by {{ method_name }}
+    !
+    ! This allows the array to be retrieved in a second step.
+
+{# Type declarations #}
+{# TODO: use shared here rather than hard-coded instance_index #}
+    integer, intent(in) :: instance_index
+{%
+    for parameter_name, parameter_passing_type, parameter
+    in receiving_from_python_steps.fortran_wrapper_callable_parameters
+%}
+
+    {{ parameter_passing_type }}, intent(in) :: {{ parameter_name }}
+    ! Passing of {{ parameter.definition.name }}
+{% endfor %}
+
+    integer, intent(out) :: nd
+    ! Number of dimensions in the array
+    !
+    ! If the array is not allocated, this will be returned as zero.
+
+    character(len=20), intent(out) :: dtype
+    ! Data type of the array
+
+    integer, dimension(10), intent(out) :: dshape
+    ! Shape of the array
+    !
+    ! If you have an array with more than 10-dimensions,
+    ! an error will be raised.
+
+    type({{ class_being_wrapped }}), pointer :: instance
+    {{ return_value.definition.fortran_type }}, allocatable :: {{ return_value_name }}
+{%
+    for argument_name, type_declaration
+    in receiving_from_python_steps.not_directly_passed_fortran_module_callable_args_type_declarations
+%}
+    {{ type_declaration }} :: {{ argument_name }}
+{% endfor %}
+
+{# Manager calls #}
+{# TODO: use shared for manager_get_instance here rather than hard-coding #}
+    call manager_get_instance(instance_index, instance)
+
+{% if receiving_from_python_steps.postprocessing_fortran_calls %}
+    {{ receiving_from_python_steps.postprocessing_fortran_calls | ensure_indent(four_spaces) }}
+
+{% endif %}
+{####}
+    print *, "WARNING: Wrapping of methods returning deferred shape arrays " &
+        //"calls the calculation twice, performance may be an issue"
+{% set fprettify_indent= " " * return_value_name | length + "   " %}
+    {{ return_value_name }} = instance % {{ method_name }}( &
+{% for arg in receiving_from_python_steps.fortran_module_callable_args_names %}
+    {{ fprettify_indent }}{{ arg }}={{ arg }}{% if not loop.last %},{% endif %} &
+{% endfor %}
+    {{ fprettify_indent }})
+
+    dtype = "integer"
+    nd = rank({{ return_value_name }})
+    if (nd > 10) then
+        print *, "Array has more than 10 dimensions, wrapping won't work"
+        error stop 1
+    end if
+
+    dshape(1:nd) = shape({{ return_value_name }})
+
+end subroutine {{ fortran_wrapper_module_callable }}{{ shape_callable_suffix }}
+
+subroutine {{ fortran_wrapper_module_callable }}( &
+    instance_index, &
+{% for param in input_params %}
+    {{ param }}, &
+{% endfor %}
+    {{ return_value_name }}{{ instance_indexes_suffix }} &
+    )
+
+{# Type declarations #}
+    {# TODO: use shared here rather than hard-coded instance_index #}
+    integer, intent(in) :: instance_index
+{%
+    for parameter_name, parameter_passing_type, parameter
+    in receiving_from_python_steps.fortran_wrapper_callable_parameters
+%}
+
+    {{ parameter_passing_type }}, intent(in) :: {{ parameter_name }}
+    ! Passing of {{ parameter.definition.name }}
+{% endfor %}
+
+    integer, dimension(:), intent(inout) :: {{ return_value_name }}{{ instance_indexes_suffix }}
+    ! Returning of {{ return_value_name }}.
+    !
+    ! The indexes of the derived types are returned, to then be handled by Python,
+    ! because we can't return the indexes themselves.
+    !
+    ! This argument is `intent(inout)`,
+    ! i.e. an array must be passed in from Python, which this subroutine then fills.
+
+    {{ wrapper_module_type_attribute_declaration }} :: {{ return_value_name }}
+    integer :: i, ii
+    type({{ derived_type_in_array }}), pointer :: {{ return_value_name }}_tmp
+
+    type({{ class_being_wrapped }}), pointer :: instance
+{%
+    for argument_name, type_declaration
+    in receiving_from_python_steps.not_directly_passed_fortran_module_callable_args_type_declarations
+%}
+    {{ type_declaration }} :: {{ argument_name }}
+{% endfor %}
+
+{# Manager calls #}
+{# TODO: use shared for manager_get_instance here rather than hard-coding #}
+    call manager_get_instance(instance_index, instance)
+
+{% if receiving_from_python_steps.postprocessing_fortran_calls %}
+    {{ receiving_from_python_steps.postprocessing_fortran_calls | indent_based_on_first_line(four_spaces) }}
+
+{% endif %}
+{####}
+{# Call the method #}
+{% set fprettify_indent= " " * return_value_name | length + "   " %}
+    {{ return_value_name }} = instance % {{ method_name }}( &
+{% for arg in receiving_from_python_steps.fortran_module_callable_args_names %}
+    {{ fprettify_indent }}{{ arg }}={{ arg }}{% if not loop.last %},{% endif %} &
+{% endfor %}
+    {{ fprettify_indent }})
+
+    do i = 1, size({{ return_value_name }}{{ instance_indexes_suffix }})
+
+        ! Get a new instance to use for returning.
+        ! We can't return the result directly
+        ! because then Python has no idea what to refer to
+        ! if the user asks to see the state of the result
+        ! (because the result is not managed by our manager).
+        ii = {{ return_value_manager_get_free_instance_number }}()
+        call {{ return_value_manager_get_instance }}(ii, {{ return_value_name }}_tmp)
+
+        {{ return_value_name }}_tmp = {{ return_value_name }}(i)
+        {{ return_value_name }}_tmp % instance_index = ii
+
+        {{ return_value_name }}{{ instance_indexes_suffix }}(i) = {{ return_value_name }}_tmp % instance_index
+
+    end do
+
+end subroutine {{ fortran_wrapper_module_callable }}

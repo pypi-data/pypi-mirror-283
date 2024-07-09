@@ -1,0 +1,19 @@
+{% set return_value_name = return_value.definition.name %}
+{####}
+subroutine {{ fortran_wrapper_module_callable }}( &
+    instance_index, &
+    {{ return_value_name }} &
+    )
+
+    integer, intent(in) :: instance_index
+
+    {{ return_value.definition.fortran_type }}, intent(out) :: {{ return_value_name }}
+    ! Returning of {{ return_value_name }}
+
+    type({{ class_being_wrapped }}), pointer :: instance
+
+    call manager_get_instance(instance_index, instance)
+
+    {{ return_value_name }} = instance % {{ fortran_module_attribute }}
+
+end subroutine {{ fortran_wrapper_module_callable }}

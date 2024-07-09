@@ -1,0 +1,128 @@
+{% set module=builder.module %}
+{% set four_spaces="    " %}
+{% set no_setters_class_name=module.provides.name + builder.shared.no_setters_suffix %}
+"""
+{{ builder.get_module_level_docstring() }}
+"""
+{{ builder.get_module_imports(extension=extension) }}
+
+{{ builder.get_module_units() }}
+
+@define
+class {{ module.provides.name }}(FinalizableWrapperBase):
+    """
+    {{ builder.get_provided_type_docstring() | indent_based_on_first_line(four_spaces) }}
+    """
+
+    {{ builder.get_provided_type_repr_methods() | indent_based_on_first_line(four_spaces) }}
+
+    # Class methods
+    {{ builder.get_provided_type_class_methods(class_name=module.provides.name) | indent_based_on_first_line(four_spaces) }}
+
+{# TODO: move this onto the builder so we can ensure link with Fortran is correct #}
+    # Finalisation
+    @check_initialised
+    def finalize(self) -> None:
+        """
+        Close the connection with the Fortran module
+        """
+        {{ module.wrapper_module_name }}.{{ builder.shared.fortran_instance_finalise_callable_name }}(self.instance_index)
+        self._uninitialise_instance_index()
+
+    # Attribute getters and setters
+    {{
+        builder.get_provided_type_getters_and_setters(
+            include_setters=True,
+        ) | indent_based_on_first_line(four_spaces)
+    }}
+
+    {% if module.provides.methods %}
+    # Wrapped methods
+    {{
+        builder.get_provided_type_methods() | indent_based_on_first_line(four_spaces)
+    }}
+
+    {% endif %}
+
+
+{# TODO: move this onto the builder #}
+@define
+class {{ no_setters_class_name }}(FinalizableWrapperBase):
+    """
+    {# TODO: move this onto the builder #}
+    Wrapper around the Fortran :class:`{{ module.provides.name }}`
+
+    This wrapper has no setters so can be used for representing objects
+    that have no connection to the underlying Fortran
+    (i.e. changing their values/attributes
+    will have no effect on the underlying Fortran).
+    For example, derived type attribute values that are allocatable.
+
+    {{ module.provides.description | trim | indent_based_on_first_line(four_spaces) }}
+    """
+
+    {{ builder.get_provided_type_repr_methods() | indent_based_on_first_line(four_spaces) }}
+
+    # Class methods
+    {{ builder.get_provided_type_class_methods(class_name=no_setters_class_name) | indent_based_on_first_line(four_spaces) }}
+
+{# TODO: move this onto the builder #}
+    # Finalisation
+    @check_initialised
+    def finalize(self) -> None:
+        """
+        Close the connection with the Fortran module
+        """
+        {{ module.wrapper_module_name }}.instance_finalize(self.instance_index)
+        self._uninitialise_instance_index()
+
+    # Attribute getters
+    {{
+        builder.get_provided_type_getters_and_setters(
+            include_setters=False,
+        ) | indent_based_on_first_line(four_spaces)
+    }}
+
+    {% if module.provides.methods %}
+    # Wrapped methods
+    {{
+        builder.get_provided_type_methods() | indent_based_on_first_line(four_spaces)
+    }}
+
+    {% endif %}
+
+
+@define
+class {{ module.provides.name }}Context(FinalizableWrapperBaseContext):
+    """
+    Context manager for :class:`{{ module.provides.name }}`
+    """
+
+{# TODO: move this onto the builder for docstring handling #}
+    @classmethod
+    def from_build_args(cls, *args: Any, **kwargs: Any,) -> {{ module.provides.name }}Context:
+        """
+        {# Note, #223 is https://gitlab.com/magicc/magicc-archive/-/issues/223 #}
+        Docstrings to be handled as part of #223
+        """
+        return cls(
+            {{ module.provides.name }}.from_build_args(*args, **kwargs),
+        )
+
+
+@define
+class {{ no_setters_class_name }}Context(FinalizableWrapperBaseContext):
+    """
+    Context manager for :class:`{{ no_setters_class_name }}`
+    """
+
+{# TODO: move this onto the builder for docstring handling #}
+    @classmethod
+    def from_build_args(cls, *args: Any, **kwargs: Any,) -> {{ no_setters_class_name }}Context:
+        """
+        {# Note, #223 is https://gitlab.com/magicc/magicc-archive/-/issues/223 #}
+        Docstrings to be handled as part of #223
+        """
+        return cls(
+            {{ no_setters_class_name }}.from_build_args(*args, **kwargs),
+        )

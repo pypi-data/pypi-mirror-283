@@ -1,0 +1,118 @@
+{% set provided_type=builder.module.provides %}
+{% set attributes=provided_type.attributes %}
+{% set four_spaces="    " %}
+@classmethod
+{# TODO: check if class method should be for attributes or exposed attributes #}
+{{
+    builder.get_verify_units_decorator(
+        arguments=attributes.values(),
+        return_value=None,
+    ) | indent_based_on_first_line(indent=four_spaces)
+}}
+def {{ shared.from_build_args_name }}({% if attributes | length > 4 %}  # noqa: PLR0913{% endif +%}
+    cls,
+    {{
+        builder.get_post_verify_units_argument_list(arguments=attributes.values())
+        | indent_based_on_first_line(four_spaces)
+    }}
+) -> {{ class_name }}:
+    """
+    Initialise from build arguments
+
+    This also creates a new connection to a Fortran object.
+    The user is responsible for releasing this connection
+    using :attr:`~{{ shared.finalise_method_name }}` when it is no longer needed.
+    Alternatively a :obj:`~{{ class_name }}Context`
+    can be used to handle the finalisation using a context manager.
+
+{% if attributes %}
+    Parameters
+    ----------
+{% for argument in attributes.values() %}
+    {{ argument.definition.name }}
+        {{ argument.definition.description | indent_based_on_first_line(four_spaces * 2) }}
+
+{% endfor %}
+{% endif %}
+    Returns
+    -------
+        Built (i.e. linked to Fortran and initialised)
+        :obj:`{{ class_name }}`
+
+    See Also
+    --------
+    :meth:`{{ class_name }}Context.{{ shared.from_build_args_name }}`
+    """
+{% set fortran_units_holder=provided_type.fortran_units_holder %}
+{% if fortran_units_holder is not none %}
+    # Extract units from the input, make sure they're all the same
+    provided_units = {
+            name: str(v.units)
+            for name, v in (
+{% for provided_units_contributor in provided_type.fortran_units_holder_reliant_attributes %}
+                ("{{ provided_units_contributor }}", {{ provided_units_contributor }}),
+{% endfor %}
+            )
+        }
+
+    provided_units_values = list(provided_units.values())
+    if len(set(provided_units_values)) > 1:
+        msg = f"More than one unit provided. Received: {provided_units}"
+        raise ValueError(msg)
+
+    unit_for_fortran = provided_units_values[0]
+
+{% endif %}
+{% set
+     passing_to_fortran_steps = builder.get_passing_to_fortran_steps(
+         attributes.values(), dynamic_unit="unit_for_fortran"
+     )
+%}
+{% if passing_to_fortran_steps.preparatory_python_calls %}
+    {{ passing_to_fortran_steps.preparatory_python_calls | indent_based_on_first_line(four_spaces) }}
+
+{% endif %}
+
+    out = cls.from_new_connection()
+    execute_finalize_on_fail(
+        out,
+        {{ builder.module.wrapper_module_name }}.{{ shared.fortran_build_callable_name }},
+    {% for arg_passing in passing_to_fortran_steps.fortran_callable_arg_list %}
+        {{ arg_passing }},
+    {% endfor %}
+    {% if fortran_units_holder %}
+        {{ fortran_units_holder }}=unit_for_fortran
+    {% endif %}
+    )
+
+    return out
+
+
+@classmethod
+def from_new_connection(cls) -> {{ class_name }}:
+    """
+    Initialise from a new connection
+
+    The user is responsible for releasing this connection
+    using :attr:`~{{ shared.finalise_method_name }}` when it is no longer needed.
+    Alternatively a :obj:`~{{ class_name }}Context`
+    can be used to handle the finalisation using a context manager.
+
+    Returns
+    -------
+        A new instance with a unique instance index
+
+    Raises
+    ------
+    WrapperErrorUnknownCause
+        If a new instance could not be allocated
+
+        This could occur if too many instances are allocated at any one time
+    """
+    instance_index = {{ builder.module.wrapper_module_name }}.{{ shared.fortran_get_free_instance_number_callable_name }}()
+    if instance_index == INVALID_INSTANCE_INDEX:
+        raise fgr_excs.WrapperErrorUnknownCause(  # noqa: TRY003
+            f"Could not create instance of {cls.__name__}. "
+        )
+
+    return cls(instance_index)

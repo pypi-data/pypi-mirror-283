@@ -1,0 +1,11 @@
+{{ attribute.definition.description }}
+
+Returns
+-------
+    Attribute value, retrieved from Fortran.
+{% if is_pointer %}
+
+    The value ultimately holds a pointer to the derived type's data.
+    Changes to this value are reflected
+    in the underlying instance of the derived type.
+{% endif %}

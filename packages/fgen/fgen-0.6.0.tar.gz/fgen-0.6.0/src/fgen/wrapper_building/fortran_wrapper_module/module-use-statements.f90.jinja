@@ -1,0 +1,15 @@
+{% set other_use_statements=builder.get_requirements_fortran_use_statements() %}
+{% if other_use_statements %}
+! First-party requirements
+{{ other_use_statements }}
+{% endif %}
+{# Requirements from the original module #}
+! First-party requirements from the module we're wrapping
+use {{ builder.module.name }}, only: {{ builder.module.provides.name }}
+{# Requirements from the manager module #}
+use {{ builder.module.manager_module_name }}, only: &
+{# TODO make it so suffix is same on LHS and RHS in line below #}
+{# TODO: use shared instead #}
+    manager_get_free_instance => get_free_instance_number, &
+    manager_instance_finalize => instance_finalize, &
+    manager_get_instance => get_instance

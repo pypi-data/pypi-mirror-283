@@ -1,0 +1,14 @@
+{% if units | length > 0 %}
+_UNITS: dict[str, str] = {
+{% for name, unit in units.items() %}
+    "{{ name }}": "{{ unit }}",
+{% endfor %}
+}
+{% endif %}
+{% if units_multi_return | length > 0 %}
+_UNITS_MULTI_RETURN: dict[str, tuple[str, ...]] = {
+{% for name, unit_multi_return in units_multi_return.items() %}
+    "{{ name }}": {{ unit_multi_return }},
+{% endfor %}
+}
+{% endif %}

@@ -1,0 +1,9 @@
+use {{ providing_module_name }}, only: {{ required_type }}
+{% set cn=shared.fortran_get_instance_callable_name  %}
+{% if requires_get_instance %}
+use {{ providing_module_manager_name }}, only: {{ providing_module_manager_name }}_{{ cn }} => {{ cn }}
+{% endif %}
+{% if requires_get_free_instance_number %}
+{% set cn=shared.fortran_get_free_instance_number_callable_name  %}
+use {{ providing_module_manager_name }}, only: {{ providing_module_manager_name }}_{{ cn }} => {{ cn }}
+{% endif %}

@@ -1,0 +1,68 @@
+{% set return_value_name = return_value.definition.name %}
+{####}
+subroutine {{ fortran_wrapper_module_callable }}{{ shape_callable_suffix }}( &
+    instance_index, &
+    nd, &
+    dtype, &
+    dshape &
+    )
+    ! Get information about {{ return_value_name }}
+    !
+    ! This allows the array to be retrieved in a second step
+
+    integer, intent(in) :: instance_index
+
+    integer, intent(out) :: nd
+    ! Number of dimensions in the array
+    !
+    ! If the array is not allocated, this will be returned as zero.
+
+    character(len=20), intent(out) :: dtype
+    ! Data type of the array
+
+    integer, dimension(10), intent(out) :: dshape
+    ! Shape of the array
+    !
+    ! If you have an array with more than 10-dimensions,
+    ! an error will be raised.
+
+    type({{ class_being_wrapped }}), pointer :: instance
+
+    call manager_get_instance(instance_index, instance)
+
+    if (.not. allocated(instance % {{ fortran_module_attribute }})) then
+        print *, "instance % {{ fortran_module_attribute }} is not allocated"
+        nd = 0
+        return
+    end if
+
+    dtype = "{{ return_value.definition.as_fortran_data_type().type_specification }}"
+    nd = rank(instance % {{ fortran_module_attribute }})
+    if (nd > 10) then
+        print *, "Array has more than 10 dimensions, wrapping won't work"
+        error stop 1
+    end if
+    dshape(1:nd) = shape(instance % {{ fortran_module_attribute }})
+
+end subroutine {{ fortran_wrapper_module_callable }}{{ shape_callable_suffix }}
+
+subroutine {{ fortran_wrapper_module_callable }}( &
+    instance_index, &
+    {{ return_value_name }} &
+    )
+
+    integer, intent(in) :: instance_index
+
+    {{ return_value.definition.fortran_type }}, intent(inout) :: {{ return_value_name }}
+    ! Returning of {{ return_value_name }}.
+    !
+    ! This argument is `intent(inout)`,
+    ! i.e. an array must be passed in from Python, which this subroutine then fills.
+
+    type({{ class_being_wrapped }}), pointer :: instance
+
+    call manager_get_instance(instance_index, instance)
+
+    {{ return_value_name }} = instance % {{ fortran_module_attribute }}
+
+end subroutine {{ fortran_wrapper_module_callable }}
