@@ -1,0 +1,11 @@
+pennylane_lightning/lightning_kokkos_ops.cpython-311-powerpc64le-linux-gnu.so,sha256=czP9IujhVIBuEa-F1xh8rhhhMjuxgGL9V0tAR_Rsl2k,49090025
+pennylane_lightning/lightning_kokkos/lightning_kokkos.py,sha256=qshrbslnRCuqUDFd5mP_RmQR15RhThjvTrfM-uA1q2k,32212
+pennylane_lightning/lightning_kokkos/lightning_kokkos.toml,sha256=x8ySqAWIQnJNS8m-iIYUp-hPxKOtJ2XKlaX97RMlBf0,6135
+pennylane_lightning/lightning_kokkos/__init__.py,sha256=leftk_ZeQql00Pg-Hrca4K8Zn0sMM8xfB5StCLM7wE8,737
+PennyLane_Lightning_Kokkos.libs/libgomp-23b58a38.so.1.0.0,sha256=mVI39UZei7n42_g3dbkBKowJZ6xrwEsmD6c49n_hios,408865
+PennyLane_Lightning_Kokkos-0.37.0.dist-info/entry_points.txt,sha256=4ZRRai-y45jgpHOGrbMR_6lbxC5RQ-rm7_96_65kVLM,92
+PennyLane_Lightning_Kokkos-0.37.0.dist-info/LICENSE,sha256=_zKpiTfJGLmlVz4pw88ztD4wTe2QkkUNBGSaac54sjM,11720
+PennyLane_Lightning_Kokkos-0.37.0.dist-info/WHEEL,sha256=UlZhswDTxA8LEmG0rv6SvrwUidgyWD-ewpNJ-MQuop8,115
+PennyLane_Lightning_Kokkos-0.37.0.dist-info/top_level.txt,sha256=e3OLLST9VXaQtYnH68djXaL2fbc_-6v6THc_InTmY6o,41
+PennyLane_Lightning_Kokkos-0.37.0.dist-info/RECORD,,
+PennyLane_Lightning_Kokkos-0.37.0.dist-info/METADATA,sha256=z7LzYIkQZTDn_Y1i08HeRdVoenKiIcQdLaAdJzt2Yps,23955
