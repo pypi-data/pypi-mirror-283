@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: javapy_AdamAhmed
+Version: 0.0.1
+Summary: A framework that brings Java and Python together
+Author-Email: AdamAhmed <superdoomy210@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Project-URL: Homepage, https://mit-license.org/
+Project-URL: Issues, https://mit-license.org/
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Javapy
