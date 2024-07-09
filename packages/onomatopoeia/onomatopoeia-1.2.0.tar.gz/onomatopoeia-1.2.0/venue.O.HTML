@@ -1,0 +1,61 @@
+
+
+
+
+
+<body style="white-space: pre-wrap">
+	<h1>onomatopoeia</h1>
+	
+	<h2>on</h2>
+		<h3>before session 1</h3>
+			docker network create --subnet=192.168.0.0/24 container_network
+	
+		<h3>session 1</h3>
+			docker compose up -d; docker exec -it onomatopoeia.1 bash;
+			. /habitat/_controls/build_1.sh
+			
+		<h3>session 2</h3>	
+			docker exec -it onomatopoeia.2 bash;
+			. /habitat/_controls/build_2.sh
+	
+	
+	<h2>link the readme</h2>
+		ln -s venues/stages/onomatopoeia/room.md readme.MD
+		
+		
+	<h2>publishing</h2>
+		
+		#
+		#	statuses
+		#
+		python3 /habitat/regions/vehicles/onomatopoeia/_status/status.proc.py
+		python3 /habitat/status_E2E/status.proc.py
+		
+		
+		#
+		#
+		#	increase version
+		#
+		
+		#
+		#	git push
+		#		if Circle CI is successful, then publish
+		#
+		git tag onomatopoeia.1-1.2.0; git add --all; git commit -m "onomatopoeia"; 
+		git push --tags 
+		
+
+		#
+		#	poetry auth
+		#
+		#
+		(pip install poetry && cd /habitat && rm -rf dist && poetry build --format sdist --verbose && chmod -R 777 /habitat)
+		poetry publish --verbose;
+
+	<h2>important</h2>
+		poetry show --tree
+
+
+	
+
+</pre>
