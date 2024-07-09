@@ -1,0 +1,10 @@
+blurhash_pyside/__init__.py,sha256=Cs7eJ-8J2yQN0jweTwQztgtNNomuDqDUtHJPcmAEY2Y,439
+blurhash_pyside/_core.cp310-win_amd64.pyd,sha256=nGSSWad0rpEw8K6gt6Q2awt7PT3ZpCC4z1rFXhV8kIg,122880
+blurhash_pyside/_core.pyi,sha256=wi-gELLbbvfSNXw45uyTIU3EiEkGLzLHOmhs_cz3Dt8,207
+blurhash_pyside/_wrapper.py,sha256=Isg1tHOdvosQ9h9OWd2OfbqB0SAD-ppgvx5tuFZHd_0,2592
+blurhash_pyside/errors.py,sha256=nH4yseJibpeux3EOmLu89BoV1iTsPEdAFnIEzdOawOc,187
+blurhash_pyside/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+blurhash_pyside-0.2.4.dist-info/METADATA,sha256=WOsk1nhzxcIYzY0mKHvn5BsQmsUgP8vnBysDQ3FWQWA,3499
+blurhash_pyside-0.2.4.dist-info/WHEEL,sha256=8TybILmvc4g4BmKapcD4VhTU9hdyS7zsuJOYB7QyjKk,105
+blurhash_pyside-0.2.4.dist-info/licenses/LICENSE,sha256=M_X0mOCYH1vS8vXv2sykPs4vxY08VacQDqvq-CO_2Ew,1072
+blurhash_pyside-0.2.4.dist-info/RECORD,,
