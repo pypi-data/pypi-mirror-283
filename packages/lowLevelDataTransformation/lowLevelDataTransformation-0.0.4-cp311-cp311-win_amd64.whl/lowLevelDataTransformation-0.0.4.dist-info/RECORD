@@ -1,0 +1,12 @@
+lowLevelDataTransformation/__init__.py,sha256=fyBimzHWeq65wjd5mEQ52T3LWRciZPP7KQVajpY0Ytc,103
+lowLevelDataTransformation/df_to_list_of_dictionary/__init__.py,sha256=4qtOdY9CeSOBi5bdfoVcpcJrjD-vJ7jpKnGsODMA-xY,56
+lowLevelDataTransformation/df_to_list_of_dictionary/df_to_list_of_dict.cp311-win_amd64.pyd,sha256=dyk-bYtzxEqf5EsoXQ1Q0lNQdq5PiF-eujzooHKnLBI,45568
+lowLevelDataTransformation/df_to_string/__init__.py,sha256=W5O4bSF36G4hrwyVPRqzl9jnkShP0xk9MkbXsXtbfjE,38
+lowLevelDataTransformation/df_to_string/df_to_string.cp311-win_amd64.pyd,sha256=ATgQY4KaUgI9VHQQQHJqsOjKbd50H6elf50ZWNdR2A0,41984
+lowLevelDataTransformation/string_to_df/__init__.py,sha256=iakXqJyWrF8h99WqEwRvDQzouXMgzAgHbuQk5CkOlMY,38
+lowLevelDataTransformation/string_to_df/string_to_df.cp311-win_amd64.pyd,sha256=Xhj0kVuU2kG9qH76r010T0ryMAqESwtnODxJLPqajfE,41984
+lowLevelDataTransformation-0.0.4.dist-info/LICENSE.txt,sha256=8HF6PZlTJCszpNCvYrD2LZfP7PZ0eKxCkNNysqMUlEk,1095
+lowLevelDataTransformation-0.0.4.dist-info/METADATA,sha256=xx5C1pP4ry3rVnOGFVJOgMN1BB57Ae4N1GfFdYsyQvY,2213
+lowLevelDataTransformation-0.0.4.dist-info/WHEEL,sha256=nSybvzWlmdJnHiUQSY-d7V1ycwEVUTqXiTvr2eshg44,102
+lowLevelDataTransformation-0.0.4.dist-info/top_level.txt,sha256=0kghFnO7wUFZ-11f9YECN6BU0KZm1tQP5bZVQXLw9hs,27
+lowLevelDataTransformation-0.0.4.dist-info/RECORD,,
