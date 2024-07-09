@@ -1,0 +1,15 @@
+media-toolkit[AudioFile]
+encodec
+fairseq
+boto3
+funcy
+huggingface-hub>=0.14.1
+numpy
+scipy
+tokenizers
+torch
+tqdm
+transformers
+
+[full]
+fast-task-api>=0.0.1
