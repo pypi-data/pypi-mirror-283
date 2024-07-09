@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: nxdtest
+Version: 0.0.1
+Summary: Tox-like tool to run tests for a project under Nexedi testing infrastructure
+Home-page: https://lab.nexedi.com/nexedi/nxdtest
+Author: Nexedi
+Author-email: kirr@nexedi.com
+License: GPLv3+ with wide exception for FOSS
+Keywords: Nexedi testing infrastructure tool tox
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+License-File: COPYING
+Requires-Dist: erp5.util
+Requires-Dist: six
+Requires-Dist: pygolang>=0.1
+Requires-Dist: psutil
+Requires-Dist: python-prctl
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-mock; extra == "test"
+Requires-Dist: pytest-timeout; extra == "test"
+Requires-Dist: setproctitle; extra == "test"

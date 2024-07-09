@@ -1,0 +1,11 @@
+erp5.util
+six
+pygolang>=0.1
+psutil
+python-prctl
+
+[test]
+pytest
+pytest-mock
+pytest-timeout
+setproctitle
