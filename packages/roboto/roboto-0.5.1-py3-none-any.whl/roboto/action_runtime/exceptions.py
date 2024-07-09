@@ -1,0 +1,2 @@
+class ActionRuntimeException(Exception):
+    pass
