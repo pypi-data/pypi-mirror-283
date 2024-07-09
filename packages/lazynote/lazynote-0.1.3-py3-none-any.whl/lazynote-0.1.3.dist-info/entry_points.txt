@@ -1,0 +1,3 @@
+[console_scripts]
+lazynote=lazynote.cmdline:main
+
