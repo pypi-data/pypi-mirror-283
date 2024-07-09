@@ -1,0 +1,27 @@
+[project]
+name = "pinjected-wandb"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "proboscis", email = "nameissoap@gmail.com" }
+]
+dependencies = [
+    "wandb>=0.17.4",
+    "pinjected>=0.2.123",
+]
+readme = "README.md"
+requires-python = ">= 3.10"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pinjected_wandb"]
