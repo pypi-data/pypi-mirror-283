@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: chatos
+Version: 0.0.3
+Summary: REV 0.0.3 Stablish a communication between the computer and the microcontroller CH552 using the serial port.
+Author: Master
+Author-email: name@email.com
+License: GPL-3.0 License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tk
+Requires-Dist: pyusb
+Requires-Dist: pyserial
+
+
+# Chat Serial Interface 0.0.3
+
+This program focus on the serial communication between the computer and the microcontroller. 
+Stablish a communication between the computer and the microcontroller CH552 using the serial port.
+
+## Requirements
+
+- Python 3.6 or higher
+- PySerial
+
+## Installation
+
+```bash
+
+    pip install chatos
+
+```
+
+## Usage
+
+```bash
+
+    python -m chatos
+
+```
+
+## New Features
+
+The latest version includes the following enhancements:
+
+- The program can now send and receive messages from the microcontroller.
+- Communication is set to 9600 baud.
+- Messages sent to the microcontroller must end with `\n`.
