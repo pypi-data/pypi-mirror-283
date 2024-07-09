@@ -1,0 +1,16 @@
+datarules/__init__.py,sha256=yO2-2m7b154lEHln9tWCTSH5d1gxKE_W_xn_yp698HI,328
+datarules/check.py,sha256=QTaX5lmmOI8xuF0WeOvXdHHRgfP79L1CHZVVmyRHt9g,3676
+datarules/collector.py,sha256=QjRKv5nv29pvNTRlS2LPsYAlH32E2SoZ06SjjTaP0nA,814
+datarules/correction.py,sha256=qj-SAVE-Y53OCeHfS2JXHJsv4MWd1-ba4l6YXnUP3J8,2895
+datarules/decorators.py,sha256=0da84rzCpUAX9DZCZnxqk4BGQqTY02N5q_BlMu9mkHk,929
+datarules/loader.py,sha256=XXXNpgEhhSek9D31bjRYuXFj7s9eqcOCvg6oTB4oYns,2329
+datarules/primitives.py,sha256=sJC2BR0eb-iFQEW6BzPW51P-6u5dtynIdseTSMCmNe0,3257
+datarules/report.py,sha256=Jf4kgPv8X0X0LbAumFntjf9ach_nNeCDyq7x3v6d_fI,1535
+datarules/rewriter.py,sha256=KEbtrKZflivuZqNBDv4UUMk3ncwmuhccGlkom_fPrFw,2355
+datarules/rule.py,sha256=jmLCihTSF0wow7p-AZOpBt_Iw4zKxNV0eDzrHxN7Vj0,914
+datarules/runner.py,sha256=U0bDgvxgcZ3KGla_Mp37H68sHyFNh3C1_u51SojTVIk,873
+datarules-0.0.1.dist-info/LICENSE,sha256=oBWlWU_v0MkBHwRcJwO5fMGZiSjUolSD9ZIa5L0fLx4,11545
+datarules-0.0.1.dist-info/METADATA,sha256=IkOYQS62XXTT0QvtFK9XD1vKkhIrVfkbBQWhZLb4UMs,5000
+datarules-0.0.1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+datarules-0.0.1.dist-info/top_level.txt,sha256=EFGqXC5N_a6-C7bWWMoEPalDKdho_arOe4kjihuYEVk,10
+datarules-0.0.1.dist-info/RECORD,,
