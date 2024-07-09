@@ -1,0 +1,50 @@
+[build-system]
+requires = [
+    "setuptools>=45",
+    "wheel",
+    "setuptools_scm>=6.2",
+    "setuptools_scm_git_archive",
+    "pybind11>=2.8.0",
+]
+
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 105
+exclude = '''
+/(
+    \..*
+  | dist
+  | wheelhouse
+  | .*build
+  | __pycache__
+)/
+'''
+
+[tool.cibuildwheel]
+test-command = 'python -c "import vroom"'
+build = "cp3{9,10,11,12}-*"
+skip = "*musllinux*"
+archs = "native"
+manylinux-x86_64-image = "quay.io/pypa/manylinux_2_28_x86_64"
+manylinux-aarch64-image = "quay.io/pypa/manylinux_2_28_aarch64"
+
+[tool.cibuildwheel.linux]
+before-all = """
+dnf update -y
+dnf module enable -y mariadb-devel
+dnf install -y openssl-devel asio-devel
+"""
+archs = ["x86_64", "aarch64"]
+
+[[tool.cibuildwheel.overrides]]
+select = "*musllinux*"
+before-all = """
+apk add asio-dev
+apk add openssl-dev
+"""
+[tool.cibuildwheel.macos]
+
+before-all = """
+brew install --ignore-dependencies asio
+"""
