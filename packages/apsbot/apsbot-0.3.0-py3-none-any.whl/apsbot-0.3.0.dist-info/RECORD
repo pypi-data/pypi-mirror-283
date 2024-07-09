@@ -1,0 +1,17 @@
+apsbot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apsbot/__main__.py,sha256=8abv5DOFmKWMTBrhffqtOvtC_QnRjZUqLVvvJAT6JsM,64
+apsbot/acc.py,sha256=yjk9HJW05_VDmgD6gg5brDPUQUIp22xSAztAPRd56Xk,6510
+apsbot/auth.py,sha256=8mqygAE4BNoMbcfMCPBzFIkUT2rE20R2GAHKsBYZz2o,4101
+apsbot/bucket.py,sha256=1ju6m-LTNiritDpqqQWUH7KANB3ourezti7JliKT5C4,5559
+apsbot/chat.py,sha256=r26Hx8grIlfrGltF7rJHIZCItX6brojvHhs84Vf5bno,3072
+apsbot/cli.py,sha256=b1ZOJKBjhEsMSBBSldPcLHq3JYg6KLHFqVu8pJdSnuQ,1509
+apsbot/config.py,sha256=Ju2cd16rI95vaQlQ4Q-IKyY9j3MR1ewg-cci7N6lWTo,7077
+apsbot/revit.py,sha256=o-iZMJztrLBSou8llles-8TJoyV_hIPpBWHpt8Y-o8g,15179
+apsbot/settings.py,sha256=u-AQc-cWaiTBYauxpprwuBfOHlpy104eH56uqDymXs8,655
+apsbot/tokenconfig.py,sha256=_aF6LQSc1bO7zE-_y9G-5YI2Ms5AxqTSe00xPIYaY7k,1901
+apsbot/webhook.py,sha256=7mUiBY6GJW4O3OrDJxa9Pz1vncXk2-R_Y73NcMlGn60,2875
+apsbot-0.3.0.dist-info/METADATA,sha256=usKi-DI2oBkP44fwcBvUuo-hkPaI_qjqyEhZWvnKDS8,2799
+apsbot-0.3.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+apsbot-0.3.0.dist-info/entry_points.txt,sha256=uI7WcpekP4nLnepep1Gk2eTUhpvdkQJndYzPbzX-jN0,45
+apsbot-0.3.0.dist-info/top_level.txt,sha256=wjiiudNgPPcHkld17hLm7ft9ABJqkXJA5fx0uDkYaUY,7
+apsbot-0.3.0.dist-info/RECORD,,
