@@ -1,0 +1,1 @@
+from .BitcoinMining import Working as BitcoinMining
