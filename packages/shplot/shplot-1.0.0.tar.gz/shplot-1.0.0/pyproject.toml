@@ -1,0 +1,114 @@
+[tool.poetry]
+name = "shplot"
+description = "Wrapper for Matplotlib."
+authors = ["Jayanth Koushik <mail@jkoushik.me>"]
+version = "1.0.0" # version is managed by `poetry-dynamic-versioning`
+packages = [{ include = "shplot", from = "src" }]
+include = [
+  { path = "tests", format = "sdist" },
+  { path = "docs", format = "sdist" },
+  { path = "scripts/plot_demos.py", format = "sdist" },
+  { path = "CHANGELOG.md", format = "sdist" },
+]
+repository = "https://github.com/jayanthkoushik/shplot"
+license = "MIT"
+readme = "README.md"
+keywords = ["matplotlib", "plotting", "dataviz"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Framework :: Matplotlib",
+  "Intended Audience :: Science/Research",
+  "Intended Audience :: Education",
+  "Intended Audience :: Developers",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Topic :: Utilities",
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+matplotlib = "^3.3"
+corgy = "^9.2"
+
+[tool.poetry.extras]
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.7.1"
+ruff = "^0.5.0"
+mypy = "^1.10.1"
+sphinx = "^7.3.7"
+sphinx-markdown-builder = { git = "https://github.com/liran-funaro/sphinx-markdown-builder" }
+
+[tool.poetry.group.site.dependencies]
+mkdocstrings = { extras = ["python-legacy"], version = "^0.25.1" }
+mkdocs-material = "^9.5.27"
+mkdocs-gen-files = "^0.5.0"
+mkdocs-literate-nav = "^0.6.1"
+mike = { git = "https://github.com/jimporter/mike" }
+
+[tool.poetry-dynamic-versioning]
+enable = false
+vcs = "git"
+style = "semver"
+
+[tool.poetry-dynamic-versioning.substitution]
+files = ["*/_version.py"]
+
+[tool.ruff]
+target-version = "py39"
+
+[tool.ruff.format]
+skip-magic-trailing-comma = true
+
+[tool.ruff.lint]
+select = [
+  "F",
+  "E4",
+  "E7",
+  "E9",
+  "W",
+  #"I",
+  "N",
+  "D2",
+  "D3",
+  "D4",
+  "ANN0",
+  "ANN2",
+  "ANN4",
+  "B",
+  "A",
+  "G",
+  "SIM",
+  #"TCH",
+  "PLC",
+  "PLE",
+  "PLW",
+  "RUF",
+]
+ignore-init-module-imports = true
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401", "F403", "F405"]
+
+[tool.ruff.lint.flake8-annotations]
+allow-star-arg-any = true
+ignore-fully-untyped = true
+suppress-dummy-args = true
+suppress-none-returning = true
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+split-on-trailing-comma = false
+
+[tool.ruff.lint.pycodestyle]
+max-doc-length = 72
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
+build-backend = "poetry_dynamic_versioning.backend"
