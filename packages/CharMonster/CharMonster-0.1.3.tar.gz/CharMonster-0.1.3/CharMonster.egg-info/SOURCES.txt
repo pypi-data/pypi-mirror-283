@@ -1,0 +1,12 @@
+setup.py
+CharMonster/__init__.py
+CharMonster/__main__.py
+CharMonster.egg-info/PKG-INFO
+CharMonster.egg-info/SOURCES.txt
+CharMonster.egg-info/dependency_links.txt
+CharMonster.egg-info/requires.txt
+CharMonster.egg-info/top_level.txt
+CharMonster/dicts/__init__.py
+CharMonster/dicts/monsters.json
+CharMonster/monster/__init__.py
+CharMonster/monster/_monster.py
