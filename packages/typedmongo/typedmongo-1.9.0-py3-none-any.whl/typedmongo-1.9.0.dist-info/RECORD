@@ -1,0 +1,17 @@
+typedmongo-1.9.0.dist-info/METADATA,sha256=4dkjOFVk7p9Mmtrbz-btBYqsZm2rnotvUkSfiRYFdiQ,5407
+typedmongo-1.9.0.dist-info/WHEEL,sha256=mbxFTmdEUhG7evcdMkR3aBt9SWcoFBJ4CDwnfguNegA,90
+typedmongo-1.9.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+typedmongo/__init__.py,sha256=vR3sK6LXdaSqL-rVICQQj_5DPrP0uFsWI95ae-2l6bc,964
+typedmongo/asyncio/__init__.py,sha256=vR3sK6LXdaSqL-rVICQQj_5DPrP0uFsWI95ae-2l6bc,964
+typedmongo/asyncio/client.py,sha256=govGw7Y7R1P9dobg9NHnt7TZLQri10jMQaPSwol-WAw,13089
+typedmongo/asyncio/fields.py,sha256=O1C6CvuSba0jyf3TVIHCSwPOtjg2QZ5BcFXhclvCRqE,10541
+typedmongo/asyncio/table.py,sha256=2AuGTzdfep8UcE6I2cESQ3s1yWqTZoocSPi9oN8y03o,8668
+typedmongo/client.py,sha256=MQggyTM4_vUSG4jBE8er4BgMhhYW2vRAfyKJLlD-1KI,12796
+typedmongo/exceptions.py,sha256=s_7XW5XeY01bqP956oqo5WhCNhaisApNfoeyqgXuiGI,163
+typedmongo/expressions.py,sha256=nWwOnPsPNqYPBURkd3UNh5s1AhtYRDPUQthnb4K3Hhk,6200
+typedmongo/fields.py,sha256=O1C6CvuSba0jyf3TVIHCSwPOtjg2QZ5BcFXhclvCRqE,10541
+typedmongo/marshamallow.py,sha256=3VWHEXereFgcWOGZJuT7Lh-EZ8rX9hxy-cij_vmaPzM,1261
+typedmongo/shortcuts.py,sha256=ZpJeQT-5HeObCaO5eUW5M843kwIqeuZvo11m0vFc73I,1384
+typedmongo/sync.py,sha256=9aY7v47Joggo00f2xwpuqbSpRrh8xIOMcIHX83clx58,1879
+typedmongo/table.py,sha256=2AuGTzdfep8UcE6I2cESQ3s1yWqTZoocSPi9oN8y03o,8668
+typedmongo-1.9.0.dist-info/RECORD,,
