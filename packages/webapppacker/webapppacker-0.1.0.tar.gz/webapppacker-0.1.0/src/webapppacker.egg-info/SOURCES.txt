@@ -1,0 +1,11 @@
+README.md
+setup.py
+src/webapppacker/__init__.py
+src/webapppacker/android_manifest.py
+src/webapppacker/packer.py
+src/webapppacker/utils.py
+src/webapppacker.egg-info/PKG-INFO
+src/webapppacker.egg-info/SOURCES.txt
+src/webapppacker.egg-info/dependency_links.txt
+src/webapppacker.egg-info/top_level.txt
+tests/test_packer.py
