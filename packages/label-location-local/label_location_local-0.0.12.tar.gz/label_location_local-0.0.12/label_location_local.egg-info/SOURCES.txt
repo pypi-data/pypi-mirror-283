@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+label_location_local.egg-info/PKG-INFO
+label_location_local.egg-info/SOURCES.txt
+label_location_local.egg-info/dependency_links.txt
+label_location_local.egg-info/requires.txt
+label_location_local.egg-info/top_level.txt
+label_location_local/src/LabelConstants.py
+label_location_local/src/LabelLocation.py
+label_location_local/src/__init__.py
