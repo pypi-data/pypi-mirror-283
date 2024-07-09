@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "kawaiipy"
+version = "v0.1.0"
+description = "kawaiipy – async wrapper for Kawaii API"
+authors = ["stefanlight <64615032+stefanlight8@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10,<3.13"
+aiohttp = "^3.9.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
