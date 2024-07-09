@@ -1,0 +1,225 @@
+
+----
+
+## Certification
+
+Bravo!  You have received a Medical Diploma in "emergency" from      
+the Orbital Convergence University International Air and Water   
+Embassy of the Tangerine Planet.  
+
+You are now officially certified to include "emergency" in your   
+practice.  
+
+----
+
+# emergency
+
+----
+
+## License
+
+Please feel free to use this module however (business, personal, etc.)
+subject to the terms of GPL 3.0 License.
+
+	@ Bryan Grace (BGraceful)
+
+----
+
+![emergency](https://gitlab.com/status600/treasures/emergency.1/-/raw/business/CharlVera--cow-8637470_1280.jpg)
+from https://pixabay.com/users/charlvera-11040068/
+
+----
+ 
+[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/EGXocrWNVJE6QWAifHn6r3/XP6tKC6Z4p7cTe8uyzgEjb/tree/performance.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/circleci/EGXocrWNVJE6QWAifHn6r3/XP6tKC6Z4p7cTe8uyzgEjb/tree/performance)
+
+----
+
+
+## Description
+This module can monitor the health of a python3 `.py` biome. 
+
+----
+
+## Licensing
+`GNU General Public License v3.0 - GNU Project - Free Software Foundation (FSF)`
+
+The complete license is included in the module  
+in the "./__license/options" directory.
+	
+----		
+		
+## Install
+
+This utilizes:     
+[https://pypi.org/project/xonsh](https://pypi.org/project/xonsh)   
+
+```
+[xonsh] pip install emergency
+```
+
+----
+	
+## Internal health monitor of the module
+
+To monitor the internal health of the "emergency" module:
+
+```
+[xonsh] emergency internal-health
+```
+	
+These checks are run with pypi "body_scan";   
+"emergency" is built from a fork of "body_scan".  
+
+The "body_scan" checks are written with "unittest". 
+   
+----
+	
+## Documentation   
+```
+[xonsh] emergency help 
+```
+
+This opens a server process that can be opened in a browser. 
+	
+----
+
+## Tutorial
+
+### The structure
+```
+[directory] health
+	[directory] monitors
+		[file] health_1.py
+		
+	health.move.py
+```
+
+### [file] health_1.py
+```		
+def check_1 ():
+	print ("check 1")
+	
+def check_2 ():
+	print ("check 2")
+	
+def check_3 ():
+	raise Exception ("not 110%")
+
+checks = {
+	"check 1": check_1,
+	"check 2": check_2,
+	"check 3": check_3
+}
+```
+		
+### Health Procedure
+From the `monitors` directory,   
+```
+[xonsh] emergency health
+```
+
+#### Health Report
+This is the report that is (hopefully) written to the terminal.  
+
+```
+paths: [
+	{
+		"path": "health_1.py",
+		"empty": false,
+		"parsed": true,
+		"stats": {
+			"passes": 2,
+			"alarms": 1
+		},
+		"checks": [
+			{
+				"check": "check 1",
+				"passed": true,
+				"elapsed": [
+					4.054199962411076e-05,
+					"seconds"
+				]
+			},
+			{
+				"check": "check 2",
+				"passed": true,
+				"elapsed": [
+					1.72930003827787e-05,
+					"seconds"
+				]
+			},
+			{
+				"check": "check 3",
+				"passed": false,
+				"exception": "Exception('not 110%')",
+				"exception trace": [
+					"Traceback (most recent call last):",
+					"  File \"/emergency/processes/scan/process/keg/check.py\", line 68, in start",
+					"    checks [ check ] ()",
+					"  File \"<string>\", line 13, in check_3",
+					"Exception: not 110%"
+				]
+			}
+		]
+	}
+]
+alarms: [
+	{
+		"path": "health_1.py",
+		"checks": [
+			{
+				"check": "check 3",
+				"passed": false,
+				"exception": "Exception('not 110%')",
+				"exception trace": [
+					"Traceback (most recent call last):",
+					"  File \"/emergency/processes/scan/process/keg/check.py\", line 68, in start",
+					"    checks [ check ] ()",
+					"  File \"<string>\", line 13, in check_3",
+					"Exception: not 110%"
+				]
+			}
+		]
+	}
+]
+stats: {
+	"alarms": 0,
+	"empty": 0,
+	"checks": {
+		"passes": 2,
+		"alarms": 1
+	}
+}
+```
+	
+### Notes
+- Checks are started simultaneously, unless `--simultaneous no`
+	- `[xonsh] emergency health --simultaneous no`
+
+- The fractory glob pattern is "**/status_*.py", but can be changed with `--glob-string`  
+    - `[xonsh] emergency health --glob-string "**/performance_*.py"`  	
+	
+----
+
+## Advanced Tutorial   
+
+It's recommended to run emergency in a .py script.    
+
+An example of this can be found in the "_book/advanced tutorial"  
+section of the documentation.   
+
+----
+
+```
+from emergency.topics.show.variable import show_variable
+show_variable ({}, mode = "pprint")
+show_variable ({}, mode = "condensed")
+```
+
+----
+
+## Contacts
+graceful.bryonics@proton.me
+
+		
+	
