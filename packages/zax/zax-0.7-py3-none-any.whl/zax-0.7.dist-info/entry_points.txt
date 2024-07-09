@@ -1,0 +1,3 @@
+[console_scripts]
+zax=zax.__main__:main
+
