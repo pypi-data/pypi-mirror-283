@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: satellite_image_classifier_0.2
+Version: 0.2.0
+Requires-Dist: rasterio
+Requires-Dist: numpy
+Requires-Dist: scikit-learn

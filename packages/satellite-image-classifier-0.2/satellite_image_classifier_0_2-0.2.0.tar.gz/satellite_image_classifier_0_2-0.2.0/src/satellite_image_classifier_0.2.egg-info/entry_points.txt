@@ -1,0 +1,2 @@
+[console_scripts]
+classify-image = satellite_image_classification.classification:main
