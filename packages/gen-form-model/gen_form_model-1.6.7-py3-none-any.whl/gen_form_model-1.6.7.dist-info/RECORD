@@ -1,0 +1,17 @@
+gen_form_model/__init__.py,sha256=KyFzGUa21qzoQZzbvaEstxmMJ8A-VbLUnOESViLWlzQ,7756
+gen_form_model/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gen_form_model/conf/gen_form_model.cfg,sha256=nbj_yfqRix3oBQsUcEvYmZHcI9fe9ZZkFCnYasAqLuc,149
+gen_form_model/conf/gen_form_model_util.cfg,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gen_form_model/conf/project.yaml,sha256=dg0DDBVt_WOms3_mugKoDHkLXdlfg8InOj8P1XiobO8,69
+gen_form_model/conf/template/django.template,sha256=Si3Gu-Fs18Esa2Pt4_zKRBBLWeSQWCylTmKIy5HlTzc,1703
+gen_form_model/conf/template/flask.template,sha256=PHWjg6LsNzE820slrd-gm6s710Cnyo0KIqXvqv1zCIM,1709
+gen_form_model/log/gen_form_model.log,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gen_form_model/pro/__init__.py,sha256=fgWPFE4A-6d7SyJOL26p7nO0J521NV5hgT3dRMnc8p0,5901
+gen_form_model/pro/read_template.py,sha256=I2EbKyUE0BNs1azGBlo-QYapuKtuwFQeZzqEiroJia8,3659
+gen_form_model/pro/write_template.py,sha256=xzlHB94r4YZZueRcyZxYFJhbtfULURUkcgkVBzQ-4ZI,5071
+usr/local/bin/gen_form_model_run.py,sha256=OBB7AYGgYmhjZW6ojI_Hqa3_mn9mZoBgAws-vkd3SGM,1629
+gen_form_model-1.6.7.dist-info/LICENSE,sha256=ZP40jkJEk8l2aibpYBvURmUbLJV3duU9BYCm4_0OJ3Q,34792
+gen_form_model-1.6.7.dist-info/METADATA,sha256=w4dPG2vwRw1daIkx4pNKYJ88UTrblrK5SPVvNnUvx-s,7275
+gen_form_model-1.6.7.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+gen_form_model-1.6.7.dist-info/top_level.txt,sha256=0YgZUjDUQk_YYl8T9yVQadT-_dqbGkxcPyZ_f62Y9WQ,15
+gen_form_model-1.6.7.dist-info/RECORD,,
