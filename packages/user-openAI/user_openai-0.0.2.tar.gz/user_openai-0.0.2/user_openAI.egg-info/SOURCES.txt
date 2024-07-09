@@ -1,0 +1,8 @@
+README.md
+setup.py
+user_openAI.egg-info/PKG-INFO
+user_openAI.egg-info/SOURCES.txt
+user_openAI.egg-info/dependency_links.txt
+user_openAI.egg-info/not-zip-safe
+user_openAI.egg-info/requires.txt
+user_openAI.egg-info/top_level.txt
