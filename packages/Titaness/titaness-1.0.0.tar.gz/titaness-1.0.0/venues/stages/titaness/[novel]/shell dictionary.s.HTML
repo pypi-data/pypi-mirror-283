@@ -1,0 +1,136 @@
+
+
+
+<link rel="stylesheet" href="/stage.CSS">
+
+<pre>
+
+	<section>
+		<h1>utilizing the shell utility</h1>
+	</section>
+
+	<section>
+		<h2>status checks</h2>
+		<p>Checks are started simultaneously, unless "--simultaneous no"</p>
+	
+		<h3>The structure</h3>
+		<code>
+			/_status
+				status_1.py			
+		</code>
+	
+		<h3>write "status_1.py"</h3>
+		<code>
+# status_1.py
+
+def check_1 ():
+	print ("check 1")
+	
+def check_2 ():
+	print ("check 2")
+	
+def check_3 ():
+	raise Exception ("not 110%")
+
+checks = {
+	"check 1": check_1,
+	"check 2": check_2,
+	"check 3": check_3
+}
+		</code>
+					
+		
+		<h3>from the "_status" directory</h3>
+		<code>
+[xonsh @ _status] titaness status
+		</code>
+
+		<h3>The report then should appear like this:</h3>
+		<code>
+		
+paths: [
+	{
+		"path": "../status_1.py",
+		"empty": false,
+		"parsed": true,
+		"stats": {
+			"passes": 2,
+			"alarms": 1
+		},
+		"checks": [
+			{
+				"check": "check 1",
+				"passed": true,
+				"elapsed": [
+					4.054199962411076e-05,
+					"seconds"
+				]
+			},
+			{
+				"check": "check 2",
+				"passed": true,
+				"elapsed": [
+					1.72930003827787e-05,
+					"seconds"
+				]
+			},
+			{
+				"check": "check 3",
+				"passed": false,
+				"exception": "Exception('not 110%')",
+				"exception trace": [
+					"Traceback (most recent call last):",
+					"  File \"/home/veganecology/.local/lib/python3.11/site-packages/titaness/processes/scan/process/keg/check.py\", line 68, in start",
+					"    checks [ check ] ()",
+					"  File \"<string>\", line 13, in check_3",
+					"Exception: not 110%"
+				]
+			}
+		]
+	}
+]
+alarms: [
+	{
+		"path": "../status_1.py",
+		"checks": [
+			{
+				"check": "check 3",
+				"passed": false,
+				"exception": "Exception('not 110%')",
+				"exception trace": [
+					"Traceback (most recent call last):",
+					"  File \"/home/veganecology/.local/lib/python3.11/site-packages/titaness/processes/scan/process/keg/check.py\", line 68, in start",
+					"    checks [ check ] ()",
+					"  File \"&lt;string&gt;\", line 13, in check_3",
+					"Exception: not 110%"
+				]
+			}
+		]
+	}
+]
+stats: {
+	"alarms": 0,
+	"empty": 0,
+	"checks": {
+		"passes": 2,
+		"alarms": 1
+	}
+}
+		
+		</code>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
+
