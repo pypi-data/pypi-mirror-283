@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: p8xxpy
+Version: 0.1
+Summary: Uma biblioteca para estilizar interfaces gráficas em Python, tornando-as mais bonitas e atraentes
+Home-page: https://github.com/seunome/p8xxpy
+Author: bruno
+Author-email: miguel100eduardoluiz@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: User Interfaces
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# p8xxpy
+
+`p8xxpy` Ã© uma biblioteca Python para estilizar interfaces grÃ¡ficas, tornando-as mais bonitas e atraentes.
+
+## InstalaÃ§Ã£o
+
+VocÃª pode instalar a biblioteca usando pip:
+
+```sh
+pip install p8xxpy
