@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "chance_tennis_matt_steel"
+version = "0.0.5"
+authors = [
+    {name = "Matt Steel", email = "mattsteel87@hotmail.co.uk"},
+]
+description = "A simple tennis game simulator"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+
