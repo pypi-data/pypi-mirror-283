@@ -1,0 +1,57 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "eindata"
+dynamic = ["version"]
+description = 'Data wrangling and exploratory data analysis awith elegant einops-inspired syntax.'
+readme = "README.md"
+requires-python = ">=3.10"
+license = "apache-2.0"
+keywords = []
+authors = [
+  { name = "mbodi team", email = "info@mbodi.ai" },
+]
+classifiers = [
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = []
+
+[project.urls]
+Documentation = "https://github.com/mbodiai/eindata#readme"
+Issues = "https://github.com/mbodiai/eindata/issues"
+Source = "https://github.com/mbodiai/eindata"
+
+[tool.hatch.version]
+path = "src/eindata/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/eindata tests}"
+
+[tool.coverage.run]
+source_pkgs = ["eindata", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/eindata/__about__.py",
+]
+
+[tool.coverage.paths]
+eindata = ["src/eindata", "*/eindata/src/eindata"]
+tests = ["tests", "*/eindata/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
