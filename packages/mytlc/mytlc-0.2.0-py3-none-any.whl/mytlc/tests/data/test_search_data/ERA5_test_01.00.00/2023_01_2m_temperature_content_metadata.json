@@ -1,0 +1,43 @@
+{
+    "general": {
+        "data-file-name": "2023_01_2m_temperature.nc",
+        "spatial-reference": "Geographic degrees (WGS84)",
+        "time-reference": "UTC"
+    },
+    "dimensions": {
+        "x-coordinate": [
+            -10.0,
+            11.0
+        ],
+        "y-coordinate": [
+            37.5,
+            54.75
+        ],
+        "z-coordinate": [
+            0.0,
+            0.0
+        ],
+        "t-reference": [
+            "20230101:000000",
+            "20230131:230000"
+        ],
+        "forecast": [
+            0
+        ],
+        "probabilistic-dimension": [
+            0
+        ],
+        "meteo-variable": [
+            {
+                "name": "2 metre temperature",
+                "standard-name": "unspecified",
+                "unit": "K",
+                "min-value": 243.8837432861328,
+                "max-value": 297.047607421875,
+                "missing-value-indicator": "unspecified",
+                "missing-value-indicator-defined": false,
+                "total-missing-value": -1
+            }
+        ]
+    }
+}

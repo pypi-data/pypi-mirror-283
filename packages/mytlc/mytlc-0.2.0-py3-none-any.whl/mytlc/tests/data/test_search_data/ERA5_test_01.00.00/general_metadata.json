@@ -1,0 +1,45 @@
+{
+    "dataset": {
+        "path": "unspecified",
+        "name": "ERA5_test_01.00.00",
+        "uuid": "316b9c5a-ad20-5074-8541-8d9ae8c34553",
+        "size-go": 0.0083,
+        "file-number": "4",
+        "last-modification-date": "2024-07-02 11:01:18"
+    },
+    "data": {
+        "protection-level": "NP",
+        "source": "reanalysis-era5-single-levels",
+        "source-url": "https://cds.climate.copernicus.eu/api/v2/",
+        "download-date": "2024-06-10 06:20:16",
+        "format-reference": "netcdf",
+        "data-license": "https://cds.climate.copernicus.eu/api/v2/terms/static/licence-to-use-copernicus-products.pdf",
+        "license-doi": "10.24381/cds.adbb2d47",
+        "license-quote": "Generated using Copernicus Climate Change Service information 2024 and/or generated using Copernicus Atmosphere Monitoring Service Information 2024Hersbach, H., Bell, B., Berrisford, P., Biavati, G., Hor\u00c3\u00a1nyi, A., Mu\u00c3\u00b1oz Sabater, J., Nicolas, J., Peubey, C., Radu, R., Rozum, I., Schepers, D., Simmons, A., Soci, C., Dee, D., Th\u00c3\u00a9paut, J-N. (2023): ERA5 hourly data on single levels from 1940 to present. Copernicus Climate Change Service (C3S) Climate Data Store (CDS), DOI: 10.24381/cds.adbb2d47 (Accessed on 10-06-2024). Neither the European Commission nor ECMWF is responsible for any use that may be made of the Copernicus information or data it contains.",
+        "time-range": {
+            "start": "2023-01-01 00:00:00",
+            "end": "2023-01-31 23:00:00"
+        }
+    },
+    "checksums-reference": "checksums_generated.txt",
+    "datapaper-reference": "unspecified",
+    "releasenotes-reference": "releases_notes.md",
+    "rgpd": "unspecified",
+    "restrictions": "unspecified",
+    "verification-results": {
+        "fair-results": {
+            "findable": {
+                "metadata-values": "OK",
+                "uuid-value": "OK"
+            },
+            "accessible": "KO",
+            "interoperable": "OK",
+            "reusable": "OK"
+        },
+        "other-results": {
+            "plausibility": "OK",
+            "consistency": "OK",
+            "coherence": "OK"
+        }
+    }
+}
