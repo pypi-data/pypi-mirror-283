@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+src/weather_temperature_api.egg-info/PKG-INFO
+src/weather_temperature_api.egg-info/SOURCES.txt
+src/weather_temperature_api.egg-info/dependency_links.txt
+src/weather_temperature_api.egg-info/requires.txt
+src/weather_temperature_api.egg-info/top_level.txt
