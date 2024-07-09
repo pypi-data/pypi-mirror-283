@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "simple-build-tools"
+version = "1.0.4"
+description = "Build Tools for Python Projects"
+authors = ["James Barwick <jbarwick@me.com>"]
+license = "MIT"
+readme = "README.md"
+maintainers = ["Ethan Chan <ethan.chan@singtel.com>"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.scripts]
+bt = "simple_build_tools.cli:main"
+
+[[tool.poetry.source]]
+name = "nexus"
+url = "https://monster-jj.jvj28.com:9091/repository/pypi/simple/"
+priority = "primary"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "explicit"
+
+[tool.poetry-dynamic-versioning]
+enable = false
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+build-backend = "poetry_dynamic_versioning.backend"
