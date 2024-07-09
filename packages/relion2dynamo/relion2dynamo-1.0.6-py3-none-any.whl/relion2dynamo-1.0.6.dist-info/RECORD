@@ -1,0 +1,10 @@
+relion2dynamo/__init__.py,sha256=cfU9k9FWiw3kb6cj6VazCgq46OWF31m1Zq0nW5t4qlY,290
+relion2dynamo/_io_converter.py,sha256=D_Emx9wGIJR7faehINZ7JXmPmAeZw5-Fn2KoeW_8qoY,631
+relion2dynamo/_version.py,sha256=T17ZEPR5Omt5RLA0TuZWTufRi58PzGIPek75nFcuMQY,411
+relion2dynamo/relion2dynamo.py,sha256=gCGtp8FQLZrQTDM2U_WMOO8YxjgiNFFvPTkVAv9nays,3408
+relion2dynamo-1.0.6.dist-info/LICENSE.txt,sha256=P657EV88YiSQLHF4R_L9nAV_QKtuoMI-ZqpEC-FgcQ4,1520
+relion2dynamo-1.0.6.dist-info/METADATA,sha256=kI0Igoi_DLxw9pGp2JS7tFaMqWfXMa1ePpm0dSg8m0E,1657
+relion2dynamo-1.0.6.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+relion2dynamo-1.0.6.dist-info/entry_points.txt,sha256=4XzWi8vw9D2NUVOGvdthjcz_OWkj3VA3CsSdCBKTC_o,66
+relion2dynamo-1.0.6.dist-info/top_level.txt,sha256=FHRhaTN9zWeYPrqlRFNgablPTNOFq9_ngGk-Fn6_LJM,14
+relion2dynamo-1.0.6.dist-info/RECORD,,
