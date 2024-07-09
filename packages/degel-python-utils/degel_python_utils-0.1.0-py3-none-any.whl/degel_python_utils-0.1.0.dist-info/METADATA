@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: degel-python-utils
+Version: 0.1.0
+Summary: Shared Python utilies from Degel Software Ltd.
+Home-page: https://github.com/deg/degel-python-utils
+Author: David Goldfarb
+Author-email: deg@degel.com
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+
+# degel-python-utils
+
+Shared Python utilies from Degel Software Ltd.
+
+## Installation
+
+```bash
+pipenv add degel-python-utils
+```
+
+```python
+from degel_python_utils import some_function
+
+some_function()
+```
