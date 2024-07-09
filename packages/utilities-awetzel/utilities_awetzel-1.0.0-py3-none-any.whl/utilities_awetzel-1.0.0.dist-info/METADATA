@@ -1,0 +1,138 @@
+Metadata-Version: 2.1
+Name: utilities_awetzel
+Version: 1.0.0
+Summary: utilities for Andrew Wetzel's packages
+Author: Shea Garrison-Kimmel, Jenna Samuel, Nico Garavito-Camargo
+Author-email: Andrew Wetzel <arwetzel@gmail.com>
+Maintainer-email: Andrew Wetzel <arwetzel@gmail.com>
+License: Copyright 2014-2024 by Andrew Wetzel <arwetzel@gmail.com>, Shea Garrison-Kimmel, Jenna Samuel, Nico Garavito-Camargo.
+        
+        In summary, you are free to use, edit, share, and do whatever you want. But
+        please cite us and report bugs!
+        
+        Less succinctly, this software is governed by the MIT License:
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of
+        this software and associated documentation files (the "Software"), to deal in
+        the Software without restriction, including without limitation the rights to
+        use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+        the Software, and to permit persons to whom the Software is furnished to do so,
+        subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+        FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+        COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+        IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+        CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+        
+Project-URL: Repository, https://bitbucket.org/awetzel/utilities/src/master/
+Project-URL: Issues, https://bitbucket.org/awetzel/utilities/issues?status=new&status=open&status=submitted
+Keywords: utilities,astronomy,astrophysics,cosmology,galaxies,stars,dark matter
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: numpy >=1.22.2
+Requires-Dist: scipy >=1.13.1
+Requires-Dist: h5py >=3.9.0
+Requires-Dist: matplotlib >=3.8
+
+# Description
+
+Python package of utility functions that are useful in analyzing various datasets, in particular, catalogs of particles or galaxies/halos from cosmological simulations.
+
+
+---
+# Requirements
+
+python 3, numpy, scipy, h5py, matplotlib.
+
+
+---
+# Content
+
+## lower-level utilities
+
+### array.py 
+* create, manipulate, analyze arrays
+
+### binning.py
+* binning of array data
+
+### constant.py
+* physical constants and unit conversions
+
+### coordinate.py
+* manipulate positions and velocities
+
+### io.py
+* read, write, print during run time
+
+### math.py 
+* math, statistics, and fitting
+
+### plot.py
+* supplementary functions for plotting with matplotlib
+
+
+## higher-level utilities
+
+### catalog.py
+* analyze catalogs of halos/galaxies
+
+### cosmology.py
+* calculate cosmological values, including cosmic density, distance, age, volume
+
+### halo_property.py
+* calculate halo properties at different radii, convert between virial definitions
+
+### orbit.py
+* compute orbital quantities such as peri/apo-centric distance, orbital time, in a given gravitational potential
+
+### particle.py
+* high-level analysis of N-body particle data
+
+### simulation.py
+* tools to help set up and run a simulation
+
+
+---
+# Units
+
+Unless otherwise noted, this package stores all quantities in (combinations of) these base units
+* mass [M_sun]
+* position [kpc comoving]
+* distance, radius [kpc physical]
+* time [Gyr]
+* temperature [K]
+* magnetic field [Gauss]
+* elemental abundance [linear mass fraction]
+
+These are the common exceptions to those standards
+* velocity [km/s]
+* acceleration [km/s / Gyr]
+* gravitational potential [km^2 / s^2]
+* rates (star formation, cooling, accretion) [M_sun / yr]
+* metallicity (if converted from stored massfraction) [log10(mass_fraction / mass_fraction_solar)], using Asplund et al 2009 for Solar
+
+
+---
+# Installing
+
+
+The easiest way to install `utilities` is with `pip`
+
+```
+python -m pip install git+ssh://git@bitbucket.org/awetzel/utilities.git
+
+```
+
+We recommend working on a virtual environment with `venv` or `conda` within which to install the package.
