@@ -1,0 +1,8 @@
+pytest_jira_xfail/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_jira_xfail/annotations.py,sha256=TSINuPt9PSeEzyd-1-elbyTUmFL45OUMyT0NyhVlurI,570
+pytest_jira_xfail/jira_helper.py,sha256=4PWeQhzSPXOHM1HqCF3ffeg0qLu1mzS9OGN2vjTaTDs,4982
+pytest_jira_xfail-1.2.1.dist-info/LICENSE,sha256=t025U7BveW-og_1SJnpyJQ1XTgtM2e0f885ReCegxV0,1062
+pytest_jira_xfail-1.2.1.dist-info/METADATA,sha256=EEIw3mlkfGSIUkNZegoPMcOuaV3PGuMlnOn6jb6_tuE,2694
+pytest_jira_xfail-1.2.1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+pytest_jira_xfail-1.2.1.dist-info/top_level.txt,sha256=4Si_lUuwZwNzBHpfrcCgp47TG9EIrOn9rjxnvP-R5LE,18
+pytest_jira_xfail-1.2.1.dist-info/RECORD,,
