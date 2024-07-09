@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: kawaiipy
+Version: 0.1.0
+Summary: kawaiipy – async wrapper for Kawaii API
+License: MIT
+Author: stefanlight
+Author-email: 64615032+stefanlight8@users.noreply.github.com
+Requires-Python: >=3.10,<3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aiohttp (>=3.9.5,<4.0.0)
+Description-Content-Type: text/markdown
+
+kawaiipy – async wrapper for [Kawaii API](https://kawaii.red/).
+
+### Install
+```py
+pip install kawaiipy
+```
+
+### Usage example
+```py
+import asyncio
+from kawaiipy import KawaiiAPI
+
+api: KawaiiAPI = KawaiiAPI()
+
+
+async def main() -> None:
+    """Get image of hugs!"""
+    image: str = await api.get("gif", "hug")
+    print(image)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
+
+```
+
+### Recommendation
+Use the -O and -OO flags to ignore docstrings and assertions while interpretation process.
+
