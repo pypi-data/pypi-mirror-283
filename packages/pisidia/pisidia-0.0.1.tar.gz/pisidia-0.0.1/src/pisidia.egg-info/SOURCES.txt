@@ -1,0 +1,7 @@
+pyproject.toml
+src/pisidia/__init__.py
+src/pisidia/example.py
+src/pisidia.egg-info/PKG-INFO
+src/pisidia.egg-info/SOURCES.txt
+src/pisidia.egg-info/dependency_links.txt
+src/pisidia.egg-info/top_level.txt
