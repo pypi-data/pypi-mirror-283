@@ -1,0 +1,54 @@
+stages:
+  - build
+  - docs
+  - deploy
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+cache:
+  paths:
+    - .cache/pip
+
+# Common before_script
+.before_script: &before_script
+  - apt-get update && apt-get install -y python3-pip
+  - pip3 install --upgrade pip
+  - pip install tox --cache-dir $PIP_CACHE_DIR
+
+build:
+  image: python:3.8
+  stage: build
+  before_script:
+    - *before_script
+  script:
+    - pip install -e . --cache-dir $PIP_CACHE_DIR
+
+docs:
+  image: python:3.8
+  stage: docs
+  dependencies:
+    - build
+  before_script:
+    - *before_script
+  script:
+    - tox -e docs
+  artifacts:
+    paths:
+      - doc/build/html
+    expire_in: 1 week
+
+pages:
+  stage: deploy
+  dependencies:
+    - docs
+  script:
+    - ls -al doc/build/html  # doc/build/html 내용 확인
+    - mv doc/build/html public
+    - ls -al public  # public 내용 확인
+  artifacts:
+    paths:
+      - public
+    expire_in: never
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master" && $CI_PIPELINE_SOURCE == "push"'
