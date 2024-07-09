@@ -1,0 +1,16 @@
+pygcloud/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pygcloud/constants.py,sha256=Mqr2b3K8kKxoL2Dlik1WAhXcF7dZIU-mAH7Dnt1ucdk,228
+pygcloud/core.py,sha256=vnIWimVjgfd0t2ShfB4WBz0BdJMiMykROd9Aa8Os7Ag,2766
+pygcloud/deployer.py,sha256=FkgW-01Pxqw7hen5twsib5S5aWr0PebYhLD8moNpSGg,5376
+pygcloud/helpers.py,sha256=9FKTlghuJlOL8XiIs9NiecBPV3n6HXY3wF5TPBuOQdQ,300
+pygcloud/models.py,sha256=nrGMj1aUiSbiO__ru2Ak5BbLq-GOjhZK28Tbolb-gig,6267
+pygcloud/utils.py,sha256=C_XynJdMruowvVQA5YrxU8xSgsqVZRYcHMZ56KGs3xs,1361
+pygcloud/gcp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pygcloud/gcp/labels.py,sha256=idfZXwGjHYeyphl1Z6ilMZpPz64bla9ItPxqIMRrUqs,1058
+pygcloud/gcp/services/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pygcloud/gcp/services/run.py,sha256=XENc3yP7CkGHUg4BBbDJb_Died-JooA8FJjVEMn1XJ8,1321
+pygcloud/gcp/services/storage.py,sha256=0UoQRYo_e0JZQiGYSUeAvJ3q6H0wiAG3olZNzBljPSc,1226
+pygcloud-0.0.5.dist-info/METADATA,sha256=ILBHkdQaDJ3zWErA30cZtr_F3gGv2-2J8e4mcwHPeYc,3900
+pygcloud-0.0.5.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+pygcloud-0.0.5.dist-info/top_level.txt,sha256=5HBDZzaTFxk8K43OlS08sBar2LMoM66HYLZ_5id1CbU,9
+pygcloud-0.0.5.dist-info/RECORD,,
