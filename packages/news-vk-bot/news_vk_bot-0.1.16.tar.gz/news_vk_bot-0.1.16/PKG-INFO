@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: news_vk_bot
+Version: 0.1.16
+Summary: Bot that gathers and sends news
+Author-email: Vadim Kuznetsov <vad.kuznetsov@vkteam.ru>
+Maintainer-email: Vadim Kuznetsov <vad.kuznetsov@vkteam.ru>
+License: mail.ru
+Keywords: vk,news,bot
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: bs4==0.0.1
+Requires-Dist: Django==3.2.17
+Requires-Dist: django-admin-list-filter-dropdown==1.0.3
+Requires-Dist: django-admin-rangefilter==0.9.0
+Requires-Dist: django-old-records==2.0.8
+Requires-Dist: django-tinymce==3.6.1
+Requires-Dist: googletrans==4.0.0rc1
+Requires-Dist: gunicorn==20.1.0
+Requires-Dist: lxml==4.9.2
+Requires-Dist: mailru-im-bot==0.0.21
+Requires-Dist: numpy==1.24.2
+Requires-Dist: schedule==1.2.0
+Requires-Dist: Scrapy==2.11.1
+Requires-Dist: scrapy-djangoitem==1.1.1
+Requires-Dist: sorl-thumbnail==12.9.0
+Requires-Dist: Pillow==9.2.0
+Requires-Dist: psycopg2-binary==2.9.5
+Requires-Dist: pymorphy2==0.9.1
+Requires-Dist: python-dotenv==0.21.1
+Requires-Dist: django-csp==3.7
+Requires-Dist: Twisted==23.8.0
+Requires-Dist: prometheus-client==0.20.0
+
+============
+news-vk-bot
+============
+
+news-vk-bot - бот для отправки новостей.

@@ -1,0 +1,84 @@
+[tool.black]
+line-length = 88
+exclude = '''
+/(
+    migrations
+    | __pycache__
+)/
+'''
+
+[tool.setuptools]
+packages = [
+    "manage_wrapper",
+    "news",
+    "news.admin",
+    "news.handlers",
+    "news.management",
+    "news.management.commands",
+    "news.migrations",
+    "news_bot",
+    "news_parsing",
+    "news_parsing.migrations",
+    "news_parsing.spiders",
+    "monitoring",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "news_vk_bot"
+version = "0.1.16"
+dependencies = [
+    "bs4==0.0.1",
+    "Django==3.2.17",
+    "django-admin-list-filter-dropdown==1.0.3",
+    "django-admin-rangefilter==0.9.0",
+    "django-old-records==2.0.8",
+    "django-tinymce==3.6.1",
+    "googletrans==4.0.0rc1",
+    "gunicorn==20.1.0",
+    "lxml==4.9.2",
+    "mailru-im-bot==0.0.21",
+    "numpy==1.24.2",
+    "schedule==1.2.0",
+    "Scrapy==2.11.1",
+    "scrapy-djangoitem==1.1.1",
+    "sorl-thumbnail==12.9.0",
+    "Pillow==9.2.0",
+    "psycopg2-binary==2.9.5",
+    "pymorphy2==0.9.1",
+    "python-dotenv==0.21.1",
+    "django-csp==3.7",
+    "Twisted==23.8.0",
+    "prometheus-client==0.20.0",
+]
+requires-python = ">=3.10"
+authors = [
+    {name = "Vadim Kuznetsov", email = "vad.kuznetsov@vkteam.ru"}
+]
+maintainers = [
+    {name = "Vadim Kuznetsov", email = "vad.kuznetsov@vkteam.ru"}
+]
+description = "Bot that gathers and sends news"
+readme = "README.rst"
+license = { file = "LICENSE" }
+keywords = ["vk", "news", "bot"]
+classifiers = [
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Framework :: Django :: 3.2",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+]
+
+[project.scripts]
+"manage.py" = "manage_wrapper.django_manage:django_manage"
