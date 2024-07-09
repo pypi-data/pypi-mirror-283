@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+src/ifBO.egg-info/PKG-INFO
+src/ifBO.egg-info/SOURCES.txt
+src/ifBO.egg-info/dependency_links.txt
+src/ifBO.egg-info/requires.txt
+src/ifBO.egg-info/top_level.txt
