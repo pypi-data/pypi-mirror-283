@@ -1,0 +1,11 @@
+call_flow.tools.call_flow_tool.get_place_intelligence_api:
+  function: get_place_intelligence_api
+  inputs:
+      chat_input:
+        type:
+        - dict
+        description: Input dictionary for chat input
+  module: call_flow.tools.call_flow_tool
+  name: Call flow tool
+  description: Import another flow in prompt flow
+  type: python
