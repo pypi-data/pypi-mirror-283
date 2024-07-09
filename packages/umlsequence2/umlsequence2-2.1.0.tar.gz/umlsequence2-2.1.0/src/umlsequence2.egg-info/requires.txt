@@ -1,0 +1,9 @@
+reportlab
+svglib
+svgwrite
+
+[dev]
+check-manifest
+
+[test]
+coverage
