@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+wow_world_messages/__init__.py
+wow_world_messages/tbc.py
+wow_world_messages/util.py
+wow_world_messages/vanilla.py
+wow_world_messages/wrath.py
+wow_world_messages.egg-info/PKG-INFO
+wow_world_messages.egg-info/SOURCES.txt
+wow_world_messages.egg-info/dependency_links.txt
+wow_world_messages.egg-info/requires.txt
+wow_world_messages.egg-info/top_level.txt
