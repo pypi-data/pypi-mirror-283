@@ -1,0 +1,17 @@
+fortranformat
+matplotlib
+numpy
+psutil
+quicktions
+scipy
+scikit-learn
+wrapt
+
+[GUI]
+PyQt5
+
+[GUI:python_version < "3.11"]
+mplcairo
+
+[hardware]
+requests
