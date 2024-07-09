@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: sv-ttk-colorizer
+Version: 0.0.4
+License-File: LICENSE
+Requires-Dist: darkdetect
+Requires-Dist: Pillow
+Requires-Dist: requests
+Requires-Dist: pywinstyles
+Requires-Dist: sv-ttk
+Requires-Dist: appdirs
+
