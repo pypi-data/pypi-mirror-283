@@ -1,0 +1,17 @@
+call_kwargs = dict(
+{% for arg_fortran, arg_python in fortran_module_callable_kwargs.items() %}
+    {{ arg_fortran }}={{ arg_python }},
+{% endfor %}
+)
+{{ result_name }}{{ length_suffix }} = {{ fortran_module_callable }}{{ length_callable_suffix }}(
+    **call_kwargs
+)
+{# TODO: re-name n in call here to {{ result_name }}{{ length_suffix }} #}
+{{ result_name }}_raw = {{ fortran_module_callable }}(
+    **call_kwargs,
+    n={{ result_name }}{{ length_suffix }},
+)
+
+{{ result_name }}: {{ return_type }} = {{ result_name }}_raw.decode()
+
+return {{ result_name }}

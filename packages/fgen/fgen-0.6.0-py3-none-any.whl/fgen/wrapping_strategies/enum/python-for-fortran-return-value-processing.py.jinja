@@ -1,0 +1,9 @@
+{{ result_name }}{{ int_value_suffix }}: int = {{ fortran_module_callable }}(
+{% for arg in fortran_module_callable_args %}
+    {{ arg }},
+{% endfor %}
+)
+
+{{ result_name }} = {{ return_type }}({{ result_name }}{{ int_value_suffix }})
+
+return {{ result_name }}

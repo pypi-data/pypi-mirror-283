@@ -1,0 +1,13 @@
+"""
+Enum definitions used in Fortran modules
+
+Generated using :mod:`fgen`
+"""
+from __future__ import annotations
+
+from enum import Enum
+
+{% for enum in enums %}
+{{ enum }}
+
+{% endfor %}

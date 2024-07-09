@@ -1,0 +1,52 @@
+{% set four_spaces="    " %}
+{% set return_value_name = return_value.definition.name %}
+{####}
+subroutine {{ fortran_wrapper_module_callable }}( &
+    instance_index, &
+{% for param in input_params %}
+    {{ param }}, &
+{% endfor %}
+    {{ return_value_name }} &
+    )
+
+{# Type declarations #}
+    {# TODO: use shared here rather than hard-coded instance_index #}
+    integer, intent(in) :: instance_index
+{%
+    for parameter_name, parameter_passing_type, parameter
+    in receiving_from_python_steps.fortran_wrapper_callable_parameters
+%}
+
+    {{ parameter_passing_type }}, intent(in) :: {{ parameter_name }}
+    ! Passing of {{ parameter.definition.name }}
+{% endfor %}
+
+    {{ return_value.definition.fortran_type }}, intent(out) :: {{ return_value_name }}
+    ! Returning of {{ return_value_name }}
+
+    type({{ class_being_wrapped }}), pointer :: instance
+{%
+    for argument_name, type_declaration
+    in receiving_from_python_steps.not_directly_passed_fortran_module_callable_args_type_declarations
+%}
+    {{ type_declaration }} :: {{ argument_name }}
+{% endfor %}
+
+{# Manager calls #}
+{# TODO: use shared for manager_get_instance here rather than hard-coding #}
+    call manager_get_instance(instance_index, instance)
+
+{% if receiving_from_python_steps.postprocessing_fortran_calls %}
+    {{ receiving_from_python_steps.postprocessing_fortran_calls | indent_based_on_first_line(four_spaces) }}
+
+{% endif %}
+{####}
+{# Call the method #}
+{% set fprettify_indent= " " * return_value_name | length + "   " %}
+    {{ return_value_name }} = instance % {{ method_name }}( &
+{% for arg in receiving_from_python_steps.fortran_module_callable_args_names %}
+    {{ fprettify_indent }}{{ arg }}={{ arg }}{% if not loop.last %},{% endif %} &
+{% endfor %}
+    {{ fprettify_indent }})
+
+end subroutine {{ fortran_wrapper_module_callable }}

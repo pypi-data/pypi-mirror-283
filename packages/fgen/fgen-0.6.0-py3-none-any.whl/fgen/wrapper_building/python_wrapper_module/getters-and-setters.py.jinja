@@ -1,0 +1,52 @@
+{% set four_spaces="    " %}
+{% for att in attributes %}
+{# att_ws = attribute wrapping strategy #}
+{% set att_ws=builder.get_wrapping_strategy(att) %}
+@property
+@check_initialised
+{{
+    builder.get_verify_units_decorator(
+        arguments=[],
+        return_value=att,
+    ) | indent_based_on_first_line(indent=four_spaces)
+}}
+def {{ att_ws.get_python_user_facing_name(att) }}(self) -> {{ att_ws.get_python_return_type_annotation(att) }}:
+    """
+    {{ att_ws.get_python_getter_docstring(att) | indent_based_on_first_line(four_spaces) }}
+    """
+    {{
+        att_ws.generate_python_for_fortran_return_value_processing(
+            att,
+            fortran_module_callable=builder.module.wrapper_module_name + "." + att_ws.get_fortran_wrapper_module_getter(att),
+            fortran_module_callable_args=["instance_index=self.instance_index"],
+            dynamic_unit=builder.module.provides.get_dynamic_unit_source(att),
+        ) | indent_based_on_first_line(four_spaces)
+    }}
+
+{% if include_setters and att.definition.expose_setter_to_python %}
+@{{ att_ws.get_python_user_facing_name(att) }}.setter
+@check_initialised
+{{
+    builder.get_verify_units_decorator(
+        arguments=[att],
+        return_value=None,
+    ) | indent_based_on_first_line(indent=four_spaces)
+}}
+def {{ att_ws.get_python_user_facing_name(att) }}(self, {{ att_ws.get_python_user_facing_name(att) }}: {{ att_ws.get_python_return_type_annotation(att) }}) -> None:
+    """
+    {{ att_ws.get_python_setter_docstring(att) | indent_based_on_first_line(four_spaces) }}
+    """
+{% set passing_to_fortran_steps = att_ws.get_passing_to_fortran_steps(att, builder.module.provides.get_dynamic_unit_source(att)) %}
+{% if passing_to_fortran_steps.preparatory_python_calls %}
+    {{ passing_to_fortran_steps.preparatory_python_calls | indent_based_on_first_line(four_spaces) }}
+
+{% endif %}
+    {{ builder.module.wrapper_module_name }}.{{ att_ws.get_fortran_wrapper_module_setter(att) }}(
+        self.instance_index,
+    {% for arg_passing in passing_to_fortran_steps.fortran_callable_arg_list %}
+        {{ arg_passing }},
+    {% endfor %}
+    )
+
+{% endif %}
+{% endfor %}

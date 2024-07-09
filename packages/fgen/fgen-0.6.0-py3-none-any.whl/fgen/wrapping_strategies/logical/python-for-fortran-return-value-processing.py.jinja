@@ -1,0 +1,8 @@
+{{ result_name }}_raw: int = {{ fortran_module_callable }}(
+{% for arg in fortran_module_callable_args %}
+    {{ arg }},
+{% endfor %}
+)
+{{ result_name }} = bool({{ result_name }}_raw)
+
+return {{ result_name }}

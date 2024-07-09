@@ -1,0 +1,8 @@
+try:
+    from {{ providing_module }} import {{ imports_str }}
+except (ModuleNotFoundError, ImportError) as exc:
+    raise fgr_excs.RelativePythonModuleNotFoundError(
+        requesting_python_module=__name__,
+        requested_from_python_module="{{ providing_module }}",
+        requested="{{ imports_str }}",
+    ) from exc

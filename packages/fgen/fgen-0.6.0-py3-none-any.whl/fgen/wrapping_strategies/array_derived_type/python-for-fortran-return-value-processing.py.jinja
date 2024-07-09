@@ -1,0 +1,13 @@
+{{ result_name }}{{ instance_indexes_suffix }}: tuple[int, ...] = {{ fortran_module_callable }}(
+{% for arg in fortran_module_callable_args %}
+    {{ arg }},
+{% endfor %}
+)
+{{ result_name }}: tuple[
+    {{ return_type_inner }}
+] = tuple(  # type: ignore
+    {{ derived_type_no_setters }}(int(v))
+    for v in {{ result_name }}{{ instance_indexes_suffix }}
+)
+
+return {{ result_name }}

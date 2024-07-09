@@ -1,0 +1,98 @@
+{% set return_value_name = return_value.definition.name %}
+{####}
+subroutine {{ fortran_wrapper_module_callable }}{{ shape_callable_suffix }}( &
+    instance_index, &
+    nd, &
+    dtype, &
+    dshape &
+    )
+    ! Get information about {{ return_value_name }}
+    !
+    ! This allows the array to be retrieved in a second step
+
+{# TODO: use shared here rather than hard-coded instance_index #}
+    integer, intent(in) :: instance_index
+
+    integer, intent(out) :: nd
+    ! Number of dimensions in the array
+    !
+    ! If the array is not allocated, this will be returned as zero.
+
+    character(len=20), intent(out) :: dtype
+    ! Data type of the array
+
+    integer, dimension(10), intent(out) :: dshape
+    ! Shape of the array
+    !
+    ! If you have an array with more than 10-dimensions,
+    ! an error will be raised.
+
+    type({{ class_being_wrapped }}), pointer :: instance
+
+    call manager_get_instance(instance_index, instance)
+
+    if (.not. allocated(instance % {{ fortran_module_attribute }})) then
+        print *, "instance % {{ fortran_module_attribute }} is not allocated"
+        nd = 0
+        return
+    end if
+
+    dtype = "integer"
+    nd = rank(instance % {{ fortran_module_attribute }})
+    if (nd > 10) then
+        print *, "Array has more than 10 dimensions, wrapping won't work"
+        error stop 1
+    end if
+    dshape(1:nd) = shape(instance % {{ fortran_module_attribute }})
+
+end subroutine {{ fortran_wrapper_module_callable }}{{ shape_callable_suffix }}
+
+subroutine {{ fortran_wrapper_module_callable }}( &
+    instance_index, &
+    {{ return_value_name }}{{ instance_indexes_suffix }} &
+    )
+
+    integer, intent(in) :: instance_index
+
+    integer, dimension(:), intent(inout) :: {{ return_value_name }}{{ instance_indexes_suffix }}
+    ! Returning of {{ return_value_name }}.
+    !
+    ! The indexes of the derived types are returned, to then be handled by Python,
+    ! because we can't return the indexes themselves.
+    !
+    ! This argument is `intent(inout)`,
+    ! i.e. an array must be passed in from Python, which this subroutine then fills.
+
+    integer :: i, ii
+    type({{ derived_type_in_array }}), pointer :: {{ return_value_name }}_tmp
+
+    type({{ class_being_wrapped }}), pointer :: instance
+
+    call manager_get_instance(instance_index, instance)
+
+    do i = 1, size({{ return_value_name }}{{ instance_indexes_suffix }})
+
+        ! Get a new instance to use for returning.
+        ! We can't return the allocatable attribute
+        ! because then Python has no idea what to refer to
+        ! if the user asks to see the state of the allocatable attribute
+        ! (because the allocatable attribute is not managed by our manager).
+    {#
+        We could probably hold a mapping of derived_type_via_allocatable indexes
+        to derived_type indexes so we didn't create a new object everytime,
+        but that is probably a lot of mucking around for little gain.
+        The current solution will chew through available instances though if you request the attribute many times
+        because there is no clean up of the created objects
+        (or it will leak memory, once we stop pre-allocating all our derived type instances).
+    #}
+        ii = {{ manager_get_free_instance_number }}()
+        call {{ manager_get_instance }}(ii, {{ return_value_name }}_tmp)
+
+        {{ return_value_name }}_tmp = instance % {{ fortran_module_attribute }}(i)
+        {{ return_value_name }}_tmp % instance_index = ii
+
+        {{ return_value_name }}{{ instance_indexes_suffix }}(i) = {{ return_value_name }}_tmp % instance_index
+
+    end do
+
+end subroutine {{ fortran_wrapper_module_callable }}

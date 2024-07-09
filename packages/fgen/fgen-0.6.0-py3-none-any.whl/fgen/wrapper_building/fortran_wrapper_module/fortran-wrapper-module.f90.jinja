@@ -1,0 +1,89 @@
+{# busd = builder shared #}
+{% set busd=builder.shared %}
+{% set module=builder.module %}
+{% set four_spaces="    " %}
+!!!
+{{ builder.get_module_level_docstring() }}
+!!!
+module {{ module.wrapper_module_name }}
+
+    ! Standard library requirements
+    use iso_c_binding, only: c_loc, c_ptr
+
+    {{ builder.get_module_use_statements() | indent_based_on_first_line(four_spaces) }}
+
+    implicit none
+    private
+
+    public :: {{ busd.fortran_get_free_instance_number_callable_name }}, &
+              {{ busd.fortran_build_callable_name }}, &
+              {{ busd.fortran_instance_finalise_callable_name }}
+
+    ! Statment declarations for getters and setters
+    {{
+        builder.get_statement_declarations_getters_and_setters()
+        | indent_based_on_first_line(four_spaces)
+    }}
+
+    {% if module.provides.methods %}
+    ! Statement declarations for methods
+    {{ builder.get_statement_declarations_methods() | indent_based_on_first_line(four_spaces) }}
+
+    {% endif %}
+contains
+
+    function {{ busd.fortran_get_free_instance_number_callable_name }}() result(instance_index)
+
+        integer :: instance_index
+
+        instance_index = manager_get_free_instance()
+
+    end function {{ busd.fortran_get_free_instance_number_callable_name }}
+
+    ! Build methods
+    !
+    ! These are a bit like Python class methods,
+    ! but they build/intialise/set up the class
+    ! rather than returning a new instance.
+    {{
+        builder.get_provided_type_build_methods()
+        | indent_based_on_first_line(four_spaces)
+        | strip_empty_lines
+    }}
+
+    ! Finalisation
+    subroutine {{ busd.fortran_instance_finalise_callable_name }}(instance_index)
+
+        integer, intent(in) :: instance_index
+
+        call manager_instance_finalize(instance_index)
+
+    end subroutine {{ busd.fortran_instance_finalise_callable_name }}
+
+    ! Attributes getters and setters
+    {{
+        builder.get_provided_type_getters_and_setters()
+        | indent_based_on_first_line(four_spaces)
+        | strip_empty_lines
+    }}
+
+    {% if module.provides.methods %}
+    ! Wrapped methods
+    {{
+        builder.get_provided_type_methods()
+        | indent_based_on_first_line(four_spaces)
+        | strip_empty_lines
+    }}
+{#
+{{
+    wrapper_module.methods(
+       package=package,
+       provided_derived_type_name=module.provides.name,
+       methods=module.provides.methods,
+       indent="    "
+   )
+}}
+#}
+    {% endif %}
+
+end module {{ module.wrapper_module_name }}

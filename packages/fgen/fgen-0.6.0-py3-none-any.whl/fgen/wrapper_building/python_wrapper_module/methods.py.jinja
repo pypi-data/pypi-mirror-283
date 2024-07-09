@@ -1,0 +1,51 @@
+{% set four_spaces="    " %}
+{% for method in methods %}
+{# ret = return type #}
+{% set ret=method.returns %}
+{# ret_ws = return type wrapping strategy #}
+{% set ret_ws=builder.get_wrapping_strategy(ret) %}
+@check_initialised
+{{
+    builder.get_verify_units_decorator(
+        arguments=method.parameters.values(),
+        return_value=method.returns,
+    ) | indent_based_on_first_line(indent=four_spaces)
+}}
+def {{ method.name }}({% if method.parameters | length > 4 %}  # noqa: PLR0913{% endif +%}
+    self,
+    {{
+        builder.get_post_verify_units_argument_list(arguments=method.parameters.values())
+        | indent_based_on_first_line(four_spaces)
+    }}
+) -> {{ ret_ws.get_python_return_type_annotation(ret) }}:
+    """
+    {{ method.description | indent_based_on_first_line(four_spaces) }}
+
+{% if method.parameters %}
+    Parameters
+    ----------
+{% for argument in method.parameters.values() %}
+    {{ argument.definition.name }}
+        {{ argument.definition.description | indent_based_on_first_line(four_spaces * 2) }}
+
+{% endfor %}
+{% endif %}
+    Returns
+    -------
+        {{ method.returns.definition.description | indent_based_on_first_line(four_spaces * 2) }}
+    """
+{% set passing_to_fortran_steps = builder.get_passing_to_fortran_steps(method.parameters.values()) %}
+{% if passing_to_fortran_steps.preparatory_python_calls %}
+    {{ passing_to_fortran_steps.preparatory_python_calls | indent_based_on_first_line(four_spaces) }}
+
+{% endif %}
+    {{
+        ret_ws.generate_python_for_fortran_return_value_processing(
+            value=ret,
+            fortran_module_callable=builder.module.wrapper_module_name + "." + builder.get_fortran_wrapper_method(method),
+            fortran_module_callable_args=["instance_index=self.instance_index"] + passing_to_fortran_steps.fortran_callable_arg_list,
+            dynamic_unit=builder.module.provides.get_dynamic_unit_source(ret),
+        ) | indent_based_on_first_line(four_spaces)
+    }}
+
+{% endfor %}

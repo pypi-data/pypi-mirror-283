@@ -1,0 +1,8 @@
+@verify_units(
+    {{ return_info_for_verify_units }},
+    (
+    {% for arg_info in arguments_info_for_verify_units %}
+        {{ arg_info }},
+    {% endfor %}
+    ),
+)

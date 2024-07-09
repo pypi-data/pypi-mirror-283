@@ -1,0 +1,48 @@
+{% set return_value_name = return_value.definition.name %}
+{####}
+subroutine {{ fortran_wrapper_module_callable }}( &
+    instance_index, &
+    {{ return_value_name }}{{ instance_indexes_suffix }} &
+    )
+
+    integer, intent(in) :: instance_index
+
+    integer, {{ return_value_dimension_specification }}, intent(out) :: {{ return_value_name }}{{ instance_indexes_suffix }}
+    ! Returning of {{ return_value_name }}
+    !
+    ! The indexes of the derived types are returned, to then be handled by Python,
+    ! because we can't return the indexes themselves.
+
+    integer :: i, ii
+    type({{ derived_type_in_array }}), pointer :: {{ return_value_name }}_tmp
+
+    type({{ class_being_wrapped }}), pointer :: instance
+
+    call manager_get_instance(instance_index, instance)
+
+    do i = 1, size({{ return_value_name }}{{ instance_indexes_suffix }})
+
+        ! Get a new instance to use for returning.
+        ! We can't return the allocatable attribute
+        ! because then Python has no idea what to refer to
+        ! if the user asks to see the state of the allocatable attribute
+        ! (because the allocatable attribute is not managed by our manager).
+    {#
+        We could probably hold a mapping of derived_type_via_allocatable indexes
+        to derived_type indexes so we didn't create a new object everytime,
+        but that is probably a lot of mucking around for little gain.
+        The current solution will chew through available instances though if you request the attribute many times
+        because there is no clean up of the created objects
+        (or it will leak memory, once we stop pre-allocating all our derived type instances).
+    #}
+        ii = {{ manager_get_free_instance_number }}()
+        call {{ manager_get_instance }}(ii, {{ return_value_name }}_tmp)
+
+        {{ return_value_name }}_tmp = instance % {{ fortran_module_attribute }}(i)
+        {{ return_value_name }}_tmp % instance_index = ii
+
+        {{ return_value_name }}{{ instance_indexes_suffix }}(i) = {{ return_value_name }}_tmp % instance_index
+
+    end do
+
+end subroutine {{ fortran_wrapper_module_callable }}

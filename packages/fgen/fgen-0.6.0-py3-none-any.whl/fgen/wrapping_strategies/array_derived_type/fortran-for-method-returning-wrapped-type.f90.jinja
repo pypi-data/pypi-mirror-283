@@ -1,0 +1,76 @@
+{% set four_spaces="    " %}
+{% set return_value_name = return_value.definition.name %}
+{####}
+subroutine {{ fortran_wrapper_module_callable }}( &
+    instance_index, &
+{% for param in input_params %}
+    {{ param }}, &
+{% endfor %}
+    {{ return_value_name }}{{ instance_indexes_suffix }} &
+    )
+
+{# Type declarations #}
+    {# TODO: use shared here rather than hard-coded instance_index #}
+    integer, intent(in) :: instance_index
+{%
+    for parameter_name, parameter_passing_type, parameter
+    in receiving_from_python_steps.fortran_wrapper_callable_parameters
+%}
+
+    {{ parameter_passing_type }}, intent(in) :: {{ parameter_name }}
+    ! Passing of {{ parameter.definition.name }}
+{% endfor %}
+
+{# Always return the instance index, an integer, Python handles joining things back up #}
+    integer, {{ return_value_dimension_specification }}, intent(out) :: {{ return_value_name }}{{ instance_indexes_suffix }}
+    ! Returning of {{ return_value_name }}
+
+    {{ wrapper_module_type_attribute_declaration }} :: {{ return_value_name }}
+    integer :: i, ii
+    type({{ derived_type_in_array }}), pointer :: {{ return_value_name }}_tmp
+
+    type({{ class_being_wrapped }}), pointer :: instance
+{%
+    for argument_name, type_declaration
+    in receiving_from_python_steps.not_directly_passed_fortran_module_callable_args_type_declarations
+%}
+    {{ type_declaration }} :: {{ argument_name }}
+{% endfor %}
+
+{# Manager calls #}
+{# TODO: use shared for manager_get_instance here rather than hard-coding #}
+    call manager_get_instance(instance_index, instance)
+
+{% if receiving_from_python_steps.postprocessing_fortran_calls %}
+    {{ receiving_from_python_steps.postprocessing_fortran_calls | indent_based_on_first_line(four_spaces) }}
+
+{% endif %}
+{####}
+{# Call the method #}
+{% set fprettify_indent= " " * return_value_name | length + "   " %}
+    {{ return_value_name }} = instance % {{ method_name }}( &
+{% for arg in receiving_from_python_steps.fortran_module_callable_args_names %}
+    {{ fprettify_indent }}{{ arg }}={{ arg }}{% if not loop.last %},{% endif %} &
+{% endfor %}
+    {{ fprettify_indent }})
+    ! Ensure that the returned value will point to the right spot in our managed instances
+    {{ return_value_name }} % instance_index = {{ return_value_name }}{{ instance_indexes_suffix }}
+
+    do i = 1, size({{ return_value_name }}{{ instance_indexes_suffix }})
+
+        ! Get a new instance to use for returning.
+        ! We can't return the result directly
+        ! because then Python has no idea what to refer to
+        ! if the user asks to see the state of the result
+        ! (because the result is not managed by our manager).
+        ii = {{ return_value_manager_get_free_instance_number }}()
+        call {{ return_value_manager_get_instance }}(ii, {{ return_value_name }}_tmp)
+
+        {{ return_value_name }}_tmp = {{ return_value_name }}(i)
+        {{ return_value_name }}_tmp % instance_index = ii
+
+        {{ return_value_name }}{{ instance_indexes_suffix }}(i) = {{ return_value_name }}_tmp % instance_index
+
+    end do
+
+end subroutine {{ fortran_wrapper_module_callable }}

@@ -1,0 +1,17 @@
+{% if dynamic_unit is not none %}
+{{ result_name }}_raw = {{ fortran_module_callable }}(
+{% for arg_passing in fortran_module_callable_args %}
+    {{ arg_passing }},
+{% endfor %}
+)
+{{ result_name }}: {{ return_type }} = UR.Quantity({{ result_name }}_raw, {{ dynamic_unit }})
+
+{% else %}
+{{ result_name }}: {{ return_type }} = {{ fortran_module_callable }}(
+{% for arg in fortran_module_callable_args %}
+    {{ arg }},
+{% endfor %}
+)
+
+{% endif %}
+return {{ result_name }}

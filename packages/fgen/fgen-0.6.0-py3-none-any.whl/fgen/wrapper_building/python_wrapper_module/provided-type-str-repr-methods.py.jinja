@@ -1,0 +1,10 @@
+@property
+def exposed_attributes(self) -> tuple[str, ...]:
+    """
+    Attributes exposed by this wrapper
+    """
+    return (
+    {% for attr_name in exposed_attributes %}
+        "{{ attr_name }}",
+    {% endfor %}
+    )

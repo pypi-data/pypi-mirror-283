@@ -1,0 +1,46 @@
+{#
+    Wrapping this way requires two calls, but it allows us to wrap functions too.
+    Returning a pointer works for instance attributes,
+    but it doesn't work for functions because the array is de-allocated
+    before the pointer is returned
+    (so, when you look at what the pointer points to, you get garbage).
+    If performance becomes an issue, we can think about this more.
+#}
+from fgen_runtime.arrays import ftype_to_np
+
+call_kwargs = dict(
+{% for arg_fortran, arg_python in fortran_module_callable_kwargs.items() %}
+    {{ arg_fortran }}={{ arg_python }},
+{% endfor %}
+)
+
+(
+    {{ result_name }}_nd,
+    {{ result_name }}_dtype,
+    {{ result_name }}_shape,
+) = {{ fortran_module_callable }}{{ shape_callable_suffix }}(
+    **call_kwargs
+)
+if {{ result_name }}_nd == 0:
+    # Nice example of how error handling could work
+    # via basic integers or a derived type
+    # (raise on Fortran side, check then process on Python side,
+    # train track style).
+    raise fgr_excs.UnallocatedMemoryError("{{ result_name }}")
+
+{{ result_name }}_ctype_scalar = np.ctypeslib.as_ctypes_type(
+    ftype_to_np({{ result_name }}_dtype.strip().decode())
+)
+{{ result_name }}_array = np.asfortranarray(
+    np.empty(shape={{ result_name }}_shape[:{{ result_name }}_nd], dtype={{ result_name }}_ctype_scalar)
+)
+
+{{ fortran_module_callable }}(**call_kwargs, {{ result_name }}={{ result_name }}_array)
+
+{% if dynamic_unit is not none %}
+{{ result_name }}: {{ return_type }} = UR.Quantity({{ result_name }}_array, {{ dynamic_unit }})
+{% else %}
+{{ result_name }}: {{ return_type }} = {{ result_name }}_array
+{% endif %}
+
+return {{ result_name }}

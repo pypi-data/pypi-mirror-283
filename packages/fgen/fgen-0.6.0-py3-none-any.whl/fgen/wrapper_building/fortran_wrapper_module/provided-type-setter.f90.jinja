@@ -1,0 +1,56 @@
+{% set four_spaces="    " %}
+{####}
+{# subroutine {{ fortran_wrapper_callable_name }}( & ) #}
+{# TODO: update this to use the loop and ifs re input parameters #}
+subroutine {{ fortran_wrapper_callable }}( &
+    instance_index{% if input_params %},{% endif %} &
+{% if input_params %}
+{% for param in input_params %}
+    {{ param }}{% if not loop.last %},{% endif %} &
+{% endfor %}
+{% endif %}
+    )
+
+{# Type declarations #}
+    {# TODO: use shared here rather than hard-coded instance_index #}
+    integer, intent(in) :: instance_index
+{%
+    for parameter_name, parameter_passing_type, parameter
+    in receiving_from_python_steps.fortran_wrapper_callable_parameters
+%}
+
+    {{ parameter_passing_type }}, intent(in) :: {{ parameter_name }}
+    ! Passing of {{ parameter.definition.name }}
+{% endfor %}
+
+    type({{ builder.module.provides.name }}), pointer :: instance
+{%
+    for argument_name, type_declaration
+    in receiving_from_python_steps.not_directly_passed_fortran_module_callable_args_type_declarations
+%}
+    {{ type_declaration }} :: {{ argument_name }}
+{% endfor %}
+{%
+    for helper_variable_name, helper_variable_type_declaration
+    in receiving_from_python_steps.fortran_helper_variables
+%}
+    {{ helper_variable_type_declaration }} :: {{ helper_variable_name }}
+{% endfor %}
+
+{# Manager calls #}
+{# TODO: use shared rather than hard-coded manager_get_instance #}
+    call manager_get_instance(instance_index, instance)
+
+{% if receiving_from_python_steps.postprocessing_fortran_calls %}
+    {{ receiving_from_python_steps.postprocessing_fortran_calls | indent_based_on_first_line(four_spaces) }}
+
+{% endif %}
+{####}
+{% set attr_to_set = fortran_module_attribute_to_set.definition.name %}
+{% if fortran_module_attribute_to_set.definition.as_fortran_data_type().is_pointer %}
+    instance % {{ attr_to_set }} => {{ attr_to_set }}
+{% else %}
+    instance % {{ attr_to_set }} = {{ attr_to_set }}
+{% endif %}
+
+end subroutine {{ fortran_wrapper_callable }}

@@ -1,0 +1,48 @@
+from __future__ import annotations
+
+{% if builder.requires_union %}
+from typing import Any, Union
+{% else %}
+from typing import Any
+{% endif %}
+
+import fgen_runtime.exceptions as fgr_excs
+{% if builder.requires_np %}
+import numpy as np
+{% endif -%}
+{% if builder.requires_npt %}
+import numpy.typing as npt
+{% endif -%}
+{% if builder.requires_quantity %}
+import pint
+{% endif -%}
+
+from attrs import define
+from fgen_runtime.base import (
+    INVALID_INSTANCE_INDEX,
+    FinalizableWrapperBase,
+    FinalizableWrapperBaseContext,
+    check_initialised,
+    execute_finalize_on_fail,
+)
+from fgen_runtime.units import verify_units
+
+{% set enum_requirements=builder.get_enum_python_import_statements() %}
+{% if enum_requirements %}
+{{ enum_requirements }}
+
+{% endif %}
+try:
+    from {{ extension }} import {{ builder.module.wrapper_module_name }}  # type: ignore
+except (ModuleNotFoundError, ImportError) as exc:
+    raise fgr_excs.CompiledExtensionNotFoundError("{{ extension }}") from exc
+
+{% set requirements_imports=builder.get_requirements_python_import_statements() %}
+{% if requirements_imports %}
+{{ requirements_imports }}
+{% endif %}
+
+{% if builder.requires_quantity %}
+UR: pint.registry.UnitRegistry = pint.get_application_registry()
+"""Unit registry to use"""
+{% endif %}
