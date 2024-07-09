@@ -1,0 +1,7 @@
+pydantic<2
+httpx
+websockets
+
+[development]
+ariadne-codegen
+gql[all]
