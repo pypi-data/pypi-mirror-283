@@ -1,0 +1,9 @@
+numpy
+
+[test]
+pandas
+pytest
+pytest-cov
+
+[ujson]
+ujson>=5.5.0
