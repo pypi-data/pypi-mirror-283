@@ -1,0 +1,6 @@
+huggingface_hub
+accelerate
+openai
+transformers
+torch
+llm_guard
