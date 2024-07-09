@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+static_data_functions_importer/__init__.py
+static_data_functions_importer/importer.py
+static_data_functions_importer.egg-info/PKG-INFO
+static_data_functions_importer.egg-info/SOURCES.txt
+static_data_functions_importer.egg-info/dependency_links.txt
+static_data_functions_importer.egg-info/requires.txt
+static_data_functions_importer.egg-info/top_level.txt
