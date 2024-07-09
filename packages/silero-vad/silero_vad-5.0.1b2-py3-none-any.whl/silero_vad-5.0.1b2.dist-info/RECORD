@@ -1,0 +1,10 @@
+silero_vad/__init__.py,sha256=tVwonofnj_-b80SYxRR5FAghkHlWecW8sWPyldCkuc4,362
+silero_vad/model.py,sha256=zThZQi1Y0-n9F23GjfmvgDiwUvzsOd5PVr-dPxCVeiw,824
+silero_vad/utils_vad.py,sha256=TWRdT3jTX9uffXn4m9sk4-G1ahj9iWsTl1o4bs_VVAQ,18896
+silero_vad/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+silero_vad/data/silero_vad.jit,sha256=hcSOHw7LYE5dKiaPPM-5EtT36TWs3IavWj_FsK6nspo,2269612
+silero_vad/data/silero_vad.onnx,sha256=JiOilT9v89LB5hdAxs23FoEzR5smff7xFKSjzFvdeI8,2327524
+silero_vad-5.0.1b2.dist-info/METADATA,sha256=rqHmXYSIZ3fEEclKUXBt7N8H7Dem5uV8Pj7K9v9FSpI,6458
+silero_vad-5.0.1b2.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+silero_vad-5.0.1b2.dist-info/licenses/LICENSE,sha256=LmPpo4tuj8DHvDfOF0ysoYYocIVsba9Wl8-3heklUgs,1075
+silero_vad-5.0.1b2.dist-info/RECORD,,
