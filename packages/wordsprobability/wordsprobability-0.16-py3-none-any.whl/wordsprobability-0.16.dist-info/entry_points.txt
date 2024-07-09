@@ -1,0 +1,2 @@
+[console_scripts]
+wordsprobability = wordsprobability.main:main
