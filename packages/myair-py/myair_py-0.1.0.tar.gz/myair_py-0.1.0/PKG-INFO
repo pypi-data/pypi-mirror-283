@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: myair-py
+Version: 0.1.0
+Summary: API Client to interact with ResMed MyAir CPAP data
+License: MIT
+Author: Alex Silverman
+Author-email: alex@silverswatch.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# resmed-py
+Python client for interacting with ResMed MyAir API
+
+This is a "soft" fork of the embedded client in a repo by [Prestomation](https://github.com/prestomation/resmed_myair_sensors/).
+
+
+
