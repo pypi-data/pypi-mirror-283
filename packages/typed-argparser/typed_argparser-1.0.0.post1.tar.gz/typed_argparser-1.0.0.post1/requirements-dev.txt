@@ -1,0 +1,6 @@
+pre-commit
+ruff
+mypy
+coverage
+poethepoet
+typing_extensions
