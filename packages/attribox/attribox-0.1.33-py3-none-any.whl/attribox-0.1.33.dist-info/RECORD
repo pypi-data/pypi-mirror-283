@@ -1,0 +1,17 @@
+attribox/__init__.py,sha256=zXfzzgn6b0jzgwFDGmHcmksrtbXXJVV76YvzmmxJd2Y,797
+attribox/_abstract_descriptor.py,sha256=D68LIFBWAuLvWFuH8WJmO0796hAfPK7mCIiU_BzkFQc,3550
+attribox/_attri_box.py,sha256=zyaumW1t4B0onTp1lwtUuOwnGqGWe3HDGXCFwTm1Z1g,7831
+attribox/_attri_class.py,sha256=6MN8Yrs54i_lbxEG2nD81ZhXTmK6ciYHJ0Frj2rCMn0,2437
+attribox/_attrify.py,sha256=Sah6PyNiN5WA8xZzav9Tqydumc2k-zAIh8ccq_5kXRE,987
+attribox/_delayed_descriptor.py,sha256=hGfWVKFAkz3E3YcmnWTRcVAwYcUWEdKqrNtgUBzQ6lc,2637
+attribox/_this_scope.py,sha256=9oEitycl1TzO3zRCiI4i0ePtxVZbncxHgJFhJRDDlIk,1421
+attribox/_typed_descriptor.py,sha256=Q2VP6QPV0j43BYCiPElOALFXzc4FNgVoegNIlVZx-0s,1781
+example/__init__.py,sha256=PFosIoCJUNGTfYqjlPgerOEQZ--uikujai3NKzz7Qj8,253
+example/_point.py,sha256=BSUm2y8UyL2I1fZuPfDth1sFY8uw-sfhA3rncQEea7U,2494
+example/_rectangle.py,sha256=R2FO7IUwSfHGPJKM_W-PzBBXhRAZw6ArFgis1kg-3Hw,1767
+example/main.py,sha256=qjXm8xG9mBYGYHU6NAwoQ4b0yLJdS0sP6tveRRAv3fE,254
+attribox-0.1.33.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+attribox-0.1.33.dist-info/METADATA,sha256=KGgwhAZMt45Ie3sAzGCUog4Beov3TjbLQinRWjsWhpQ,3212
+attribox-0.1.33.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+attribox-0.1.33.dist-info/top_level.txt,sha256=pthsKB7KvzrdJDANvlFgIzbNgL9pT0gV423h9tcl0MY,17
+attribox-0.1.33.dist-info/RECORD,,
