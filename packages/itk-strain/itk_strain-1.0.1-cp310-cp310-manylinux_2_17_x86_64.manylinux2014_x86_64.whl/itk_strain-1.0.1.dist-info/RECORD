@@ -1,0 +1,12 @@
+itk_strain-1.0.1.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+itk_strain-1.0.1.dist-info/WHEEL,sha256=9DC-EUHsX5qjkRda0BEJeAUTI1ZdfTi9QzfaT0yBRR0,155
+itk_strain-1.0.1.dist-info/RECORD,,
+itk_strain-1.0.1.dist-info/METADATA,sha256=RclTjfnykjWB_rqTqKLJj1qjtHtY6gm2HWfu2P7DCsE,15773
+itk_strain-1.0.1.dist-info/licenses/LICENSE,sha256=qsc7MUj20dcRHbyjIJn2jSbGRMaBOuHk8F9leaomY_4,11360
+itk_strain.libs/libtbb-f489fd38.so.12.9,sha256=rr4QUZmgSmQqsfQRMgDSgd5mRWXtIWUMJxn5phGhtK4,4315273
+itk/StrainPython.py,sha256=E_njC3Zrrw0iyoAiYol9lWV1ISB9gqk_7XwwF4aM8y8,2219
+itk/_StrainPython.so,sha256=WJgRQswm6T00XMYBAj7Ks-RNVtPul0vgbkyvNnkiLRY,4998193
+itk/itkTransformToStrainFilterPython.py,sha256=7UafS1HX4UF3w9ZSI02Cxg__0qJC8ZdneGSCFAW3Ops,84006
+itk/itkStrainImageFilterPython.py,sha256=qcCITP09S7BexndDswsQv0_9oI_gwXznDGz9eQvMIpI,52306
+itk/Configuration/Strain_snake_case.py,sha256=xjw6tPokywciyiZ_ePspvkRWYHPUXJb81-AregzUu4Y,104
+itk/Configuration/StrainConfig.py,sha256=B7hcjjdGzxCvJEiOWXttP2UrsJKpb7J-YAeZOwO-slg,4884
