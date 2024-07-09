@@ -1,0 +1,15 @@
+README.md
+setup.py
+mykmeansproject/__init__.py
+mykmeansproject/calisan-yedek.py
+mykmeansproject/kmeans-yedek.py
+mykmeansproject/kmeans.py
+mykmeansproject/yeni44-linux.out
+mykmeansproject/yeni44-mac-arm64.out
+mykmeansproject/yeni44-mac-x86_64.out
+mykmeansproject/yeni44-mac.out
+mykmeansproject/yeni44-windows.exe
+mykmeansproject.egg-info/PKG-INFO
+mykmeansproject.egg-info/SOURCES.txt
+mykmeansproject.egg-info/dependency_links.txt
+mykmeansproject.egg-info/top_level.txt
