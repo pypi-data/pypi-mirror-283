@@ -1,0 +1,137 @@
+Metadata-Version: 2.1
+Name: paragon-sdk
+Version: 1.0.0
+Summary: Paragon Automation APIs
+Author-email: sanchetiv <sanchetiv@juniper.net>
+Project-URL: Documentation, https://www.juniper.net/documentation/product/us/en/juniper-paragon-automation/
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: apimatic-core ~=0.2.0
+Requires-Dist: apimatic-core-interfaces ~=0.1.0
+Requires-Dist: apimatic-requests-client-adapter ~=0.1.0
+Requires-Dist: python-dateutil ~=2.8.1
+Provides-Extra: testutils
+Requires-Dist: pytest >=7.2.2 ; extra == 'testutils'
+
+
+# Getting Started with Merged API
+
+## Introduction
+
+API interface for PI application
+
+Trust Proto repository: [https://ssd-git.juniper.net/packet-optical/trust/proto](https://ssd-git.juniper.net/packet-optical/trust/proto)
+
+## Install the Package
+
+The package is compatible with Python versions `3 >=3.7, <= 3.11`.
+Install the package from PyPi using the following pip command:
+
+```python
+pip install paragon-sdk==1.0.0
+```
+
+You can also view the package at:
+https://pypi.python.org/pypi/paragon-sdk/1.0.0
+
+## Initialize the API Client
+
+**_Note:_** Documentation for the client can be found [here.](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/client.md)
+
+The following parameters are configurable for the API Client:
+
+| Parameter | Type | Description |
+|  --- | --- | --- |
+| `default_host` | `str` | *Default*: `'www.example.com'` |
+| `environment` | `Environment` | The API environment. <br> **Default: `Environment.PRODUCTION`** |
+| `http_client_instance` | `HttpClient` | The Http Client passed from the sdk user for making requests |
+| `override_http_client_configuration` | `bool` | The value which determines to override properties of the passed Http Client from the sdk user |
+| `http_call_back` | `HttpCallBack` | The callback value that is invoked before and after an HTTP call is made to an endpoint |
+| `timeout` | `float` | The value to use for connection timeout. <br> **Default: 60** |
+| `max_retries` | `int` | The number of times to retry an endpoint call if it fails. <br> **Default: 0** |
+| `backoff_factor` | `float` | A backoff factor to apply between attempts after the second try. <br> **Default: 2** |
+| `retry_statuses` | `Array of int` | The http statuses on which retry is to be done. <br> **Default: [408, 413, 429, 500, 502, 503, 504, 521, 522, 524]** |
+| `retry_methods` | `Array of string` | The http methods on which retry is to be done. <br> **Default: ['GET', 'PUT']** |
+| `custom_header_authentication_credentials` | [`CustomHeaderAuthenticationCredentials`](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/$a/https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/custom-header-signature.md) | The credential object for Custom Header Signature |
+
+The API client can be initialized as follows:
+
+```python
+client = MergedapiClient(
+    custom_header_authentication_credentials=CustomHeaderAuthenticationCredentials(
+        authorization='Authorization'
+    ),
+    default_host='www.example.com'
+)
+```
+
+## Environments
+
+The SDK can be configured to use a different environment for making API calls. Available environments are:
+
+### Fields
+
+| Name | Description |
+|  --- | --- |
+| production | **Default** |
+| environment2 | - |
+
+## Authorization
+
+This API uses the following authentication schemes.
+
+* [`APIKeyHeader (Custom Header Signature)`](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/$a/https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/custom-header-signature.md)
+
+## List of APIs
+
+* [API](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/api.md)
+* [Alert](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/alert.md)
+* [Attestation](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/attestation.md)
+* [BOM](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/bom.md)
+* [BOM Component](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/bom-component.md)
+* [BOM License](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/bom-license.md)
+* [BOM Whitelist](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/bom-whitelist.md)
+* [Checklist](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/checklist.md)
+* [Checklist Template](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/checklist-template.md)
+* [Compliance Document](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/compliance-document.md)
+* [Compliance Scan](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/compliance-scan.md)
+* [Device](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/device.md)
+* [Integrity SKU](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/integrity-sku.md)
+* [Integrity Software Product](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/integrity-software-product.md)
+* [Inventory](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/inventory.md)
+* [Schedule](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/schedule.md)
+* [Scoring Factor](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/scoring-factor.md)
+* [Scoring Plan](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/scoring-plan.md)
+* [Scoring Score](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/scoring-score.md)
+* [Scoring Value Report](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/scoring-value-report.md)
+* [Snapshot](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/snapshot.md)
+* [Tenant](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/tenant.md)
+* [Version](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/version.md)
+* [Vulnerability Advisory](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/vulnerability-advisory.md)
+* [Vulnerability Device](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/vulnerability-device.md)
+* [Vulnerability PBN](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/vulnerability-pbn.md)
+* [Configuration](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/configuration.md)
+* [Services](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/services.md)
+* [Documentation](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/documentation.md)
+* [Data-Store](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/data-store.md)
+* [Facts](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/facts.md)
+* [License](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/license.md)
+* [System](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/system.md)
+* [Authentication](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/authentication.md)
+* [Administration](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/administration.md)
+* [Organization](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/organization.md)
+* [Workflow](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/workflow.md)
+* [Utility](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/utility.md)
+* [Instance-Schedule-State](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/instance-schedule-state.md)
+* [Logs](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/logs.md)
+* [Debug](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/debug.md)
+* [Workflow-Instance](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/workflow-instance.md)
+* [Workflow-Statistics](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/controllers/workflow-statistics.md)
+
+## Classes Documentation
+
+* [Utility Classes](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/utility-classes.md)
+* [HttpResponse](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/http-response.md)
+* [HttpRequest](https://www.github.com/vsvinav/paragon-sdk-python-sdk/tree/1.0.0/doc/http-request.md)
+
