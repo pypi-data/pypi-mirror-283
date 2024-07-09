@@ -1,0 +1,6 @@
+README.md
+setup.py
+b15py.egg-info/PKG-INFO
+b15py.egg-info/SOURCES.txt
+b15py.egg-info/dependency_links.txt
+b15py.egg-info/top_level.txt
