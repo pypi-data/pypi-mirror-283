@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+sv_ttk_colorizer/__init__.py
+sv_ttk_colorizer/__main__.py
+sv_ttk_colorizer/util.py
+sv_ttk_colorizer.egg-info/PKG-INFO
+sv_ttk_colorizer.egg-info/SOURCES.txt
+sv_ttk_colorizer.egg-info/dependency_links.txt
+sv_ttk_colorizer.egg-info/entry_points.txt
+sv_ttk_colorizer.egg-info/requires.txt
+sv_ttk_colorizer.egg-info/top_level.txt
