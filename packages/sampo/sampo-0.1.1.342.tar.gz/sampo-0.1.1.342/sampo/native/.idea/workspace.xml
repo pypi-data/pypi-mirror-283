@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="SAMPO" targetName="TARGETS" />
+      <config projectName="SAMPO" targetName="ci_copy_deps" />
+      <config projectName="SAMPO" targetName="native" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DCMAKE_BUILD_TYPE=Debug" />
+      <configuration PROFILE_NAME="Release" ENABLED="true" CONFIG_NAME="Release" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2a8c6878-861d-448e-a44a-dca7be254463" name="Changes" comment="Finished parallel SGS implementation and testing">
+      <change beforePath="$PROJECT_DIR$/../backend/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/default.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/default.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/native.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/native.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/include/native/schemas/workgraph.h" beforeDir="false" afterPath="$PROJECT_DIR$/native/include/native/schemas/workgraph.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/include/native/utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/native/include/native/utils.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/src/chromosome_evaluator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/native/src/chromosome_evaluator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/src/just_in_time.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/native/src/just_in_time.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/src/native.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/native/src/native.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/src/sgs.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/native/src/sgs.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/src/time_estimator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/native/src/time_estimator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scheduler/genetic/schedule_builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/../scheduler/genetic/schedule_builder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../schemas/schedule.py" beforeDir="false" afterPath="$PROJECT_DIR$/../schemas/schedule.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tests/scheduler/genetic/full_scheduling.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../tests/scheduler/genetic/full_scheduling.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="ClangdSettings">
+    <option name="clangTidyViaClangd" value="false" />
+    <option name="formatViaClangd" value="false" />
+    <option name="completionType" value="Builtin" />
+    <option name="completeInNamespacesByDefault" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/../.." value="feature/hybrids" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="NamedScopeManager">
+    <scope name="Unnamed" pattern="file[native]:*/&amp;&amp;!file[native]:.idea//*&amp;&amp;!file[native]:build//*&amp;&amp;!file[native]:dist//*&amp;&amp;!file[native]:native.egg-info//*&amp;&amp;!file[native]:third_party//*" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2022" />
+    <option name="minorVersion" value="3.2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2M2hkdjqEwv6DVb9jL1zgEcImTM" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "C/C++ File.cmain.cpp.executor": "Debug",
+    "C/C++ File.main.cpp (1).executor": "Run",
+    "C/C++ File.main.cpp.executor": "Run",
+    "CMake Application.TARGETS.executor": "Run",
+    "CMake Debug.native.executor": "Debug",
+    "Custom Build Application.pip build.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.advertisement.text.has.clang-format": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "feature/computation__pipeline",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/stasb/PycharmProjects/sampo/sampo/native",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "CPPToolchains",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\stasb\PycharmProjects\sampo\sampo\native" />
+      <recent name="C:\Users\stasb\PycharmProjects\sampo\sampo\native\cmake-build-debug" />
+      <recent name="C:\Users\stasb\PycharmProjects\sampo\sampo\native\cmake-build-release" />
+      <recent name="C:\Users\stasb\PycharmProjects\sampo\sampo\native\modules\native\src" />
+      <recent name="C:\Users\stasb\PycharmProjects\sampo\sampo\native\modules\native\include\native" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\stasb\PycharmProjects\sampo\sampo\native" />
+      <recent name="C:\Users\stasb\PycharmProjects\sampo\sampo\native\modules\native\run" />
+      <recent name="C:\Users\stasb\PycharmProjects\sampo\sampo\native\modules\native\src" />
+      <recent name="C:\Users\stasb\PycharmProjects\sampo\sampo\native\modules\native\include\native\scheduler\timeline" />
+      <recent name="C:\Users\stasb\PycharmProjects\sampo\sampo\native\modules\native\include\native\scheduler" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.TARGETS">
+    <configuration name="pip build" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="test.py" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$PROJECT_DIR$/../../extra" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SAMPO" TARGET_NAME="Unnamed" CONFIG_NAME="Unnamed" RUN_PATH="$PROJECT_DIR$/../../venv/Scripts/python.exe">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TARGETS" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SAMPO" TARGET_NAME="TARGETS" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SAMPO" RUN_TARGET_NAME="TARGETS">
+      <envs>
+        <env name="PYTHONPATH" value="C:\Users\stasb\PycharmProjects\sampo;C:\Users\stasb\PycharmProjects\sampo\venv\Lib\site-packages\" />
+      </envs>
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ci_copy_deps" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SAMPO" TARGET_NAME="ci_copy_deps" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="native" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SAMPO" TARGET_NAME="native" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cmain.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SAMPO" TARGET_NAME="cmain.cpp" CONFIG_NAME="cmain.cpp">
+      <option name="sourceFile" value="modules\native\src\cmain.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main.cpp (1)" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SAMPO" TARGET_NAME="main.cpp" CONFIG_NAME="main.cpp (1)">
+      <option name="sourceFile" value="native\src\main.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SAMPO" TARGET_NAME="main.cpp" CONFIG_NAME="main.cpp">
+      <option name="sourceFile" value="modules\native\src\main.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="C/C++ File.cmain.cpp" />
+      <item itemvalue="C/C++ File.main.cpp (1)" />
+      <item itemvalue="C/C++ File.main.cpp" />
+      <item itemvalue="CMake Application.TARGETS" />
+      <item itemvalue="CMake Application.ci_copy_deps" />
+      <item itemvalue="CMake Application.native" />
+      <item itemvalue="Custom Build Application.pip build" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="C/C++ File.main.cpp (1)" />
+        <item itemvalue="C/C++ File.main.cpp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2a8c6878-861d-448e-a44a-dca7be254463" name="Changes" comment="" />
+      <created>1676971729707</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676971729707</updated>
+      <workItem from="1676971731146" duration="12699000" />
+      <workItem from="1676989822861" duration="1000" />
+      <workItem from="1678178686555" duration="5183000" />
+      <workItem from="1678787855083" duration="206000" />
+      <workItem from="1678789242980" duration="594000" />
+      <workItem from="1682089757403" duration="18000" />
+      <workItem from="1684230760120" duration="14886000" />
+      <workItem from="1684490204986" duration="9992000" />
+      <workItem from="1684743269063" duration="9911000" />
+      <workItem from="1684916819603" duration="25349000" />
+      <workItem from="1685003406289" duration="7251000" />
+      <workItem from="1685344527999" duration="25889000" />
+      <workItem from="1685440032211" duration="8017000" />
+      <workItem from="1685522250829" duration="17879000" />
+      <workItem from="1685694073325" duration="8350000" />
+      <workItem from="1685785029178" duration="10235000" />
+      <workItem from="1686730944738" duration="15786000" />
+      <workItem from="1686911836073" duration="4236000" />
+      <workItem from="1687863398865" duration="2752000" />
+      <workItem from="1704791710205" duration="111000" />
+      <workItem from="1707379603024" duration="39000" />
+      <workItem from="1707379651532" duration="601000" />
+      <workItem from="1707396135255" duration="85000" />
+      <workItem from="1707736960136" duration="16042000" />
+      <workItem from="1707901417866" duration="14073000" />
+      <workItem from="1708330765678" duration="3277000" />
+      <workItem from="1708334067229" duration="1331000" />
+      <workItem from="1708335554989" duration="11348000" />
+      <workItem from="1708509518040" duration="2133000" />
+      <workItem from="1708511668270" duration="12319000" />
+      <workItem from="1708594862896" duration="14679000" />
+      <workItem from="1708933537068" duration="8424000" />
+      <workItem from="1708943427929" duration="4330000" />
+      <workItem from="1708950081534" duration="9145000" />
+      <workItem from="1709285676574" duration="15747000" />
+      <workItem from="1709544999309" duration="11623000" />
+      <workItem from="1709559146750" duration="6288000" />
+      <workItem from="1709714473328" duration="16302000" />
+      <workItem from="1709799974954" duration="12983000" />
+      <workItem from="1711357959281" duration="13056000" />
+      <workItem from="1711528533213" duration="642000" />
+      <workItem from="1711531332963" duration="11315000" />
+      <workItem from="1712744666017" duration="11596000" />
+      <workItem from="1712836156564" duration="11952000" />
+      <workItem from="1713170886054" duration="17510000" />
+      <workItem from="1713194058162" duration="596000" />
+      <workItem from="1713342316061" duration="16543000" />
+      <workItem from="1713783678297" duration="15400000" />
+      <workItem from="1713864588657" duration="20731000" />
+      <workItem from="1713946780867" duration="18026000" />
+      <workItem from="1715586893142" duration="13718000" />
+      <workItem from="1715685224775" duration="2947000" />
+      <workItem from="1715763719069" duration="15859000" />
+      <workItem from="1716365484456" duration="13361000" />
+      <workItem from="1717495524376" duration="21000" />
+      <workItem from="1717580698579" duration="7052000" />
+      <workItem from="1718014588208" duration="12517000" />
+    </task>
+    <task id="LOCAL-00001" summary="Structure remake">
+      <option name="closed" value="true" />
+      <created>1707915454159</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707915454159</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added some schemas">
+      <option name="closed" value="true" />
+      <created>1707922748754</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707922748754</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Reformat structure">
+      <option name="closed" value="true" />
+      <created>1707923142451</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707923142451</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fixed includes">
+      <option name="closed" value="true" />
+      <created>1707924174929</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707924174929</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Pre-finish JustInTimeTimeline">
+      <option name="closed" value="true" />
+      <created>1708597785044</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708597785044</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Pre-finish JustInTimeTimeline">
+      <option name="closed" value="true" />
+      <created>1708933577106</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1708933577106</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Pre-finish JustInTimeTimeline">
+      <option name="closed" value="true" />
+      <created>1708933644254</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708933644254</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Pre-finish JustInTimeTimeline">
+      <option name="closed" value="true" />
+      <created>1708933652965</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1708933652965</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Finished JustInTimeTimeline">
+      <option name="closed" value="true" />
+      <created>1708937570459</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708937570459</updated>
+    </task>
+    <task id="LOCAL-00010" summary="-">
+      <option name="closed" value="true" />
+      <created>1709286290618</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1709286290618</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fixed last compilation error">
+      <option name="closed" value="true" />
+      <created>1709296069200</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1709296069200</updated>
+    </task>
+    <task id="LOCAL-00012" summary="-">
+      <option name="closed" value="true" />
+      <created>1709732498454</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1709732498454</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Final fixes for the right interop">
+      <option name="closed" value="true" />
+      <created>1711372703404</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1711372703404</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Started unbinding C++ evaluator from Python specific structures">
+      <option name="closed" value="true" />
+      <created>1711377492031</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1711377492031</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Unbound C++ evaluator from Python specific structures">
+      <option name="closed" value="true" />
+      <created>1711544817270</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1711544817270</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Unbound C++ evaluator from Python specific structures">
+      <option name="closed" value="true" />
+      <created>1711548787801</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1711548787801</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Merge remote-tracking branch 'origin/feature/computation_pipeline' into feature/computation_pipeline&#10;&#10;# Conflicts:&#10;#&#9;sampo/native/modules/native/include/native/scheduler/chromosome_evaluator.h">
+      <option name="closed" value="true" />
+      <created>1711548865120</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1711548865120</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Build system published">
+      <option name="closed" value="true" />
+      <created>1712750879516</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1712750879516</updated>
+    </task>
+    <task id="LOCAL-00019" summary="build index integrated">
+      <option name="closed" value="true" />
+      <created>1712838220290</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1712838220290</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Split files to headers and implementations">
+      <option name="closed" value="true" />
+      <created>1712850070845</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1712850070845</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Implemented Parallel SGS">
+      <option name="closed" value="true" />
+      <created>1713182107740</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1713182107740</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Finally implemented sorted list interface">
+      <option name="closed" value="true" />
+      <created>1713360480028</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1713360480028</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Finished parallel SGS implementation and testing">
+      <option name="closed" value="true" />
+      <created>1713967102561</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1713967102561</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/feature/computation_pipeline" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/feature/computation_pipeline" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Structure remake" />
+    <MESSAGE value="Added some schemas" />
+    <MESSAGE value="Reformat structure" />
+    <MESSAGE value="Fixed includes" />
+    <MESSAGE value="Pre-finish JustInTimeTimeline" />
+    <MESSAGE value="Finished JustInTimeTimeline" />
+    <MESSAGE value="Fixed last compilation error" />
+    <MESSAGE value="-" />
+    <MESSAGE value="Final fixes for the right interop" />
+    <MESSAGE value="Started unbinding C++ evaluator from Python specific structures" />
+    <MESSAGE value="Unbound C++ evaluator from Python specific structures" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/feature/computation_pipeline' into feature/computation_pipeline&#10;&#10;# Conflicts:&#10;#&#9;sampo/native/modules/native/include/native/scheduler/chromosome_evaluator.h" />
+    <MESSAGE value="Build system published" />
+    <MESSAGE value="build index integrated" />
+    <MESSAGE value="Split files to headers and implementations" />
+    <MESSAGE value="Implemented Parallel SGS" />
+    <MESSAGE value="Finally implemented sorted list interface" />
+    <MESSAGE value="Finished parallel SGS implementation and testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished parallel SGS implementation and testing" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/native/src/just_in_time.cpp</url>
+          <line>133</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/native/src/just_in_time.cpp</url>
+          <line>103</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="CidrExceptionBreakpoint" />
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

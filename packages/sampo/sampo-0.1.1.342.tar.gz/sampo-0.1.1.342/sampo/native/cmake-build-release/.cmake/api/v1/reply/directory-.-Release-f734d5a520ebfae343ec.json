@@ -1,0 +1,95 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"sampo_install_runtime_deps"
+		],
+		"files" : 
+		[
+			"cmake/sampo_install_utils.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 74,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 69,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 71,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 71,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 71,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "no_use",
+			"destination" : "lib",
+			"type" : "importedRuntimeArtifacts"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "no_use",
+			"destination" : "bin",
+			"type" : "importedRuntimeArtifacts"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "IN_LIST",
+			"destination" : "bin",
+			"runtimeDependencySetName" : "rdset",
+			"runtimeDependencySetType" : "library",
+			"type" : "runtimeDependencySet"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Runtime",
+			"destination" : "bin",
+			"runtimeDependencySetName" : "rdset",
+			"runtimeDependencySetType" : "library",
+			"type" : "runtimeDependencySet"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Development",
+			"destination" : "bin",
+			"runtimeDependencySetName" : "rdset",
+			"runtimeDependencySetType" : "library",
+			"type" : "runtimeDependencySet"
+		}
+	],
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	}
+}
