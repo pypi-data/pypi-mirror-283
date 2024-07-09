@@ -1,0 +1,12 @@
+*.pyc
+temp/*
+*.tmproj
+reikna.egg-info/*
+reikna/version.py
+test/htmlcov/*
+test/.coverage
+doc/build
+build
+dist
+*.sublime-project
+*.sublime-workspace
