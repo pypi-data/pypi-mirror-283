@@ -1,0 +1,9 @@
+thedns/__init__.py,sha256=dJrpnAMRWpZUVhU-qgpsYYsZIwPa9r0bXioXKKXDR4s,1744
+thedns/auth.py,sha256=sV3DmE4bvWkD51c2NOd-9J-iwsY1PvwSJkuqlAyd2lQ,1623
+thedns/network.py,sha256=T76iFtsSfudYWZcuLV2JgoKiQJPIcA9OjideeZ1YrPs,482
+thedns/wanwang.py,sha256=YLGkIdlO-LG1DWVR_BMRYVFaVpZ7cxaSGG5GjhZeVGI,1840
+thedns-1.0.8.dist-info/LICENSE,sha256=oku-_DS5fXG_yR7TgPLFtusidePJWk_jdv5K7fMcxGM,1066
+thedns-1.0.8.dist-info/METADATA,sha256=sU0aoZBZOO6w7kneol4pqJxF8MImYhlA_qeIQ9vuXJo,634
+thedns-1.0.8.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+thedns-1.0.8.dist-info/top_level.txt,sha256=hVTg3n4Pr3jWGzzC19_BcEeDjhBHt2Kka6tvQ-CPnE4,7
+thedns-1.0.8.dist-info/RECORD,,
