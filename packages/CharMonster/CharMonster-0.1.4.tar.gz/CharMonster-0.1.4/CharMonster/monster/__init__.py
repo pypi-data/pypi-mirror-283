@@ -1,0 +1,1 @@
+from ._monster import BaseMonster, Monster
