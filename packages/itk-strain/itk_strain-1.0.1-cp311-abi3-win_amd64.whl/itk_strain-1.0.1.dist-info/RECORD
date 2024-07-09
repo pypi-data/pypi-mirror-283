@@ -1,0 +1,14 @@
+itk/StrainPython.py,sha256=fBr5layq_fo5a-ND_P-Qf2z_407dvS9HGH9HZXV1Q6A,2290
+itk/_StrainPython.pyd,sha256=h0-_e_0cJ6A4LOWtqE0qX8dKe7G9FLtTCElmLy2dIes,1962496
+itk/__init_strain__.py,sha256=SFkjnqScX_vST8Awgrj-lBa18I0mrvJZlC6cQxVpWcE,340
+itk/itkStrainImageFilterPython.py,sha256=Ds43PfR7-YLVkTnvE_gKZDfO6qL6usHWp6_u5tX5qCA,53860
+itk/itkTransformToStrainFilterPython.py,sha256=s9GltYnYA4fmU-2rzDFWyS0EEpLjHNv_h__QkrucoEA,86239
+itk/Configuration/StrainConfig.py,sha256=NjTe-Hsi0CecTBSQb5ylspBmOOSLGRKfNFI3hqXk6b0,4917
+itk/Configuration/Strain_snake_case.py,sha256=C9onjN2rcx1Yo2sWc1f8vpGFho4JrR1BxXsHQ51wRtI,105
+itk_strain-1.0.1.dist-info/licenses/LICENSE,sha256=6N4ac5NFfpyIdot45rp5BiL777BAzkgZTCyw8bbU6f8,11562
+itk_strain.libs/msvcp140.dll,sha256=w73Hg-He0yrhxvTtZ4Hxa-fjesoGa3YjoH-4bk2rYrI,574952
+itk_strain.libs/tbb12.dll,sha256=uAYeUFrGU4BfPGbeEDcO5SoBUd0xLQeYCBIUMYGAUwA,313344
+itk_strain-1.0.1.dist-info/DELVEWHEEL,sha256=z8Y9sRWt_vXyXH-oaLL4iVzZ4hGtBs7Dr1qesjR9zVg,273
+itk_strain-1.0.1.dist-info/METADATA,sha256=qwKAcSWkJgxeJBBd43geo25kpMGwkV2Fxli3xbkqWEs,15751
+itk_strain-1.0.1.dist-info/WHEEL,sha256=6pdzeoM-OgIkGfszMkbGi0mge_p596fRoGBgZpuIMok,104
+itk_strain-1.0.1.dist-info/RECORD,,
