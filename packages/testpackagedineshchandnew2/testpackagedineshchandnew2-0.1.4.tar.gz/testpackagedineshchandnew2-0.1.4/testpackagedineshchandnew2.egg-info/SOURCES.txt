@@ -1,0 +1,8 @@
+setup.py
+operations/__init__.py
+operations/geometry.py
+operations/operations.py
+testpackagedineshchandnew2.egg-info/PKG-INFO
+testpackagedineshchandnew2.egg-info/SOURCES.txt
+testpackagedineshchandnew2.egg-info/dependency_links.txt
+testpackagedineshchandnew2.egg-info/top_level.txt
