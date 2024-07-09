@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: fosforml
+Version: 1.0.2
+Summary: REST API client for Fosfor AI
+Home-page: https://gitlab.fosfor.com/fosfor-decision-cloud/intelligence/mosaic-ai-client.git
+Author: Rakesh Gadiparthi
+Author-email: rakesh.gadiparthi@fosfor.com
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: cloudpickle (==2.2.1)
+Requires-Dist: requests-toolbelt (==1.0.0)
+Requires-Dist: shutils (==0.1.0)
+Requires-Dist: PyYAML (==6.0.1)
+Requires-Dist: mosaic-utils
+Requires-Dist: urllib3 (==2.2.1)
+Requires-Dist: scikit-learn (==1.3.2)
+Requires-Dist: numpy (==1.24.4) ; python_version <= "3.8"
+Requires-Dist: snowflake-ml-python (==1.5.0) ; python_version <= "3.9"
+Requires-Dist: snowflake-ml-python (==1.5.1) ; python_version == "3.10"
+Requires-Dist: numpy (==1.26.4) ; python_version > "3.8"
+Requires-Dist: snowflake-ml-python (==1.5.3) ; python_version >= "3.11"
+
