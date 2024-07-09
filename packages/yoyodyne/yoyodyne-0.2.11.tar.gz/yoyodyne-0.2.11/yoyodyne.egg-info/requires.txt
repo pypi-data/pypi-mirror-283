@@ -1,0 +1,5 @@
+maxwell>=0.2.4
+numpy<2.0.0,>=1.24.3
+pytorch-lightning<2.0.0,>=1.7.0
+torch>=2.0.0
+wandb>=0.15.3
