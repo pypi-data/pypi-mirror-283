@@ -1,0 +1,1 @@
+from iop._cli import main
