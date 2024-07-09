@@ -1,0 +1,44 @@
+{% set name = "prismstudio" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: {{ VERSION }}
+
+source:
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ VERSION }}.tar.gz"
+
+
+requirements:
+  host:
+    - ipywidgets ==7.7.1
+    - orjson ==3.9.3
+    - pandas ==2.0.3
+    - pip
+    - pyarrow ==12.0.0
+    - pydantic[dotenv] ==1.10.2
+    - python
+    - python-dotenv ==1.0.0
+    - pyzmq ==24.0.1
+    - requests ==2.26.0
+    - tqdm ==4.64.0
+  run:
+    - ipywidgets ==7.7.1
+    - orjson ==3.9.3
+    - pandas ==2.0.3
+    - pyarrow ==12.0.0
+    - pydantic[dotenv] ==1.10.2
+    - python
+    - python-dotenv ==1.0.0
+    - pyzmq ==24.0.1
+    - requests ==2.26.0
+    - tqdm ==4.64.0
+    - urllib3 ==1.26.9
+
+
+about:
+  home: "https://www.prism39.com"
+  license: Prism39 End User
+  license_family: OTHER
+  license_file: ../LICENSE.txt
+  summary: "Python Extension for PrismStudio"
+
