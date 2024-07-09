@@ -1,0 +1,20 @@
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      HATCH_INDEX_AUTH: ${{ secrets.HATCH_INDEX_AUTH }}
+      HATCH_INDEX_USER: __token__
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install Hatch
+      uses: pypa/hatch@install
+    - name: Do a build
+      run: |
+        hatch version "${{ github.event.release.tag_name }}"
+        hatch build
+        hatch publish
+        

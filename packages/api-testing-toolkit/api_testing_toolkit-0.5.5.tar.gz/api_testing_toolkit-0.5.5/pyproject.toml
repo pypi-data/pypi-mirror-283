@@ -1,0 +1,66 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "api-testing-toolkit"
+dynamic = ["version"]
+description = 'A set of functions to facilitate API testing with jupyter lab.'
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Tom" }
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Framework :: Jupyter :: JupyterLab",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "requests>=2.32.3",
+  "jupyterlab>=4.2.3",
+]
+
+[project.urls]
+Documentation = "https://github.com/Belkonar/api-testing-toolkit#readme"
+Issues = "https://github.com/Belkonar/api-testing-toolkit/issues"
+Source = "https://github.com/Belkonar/api-testing-toolkit"
+
+[tool.hatch.version]
+path = "src/api_testing_toolkit/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/api_testing_toolkit tests}"
+
+[tool.coverage.run]
+source_pkgs = ["api_testing_toolkit", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/api_testing_toolkit/__about__.py",
+]
+
+[tool.coverage.paths]
+api_testing_toolkit = ["src/api_testing_toolkit", "*/api-testing-toolkit/src/api_testing_toolkit"]
+tests = ["tests", "*/api-testing-toolkit/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
