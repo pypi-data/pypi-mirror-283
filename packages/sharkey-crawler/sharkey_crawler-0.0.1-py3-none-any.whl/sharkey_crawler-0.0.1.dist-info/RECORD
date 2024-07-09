@@ -1,0 +1,10 @@
+sharkey_crawler/__init__.py,sha256=ZS611z9zRwFROTHAYyQZ5YLFPisEteLjsN1Je8cCjSQ,426
+sharkey_crawler/convert.py,sha256=wvhwY5Q_YoSaI31VmL_V4HlKTOuBhaJEF445S0HABh0,870
+sharkey_crawler/main.py,sha256=rT8zPWJfIAmJqRFQWu_PRK9caI8GcZWAHKAHjaRnc_c,3848
+sharkey_crawler/types/__init__.py,sha256=sItwrYkUgqno5qtpbu0Xt0flNL1qOkZTy3QQdrgtarA,40
+sharkey_crawler/types/post.py,sha256=r3HXcumh1F1qGMipIigigQtOy4QT5Wzl5Hd4--0FM5I,3243
+sharkey_crawler/types/user.py,sha256=9ZEqK5IjDTEh4z1X2YWdzDFFcfFdPYdJsMet2q0lLas,2086
+sharkey_crawler-0.0.1.dist-info/LICENSE,sha256=C2U9egGIbZETUAib_TR1UjPcb84vvaZ0BoMS2unshAo,1128
+sharkey_crawler-0.0.1.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+sharkey_crawler-0.0.1.dist-info/METADATA,sha256=l81rEl9RgjUHz6YGFF8zZoNJxzbX3KLWF4ok1przlMo,4247
+sharkey_crawler-0.0.1.dist-info/RECORD,,
