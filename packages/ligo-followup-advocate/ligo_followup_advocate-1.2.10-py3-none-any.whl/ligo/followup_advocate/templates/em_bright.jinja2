@@ -1,0 +1,23 @@
+{% from 'macros.jinja2' import evidence_for, probability,
+                               citeskymap_number %}
+{% filter rewrap(text_width) %}
+{% if update_alert %}Based on posterior support from parameter
+estimation {{citeskymap_number(updated_skymap.pipeline, citation_index)}},
+under the assumption that the candidate {{gracedb_id}} is astrophysical in
+origin, {% else %}Assuming the candidate is astrophysical in origin, {% endif %}
+the probability that {% if not update_alert and prob_has_ssm is not none %}the heavier compact object {% elif update_alert %}
+at least one of the compact objects {% else %}the lighter compact object {% endif %}is consistent with
+a neutron star mass{% if not update_alert and prob_has_ssm is not none %} between 1 and 3 solar
+mass{% elif update_alert %} above one solar mass{% endif%} (HasNS) is {{probability(prob_has_ns)}}.
+[{{citation_index['em_bright']}}]{% if prob_has_remnant is not none%} Using the masses and spins inferred from the signal, the
+probability of matter outside the final compact object (HasRemnant)
+is {{probability(prob_has_remnant)}}. [{{citation_index['em_bright']}}] {% endif %}
+{% if update_alert %}HasRemnant is assumed to be zero when the heavier component mass is below
+1 solar mass. {% endif %}{% if prob_has_remnant is not none%}Both HasNS and HasRemnant consider the
+support of several neutron star equations of state for maximum neutron star
+mass.{% endif %} The probability that{% if not update_alert and prob_has_ssm is not none %} heavier
+compact object{% else %} either of the binary components{% endif %} lies between 3 and 5 solar masses (HasMassGap) is
+{{probability(prob_has_massgap)}}{% if prob_has_ssm is not none %} and the probability that the lighter
+compact object is below 1 solar mass (HasSSM) is {{probability(prob_has_ssm)}}{% endif %}.
+
+{% endfilter %}
