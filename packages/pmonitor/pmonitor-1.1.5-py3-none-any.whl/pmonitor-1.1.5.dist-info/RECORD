@@ -1,0 +1,13 @@
+monitor/WinPidUtil.py,sha256=NGkit8UoDAW7dz1vrwsb50QFroO-0hZ44fd_fykJ3WM,8523
+monitor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+monitor/get_process_name.py,sha256=eUElEd6chW-gw416o3VZg3UZPi8ZCG9rcw8ayrpVcz4,3620
+monitor/monitor_mac.py,sha256=OoptTTXTZQupzBwgGOfKNjyYAKBxDy-wI3l6T7XVE8s,4651
+monitor/monitor_pids.py,sha256=5KTqqwUtvaOi5BSu4W3bPHiGcqu4wj1Ry8xgmD2MnQY,10188
+monitor/monitor_win.py,sha256=xs5nzqqEPoDmJTegh3lQhVjjpPcOWnruWKK65ttqnTo,6161
+monitor/run_monitor.py,sha256=5oUD_yuFkrKRO_-gGbs2IKuGd5lRqUEihRTeWihxOHk,2106
+monitor/sys_info.py,sha256=aNultuRoQuRYPkYo397xAXVDXP07Qx5JOHtYzNmEvuc,3208
+pmonitor-1.1.5.dist-info/METADATA,sha256=iLBv8vyQwG3FP06m24qdlBug30KH8uEBrF0W8zz1Yo8,215
+pmonitor-1.1.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pmonitor-1.1.5.dist-info/entry_points.txt,sha256=vmlLEANgf2fZar9BeXYiKdF6GMJbVXip-SIZx5yPXDo,55
+pmonitor-1.1.5.dist-info/top_level.txt,sha256=tGkQDkVeyKgP5Rr7acpp0df83NBAnI8up0sGwRxuuQ4,8
+pmonitor-1.1.5.dist-info/RECORD,,
