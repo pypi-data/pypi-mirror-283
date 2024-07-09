@@ -1,0 +1,2 @@
+[console_scripts]
+isaac-analyzer = isaac_analyzer.cli:main
