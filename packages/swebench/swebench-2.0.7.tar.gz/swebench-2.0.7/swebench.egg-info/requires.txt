@@ -1,0 +1,12 @@
+beautifulsoup4
+chardet
+datasets
+docker
+ghapi
+GitPython
+pre-commit
+python-dotenv
+requests
+rich
+unidiff
+tqdm
