@@ -1,0 +1,155 @@
+#!/bin/bash
+#
+# This file is part of the sdrterm distribution
+# (https://github.com/peads/sdrterm).
+# with code originally part of the demodulator distribution
+# (https://github.com/peads/demodulator).
+# Copyright (c) 2023-2024 Patrick Eads.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, version 3.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+####
+# Usage: ./example_simo.sh <host>:<port> -eB -r1024k -d25 -c"-1.2E+3" -t123.456M" --vfos=15000,-15000,30000" -w5k
+####
+OIFS=$IFS
+ts=$(date +%s);
+if [[ -z ${DSD_OPTS} ]]; then
+  DSD_OPTS="";
+fi
+
+if [[ -z ${OUT_PATH} ]]; then
+  OUT_PATH="/mnt/d";
+fi
+
+declare -A pids;
+port=0;
+params=""
+i="\0";
+set -u
+for i in ${@:2}; do
+  params+="${i} ";
+done
+unset i;
+
+cmd="socat TCP4:${1} -";
+set -u;
+echo "LOG: ${cmd}";
+coproc SOCAT { eval "$cmd"; }
+exec {SOCAT_IN}<&${SOCAT[0]}- {SOCAT_OUT}>&${SOCAT[1]}-
+unset cmd;
+
+cmd="python src/sdrterm.py ${params} --simo 2>&1 0<&${SOCAT_IN} | tee /tmp/sdrterm.log";
+set -u;
+echo "LOG: ${cmd}";
+coproc SDRTERM { eval "$cmd"; }
+exec {SDR_IN}<&${SDRTERM[0]}- {SDR_OUT}>&${SDRTERM[1]}-
+unset cmd;
+pids[0]="${SDRTERM_PID}";
+
+host="";
+port="";
+decimatedFs="";
+mainPid="";
+
+function generateRegex {
+  echo "s/^\s*\"*${1}\"*:\s*${2},*\s*$/\1/g"
+}
+
+while IFS= ; read -r line; do
+  echo "LOG: ${line}"
+  if [[ ! -z $(echo $line | grep "host" -) ]]; then
+    host=$(sed -E "`generateRegex "host" '\"(([a-zA-Z0-9]+)+)\"'`" <<< $line);
+  fi
+  if [[ ! -z $(echo $line | grep "vfos" -) ]]; then
+    vfos=$(sed -E "`generateRegex "vfos" '\"((-*[0-9]+,*)+)\"'`" <<< $line);
+  fi
+  if [[ ! -z $(echo $line | grep "tunedFreq" -) ]]; then
+    tuned=$(sed -E "`generateRegex "tunedFreq" "([0-9]+)"`" <<< $line);
+  fi
+  if [[ ! -z "$(echo $line | grep "decimatedFs" -)" ]]; then
+    decimatedFs=$(sed -E "`generateRegex "decimatedFs" "([0-9]+)"`" <<< $line);
+  fi
+  if [[ ! -z $(echo $line | grep "Started proc Main") ]]; then
+    mainPid=$(sed -E "`generateRegex "Started proc Main" "([0-9]+)"`" <<< $line);
+    pids[1]=$mainPid;
+  fi
+  if [[ $line == *"Accepting"* ]]; then
+    port=$(echo $line | grep "Accepting" - | sed -E "s/^.*\('[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+',\s*([0-9]+)\).*$/\1/g");
+    break;
+  fi
+done <&"${SDR_IN}"
+
+declare -A logFiles;
+
+i="\0";
+set -u;
+IFS=, ; read -r -a vfos <<< "$vfos";
+for i in "${vfos[@]}"; do
+  tmp_in="\0";
+  set -u;
+  tmp_out="\0";
+  set -u;
+  freq=$(( i + tuned ));
+  set -u;
+  coprocName="SOCAT_${freq}";
+  set -u;
+  fileName="/tmp/log-${freq}";
+  set -u;
+  cmd="socat TCP4:${host}:${port} - | sox -v0.6 -q -D -B -traw -b64 -ef -r${decimatedFs} - -traw -b16 -es -r48k - 2>/dev/null | dsd ${DSD_OPTS} -i - -o /dev/null -n -f1 -w ${OUT_PATH}/out-${freq}-${ts}.wav 2>${fileName}"
+  set -u;
+
+  echo "LOG: ${cmd}";
+  eval "coproc ${coprocName} { ${cmd}; }"
+  eval "exec {tmp_in}<&\${${coprocName}[0]}- {tmp_out}>&\${${coprocName}[1]}-";
+  eval "pids[\"${coprocName}\"]=\${${coprocName}_PID}";
+  logFiles["${coprocName}"]=${fileName};
+
+  unset fileName;
+  unset cmd;
+  unset freq;
+  unset coprocName;
+  unset tmp_in;
+  unset tmp_out;
+  sleep 0.1; #TODO figure out a better way to sync this
+done
+unset i;
+
+#echo "LOG: ${pids[@]}";
+
+while IFS= ; read -r line; do
+  echo "LOG: ${line}"
+  if [[ $line == *"established"* ]]; then
+    break;
+  fi
+done <&"${SDR_IN}"
+
+function cleanup {
+  kill $SDRTERM_PID;
+  kill $mainPid;
+  kill "${pids[@]}";
+  i="\0";
+  set -u;
+  for i in "${!logFiles[@]}"; do
+    while IFS= ; read -r line; do
+      echo "LOG: ${line}";
+    done < ${logFiles["$i"]}
+#    rm "${logFiles[$i]}";
+  done
+  unset i;
+}
+trap cleanup EXIT;
+
+echo "LOG: Awaiting sdrterm";
+wait $SDRTERM_PID;
+echo "LOG: sdrterm returned: ${?}";
+exit;
