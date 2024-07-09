@@ -1,0 +1,10 @@
+imgui.cpython-39-aarch64-linux-gnu.so,sha256=crfrSj3t-fsDzrlv71rY4n_epVS1Ds_FUVtbMw4wjbU,6357608
+imgui/__init__.pyi,sha256=gdNOT78UNTsHwXxL8ETRDXztNA-KCUoIw2V7QzM9bLo,108737
+imgui/glfw/__init__.pyi,sha256=L5UBLPWxhp9UGG8u42vD3vwh5kQnHNQljQZ7Ezmpewk,24453
+imgui/implot/__init__.pyi,sha256=lFDo8Q6BsVaET7c6y4zdAvqpExvSd7tOMPy91L62uZs,38023
+imgui/imnodes/__init__.pyi,sha256=DDkUWETxgrxAwu1Pz0mnRsviFB9VmMhTvg-kOCD6GAg,13328
+py_imgui_redux-3.2.0.dist-info/top_level.txt,sha256=15onHRujL1_V625VUUaELFCxh9bOaAi5IzpVBJIPyHI,6
+py_imgui_redux-3.2.0.dist-info/WHEEL,sha256=avayjeVFpmh8yd1FRsIrCqhR8xJ6O5ZddXIX2j9u8Zk,150
+py_imgui_redux-3.2.0.dist-info/RECORD,,
+py_imgui_redux-3.2.0.dist-info/METADATA,sha256=MR0A21Dd698piFZEjfWWmJ1jSCoN95bp2VRy3RehIao,7799
+py_imgui_redux-3.2.0.dist-info/LICENSE,sha256=fDrCLKI_lLbO88WTSx4QGbbOEZrWhcw0TBLOQxkydX4,1070
