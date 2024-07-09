@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/paij/__init__.py
+src/paij/function_file.py
+src/paij/main.py
+src/paij/run_and_compile.py
+src/paij.egg-info/PKG-INFO
+src/paij.egg-info/SOURCES.txt
+src/paij.egg-info/dependency_links.txt
+src/paij.egg-info/top_level.txt
