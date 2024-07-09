@@ -1,0 +1,2 @@
+[console_scripts]
+fj_precache = fast_jsonl.cli:precache
