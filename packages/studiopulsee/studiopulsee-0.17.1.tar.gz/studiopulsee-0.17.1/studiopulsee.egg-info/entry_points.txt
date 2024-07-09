@@ -1,0 +1,2 @@
+[console_scripts]
+studiopulsee = studiopulsee.app:main
