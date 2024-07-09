@@ -1,0 +1,2 @@
+[console_scripts]
+pt-best-info = pydirac_papertools.scripts.write_best_solution:main

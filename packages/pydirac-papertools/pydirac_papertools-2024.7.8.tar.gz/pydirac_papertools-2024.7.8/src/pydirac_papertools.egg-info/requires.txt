@@ -1,0 +1,11 @@
+numpy
+matplotlib
+pandas
+importlib-resources
+pydirac==2024.7.8
+
+[dev]
+pre-commit
+
+[tests]
+pytest
