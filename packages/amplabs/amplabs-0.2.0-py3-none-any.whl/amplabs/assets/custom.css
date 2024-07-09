@@ -1,0 +1,43 @@
+.dash-debug-menu__outer,
+.dash-debug-menu {
+  display: none !important;
+}
+
+.js-plotly-plot .plotly div {
+  margin: 0 auto !important;
+}
+
+.accordion-item .mantine-Accordion-control {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.accordion-item .mantine-Accordion-control svg {
+  margin-left: 10px;
+  margin-right: 0;
+}
+.mantine-Accordion-content {
+  padding-left: 16px !important;
+  padding-right: 0px !important;
+}
+
+.file-item:hover {
+  background-color: rgb(211, 221, 235) !important;
+  cursor: pointer;
+}
+
+.file-item {
+  padding: 2px 0px !important;
+  padding-left: 16px !important;
+}
+
+.upload-btn-sidebar {
+  visibility: hidden;
+  float: right;
+  border: none;
+  background: none;
+}
+
+.file-item:hover .upload-btn-sidebar {
+  visibility: visible;
+  /* color: darksalmon */
+}
