@@ -1,0 +1,1 @@
+from PyDefold.gameobject import *
