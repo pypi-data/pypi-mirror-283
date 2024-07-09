@@ -1,0 +1,8 @@
+setup.py
+mkdocs-src-links-corrector/__init__.py
+mkdocs-src-links-corrector/plugin.py
+mkdocs_src_links_corrector.egg-info/PKG-INFO
+mkdocs_src_links_corrector.egg-info/SOURCES.txt
+mkdocs_src_links_corrector.egg-info/dependency_links.txt
+mkdocs_src_links_corrector.egg-info/requires.txt
+mkdocs_src_links_corrector.egg-info/top_level.txt
