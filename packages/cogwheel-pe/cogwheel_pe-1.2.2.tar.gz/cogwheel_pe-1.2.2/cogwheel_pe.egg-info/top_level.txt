@@ -1,0 +1,6 @@
+cogwheel
+dist
+figures
+notebooks
+scripts
+tutorials
