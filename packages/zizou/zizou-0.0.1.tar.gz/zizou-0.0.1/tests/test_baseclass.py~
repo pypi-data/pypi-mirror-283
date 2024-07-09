@@ -1,0 +1,196 @@
+import unittest
+
+import numpy as np
+from obspy import UTCDateTime
+import os
+
+import pandas as pd
+import xarray as xr
+
+from vumt import BaseClass
+
+
+class BaseClassTestCase(unittest.TestCase):
+
+    def setUp(self):
+        self.savedir = '/tmp'
+        self.testfiles = []
+        self.testfile1 = os.path.join(self.savedir, '20200101_WIZ.nc')
+        self.testfiles.append(self.testfile1)
+
+        self.testfile2 = os.path.join(self.savedir, '20200102_WIZ.nc')
+        self.testfiles.append(self.testfile2)
+
+        self.testfile3 = os.path.join(self.savedir, '20200103_WIZ.nc')
+        self.testfiles.append(self.testfile3)
+
+        self.testfile2D = os.path.join(self.savedir, '20200104_WIZ.nc')
+        self.testfiles.append(self.testfile2D)
+
+    def tearDown(self):
+        for f in self.testfiles:
+            try:
+                os.remove(f)
+            except FileNotFoundError:
+                pass
+
+    def test_exceptions(self):
+        """
+        Test that the right exceptions are raised.
+        """
+        bc = BaseClass()
+        with self.assertRaises(NotImplementedError):
+            bc.compute()
+
+        with self.assertRaises(TypeError):
+            bc.save()
+
+    def test_date_change(self):
+        """
+        Test for correct behaviour if data window goes across
+        multiple dates.
+        """
+        t = pd.date_range('2020-01-01T23:50:00', '2020-01-02T00:20:00',
+                          freq='10min')
+        df = pd.DataFrame({'some_feature': [0, 1, 2, 3]}, index=t)
+
+        class A: pass
+        class B: pass
+        bc1 = BaseClass()
+        bc1.trace = A()
+        bc1.trace.stats = B()
+        bc1.trace.stats.starttime = UTCDateTime('2020-01-01T23:50:00')
+        bc1.trace.stats.endtime = UTCDateTime('2020-01-02T00:30:00')
+        bc1.trace.stats.station = 'WIZ'
+        bc1.feature = df
+        bc1.save(self.savedir)
+        xdf1 = xr.open_dataset(self.testfile1)
+        xdf2 = xr.open_dataset(self.testfile2)
+        self.assertEqual(xdf1['some_feature'].data[0], 0)
+        self.assertEqual(xdf2['some_feature'].data[2], 3)
+        nstarttime = UTCDateTime('2020-01-02T00:00:00').isoformat()
+        self.assertEqual(xdf1.attrs['endtime'], nstarttime)
+        self.assertEqual(xdf2.attrs['starttime'], nstarttime)
+
+    def test_overwrite(self):
+        """
+        Test overwriting files instead of appending.
+        """
+        t1 = pd.date_range('2020-01-03T00:10:00', '2020-01-03T00:20:00',
+                           freq='10min')
+        t2 = pd.date_range('2020-01-03T00:30:00', '2020-01-03T00:40:00',
+                           freq='10min')
+        df1 = pd.DataFrame({'some_feature': [0, 1]}, index=t1)
+        df2 = pd.DataFrame({'some_feature': [2, 3]}, index=t2)
+
+        class A: pass
+        class B: pass
+        bc1 = BaseClass()
+        bc1.trace = A()
+        bc1.trace.stats = B()
+        bc1.trace.stats.starttime = UTCDateTime('2020-01-03T00:30:00')
+        bc1.trace.stats.endtime = UTCDateTime('2020-01-03T00:50:00')
+        bc1.trace.stats.station = 'WIZ'
+        bc1.feature = df2
+        bc1.save(self.savedir)
+
+        bc2 = BaseClass()
+        bc2.trace = A()
+        bc2.trace.stats = B()
+        bc2.trace.stats.starttime = UTCDateTime('2020-01-03T00:10:00')
+        bc2.trace.stats.endtime = UTCDateTime('2020-01-03T00:30:00')
+        bc2.trace.stats.station = 'WIZ'
+        bc2.feature = df1
+        bc2.save(self.savedir, overwrite=True)
+
+        xds1 = xr.load_dataset(self.testfile3)
+        self.assertEqual(xds1.attrs['starttime'], '2020-01-03T00:10:00')
+        self.assertEqual(xds1.attrs['endtime'], '2020-01-03T00:30:00')
+        np.testing.assert_array_almost_equal(xds1['some_feature'].values,
+                                             np.array([0., 2.]), 5)
+
+    def test_append(self):
+        """
+        Test appending when the feature is a pandas dataframe.
+        """
+        t1 = pd.date_range('2020-01-03T00:10:00', '2020-01-03T00:20:00',
+                           freq='10min')
+        t2 = pd.date_range('2020-01-03T00:30:00', '2020-01-03T00:40:00',
+                           freq='10min')
+        df1 = pd.DataFrame({'some_feature': [0, 1]}, index=t1)
+        df2 = pd.DataFrame({'some_feature': [2, 3]}, index=t2)
+
+        class A: pass
+        class B: pass
+        bc1 = BaseClass()
+        bc1.trace = A()
+        bc1.trace.stats = B()
+        bc1.trace.stats.starttime = UTCDateTime('2020-01-03T00:30:00')
+        bc1.trace.stats.endtime = UTCDateTime('2020-01-03T00:50:00')
+        bc1.trace.stats.station = 'WIZ'
+        bc1.feature = df2
+        bc1.save(self.savedir)
+
+        bc2 = BaseClass()
+        bc2.trace = A()
+        bc2.trace.stats = B()
+        bc2.trace.stats.starttime = UTCDateTime('2020-01-03T00:10:00')
+        bc2.trace.stats.endtime = UTCDateTime('2020-01-03T00:30:00')
+        bc2.trace.stats.station = 'WIZ'
+        bc2.feature = df1
+        bc2.save(self.savedir)
+
+        xds1 = xr.load_dataset(self.testfile3)
+        self.assertEqual(xds1.attrs['starttime'], '2020-01-03T00:10:00')
+        self.assertEqual(xds1.attrs['endtime'], '2020-01-03T00:50:00')
+        np.testing.assert_array_almost_equal(xds1['some_feature'].values,
+                                             np.array([0., 1., 2., 3.]), 5)
+
+    def test_2D_append(self):
+        """
+        Test appending when the feature is an xarray Dataset with 2D
+        data.
+        """
+        t1 = pd.date_range('2020-01-04T00:10:00', periods=3, freq='10min')
+        # Note that t1 and t2 overlap so the final result should have the
+        # first row of the second dataset overwritten by the last row of
+        # the first dataset
+        t2 = pd.date_range('2020-01-04T00:30:00', periods=3, freq='10min')
+        foo = xr.DataArray(np.arange(6).reshape((3, 2)),
+                           coords=[t1, np.array([10, 20])],
+                           dims=['datetime', 'frequency'])
+        bar = xr.DataArray(np.arange(6, 12).reshape((3, 2)),
+                           coords=[t2, np.array([10, 20])],
+                           dims=['datetime', 'frequency'])
+        xdf1 = xr.Dataset({'2Dfeature': foo})
+        xdf1.attrs['starttime'] = UTCDateTime('2020-01-04T00:10:00').isoformat()
+        xdf1.attrs['endtime'] = UTCDateTime('2020-01-04T00:40:00').isoformat()
+        xdf1.attrs['station'] = 'WIZ'
+
+        xdf2 = xr.Dataset({'2Dfeature': bar})
+        xdf2.attrs['starttime'] = UTCDateTime('2020-01-04T00:40:00').isoformat()
+        xdf2.attrs['endtime'] = UTCDateTime('2020-01-04T01:10:00').isoformat()
+        xdf2.attrs['station'] = 'WIZ'
+
+        bc1 = BaseClass()
+        bc1.feature = xdf2
+
+        bc1.save(self.savedir)
+
+        bc2 = BaseClass()
+        bc2.feature = xdf1
+        bc2.save(self.savedir)
+
+        xdst = xr.load_dataset(self.testfile2D)
+        np.testing.assert_array_almost_equal(xdst['2Dfeature'].values,
+                                             np.array([[0., 1.],
+                                                       [2., 3.],
+                                                       [4., 5.],
+                                                       [8., 9.],
+                                                       [10., 11.]]))
+        self.assertEqual(xdst.attrs['starttime'], '2020-01-04T00:10:00')
+        self.assertEqual(xdst.attrs['endtime'], '2020-01-04T01:10:00')
+
+
+if __name__ == '__main__':
+    unittest.main()

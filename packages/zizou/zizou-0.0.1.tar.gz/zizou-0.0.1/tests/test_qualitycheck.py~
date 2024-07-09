@@ -1,0 +1,36 @@
+from vumt import get_data
+from vumt.qualitycheck import QualityChecker
+from obspy import UTCDateTime
+
+import numpy as np
+import os
+import inspect
+import unittest
+
+
+
+class QualityCheckerTestCase(unittest.TestCase):
+
+    def setUp(self):
+        startdate = UTCDateTime(2016, 1, 1)._get_datetime()
+        enddate = UTCDateTime(2016, 1, 5)._get_datetime()
+        self.data_dir = os.path.join(os.path.dirname(os.path.abspath(
+            inspect.getfile(inspect.currentframe()))), "data")
+        self.file_dir = get_data('package_data/metadata.json')
+        self.dq = QualityChecker(rootdir=os.path.join(self.data_dir,"fq_test"), filedir=self.file_dir,
+                                 volcano='Whakaari', feat_dir='RSAM', station='WIZ',
+                                 starttime=startdate, endtime=enddate, Test=True)
+        self.expected_list_days = [[os.path.join(self.data_dir,"fq_test",'Whakaari', 'WIZ', 'HHZ', 'RSAM', '20160103_WIZ'),
+                                   os.path.join(self.data_dir,"fq_test",'Whakaari', 'WIZ', 'HHZ', 'RSAM', '20160104_WIZ')]]
+
+    def test_archive_completeness(self):
+        d, y , list_days , list_year ,corrupted_files_list = self.dq.archive_quality()
+
+        np.testing.assert_almost_equal(d, 50.0, decimal=1)
+        np.testing.assert_almost_equal(y, 100.0, decimal=1)
+        self.assertEqual(corrupted_files_list, [[]])
+
+        self.assertListEqual(list_days, self.expected_list_days)
+
+
+

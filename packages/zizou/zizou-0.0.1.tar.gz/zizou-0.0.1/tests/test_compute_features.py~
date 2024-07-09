@@ -1,0 +1,123 @@
+import configparser
+import os
+import unittest
+
+from joblib import Parallel, delayed
+import numpy as np
+import xarray as xr
+from obspy import UTCDateTime
+
+from vumt import get_data
+from vumt.scheduler import compute_features
+
+
+class CFTestCase(unittest.TestCase):
+
+    def setUp(self):
+        self.fn_cfg = '/tmp/cf_test.ini'
+        self.fn_out = os.path.join('/tmp', 'Whakaari', 'WIZ', 'HHZ',
+                                   'RSAM', '20200115_WIZ.nc')
+        if os.path.isfile(self.fn_out):
+            os.remove(self.fn_out)
+        config = configparser.ConfigParser()
+        config['DEFAULT'] = {'datasource': 'fdsn',
+                             'volcanoes': 'Whakaari',
+                             'interval': '600',
+                             'features': 'RSAM',
+                             'outdir': '/tmp',
+                             'logdir': '/tmp'}
+        config['RSAM'] = {'filtertype': 'bp',
+                          'filterfreq': '2, 5',
+                          'reindex': 'true'}
+        config['DEBUG'] = {'delay': 10}
+        with open(self.fn_cfg, 'w') as configfile:
+            config.write(configfile)
+
+    def tearDown(self):
+        for f in [self.fn_cfg, self.fn_out]:
+            try:
+                os.remove(f)
+            except FileNotFoundError:
+                pass
+
+    def test_concurrency(self):
+        """
+        Test running two instances of the 'compute_features' script
+        concurrently.
+        """
+
+        args1 = [self.fn_cfg, get_data('package_data/metadata.json'), '/tmp/',
+                 UTCDateTime('2020-01-15T00:00:00'),
+                 UTCDateTime('2020-01-15T00:20:00')]
+        args2 = [self.fn_cfg, get_data('package_data/metadata.json'), '/tmp/',
+                 UTCDateTime('2020-01-15T00:20:00'),
+                 UTCDateTime('2020-01-15T00:40:00')]
+
+        Parallel(n_jobs=2)(delayed(compute_features)(*args)
+                           for args in [args1, args2])
+
+        ds = xr.open_dataset(self.fn_out)
+        np.testing.assert_array_almost_equal(ds['rsam'].values,
+                                             np.array([40.88604, 43.90671,
+                                                       42.92005, 36.20416]), 4)
+        d_test = np.array(['2020-01-15T00:00:00.000000000',
+                           '2020-01-15T00:10:00.000000000',
+                           '2020-01-15T00:20:00.000000000',
+                           '2020-01-15T00:30:00.000000000'],
+                          dtype='datetime64[ns]')
+        np.testing.assert_array_equal(ds['datetime'].values,
+                                      d_test)
+
+    def test_overwrite(self):
+        """
+        Test the overwrite flag.
+        """
+        args1 = [self.fn_cfg, get_data('package_data/metadata.json'), '/tmp/',
+                 UTCDateTime('2020-01-15T00:00:00'),
+                 UTCDateTime('2020-01-15T00:20:00')]
+        args2 = [self.fn_cfg, get_data('package_data/metadata.json'), '/tmp/',
+                 UTCDateTime('2020-01-15T00:20:00'),
+                 UTCDateTime('2020-01-15T00:40:00'),
+                 True]
+
+        compute_features(*args1)
+        compute_features(*args2)
+
+        ds = xr.open_dataset(self.fn_out)
+        np.testing.assert_array_almost_equal(ds['rsam'].values,
+                                             np.array([42.92005, 36.20416]), 4)
+        d_test = np.array(['2020-01-15T00:20:00.000000000',
+                           '2020-01-15T00:30:00.000000000'],
+                          dtype='datetime64[ns]')
+        np.testing.assert_array_equal(ds['datetime'].values,
+                                      d_test)
+
+    @unittest.skipIf("TRAVIS" in os.environ and os.environ["TRAVIS"] == "true",
+                     "Skipping this test on Travis CI.")
+    def test_datalens_integration(self):
+        """
+        Integration test with SSAM for the DataLens.
+        """
+        fn_cfg = '/tmp/datalens_integration_test.ini'
+        config = configparser.ConfigParser()
+        config['DEFAULT'] = {'datasource': 'sds',
+                             'volcanoes': 'Whakaari',
+                             'interval': '600',
+                             'features': 'SSAM',
+                             'outdir': '/scratch/VUMT/features',
+                             'logdir': '/tmp'}
+        config['SSAM'] = {'interval': '60',
+                          'timestamp': 'start',
+                          'frequencies': '0,25.1,0.1',
+                          'resample_int': '(None, 10min)'}
+        with open(fn_cfg, 'w') as configfile:
+            config.write(configfile)
+
+        args = [fn_cfg, get_data('package_data/metadata.json'), '/tmp/',
+                 UTCDateTime('2020-01-15T00:00:00'),
+                 UTCDateTime('2020-01-16T00:00:00')]
+        compute_features(*args)
+        
+
+if __name__ == '__main__':
+    unittest.main()

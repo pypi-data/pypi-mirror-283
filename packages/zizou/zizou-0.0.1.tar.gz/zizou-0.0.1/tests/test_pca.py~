@@ -1,0 +1,110 @@
+import datetime
+import inspect
+import tempfile
+import unittest
+import numpy as np
+import xarray as xr
+import os
+
+from obspy import UTCDateTime
+from vumt import get_data
+from vumt.pca import PCA, runPca, runPcaCore
+from vumt.scheduler import round_times
+
+
+class PrincipalComponentTestCase(unittest.TestCase):
+
+    def setUp(self):
+        filename = inspect.getfile(inspect.currentframe())
+        filedir = os.path.dirname(os.path.abspath(filename))
+        self.testdata_dir = os.path.join(filedir, "data")
+        class DummyFQTrain:
+            def __init__(self):
+                rng=np.random.RandomState(42)
+                self.x,self.y=rng.multivariate_normal([10,3],
+                                                      cov=[[2,1],[1,2]],
+                                                      size=10000).T
+
+            def __call__(self,feature,stack_length=None):
+                if feature=='half_octave_band_0':
+                    return xr.DataArray(data=self.x)
+                elif feature=='half_octave_band_1':
+                    return xr.DataArray(data=self.y)
+
+        self.dfq_train=DummyFQTrain()
+
+        class DummyFQTransform:
+            def __init__(self):
+                self.x = np.array([1., np.nan, 1.])
+                self.y = np.array([1., np.nan, 1.])
+                self.starttime = datetime.datetime(2020, 1, 1, 0, 0, 0)
+                self.nantime = datetime.datetime(2020, 1, 1, 0, 10, 0)
+                self.endtime = datetime.datetime(2020, 1, 1, 0, 20, 0)
+                self.times = [self.starttime, self.nantime, self.endtime]
+                self.site = 'RIZ'
+
+            def __call__(self, feature, stack_length=None):
+                if feature == 'half_octave_band_0':
+                    return xr.DataArray(data=self.x,
+                                        coords=[self.times],
+                                        dims=['datetime'])
+                elif feature == 'half_octave_band_1':
+                    return xr.DataArray(data=self.y,
+                                        coords=[self.times],
+                                        dims=['datetime'])
+
+        self.dfq_transform = DummyFQTransform()
+        self.testfile = tempfile.mktemp()
+
+    def tearDown(self):
+        try:
+            os.unlink(self.testfile)
+        except FileNotFoundError:
+            pass
+
+    def test_pca_train(self):
+        pca=PCA(self.testfile,n_components=2,
+                pca_features=['half_octave_band_0','half_octave_band_1'])
+        pca.train(self.dfq_train)
+        tval=1/np.sqrt(2)
+        np.testing.assert_array_almost_equal(np.abs(pca.pca_model.components_),
+                                             np.array([[tval,tval],
+                                                       [tval,tval]]),8)
+        self.assertEqual(np.abs(np.sign(pca.pca_model.components_[0]).sum()),
+                         2)
+        self.assertEqual(np.abs(np.sign(pca.pca_model.components_[1]).sum()),
+                         0)
+
+    def test_pca_transform(self):
+        pca=PCA(self.testfile,n_components=2,
+                pca_features=['half_octave_band_0','half_octave_band_1'])
+        pca.train(self.dfq_train)
+        xdf = pca.infer(self.dfq_transform)
+        self.assertTrue(np.isclose(xdf.pca.loc[:, 'pc1'].values, 0))
+        # test caching
+        pca1=PCA(self.testfile,n_components=2,
+                 pca_features=['half_octave_band_0','half_octave_band_1'])
+        pca1.train('dummy')
+        xdf1 = pca1.infer(self.dfq_transform)
+        self.assertTrue(np.isclose(xdf1.pca.loc[:, 'pc1'].values, 0))
+
+    # def test_pcaRun(self):
+    #
+    #     runPca()
+
+    def test_runPcaCore(self):
+        start = UTCDateTime(2021, 3, 13, 6, 0, 0)
+        end = round_times(start, 600)
+        start = end - 7200
+
+        config_file = os.path.join(self.testdata_dir, "config_tests.ini")
+        meta_file = get_data('package_data/metadata.json')
+
+        outDir = tempfile.gettempdir()
+        runPcaCore(config_file=config_file, metadata_file=meta_file,
+                   end_time=end.datetime, start_time=start.datetime,
+                   out_dir=outDir)
+
+if __name__ == '__main__':
+    unittest.main()
+

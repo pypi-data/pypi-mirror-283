@@ -1,0 +1,641 @@
+import datetime
+import inspect
+import os
+import shutil
+import tempfile
+import time
+import unittest
+
+import numpy as np
+import pandas as pd
+from obspy import UTCDateTime, read_inventory
+import xarray as xr
+
+
+from vumt.data import (DataSource,
+                       VolcanoMetadata,
+                       FeatureRequest,
+                       PostProcess,
+                       generate_archive_files,
+                       load_netCDF_files)
+
+
+class DataTestCase(unittest.TestCase):
+
+    def get_max(self, trace):
+        value = np.nanmax(trace.data)
+        _min = np.nanmin(trace.data)
+        if abs(_min) > abs(value):
+            value = _min
+        return value
+
+    def setUp(self):
+        filename = inspect.getfile(inspect.currentframe())
+        filedir = os.path.dirname(os.path.abspath(filename))
+        self.sds_dir = os.path.join(filedir, "data", "sds_test")
+
+    def test_exceptions(self):
+        """
+        Test that the right exceptions are raised.
+        """
+        with self.assertRaises(RuntimeError):
+            ds = DataSource(source='blub')
+
+        with self.assertRaises(FileNotFoundError):
+            ds = DataSource(sds_dir='/foo/bar')
+
+    @unittest.skipIf("TRAVIS" in os.environ and os.environ["TRAVIS"] == "true",
+                     "Skipping this test on Travis CI.")
+    def test_get_waveforms(self):
+        """
+        Test that the waveforms returned from SDS and FDSNws are
+        consistent.
+        """
+        ds1 = DataSource(source='fdsn')
+        ds2 = DataSource(source='sds', sds_dir=self.sds_dir,
+                         staxml_dir=self.sds_dir)
+        # dates are inclusive, and complete days
+        starttime = UTCDateTime(year=2013, julday=240)
+        endtime = starttime + 86400.
+        for tr1 in ds1.get_waveforms('NZ', 'WIZ', '10', 'HHZ', starttime,
+                                     endtime):
+            for tr2 in ds2.get_waveforms('NZ', 'WIZ', '10', 'HHZ', starttime,
+                                         endtime):
+                self.assertEqual(tr1.max(), self.get_max(tr2))
+                self.assertEqual(tr1.stats.npts, tr2.stats.npts)
+
+    @unittest.skipIf("TRAVIS" in os.environ and os.environ["TRAVIS"] == "true",
+                     "Skipping this test on Travis CI.")
+    def test_with_gaps(self):
+        """
+        Test behaviour of traces with gaps.
+        """
+        ds1 = DataSource(source='sds', sds_dir=self.sds_dir,
+                         staxml_dir=self.sds_dir)
+        starttime = UTCDateTime(2010, 11, 26, 0, 0, 0)
+        endtime = starttime + 86400.
+        stream = 'NZ.WIZ.10.HHZ'
+        net, site, loc, comp = stream.split('.')
+        gen = ds1.get_waveforms(net, site, loc, comp, starttime, endtime)
+        t1 = next(gen)
+        self.assertTrue(np.any(np.isnan(t1.data)))
+        idx = np.where(np.isnan(t1.data))
+        self.assertEqual(idx[0].size, 431238)
+
+        starttime2 = UTCDateTime(2010, 11, 26, 0, 0, 0)
+        endtime2 = starttime2 + 86400.
+        gen2 = ds1.get_waveforms(net, site, loc, comp, starttime, endtime)
+        t2 = next(gen2)
+
+        # Check that we can take a trace apart and put it
+        # together again
+        t3 = t2.copy()
+        mdata = np.ma.masked_invalid(t3.data)
+        t3.data = mdata
+        st = t3.split()
+        st.merge(fill_value=np.nan)
+        st.trim(starttime2, endtime2, pad=True, fill_value=np.nan,
+                nearest_sample=False)
+        idx = np.where(st[0].data != t2.data)
+        # data 'differs' only at NaNs
+        self.assertTrue(np.alltrue(np.isnan(st[0].data[idx])))
+
+    def test_start_endtime(self):
+        """
+        Test that start and end times are what we expect.
+        """
+        ds = DataSource(source='sds', sds_dir=self.sds_dir,
+                        staxml_dir=self.sds_dir)
+        starttime = UTCDateTime(year=2013, julday=240)
+        endtime = starttime + 86400.
+        stream = 'NZ.WIZ.10.HHZ'
+        net, site, loc, comp = stream.split('.')
+        gen = ds.get_waveforms(net, site, loc, comp, starttime, endtime)
+        tr = next(gen)
+        self.assertTrue(tr.stats.starttime >= starttime)
+        self.assertTrue(tr.stats.endtime <= endtime)
+        ds1 = DataSource(source='fdsn')
+        gen1 = ds1.get_waveforms(net, site, loc, comp, starttime, endtime)
+        tr1 = next(gen1)
+        self.assertTrue(tr1.stats.starttime >= starttime)
+        self.assertTrue(tr1.stats.endtime <= endtime)
+ 
+    def test_missing_station_metadata_sds(self):
+        """
+        At NTVZ, station metadata stops at
+        2019-04-17T01:10:00.000000Z and restarts at
+        2019-04-19T01:30:00.000000Z, but waveform data
+        still exist throughout.
+
+        Full get_waveform test across three days, which checks that traces
+        are available for the time periods where there are both station
+        and waveform data, np.nan otherwise.
+        """
+        ds = DataSource(source='sds', sds_dir=self.sds_dir,
+                        staxml_dir=self.sds_dir)
+        starttime = UTCDateTime(2019, 4, 17)
+        endtime = UTCDateTime(2019, 4, 20)
+        net, site, loc, comp = ('NZ', 'NTVZ', '10', 'HHZ')
+        gen = ds.get_waveforms(net, site, loc, comp, starttime,
+                               endtime, chunk_size=86400.)
+        # number of non-NaN entries in each trace
+        # 2019-04-17
+        tr1 = next(gen)
+        self.assertEqual(np.count_nonzero(~np.isnan(tr1.data)),
+                         371902)
+        # 2019-04-18
+        tr2 = next(gen)
+        self.assertEqual(np.count_nonzero(~np.isnan(tr2.data)),
+                         1)
+        # 2019-04-19
+        tr3 = next(gen)
+        self.assertEqual(np.count_nonzero(~np.isnan(tr3.data)),
+                         8100000)
+
+
+class PostProcessingTestCase(unittest.TestCase):
+    """
+    Tests various permutations of station metadata availability e.g. at
+    MAVZ:
+    [Channel 'HHZ', Location '10',
+     Time range: 2012-05-22T02:00:00.000000Z - 2013-02-26T00:00:00.000000Z,
+     Channel 'HHZ', Location '10',
+     Time range: 2013-03-22T00:00:00.000000Z - 2013-04-09T22:15:00.000000Z,
+     Channel 'HHZ', Location '10',
+     Time range: 2013-04-10T00:15:00.000000Z - 2015-01-09T00:00:00.000000Z,
+     Channel 'HHZ', Location '10',
+     Time range: 2015-01-09T00:00:01.000000Z - 2017-04-20T22:00:00.000000Z,
+     Channel 'HHZ', Location '10',
+     Time range: 2017-04-20T22:00:02.000000Z - 9999-01-01T00:00:00.000000Z,
+    ]
+    """
+    def setUp(self):
+        filename = inspect.getfile(inspect.currentframe())
+        filedir = os.path.dirname(os.path.abspath(filename))
+        self.sds_dir = os.path.join(filedir, "data", "sds_test")
+        self.ds = DataSource(source='sds', sds_dir=self.sds_dir,
+                             staxml_dir=self.sds_dir)
+
+    def test_function_list(self):
+        """
+        Tests whether there is a matching number of tests and
+        post-processing functions
+        """
+        pp = PostProcess()
+        check_names = [check_n for (check_n, check) in pp.checklist]
+        func_names = [func_n for (func_n, func) in pp.pp_functions]
+        # Check correct number of checks and output function
+        self.assertEqual(len(check_names), len(func_names))
+        # Check checks and output functions match
+        [self.assertEqual(c.replace('check', 'output'), f)
+         for (c, f) in zip(check_names, func_names)]
+
+    def test_case_single_trace_in_stream(self):
+        net, site, loc, comp = ('NZ', 'MAVZ', '10', 'HHZ')
+        startdate = UTCDateTime(2013, 2, 25)
+        enddate = UTCDateTime(2013, 2, 26)
+        st = self.ds.c_sds.get_waveforms(net, site, loc, comp, startdate,
+                                         enddate, dtype='float64')
+        inv = read_inventory(os.path.join(self.sds_dir, 'MAVZ.xml'),
+                             format='STATIONXML')
+        inv_dt = inv.select(location=loc, channel=comp,
+                            starttime=startdate, endtime=enddate)
+        pp = PostProcess(st=st, inv=inv, inv_dt=inv_dt, loc=loc,
+                         comp=comp, fill_value=np.nan, startdate=startdate,
+                         enddate=enddate)
+        pp.run_checks()
+        # Check correct test case:
+        self.assertEqual(
+            [a[0] for (a, b) in zip(pp.checklist, pp.res) if b],
+            ["check_case_no_station_issues"]
+        )
+        self.assertEqual(
+            [a[0] for (a, b) in zip(pp.pp_functions, pp.res) if b],
+            ["output_case_no_station_issues"]
+        )
+        # Check output
+        test_st = st.copy()
+        test_st.attach_response(inv_dt)
+        test_st.remove_sensitivity()
+        test_st.trim(
+            starttime=startdate, endtime=enddate,
+            nearest_sample=False, pad=True, fill_value=np.nan
+        )
+        tr = pp.run_post_processing()
+        np.testing.assert_array_almost_equal(tr.data, test_st[0].data)
+
+    def test_multiple_traces_in_stream(self):
+        net, site, loc, comp = ('NZ', 'MAVZ', '10', 'HHZ')
+        startdate = UTCDateTime(2012, 5, 23)
+        enddate = UTCDateTime(2012, 5, 24)
+        st = self.ds.c_sds.get_waveforms(net, site, loc, comp, startdate,
+                                         enddate, dtype='float64')
+        inv = read_inventory(os.path.join(self.sds_dir, 'MAVZ.xml'),
+                             format='STATIONXML')
+        inv_dt = inv.select(location=loc, channel=comp,
+                            starttime=startdate, endtime=enddate)
+        pp = PostProcess(st=st, inv=inv, inv_dt=inv_dt, loc=loc,
+                         comp=comp, fill_value=np.nan, startdate=startdate,
+                         enddate=enddate)
+        pp.run_checks()
+
+        self.assertEqual(
+            [a[0] for (a, b) in zip(pp.checklist, pp.res) if b],
+            ["check_case_no_station_issues"]
+        )
+        self.assertEqual(
+            [a[0] for (a, b) in zip(pp.pp_functions, pp.res) if b],
+            ["output_case_no_station_issues"]
+        )
+        tr = pp.run_post_processing()
+        self.assertEqual(int(tr.stats.npts), int(8640000))
+
+    def test_case_stream_starttime_equals_channel_endtime(self):
+        net, site, loc, comp = ('NZ', 'MAVZ', '10', 'HHZ')
+        startdate = UTCDateTime(2013, 2, 26)
+        enddate = UTCDateTime(2013, 2, 27)
+        st = self.ds.c_sds.get_waveforms(net, site, loc, comp, startdate,
+                                         enddate, dtype='float64')
+        inv = read_inventory(os.path.join(self.sds_dir, 'MAVZ.xml'),
+                             format='STATIONXML')
+        inv_dt = inv.select(location=loc, channel=comp,
+                            starttime=startdate, endtime=enddate)
+        pp = PostProcess(st=st, inv=inv, inv_dt=inv_dt, loc=loc,
+                         comp=comp, fill_value=np.nan, startdate=startdate,
+                         enddate=enddate)
+        pp.run_checks()
+
+        # Check correct test case:
+        self.assertEqual(
+            [a[0] for (a, b) in zip(pp.checklist, pp.res) if b],
+            ["check_case_no_data"]
+        )
+        self.assertEqual(
+            [a[0] for (a, b) in zip(pp.pp_functions, pp.res) if b],
+            ["output_case_no_data"]
+        )
+        # Check output
+        dtr = pp.make_dummy_trace()
+        tr = pp.run_post_processing()
+        np.testing.assert_array_almost_equal(tr.data, dtr.data)
+
+    def test_case_stream_endtime_equals_channel_starttime(self):
+        net, site, loc, comp = ('NZ', 'MAVZ', '10', 'HHZ')
+        startdate = UTCDateTime(2013, 3, 21)
+        enddate = UTCDateTime(2013, 3, 22)
+        st = self.ds.c_sds.get_waveforms(net, site, loc, comp, startdate,
+                                         enddate, dtype='float64')
+        inv = read_inventory(os.path.join(self.sds_dir, 'MAVZ.xml'),
+                             format='STATIONXML')
+        inv_dt = inv.select(location=loc, channel=comp,
+                            starttime=startdate, endtime=enddate)
+        pp = PostProcess(st=st, inv=inv, inv_dt=inv_dt, loc=loc,
+                         comp=comp, fill_value=np.nan, startdate=startdate,
+                         enddate=enddate)
+        pp.run_checks()
+
+        # Check correct test case:
+        self.assertEqual(
+            [a[0] for (a, b) in zip(pp.checklist, pp.res) if b],
+            ["check_case_no_data"]
+        )
+        self.assertEqual(
+            [a[0] for (a, b) in zip(pp.pp_functions, pp.res) if b],
+            ["output_case_no_data"]
+        )
+        # Check output
+        dtr = pp.make_dummy_trace()
+        tr = pp.run_post_processing()
+        np.testing.assert_array_almost_equal(tr.data, dtr.data)
+
+    def test_case_multiple_channel_periods(self):
+        net, site, loc, comp = ('NZ', 'MAVZ', '10', 'HHZ')
+        startdate = UTCDateTime(2015, 1, 9)
+        enddate = UTCDateTime(2015, 1, 10)
+        st = self.ds.c_sds.get_waveforms(net, site, loc, comp, startdate,
+                                         enddate, dtype='float64')
+        inv = read_inventory(os.path.join(self.sds_dir, 'MAVZ.xml'),
+                             format='STATIONXML')
+        inv_dt = inv.select(location=loc, channel=comp,
+                            starttime=startdate, endtime=enddate)
+        pp = PostProcess(st=st, inv=inv, inv_dt=inv_dt, loc=loc,
+                         comp=comp, fill_value=np.nan, startdate=startdate,
+                         enddate=enddate)
+        pp.run_checks()
+
+        # Check correct test case:
+        self.assertEqual(
+            [a[0] for (a, b) in zip(pp.checklist, pp.res) if b],
+            ["check_case_multiple_channel_periods"]
+        )
+        self.assertEqual(
+            [a[0] for (a, b) in zip(pp.pp_functions, pp.res) if b],
+            ["output_case_multiple_channel_periods"]
+        )
+
+    def test_case_incomplete_station_metadata(self):
+        startdate = UTCDateTime(2013, 4, 9)
+        enddate = UTCDateTime(2013, 4, 10)
+        net, site, loc, comp = ('NZ', 'MAVZ', '10', 'HHZ')
+        inv = read_inventory(os.path.join(self.sds_dir, 'MAVZ.xml'),
+                             format='STATIONXML')
+        inv_dt = inv.select(location=loc, channel=comp,
+                            starttime=startdate, endtime=enddate)
+        st = self.ds.c_sds.get_waveforms(net, site, loc, comp, startdate,
+                                         enddate, dtype='float64')
+        pp = PostProcess(st=st, inv=inv, inv_dt=inv_dt, loc=loc,
+                         comp=comp, fill_value=np.nan, startdate=startdate,
+                         enddate=enddate)
+        pp.run_checks()
+
+        # Check correct test case:
+        self.assertEqual(
+            [a[0] for (a, b) in zip(pp.checklist, pp.res) if b],
+            ["check_case_incomplete_station_metadata"]
+        )
+        self.assertEqual(
+            [a[0] for (a, b) in zip(pp.pp_functions, pp.res) if b],
+            ["output_case_incomplete_station_metadata"]
+        )
+        test_st = st.copy()
+        test_st.trim(startdate, inv_dt[0][0][0].end_date,
+                     nearest_sample=False)
+        test_st.attach_response(inv_dt)
+        test_st.remove_sensitivity()
+        test_st.trim(startdate, enddate, nearest_sample=False,
+                     pad=True, fill_value=np.nan
+                     )
+        tr = pp.run_post_processing()
+
+        np.testing.assert_array_almost_equal(tr.data, test_st[0].data)
+
+
+class MetadataTestCase(unittest.TestCase):
+
+    def setUp(self):
+        self.data_dir = os.path.join(os.path.dirname(os.path.abspath(
+            inspect.getfile(inspect.currentframe()))), "data")
+        self.volcano = 'Ruapehu'
+        self.eruptions = [
+            datetime.date(2006, 10, 4),
+            datetime.date(2007, 9, 25)
+        ]
+        self.st_names = [
+            "NZ.MAVZ.10.HHZ",
+            "NZ.WHVZ.10.HHZ",
+            "NZ.TRVZ.10.HHZ",
+            "NZ.FWVZ.10.HHZ",
+            "NZ.COVZ.10.HHZ",
+        ]
+
+    def test_get_streams(self):
+        """
+        Test that the streams returned from VolcanoMetadata class are
+        consistent.
+        """
+        file = os.path.join(self.data_dir, 'test_metadata.json')
+        vm = VolcanoMetadata(file=file)
+        vm.set_volcano_name(self.volcano)
+        streams = vm.get_seismic_network_streams()
+        for stream in streams:
+            self.assertTrue(stream[0] in self.st_names)
+
+    def test_get_eruptions(self):
+        """
+        Test that the eruptions dates returned from VolcanoMetadata class
+        are consistent.
+        """
+        file = os.path.join(self.data_dir, 'test_metadata.json')
+        vm = VolcanoMetadata(file=file)
+        vm.set_volcano_name(self.volcano)
+        er = vm.get_eruption_dates()
+        for e in er:
+            self.assertTrue(e in self.eruptions)
+
+
+class FeatureRequestTestCase(unittest.TestCase):
+
+    def setUp(self):
+        self.data_dir = os.path.join(os.path.dirname(os.path.abspath(
+            inspect.getfile(inspect.currentframe()))), "data", "fq_test")
+        self.fq = FeatureRequest(rootdir=self.data_dir)
+        self.interval = 600
+        # produce test files
+        self.now = datetime.datetime.utcnow()
+        self.past = self.now - datetime.timedelta(days=365)
+        dates1 = pd.date_range(self.past.strftime('%Y-%m-%d'), freq='10min',
+                               periods=5)
+        dates2 = pd.date_range(self.now.strftime('%Y-%m-%d'), freq='10min',
+                               periods=5)
+        self.archived = xr.Dataset({'rsam':xr.DataArray(np.ones(5),
+                                                        coords=[dates1],
+                                                        dims=['datetime'])})
+        self.archived.attrs['starttime'] = (datetime.datetime(self.past.year,
+                                                              1, 1, 0, 0, 0).
+                                            isoformat())
+        self.archived.attrs['endtime'] = (datetime.datetime(self.past.year,
+                                                            12, 31, 23, 59,
+                                                            59).
+                                          isoformat())
+        self.currentd = xr.Dataset({'rsam':xr.DataArray(np.ones(5)*2,
+                                                        coords=[dates2],
+                                                        dims=['datetime'])})
+        self.currentd.attrs['starttime'] = dates2[0].isoformat()
+        self.currentd.attrs['endtime'] = dates2[-1].isoformat()
+
+        # create test directory
+        self.tempdir = tempfile.mkdtemp()
+        self.logdir = tempfile.mkdtemp()
+        self.feature_dir = os.path.join(self.tempdir, 'Mt_Doom',
+                                        'MDR', 'HHZ', 'RSAM')
+        try:
+            os.makedirs(self.feature_dir)
+        except FileExistsError:
+            pass
+        # create archive file
+        filename = '{}_MDR.nc'.format(self.past.strftime('%Y%m%d'))
+        self.archive_fn = os.path.join(self.feature_dir, filename)
+        filename = '{}_MDR.nc'.format(self.now.strftime('%Y%m%d'))
+        self.current_fn = os.path.join(self.feature_dir, filename)
+        self.archived.to_netcdf(self.archive_fn, engine='netcdf4')
+        self.currentd.to_netcdf(self.current_fn, engine='netcdf4')
+
+    def tearDown(self):
+        for f in [self.archive_fn, self.current_fn]:
+            try:
+                os.remove(f)
+            except FileNotFoundError:
+                pass
+        if os.path.isdir(self.tempdir):
+            shutil.rmtree(self.tempdir)
+        if os.path.isdir(self.logdir):
+            shutil.rmtree(self.logdir)
+
+    def test_call_multiple_days(self):
+        startdate = UTCDateTime(2016, 1, 1)._get_datetime()
+        enddate = UTCDateTime(2016, 1, 2, 12)._get_datetime()
+        self.fq.starttime = startdate
+        self.fq.endtime = enddate
+        rsam = self.fq('rsam', 'Whakaari', 'WIZ', 'HHZ',
+                       startdate, enddate)
+        # Check data
+        test_data = np.array([241.251274, 238.771593, 242.042088])
+        np.testing.assert_array_almost_equal(
+            rsam.data[0:3], test_data, 5
+        )
+        # Check datetime range is correct
+        first_time = pd.to_datetime(rsam.datetime.values[0])
+        last_time = pd.to_datetime(rsam.datetime.values[-1])
+        self.assertEqual(pd.to_datetime(startdate), first_time)
+        self.assertEqual(
+            pd.to_datetime(
+                enddate - datetime.timedelta(seconds=self.interval)
+            ),
+            last_time
+        )
+
+    def test_call_single_day(self):
+        startdate = UTCDateTime(2016, 1, 2, 1)._get_datetime()
+        enddate = UTCDateTime(2016, 1, 2, 12)._get_datetime()
+        self.fq.starttime = startdate
+        self.fq.endtime = enddate
+        rsam = self.fq('rsam', 'Whakaari', 'WIZ', 'HHZ',
+                       startdate, enddate)
+        # Check data
+        test_data = np.array([263.486002, 258.865675, 245.339569])
+        np.testing.assert_array_almost_equal(
+            rsam.data[0:3], test_data, 5
+        )
+        # Check datetime range is correct
+        first_time = pd.to_datetime(rsam.datetime.values[0])
+        last_time = pd.to_datetime(rsam.datetime.values[-1])
+        self.assertEqual(pd.to_datetime(startdate), first_time)
+        self.assertEqual(
+            pd.to_datetime(
+                enddate - datetime.timedelta(seconds=self.interval)
+            ),
+            last_time
+        )
+
+    def test_rolling_window(self):
+        startdate = UTCDateTime(2016, 1, 1)._get_datetime()
+        enddate = UTCDateTime(2016, 1, 2, 12)._get_datetime()
+        self.fq
+        self.fq
+
+        stack_len_seconds = 3600
+        stack_len_string = '1H'
+
+        num_windows = int(stack_len_seconds / self.interval)
+        rsam = self.fq('rsam', 'Whakaari', 'WIZ', 'HHZ',
+                       startdate, enddate)
+        rsam_rolling = self.fq('rsam', 'Whakaari', 'WIZ', 'HHZ',
+                               startdate, enddate,
+                               stack_length=stack_len_string)
+
+        # Check correct datetime array
+        np.testing.assert_array_equal(rsam.datetime.values,
+                                      rsam_rolling.datetime.values)
+        # Check correct values
+        rolling_mean = [
+            np.nanmean(rsam.data[(ind-num_windows+1):ind+1])
+            for ind in np.arange(num_windows, len(rsam_rolling.data))
+        ]
+        np.testing.assert_array_almost_equal(
+            np.array(rolling_mean), rsam_rolling.values[num_windows:], 6
+        )
+
+    def test_load_archive_files(self):
+        """
+        Test that archive files are loaded for older dates.
+        """
+        starttime = self.past - datetime.timedelta(days=365)
+        endtime = self.now + datetime.timedelta(days=1)
+        fq = FeatureRequest(self.tempdir)
+        fq.volcano = 'Mt_Doom'
+        fq.site = 'MDR'
+        fq.channel = 'HHZ'
+        generate_archive_files([self.feature_dir, '--overwrite'])
+        self.assertEqual(len(fq.find_files('RSAM')), 2)
+        np.testing.assert_array_equal(fq('RSAM', 'Mt_Doom', 'MDR', 'HHZ',
+                                      starttime=starttime,
+                                      endtime=endtime).data,
+                                      np.r_[np.ones(5), np.ones(5)*2])
+
+    def test_cache(self):
+        """
+        Test that data loaded from files and from cache are identical.
+        """
+        fq = FeatureRequest(self.tempdir)
+        generate_archive_files([self.feature_dir, '--overwrite'])
+        data_from_files = fq('RSAM', volcano='Mt_Doom',
+                            site='MDR', channel='HHZ',
+                            starttime=self.past - datetime.timedelta(days=365),
+                            endtime=self.now + datetime.timedelta(days=1))
+        data_from_cache = fq('RSAM', volcano='Mt_Doom',
+                            site='MDR', channel='HHZ',
+                            starttime=self.past - datetime.timedelta(days=365),
+                            endtime=self.now + datetime.timedelta(days=1))
+        xr.testing.assert_equal(data_from_files, data_from_cache)
+
+    def test_load_netCDF_files(self):
+        """
+        Test loading several netCDF files in chronological order
+        """
+
+        def gen_test_data(value, fn1, fn2):
+            """
+            Generate some test data
+            """
+            engine = 'netcdf4'
+            data1 = np.ones(12).reshape((4, 3))*value
+            data2 = np.zeros(12).reshape((4, 3))
+            locs = ["IA", "IL", "IN"]
+            times1 = pd.date_range("2000-01-01", periods=4)
+            times2 = pd.date_range("2000-01-05", periods=4)
+            xda1 = xr.DataArray(data1, coords=[times1, locs],
+                                dims=["datetime", "space"])
+            xds1 = xr.Dataset({'test': xda1},
+                              attrs={'starttime': str(times1[0]),
+                                     'endtime': str(times1[-1])})
+            xds1.to_netcdf(fn1, engine=engine)
+            xda2 = xr.DataArray(data2, coords=[times2, locs],
+                                dims=["datetime", "space"])
+            xds2 = xr.Dataset({'test': xda2},
+                              attrs={'starttime': str(times2[0]),
+                                     'endtime': str(times2[-1])})
+            xds2.to_netcdf(fn2, engine=engine)
+            return [fn1, fn2]
+        fn1 = os.path.join(self.tempdir, tempfile.mktemp())
+        fn2 = os.path.join(self.tempdir, tempfile.mktemp())
+        files = gen_test_data(4, fn1, fn2)
+        ds = load_netCDF_files(files, parallel=True)
+        # Test caching
+        ds = load_netCDF_files(files, parallel=True)
+        # Note, if load_netCDF_files uses compute
+        # instead of load, the following line will
+        # modify the result; No idea why
+        files = gen_test_data(6, fn1, fn2)
+        self.assertEqual(ds['test'].values.mean(), 2)
+
+    def test_performance(self):
+        """
+        Test speed of request for different scenarios.
+        """
+
+        starttime = UTCDateTime('2008-12-01T00:00:00')
+        endtime = UTCDateTime('2019-12-31T00:00:00')
+        fq = FeatureRequest(volcano='Whakaari', site='WIZ', channel='HHZ',
+                            starttime=starttime.datetime,
+                            endtime=endtime.datetime)
+        fq1 = FeatureRequest(volcano='Whakaari', site='WIZ', channel='HHZ',
+                             starttime=starttime.datetime,
+                             endtime=endtime.datetime, parallel=True)
+        t1 = time.time()
+        xdfs = fq('ssam', verbose_cache=True, nocache=True)
+        t2 = time.time()
+        print(t2 - t1)
+
+
+if __name__ == '__main__':
+    unittest.main()

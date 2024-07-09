@@ -1,0 +1,603 @@
+import inspect
+import os
+import shutil
+from tempfile import mkstemp
+import unittest
+import warnings
+
+import numpy as np
+from obspy import UTCDateTime, Trace
+import datetime
+import pandas as pd
+import xarray as xr
+
+from vumt.data import DataSource
+from vumt.rsam import RSAM, EnergyExplainedByRSAM
+from vumt.dsar import DSAR
+from vumt.spectral_features import SpectralFeatures
+from vumt.ssam import SSAM, test_signal, find_peaks
+
+from vumt.cpxtrace import Inst_Band, Inst_Freq, Norm_Env, Centroid, WindowCentroid
+from vumt.principal_components import Fit, Transform
+
+class RSAMTestCase(unittest.TestCase):
+
+    def setUp(self):
+        self.data_dir = os.path.join(os.path.dirname(os.path.abspath(
+            inspect.getfile(inspect.currentframe()))), "data")
+        self.tr1 = self.test_signal()
+        self.tr2 = self.test_signal(gaps=True)
+
+    def test_signal(self, gaps=False, starttime=None):
+        nsec = 6400.
+        sampling_rate = 100.
+        signal = -1e-9 * np.ones(int(nsec * sampling_rate))
+        if gaps:
+            idx0 = int(500 * sampling_rate)
+            idx1 = int(1200 * sampling_rate)
+            signal[idx0:idx1] = np.nan
+
+        stats = {'network': 'NZ', 'station': 'BLUB', 'location': '',
+                 'channel': 'HHZ', 'npts': len(signal),
+                 'sampling_rate': sampling_rate,
+                 'mseed': {'dataquality': 'D'}}
+        stats['starttime'] = UTCDateTime()
+        if starttime is not None:
+            stats['starttime'] = starttime
+        stats['endtime'] = stats['starttime'] + nsec
+        tr = Trace(data=signal, header=stats)
+        return tr
+
+    def test_bandpass(self):
+        ds = DataSource(source='fdsn')
+        # dates are inclusive, and complete days
+        startdate = UTCDateTime('2019-08-14')
+        enddate = UTCDateTime('2019-08-16')
+        site, loc, comp, net = 'WIZ.10.HHZ.NZ'.split('.')
+        r = RSAM(interval=600, filtertype='bp', filterfreq=(2, 5))
+        for tr in ds.get_waveforms(net, site, loc, comp,
+                                   startdate, enddate,
+                                   fill_value='interpolate'):
+            df = r.compute(tr)
+        df_test = pd.read_csv(os.path.join(self.data_dir,
+                                           'rsam_bp_test.csv'),
+                              index_col=0, parse_dates=True)
+        pd.testing.assert_frame_equal(df, df_test)
+
+    def test_with_gaps(self):
+        r = RSAM(filtertype=None)
+        df = r.compute(self.tr1)
+        np.testing.assert_array_almost_equal(df['rsam'].values, np.ones(10), 2)
+        df1 = r.compute(self.tr2)
+        np.testing.assert_array_almost_equal(df1['rsam'].values,
+                                             np.r_[np.nan, np.nan,
+                                                   np.ones(8)], 2)
+        
+    def test_append(self):
+        """
+        Test appending new data to existing output files.
+        """
+        
+        starttime1 = UTCDateTime('2019-08-14T01:00:00')
+        endtime1 = UTCDateTime('2019-08-14T01:20:00')
+        starttime2 = endtime1
+        endtime2 = UTCDateTime('2019-08-14T01:40:00')
+        
+        tr = self.test_signal(starttime=starttime1)
+        tr1 = tr.copy().trim(starttime1, endtime1)
+        tr2 = tr.copy().trim(starttime2, endtime2)
+        tr2.data *= 2
+        # hack to make test results consistent
+        # necessary because time windows overlap
+        tr1.data[-1] *= 2
+        tr3 = tr1.__add__(tr2, method=1)
+        r1 = RSAM(interval=600, filtertype=None)
+        r2 = RSAM(interval=600, filtertype=None)
+        r3 = RSAM(interval=600, filtertype=None)
+        dir_1 = '/tmp/rsam/1'
+        dir_2 = '/tmp/rsam/2'
+        dir_3 = '/tmp/rsam/3'
+        file1 = '/tmp/rsam/1/20190814_BLUB.nc'
+        file2 = '/tmp/rsam/2/20190814_BLUB.nc'
+        file3 = '/tmp/rsam/3/20190814_BLUB.nc'
+
+        for _f in [file1, file2, file3]:
+                try:
+                    os.remove(_f)
+                except FileNotFoundError:
+                    pass
+
+        df1 = r1.compute(tr2)
+        r1.save(dir_1)
+
+        df2 = r2.compute(tr1)
+        r2.save(dir_1)
+
+        _ = r3.compute(tr3)
+        r3.save(dir_2)
+
+
+        ds1 = xr.open_dataset("/tmp/rsam/1/20190814_BLUB.nc")
+        ds2 = xr.open_dataset("/tmp/rsam/2/20190814_BLUB.nc")
+        np.testing.assert_array_equal(ds1['datetime'],
+                                      ds2['datetime'])
+        np.testing.assert_array_equal(ds1['rsam'],
+                                      ds2['rsam'])
+        
+        # test overlapping time windows
+        tr4 = tr.copy().trim(starttime1, endtime2)
+        r4 = RSAM(interval=600, filtertype=None)
+        _ = r4.compute(tr4)
+        r4.save(dir_3)
+        r1.save(dir_3)
+        ds3 = xr.open_dataset(file3)
+        np.testing.assert_array_equal(ds3['rsam'].values.astype(int),
+                                      np.array([1, 1, 2, 2]))
+        
+        # clean up
+        for _f in [file1, file2, file3]:
+            try:
+                os.remove(_f)
+            except FileNotFoundError:
+                pass
+
+
+class SSAMTestCase(unittest.TestCase):
+
+    def setUp(self):
+       np.random.seed(42)
+       data = np.random.randint(0, 10, size=10)
+       self.tr = Trace(data=data, header=dict(sampling_rate=1))
+       self.outdir = '/tmp/deleteme'
+
+    def tearDown(self):
+        if os.path.isdir(self.outdir):
+            shutil.rmtree(self.outdir)
+
+    def test_stride_windows(self):
+        s = SSAM()
+        test_array = np.vstack((self.tr.data[0:5], self.tr.data[3:8]))
+        ds = s.stride_windows(self.tr.data, 5, 2)
+        np.testing.assert_array_equal(test_array.T, ds)
+
+    def test_demean(self):
+        s = SSAM()
+        a = np.arange(9)
+        ds = s.stride_windows(a, 3, 2)
+        np.testing.assert_array_equal(s.demean(ds, axis=0)[0], -np.ones(7))
+
+    def test_window(self):
+        s = SSAM()
+        a = np.arange(9)
+        ds = s.stride_windows(a, 3, 2)
+        dsw = s.apply_window(ds)
+        np.testing.assert_array_equal(dsw[0], np.zeros(dsw.shape[1]))
+        np.testing.assert_array_equal(dsw[1], ds[1])
+
+    def test_ssam(self):
+        linfreqs = np.arange(0, 25.1, 0.1)
+        test_peaks = np.array([0.1, 3., 5, 6.1, 10.])
+        s = SSAM(interval=60, per_lap=.9, smooth=10,
+                 frequencies=linfreqs)
+        spec, freqs, t = s.compute(test_signal())
+        peaks = find_peaks(spec[:, 0], height=1e-1)
+        np.testing.assert_array_almost_equal(linfreqs[peaks], test_peaks, 2)
+
+    def test_ssam_with_gaps(self):
+        linfreqs = np.arange(0, 25.1, 0.1)
+        test_peaks = np.array([0.1, 3., 5, 6.1, 10.])
+        s = SSAM(interval=60, per_lap=.9, smooth=10,
+                 frequencies=linfreqs)
+        spec, freqs, t = s.compute(test_signal(gaps=True))
+        peaks = find_peaks(spec[:, 0], height=1e-1)
+        np.testing.assert_array_almost_equal(linfreqs[peaks], test_peaks, 2)
+
+    def test_realtime(self):
+        """
+        Test with overlapping 1 hour windows as in the real-time
+        computation
+        """
+        linfreqs = np.arange(0, 25.1, 0.1)
+        testpeaks = np.array([0.1, 3., 5., 6., 10.])
+        s = SSAM(interval=60, frequencies=linfreqs,
+                 resample_int=(None, '10min'), timestamp='start')
+        starttime = UTCDateTime(2020, 4, 21, 0, 0, 0)
+        nsec = 86400
+        step = 3600
+        tr = test_signal(nsec=nsec, starttime=starttime, gaps=True)
+
+        startwin = starttime
+        while True:
+            endwin = startwin + step
+            if endwin > tr.stats.endtime:
+                break
+            ntr = tr.slice(startwin, endwin)
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore")
+                s.compute(ntr)
+            s.save(self.outdir)
+            startwin = endwin
+
+        xdf = xr.open_dataset(os.path.join(self.outdir, '20200421_BLUB.nc'))
+        peaks = find_peaks(xdf['ssam'].data[:, 0], height=1e-1)
+        np.testing.assert_array_almost_equal(linfreqs[peaks],
+                                             testpeaks, 2)
+
+    def test_config(self):
+        """
+        Test parsing of config parameters.
+        """
+        config = {}
+        config['DEFAULT'] = {'interval': '600'}
+        config['SSAM'] = {'interval': '60',
+                          'per_lap': '.9',
+                          'scale_by_freq': 'true',
+                          'timestamp': 'start',
+                          'frequencies': '0,25.1,0.1',
+                          'resample_int': '(None, 10min)'}
+        s = SSAM(configfile=config)
+        self.assertEqual(s.resample_int, (None, '10min'))
+        np.testing.assert_equal(s.frequencies, np.arange(0, 25.1, .1))
+
+
+class DSARTestCase(unittest.TestCase):
+
+    def setUp(self):
+        self.data_dir = os.path.join(os.path.dirname(os.path.abspath(
+            inspect.getfile(inspect.currentframe()))), "data")
+
+    def test_daily_ratio(self):
+        dsar = DSAR(filtertype='bandpass', lowerfreqband=(4.5, 8),
+                    higherfreqband=(8, 16))
+        stream = 'KRVZ.10.EHZ.NZ'
+        ds = DataSource(source='fdsn')
+        # dates are inclusive, and complete days
+        startdate = UTCDateTime('2012-11-01')
+        enddate = UTCDateTime('2012-11-03')
+        ds = DataSource(source='fdsn')
+        site, loc, comp, net = stream.split('.')
+        for tr in ds.get_waveforms(net, site, loc, comp,
+                                   startdate, enddate,
+                                   fill_value='interpolate'):
+            df = dsar.compute(tr)
+        df_test = pd.read_csv(os.path.join(self.data_dir,
+                                           'dsar_test.csv'),
+                              index_col=0, parse_dates=True)
+        pd.testing.assert_frame_equal(df, df_test)
+
+
+class TestCpxtrace(unittest.TestCase):
+
+    def setUp(self):
+        # set the path to test data
+        self.data_dir = os.path.join(os.path.dirname(os.path.abspath(
+            inspect.getfile(inspect.currentframe()))), "data")
+        self.tr1 = self.test_signal()
+        self.tr2 = self.test_signal(gaps=True)
+
+    def test_signal(self, gaps=False):
+        nsec = 6400.
+        sampling_rate = 100.
+        signal = -1e-9 * np.ones(int(nsec * sampling_rate))
+        if gaps:
+            idx0 = int(500 * sampling_rate)
+            idx1 = int(1200 * sampling_rate)
+            signal[idx0:idx1] = np.nan
+
+        stats = {'network': 'NZ', 'station': 'BLUB', 'location': '',
+                 'channel': 'HHZ', 'npts': len(signal),
+                 'sampling_rate': sampling_rate,
+                 'mseed': {'dataquality': 'D'}}
+        stats['starttime'] = UTCDateTime()
+        stats['endtime'] = stats['starttime'] + nsec
+        tr = Trace(data=signal, header=stats)
+        return tr
+
+    def test_with_gaps(self):
+        instband = Inst_Band(interval=600., fil_coef=(-1.0, 0.0, 1.0))
+        df_instB = instband.compute(self.tr1)
+        np.testing.assert_almost_equal(
+            df_instB.values,
+            np.r_[np.linspace(0.00125562, 0.00125562, 10)].reshape((10, 1)),
+            8
+        )
+        df_instB_gaps = instband.compute(self.tr2)
+        np.testing.assert_almost_equal(
+            df_instB_gaps.values,
+            np.r_[np.nan, np.nan,
+                  np.linspace(0.00125562, 0.00125562, 8)
+                  ].reshape((10, 1)),
+            8
+        )
+
+        instfreq = Inst_Freq(interval=600., fil_coef=(-1.0, 0.0, 1.0))
+        df_instF = instfreq.compute(self.tr1)
+        np.testing.assert_almost_equal(
+            df_instF.values,
+            np.r_[np.linspace(0.00141813, 0.00141813, 10)].reshape((10, 1)),
+            8
+        )
+        df_instF_gaps = instfreq.compute(self.tr2)
+        np.testing.assert_almost_equal(
+            df_instF_gaps.values,
+            np.r_[np.nan, np.nan,
+                  np.linspace(0.00141813, 0.00141813, 8)
+                  ].reshape((10, 1)),
+            8
+        )
+        normenv = Norm_Env(window=10, interval=600., fil_coef=(-1.0, 0.0, 1.0))
+        df_normE = normenv.compute(self.tr1)
+        np.testing.assert_almost_equal(
+            df_normE.values,
+            np.r_[np.linspace(8.59312621e-12, 8.59312621e-12, 10)
+                  ].reshape((10, 1)),
+            8
+        )
+
+        df_normE_gaps = normenv.compute(self.tr2)
+        np.testing.assert_almost_equal(
+            df_normE_gaps.values,
+            np.r_[np.nan, np.nan,
+                  np.linspace(8.59312621e-12, 8.59312621e-12, 8)
+                  ].reshape((10, 1)),
+            8
+        )
+
+    def test_inst_band(self):
+        """
+        Test instantaneous bandwidth method
+        """
+        stream = 'WIZ.10.HHZ.NZ'
+        ds = DataSource(source='fdsn')
+
+        startdate = UTCDateTime('2019-07-14')
+        enddate = UTCDateTime('2019-07-15')
+
+        site, loc, comp, net = str.split(stream, '.')
+        instband = Inst_Band(interval=600., fil_coef=(-1.0, 0.0, 1.0))
+        for tr in ds.get_waveforms(net, site, loc, comp,
+                                   startdate, enddate,
+                                   fill_value='interpolate'):
+            omega = instband.compute(tr)
+
+        omega_test = pd.read_csv(os.path.join(self.data_dir,
+                                              'WIZ_instband.csv'),
+                                 index_col=0, parse_dates=False,
+                                 sep='\t', encoding='utf-8')
+
+        omega_test.columns = ['inst_band']
+        omega_test.index = pd.to_datetime(omega_test.index)
+
+        pd.testing.assert_frame_equal(omega, omega_test)
+
+    def test_inst_freq(self):
+        """
+        Test instantaneous frequency method
+        """
+        stream = 'WIZ.10.HHZ.NZ'
+        ds = DataSource(source='fdsn')
+
+        startdate = UTCDateTime('2019-07-14')
+        enddate = UTCDateTime('2019-07-15')
+
+        site, loc, comp, net = str.split(stream, '.')
+        instfreq = Inst_Freq(interval=600., fil_coef=(-1.0, 0.0, 1.0))
+
+        for tr in ds.get_waveforms(net, site, loc, comp,
+                                   startdate, enddate,
+                                   fill_value='interpolate'):
+            sigma = instfreq.compute(tr)
+
+        sigma_test = pd.read_csv(os.path.join(self.data_dir,
+                                              'WIZ_instfreq.csv'),
+                                 index_col=0, parse_dates=True,
+                                 sep='\t', encoding='utf-8')
+
+        sigma_test.columns = ['inst_freq']
+        sigma_test.index = pd.to_datetime(sigma_test.index)
+
+        pd.testing.assert_frame_equal(sigma, sigma_test)
+
+    def test_norm_env(self):
+        """
+        Test Normalize envelope method
+        """
+        stream = 'WIZ.10.HHZ.NZ'
+        ds = DataSource(source='fdsn')
+
+        startdate = UTCDateTime('2019-08-14T00:00:01')
+        enddate = startdate + 86400.
+
+        site, loc, comp, net = str.split(stream, '.')
+        normenv = Norm_Env(window=10, interval=600., fil_coef=(-1.0, 0.0, 1.0))
+
+        for tr in ds.get_waveforms(net, site, loc, comp,
+                                   startdate, enddate,
+                                   fill_value='interpolate'):
+            norm_env = normenv.compute(tr)
+
+        norm_env_test = pd.read_csv(os.path.join(self.data_dir,
+                                                 'WIZ_norm_env.csv'),
+                                    index_col=0, parse_dates=True)
+
+        norm_env_test.columns = ['norm_env']
+
+        pd.testing.assert_frame_equal(norm_env, norm_env_test)
+
+    @unittest.skip('Slow test')
+    def test_centroid(self):
+        """
+        Test instantaneous frequency method
+        """
+        stream = 'WIZ.10.HHZ.NZ'
+        ds = DataSource(source='fdsn')
+
+        startdate = UTCDateTime('2019-08-14')
+        enddate = startdate + 1000.
+
+        site, loc, comp, net = str.split(stream, '.')
+
+        for tr in ds.get_waveforms(net, site, loc, comp,
+                                   startdate, enddate,
+                                   attach_response=True):
+            centro = Centroid.compute(tr)
+
+        centro_test = pd.read_csv(os.path.join(self.data_dir,
+                                               'WIZ_centroid.csv'),
+                                  index_col=0, parse_dates=True)
+
+        centro_test.columns = ['']
+
+        pd.testing.assert_frame_equal(centro, centro_test)
+
+
+class SpectralTestCase(unittest.TestCase):
+
+    def setUp(self):
+        self.data_dir = os.path.join(os.path.dirname(os.path.abspath(
+            inspect.getfile(inspect.currentframe()))), "data")
+        stream = 'WIZ.10.HHZ.NZ'
+        ds = DataSource(source='fdsn')
+        # dates are inclusive, and complete days
+        startdate = UTCDateTime('2019-08-14')
+        enddate = UTCDateTime('2019-08-15')
+
+        site, loc, comp, net = str.split(stream, '.')
+
+        gen = ds.get_waveforms(net, site, loc, comp,
+                               startdate, enddate,
+                               fill_value='interpolate')
+        self.trace = next(gen)
+
+    sup = np.testing.suppress_warnings()
+    sup.filter(module=np.matrixlib.defmatrix)  # module must match exactly
+
+    @sup
+    @unittest.skipIf("TRAVIS" in os.environ and os.environ["TRAVIS"] == "true",
+                     "Skipping this test on Travis CI.")
+    def test_spectral(self):
+        sf = SpectralFeatures(filtertype='bandpass', filterfreq=(0.5, 25),
+                              ncep=8, nhob=8)
+        df = sf.compute(self.trace)
+        df_test = pd.read_csv(os.path.join(self.data_dir,
+                                           'spectral_test.csv'),
+                              index_col=0, parse_dates=True)
+        pd.testing.assert_frame_equal(df, df_test)
+
+    @sup
+    @unittest.skipIf("TRAVIS" in os.environ and os.environ["TRAVIS"] == "true",
+                     "Skipping this test on Travis CI.")
+    def test_spectral_with_gaps(self):
+        sf = SpectralFeatures(filtertype='bandpass', filterfreq=(0.5, 25),
+                              ncep=8, nhob=8)
+        starttime = self.trace.stats.starttime
+        ntrace = self.trace.slice(starttime, starttime + 6600.)
+        idx0 = int(300 * ntrace.stats.sampling_rate)
+        idx1 = int(900 * ntrace.stats.sampling_rate)
+        ntrace.data[idx0:idx1] = np.nan
+        df = sf.compute(ntrace)
+        self.assertTrue(np.alltrue(np.isnan(df.iloc[0:2].values)))
+
+
+class EnergyExplainedByRSAMTestCase(unittest.TestCase):
+
+    def setUp(self):
+        self.data_dir = os.path.join(os.path.dirname(os.path.abspath(
+            inspect.getfile(inspect.currentframe()))), "data")
+        stream = 'WIZ.10.HHZ.NZ'
+        ds = DataSource(source='fdsn')
+        # dates are inclusive, and complete days
+        startdate = UTCDateTime('2019-08-14')
+        enddate = UTCDateTime('2019-08-15')
+
+        site, loc, comp, net = str.split(stream, '.')
+
+        gen = ds.get_waveforms(net, site, loc, comp,
+                               startdate, enddate,
+                               fill_value='interpolate')
+        self.trace = next(gen)
+
+    def test_energy(self):
+        feat = EnergyExplainedByRSAM(
+            interval=600, filtertype='bp', filterfreq=(2, 5)
+        )
+        df = feat.compute(self.trace)
+        df_test = pd.read_csv(os.path.join(
+            self.data_dir, 'rsam_energy_test.csv'),
+            index_col=0, parse_dates=True)
+        pd.testing.assert_frame_equal(df, df_test)
+
+
+class WindowCentroidTestCase(unittest.TestCase):
+
+    def setUp(self):
+        self.data_dir = os.path.join(os.path.dirname(os.path.abspath(
+            inspect.getfile(inspect.currentframe()))), "data")
+        stream = 'WIZ.10.HHZ.NZ'
+        ds = DataSource(source='fdsn')
+        # dates are inclusive, and complete days
+        startdate = UTCDateTime('2019-08-14')
+        enddate = UTCDateTime('2019-08-15')
+
+        site, loc, comp, net = str.split(stream, '.')
+
+        gen = ds.get_waveforms(net, site, loc, comp,
+                               startdate, enddate,
+                               fill_value='interpolate')
+        self.trace = next(gen)
+
+    def test_window_centroid(self):
+        feat = WindowCentroid(interval=600)
+        df = feat.compute(self.trace)
+        df_test = pd.read_csv(os.path.join(
+            self.data_dir, 'window_centroid_test.csv'),
+            index_col=0, parse_dates=True)
+        pd.testing.assert_frame_equal(df, df_test)
+
+
+class PrincipalComponentTestCase(unittest.TestCase):
+
+    def setUp(self):
+        self.data_dir = os.path.join(os.path.dirname(os.path.abspath(
+            inspect.getfile(inspect.currentframe()))), "data")
+        volcano = 'Whakaari'
+        stream = ['NZ.WIZ.10.HHZ']
+        startdate_fit = datetime.datetime(2020, 1, 1)
+        enddate_fit = datetime.datetime(2020, 1, 2)
+        startdate_tf = datetime.datetime(2020, 1, 2)
+        enddate_tf = datetime.datetime(2020, 1, 3)
+        fname = os.path.join(self.data_dir, 'test_pca_fit.pkl')
+        pca_features = ['rsam', 'central_freq',
+                        'half_octave_band_0', 'half_octave_band_1',
+                        'half_octave_band_2', 'half_octave_band_3']
+        self.fit = Fit(volcano, stream, startdate_fit, enddate_fit,
+                       fname, pca_features)
+        self.tf = Transform(
+            volcano, stream, startdate_tf, enddate_tf, fname,
+            pca_features
+        )
+
+    @unittest.skipIf("TRAVIS" in os.environ and os.environ["TRAVIS"] == "true",
+                     "Skipping this test on Travis CI.")
+    def test_pca_fit(self):
+        self.fit.compute()
+        pca_model, mn, std = self.fit.read()
+        np.testing.assert_almost_equal(
+            self.fit.pca_model.singular_values_,
+            pca_model.singular_values_, 6
+        )
+        np.testing.assert_array_almost_equal(self.fit.mean, mn, 6)
+        np.testing.assert_array_almost_equal(self.fit.std, std, 6)
+
+    @unittest.skipIf("TRAVIS" in os.environ and os.environ["TRAVIS"] == "true",
+                     "Skipping this test on Travis CI.")
+    def test_pca_transform(self):
+        df = self.tf.compute()
+        df_test = pd.read_csv(os.path.join(
+            self.data_dir, 'pca_transform_test.csv'),
+            index_col=0, parse_dates=True)
+        pd.testing.assert_frame_equal(df, df_test)
+
+
+if __name__ == '__main__':
+    unittest.main()

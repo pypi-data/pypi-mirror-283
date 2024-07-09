@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vumt"
+version = "0.0.2"
+authors = [
+    {name = "Yannik Behr", email = "y.behr@gns.cri.nz"},
+    {name = "Christof Mueller", email = "c.mueller@gns.cri.nz"},
+]
+description = "Python package to detect anomalies in geoscience time series data"
+license = {text = "GPL v3"}
+
+[project.scripts]
+vumt_api = "vumt.api:main"
+random_walk_model = "vumt.random_walk_model:main"
+
+[tool.setuptools.packages.find]
+where = ["src", "tests"]
+
+[tool.setuptools.package-data]
+vumt = ["data/*.yml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+log_cli = true

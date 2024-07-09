@@ -1,0 +1,102 @@
+default:
+  datasources:
+    - mock 
+  sds_dir: /home/zizou/data/integration_test_data/sds_archive
+  staxml_dir: /home/zizou/tests/data
+  volcanoes: 
+    - Mt Doom
+    - Misty Mountain
+  interval: 60
+  features:
+    - RSAM
+    - SSAM
+    - DSAR
+    - SpectralFeatures
+    - EnergyExplainedByRSAM
+  outdir: /home/zizou/data/integration_test_data/features
+  logdir: /home/zizou/data/integration_test_data/
+  archive_start: 2023-01-01
+  archive_end: 2023-01-30
+  lookback_interval: 1
+  cronschedule: "*/10 * * * *"
+
+rsam:
+  filtertype: bp
+  filterfreq:
+    low: 2
+    high: 5
+  reindex: true
+
+ssam:
+  interval: 60
+  timestamp: start
+  frequencies:
+    start: 0
+    end: 25.1
+    step: 0.1
+  resample_int: 
+    upsample: null 
+    downsample: 10min
+
+dsar:
+  filtertype: bandpass
+  # We change the default frequency bands
+  # for DSAR from 4.5-8 Hz and 8-16 Hz so we
+  # can test with 10 Hz data
+  lowerfreqband:
+    low: .1
+    high: 2.5
+  higherfreqband:
+    low: 2.5
+    high: 5
+
+spectralfeatures:
+  filtertype: highpass
+  filterfreq:
+    low: 0.5
+    high: None
+  num_cepstral: 8
+
+pca:
+  features:
+    - rsam
+    - central_freq
+    - bandwidth
+    - predom_freq
+    - sonogram
+  fit_pca: True
+
+autoencoder:
+  layers: [2000,500,200,6]
+  epochs: 5
+  patience: 10
+
+models:
+  - name: random_walk 
+    url: http://localhost:4242
+    method: forecast
+
+metadata:
+  volcano:
+  - name: Mt Doom
+    network:
+    - net_code: NZ
+      stations:
+      - channel:
+        - code: BHZ
+        latitude: -39.15
+        location: '10'
+        longitude: 175.63
+        sta_code: MDR
+        starttime: '2022-12-01T00:00:00Z'
+  - name: Misty Mountain
+    network:
+    - net_code: MM
+      stations:
+      - channel:
+        - code: BHZ
+        latitude: -40.15
+        location: ''
+        longitude: 174
+        sta_code: MMS
+        starttime: '2021-01-01T00:00:00Z'
