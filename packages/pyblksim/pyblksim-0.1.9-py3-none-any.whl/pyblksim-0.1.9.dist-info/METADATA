@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pyblksim
+Version: 0.1.9
+Summary: An Open-Source Model Based Simulator for Discrete-Time Simulations
+Home-page: https://sites.google.com/view/cdwl/professor
+Author: Dr. Kurian Polachan
+Author-email: kurian.polachan@iiitb.ac.in
+License: GPLv3
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: simpy
+Requires-Dist: scipy
+
+pyblksim
+=========
+
+An Open-Source Model Based Simulator for Discrete-Time Simulations
