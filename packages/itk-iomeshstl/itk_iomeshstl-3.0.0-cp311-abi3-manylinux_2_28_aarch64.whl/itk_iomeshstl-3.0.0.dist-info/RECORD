@@ -1,0 +1,11 @@
+itk_iomeshstl-3.0.0.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+itk_iomeshstl-3.0.0.dist-info/WHEEL,sha256=dbS_sh9GitXyT0N1ZM-L5yHHQ7thGHYkSQdWKZjhaek,117
+itk_iomeshstl-3.0.0.dist-info/RECORD,,
+itk_iomeshstl-3.0.0.dist-info/METADATA,sha256=fAfAFYkSeNzHz24_KiT5-HYZb_O1r8Mz8ecNDK5lDKs,15745
+itk_iomeshstl-3.0.0.dist-info/licenses/LICENSE,sha256=qsc7MUj20dcRHbyjIJn2jSbGRMaBOuHk8F9leaomY_4,11360
+itk_iomeshstl.libs/libtbb-e046f41a.so.12.9,sha256=VsCTHOeMiuITalkapwfZlLuploLjggiR7Ytz_bvBQ_M,3876241
+itk/_IOMeshSTLPython.abi3.so,sha256=AdVWSQQ9lElVhUeC2QutovQnFOD3C5gl-QuFglXBj-g,782289
+itk/itkSTLMeshIOPython.py,sha256=oV-rgkD4h6iWpr6BsIbpXvM69l7IrtxR30N8bp6AlRw,6920
+itk/IOMeshSTLPython.py,sha256=R7gtNoK5OsihuW2JU9H4L3AAGH74kKtM17unoZtVPes,2130
+itk/Configuration/IOMeshSTL_snake_case.py,sha256=WRnLlen2jxLU1s5GGArPufZ1-DR4D7SdRd25VYoBFXE,26
+itk/Configuration/IOMeshSTLConfig.py,sha256=iXwb7qy7J6LN0CUH3Q5RMrI_gRKEV7V396CvIU1ZvxE,238
