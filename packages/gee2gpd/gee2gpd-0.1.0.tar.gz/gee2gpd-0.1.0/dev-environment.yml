@@ -1,0 +1,14 @@
+name: gee2gpd
+channels:
+  - defaults
+dependencies:
+  - python=3.12
+  - earthengine-api
+  - geopandas
+  - ruff
+  - timezonefinder
+  - pytest
+  - pip
+  - pip:
+    - e .
+prefix: /home/hammy97/miniconda3/envs/gee2gpd

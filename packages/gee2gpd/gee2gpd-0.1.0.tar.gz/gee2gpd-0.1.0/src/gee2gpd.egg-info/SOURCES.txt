@@ -1,0 +1,13 @@
+.gitignore
+MANIFEST.in
+README.md
+dev-environment.yml
+pyproject.toml
+.github/workflows/deploy.yml
+.github/workflows/lint.yml
+src/gee2gpd.py
+src/gee2gpd.egg-info/PKG-INFO
+src/gee2gpd.egg-info/SOURCES.txt
+src/gee2gpd.egg-info/dependency_links.txt
+src/gee2gpd.egg-info/requires.txt
+src/gee2gpd.egg-info/top_level.txt
