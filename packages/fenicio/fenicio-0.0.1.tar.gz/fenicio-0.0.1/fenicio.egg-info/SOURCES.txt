@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+fenicio.egg-info/PKG-INFO
+fenicio.egg-info/SOURCES.txt
+fenicio.egg-info/dependency_links.txt
+fenicio.egg-info/requires.txt
+fenicio.egg-info/top_level.txt
