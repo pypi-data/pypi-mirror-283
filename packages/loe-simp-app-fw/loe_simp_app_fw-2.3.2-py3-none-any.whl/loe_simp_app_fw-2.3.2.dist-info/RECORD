@@ -1,0 +1,15 @@
+loe_simp_app_fw/__init__.py,sha256=vUFm4CuZeSB16Qfq1Uzz6cd8eVrWTmzhV0DRWySzVHU,564
+loe_simp_app_fw/__main__.py,sha256=LfW6Ei_FAs7g_vYZMaeR4HSdGHYXo9dMvFFUfrlTw_E,1169
+loe_simp_app_fw/cacher.py,sha256=pjRakFZorrh7_jWtlfrzA8VChsnHdkvHoSX4OFbgG_c,6764
+loe_simp_app_fw/config.py,sha256=AJKQdoXk-o8GsCMyJAxyNIlX8ztWr-avB0oHcMA38xI,3179
+loe_simp_app_fw/csvnia.py,sha256=e0sQtYH9-7BKFTuExCuwmWWL5NxhzQwzlz2l2RZV1q0,2962
+loe_simp_app_fw/helper.py,sha256=fT6i5CbkU3fUiiV0th3CS1FNAhGSw41rEBlFTVk4JQc,1242
+loe_simp_app_fw/logger.py,sha256=-k7j0Jd4gMNS6GrjTfTiZ06pwMmq_PMfvNCRe4xILO0,5686
+loe_simp_app_fw/notebook.py,sha256=q8iMNHQ4BFwYuM0JRW6BAb-polDXlc4cLsX7ZchW3gM,645
+loe_simp_app_fw/start/__init__.py,sha256=izlkaSvrxNqPnulbHlD8VYldR618NxRQRlKQFgQn0Gk,42
+loe_simp_app_fw/start/default.py,sha256=nLyaoswcAslPuEIDunsbF1E2FG9eihpAKEyC63BF0O4,4935
+loe_simp_app_fw/start/main.py,sha256=1lxpbiOr0eGe2PvttnYKs2BvXuauZEN8XkJ07PQQiEs,2464
+loe_simp_app_fw-2.3.2.dist-info/METADATA,sha256=tV7tLdE5UTe91ESdMlm1L1ToS8gqVWzErBDId1LjLoU,3942
+loe_simp_app_fw-2.3.2.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+loe_simp_app_fw-2.3.2.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+loe_simp_app_fw-2.3.2.dist-info/RECORD,,
