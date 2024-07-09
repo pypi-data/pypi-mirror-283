@@ -1,0 +1,301 @@
+
+----
+
+## Certification
+
+Bravo!  You have received a Medical Diploma in "Emergency" from      
+the Orbital Convergence University International Air and Water   
+Embassy of the Tangerine Planet.  
+
+You are now officially certified to include "Emergency" in your   
+practice.  
+
+----
+
+# Emergency
+
+----
+
+## License
+
+Please feel free to use this module however (business, personal, etc.)
+subject to the terms of GPL 3.0 License.
+
+	@ Bryan Grace (BGraceful)  
+		   
+		[ICAN DNS email] graceful.bryonics@proton.me
+----
+
+![Emergency](https://gitlab.com/status600/treasures/Emergency.1/-/raw/business/CharlVera--cow-8637470_1280.jpg)
+from https://pixabay.com/users/charlvera-11040068/
+
+----
+ 
+[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/EGXocrWNVJE6QWAifHn6r3/XP6tKC6Z4p7cTe8uyzgEjb/tree/performance.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/circleci/EGXocrWNVJE6QWAifHn6r3/XP6tKC6Z4p7cTe8uyzgEjb/tree/performance)
+
+----
+
+
+## Description
+This module can monitor the health of a python3 `.py` biome. 
+
+----
+
+## Licensing
+`GNU General Public License v3.0 - GNU Project - Free Software Foundation (FSF)`
+
+The complete license is included in the module  
+in the "./__license/options" directory.
+	
+----		
+		
+## Install
+
+This utilizes:     
+[https://pypi.org/project/xonsh](https://pypi.org/project/xonsh)   
+
+```
+[xonsh] pip install Emergency
+```
+
+----
+	
+## Internal health monitor of the module
+
+To monitor the internal health of the "Emergency" module:
+
+```
+[xonsh] Emergency internal-health
+```
+	
+These checks are run with pypi "body_scan";   
+"Emergency" is built from a fork of "body_scan".  
+
+The "body_scan" checks are written with "unittest". 
+   
+----
+	
+## Documentation   
+```
+[xonsh] Emergency help 
+```
+
+This opens a server process that can be opened in a browser. 
+	
+----
+
+## Tutorial
+
+### The Frame
+```
+[directory] health
+	[directory] monitors
+		[file] health.quest.py
+		
+	[file]health.move.py
+```
+
+### [file] health.quest.py
+```		
+def check_1 ():
+	print ("check 1")
+	
+def check_2 ():
+	print ("check 2")
+	
+def check_3 ():
+	raise Exception ("not 110%")
+
+checks = {
+	"check 1": check_1,
+	"check 2": check_2,
+	"check 3": check_3
+}
+```
+		
+### [file] health.move.py 
+This is run with `python3 health.move.py`
+"rich" is a dependency of "Emergency"
+```
+#/
+#
+import Emergency
+#
+#
+import rich
+#
+#
+import json
+import pathlib
+import pprint
+from os.path import dirname, join, normpath
+import os
+import sys
+import subprocess
+import time
+#
+#\
+
+this_directory = pathlib.Path (__file__).parent.resolve ()
+monitors_path = str (normpath (join (this_directory, f"monitors")))
+
+promote = Emergency.on ({
+	
+	#	
+	#	[necessary] 
+	#	
+	#	This is the file paths of the checks.
+	#	
+	"glob_string": monitors_path + '/**/*.quest.py',
+	
+	#
+	#	[voluntary] 
+	#		original = False
+	#
+	#	If False, the checks are run 
+	#	one at a time.
+	#
+	"simultaneous": True,
+	
+	#
+	#	[voluntary]
+	#		original = 10
+	#
+	#	This is the limit on the amount
+	#	of checks that can be run at the 
+	#	same time.
+	#
+	"simultaneous_capacity": 50,
+
+	#
+	#	[voluntary]
+	#		original = "99999999999999999999999"
+	#
+	#	After this time limit, lingering checks are stopped
+	#	and reported as 
+	#
+	"time_limit": 60,
+	
+	#
+	#	[voluntary]
+	#		original = []
+	#
+	#	These are added to the sys.path of the process of
+	#	each quest in the glob_string.
+	#
+	"module_paths": [
+		normpath (join (monitors_path, "stages"))
+	],
+
+	#
+	#	[voluntary]
+	#		original = False
+	#			False returns the absolute path.
+	#
+	#	This is the path that is subtracted from the absolute path
+	#	in the health report.
+	#
+	#	For example:
+	#		absolute path: /habitats/venue.1/health/monitors/health_1.py
+	#		relative path: /habitats/venue.1/health/monitors
+	#		reported path: health_1.py
+	#
+	"relative_path": monitors_path,
+	
+	#
+	#	[voluntary]
+	#		original = False
+	#			With False, a DB is not created 
+	#			and reports aren't saved.
+	#	
+	#	This is where the results are kept.
+	#	TinyDB is utilized.
+	#
+	"db_directory": normpath (join (this_directory, "DB")),
+	
+	#
+	#	[voluntary]
+	#		original = 1
+	#
+	#	This is how the "proceeds" (report) is presented.
+	#	1 might not be as good as 2.
+	#
+	"aggregation_format": 2
+})
+
+promote ["off"] ()
+
+#
+#	This is a detailed report
+#	of the technique.
+#
+rich.print_json (data = {
+	"paths": promote ["proceeds"] ["paths"]
+})
+
+#
+#	This is the checks that did 
+#	not finish successfully.
+#
+rich.print_json (data = {
+	"alarms": promote ["proceeds"] ["alarms"]
+})
+
+#
+#	This is concise stats about
+#	the  technique.
+#
+rich.print_json (data = {
+	"stats": promote ["proceeds"] ["stats"]
+})
+```
+
+#### Health Report
+If built perfectly, this is the "alarms" 
+and "stats" that are presented.
+
+```
+{
+  "alarms": [
+    {
+      "checks": [
+        {
+          "check": "check 3",
+          "exception": "Exception('not 110%')",
+          "exception trace": [
+            "Traceback (most recent call last):",
+            "  File \"/habitat/venues/stages/Emergency/procedures/health_scan/process/modules/__health_scan_utilities/import_from_path/__init__.py\", line 56, in import_from_path",
+            "    checks [ check ] ()",
+            "  File \"/habitat/venues/stages/Emergency/_health_readme/monitors/health.quest.py\", line 11, in check_3",
+            "    raise Exception (\"not 110%\")",
+            "Exception: not 110%"
+          ],
+          "passed": false
+        }
+      ],
+      "path": "health.quest.py"
+    }
+  ]
+}
+{
+  "stats": {
+    "checks": {
+      "alarms": 1,
+      "passes": 2
+    },
+    "paths": {
+      "alarms": 0,
+      "empty": 0
+    }
+  }
+}
+```
+----
+
+```
+from Emergency.topics.show.variable import show_variable
+show_variable ({}, mode = "pprint")
+show_variable ({}, mode = "condensed")
+```
+
+----

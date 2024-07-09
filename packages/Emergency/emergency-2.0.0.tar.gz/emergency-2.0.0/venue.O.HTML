@@ -1,0 +1,129 @@
+
+
+
+<body style="white-space: pre-wrap">
+
+	<nav>
+		<header>Emergency</header>
+			@ neurons
+	</nav>
+	
+	<main>
+		<h2>summary</h2>
+			
+			#
+			#	⚠️ ⚠️ ⚠️ ⚠️
+			#
+			#		Make sure that none of the stages that "Emergency"
+			#		utilizes rely on "Emergency".
+			#
+			#		For the sake of sanity, please keep the "reliability, testing, etc."
+			#		structure as a "tree, hierarchy, etc." etc. with no coodependencies.
+			#
+		
+		<h2>on</h2>
+			<h3>session 1</h3>
+				docker compose up -d; docker exec -it Emergency.1 bash;
+				. /habitat/_controls/build_1.sh
+				
+			<h3>session 2</h3>	
+				docker exec -it Emergency.2 bash;
+				. /habitat/_controls/build_2.sh
+				
+		<h2>off</h2>
+			docker container stop Emergency.1; docker container remove Emergency.1;
+
+
+		<h2>find and replace</h2>
+			#
+			#	1. need to build the "modules_pip"
+			#
+			#
+			
+			#
+			#
+			#	2. status check
+			#
+			python3 /habitat/venues/stages/Emergency/_status/status.proc.py
+			
+
+		<h2>git</h2>
+			git push --set-upstream git@gitlab.com:status600/climates/Emergency.git performance
+
+		
+		
+		<h2>important</h2>
+			python3 /habitat/venues/warehouse/0.7.1_various_simultaneous/start.proc.py
+		
+		<h2>readme</h2>
+			#
+			#	readme health
+			#		This is not 100% successful 
+			#		for the purposes of education.
+			#
+			python3 /habitat/venues_pypi/stages/Emergency_Reputation/_health_readme/health.move.py
+			
+			
+			
+		<h2>publishing</h2>
+			
+			. /habitat/_controls/build_1.sh
+			
+			#
+			#	health
+			#
+			python3 /habitat/venues/stages/Emergency/_health/health.move.py
+			
+			#
+			#	advanced health, this one is broken..
+			#
+			#
+			python3 /habitat/venues/stages/Emergency/_health_advanced/health.move.py
+			
+			
+			
+			#
+			#	git push
+			#		increase version of tag
+			#
+			git tag Emergency.1-2.0.0; git add --all; git commit -m "Emergency"; 
+			
+			
+			#
+			#
+			#	poetry auth
+			#
+			(pip install poetry && cd /habitat && rm -rf dist && poetry build --format sdist --verbose && chmod -R 777 /habitat)
+			poetry publish --verbose;
+			
+			#
+			#	Circle CI, should start on tag?
+			#
+			#
+			git push --tags 
+			
+		<h2>After Publishing</h2>
+			
+			. /habitat/venues_pypi/build.sh
+			
+			#
+			#	increase the version in pyproject.toml
+			#	
+			#
+			
+			#
+			#	There's a problem with this:
+			#		_health/monitors/12_internal_import/status_1.py
+			#
+			#
+			#	"venues_pypi/stages/Emergency_Reputation" "_health" 
+			#	is a copy of "_health" from "venues/stages/Emergency"
+			#		
+			python3 /habitat/venues_pypi/stages/Emergency_Reputation/_health/health.move.py
+		
+		<h2>important</h2>
+			poetry show --tree
+
+
+	</main>
+</body>
