@@ -1,0 +1,40 @@
+Metadata-Version: 2.3
+Name: redcap_toolbox
+Version: 2024.7.8.1
+Summary: A collection of tools to interact with the REDCap API
+Project-URL: Homepage, https://github.com/uwmadison-chm/redcap-toolbox
+Project-URL: Issues, https://github.com/uwmadison-chm/redcap-toolbox/issues
+Author-email: Nate Vack <njvack@wisc.edu>, Nicholas Vanhaute <nvanhaute@wisc.edu>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: certifi>=2024.7.4
+Requires-Dist: charset-normalizer>=3.3.2
+Requires-Dist: docopt>=0.6.2
+Requires-Dist: idna>=3.7
+Requires-Dist: numpy>=2.0.0
+Requires-Dist: pandas>=2.2.2
+Requires-Dist: pycap>=2.6.0
+Requires-Dist: python-dateutil>=2.9.0.post0
+Requires-Dist: pytz>=2024.1
+Requires-Dist: requests>=2.32.3
+Requires-Dist: semantic-version>=2.10.0
+Requires-Dist: six>=1.16.0
+Requires-Dist: tzdata>=2024.1
+Requires-Dist: urllib3>=2.2.2
+Description-Content-Type: text/markdown
+
+# redcap-toolbox
+Python package of REDCap tools
+
+## Installing REDCap Toolbox and Supported Versions
+
+redcap-toolbox is available on PyPI:
+
+```console
+$ pip install redcap-toolbox
+```
+
+redcap-toolbox officially supports Python 3.8+.
