@@ -1,0 +1,11 @@
+README.md
+setup.py
+amplifyy/__init__.py
+amplifyy/augmentations.py
+amplifyy/main.py
+amplifyy.egg-info/PKG-INFO
+amplifyy.egg-info/SOURCES.txt
+amplifyy.egg-info/dependency_links.txt
+amplifyy.egg-info/entry_points.txt
+amplifyy.egg-info/requires.txt
+amplifyy.egg-info/top_level.txt
