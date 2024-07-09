@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nyt-most-popular"
+version = "1.0.0"
+license = { text = "MIT" }
+description = """Provides services for getting the most popular articles on NYTimes.com based on emails, shares, or views."""
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "requests>=2.31.0"
+]
