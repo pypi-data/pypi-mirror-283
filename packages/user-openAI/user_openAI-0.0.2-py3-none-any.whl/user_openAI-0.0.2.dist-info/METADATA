@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: user_openAI
+Version: 0.0.2
+Summary: User Gym: A collection of user-defined gym environment
+Author: wangc372
+Author-email: 3305277792@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: gymnasium >=0.21.0
+
+## User OpenAI
+
+This project is used for users to create a custom environment based on gymnasium. 
+
+Currently, this project is used for LunarLander-v2 modification. 
+
