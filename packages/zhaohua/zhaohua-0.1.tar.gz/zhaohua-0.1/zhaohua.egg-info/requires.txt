@@ -1,0 +1,11 @@
+openpyxl
+pandas
+numpy
+requests
+selenium
+webdriver-manager
+pillow
+pytesseract
+pdf2image
+chardet
+baidu-aip
