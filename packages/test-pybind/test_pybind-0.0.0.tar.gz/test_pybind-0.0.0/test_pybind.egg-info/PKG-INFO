@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: test-pybind
+Version: 0.0.0
+Summary: Description in here.
+Home-page: http://example.com
+Author: Bruce Wayne
+Author-email: bruce.wayne@example.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+
+Example project
+test pybind & cython
