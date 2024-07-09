@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+fastduck/__init__.py
+fastduck/_modidx.py
+fastduck/core.py
+fastduck.egg-info/PKG-INFO
+fastduck.egg-info/SOURCES.txt
+fastduck.egg-info/dependency_links.txt
+fastduck.egg-info/entry_points.txt
+fastduck.egg-info/not-zip-safe
+fastduck.egg-info/requires.txt
+fastduck.egg-info/top_level.txt
