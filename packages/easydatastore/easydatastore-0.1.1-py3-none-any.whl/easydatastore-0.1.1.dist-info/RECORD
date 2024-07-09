@@ -1,0 +1,9 @@
+easydatastore/__init__.py,sha256=aGJ1LOBami50y5mWVeYqb2vwsC4U2Xn0PcNIEvhWfCM,67
+easydatastore/_meta.py,sha256=hEvTtLOn3bzWIQ3hr_Q5sILQNht71V2f4VN1OBAdtyI,8656
+easydatastore/column.py,sha256=q-H8SuhIu-6cPmMwz0bZJRM5e-iBtw7LM_SKv0X3Myg,7041
+easydatastore/exceptions.py,sha256=ZoGlWY3ChHdFZd2CMINmvDfIdfIQB84puq0GjmstAg4,429
+easydatastore/table.py,sha256=0v33LU2l6lNPqvq5Z_4G5PiVsuNdx4bSTINFffT_zFM,4028
+easydatastore-0.1.1.dist-info/LICENSE,sha256=b9Lq9gKaOuM0nQenbI8UzkytbIT2vBLu24Mr2aA0DE0,1066
+easydatastore-0.1.1.dist-info/METADATA,sha256=ImxQ0Gx_l3qh4QqSE5waf9-84fAuDZsKHeESLBxeUUE,3039
+easydatastore-0.1.1.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+easydatastore-0.1.1.dist-info/RECORD,,
