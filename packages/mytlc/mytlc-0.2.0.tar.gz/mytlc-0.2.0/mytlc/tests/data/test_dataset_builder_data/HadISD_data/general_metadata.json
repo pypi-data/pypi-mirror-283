@@ -1,0 +1,45 @@
+{
+    "dataset": {
+        "path": "unspecified",
+        "name": "unspecified",
+        "uuid": "unspecified",
+        "size-go": 0.0,
+        "file-number": "unspecified",
+        "last-modification-date": "unspecified"
+    },
+    "data": {
+        "protection-level": "NP",
+        "source": "HadISD",
+        "source-url": "https://www.metoffice.gov.uk/hadobs/hadisd/index.html",
+        "download-date": "2024-06-15 10:32:56",
+        "format-reference": "NetCDF",
+        "data-license": "Non-Commercial Government Licence",
+        "license-doi": "unspecified",
+        "license-quote": "HadISD.v341_202405p data were obtained from http://www.metoffice.gov.uk/hadobs/hadisd on 2024-06-15 10:32:56 and are British Crown Copyright, Met Office 2024, provided under an Open Government License, http://www.nationalarchives.gov.uk/doc/non-commercial--government-licence/non-commercial-government-licence.htm",
+        "time-range": {
+            "start": "unspecified",
+            "end": "unspecified"
+        }
+    },
+    "checksums-reference": "unspecified",
+    "datapaper-reference": "unspecified",
+    "releasenotes-reference": "unspecified",
+    "rgpd": "unspecified",
+    "restrictions": "unspecified",
+    "verification-results": {
+        "fair-results": {
+            "findable": {
+                "metadata-values": "unspecified",
+                "uuid-value": "unspecified"
+            },
+            "accessible": "unspecified",
+            "interoperable": "unspecified",
+            "reusable": "unspecified"
+        },
+        "other-results": {
+            "plausibility": "unspecified",
+            "consistency": "unspecified",
+            "coherence": "unspecified"
+        }
+    }
+}

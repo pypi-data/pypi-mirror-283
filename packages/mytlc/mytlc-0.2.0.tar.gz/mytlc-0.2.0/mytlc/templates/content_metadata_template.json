@@ -1,0 +1,33 @@
+{
+    "general": {
+        "data-file-name": "file name",
+        "spatial-reference": "reference",
+        "time-reference": "reference"
+    },
+    "dimensions": {
+        "x-coordinate": [
+            0.0,
+            0.0
+        ],
+        "y-coordinate": [
+            0.0,
+            0.0
+        ],
+        "z-coordinate": [
+            0.0,
+            0.0
+        ],
+        "t-reference": [
+            "YYYYMMDD:HHmm",
+            "YYYYMMDD:HHmm"
+        ],
+        "forecast": [
+            0,2
+        ],
+        "probabilistic-dimension": [
+            0
+        ],
+        "meteo-variable": [
+        ]
+    }
+}

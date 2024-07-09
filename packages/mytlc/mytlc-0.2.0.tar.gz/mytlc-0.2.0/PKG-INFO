@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: mytlc
+Version: 0.2.0
+Summary: Python package to download meteorological data and build FAIR datasets.
+Home-page: https://github.com/abervas/mytlc
+Author: Sopra Steria Group
+Author-email: anthony.bervas@soprasteria.com
+License: BSD
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: attrs==23.2.0
+Requires-Dist: cdsapi==0.6.1
+Requires-Dist: certifi==2024.2.2
+Requires-Dist: charset-normalizer==3.3.2
+Requires-Dist: colorama==0.4.6
+Requires-Dist: exceptiongroup==1.2.1
+Requires-Dist: idna==3.7
+Requires-Dist: iniconfig==2.0.0
+Requires-Dist: jsonschema==4.22.0
+Requires-Dist: jsonschema-specifications==2023.12.1
+Requires-Dist: numpy==1.22.4
+Requires-Dist: packaging==24.0
+Requires-Dist: pandas==1.5.3
+Requires-Dist: pluggy==1.5.0
+Requires-Dist: pytest==8.2.2
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: pytz==2024.1
+Requires-Dist: referencing==0.35.1
+Requires-Dist: requests==2.31.0
+Requires-Dist: rpds-py==0.18.1
+Requires-Dist: six==1.16.0
+Requires-Dist: tomli==2.0.1
+Requires-Dist: tqdm==4.66.2
+Requires-Dist: urllib3==1.26.14
+Requires-Dist: xarray==2023.2.0
+
+# MYTLC
+## Package Description
+The MYTLC python package is a prototype for downloading meteorological data from multiple sources and building dataset that respect FAIR principles ([FAIR Reference][]).
+The package depends on the MCAPY package (which is not distributed) to read the content of meteorological files.
+## Features
+### Download meteorological data
+The following meteorological data can be downloaded with MYTLC :
+* ERA5 reanalysis (.nc or .grib) :
+    * ERA5 hourly data on single levels from 1940 to present ;
+    * ERA5 hourly data on pressure levels from 1940 to present.
+* HadISD station observations (complete dataset)
+### Build dataset
+From the downloaded data, MYTLC can build dataset containing :
+* All downloaded meteorological data files ;
+* A general metadata file ;
+* A checksums file (MD5 hash for each meteorological data file) ;
+* A content metadata file for each meteorological data file ;
+* A release notes file ;
+* Additionnal source-dependent files.
+
+MYTLC cannot download data from AROME and ARPEGE models (Météo France) but it can build a dataset if the initial data directory is created manually.
+The data directory must contain the following elements :
+* Meteorological data (.grib or .grib2) ;
+* A general metadata file completed manually ;
+* A checksums file (MD5 hash for each meteorological data file).
+### Search dataset
+MYTLC allows users to search for files of interest filtered according to following the dimensions :
+* Data source ;
+* Coordinates (x,y,z) ;
+* Time ;
+* Weather forecast time ;
+* Probabilistic dimension ;
+* Meteorological parameters.
+
+## License
+
+MYTLC is distributed under the 3-Clause BSD License. See LICENSE.txt file.
+
+
+ [FAIR Reference]: https://doi.org/10.1038/sdata.2016.18

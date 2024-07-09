@@ -1,0 +1,218 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://json-schema.org/draft/2020-12/schema",
+  "title": "general-metadata",
+  "description": "General metadata file",
+  "type": "object",
+  "properties": {
+    "dataset": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "description": "Dataset path",
+          "type": "string"
+        },
+        "name": {
+          "description": "Dataset name",
+          "type": "string"
+        },
+        "uuid": {
+          "description": "Universal Unique Identifier of dataset",
+          "type": "string"
+        },
+        "size-go": {
+          "description": "Size of the dataset (Go)",
+          "type": "number"
+        },
+        "file-number": {
+          "description": "Number of files inside the dataset",
+          "type": "string"
+        },
+        "last-modification-date": {
+          "description": "Date of creation or last modification of the dataset",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "uuid",
+        "size-go",
+        "file-number",
+        "last-modification-date"
+      ]
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "protection-level": {
+          "description": "Protection level of dataset",
+          "type": "string",
+          "enum": [
+            "NP",
+            "DR",
+            "unspecified"
+          ]
+        },
+        "source": {
+          "description": "Source of the meteorological data inside the dataset",
+          "type": "string"
+        },
+        "source-url": {
+          "description": "URL of the source",
+          "type": "string"
+        },
+        "download-date": {
+          "description": "Date at the end of the download",
+          "type": "string"
+        },
+        "format-reference": {
+          "description": "Reference of the meteorological data file format",
+          "type": "string"
+        },
+        "data-license": {
+          "description": "License of the meteorological data in the dataset",
+          "type": "string"
+        },
+        "license-doi": {
+          "description": "DOI of the license",
+          "type": "string"
+        },
+        "license-quote": {
+          "description": "Quote of the license",
+          "type": "string"
+        },
+        "time-range": {
+          "type": "object",
+          "description": "Time range covered by meteorological data",
+          "properties": {
+            "start": {
+              "description": "Start of the time range",
+              "type": "string"
+            },
+            "end": {
+              "description": "End of the time range",
+              "type": "string"
+            }
+          },
+          "required": [
+            "start",
+            "end"
+          ]
+        }
+      },
+      "required": [
+        "protection-level",
+        "source",
+        "source-url",
+        "download-date",
+        "format-reference",
+        "data-license",
+        "license-doi",
+        "license-quote",
+        "time-range"
+      ]
+    },
+    "checksums-reference": {
+      "description": "Reference of the checksums file in the dataset",
+      "type": "string"
+    },
+    "datapaper-reference": {
+      "description": "Reference of the data paper in the dataset",
+      "type": "string"
+    },
+    "releasenotes-reference": {
+      "description": "Reference of the release note in the dataset",
+      "type": "string"
+    },
+    "rgpd": {
+      "description": "Indication about RGPD compliance",
+      "type": "string"
+    },
+    "restrictions": {
+      "description": "Indication and restrictions about dataset use",
+      "type": "string"
+    },
+    "verification-results": {
+      "type": "object",
+      "properties": {
+        "fair-results": {
+          "description": "Fair results",
+          "type": "object",
+          "properties": {
+            "findable": {
+              "type": "object",
+              "properties": {
+                "metadata-values": {
+                  "description": "Result of test checking if each metadata has a value",
+                  "type": "string"
+                },
+                "uuid-value": {
+                  "description": "Result of test checking if uuid field has a correct uuid value specified",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "metadata-values",
+                "uuid-value"
+              ]
+            },
+            "accessible": {
+              "description": "Result of test checking if all metadata files are present",
+              "type": "string"
+            },
+            "interoperable": {
+              "description": "Result of test checking if meteorological data file format is a MIME type",
+              "type": "string"
+            },
+            "reusable": {
+              "description": "Result of test checking if each metadata has a value",
+              "type": "string"
+            }
+          },
+          "required": [
+            "findable",
+            "accessible",
+            "interoperable",
+            "reusable"
+          ]
+        },
+        "other-results": {
+          "description": "Plausibility, consistency and coherence test results",
+          "type": "object",
+          "properties": {
+            "plausibility": {
+              "description": "Result of test checking if each meteorological parameter has a min and max value",
+              "type": "string"
+            },
+            "consistency": {
+              "description": "Result of test checking if there is missing values for each meteorological parameter",
+              "type": "string"
+            },
+            "coherence": {
+              "description": "Result of test checking if meteorological parameters are present in dictionary",
+              "type": "string"
+            }
+          },
+          "required": [
+            "plausibility",
+            "consistency",
+            "coherence"
+          ]
+        }
+      },
+      "required": [
+        "fair-results",
+        "other-results"
+      ]
+    }
+  },
+  "required": [
+    "dataset",
+    "data",
+    "datapaper-reference",
+    "releasenotes-reference",
+    "rgpd",
+    "restrictions",
+    "verification-results"
+  ]
+}

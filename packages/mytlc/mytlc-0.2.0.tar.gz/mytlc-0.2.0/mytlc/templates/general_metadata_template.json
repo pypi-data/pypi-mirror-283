@@ -1,0 +1,45 @@
+{
+  "dataset": {
+    "path": "unspecified",
+    "name": "unspecified",
+    "uuid": "unspecified",
+    "size-go": 0.0,
+    "file-number": "unspecified",
+    "last-modification-date": "unspecified"
+  },
+  "data": {
+    "protection-level": "unspecified",
+    "source": "unspecified",
+    "source-url": "unspecified",
+    "download-date": "unspecified",
+    "format-reference": "unspecified",
+    "data-license": "unspecified",
+    "license-doi": "unspecified",
+    "license-quote": "unspecified",
+    "time-range": {
+      "start": "unspecified",
+      "end": "unspecified"
+    }
+  },
+  "checksums-reference": "unspecified",
+  "datapaper-reference": "unspecified",
+  "releasenotes-reference": "unspecified",
+  "rgpd": "unspecified",
+  "restrictions": "unspecified",
+  "verification-results": {
+    "fair-results": {
+      "findable": {
+        "metadata-values": "unspecified",
+        "uuid-value": "unspecified"
+      },
+      "accessible": "unspecified",
+      "interoperable": "unspecified",
+      "reusable": "unspecified"
+    },
+    "other-results": {
+      "plausibility": "unspecified",
+      "consistency": "unspecified",
+      "coherence": "unspecified"
+    }
+  }
+}
