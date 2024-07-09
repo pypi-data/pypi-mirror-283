@@ -1,0 +1,7 @@
+webnyx/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+webnyx/app.py,sha256=kRDI0kf2FPgKdD-VkHOJ95YQ8qCz3Cl5vy4OiMNCEUs,4805
+webnyx/middleware.py,sha256=Uxg7zRw52DOlftjJoDV_QpSpZUrFRPdAuExKGxav5v8,142
+webnyx-0.1.1.dist-info/METADATA,sha256=ubVFt6haKx7KtZHiDi46aE2u1X7fxsBC5rq_chjJDlI,4512
+webnyx-0.1.1.dist-info/WHEEL,sha256=DZajD4pwLWue70CAfc7YaxT1wLUciNBvN_TTcvXpltE,110
+webnyx-0.1.1.dist-info/top_level.txt,sha256=s715l8MoEfJzTTygnTXbqxSpjOxTa_m4_C0FzNnYD_g,7
+webnyx-0.1.1.dist-info/RECORD,,
