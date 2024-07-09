@@ -1,0 +1,8 @@
+README.md
+setup.py
+IntInput/INIP.py
+IntInput/__init__.py
+intinput.egg-info/PKG-INFO
+intinput.egg-info/SOURCES.txt
+intinput.egg-info/dependency_links.txt
+intinput.egg-info/top_level.txt
