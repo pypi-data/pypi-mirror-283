@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: supervised-fcn-2
+Version: 0.0.4
+Summary: it provides a pretrained FCN (Fully Convolutional Network) on the UCR archive datasets that are merged and re-split.
+Home-page: https://github.com/danelee2601/supervised-FCN-2
+Author: Daesoo Lee
+Author-email: daesoolee2601@gmail.com
+Requires-Python: >= 3.8
+License-File: LICENSE
+Requires-Dist: wget
+
