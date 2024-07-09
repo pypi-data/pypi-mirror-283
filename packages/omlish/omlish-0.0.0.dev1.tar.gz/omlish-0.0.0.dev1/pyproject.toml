@@ -1,0 +1,142 @@
+[build-system]
+requires = [
+    'setuptools',
+]
+build-backend = 'setuptools.build_meta'
+
+
+##
+
+[project]
+name = 'omlish'
+authors = [{name = 'wrmsr'}]
+urls = {source = 'https://github.com/wrmsr/omlish'}
+license = {text = 'BSD-3-Clause'}
+requires-python = '>=3.11'
+
+dynamic = ['version']
+
+description = 'omlish'
+classifiers = [
+    'License :: OSI Approved :: BSD License',
+
+    'Intended Audience :: Developers',
+
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3 :: Only',
+
+    'Programming Language :: Python',
+    'Programming Language :: Python :: Implementation :: CPython',
+
+    'Operating System :: OS Independent',
+]
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.dynamic]
+version = {attr = 'omlish.__about__.__version__'}
+
+[tool.setuptools.packages.find]
+include = ['omlish', 'omlish.*']
+exclude = ['*.tests', '*.tests.*']
+
+
+##
+
+[tool.omlish.pyproject.srcs]
+main = ['omlish', 'omdev', 'omserv']
+ml = ['@main', 'omml']
+all = ['@ml', 'x']
+
+[tool.omlish.pyproject.venvs]
+all = { interp = '@11', requires = 'requirements-dev.txt', srcs = ['@main'] }
+default = { requires = 'requirements-ext.txt' }
+deploy = { interp = 'python3' }
+docker = { docker = 'omlish-dev' }
+docker-amd64 = { docker = 'omlish-dev-amd64' }
+debug = { interp = '@11-debug' }
+'12' = { interp = '@12' }
+'13' = { interp = '@13' }
+
+
+##
+
+[tool.setuptools_scm]
+version_file = 'omlish/_version.py'
+
+
+##
+
+[tool.mypy]
+ignore_missing_imports = true
+no_implicit_optional = true
+warn_redundant_casts = true
+#warn_return_any = true
+warn_unreachable = true
+warn_unused_ignores = true
+
+pretty = true
+show_column_numbers = true
+show_error_codes = true
+show_error_context = true
+show_traceback = true
+#verbosity = 1
+
+check_untyped_defs = true
+
+exclude = [
+    'omlish/dataclasses/tests/cpython/',
+]
+
+
+##
+
+[tool.pytest.ini_options]
+addopts = [
+    '-v',
+    '--tb=short',
+    '--showlocals',
+    '--strict-markers',
+    '--durations=5',
+    '--durations-min=2',
+    # '--log=info',
+]
+asyncio_mode = 'strict'
+junit_family = 'xunit2'
+junit_duration_report = 'call'
+timeout = 60
+session_timeout = 600
+
+
+[tool.flake8]
+max-line-length = 120
+
+show-source = true
+statistics = true
+
+exclude = [
+    '.cache',
+    '.git',
+    '.idea',
+    '.venv',
+    'omlish/dataclasses/tests/cpython/',
+]
+
+ignore = [
+    'E231',
+    'E265',
+    'E701',
+    'E704',
+    'E711',
+    'E712',
+    'E721',
+    'E731',
+    'E741',
+    'E742',
+    'F541',
+    'F821',
+    'F999',
+    'W503',
+    'W504',
+]
