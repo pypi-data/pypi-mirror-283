@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+src/satellite_image_classification/__init__.py
+src/satellite_image_classification/classification.py
+src/satellite_image_classification.egg-info/PKG-INFO
+src/satellite_image_classification.egg-info/SOURCES.txt
+src/satellite_image_classification.egg-info/dependency_links.txt
+src/satellite_image_classification.egg-info/entry_points.txt
+src/satellite_image_classification.egg-info/requires.txt
+src/satellite_image_classification.egg-info/top_level.txt
+tests/test_classification.py
