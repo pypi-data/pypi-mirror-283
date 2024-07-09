@@ -1,0 +1,7 @@
+datadoc_model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+datadoc_model/datadoc_base_model.py,sha256=RTAvaGOYzLkw_LhhM_EoG3MW-h7Y0VFeLycvp48qFcY,266
+datadoc_model/model.py,sha256=DVlWh_hXV2awJuFvyWL2lgYULrXSMTnn_PuS97djJdE,17857
+datadoc_model/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ssb_datadoc_model-6.0.0.dist-info/METADATA,sha256=DZzu_C-1lv5jMLZTCDKS4bNjXMK0X-zKwaBXHO9B67E,1321
+ssb_datadoc_model-6.0.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+ssb_datadoc_model-6.0.0.dist-info/RECORD,,
