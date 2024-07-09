@@ -1,0 +1,10 @@
+pandas
+numpy
+xgboost
+scikit-learn
+matplotlib
+seaborn
+tqdm
+pyserial
+gspread
+google-auth
