@@ -1,0 +1,10 @@
+numpy
+pandas
+meson
+
+[:python_version < "3.11"]
+tomli
+
+[dev]
+mypy
+ruff
