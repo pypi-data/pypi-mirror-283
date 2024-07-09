@@ -1,0 +1,10 @@
+AUTHORS.rst
+LICENSE
+README.rst
+setup.cfg
+setup.py
+moana_pypi.egg-info/PKG-INFO
+moana_pypi.egg-info/SOURCES.txt
+moana_pypi.egg-info/dependency_links.txt
+moana_pypi.egg-info/requires.txt
+moana_pypi.egg-info/top_level.txt

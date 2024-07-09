@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: moana-pypi
+Version: 0.2
+Home-page: 
+Author: Clément Ranc, Stela Ishitani Silva, MOAna authors
+Author-email: ranc@iap.fr
+Maintainer-email: stela.ishitanisilva@nasa.gov
+License: MIT
+Keywords: Astronomy,Microlensing,Science
+Platform: Linux
+Platform: Mac OS X
+Platform: Windows
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.11
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: wheel==0.43.0
+Requires-Dist: scipy==1.13.1
+Requires-Dist: sphinx==7.3.7
+Requires-Dist: sphinx_press_theme==0.9.1
