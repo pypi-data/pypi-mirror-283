@@ -1,0 +1,14 @@
+migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xlsx_export/__init__.py,sha256=Cj-6EzQahiohDZ441g4yWZRG7MgKhb4150WBFlYh8tU,471
+xlsx_export/admin.py,sha256=suMo4x8I3JBxAFBVIdE-5qnqZ6JAZV0FESABHOSc-vg,63
+xlsx_export/apps.py,sha256=E-zv6UjZUn5jg1UXXcNfPVaxUYEPv4JHcwJWftXfbS0,89
+xlsx_export/models.py,sha256=W3_sM7PHmYZdZcebUZ-t7k6THjU9n1miB5ijS6kvGBE,76
+xlsx_export/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+xlsx_export/urls.py,sha256=1xykWvO7fKll9grrkxJcMnGOz1bpph80Vfu9fG9dY2E,225
+xlsx_export/views.py,sha256=TSQWVLitTTCjOgOXKH-raymlW_vMDhO0STjYfqklQyQ,6072
+xlsx_export/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xlsx_export-0.0.1.dist-info/METADATA,sha256=CaA1oBTyhw8cqcpq1tO-MAmKDL0zBWF5MO0L1WCxFs8,253
+xlsx_export-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+xlsx_export-0.0.1.dist-info/entry_points.txt,sha256=qqCz_VsgzbJqq9UnVe1G5nfsYE-M8l3-tJoCY76cwfQ,54
+xlsx_export-0.0.1.dist-info/top_level.txt,sha256=mFBSW8p_t8UKb54hG800n4s81nWrbm5EokSvRjJyMnw,12
+xlsx_export-0.0.1.dist-info/RECORD,,
