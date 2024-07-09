@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: mpyflow
+Version: 0.0.1
+Summary: A dependency injection library compatible with MicroPython
+Home-page: https://github.com/andreicsp/mpyflow
+License: MIT
+Keywords: micropython,python,di,dependency,injection,iot
+Author: Andrei Dumitrache
+Author-email: andrei@dumitrache.net
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: psutil (>=6.0,<7.0)
+Project-URL: Repository, https://github.com/andreicsp/mpyflow
+Description-Content-Type: text/markdown
+
+# MPYFlow
+
+Micro-sized dependency injection library for MicroPython
+
+Build dependency graphs from JSON files describing your runtime components.
+
