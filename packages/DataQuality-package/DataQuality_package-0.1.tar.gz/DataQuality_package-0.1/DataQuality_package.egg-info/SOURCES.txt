@@ -1,0 +1,9 @@
+README.md
+setup.py
+DataQuality/DataQuality.py
+DataQuality/__init__.py
+DataQuality_package.egg-info/PKG-INFO
+DataQuality_package.egg-info/SOURCES.txt
+DataQuality_package.egg-info/dependency_links.txt
+DataQuality_package.egg-info/entry_points.txt
+DataQuality_package.egg-info/top_level.txt
