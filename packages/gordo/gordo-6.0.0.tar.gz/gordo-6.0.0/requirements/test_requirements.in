@@ -1,0 +1,22 @@
+-c full_requirements.txt
+docker~=7.1.0
+pytest~=8.2
+pytest-xdist~=3.2
+pytest-mock~=3.6
+pytest-mypy~=0.10
+pytest-timeout~=2.1
+pytest-cov~=4.0
+pytest-benchmark~=4.0
+pytest-flakes~=4.0
+mock~=5.0
+responses~=0.25.3
+black~=24.4.2
+notebook~=7.2.1
+nbconvert~=7.4
+types-simplejson
+types-python-dateutil
+types-PyYAML
+types-setuptools
+types-requests
+types-pytz
+types-mock
