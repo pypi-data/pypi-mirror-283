@@ -1,0 +1,43 @@
+Metadata-Version: 2.3
+Name: aliyun-instrumentation-openai
+Version: 1.0.0
+Summary: Aliyun OpanAi Instrumentation
+Project-URL: Homepage, https://help.aliyun.com/zh/opentelemetry/user-guide/report-llm-trace-data-through-alibaba-cloud-python-sdk
+Author-email: Aliyun Python SDK Authors <lurious.lyh@alibaba-inc.com>
+License-Expression: Apache-2.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: <3.13,>=3.8
+Requires-Dist: aliyun-semantic-conventions>=1.0.0
+Requires-Dist: opentelemetry-api
+Requires-Dist: opentelemetry-instrumentation
+Requires-Dist: opentelemetry-semantic-conventions
+Requires-Dist: typing-extensions
+Requires-Dist: wrapt
+Provides-Extra: instruments
+Requires-Dist: openai>=1.0.0; extra == 'instruments'
+Provides-Extra: test
+Requires-Dist: numpy; extra == 'test'
+Requires-Dist: openai==1.0.0; extra == 'test'
+Requires-Dist: opentelemetry-instrumentation-httpx; extra == 'test'
+Requires-Dist: opentelemetry-sdk; extra == 'test'
+Requires-Dist: respx; extra == 'test'
+Description-Content-Type: text/markdown
+
+# Aliyun Openai Instrumentation
+Python instrumentation library for Openai.
+
+
+## Installation
+
+```shell
+pip install aliyun-instrumentation-openai
+```

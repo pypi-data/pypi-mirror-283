@@ -1,0 +1,14 @@
+aliyun/instrumentation/openai/__init__.py,sha256=8HbNWfPP7nwpa01SY_Cvbq0767e6MS38lfoHR7eL_iU,1835
+aliyun/instrumentation/openai/package.py,sha256=vPx8vF8Za06KAcsYw9llAqC4HmPvVZGK9WRvcVnonVU,62
+aliyun/instrumentation/openai/version.py,sha256=RsZjRjMprNcDm97wqRRSk6rTLgTX8N0GyicZyZ8OsBQ,22
+aliyun/instrumentation/openai/internal/__init__.py,sha256=qTIaNp5YbglElSsOD7k3qzy33ENIHyxkfFR_40EX3dU,159
+aliyun/instrumentation/openai/internal/_request.py,sha256=ls_nOvBz6htOwLvHJHYapCVlEGoX7wZL0gBWN79PFsg,17432
+aliyun/instrumentation/openai/internal/_request_attributes_extractor.py,sha256=pt9q9qBUKUZSWeO0nQX0hMgYBRuJU5gzwYhpd4cwVBs,9454
+aliyun/instrumentation/openai/internal/_response_accumulator.py,sha256=TAudrGhrheVp8E95Lys9X3f6_1bURIsZ7HekYSTm8II,9064
+aliyun/instrumentation/openai/internal/_response_attributes_extractor.py,sha256=hJY9_3o5ty8GN0aeTclPdpL5N-Ids4D7PjYxBDkAysU,12203
+aliyun/instrumentation/openai/internal/_stream.py,sha256=dLm63ioeBLyo0ZoI9OMIrSwfzOf-Z4JNHUiCf0O8ouQ,5268
+aliyun/instrumentation/openai/internal/_utils.py,sha256=Dc6bZszdbpRG3TAGCnefsLqZiPPepyMVWDev3GtAB9I,4697
+aliyun/instrumentation/openai/internal/_with_span.py,sha256=rZo0USup-hHXY8bLdwmd7JOTgWsSwfATijrN07iXSzE,2383
+aliyun_instrumentation_openai-1.0.0.dist-info/METADATA,sha256=eBP5B3a9_ut8utyQ1oyJaFQ3CAPnPzEwlofhsiqC51U,1643
+aliyun_instrumentation_openai-1.0.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+aliyun_instrumentation_openai-1.0.0.dist-info/RECORD,,
