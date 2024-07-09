@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: theca
+Version: 1.0.6
+Summary: Simple Python client library for TheCA.cn
+Home-page: https://github.com/xizhendu/theca-sdk-python
+Author: Xizhen Du
+Author-email: xizhendu@gmail.com
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# theca-sdk-python
