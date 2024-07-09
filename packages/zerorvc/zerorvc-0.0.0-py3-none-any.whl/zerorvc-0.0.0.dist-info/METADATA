@@ -1,0 +1,25 @@
+Metadata-Version: 2.3
+Name: zerorvc
+Version: 0.0.0
+Summary: Run Retrieval-based Voice Conversion training and inference with ease.
+Project-URL: Homepage, https://github.com/jacoblincool/zero-rvc
+Project-URL: Issues, https://github.com/jacoblincool/zero-rvc/issues
+Author-email: Jacob Lin <jacob@csie.cool>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: accelerate
+Requires-Dist: datasets
+Requires-Dist: fairseq
+Requires-Dist: librosa
+Requires-Dist: numpy>=1.0.0
+Requires-Dist: scipy
+Requires-Dist: torch>=2.0.0
+Requires-Dist: tqdm
+Description-Content-Type: text/markdown
+
+# ZeroRVC
+
+Run Retrieval-based Voice Conversion training and inference with ease.
