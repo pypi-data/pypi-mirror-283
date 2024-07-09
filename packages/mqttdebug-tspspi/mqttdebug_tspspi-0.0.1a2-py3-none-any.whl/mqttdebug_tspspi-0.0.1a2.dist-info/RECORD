@@ -1,0 +1,9 @@
+mqttdebug/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mqttdebug/mqttpublish.py,sha256=reombJTn4sn-xGSXv4PeZu3szFoW8wJZJprMuXbdgIc,3556
+mqttdebug/mqttsubscribe.py,sha256=W8YpJUAmZx4NDn6d82hhGg9o23_1pXSNp9QehaHA6PM,4879
+mqttdebug_tspspi-0.0.1a2.dist-info/LICENSE.md,sha256=wiGiYkY3ZiN8dNHiZMqDH9zJ_CscFWcrzhQ6EPnq3xM,1411
+mqttdebug_tspspi-0.0.1a2.dist-info/METADATA,sha256=uwKkCcEVQ00rDCoOOcv7Nb-nnLbSOXwnFsZEWlJo6m4,1549
+mqttdebug_tspspi-0.0.1a2.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+mqttdebug_tspspi-0.0.1a2.dist-info/entry_points.txt,sha256=VHGUKUXe92-9K3Ilk8SKZC-GBFVg8d4o22gI6fOdWQg,118
+mqttdebug_tspspi-0.0.1a2.dist-info/top_level.txt,sha256=WkyQi1evHNG-6_HbncKtPxuNu7ZT398G4VtXatAi2gY,10
+mqttdebug_tspspi-0.0.1a2.dist-info/RECORD,,

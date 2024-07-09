@@ -1,0 +1,3 @@
+[console_scripts]
+mqttpublish = mqttdebug.mqttpublish:mainStartup
+mqttsubscribe = mqttdebug.mqttsubscribe:mainStartup
