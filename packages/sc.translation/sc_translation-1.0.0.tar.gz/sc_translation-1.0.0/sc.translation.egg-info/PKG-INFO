@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: sc.translation
+Version: 1.0.0
+Summary: A Translate Agent Python package
+Requires-Python: >=3.8
