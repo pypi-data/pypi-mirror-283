@@ -1,0 +1,10 @@
+langcode/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+langcode/jupyter/__init__.py,sha256=aqW1MrGu89Sq1HUJ2-xjpJgjt5lRL8dxngX5h7vSQ90,126
+langcode/jupyter/_from_remote.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+langcode/jupyter/_local.py,sha256=xkqpsoETUAVKIimQ9hbqPx7lTuevdJR6DaTcGpBkKoE,9847
+langcode/jupyter/_main.py,sha256=aVLUJzigfmuyfSvdmukr3aENXcd3-QQqiEShhT7_iFE,558
+langcode/jupyter/_protocol.py,sha256=JqwQoUrbXnqAxCuG8SGFNu4J6KUJjhqo_qvK-4Vy944,1771
+langcode-0.1.1.dist-info/LICENSE,sha256=xTjBNhy3N8pomFljrCkD1d34SmAEWv8hyJMMOjNMH0M,1071
+langcode-0.1.1.dist-info/METADATA,sha256=QbeuYhGWYq0T4xrcGCHb_HMUD4V4-fl2HDv54k0e1PQ,3910
+langcode-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+langcode-0.1.1.dist-info/RECORD,,
