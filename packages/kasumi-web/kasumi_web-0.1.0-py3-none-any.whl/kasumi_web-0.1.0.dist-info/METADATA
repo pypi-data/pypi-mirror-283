@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: kasumi-web
+Version: 0.1.0
+Summary: Another ASGI Web framework.
+Author-Email: AmaseCocoa <amase.cocoa@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 AmaseCocoa
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Repository, https://github.com/AmaseCocoa/Kasumi/
+Requires-Python: >=3.10
+Requires-Dist: starlette>=0.37.2
+Requires-Dist: typer>=0.12.3
+Requires-Dist: requests>=2.32.3
+Requires-Dist: tqdm>=4.66.4
+Requires-Dist: cowsay>=6.1
+Requires-Dist: pytest>=8.2.2; extra == "test"
+Requires-Dist: ruff>=0.4.8; extra == "test"
+Requires-Dist: httpx>=0.27.0; extra == "test"
+Requires-Dist: uvicorn>=0.30.1; extra == "test"
+Requires-Dist: pytest-asyncio>=0.23.7; extra == "test"
+Provides-Extra: test
+Description-Content-Type: text/markdown
+
+# Kasumi
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff) [![image](https://img.shields.io/pypi/v/kasumi.svg)](https://pypi.python.org/pypi/kasumi) [![image](https://img.shields.io/pypi/pyversions/kasumi.svg)](https://pypi.python.org/pypi/kasumi)
+
+> [!WARNING]
+> Kasumi is in a very early development stage. Do not use it in a production environment.
+
+Kasumi (“霞” in Japanese Kanji) is an ASGI web server implemented almost from scratch using Starlette as the ASGI toolkit.
+## Installing
+~~Kasumi is published on PyPI and can be installed with the following command.~~
+> [!IMPORTANT]
+> Kasumi is not currently registered with PyPI. Please check the [following issue](https://github.com/AmaseCocoa/Kasumi/issues/1) for more information.
+```
+pip install kasumi
+```
+> [!NOTE]
+> Installation via PyPI is now possible by acquiring the Kasumi-web namespace.
+
+#### If install the latest development version: 
+```
+pip install https://github.com/AmaseCocoa/Kasumi/archive/develop.zip
+```
+
+## Examples
+Examples are available at [Example Directory](https://github.com/AmaseCocoa/Kasumi/blob/develop/example).
+## License
+Kasumi is available under the MIT License.

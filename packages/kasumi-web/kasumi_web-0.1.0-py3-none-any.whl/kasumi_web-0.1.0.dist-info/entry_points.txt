@@ -1,0 +1,3 @@
+[console_scripts]
+kasumi = kasumi.cli.__core:app
+
