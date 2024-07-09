@@ -1,0 +1,11 @@
+cmem_plugin_reason/__init__.py,sha256=t8H97wu7qPufFrPXVM-WtNW7X4Lxztl2K2GSEQopXMM,28
+cmem_plugin_reason/bin/robot.jar,sha256=PREvR6XC6C_ZbCvEDlgqhtHmrST2dkjvED7F8hmFul4,93636279
+cmem_plugin_reason/plugin_reason.py,sha256=LnO4XNdnEvyIVEFh02PckvLoJ4ydfUWm3zxFOEMtnSI,12856
+cmem_plugin_reason/plugin_validate.py,sha256=S3YSt7nCrzd0Lit-h3cgybFhFT6eZCB03sR5C28-6jo,9864
+cmem_plugin_reason/reason.png,sha256=MYb0TOJSPbSvVRqVvtg5XqkrHD25oc-64TPmsv7QtsY,2675
+cmem_plugin_reason/utils.py,sha256=V1sz6wRR6W_GDr20-1Y-ma5aM-8nPPvydOGWYHnz9Yc,8816
+cmem_plugin_reason/validate.png,sha256=qHborCINZMM9xGYe3ZNIEF-lMnR5AbBiYfGp0YKV0_k,28412
+cmem_plugin_reason-1.0.0b3.dist-info/LICENSE,sha256=5t6lcWcFU3TBO5wwq9PYNbgzfVfFUuL-80v5BTGuuMQ,11334
+cmem_plugin_reason-1.0.0b3.dist-info/METADATA,sha256=2zbRWX_rqXAqJvGSbE9FOAr5oakYlQvJtit53VipmkI,1190
+cmem_plugin_reason-1.0.0b3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+cmem_plugin_reason-1.0.0b3.dist-info/RECORD,,
