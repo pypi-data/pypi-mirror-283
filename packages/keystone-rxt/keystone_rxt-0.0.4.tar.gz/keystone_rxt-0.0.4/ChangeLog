@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+0.0.4
+-----
+
+* feat: update keystone-rxt to use the new rxt role (#6)
