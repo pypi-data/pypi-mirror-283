@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+jaxtra/__init__.py
+jaxtra/layers.py
+jaxtra.egg-info/PKG-INFO
+jaxtra.egg-info/SOURCES.txt
+jaxtra.egg-info/dependency_links.txt
+jaxtra.egg-info/requires.txt
+jaxtra.egg-info/top_level.txt
