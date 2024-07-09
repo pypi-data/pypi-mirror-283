@@ -1,0 +1,9 @@
+chess_pairings/__init__.py,sha256=2DRp6uQqj9MaOWTKNW7R3m5njozflEe0LqQlc0e32_0,181
+chess_pairings/__init__.pyi,sha256=jZqL3kUepJ3YSVyh5Z0UKmDJmyftAq5LVWTK5k4O7qw,465
+chess_pairings/_classify.py,sha256=3upD-VMdbpKlkIsnmJ76MI3fP8SE0FIj-jErfBOfQHo,1670
+chess_pairings/_types.py,sha256=6lcC6ZdbgPodsIB8sti7c3MInI3WxKFRIeJKV3qvc5c,1304
+chess_pairings/mapping.py,sha256=Xa0bmtK9e5bI3ZzpqVQR-vxgNIVQ39upDA2eu9nw51g,2584
+chess_pairings-0.2.0.dist-info/METADATA,sha256=CATKpYapjWVCJfn8UqBNd4KKsF3cZ_8b0sXAE-mBmHE,376
+chess_pairings-0.2.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+chess_pairings-0.2.0.dist-info/top_level.txt,sha256=BmZfbDTpu3zxCQLagFhbbuxkoiGQNzyqSWtkGqOeDYo,15
+chess_pairings-0.2.0.dist-info/RECORD,,
