@@ -1,0 +1,7 @@
+requests
+cryptography
+psutil
+
+[dev]
+pytest
+pytest-cov
