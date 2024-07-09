@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: virt-back
+Version: 0.2.1
+Summary: virt-back: A backup utility for QEMU, KVM, XEN, and Virtualbox guests
+Home-page: https://git.unturf.com/python/virt-back
+Author: Russell Ballestrini
+Author-email: russell@ballestrini.net
+License: Public Domain
+Keywords: backup virtual hypervisor QEMU KVM XEN Virtualbox
+Platform: All
+
+A backup utility for QEMU, KVM, XEN, and Virtualbox guests.
+Virt-back is a python application that uses the libvirt api to safely 
+shutdown, gzip, and restart guests.  The backup process logs to syslog
+for auditing and virt-back works great with cron for scheduling outages.
+Virt-back has been placed in the public domain and 
+the latest version may be downloaded here:
+https://git.unturf.com/python/virt-back

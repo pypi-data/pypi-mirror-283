@@ -1,0 +1,129 @@
+A backup utility for QEMU, KVM, XEN, and Virtualbox guests.
+
+Virt-back is a python application that uses the libvirt api to safely 
+shutdown, gzip, and restart guests.  The backup process logs to syslog
+for auditing and virt-back works great with cron for scheduling outages.
+Virt-back has been placed in the public domain and 
+the latest version may be downloaded here:
+
+https://git.unturf.com/python/virt-back
+
+
+**usage**
+
+```
+root@guile[/mnt/downloads/virt-back]# ./virt-back --help
+Usage: virt-back [options]
+
+A backup utility for QEMU, KVM, XEN, and Virtualbox guests. Virt-back is a
+python application that uses the libvirt api to safely  shutdown, gzip, and
+restart guests.  The backup process logs to syslog for auditing and virt-back
+works great with cron for scheduling outages. Virt-back has been placed in the
+public domain and  the latest version may be downloaded here:
+https://git.unturf.com/python/virt-back
+
+Options:
+  -h, --help            show this help message and exit
+  -q, --quiet           prevent output to stdout
+  -d, --date            append date to tar filename [default: no date]
+  -g, --no-gzip         do not gzip the resulting tar file
+  -a amount, --retention=amount
+                        backups to retain [default: 3]
+  -p 'PATH', --path='PATH'
+                        backup path [default: '/KVMBACK']
+  -u 'URI', --uri='URI'
+                        optional hypervisor uri
+
+  Actions for info testing:
+    These options display info or test a list of guests.
+
+    -i, --info          info/test a list of guests (space delimited dom names)
+    --info-all          attempt to show info on ALL guests
+
+  Actions for a list of dom names:
+    WARNING:  These options WILL bring down guests!
+
+    -b, --backup        backup a list of guests (space delimited dom names)
+    -r, --reboot        reboot a list of guests (space delimited dom names)
+    -s, --shutdown      shutdown a list of guests (space delimited dom names)
+    -c, --create        start a list of guests (space delimited dom names)
+
+  Actions for all doms:
+    WARNING:  These options WILL bring down ALL guests!
+
+    --backup-all        attempt to shutdown, backup, and start ALL guests
+    --reboot-all        attempt to shutdown and then start ALL guests
+    --shutdown-all      attempt to shutdown ALL guests
+    --create-all        attempt to start ALL guests
+```
+
+How to backup zfs snapshot all KVM instances on a TrueNAS Scale, 
+
+```
+root@guile[/mnt/downloads/virt-back]# ./virt-back -u "qemu+unix:///system?socket=/run/truenas_libvirt/libvirt-sock" --backup-all --path /mnt/personal/backup/virt-back --no-gzip --retention 5
+
+shutdown: invoking shutdown on 1_akuma
+shutdown: waited 0 seconds for 1_akuma to shut off
+backup: invoking backup for 1_akuma
+backup: checking if /dev/zvol/downloads/akuma-tfjpo7 is a ZFS dataset
+backup: downloads/akuma-tfjpo7 is a ZFS dataset
+backup: creating ZFS snapshot downloads/akuma-tfjpo7@backup-2024-07-07-2 for 1_akuma
+backup: sending ZFS snapshot downloads/akuma-tfjpo7@backup-2024-07-07-2 to /mnt/personal/backup/virt-back/1_akuma-2024-07-07.zfs for 1_akuma
+backup: skipping ISO file /mnt/downloads/iso/ubuntu-24.04-live-server-amd64.iso for 1_akuma
+create: invoking create on 1_akuma
+backup: rotating backup files for 1_akuma
+backup: archiving files for 1_akuma to /mnt/personal/backup/virt-back/1_akuma.tar
+backup: archiving /mnt/personal/backup/virt-back/1_akuma.xml for 1_akuma
+backup: checking if /dev/zvol/downloads/akuma-tfjpo7 is a ZFS dataset
+backup: downloads/akuma-tfjpo7 is a ZFS dataset
+backup: archiving /mnt/personal/backup/virt-back/1_akuma-2024-07-07.zfs for 1_akuma
+backup: finished backup for 1_akuma
+```
+
+## Restoring from a ZFS Backup
+
+This section explains how to restore a KVM instance from a ZFS backup using the `virt-back` utility. The process involves extracting the backup archive, restoring the ZFS snapshot, and creating a new VM in TrueNAS Scale using the restored ZFS volume.
+
+### Step-by-Step Restore Process
+
+1. **Extract the Backup Archive**: Extract the tar archive to get the ZFS snapshot file and the XML configuration file.
+2. **Restore the ZFS Snapshot to a New Dataset**: Use the `zfs receive` command to restore the ZFS snapshot to a new dataset.
+3. **Create a New VM in TrueNAS Scale**: Use the TrueNAS Scale UI to create a new VM and point it to the restored ZFS volume.
+
+### Detailed Steps
+
+#### 1. Extract the Backup Archive
+
+First, extract the tar archive to get the ZFS snapshot file and the XML configuration file. Use the `--strip-components` option to remove the leading directory components if necessary.
+
+```bash
+tar -xvf /mnt/personal/backup/virt-back/1_akuma.tar --strip-components=4 -C /mnt/personal/backup/virt-back
+```
+
+This command will extract the files directly to the `/mnt/personal/backup/virt-back` directory, removing the leading directory components.
+
+#### 2. Restore the ZFS Snapshot to a New Dataset
+
+Use the `zfs receive` command to restore the ZFS snapshot to a new dataset. Assuming the extracted ZFS snapshot file is named `1_akuma-2024-07-07.zfs`:
+
+```bash
+zfs receive -F downloads/akuma-tfjpo7-restored < /mnt/personal/backup/virt-back/1_akuma-2024-07-07.zfs
+```
+
+This command will restore the ZFS snapshot to the `downloads/akuma-tfjpo7-restored` dataset.
+
+#### 3. Create a New VM in TrueNAS Scale
+
+1. **Open TrueNAS Scale UI**: Log in to the TrueNAS Scale web interface.
+2. **Navigate to Virtual Machines**: Go to the "Virtual Machines" section.
+3. **Create a New VM**:
+   - Click on "Add" to create a new VM.
+   - Fill in the necessary details for the new VM (e.g., name, CPU, memory).
+4. **Attach the Restored ZFS Volume**:
+   - In the "Disks" section, add a new disk.
+   - Select "Existing Zvol" and choose the restored ZFS volume (`downloads/akuma-tfjpo7-restored`).
+5. **Complete the VM Creation**: Finish the VM creation process by following the remaining steps in the UI.
+
+### Summary
+
+By following these steps, you can restore the ZFS snapshot and reattach it to a new VM using the TrueNAS Scale UI. This process involves extracting the backup archive, restoring the ZFS snapshot to a new dataset, and creating a new VM in TrueNAS Scale, pointing it to the restored ZFS volume. This approach ensures that the original dataset remains unaffected and allows you to easily restore and reattach your KVM instances. It's similar to cloning an existing instance except it's from a file backup so the machine will have all the attributes of the clone don't start them both at the same time because that would have IP address overlaps etc.
