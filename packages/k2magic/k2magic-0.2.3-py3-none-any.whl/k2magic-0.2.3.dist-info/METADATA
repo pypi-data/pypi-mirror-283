@@ -1,0 +1,123 @@
+Metadata-Version: 2.1
+Name: k2magic
+Version: 0.2.3
+Summary: K2data内部的数据分析工具包
+Home-page: https://www.k2data.com.cn
+Author: K2data
+Author-email: admin@k2data.com.cn
+License: MIT License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: sqlalchemy
+
+# K2Magic
+K2Magic是K2Assets提供的数据分析开发包（以下简称SDK），用于简化Python里访问各类数据库的操作。
+
+## 一、安装SDK
+
+安装SDK：
+```
+pip install k2magic
+```
+
+升级SDK到最新版本：
+```
+pip install --upgrade k2magic
+```
+
+## 二、使用SDK
+
+### 2.1 基本用法
+
+在python代码里使用SDK可以直接连接到指定数据库，并读写其中数据表的数据。假设数据库里有数据表`table1`的结构如下::
+```
+CREATE TABLE table1 (
+    k_device VARCHAR(255) PRIMARY KEY,
+    col1 FLOAT,
+    col2 FLOAT,
+    col3 FLOAT
+);
+```
+
+对上述数据表操作的示例代码：
+```
+import pandas as pd
+from k2magic.dataframe_db import DataFrameDB
+
+db = DataFrameDB('postgresql+psycopg2://...')  # 此为连接字符串
+df = pd.DataFrame({'k_device': ['a', 'b', 'c'], 'col1': [1, 2, 3], 'col2': [4, 5, 6]})
+
+db.insert('table1', df)
+db.update('table1', df, index_keys=['k_device'])
+db.upsert('table1', df, index_keys=['k_device'])
+df = db.select('table1', condition='col1 > 1')
+df = db.select('table1', limit=3, order_by=['k_device DESC'])
+df = db.sql_select('select * from table1')
+db.delete('table1')
+
+db.create_table(df, 'table2', primary_keys=['k_device'])
+db.drop_table('table2')
+```
+
+### 2.2 切换数据库
+
+SDK兼容多种数据库的方言，用户只需修改初始化`DataFrameDB`时的`连接字符串`参数，其余代码不需要修改，即可切换到另一个数据库。各类数据库的连接字符串格式如下:
+
+已经过测试的：
+- postgresql+psycopg2://username:password@hostname/database_name
+- oracle+cx_oracle://username:password@hostname:port/database_name
+- mssql+pymssql://username:password@hostname:port/database_name
+- k2assets://hostname:port/k2repo
+
+未经过测试的：
+- mysql+pymysql://username:password@hostname/database_name
+- 更多请参考：https://docs.sqlalchemy.org/en/20/dialects/
+
+注意：使用前请确保已安装相应的数据库驱动，例如对MySQL数据库需要先`pip install pymysql`，个别数据库驱动还需要做额外配置步骤请参考驱动文档。
+
+
+### 2.3 读取K2Assets数据
+除了能够直接访问各类数据库外，SDK还支持访问K2Assets Repo里的数据，即可以将K2Assets当作数据库，其中的Repo就是数据库里的表。
+
+使用方法与其他数据库是相同的，只要更换连接字符串即可，下面是一个示例：
+```
+import pandas as pd
+from k2magic.dataframe_db import DataFrameDB
+
+# 连接到dev环境的K2Assets，每个repo视为一张表
+db = DataFrameDB('k2assets://192.168.132.167:8765/k2repo')
+
+# 查询数据（默认返回最新数据）
+df = db.select('repo_XiLinHaoTe_1sec', columns=['k_device', 'k_ts', 'NacWdSpdFltS', 'CnvW'])
+
+# 查询数据（带时间和设备过滤条件）
+df = db.select('repo_XiLinHaoTe_1sec', columns=['k_device', 'k_ts', 'NacWdSpdFltS', 'CnvW'],
+              condition='k_ts between 1656691200000 AND 1656777600000 and k_device = \'XiLinHaoTe002\'')
+```
+
+注意：
+- 目前SDK只支持读取Repo数据，未来有可能支持写数据；
+- K2Assets环境需要部署`k2a-calcite-service`服务，目前此服务还没有包含在K2Assets产品里，只在dev环境部署了用于测试。
+
+
+### 2.4 异常处理
+
+SDK进行数据库操作时，如果中途遇到异常情况会抛出`DataFrameDBException`，并自动回滚数据库到操作前的状态。用户可以使用`try..except`捕获此异常进行必要的处理：
+
+```
+try:
+    db.insert('table1', df)
+except DataFrameDBException as e:
+    print('数据插入(部分)失败，操作已回滚')
+```
