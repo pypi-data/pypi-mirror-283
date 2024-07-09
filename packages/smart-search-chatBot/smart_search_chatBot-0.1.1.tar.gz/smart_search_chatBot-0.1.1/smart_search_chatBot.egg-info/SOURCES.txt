@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+SMARTSEARCHCHATBOT/__init__.py
+SMARTSEARCHCHATBOT/semantic_search_chatBot.py
+smart_search_chatBot.egg-info/PKG-INFO
+smart_search_chatBot.egg-info/SOURCES.txt
+smart_search_chatBot.egg-info/dependency_links.txt
+smart_search_chatBot.egg-info/requires.txt
+smart_search_chatBot.egg-info/top_level.txt
+tests/test_semantic_search.py

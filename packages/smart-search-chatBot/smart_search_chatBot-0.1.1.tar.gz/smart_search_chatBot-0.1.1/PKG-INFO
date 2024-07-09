@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: smart_search_chatBot
+Version: 0.1.1
+Summary: A package for semantic search using SentenceTransformers and Google Translate.
+Home-page: https://github.com/yourusername/smart_search
+Author: Abohassan&Abdelkader
+Author-email: mohamed.ah.abohassan@gmail.com,abdelkadertalaat@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Your New Project Name
+
+A package for semantic search using SentenceTransformers and Google Translate.
+
+## Installation
+
+```bash
+pip install smart_search_chatBot
