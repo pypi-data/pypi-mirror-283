@@ -1,0 +1,17 @@
+ollama_bar/__main__.py,sha256=eg5K9Fs8jHUoY45yCeHa4mDTEjxaPu0sC7I0Ld0bxL0,138
+ollama_bar/_version.py,sha256=PKIMyjdUACH4-ONvtunQCnYE2UhlMfp9su83e3HXl5E,411
+ollama_bar/command_display_window.py,sha256=LVYIq29i9oRDyZTmWqMYnkEbIyLxuIlGK-BxpkXBTxs,1886
+ollama_bar/ollama_bar_app.py,sha256=ITI2gXSJ8StbMSNcYVp5GybddKfkD4STxEuOeOXR9do,2400
+ollama_bar/process_monitor.py,sha256=Udr3SLOmF5HiGO6iQHkkiMymAaO_ILzN7HGZDGktOYk,2710
+ollama_bar/resources/off.svg,sha256=hLkvn21W1KQI08GD95sLorEOAtti81LRKLFSgHH_q8w,5727
+ollama_bar/resources/ollama.png,sha256=XFUoUEwwfTSvUE85vE5wB9L28x7gDatpnMkVhNGviso,7487
+ollama_bar/resources/on.svg,sha256=a9YfziiEyYbeZXJORgdvE1nkzR1cF6iVn2jN8OF5CSk,5745
+ollama_bar-0.1.1.data/data/ollama_bar/off.svg,sha256=hLkvn21W1KQI08GD95sLorEOAtti81LRKLFSgHH_q8w,5727
+ollama_bar-0.1.1.data/data/ollama_bar/ollama.png,sha256=XFUoUEwwfTSvUE85vE5wB9L28x7gDatpnMkVhNGviso,7487
+ollama_bar-0.1.1.data/data/ollama_bar/on.svg,sha256=a9YfziiEyYbeZXJORgdvE1nkzR1cF6iVn2jN8OF5CSk,5745
+ollama_bar-0.1.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ollama_bar-0.1.1.dist-info/METADATA,sha256=fkDF2A_IkVb1QxttQZcpqrZwYrddbZLvPUsemUqfpjE,2459
+ollama_bar-0.1.1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+ollama_bar-0.1.1.dist-info/entry_points.txt,sha256=EkSD2jQ_rfnIh2qjyT78i8FUT_uGjqV_Yp__h8-GqBg,56
+ollama_bar-0.1.1.dist-info/top_level.txt,sha256=cGjHPd4-umoIncHwTB2UqXZqs43Qw9vstGgEeXTYOdE,11
+ollama_bar-0.1.1.dist-info/RECORD,,
