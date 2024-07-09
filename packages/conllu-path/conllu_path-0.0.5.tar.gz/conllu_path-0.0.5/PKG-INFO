@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: conllu_path
+Version: 0.0.5
+Summary: Package for searching conllu trees
+Author-email: Serban Hartular <hartular@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: lark>=1.1.8
+Description-Content-Type: text/markdown
+
+Package for searching conllu trees.
+
+Visit https://conllu-path.readthedocs.io/ for more details.
