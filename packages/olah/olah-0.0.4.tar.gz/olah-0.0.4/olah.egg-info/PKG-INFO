@@ -1,0 +1,151 @@
+Metadata-Version: 2.1
+Name: olah
+Version: 0.0.4
+Summary: Self-hosted lightweight huggingface mirror.
+Project-URL: Homepage, https://github.com/vtuber-plan/olah
+Project-URL: Bug Tracker, https://github.com/vtuber-plan/olah/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi
+Requires-Dist: httpx
+Requires-Dist: numpy
+Requires-Dist: pydantic<=1.10.13
+Requires-Dist: requests
+Requires-Dist: toml
+Requires-Dist: rich>=10.0.0
+Requires-Dist: shortuuid
+Requires-Dist: uvicorn
+Requires-Dist: tenacity>=8.2.2
+Requires-Dist: pytz
+Provides-Extra: dev
+Requires-Dist: black==23.3.0; extra == "dev"
+Requires-Dist: pylint==2.8.2; extra == "dev"
+Requires-Dist: pytest==8.2.2; extra == "dev"
+
+# olah
+Olah is self-hosted lightweight huggingface mirror service. `Olah` means `hello` in Hilichurlian.
+
+Other languages: [中文](README_zh.md)
+## Features
+* Huggingface Data Cache
+* Models mirror
+* Datasets mirror
+* Spaces mirror
+
+## Install
+
+### Method 1: With pip
+
+```bash
+pip install olah
+```
+
+or:
+
+```bash
+pip install git+https://github.com/vtuber-plan/olah.git 
+```
+
+### Method 2: From source
+
+1. Clone this repository
+```bash
+git clone https://github.com/vtuber-plan/olah.git
+cd olah
+```
+
+2. Install the Package
+```bash
+pip install --upgrade pip
+pip install -e .
+```
+
+## Quick Start
+Run the command in the console: 
+```bash
+python -m olah.server
+```
+
+Then set the Environment Variable `HF_ENDPOINT` to the mirror site (Here is http://localhost:8090).
+
+Linux: 
+```bash
+export HF_ENDPOINT=http://localhost:8090
+```
+
+Windows Powershell:
+```bash
+$env:HF_ENDPOINT = "http://localhost:8090"
+```
+
+Starting from now on, all download operations in the HuggingFace library will be proxied through this mirror site.
+```bash
+pip install -U huggingface_hub
+```
+
+```python
+from huggingface_hub import snapshot_download
+
+snapshot_download(repo_id='Qwen/Qwen-7B', repo_type='model',
+                  local_dir='./model_dir', resume_download=True,
+                  max_workers=8)
+```
+
+Or you can download models and datasets by using huggingface cli.
+
+Download GPT2:
+```bash
+huggingface-cli download --resume-download openai-community/gpt2 --local-dir gpt2
+```
+
+Download WikiText:
+```bash
+huggingface-cli download --repo-type dataset --resume-download Salesforce/wikitext --local-dir wikitext
+```
+
+You can check the path `./repos`, in which olah stores all cached datasets and models.
+
+## Start the server
+Run the command in the console: 
+```bash
+python -m olah.server
+```
+
+Or you can specify the host address and listening port:
+```bash
+python -m olah.server --host localhost --port 8090
+```
+Please remember to change the `--mirror-url` and `--mirror-lfs-url` to the actual URLs of the mirror site while modifying the host and port.
+
+The default mirror cache path is `./repos`, you can change it by `--repos-path` parameter:
+```bash
+python -m olah.server --host localhost --port 8090 --repos-path ./hf_mirrors
+```
+
+**Note that the cached data between different versions cannot be migrated. Please delete the cache folder before upgrading to the latest version of Olah.**
+
+## Future Work
+
+* Authentication
+* Administrator and user system
+* OOS backend support
+* Mirror Update Schedule Task
+
+## License
+
+olah is released under the MIT License.
+
+
+## See also
+
+- [olah-docs](https://github.com/vtuber-plan/olah/tree/main/docs)
+- [olah-source](https://github.com/vtuber-plan/olah)
+
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=vtuber-plan/olah&type=Date)](https://star-history.com/#vtuber-plan/olah&Date)
+
