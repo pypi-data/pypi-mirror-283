@@ -1,0 +1,2 @@
+[console_scripts]
+git-user-manager = git_user_manager.__main__:main
