@@ -1,0 +1,22 @@
+C:\Users\stasb\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/stasb/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe "-DCMAKE_C_COMPILER=C:/Program Files/LLVM/bin/clang.exe" "-DCMAKE_CXX_COMPILER=C:/Program Files/LLVM/bin/clang++.exe" -DCMAKE_BUILD_TYPE=Debug -G Ninja -S C:\Users\stasb\PycharmProjects\sampo\sampo\native -B C:\Users\stasb\PycharmProjects\sampo\sampo\native\cmake-build-debug
+-- Conan: Adding bnipi_sampo remote repository (https://center.conan.io/) verify ssl (True)
+-- Conan: Detected VS runtime: MDd
+-- Conan: checking conan executable
+-- Conan: Found program C:/Program Files/Conan/conan/conan.exe
+-- Conan: Version found Conan version 1.59.0
+Python_FOUND:TRUE
+Python_VERSION:3.10.11
+Python_Development_FOUND:TRUE
+Python_LIBRARIES:optimized;C:/Users/stasb/AppData/Local/Programs/Python/Python310/libs/python310.lib;debug;C:/Users/stasb/AppData/Local/Programs/Python/Python310/libs/python310_d.lib
+C:/Users/stasb/PycharmProjects/sampo/sampo/native/native/../../../venv/Lib/site-packages/numpy/core/include
+OpenMP found
+Executable enabled, building
+-- Configuring done (3.5s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_C_COMPILER
+
+
+-- Build files have been written to: C:/Users/stasb/PycharmProjects/sampo/sampo/native/cmake-build-debug

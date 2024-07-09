@@ -1,0 +1,75 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"sampo_install_python_module"
+		],
+		"files" : 
+		[
+			"cmake/sampo_install_utils.cmake",
+			"native/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 89,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 35,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 36,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 37,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Runtime",
+			"destination" : "C:/Users/stasb/PycharmProjects/sampo/sampo/native/cmake-build-debug/native/wheel/native",
+			"paths" : 
+			[
+				"natived.pyd"
+			],
+			"targetId" : "native::@39f8f1661852dc709093",
+			"targetIndex" : 2,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Runtime",
+			"type" : "code"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Runtime",
+			"type" : "code"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "native",
+		"source" : "native"
+	}
+}
