@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/vistenum/__init__.py
+src/vistenum/_auto.py
+src/vistenum/_enum_box.py
+src/vistenum/_enum_object.py
+src/vistenum/_enum_space.py
+src/vistenum/_vist_enu_meta.py
+src/vistenum.egg-info/PKG-INFO
+src/vistenum.egg-info/SOURCES.txt
+src/vistenum.egg-info/dependency_links.txt
+src/vistenum.egg-info/top_level.txt
+tests/test_enum_box.py
+tests/test_vistenum.py
