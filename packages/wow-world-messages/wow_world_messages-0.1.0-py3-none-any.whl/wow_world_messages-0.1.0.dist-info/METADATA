@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: wow_world_messages
+Version: 0.1.0
+Summary: Message definitions for World of Warcraft Login servers
+Author-email: Gtker <python@gtker.com>
+Project-URL: Repository, https://github.com/gtker/wow_messages_python/
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: wow-srp >=0.3.0
+
+# `wow_world_messages`
+
+```bash
+python -m pip install -U setuptools wheel build
+python -m pip install .
+python -m build .
+```
