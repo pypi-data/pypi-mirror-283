@@ -1,0 +1,9 @@
+format_currency/__about__.py,sha256=JZ-Hq1AM0KQjpFghR__nYfkaT125R9H6P9H01lvmN9M,135
+format_currency/__init__.py,sha256=176RXjWsQZtgtvLZyaCxWC17W-Z-uxeDFEeWudOQsz8,159
+format_currency/country.py,sha256=8zWxYCYryvaIoG5o0Y5lirCv4YiVK9GPMO40Q5is5A0,4474
+format_currency/format.py,sha256=28WK9FdM8l4FVLiR2PY3aveZ9JLasKwJjZ6yoDjxH0A,5368
+format_currency/data/countries.json,sha256=4fcQ1gYM5E02fv_4-mXY2EqNbUEvqpxm2PqQBMzL3CE,511003
+format_currency-0.0.6.dist-info/METADATA,sha256=Vg0ywphtPrsLovr8QGdjgmFtyJdd6lMQS3TfT1osFWc,2481
+format_currency-0.0.6.dist-info/WHEEL,sha256=KGYbc1zXlYddvwxnNty23BeaKzh7YuoSIvIMO4jEhvw,87
+format_currency-0.0.6.dist-info/licenses/LICENSE.txt,sha256=7lU2NbldgkE0ztlkOksb9xd5hbkR-ldKKd3lAonp1Gk,1105
+format_currency-0.0.6.dist-info/RECORD,,
