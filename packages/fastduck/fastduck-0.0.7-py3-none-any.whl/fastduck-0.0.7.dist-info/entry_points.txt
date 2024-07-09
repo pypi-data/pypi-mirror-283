@@ -1,0 +1,2 @@
+[nbdev]
+fastduck = fastduck._modidx:d
