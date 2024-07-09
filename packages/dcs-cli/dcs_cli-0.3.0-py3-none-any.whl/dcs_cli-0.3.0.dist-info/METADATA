@@ -1,0 +1,219 @@
+Metadata-Version: 2.1
+Name: dcs-cli
+Version: 0.3.0
+Summary: SDK for DataChecks
+Author: Waterdip Labs
+Author-email: hello@waterdip.ai
+Requires-Python: >=3.9,<3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Provides-Extra: all-dbs
+Provides-Extra: clickhouse
+Provides-Extra: duckdb
+Provides-Extra: mssql
+Provides-Extra: mysql
+Provides-Extra: oracle
+Provides-Extra: postgresql
+Provides-Extra: preql
+Provides-Extra: presto
+Provides-Extra: redshift
+Provides-Extra: snowflake
+Provides-Extra: trino
+Provides-Extra: vertica
+Requires-Dist: attrs (>=23.1.0)
+Requires-Dist: click (>=8.1)
+Requires-Dist: clickhouse-driver ; extra == "clickhouse" or extra == "all-dbs"
+Requires-Dist: cryptography ; extra == "snowflake" or extra == "all-dbs"
+Requires-Dist: duckdb ; extra == "duckdb" or extra == "all-dbs"
+Requires-Dist: keyring
+Requires-Dist: mashumaro[msgpack] (>=2.9,<3.11.0)
+Requires-Dist: mysql-connector-python (>=8.0.29) ; extra == "mysql" or extra == "all-dbs"
+Requires-Dist: oracledb ; extra == "oracle" or extra == "all-dbs"
+Requires-Dist: preql (>=0.2.19) ; extra == "preql" or extra == "all-dbs"
+Requires-Dist: presto-python-client ; extra == "presto" or extra == "all-dbs"
+Requires-Dist: psycopg2 ; extra == "postgresql" or extra == "redshift" or extra == "all-dbs"
+Requires-Dist: pydantic (>=1.10.12)
+Requires-Dist: pyodbc (>=4.0.39) ; extra == "mssql" or extra == "all-dbs"
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: rich
+Requires-Dist: snowflake-connector-python (>=3.0.2,<4.0.0) ; extra == "snowflake" or extra == "all-dbs"
+Requires-Dist: tabulate (>=0.9.0)
+Requires-Dist: toml (>=0.10.2)
+Requires-Dist: trino (>=0.314.0) ; extra == "trino" or extra == "all-dbs"
+Requires-Dist: typing-extensions (>=4.0.1)
+Requires-Dist: urllib3 (<2)
+Requires-Dist: vertica-python ; extra == "vertica" or extra == "all-dbs"
+Description-Content-Type: text/markdown
+
+<h1 align="center">
+  DCS CLI v0.3.0
+</h1>
+
+> SDK for DataChecks
+
+
+### Installation
+
+> Python version `>=3.9,<3.12`
+
+```bash
+
+$ pip install dcs_cli[all-dbs]
+
+```
+
+### Example Command [CLI]
+
+```sh
+
+$ dcs_cli --help
+
+$ dcs_cli run -C example.yaml --compare comparison_one --stats -j -jp output.json --html-report --report-path result.html
+```
+### Example Configuration
+
+```yml
+
+data_sources:
+  - name: iris_snowflake
+    type: snowflake
+    connection:
+      account: bp54281.central-india.azure
+      username: username
+      password: password
+      database: TEST_DCS
+      schema: PUBLIC
+      warehouse: compute_wh
+      role: accountadmin
+
+  - name: pgsql
+    type: postgres
+    connection:
+      host: localhost
+      port: 5432
+      username: postgres
+      password: password
+      database: dvdrental
+
+  - name: file1
+    type: file
+    file_path: "nk.kyc_data/SOURCE_EMPLOYEE_FILE.csv"
+
+  - name: file2
+    type: file
+    file_path: "nk.kyc_data/RAW_EMPLOYEE.csv"
+
+comparisons:
+  # FLATFILE TO SNOWFLAKE
+  comparison_one:
+    source:
+      data_source: file1
+      table: SOURCE_EMPLOYEE_FILE
+    target:
+      data_source: iris_snowflake
+      table: RAW_EMPLOYEE
+    key_columns:
+      - custid
+    columns:
+      - FIRSTNAME
+      - lastname
+      - designation
+      - salary
+    columns_mappings:
+      - source_column: custid
+        target_column: CUSTID
+
+      - source_column: lastname
+        target_column: LASTNAME
+
+      - source_column: designation
+        target_column: DESIGNATION
+
+      - source_column: salary
+        target_column: SALARY
+
+  # DB TO DB (SNOWFLAKE)
+  comparison_two:
+    source:
+      data_source: iris_snowflake
+      table: RAW_EMPLOYEE
+
+    target:
+      data_source: iris_snowflake
+      table: TL_EMPLOYEE
+    key_columns:
+      - CUSTID
+    columns:
+      - FIRSTNAME
+      - LASTNAME
+      - DESIGNATION
+      - SALARY
+
+  # FILE TO FILE
+  comparison_three:
+    source:
+      data_source: file2
+      table: RAW_EMPLOYEE
+
+    target:
+      data_source: file1
+      table: SOURCE_EMPLOYEE_FILE
+    key_columns:
+      - custid
+    columns:
+      - FIRSTNAME
+      - lastname
+      - designation
+      - salary
+    columns_mappings:
+      - source_column: FIRSTNAME
+        target_column: firstname
+
+  # DB TO DB (Postgres)
+  comparison_four:
+    source:
+      data_source: pgsql_1
+      table: actor
+    target:
+      data_source: pgsql_2
+      table: actor2
+    key_columns:
+      - actor_id
+    columns:
+      - first_name
+      - last_name
+      - last_update
+    columns_mappings:
+      - source_column: actor_id
+        target_column: actor_id1
+
+      - source_column: first_name
+        target_column: first_name1
+
+      - source_column: last_name
+        target_column: last_name1
+
+      - source_column: last_update
+        target_column: last_update1
+
+  # DB TO DB (Postgres)
+  comparison_five:
+    source:
+      data_source: pgsql_1
+      table: actor
+    target:
+      data_source: pgsql_2
+      table: new_table
+    key_columns:
+      - actor_id
+    columns:
+      - first_name
+      - last_name
+      - last_update
+
+
+Please refer to example.yaml file
+
+```
