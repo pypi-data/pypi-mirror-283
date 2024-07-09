@@ -1,0 +1,14 @@
+MANIFEST.in
+setup.py
+recommendation/__init__.py
+recommendation/tools/__init__.py
+recommendation/tools/recommendation_api_tool.py
+recommendation/tools/utils.py
+recommendation/yamls/recommendation_api_tool.yaml
+recommendation_api.egg-info/PKG-INFO
+recommendation_api.egg-info/SOURCES.txt
+recommendation_api.egg-info/dependency_links.txt
+recommendation_api.egg-info/entry_points.txt
+recommendation_api.egg-info/top_level.txt
+tests/__init__.py
+tests/test_recommendation_api_tool.py
