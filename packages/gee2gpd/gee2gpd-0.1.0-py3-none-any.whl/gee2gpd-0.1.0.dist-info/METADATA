@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: gee2gpd
+Version: 0.1.0
+Summary: A smiple tool for extracting ee collections to geo data frames
+Author-email: Ryan Hamilton <ryan.hamilton@ec.gc.ca>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: earthengine-api
+Requires-Dist: geopandas
+Requires-Dist: timezonefinder
+Provides-Extra: dev
+Requires-Dist: earthengine-api ; extra == 'dev'
+Requires-Dist: geopandas ; extra == 'dev'
+Requires-Dist: timezonefinder ; extra == 'dev'
+Requires-Dist: build ; extra == 'dev'
+Requires-Dist: ruff ; extra == 'dev'
+
+# gee2gpd
+Simple tool to convert Collections to GeoDataFrames
