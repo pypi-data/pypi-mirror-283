@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "medwave-extended-ffastapi"
+version = "0.1.3"
+description = "FastAPI utilities."
+authors = ["Paweł Pozorski <pawel.pozorski@medwave.app>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.111.0"
+pydantic = "^2.7.2"
+pydantic-core = "^2.18.3"
+pydantic-settings = "^2.2.1"
+medwave-extended-sql = "^0.2.2"
+medwave-extended-logging = "^0.1.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
