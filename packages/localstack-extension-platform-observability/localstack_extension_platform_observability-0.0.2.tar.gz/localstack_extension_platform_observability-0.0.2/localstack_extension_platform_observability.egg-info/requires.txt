@@ -1,0 +1,2 @@
+localstack>=3.5
+werkzeug
