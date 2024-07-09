@@ -1,0 +1,5 @@
+rasterio
+numpy
+scikit-learn
+fiona
+shapely
