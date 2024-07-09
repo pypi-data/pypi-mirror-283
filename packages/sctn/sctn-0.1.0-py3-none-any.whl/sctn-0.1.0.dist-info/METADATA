@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: sctn
+Version: 0.1.0
+Summary: Spiking Continues Time Neuron
+Author: Yakir Hadad
+Author-email: yakir4123@email.com>
+Keywords: python,snn,ai
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: numpy ~=1.26.2
+Requires-Dist: numba ~=0.58.1
+Requires-Dist: networkx ~=3.2.1
+Requires-Dist: matplotlib ~=3.8.2
+
