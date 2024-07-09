@@ -1,0 +1,216 @@
+#!python
+
+"""
+threefive command line SCTE35 decoder.
+
+"""
+
+
+import sys
+from threefive import Stream, print2, decode, version
+import cProfile
+
+REV = "\033[7m"
+NORM = "\033[27m"
+
+
+class SupaStream(Stream):
+
+    def _parse_scte35(self, pkt, pid):
+        print2(pkt)
+        super()._parse_scte35(pkt, pid)
+
+
+def mk_sidecar(cue):
+    """
+    mk_sidecar generates a sidecar file with the SCTE-35 Cues
+    """
+    pts = 0.0
+    with open("sidecar.txt", "a") as sidecar:
+        cue.show()
+        if cue.packet_data.pts:
+            pts = cue.packet_data.pts
+        data = f"{pts},{cue.encode()}\n"
+        sidecar.write(data)
+
+
+HELP = f"""
+
+threefive can parse a SCTE-35 Cue in Base64, Hex, or Integer format.
+
+threefive can also parse SCTE-35 in MPEGTS streams
+from local files, over HTTP(S), UDP unicast or UDP multicast.
+
+{REV} use like this {NORM}
+
+   {REV} base64: {NORM}
+
+        threefive '/DAWAAAAAAAAAP/wBQb+AKmKxwAACzuu2Q=='
+
+    {REV} threefive writes all info to stderr:{NORM}
+
+     if you want to page or parse the output, use 2>&1 .
+
+        threefive '/DAWAAAAAAAAAP/wBQb+AKmKxwAACzuu2Q==' 2>&1 | grep "event_id'
+
+
+    {REV} hex: {NORM}
+
+       threefive '0xfc301600000000000000fff00506fe00a98ac700000b3baed9'
+
+    {REV} files: {NORM}
+
+        threefive myvideo.ts
+
+        threefive video1.ts video2.ts
+
+    {REV} stdin: {NORM}
+
+        cat myvideo.ts | threefive
+
+    {REV} http(s): {NORM}
+
+        threefive https://futzu.com/xaa.ts
+
+
+    {REV} udp: {NORM}
+
+        threefive udp://127.0.0.1:3535
+
+    {REV}multicast:{NORM}
+
+        threefive udp://@235.35.3.5:3535
+
+{REV} keywords {NORM}
+
+{REV}show the version of threefive:{NORM}
+
+        threefive version
+
+{REV}show the pids,programs and streams in an MPEGTS container:{NORM}
+
+        threefive show video.ts
+
+{REV}show raw SCTE-35 packets from MPEGTS video stream:{NORM}
+
+        threefive packets video.ts
+
+{REV}parse a stream,
+write PID,PTS pairs of the video to stderr:{NORM}
+
+        threefive pts video.ts
+
+{REV}parse a stream,
+write raw video to stdout,
+write SCTE-35 to stderr,
+write pts,scte35 cue pairsto sidecar.txt:{NORM}
+
+        threefive proxy https://example.com/video.ts
+
+{REV}parse a stream,
+write pts, SCTE-35 cue pairs to the file sidecar.txt:{NORM}
+
+        threefive sidecar https://example.com/video.ts
+
+{REV}show this help:{NORM}
+
+        threefive help
+
+"""
+
+
+def pts_chk(low):
+    """
+    pts_chk checks for pts keyword in sys.argv
+    and shows pts if present
+    """
+    if 'pts' in low:
+        idx =low.index('pts')
+        strm = Stream(sys.argv[idx+1])
+        strm.show_pts()
+        sys.exit()
+
+
+def version_chk(low):
+    """
+    version_chk checks for the version keyword.
+
+    """
+    if "version" in low:
+        print2(f"{version}")
+        sys.exit()
+
+
+def show_chk(low):
+    """
+    show_chk checks for the show keyword
+    and displays the streams if present.
+    """
+    if "show" in low:
+        idx =low.index('show')
+        strm = Stream(sys.argv[idx+1])
+        strm.show()
+        sys.exit()
+
+
+def packet_chk(low):
+    """
+    packet_chk checks for the packet keyword
+    and displays SCTE-35 packets if present.
+    """
+    if 'packets' in low:
+        idx =low.index('packets')
+        supa = SupaStream(sys.argv[idx+1])
+        supa.decode()
+        sys.exit()
+
+
+def proxy_chk(low):
+    """
+    proxy_chk checks for the proxy keyword
+    and proxies the stream to stdout if present.
+    proxy_chk also writes pts,cue pairs to sidecar.txt
+    """
+    if 'proxy' in low:
+        idx =low.index('proxy')
+        strm = Stream(sys.argv[idx+1])
+        strm.proxy(func=mk_sidecar)
+        sys.exit()
+
+
+def sidecar_chk(low):
+    """
+    sidecar_chk checks for the sidecar keyword and
+    generates a sidecar file if present.
+    """
+    if 'sidecar' in low:
+        idx =low.index('sidecar')
+        strm = Stream(sys.argv[idx+1])
+        strm.decode(func=mk_sidecar)
+        sys.exit()
+
+
+def help_chk(low):
+    """
+    help_chk checks sys.argv for the word help
+    and displays the help if found
+    """
+    if  "help" in low:
+        print2(HELP)
+        sys.exit()
+
+
+if __name__ == "__main__":
+    if sys.argv and len(sys.argv) > 1:
+        low = [x.lower() for x in sys.argv]
+        pts_chk(low)
+        show_chk(low)
+        packet_chk(low)
+        proxy_chk(low)
+        sidecar_chk(low)
+        help_chk(low)
+        version_chk(low)
+        for arg in sys.argv[1:]:
+            decode(arg)
+    else:
+        decode(sys.stdin.buffer)
