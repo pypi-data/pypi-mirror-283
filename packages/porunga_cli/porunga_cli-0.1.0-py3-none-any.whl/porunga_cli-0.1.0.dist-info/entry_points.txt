@@ -1,0 +1,3 @@
+[console_scripts]
+porunga=porunga_cli.cli:cli
+
