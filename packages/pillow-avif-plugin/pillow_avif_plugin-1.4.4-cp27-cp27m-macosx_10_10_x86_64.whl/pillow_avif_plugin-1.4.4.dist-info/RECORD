@@ -1,0 +1,9 @@
+pillow_avif/AvifImagePlugin.py,sha256=MfIVDuN7jVDceVl68b9R5lTHxzrHG6wpt6Ca-NbFdAw,8486
+pillow_avif/__init__.py,sha256=WQFEMp706st11VAv63ZKU1Detvxgq6CAyL3AySmoJAs,84
+pillow_avif/_avif.so,sha256=KUvKZufvtExQ7b1txl_MRUS-o6PbO2SlIejkbBJrANE,24810752
+pillow_avif_plugin-1.4.4.dist-info/LICENSE,sha256=2l49eVdgaNy9JTEPbstz1GaaPKw02gFdtuThTNUi730,25213
+pillow_avif_plugin-1.4.4.dist-info/METADATA,sha256=KhZHsl16mDxl_aWesM-vfS8J2-l7UlbRKkQe7ZvjpAI,1666
+pillow_avif_plugin-1.4.4.dist-info/WHEEL,sha256=5eFLU-agw4d37badOX7aXU2NX7h3HWlBGhWR3anlvA8,111
+pillow_avif_plugin-1.4.4.dist-info/top_level.txt,sha256=xrg4zRnqDyl_JEyEQh3oCcAU4BHneocD-DCFDzf4g9E,12
+pillow_avif_plugin-1.4.4.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+pillow_avif_plugin-1.4.4.dist-info/RECORD,,
