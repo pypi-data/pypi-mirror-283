@@ -1,0 +1,7 @@
+regex
+torch
+pandas
+numpy
+typer
+pysam
+scipy
