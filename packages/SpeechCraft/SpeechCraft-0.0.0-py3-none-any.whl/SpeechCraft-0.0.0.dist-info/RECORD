@@ -1,0 +1,11 @@
+speechcraft/__init__.py,sha256=ZgED0_I8gDXkjDay6GeNrbYO4--vxuDx2lYb_2H_cio,292
+speechcraft/cli.py,sha256=WdN8p-MHnIljhHQyE5TimYcqtZpnH02OPawKw1FhZ9w,2525
+speechcraft/server.py,sha256=QOuoBZCuFYv5Ccc0owtEf5fblAs0eJyZ4s5AA0yaC5Y,4058
+speechcraft/settings.py,sha256=L5fFKBP2tTPjNIbqogGWXCk4sMzzkhqRzLrKqYmkbnw,1376
+speechcraft/text2voice.py,sha256=FlGKxajjYZiKLf0ariR2CpewWNBk0IPIXVvpnPMoLjw,3373
+speechcraft/voice2voice.py,sha256=_Q2aPvOfMha0s2beVRFS0obZuUQtyL1Zsu2CJn2_FfY,1965
+SpeechCraft-0.0.0.dist-info/LICENSE,sha256=aMAIWx6zk5qNEutxJ1M9JfhMij4PFMAWKQBer5PAKD8,1082
+SpeechCraft-0.0.0.dist-info/METADATA,sha256=uFuu0XRVwoA1QQMRYhbqMxoy7_a9zY2fhpewU8zctP4,12250
+SpeechCraft-0.0.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+SpeechCraft-0.0.0.dist-info/top_level.txt,sha256=y3PuewwcBc_jCSgxBuTq58S2NoWaWUs2XvIND6coXRg,12
+SpeechCraft-0.0.0.dist-info/RECORD,,
