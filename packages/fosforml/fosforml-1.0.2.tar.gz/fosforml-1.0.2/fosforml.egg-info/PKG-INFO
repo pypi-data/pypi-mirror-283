@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: fosforml
+Version: 1.0.2
+Summary: REST API client for Fosfor AI
+Home-page: https://gitlab.fosfor.com/fosfor-decision-cloud/intelligence/mosaic-ai-client.git
+Author: Rakesh Gadiparthi
+Author-email: rakesh.gadiparthi@fosfor.com
+Classifier: Programming Language :: Python :: 3.8
