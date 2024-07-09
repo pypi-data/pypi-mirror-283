@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+deepseek_api/__init__.py
+deepseek_api/constants.py
+deepseek_api/deepseek_api.py
+deepseek_api/errors.py
+deepseek_api.egg-info/PKG-INFO
+deepseek_api.egg-info/SOURCES.txt
+deepseek_api.egg-info/dependency_links.txt
+deepseek_api.egg-info/requires.txt
+deepseek_api.egg-info/top_level.txt
