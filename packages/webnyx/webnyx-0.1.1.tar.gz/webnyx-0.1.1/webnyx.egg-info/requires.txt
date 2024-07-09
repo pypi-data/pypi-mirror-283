@@ -1,0 +1,8 @@
+Jinja2==3.1.4
+parse==1.20.2
+pytest-cov==5.0.0
+pytest==8.2.2
+requests-wsgi-adapter==0.4.1
+requests==2.32.3
+webob==1.8.7
+whitenoise==6.7.0
