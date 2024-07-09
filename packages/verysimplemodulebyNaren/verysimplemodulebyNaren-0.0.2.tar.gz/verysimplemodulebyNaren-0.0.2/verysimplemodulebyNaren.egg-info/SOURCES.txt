@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.py
+package_src/__init__.py
+package_src/test.py
+verysimplemodulebyNaren.egg-info/PKG-INFO
+verysimplemodulebyNaren.egg-info/SOURCES.txt
+verysimplemodulebyNaren.egg-info/dependency_links.txt
+verysimplemodulebyNaren.egg-info/top_level.txt
