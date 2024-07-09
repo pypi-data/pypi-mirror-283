@@ -1,0 +1,8 @@
+README.md
+setup.py
+pyrcentages/__init__.py
+pyrcentages/pyrcentages.py
+pyrcentages.egg-info/PKG-INFO
+pyrcentages.egg-info/SOURCES.txt
+pyrcentages.egg-info/dependency_links.txt
+pyrcentages.egg-info/top_level.txt
