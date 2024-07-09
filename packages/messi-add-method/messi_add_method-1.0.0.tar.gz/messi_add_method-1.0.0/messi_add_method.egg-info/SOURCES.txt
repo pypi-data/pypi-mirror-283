@@ -1,0 +1,8 @@
+setup.py
+messi_add_method/__init__.py
+messi_add_method/create_method.py
+messi_add_method.egg-info/PKG-INFO
+messi_add_method.egg-info/SOURCES.txt
+messi_add_method.egg-info/dependency_links.txt
+messi_add_method.egg-info/not-zip-safe
+messi_add_method.egg-info/top_level.txt

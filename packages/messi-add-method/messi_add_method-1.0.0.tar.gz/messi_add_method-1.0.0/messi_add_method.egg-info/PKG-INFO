@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: messi_add_method
+Version: 1.0.0
+Summary: Helper tools for adding new method into the MESSI pipeline.
+Author: Tony Liang
+Author-email: chunqingliang@gmail.com
+License: MIT
+Keywords: nextflow,bioinformatics,workflow,pipeline
+Requires-Python: >=3.8, <4
