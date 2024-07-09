@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling", 'manim', 'fonttools']
+
+build-backend = "hatchling.build"
+
+[project]
+name = "TechSolve_manim"
+version = "0.0.1"
+authors = [
+ { name="LLlBiDKiCLLb", email="LLlBiDKiCLLb@gmail.com" },
+]
+description = "A library with essential elements for technical diagrams."
+readme = "README.md"
+requires-python = ">=3.10.0"
+classifiers = [
+   "Programming Language :: Python :: 3",
+   "License :: OSI Approved :: MIT License",
+   "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/romasenkevich/TechSolve_manim"
+Issues = "https://github.com/romasenkevich/TechSolve_manim"

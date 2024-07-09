@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: TechSolve_manim
+Version: 0.0.1
+Summary: A library with essential elements for technical diagrams.
+Project-URL: Homepage, https://github.com/romasenkevich/TechSolve_manim
+Project-URL: Issues, https://github.com/romasenkevich/TechSolve_manim
+Author-email: LLlBiDKiCLLb <LLlBiDKiCLLb@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10.0
+Description-Content-Type: text/markdown
+
+# TechSolve_manim
+A library with essential elements for technical diagrams
