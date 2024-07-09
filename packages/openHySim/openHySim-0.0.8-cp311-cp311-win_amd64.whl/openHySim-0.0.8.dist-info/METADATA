@@ -1,0 +1,345 @@
+Metadata-Version: 2.1
+Name: openHySim
+Version: 0.0.8
+Summary: A package contains OpenSeesPy 3.6.0, OpenFrescoPy 2.7.2, and personal subroutines
+Home-page: http://github.com/nealleehit/osfeo
+Author: Ning Li
+Author-email: Ning Li <neallee@tju.edu.cn>
+Project-URL: Homepage, https://github.com/nealleehit/osfeo
+Project-URL: Bug Tracker, https://github.com/nealleehit/osfeo/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+
+# openHySim Package
+
+## Purpose
+
+This package includes OpenSeesPy 3.6.0 and OpenFrescoPy 2.7.2 (64-bit versions) bundled together. Additionally, it features custom subroutines, such as the 'ritz' command for deriving stiffness and mass matrices. These enhancements reflect developments in OpenSees and OpenFresco over the past decade.
+
+In 2023, with Matlab/Simulink 2021a being the final version to support xpcTarget, we transitioned our SpeedGoat real-time machine to the newer Matlab/Simulink Real-time OS, which employs a micro-core system for real-time modules and includes advanced features like the AI/ML/RL toolbox. However, during this transition, we noted that OpenFrescoPy was not fully integrated or adapted for Python interpretation, a gap that impacted our hybrid testing toolkit.
+
+To address this, we gathered the most recent API files for hybrid testing in a Windows 64-bit environment and enhanced the OpenFrescoPy modules. Consequently, we successfully merged OpenSeesPy and OpenFrescoPy into a single .pyd dynamic library.
+
+Additinal toolkit is particularly beneficial for students who may find configuring a hybrid testing environment challenging, as it simplifies the learning process.
+
+## Quick Tutorial
+
+```
+pip install openHySim
+from openHySim import *
+```
+
+Then you can use the command listed below.
+
+OpenSeesPy commands those already implemented,
+
+```
+    uniaxialMaterial
+	  APDFMD, APDMD, APDVFD, ASD_SMA_3K
+    testUniaxialMateria
+    setStrain
+    getStrain
+    getStress
+    getTangent
+    getDampTangent
+    wipe
+    model
+    node
+    fix
+    element
+      KikuchiBearing,	YamamotoBiaxialHDR,	MNS", &OPS_MultipleNormalSpring,	multipleNormalSpring,	MSS,	multipleShearSpring,  inerter,  linearElasticSpring, twoNodeLink,	elastomericBearingUFRP,	elastomericBearingPlasticity,	elastomericBearingBoucWen,	elastomericBearing,	RJWatsonEqsBearing,	singleFPBearing, flatSliderBearing,	adapter,	actuator,	corotActuator, genericClient,	genericCopy, beamColumnJoint,	elastic2dGNL,	element2dGNL,	inelastic2dYS03, inelastic2dYS02,	inelastic2dYS01, Joint3D,	Joint3d,	Joint2D, LehighJoint2D, zeroLengthContact2D, zeroLengthContact3D, zeroLengthContactASDimplex,	zeroLengthRocking, bbarBrickWithSensitivity, bbarBrick, stdBrick, bbarBrickUP, bbarQuadUP, 20NodeBrick, 20_8_BrickUP, 9_4_QuadUP,	brickUP, quadUP, nineNodeMixedQuad, nineNodeQuad, bbarQuad, mixedQuad, enhancedQuad, quadWithSensitivity, quad, stdQuad, quad9n, quad8n, tri6n, dispBeamColumnWithSensitivity, elasticForceBeamColumn, dispBeamColumnThermal, forceBeamColumnThermal, forceBeamColumnWarping, elasticForceBeamColumnWarping, dispBeamColumnInt, fTruss, PFEMElementCompressible, PFEMElementBubble, MINI, TaylorHood2D, VS3D4, elastomericBearingBoucWenMod, AV3D4, AC3D8, ASI3D8, CorotTruss2, Truss2, QuadBeamEmbedContact, Brick8FiberOverlay, Quad4FiberOverlay, quad3d, elasticTubularJoint, TPB1D, Truss, TrussSection, corotTruss, corotTrussSection, zeroLengthContactNTS2D, zeroLengthInterface2D, nt2d, componentElement, zeroLengthImpact3D, modElasticBeam2d, elasticTimoshenkoBeam, pyMacro2D, SimpleContact2D, N4BiaxialTruss, SimpleContact3D, BeamContact3D, BeamContact3Dp, PileToe3D, TFPbearing,	TFP, FPBearingPTV, TripleFrictionPendulum, TripleFrictionPendulumX, HDR, LeadRubberX, ElastomericX, MVLEM, SFI_MVLEM, MVLEM_3D, SFI_MVLEM_3D, E_SFI_MVLEM_3D, MasonPan12, MasonPan3D, BeamGT, MultiFP2d, shell, shellMITC4, shellNL, ShellNL, shellMITC9, shellDKGQ, shellDKGT, shellNLDKGQ, shellNLDKGT, ASDShellQ4, CoupledZeroLength, ZeroLengthCoupled, BeamContact2D, 	BeamContact2Dp, BeamEndContact3D,	BeamEndContact3Dp, tri31, SSPquad, SSPQuad, SSPquadUP, SSPQuadUP, SSPbrick, SSPBrick, SSPbrickUP, SSPBrickUP,	SurfaceLoad, elasticBeamColumn, elasticBeamColumnWarping, dispBeamColumnWarping, dispBeamColumnAsym, beamWithHinges, forceBeamColumn, nonlinearBeamColumn, dispBeamColumn, timoshenkoBeamColumn, dispBeamColumn3dID, dispBeamColumnNL, forceBeamColumnCBDI, forceBeamColumnCSBDI, mixedBeamColumn, mixedBeamColumnAsym, zeroLength,	zeroLengthSection, zeroLengthND, FourNodeTetrahedron, TenNodeTetrahedron, CatenaryCable, ASDEmbeddedNodeElement, gradientInelasticBeamColumn, RockingBC, InertiaTruss, ASDAbsorbingBoundary2D, ASDAbsorbingBoundary3D, PML, PML2D_3, PML2D_5, PML2D_12, PML2DVISCOUS, mixedBeamColumn3d, mixedBeamColumn2d, mixedBeamColumn3dS, mixedBeamColumn2dS, inerterTruss2d, semiloofBeam, semiloofPlate, semiloofShell, FSIFluidBoundaryElemeng2D, FSIFluidElement2D, FSIInterfaceElement2D, Inno3DPnPJoint, ASDShellT3
+    timeSeries
+    pattern
+		  Linear, Rectangular, Path, Constant, Trig, Sine, Ramp
+    load
+    system
+    numberer
+    constraints
+    integrator
+	  LoadControl, DisplacementControl, ParallelDisplacementControl, ArcLength, ArcLength1, HSConstraint, MinUnbalDispNorm, HarmonicSteadyState, HarmonicSS, Newmark, GimmeMCK, ZZTop, TRBDF2, Bathe, TRBDF3, Bathe3, Houbolt, BackwardEuler, PFEM, NewmarkExplicit, NewmarkHSIncrLimit, NewmarkHSIncrReduct, NewmarkHSFixedNumIter, HHT, HHT_TP, HHTGeneralized, HHTGeneralized_TP, HHTExplicit, HHTExplicit_TP, HHTGeneralizedExplicit, HHTGeneralizedExplicit_TP, HHTHSIncrLimit, HHTHSIncrLimit_TP, HHTHSIncrReduct, HHTHSIncrReduct_TP, HHTHSFixedNumIter, HHTHSFixedNumIter_TP, GeneralizedAlpha, GuiLambdaExplicit, CRExplicit, KRAlphaExplicit, KRAlphaExplicit_TP, AlphaOS, AlphaOS_TP, AlphaOSGeneralized, AlphaOSGeneralized_TP, Collocation, CollocationHSIncrReduct, CollocationHSIncrLimit, CollocationHSFixedNumIter, Newmark1, WilsonTheta, CentralDifference, CentralDifferenceAlternative, CentralDifferenceNoDamping, ExplicitDifference
+    algorithm
+    analysis
+	  SDFAnalysis
+    analyze
+    test
+    section
+    fiber
+	  fiber2d, fiber3d
+    patch
+    layer
+	  layer2d
+    geomTransf
+    beamIntegration
+    loadConst
+    eleLoad
+    reactions
+    nodeReaction
+    eigen
+	  ritz
+    modalProperties
+    responseSpectrumAnalysis
+    nDMaterial
+	  ASDPlasticMaterial (a lot), InitStrainNDMaterial, Parallele3DMaterial,
+    block2D
+    block3D
+    rayleigh
+    wipeAnalysis
+    setTime
+    remove
+    mass
+    equalDOF
+    nodeEigenvector
+    getTime
+    setCreep
+    eleResponse
+    sp
+    fixX
+    fixY
+    fixZ
+    reset
+    initialize
+    getLoadFactor
+    build
+    printModel
+    printA
+    printB
+    printX
+    printGID
+    testNorm
+    testNorms
+    testIter
+    recorder
+    database
+    save
+    restore
+    eleForce
+    eleDynamicalForce
+    nodeUnbalance
+    nodeDisp
+    setNodeDisp
+    nodeVel
+    setNodeVel
+    nodeAccel
+    setNodeAccel
+    nodeResponse
+    nodeCoord
+    setNodeCoord
+    getPatterns
+    getFixedNodes
+    getFixedDOFs
+    getConstrainedNodes
+    getConstrainedDOFs
+    getRetainedNodes
+    getRetainedDOFs
+    updateElementDomain
+    getNDM
+    getNDF
+    eleNodes
+    eleType
+    nodeDOFs
+    nodeMass
+    nodePressure
+    setNodePressure
+    nodeBounds
+    start
+    stop
+    modalDamping
+    modalDampingQ
+    setElementRayleighDampingFactors
+    region
+    setPrecision
+    searchPeerNGA
+    domainChange
+    record
+    metaData
+    defaultUnits
+    stripXML
+    convertBinaryToText
+    convertTextToBinary
+    getEleTags
+    getCrdTransfTags
+    getNodeTags
+    getParamTags
+    getParamValue
+    sectionForce
+    sectionDeformation
+    sectionStiffness
+    sectionFlexibility
+    sectionLocation
+    sectionWeight
+    sectionTag
+    sectionDisplacement
+    cbdiDisplacement        
+    basicDeformation
+    basicForce
+    basicStiffness
+    InitialStateAnalysis
+    totalCPU
+    solveCPU
+    accelCPU
+    numFact
+    numIter
+    systemSize
+    version
+    pyversion
+    setMaxOpenFiles
+    limitCurve
+    imposedMotion
+    imposedSupportMotion
+    groundMotion
+    equalDOF_Mixed
+    rigidLink
+    rigidDiaphragm
+    ShallowFoundationGen
+    setElementRayleighFactors
+    mesh
+    remesh
+    parameter
+    addToParameter
+    updateParameter
+    setParameter
+    getPID
+    getNP
+    barrier
+    send
+    recv
+    Bcast
+    frictionModel
+    computeGradients
+    sensitivityAlgorithm
+    sensNodeDisp
+    sensNodeVel
+    sensNodeAccel
+    sensLambda
+    sensSectionForce
+    sensNodePressure
+    getNumElements
+    getEleClassTags
+    getEleLoadClassTags
+    getEleLoadTags
+    getEleLoadData
+    getNodeLoadTags
+    getNodeLoadData
+    randomVariable
+    getRVTags
+    getRVParamTag
+    getRVValue
+    getMean
+    getStdv
+    getPDF
+    getCDF
+    getInverseCDF
+    correlate
+    performanceFunction
+    gradPerformanceFunction
+    transformUtoX
+    wipeReliability
+    updateMaterialStage
+    sdfResponse
+    probabilityTransformation
+    startPoint
+    randomNumberGenerator
+    reliabilityConvergenceCheck
+    searchDirection
+    meritFunctionCheck
+    stepSizeRule
+    rootFinding            
+    functionEvaluator
+    gradientEvaluator
+    getNumThreads
+    setNumThreads
+    logFile
+    setStartNodeTag
+    hystereticBackbone
+    stiffnessDegradation
+    strengthDegradation
+    strengthControl
+    unloadingRule
+    partition
+    pressureConstraint
+    domainCommitTag
+    runFOSMAnalysis
+    findDesignPoint
+    runFORMAnalysis
+    getLSFTags
+    runImportanceSamplingAnalysis
+    IGA
+    NDTest
+    neesUpload
+    nodeRitzVector
+```
+
+and the OpenFrescoPy commands,
+```
+	expControlPoint,
+	expSignalFilter,
+	expControl, 
+	expSetup, 
+	expSite, 
+	expTangentStiff, 
+	expElement, 
+	expRecorder, 
+	recordExp, 
+	startLabServer, 
+	setupLabServer, 
+	stepLabServer, 
+	stopLabServer, 
+	startSimAppSiteServer, 
+	startSimAppElemServer, 
+	wipeExp, 
+	removeExp, 
+	version
+```
+
+## Requirements
+
+Win64OpenSSL-3 (currently, Win64OpenSSL-3.1.4.msi is used);
+Magicsplat Tcl 6.13 (currently, tcl-8.6.13-installer-1.13.1-x64.msi is used)
+
+
+## Additional Info
+contact: neallee@tju.edu.cn
+
+## For RTHS tools
+
+{**一些RTHS实验需要的工具**
+适用于课题组设备的混合实验工具，本项目在伯克利的基础上更改，为课题组内部资料，请勿外传}
+
+### simulink
+    用于speedgoat实时机交互
+#### xpc和scgt
+    xpcC版本：openfresco通过xpcAPI和speedgoat通信，仅支持到matlab2020a
+    scgt版本：这是openfresco通过scgt(共享内存)和speedgoat通信，目前支持到matlab2020a（理论可以支持任何版本matlab），由于matlab2020a以后编译器改版问题，现有程序纯在bug，无法编译。
+#### experiment和virtualexperiment1和virtualexperiment2
+    experiment版本需要opensees，openfresco，speedgoat（XPC、simulink）和MTS形成一个闭环。正式实验版本。
+    virtualexperiment1版本需要opensees，openfresco，speedgoat（XPC、simulink）和MTS形成一个闭环。但是MTS使用的虚拟设置。用于测试实验设备通信等。
+    virtualexperiment2版本需要opensees，openfresco，speedgoat（XPC、simulink）形成一个闭环。它直接在speedgoat模拟MTS，形成刚度甚至时滞信息。
+#### 修改记录（和伯克利比较）
+    之前的修改：修改求解设置，否则无法编译
+    20240130：修改了子积分步差一步的问题，增加了两个unit delay 模块。
+    20240130：修改MTS零位置问题，咱们MTS通道1和2的零位置分别是180mm和200mm，MTS需要的单位是mm和kN。
+
+1.  xpc
+    1. experiment
+        1.  1dof
+        2.  2dof
+    2.  virtualexperiment1
+        1.  1dof
+        2.  2dof
+    3.  virtualexperiment2
+        1.  1dof
+        2.  2dof
+2.  scgt
+    1. experiment
+        1.  1dof
+        2.  2dof
+    2.  virtualexperiment1
+        1.  1dof
+        2.  2dof
+    3.  virtualexperiment2
+        1.  1dof
+        2.  2dof
