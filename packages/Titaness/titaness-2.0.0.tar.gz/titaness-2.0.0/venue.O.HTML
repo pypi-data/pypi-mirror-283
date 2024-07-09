@@ -1,0 +1,93 @@
+
+
+
+<pre>
+
+	<h1>Titaness</h1>
+		# neurons
+	
+	
+	<h2>summary</h2>
+		
+		#
+		#	⚠️ ⚠️ ⚠️ ⚠️
+		#
+		#		Make sure that none of the stages that "Titaness"
+		#		utilizes rely on "Titaness".
+		#
+		#		For the sake of sanity, please keep the "reliability, testing, etc."
+		#		structure as a "tree, hierarchy, etc." etc. with no coodependencies.
+		#
+	
+	<h2>on</h2>
+		<h3>session 1</h3>
+			docker compose up -d; docker exec -it Titaness.1 bash;
+			. /habitat/_controls/build_1.sh
+			
+		<h3>session 2</h3>	
+			docker exec -it Titaness.2 bash;
+			. /habitat/_controls/build_2.sh
+			
+	<h2>off</h2>
+		docker container stop Titaness.1; docker container remove Titaness.1;
+
+
+	<h2>find and replace</h2>
+		#
+		#	1. need to build the "modules_pip"
+		#
+		#
+		
+		#
+		#
+		#	2. status check
+		#
+		python3 /habitat/venues/stages/Titaness/_status/status.proc.py
+		
+
+	<h2>git</h2>
+		git push --set-upstream git@gitlab.com:status600/climates/Titaness.git performance
+
+	
+	
+	<h2>important</h2>
+		python3 /habitat/venues/warehouse/0.7.1_various_simultaneous/start.proc.py
+		
+		
+	<h2>publishing</h2>
+
+
+		
+		#
+		#	statuses
+		#
+		python3 /habitat/venues/stages/Titaness/_status/status.proc.py
+		
+		#
+		#	Circle CI
+		#
+		
+		#
+		#	git push
+		#
+		git tag Titaness.1-2.0.0; git add --all; git commit -m "Titaness"; 
+		git push --tags 
+		
+		#
+		#	increase version
+		#
+		
+		#
+		#	poetry auth
+		#
+		(pip install poetry && cd /habitat && rm -rf dist && poetry build --format sdist --verbose && chmod -R 777 /habitat)
+		poetry publish --verbose;
+		
+
+	<h2>important</h2>
+		poetry show --tree
+
+
+	
+
+</pre>
