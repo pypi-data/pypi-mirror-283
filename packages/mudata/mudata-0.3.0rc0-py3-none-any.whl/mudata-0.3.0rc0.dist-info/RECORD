@@ -1,0 +1,16 @@
+mudata/__init__.py,sha256=F-RnViqEZwthV53Zb6cYNMnREXH7BcJT7JUxS3tfgwU,1171
+mudata/_version.py,sha256=MUopvmkKwGqmksSvsoC6jiUc70HZQDJw_YReWB9Tx9w,414
+mudata/_core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mudata/_core/config.py,sha256=0t-yVHJxuY4pLVEyZrVQ0E-6UZX-QG9vWZXjfj21F9Q,1626
+mudata/_core/file_backing.py,sha256=62zMC-bLrxvJSTJNShyEhRzB5Tjl4R66DoujUuDbR2Y,3435
+mudata/_core/io.py,sha256=OIfoRoa4jjzAFfwuiMJF926BAIXQOEOh7RhaZW5UeL8,22871
+mudata/_core/merge.py,sha256=jdPxmt6linxnZwDyIypdLFy4NJ9eELEodczASi4hs4M,10743
+mudata/_core/mudata.py,sha256=jQLLTVp20kyoXTdCSfhu5rcvQ9R6TPebVTQ2u12c5Q4,95268
+mudata/_core/repr.py,sha256=fa74kFYL6mq1aciu9DQ6JHo88_Yo-H_f6tHqRzyp4QQ,8905
+mudata/_core/to_.py,sha256=O1wyj9u-vift0qBm6AKsF-qDJyAfVDZ1G9mgJKpHaog,2476
+mudata/_core/utils.py,sha256=hApKrFybYLyRwObcnRJBP-llrpAUGihNuAkPwi0zTxo,6876
+mudata/_core/views.py,sha256=RbKhHs-ibDJtoesqkr3Yl1SrLrRzarLaA4i-TFFKqDw,901
+mudata-0.3.0rc0.dist-info/METADATA,sha256=Eh9ZqrHnNACCsMfHYNlxtbtvwS_4sM7YLPKG2TfbPTM,8295
+mudata-0.3.0rc0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+mudata-0.3.0rc0.dist-info/licenses/LICENSE,sha256=1L8o9EtTUsrEeI1c9LoDF8bmGH3sspVPcBXj6NOvE7I,1524
+mudata-0.3.0rc0.dist-info/RECORD,,
