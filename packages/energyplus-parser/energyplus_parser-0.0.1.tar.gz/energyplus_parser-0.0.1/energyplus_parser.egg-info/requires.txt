@@ -1,0 +1,4 @@
+matplotlib
+ply
+numpy==1.26.4
+plotly
