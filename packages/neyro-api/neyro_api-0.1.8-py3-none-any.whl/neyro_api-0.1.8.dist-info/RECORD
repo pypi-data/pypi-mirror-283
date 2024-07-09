@@ -1,0 +1,11 @@
+audio/__init__.py,sha256=4CEVbyc_0ikxjRtlGbgXjx2qZlKuKtiPC2sdrJO6pkQ,25
+audio/tts.py,sha256=2GzuV1Bt33d75uR23uwooulxTlX4988SylkF6KXs5gk,614
+image/__init__.py,sha256=72_SD-gTMypW1zwGHdTKyIc-Ay1rYIyGggZpTGrmt-Y,24
+image/sh.py,sha256=v8ahOoUJfuf0tjUhELK9-MSIvjhzfWhqpuH6-3ONZzE,610
+text/__init__.py,sha256=31-nQEaAlbPhS-pJnaXHbNEIxFrUG1iBtmjXV6ctVUY,28
+text/gpt_new.py,sha256=35F0pvoSWJdOFO-Yjn1vSaHp-PQdR2zXAsVRRHyau1Y,627
+neyro_api-0.1.8.dist-info/LICENSE,sha256=_TBHaLDRAZGQQLJBH9qbg9jg2qzt74sb7-Uu3CMffNA,1066
+neyro_api-0.1.8.dist-info/METADATA,sha256=xEftU2mwwk3xYmXPdqYfsnc9qDAUrP9MMCOsv6VXde8,3800
+neyro_api-0.1.8.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+neyro_api-0.1.8.dist-info/top_level.txt,sha256=jZJ6iX-mTQUzU8TEVRJ-l28-xz3hiJ9iQcBQJp_FTls,17
+neyro_api-0.1.8.dist-info/RECORD,,
