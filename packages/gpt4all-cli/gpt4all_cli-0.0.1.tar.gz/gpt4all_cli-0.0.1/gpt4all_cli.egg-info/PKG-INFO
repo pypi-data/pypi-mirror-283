@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: gpt4all-cli
+Version: 0.0.1
+Summary: Command-line interface using GPT4ALL bindings
+Author: Sergei Mironov
+Author-email: sergei.v.mironov@proton.me
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.6
+Requires-Dist: gpt4all-bindings
+Requires-Dist: gnureadline
+Requires-Dist: lark
