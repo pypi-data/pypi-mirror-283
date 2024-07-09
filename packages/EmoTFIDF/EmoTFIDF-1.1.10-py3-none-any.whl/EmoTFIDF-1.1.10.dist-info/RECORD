@@ -1,0 +1,9 @@
+main/__init__.py,sha256=TkrwgzJwyih5AQlF3_aefO8mO176AHgzIgPFRXDC1Kc,78
+main/emotfidf.py,sha256=m8wGBNnZECBypURs4LTs_C_kzMQurygfkdPdR5zi6F8,6646
+tests/__init__.py,sha256=MB8pHSHNdLBanmPmAezPDUtT5EJJWNJDalKWBAf68GM,46
+tests/test_emotfidf.py,sha256=KzHht_uydSGhFbIrqjL0hnze-VkjAugsTeqoznhkzww,251
+EmoTFIDF-1.1.10.dist-info/LICENSE,sha256=NtgiPe6QVePc6rvKYX6Fk4M22KlErbBVvmu6PJNeTyI,1091
+EmoTFIDF-1.1.10.dist-info/METADATA,sha256=41nfHoJ3hrteCChTq-RlM38pKdBfUV_HFap7c_TYFY8,2445
+EmoTFIDF-1.1.10.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+EmoTFIDF-1.1.10.dist-info/top_level.txt,sha256=x4P7YEmuntAFqXdXu6txpQr4zx8irrnpYHruJS6QjWw,11
+EmoTFIDF-1.1.10.dist-info/RECORD,,
