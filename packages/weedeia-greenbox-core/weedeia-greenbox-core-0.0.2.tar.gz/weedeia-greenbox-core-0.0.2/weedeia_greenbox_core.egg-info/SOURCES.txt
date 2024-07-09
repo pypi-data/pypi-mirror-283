@@ -1,0 +1,8 @@
+README.md
+setup.py
+weedeia_greenbox_core.egg-info/PKG-INFO
+weedeia_greenbox_core.egg-info/SOURCES.txt
+weedeia_greenbox_core.egg-info/dependency_links.txt
+weedeia_greenbox_core.egg-info/entry_points.txt
+weedeia_greenbox_core.egg-info/requires.txt
+weedeia_greenbox_core.egg-info/top_level.txt
