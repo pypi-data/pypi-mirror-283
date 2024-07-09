@@ -1,0 +1,17 @@
+bm3dornl/__init__.py,sha256=u_kmfzBeKAfqDP0tC3wBYYQsq9cQgnNOzCo4QrfUeY8,217
+bm3dornl/_version.py,sha256=r4xAFihOf72W9TD-lpMi6ntWSTKTP2SlzKP1ytkjRbI,22
+bm3dornl/aggregation.py,sha256=AQs3mEWCtdPJCd8eI_GQap7J-aszFylqgZZBSEpXTss,3681
+bm3dornl/block_matching.py,sha256=cKT9_M_gQTphmZhFiM2qRpm-13s8Coh_jZxz5-GG_zo,15573
+bm3dornl/bm3d.py,sha256=hcSEqBI_aacLfQBgD9kkA6MiZKuCJsIxYNkgkuC2e8M,26930
+bm3dornl/denoiser_gpu.py,sha256=rfMFp9X79BqMNer3HyEZftMkYvxZLAFdB7Y0N_f9IQ0,8761
+bm3dornl/noise_analysis.py,sha256=sNjYUSCjQ_8bkvru1Kl8Bi3wT-spMC6vIGq_ZNYycSU,2742
+bm3dornl/phantom.py,sha256=cK5pWqqCoBBQ_fxFcZgjvHNjQSC0XBClbxr9Rd0Z-yg,6928
+bm3dornl/plot.py,sha256=aEILQIvyB4tuYLHApLGXR8PMHHACYj77SGfvrosME2s,616
+bm3dornl/signal.py,sha256=6uFPm1HLwneJApxzUEnnYz4Zf7covWOhibxc-c1HSOc,1123
+bm3dornl/utils.py,sha256=aPjztIxeYyr7uNwklkkpZ4NlHD_7a82-hx_CLa0NnLg,5521
+bm3dornl-0.3.1.dist-info/LICENSE,sha256=xeCnD-L_uYFIWzd-UzBbAm06Nd20-dgJIzjwzlkjr-Y,1084
+bm3dornl-0.3.1.dist-info/METADATA,sha256=O4UgC7iNJ-6iyyc7FxkJ0TPDDS4Hl4QCFgMqVNgemjc,1878
+bm3dornl-0.3.1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+bm3dornl-0.3.1.dist-info/entry_points.txt,sha256=UQ7jVeTb_mi2CoxSK_FD9SBGZDoJwP_d_Lpu8ZOvL2k,128
+bm3dornl-0.3.1.dist-info/top_level.txt,sha256=n4i8C2MfRzR-aqrOTJww9_hDGjvYPgb61Wrr_ePwfYY,9
+bm3dornl-0.3.1.dist-info/RECORD,,
