@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+dvcartifacts/__init__.py
+dvcartifacts/cli.py
+dvcartifacts.egg-info/PKG-INFO
+dvcartifacts.egg-info/SOURCES.txt
+dvcartifacts.egg-info/dependency_links.txt
+dvcartifacts.egg-info/entry_points.txt
+dvcartifacts.egg-info/requires.txt
+dvcartifacts.egg-info/top_level.txt

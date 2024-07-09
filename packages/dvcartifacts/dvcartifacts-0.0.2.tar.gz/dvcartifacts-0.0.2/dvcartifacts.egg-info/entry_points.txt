@@ -1,0 +1,2 @@
+[console_scripts]
+dvcartifacts = dvcartifacts.cli:main
