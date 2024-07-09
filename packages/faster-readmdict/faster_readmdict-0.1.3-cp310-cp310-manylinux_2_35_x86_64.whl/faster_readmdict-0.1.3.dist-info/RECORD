@@ -1,0 +1,13 @@
+readmdict/CY_MDict/MDict.cpython-310-x86_64-linux-gnu.so,sha256=Y-aB8zyRMThyiIIbGEhUXFNMUr2HumBqERTVN4oigno,1040544
+readmdict/CY_MDict/MDict.pyx,sha256=etXT0doG0535Q99njzooNL7fVz8J3bOqy0z7Np9bnaE,14103
+readmdict/CY_MDict/setup.py,sha256=AMTIC-v6AURxJnloYVOrmRs2M-H0WtyIaN9h-v-_CHY,294
+readmdict/__init__.py,sha256=K-Xq_Qd3zlk9I1_-m_OjB2_inWBUdubwuydpPI054h0,311
+readmdict/__main__.py,sha256=ZnDNN0DmF5DxYzHjsABNt0FQpiHxU-PTsjckyJkfbzM,4416
+readmdict/_readmdict.py,sha256=9MHrHTMlPD9ci5GUXdbej34E59L0_9Ex2y4XhdrDJhk,26919
+readmdict/pureSalsa20.py,sha256=C8XmnkQJRdJqQ9ZSJwZ68Jr5jIdSwmad5Mvh5khp_uc,14236
+readmdict/readmdict.py,sha256=vDYO2ZnQhb3DgaHCTQyHjZmc5roZYmi0qtHmJcBbNyQ,9107
+readmdict/ripemd128.py,sha256=0MCK27Y_jB78UYXBJDXoA7jEzySmOmoJY8h7gAR05Uw,3533
+faster_readmdict-0.1.3.dist-info/METADATA,sha256=LfJOZfgcQbhZJd0ldEpzmkWpz2rIgI6USK3F2WazVS0,2812
+faster_readmdict-0.1.3.dist-info/WHEEL,sha256=9akmB9Yw5qmIU-MKN95Pv0Mip6kpcZ0b8K__D5G3wjE,110
+faster_readmdict-0.1.3.dist-info/entry_points.txt,sha256=QDmSA0vro_WN2xGYAPY8855xeTqYQ-Q_YUy2MtU1VYg,53
+faster_readmdict-0.1.3.dist-info/RECORD,,
