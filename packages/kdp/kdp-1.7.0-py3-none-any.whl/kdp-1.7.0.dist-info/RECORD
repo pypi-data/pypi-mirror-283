@@ -1,0 +1,12 @@
+docs/kdp_logo.png,sha256=MPzaPTAq2uIIv8M6mkU2-xrIoOzzt5ZTRfLD2YO3dT4,102413
+kdp/__init__.py,sha256=YxClGbbqHrSChG3vbu88EYOzbXJJWtnaY4gun5tL3Rs,763
+kdp/custom_layers.py,sha256=tdaKZsYg_qYOymaQIAqL7i6wMoNrWurtbS0H6gkFSBY,4845
+kdp/features.py,sha256=OO0TSE6bfxuxjEpQjjpWrDBN9Yo6nxb28kcvSl_8gMc,5046
+kdp/layers_factory.py,sha256=08S_m3I5lm6s6S_N1vOH_TTI5m2llLswXON2YEypt-Y,3279
+kdp/pipeline.py,sha256=kSDdkkjyW67paNj6q93xVkdUCBux-Fj9UhBlrU9GQDs,4240
+kdp/processor.py,sha256=JJgdvqxIEc1gNZ7tf901fLLlhcwbB8hQjAfZ9jX_LxU,30311
+kdp/stats.py,sha256=1CaXGqrQ3QLRpnAe6NcqoVTyKU8iJcETk5j-eTX7xZU,14605
+kdp-1.7.0.dist-info/LICENSE,sha256=uOgxwGm21Q9WuTWTPSDRXwZvodx_awCiTWoOldL4Vao,1073
+kdp-1.7.0.dist-info/METADATA,sha256=fxWY458_cjAR-NwJeGRbUTKkQDL94lIConYgpIGZZc0,4795
+kdp-1.7.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+kdp-1.7.0.dist-info/RECORD,,
