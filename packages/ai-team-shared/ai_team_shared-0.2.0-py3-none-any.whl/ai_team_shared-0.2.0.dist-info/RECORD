@@ -1,0 +1,15 @@
+ai_team_shared/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ai_team_shared/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ai_team_shared/models/ai_task_models.py,sha256=w4_Gq7jHxPDpDDMVV7tfZJVNDfAOfxBIxJEFgXnfUL4,1161
+ai_team_shared/models/base_models.py,sha256=-XuHehKz-eOaywpMd79D3SODQItGyA_9V3KhseXxnvA,734
+ai_team_shared/models/change_models.py,sha256=zsxj49VkDaJTgXrDt9pGGkrxq-gcZyiy2ELGeX3UDPU,1256
+ai_team_shared/models/context_models.py,sha256=fkS4CdpoZ_kR6sJdjZeIvPJrPyuZ0LASiVtE0ml9jCc,1192
+ai_team_shared/models/feedback_models.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ai_team_shared/models/message_models.py,sha256=TL_4_QxOZZ73zYpwIZA_2SYKcwAR8QY_U7aG2YQgsNc,905
+ai_team_shared/models/project_models.py,sha256=-hJrqANhDeU9u3Spc98uJnRIjrbkJLwjV2Wel_rtEXY,3475
+ai_team_shared/models/prompt_models.py,sha256=E6Ltdabu_EIbTTRa4K3xoQTiDED6si-GTWNlcVpQiTM,1194
+ai_team_shared/models/shared_enums.py,sha256=XcAD8JQul5S0TU_XbqvjSB5Mk-DNGdZX7lwlMgITWGI,935
+ai_team_shared/models/user_models.py,sha256=lU3JtYVLRzntD8JVU5nZy-L-wWR4jQ5fgUhTeNRuLk8,201
+ai_team_shared-0.2.0.dist-info/METADATA,sha256=5HfWJdbf-VSXfqfRbJWlqZ1V5_MZL7NbNvmZ2VoQUqc,864
+ai_team_shared-0.2.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+ai_team_shared-0.2.0.dist-info/RECORD,,
