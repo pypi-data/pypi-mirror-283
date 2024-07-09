@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+Chozita/Chozita.py
+Chozita/__init__.py
+Chozita.egg-info/PKG-INFO
+Chozita.egg-info/SOURCES.txt
+Chozita.egg-info/dependency_links.txt
+Chozita.egg-info/requires.txt
+Chozita.egg-info/top_level.txt
