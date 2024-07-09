@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: asaas-sdk-wlc
+Version: 0.1.4
+Summary: SDK for Asaas API
+Home-page: https://github.com/wlc-solucoes/asaas-sdk/
+Author: WLC Soluções
+Author-email: fernando.leite@wlcsolucoes.com.br
+License: Apache-2.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.12
+License-File: LICENSE
+Requires-Dist: requests
+
