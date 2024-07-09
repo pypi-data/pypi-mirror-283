@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+src/SPi_Solidity_Predicate_Inspector.egg-info/PKG-INFO
+src/SPi_Solidity_Predicate_Inspector.egg-info/SOURCES.txt
+src/SPi_Solidity_Predicate_Inspector.egg-info/dependency_links.txt
+src/SPi_Solidity_Predicate_Inspector.egg-info/requires.txt
+src/SPi_Solidity_Predicate_Inspector.egg-info/top_level.txt
+src/spi_solidity_predicate_inspector.egg-info/PKG-INFO
+src/spi_solidity_predicate_inspector.egg-info/SOURCES.txt
+src/spi_solidity_predicate_inspector.egg-info/dependency_links.txt
+src/spi_solidity_predicate_inspector.egg-info/requires.txt
+src/spi_solidity_predicate_inspector.egg-info/top_level.txt
