@@ -1,0 +1,96 @@
+
+
+<link rel="stylesheet" href="/stage.CSS">
+
+
+<pre>
+	
+	<section>
+		<h1>from .py</h1>
+	</section>
+	
+	<section>
+		<h2>tutorial</h2>
+		<code>
+
+import pathlib
+from os.path import dirname, join, normpath
+import Titaness
+
+import time
+import rich
+
+this_directory = pathlib.Path (__file__).parent.resolve ()
+this_module = str (this_directory)
+the_guarantees = str (normpath (join (this_directory, f"guarantees")))
+
+relative_path = str (normpath (join (this_directory, f"..")))
+
+bio = Titaness.on ({
+	"glob_string": this_module + "/**/guarantee_*.py",
+	
+	"simultaneous": True,
+	"simultaneous_capacity": 10,
+
+	"time_limit": 60,
+
+	"module_paths": [
+		normpath (join (this_module, "modules"))
+	],
+
+	"relative_path": relative_path,
+	
+	"aggregation_format": 2
+})
+
+bio ["off"] ()
+scan = bio ["proceeds"]
+
+rich.print_json (data = proceeds)
+
+		</code>
+	</section>
+	
+	<section>
+		<h2>summary</h2>
+		
+		<article>
+			<h3>glob_string</h3>
+			<p>Anything found in the glob string is treated as a status check file.</p>
+		</article>
+		
+		<article>
+			<h3>simultaneous</h3>
+			<p>A boolean that says if the checks should be run at the same time.</p>
+		</article>
+		
+		<article>
+			<h3>simultaneous_capacity</h3>
+			<p>A limiter on the amount of checks that can be run at once.</p>
+		</article>
+		
+		<article>
+			<h3>time_limit</h3>
+			<p>After the time_limit expires, checks fail.</p>
+			<p>This can prevent an infinite loop from barricading the presentation of results.</p>			
+		</article>
+		
+		<article>
+			<h3>module_paths</h3>
+			<p>These are added to the sys.path of every check.</p>
+		</article>
+		
+		<article>
+			<h3>relative_path</h3>
+			<p>This path is removed from the path of each status check path in the "proceeds".</p>
+		</article>
+		
+		<article>
+			<h3>aggregation_format</h3>
+			<p>This should be 2.  1 is outdated.</p>
+		</article>
+		
+	</section>
+</pre>
+
+
