@@ -1,0 +1,24 @@
+description: Base amount of the single and universal allowance for dependent children, based on dependent age
+# Our reference material breaks the total values below out into
+# two components, but it's unclear without reference to the 
+# legislation why this is
+brackets:
+  - threshold:
+      0000-01-01: 0
+    amount:
+      0000-01-01: 112.50
+  - threshold:
+      0000-01-01: 18
+    amount:
+      0000-01-01: 55
+  - threshold:
+      0000-01-01: 21
+    amount:
+      0000-01-01: 0
+
+metadata:
+  type: single_amount
+  amount_unit: /1
+  threshold_unit: person
+  label: Base amount, single and universal allowance for dependent children
+  period: month

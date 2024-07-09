@@ -1,0 +1,158 @@
+- name: No deduction for household without dependents
+  period: 2024
+  input:
+    people:
+      parent1:
+        is_head: true
+        total_individual_pre_tax_income: 50_000
+      parent2:
+        is_spouse: true
+        total_individual_pre_tax_income: 30_000
+  output:
+    household_dependent_child_credit: 0
+
+- name: Deduction for one qualifying non-disabled child aged 22
+  period: 2024
+  input:
+    people:
+      parent1:
+        is_head: true
+        total_individual_pre_tax_income: 50_000
+      parent2:
+        is_spouse: true
+        total_individual_pre_tax_income: 30_000
+      child1:
+        age: 22
+        total_individual_pre_tax_income: 3_000
+        is_disabled: false
+        is_dependent: true
+  output:
+    household_dependent_child_credit: 950
+
+- name: Deduction for one qualifying disabled child aged 23
+  period: 2024
+  input:
+    people:
+      parent1:
+        is_head: true
+        total_individual_pre_tax_income: 50_000
+      parent2:
+        is_spouse: true
+        total_individual_pre_tax_income: 30_000
+      child1:
+        age: 23
+        total_individual_pre_tax_income: 3_500
+        is_disabled: true
+        is_dependent: true
+  output:
+    household_dependent_child_credit: 1_350
+
+- name: No deduction for non-qualifying child (income too high)
+  period: 2024
+  input:
+    people:
+      parent1:
+        is_head: true
+        total_individual_pre_tax_income: 50_000
+      parent2:
+        is_spouse: true
+        total_individual_pre_tax_income: 30_000
+      child1:
+        age: 22
+        total_individual_pre_tax_income: 4_500
+        is_disabled: false
+        is_dependent: true
+  output:
+    household_dependent_child_credit: 0
+
+- name: Deduction for one qualifying child, one non-qualifying
+  period: 2024
+  input:
+    people:
+      parent1:
+        is_head: true
+        total_individual_pre_tax_income: 50_000
+      parent2:
+        is_spouse: true
+        total_individual_pre_tax_income: 30_000
+      child1:
+        age: 22
+        total_individual_pre_tax_income: 3_000
+        is_disabled: false
+        is_dependent: true
+      child2:
+        age: 23
+        total_individual_pre_tax_income: 4_500
+        is_disabled: false
+        is_dependent: true
+  output:
+    household_dependent_child_credit: 950
+
+- name: Deduction for two qualifying children (one disabled, one not)
+  period: 2024
+  input:
+    people:
+      parent1:
+        is_head: true
+        total_individual_pre_tax_income: 50_000
+      parent2:
+        is_spouse: true
+        total_individual_pre_tax_income: 30_000
+      child1:
+        age: 22
+        total_individual_pre_tax_income: 3_000
+        is_disabled: false
+        is_dependent: true
+      child2:
+        age: 25
+        total_individual_pre_tax_income: 2_100
+        is_disabled: true
+        is_dependent: true
+  output:
+    household_dependent_child_credit: 2_300
+
+- name: Deduction for three qualifying children (mixed ages and disabilities)
+  period: 2024
+  input:
+    people:
+      parent1:
+        is_head: true
+        total_individual_pre_tax_income: 50_000
+      parent2:
+        is_spouse: true
+        total_individual_pre_tax_income: 30_000
+      child1:
+        age: 22
+        total_individual_pre_tax_income: 3_000
+        is_disabled: false
+        is_dependent: true
+      child2:
+        age: 24
+        total_individual_pre_tax_income: 2_100
+        is_disabled: true
+        is_dependent: true
+      child3:
+        age: 26
+        total_individual_pre_tax_income: 2_000
+        is_disabled: false
+        is_dependent: true
+  output:
+    household_dependent_child_credit: 3_250
+
+- name: No deduction when parent incomes are reversed
+  period: 2024
+  input:
+    people:
+      parent1:
+        is_head: true
+        total_individual_pre_tax_income: 30_000
+      parent2:
+        is_spouse: true
+        total_individual_pre_tax_income: 50_000
+      child1:
+        age: 22
+        total_individual_pre_tax_income: 3_000
+        is_disabled: false
+        is_dependent: true
+  output:
+    household_dependent_child_credit: 0

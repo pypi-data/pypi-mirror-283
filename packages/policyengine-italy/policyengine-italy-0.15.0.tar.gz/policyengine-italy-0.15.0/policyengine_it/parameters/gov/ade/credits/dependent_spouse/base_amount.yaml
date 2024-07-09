@@ -1,0 +1,8 @@
+description: Base amount for dependent spouse credit
+values:
+  0000-01-01: 800
+    
+metadata:
+  unit: currency-EUR
+  label: Dependent spouse credit, base amount
+  period: year

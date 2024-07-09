@@ -1,0 +1,9 @@
+description: Non-refundable tax credits.
+values:
+  0000-01-01:
+    - low_income_credit
+    
+metadata:
+  unit: program
+  label: Non-refundable tax credits
+  period: year

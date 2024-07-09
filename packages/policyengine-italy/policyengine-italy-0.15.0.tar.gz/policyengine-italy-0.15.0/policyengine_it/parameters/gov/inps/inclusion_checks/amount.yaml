@@ -1,0 +1,8 @@
+description: INPS inclusion check program amount
+values:
+  0000-01-01: 500
+
+metadata:
+  unit: currency-EUR
+  label: INPS inclusion check program amount
+  period: month
