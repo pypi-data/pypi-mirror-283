@@ -1,0 +1,2 @@
+networkx
+thonny>=3.2.1
