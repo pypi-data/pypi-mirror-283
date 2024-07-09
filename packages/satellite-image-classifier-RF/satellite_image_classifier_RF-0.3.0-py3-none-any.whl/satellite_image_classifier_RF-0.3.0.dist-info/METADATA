@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: satellite_image_classifier_RF
+Version: 0.3.0
+Requires-Dist: rasterio
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: fiona
+Requires-Dist: shapely
+
