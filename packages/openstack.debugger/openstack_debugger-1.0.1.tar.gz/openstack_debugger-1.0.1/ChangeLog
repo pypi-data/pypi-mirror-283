@@ -1,0 +1,16 @@
+CHANGES
+=======
+
+1.0.0
+-----
+
+* feat: ci document badge
+* ci: 빈 파이프라인
+* docs: tox 및 문서화 태스크(docs) 관례를 적용
+* docs: README.md 보강
+* build: 의존성 라이브러리의 미니멈 버전을 낮춤
+
+0.1.0
+-----
+
+* Initial commit
