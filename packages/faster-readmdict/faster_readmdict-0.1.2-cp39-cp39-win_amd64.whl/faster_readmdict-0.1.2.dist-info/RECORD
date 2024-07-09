@@ -1,0 +1,12 @@
+readmdict/__init__.py,sha256=ZMAiKIRZ_eo0Dl3SGp7HXDKWKEyYd6wCndaAWbdueJg,323
+readmdict/__main__.py,sha256=GinNyDxwN1WgDZUTuBkS_8NxIF4uIhKyx0IB38h1G4Y,4540
+readmdict/_readmdict.py,sha256=HNodgO83bM84FZYZJzts5HKD55gnrJtripcwwtpwWYs,27628
+readmdict/CY_MDict/MDict.pyx,sha256=T7TetXPVjUTOyWfmnmy5F4C4r92I2015YGiPojrNfJY,14479
+readmdict/CY_MDict/setup.py,sha256=fpQ0btHbEJAamqZ_0u6TYH6c2J5cSXd7YM8ia-3TYcA,300
+readmdict/pureSalsa20.py,sha256=SBwxtl2wyaaauXtXWNOChteCpwkmK3e-ld8y54khzVc,14601
+readmdict/readmdict.py,sha256=bvl1EShj-XtvJv8XOPl2yxKnxbMyOJMKNSF8Gdn8z8c,9345
+readmdict/ripemd128.py,sha256=wKvevXO17r6tpDDGI2UCydfMvyIKAiqmJ9QhYCkBdJw,3663
+faster_readmdict-0.1.2.dist-info/entry_points.txt,sha256=QDmSA0vro_WN2xGYAPY8855xeTqYQ-Q_YUy2MtU1VYg,53
+faster_readmdict-0.1.2.dist-info/METADATA,sha256=AjFdZfpayQsGyp_UOGDB5IhMlTW11yk8CEVcy0n5_bg,2812
+faster_readmdict-0.1.2.dist-info/WHEEL,sha256=1IyMrlk0wO7UertYm7pyjf3m1sV0KDb8wW6mQlBtUog,96
+faster_readmdict-0.1.2.dist-info/RECORD,,
