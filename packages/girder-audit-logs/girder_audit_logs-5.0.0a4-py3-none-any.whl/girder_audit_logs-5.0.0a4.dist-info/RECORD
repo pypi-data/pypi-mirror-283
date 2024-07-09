@@ -1,0 +1,8 @@
+girder_audit_logs/__init__.py,sha256=b_YJuf8SAudT85HYoiZ4GuSq3H3znks5CUTNJ6UkDkU,1963
+girder_audit_logs/cleanup.py,sha256=4a-TAZKKh9p6zESzhhZoKONdNzjRL8wfV5TkYRU4m2o,838
+girder_audit_logs/report.py,sha256=dDxAsjLL4gpZDL6FSkY0Qrj-UZF63kknbn0t0Mgscmc,2551
+girder_audit_logs-5.0.0a4.dist-info/METADATA,sha256=Li-vnRyMEbH4s5_5UuQTlVDklIX17sGWjQnPayMdWm8,562
+girder_audit_logs-5.0.0a4.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+girder_audit_logs-5.0.0a4.dist-info/entry_points.txt,sha256=uNHmajogX5kiZXN7mo1L_gB7J0XQsC3Cwt_65REXwis,192
+girder_audit_logs-5.0.0a4.dist-info/top_level.txt,sha256=sw18D1xt-vrok1bxoAhgj7xqpbcKPedQtK3P7tlNODc,18
+girder_audit_logs-5.0.0a4.dist-info/RECORD,,
