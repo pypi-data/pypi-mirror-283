@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "smoltex"
+version = "0.1.2"
+description = "Convert natural language descriptions to LaTeX equations"
+authors = ["maharshi <maharshi.pandya2002@gmail.com>"]
+readme = "README.md"
+packages = [{include = "smoltex"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+rich = "^13.7.0"
+groq = "^0.9.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+smoltex = "smoltex.main:main"
