@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: Litindex
+Version: 0.0.2
+Summary: Search for books and various information about books
+Home-page: https://github.com/cjenf/LitIndex
+Author: Cheng
+Author-email: cjenf844747@gmail.com
+License: MIT license
+Requires-Python: >=3.11.4
