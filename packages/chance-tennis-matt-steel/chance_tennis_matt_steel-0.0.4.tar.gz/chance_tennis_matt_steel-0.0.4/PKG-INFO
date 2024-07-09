@@ -1,0 +1,15 @@
+Metadata-Version: 2.3
+Name: chance_tennis_matt_steel
+Version: 0.0.4
+Summary: A simple tennis game simulator
+Author-email: Matt Steel <mattsteel87@hotmail.co.uk>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Chance tennis simulator
+
+This is a basic tennis game simulator.
