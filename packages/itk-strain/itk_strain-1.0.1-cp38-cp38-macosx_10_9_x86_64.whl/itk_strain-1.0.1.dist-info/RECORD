@@ -1,0 +1,11 @@
+itk/Configuration/StrainConfig.py,sha256=B7hcjjdGzxCvJEiOWXttP2UrsJKpb7J-YAeZOwO-slg,4884
+itk/Configuration/Strain_snake_case.py,sha256=xjw6tPokywciyiZ_ePspvkRWYHPUXJb81-AregzUu4Y,104
+itk/StrainPython.py,sha256=E_njC3Zrrw0iyoAiYol9lWV1ISB9gqk_7XwwF4aM8y8,2219
+itk/_StrainPython.so,sha256=mHVWlW1aGMwf6ryy0pvKntfE7waVxP0nvpoxP5E07Fs,3076080
+itk/itkStrainImageFilterPython.py,sha256=8A0yrNC_anpfIW5vxy9mCurD6fulAMHjQUoSVwoxP78,52306
+itk/itkTransformToStrainFilterPython.py,sha256=boYfYkMO8iPYPzNhxnSF_Wn2jzHRhZ0roJ7RGFo_tHg,84006
+itk_strain-1.0.1.dist-info/METADATA,sha256=RclTjfnykjWB_rqTqKLJj1qjtHtY6gm2HWfu2P7DCsE,15773
+itk_strain-1.0.1.dist-info/WHEEL,sha256=ckcHFr_SmurAQlUMht2MuxGKrEnnQg5-6jSNRNeV7bQ,112
+itk_strain-1.0.1.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+itk_strain-1.0.1.dist-info/licenses/LICENSE,sha256=qsc7MUj20dcRHbyjIJn2jSbGRMaBOuHk8F9leaomY_4,11360
+itk_strain-1.0.1.dist-info/RECORD,,
