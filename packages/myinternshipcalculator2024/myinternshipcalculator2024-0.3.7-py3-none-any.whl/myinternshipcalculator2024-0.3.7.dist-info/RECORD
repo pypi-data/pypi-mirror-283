@@ -1,0 +1,12 @@
+myinternshipcalculator2024/__init__.py,sha256=ajkNpFVK4GKIIG5tj_bndl60Xp0E9rCyxOeooYK0k1U,72
+myinternshipcalculator2024/calculator.py,sha256=jd6DPvvkSQPoroROwtnTNce2RCjpN9LigL1BsI92zHo,1501
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_calculate_weekly_hours.py,sha256=-cRr8J3PvFaPaTemGozB1a4OuVi8ZZyBkmrAShWZvWM,441
+tests/test_model.py,sha256=0OmmQOjROpKRTrbCQ5AR4sdLaCV_Qpd1bLayjetca_0,403
+tests/test_plot.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_stats.py,sha256=a_m7clSN0gLbcYYcvxuyQ1OM8bMji7JvIoTcXI1pi6E,329
+myinternshipcalculator2024-0.3.7.dist-info/LICENSE,sha256=UtWDM6w7nMyyFqRyOZnsYCr408jfBPWGJGVXAx8pIKM,1065
+myinternshipcalculator2024-0.3.7.dist-info/METADATA,sha256=DO8MoqdaOex1lmrCabOujDO01zGqK6WOG1rtZ3C2Aio,980
+myinternshipcalculator2024-0.3.7.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+myinternshipcalculator2024-0.3.7.dist-info/top_level.txt,sha256=UT7iMgld9kc9tyAZz5g_ozwKAPucc6y9L9x9A6a5Tq0,33
+myinternshipcalculator2024-0.3.7.dist-info/RECORD,,
