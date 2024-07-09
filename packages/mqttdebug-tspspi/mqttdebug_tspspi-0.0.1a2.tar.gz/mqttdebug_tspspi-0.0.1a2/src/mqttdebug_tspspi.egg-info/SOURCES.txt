@@ -1,0 +1,13 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.cfg
+src/mqttdebug/__init__.py
+src/mqttdebug/mqttpublish.py
+src/mqttdebug/mqttsubscribe.py
+src/mqttdebug_tspspi.egg-info/PKG-INFO
+src/mqttdebug_tspspi.egg-info/SOURCES.txt
+src/mqttdebug_tspspi.egg-info/dependency_links.txt
+src/mqttdebug_tspspi.egg-info/entry_points.txt
+src/mqttdebug_tspspi.egg-info/requires.txt
+src/mqttdebug_tspspi.egg-info/top_level.txt

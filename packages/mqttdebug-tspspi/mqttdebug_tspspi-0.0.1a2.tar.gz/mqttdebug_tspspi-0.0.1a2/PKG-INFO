@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: mqttdebug-tspspi
+Version: 0.0.1a2
+Summary: A simple MQTT debugging utility that allows subscribing to an arbitrary number of topics / publishing messages from the CLI
+Home-page: https://github.com/tspspi/mqttdebug
+Author: Thomas Spielauer
+Author-email: pypipackages01@tspi.at
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: paho-mqtt>=1.6.1
+Requires-Dist: numpy>=1.25
+
+# Simple MQTT debug helper
+
+This is a simple tool that allows subscribing to an arbitrary number of
+MQTT topics as well as publishing to an MQTT broker using a command line
+utility.
+
+## Example usage
+
+### Configuration file
+
+The configuration file that's sourced by both tools is supplied in JSON
+format:
+
+```
+{
+	"broker" : {
+		"broker" : "example.com",
+		"port" : 1883
+	},
+	"auth" : {
+		"user" : "exampleuser",
+		"password" : "examplepassword"
+	}
+}
+```
+
+### Subscribing to all topics
+
+Dumping as plain text:
+
+```
+$ mqttsubscribe --cfg /path/to/configfile --topic "#"
+```
+
+Dumping as JSON:
+
+```
+$ mqttsubscribe --cfg /path/to/configfile --topic "#" --json
+```
+
+### Subscribing to specific topics
+
+```
+$ mqttsubscribe --cfg /path/to/configfile --topic "quakesr/experiment/camera/ebeam/raw/stored" --json
+```
+
+### Publishing a message from the CLI
+
+```
+$ mqttpublish --cfg /path/to/configfile --topic "examples/testtopic" --payload "Test payload"
+```
