@@ -1,0 +1,7 @@
+colorama
+
+[:platform_system == "Windows"]
+windows-curses>=2.3.3
+
+[:python_version < "3.7"]
+dataclasses>=0.6
