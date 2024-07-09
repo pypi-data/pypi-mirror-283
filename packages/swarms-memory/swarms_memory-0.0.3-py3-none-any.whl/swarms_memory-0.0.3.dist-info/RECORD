@@ -1,0 +1,8 @@
+swarms_memory/__init__.py,sha256=AaMjNj3w-enGgeGeoAnI5eCsFGK1NyDAZL2Bk6wk1is,212
+swarms_memory/chroma_db_wrapper.py,sha256=M0YwCeXud5QPjDYTWiFoMzcnkKmTBXWmYz5r8rZgiYs,5550
+swarms_memory/faiss_wrapper.py,sha256=A3CIkTrKWtPL4ocJufP6XYqQyMseDYUL0Xk0TLy8dyM,9161
+swarms_memory/pinecone_wrapper.py,sha256=UGmroNEFPBX_VqrCvmeK-pv17i8ABreHEcsPSE1OXW4,6542
+swarms_memory-0.0.3.dist-info/LICENSE,sha256=GHYD0Vn7cqu6O1FibXB1ix_cx8js09uZI1rKjCjW5sY,1074
+swarms_memory-0.0.3.dist-info/METADATA,sha256=Z3zNCvG9yqvDMSUYV8Lc1XFvKIN7UycqVWUf5poq6WU,12055
+swarms_memory-0.0.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+swarms_memory-0.0.3.dist-info/RECORD,,
