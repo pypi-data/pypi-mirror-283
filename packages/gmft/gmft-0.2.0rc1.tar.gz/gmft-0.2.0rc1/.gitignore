@@ -1,0 +1,16 @@
+__pycache__
+legacy
+dist
+.vscode
+.pytest_cache
+.idea
+.venv
+test/outputs/actual
+test/outputs/actual*
+test/holdout
+test/outputs/nmr
+test/samples
+plans
+gmft/pdf_bindings/bindings_mu.py
+docs/build
+notebooks
