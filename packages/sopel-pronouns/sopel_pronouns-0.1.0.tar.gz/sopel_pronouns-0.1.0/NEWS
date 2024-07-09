@@ -1,0 +1,11 @@
+## Changelog
+
+### 0.1.0
+
+First release of `sopel-pronouns`.
+
+New standalone plugin based on the `pronouns` builtin from Sopel 8.0.0.
+
+**New feature:** Optionally fetch a custom `pronouns.tab` to match your own
+[pronoun service](https://github.com/sopel-irc/pronoun-service) instance. See
+README for details.

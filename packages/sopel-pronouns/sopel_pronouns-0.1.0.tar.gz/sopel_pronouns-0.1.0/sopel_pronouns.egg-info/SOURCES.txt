@@ -1,0 +1,13 @@
+COPYING
+MANIFEST.in
+NEWS
+README.md
+pyproject.toml
+sopel_pronouns/__init__.py
+sopel_pronouns/plugin.py
+sopel_pronouns.egg-info/PKG-INFO
+sopel_pronouns.egg-info/SOURCES.txt
+sopel_pronouns.egg-info/dependency_links.txt
+sopel_pronouns.egg-info/entry_points.txt
+sopel_pronouns.egg-info/requires.txt
+sopel_pronouns.egg-info/top_level.txt
