@@ -1,0 +1,12 @@
+enclave/__init__.py,sha256=01QtIXEbztdlndlTx4h9extY8gdi_cQS6Ku7GhRyP-g,63
+enclave/_baseclient.py,sha256=pyKIl8pww3S3OKlRvXVG8EZxzta2r4LogJqJnts3TnU,3959
+enclave/_cross.py,sha256=J-KYWU0nkZEhI0lAdWoZZOK7tZ8042bzdLRsAebnyGg,9065
+enclave/_perps.py,sha256=csUl2MA80LJNQnpuDwUsxVD0W_xHSXAp0qBpozuks4Y,18176
+enclave/_spot.py,sha256=KlTbDqYeUrQJrNe4I9zEOOgVkXYghSfqrbDEW-oGZY4,10483
+enclave/client.py,sha256=Rx9WrZDCZnNu8wL2FxC7Is-fpD18t0ePBvK-w4Xr5DI,8019
+enclave/models.py,sha256=kQdujWD6EMAOfKwiaLnYQ2bXyuDT8hgmxglxJh5F_8U,942
+enclave/wsclient.py,sha256=0d6_3-NbqvCRq2ziouxbeV7w2uQN_DjOHrDtU9HLl7I,10389
+enclave-0.3.0.dist-info/LICENSE,sha256=g20IIhhBpGsvN1rHB_gLpjaxOaJE3i27Ig5eLAlNIoY,1072
+enclave-0.3.0.dist-info/METADATA,sha256=0-0NGvg_MYGqF7OifF_ahWzkVsBVARPAOhe3Yom3OUE,2561
+enclave-0.3.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+enclave-0.3.0.dist-info/RECORD,,
