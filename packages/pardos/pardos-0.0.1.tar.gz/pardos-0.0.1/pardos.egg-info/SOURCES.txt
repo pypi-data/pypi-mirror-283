@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+pardos/__init__.py
+pardos/methods.py
+pardos/register.py
+pardos/times.py
+pardos/unix.py
+pardos.egg-info/PKG-INFO
+pardos.egg-info/SOURCES.txt
+pardos.egg-info/dependency_links.txt
+pardos.egg-info/requires.txt
+pardos.egg-info/top_level.txt
+tests/test_methods.py
+tests/test_register.py
+tests/test_times.py
+tests/test_unix.py
