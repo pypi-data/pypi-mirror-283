@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "odoorpc-stubs"
+version = "0.1.0.dev1"
+description = "Generated type stubs for odoorpc"
+authors = ["Alexander Eisele <alexander.eisele@nexiles.com>"]
+readme = "README.md"
+
+packages=[{ include= "odoorpc-stubs" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[tool.poetry.group.dev.dependencies]
+odoorpc = "^0.10.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
