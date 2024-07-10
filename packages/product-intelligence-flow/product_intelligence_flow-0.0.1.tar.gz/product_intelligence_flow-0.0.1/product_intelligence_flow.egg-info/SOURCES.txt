@@ -1,0 +1,14 @@
+MANIFEST.in
+setup.py
+product/__init__.py
+product/tools/__init__.py
+product/tools/product_api_tool.py
+product/tools/utils.py
+product/yamls/product_api_tool.yaml
+product_intelligence_flow.egg-info/PKG-INFO
+product_intelligence_flow.egg-info/SOURCES.txt
+product_intelligence_flow.egg-info/dependency_links.txt
+product_intelligence_flow.egg-info/entry_points.txt
+product_intelligence_flow.egg-info/top_level.txt
+tests/__init__.py
+tests/test_product_api_tool.py

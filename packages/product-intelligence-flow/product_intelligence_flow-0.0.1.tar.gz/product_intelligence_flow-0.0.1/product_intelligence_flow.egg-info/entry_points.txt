@@ -1,0 +1,2 @@
+[package_tools]
+product_api_tool = product.tools.utils:list_package_tools
