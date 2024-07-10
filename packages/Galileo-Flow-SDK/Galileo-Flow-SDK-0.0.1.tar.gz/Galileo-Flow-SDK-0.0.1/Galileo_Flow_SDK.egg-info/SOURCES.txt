@@ -1,0 +1,9 @@
+README.md
+setup.py
+Galileo-Flow-SDK/GalileoFlowSdk.py
+Galileo-Flow-SDK/__init__.py
+Galileo_Flow_SDK.egg-info/PKG-INFO
+Galileo_Flow_SDK.egg-info/SOURCES.txt
+Galileo_Flow_SDK.egg-info/dependency_links.txt
+Galileo_Flow_SDK.egg-info/requires.txt
+Galileo_Flow_SDK.egg-info/top_level.txt
