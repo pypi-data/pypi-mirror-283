@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: protos_finance
+Version: 0.1.0
+Summary: 
+License: MIT
+Author: 41aasdqweq
+Author-email: tk230@163.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: grpcio (>=1.43.0,<2.0.0)
+Requires-Dist: grpcio-tools (>=1.43.0,<2.0.0)
+Requires-Dist: pypinyin (>=0.51.0,<0.52.0)
+Description-Content-Type: text/markdown
+
+# [grpc_finance_common](grpc_finance_common)
+
+
+
+# 生成文件命令
+python -m grpc_tools.protoc   --python_out=./   --grpc_python_out=./   -I protos $(find ./protos -name '*.proto')
+
+
+python -m grpc_tools.protoc   --python_out=./grpc_finance_common   --grpc_python_out=./grpc_finance_common   -I    ./ protos/finance/health.proto 
+
+python -m grpc_tools.protoc -I protos --python_out=grpc_finance_common --pyi_out=grpc_finance_common/protos --grpc_python_out=grpc_finance_common/protos/finance/health.proto
+
+
+
+python -m grpc_tools.protoc   -I. --python_out=.
+
+
+
