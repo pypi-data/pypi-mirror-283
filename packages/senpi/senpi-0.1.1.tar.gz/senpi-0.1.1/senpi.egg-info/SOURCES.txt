@@ -1,0 +1,9 @@
+README.md
+setup.py
+senpi/__init__.py
+senpi/constants.py
+senpi.egg-info/PKG-INFO
+senpi.egg-info/SOURCES.txt
+senpi.egg-info/dependency_links.txt
+senpi.egg-info/requires.txt
+senpi.egg-info/top_level.txt
