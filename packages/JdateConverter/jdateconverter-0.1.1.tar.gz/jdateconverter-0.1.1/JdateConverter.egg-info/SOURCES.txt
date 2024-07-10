@@ -1,0 +1,9 @@
+README.md
+setup.py
+JdateConverter.egg-info/PKG-INFO
+JdateConverter.egg-info/SOURCES.txt
+JdateConverter.egg-info/dependency_links.txt
+JdateConverter.egg-info/requires.txt
+JdateConverter.egg-info/top_level.txt
+jd_converter/__init__.py
+jd_converter/converter_jdatetime.py

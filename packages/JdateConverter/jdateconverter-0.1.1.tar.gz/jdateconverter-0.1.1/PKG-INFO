@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: JdateConverter
+Version: 0.1.1
+Summary: A package for converting to and from Jalali datetime
+Author: Mohammad Namjoo
+Author-email: namjoo.mohammad111@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: jdatetime
+Provides-Extra: dev
+Requires-Dist: jdatetime>=5.0.0; extra == "dev"
+Requires-Dist: jalali_core>=1.0.0; extra == "dev"
+Requires-Dist: twine>=5.1.1; extra == "dev"
+
+
+# how to use it 
+    from JdatetimeConverter import JDateTimeConverter
+    p1=JDateTimeConverter
+    p1.previous_days_to_datetime(2)   # > '14030417'
+    
+    p1.jalali_converter(2)  # >'اردیبهشت'
+    p1.jalali_converter('دی')  # 10
+    
+    p1.previous_hours_to_datetime(5,date_format = 'gregorian')  # > '2024-07-09 14:11:10'
+
+
+all right reserved for mohamamd namjoo 
+namjoo.mohammad111@gmail.com
+github/mamadgeek
+
+
+
+
