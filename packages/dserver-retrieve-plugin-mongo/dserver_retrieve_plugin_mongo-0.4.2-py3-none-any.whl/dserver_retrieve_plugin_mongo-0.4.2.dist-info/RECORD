@@ -1,0 +1,10 @@
+dserver_retrieve_plugin_mongo/__init__.py,sha256=O5xsNH-N9SuqYDqohD9t71xvVfCS6E_5dlULbxqsugI,1043
+dserver_retrieve_plugin_mongo/config.py,sha256=kfcjLi2WAceV6dwq02Pk3MNJBsIARLM4qPcz-Vj9ryw,406
+dserver_retrieve_plugin_mongo/utils_retrieve.py,sha256=AksRZV5bNpKqdanjyJFZaNiHrW5N5VEJfIqQUQ5GeLQ,4020
+dserver_retrieve_plugin_mongo/version.py,sha256=McNH31cVzymi4jtwoAHwNiyVAdDW8uY0z3IcBioCvQI,411
+dserver_retrieve_plugin_mongo-0.4.2.dist-info/LICENSE.rst,sha256=L5sJlJfcqBGoB8uBBz2t8iUbAeNbev_SQ0kfSsCaQkQ,1083
+dserver_retrieve_plugin_mongo-0.4.2.dist-info/METADATA,sha256=Gv6ziwnZlIBBdpKPDgcwwGnMd3kjsPberYjUkk2oiGI,2578
+dserver_retrieve_plugin_mongo-0.4.2.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+dserver_retrieve_plugin_mongo-0.4.2.dist-info/entry_points.txt,sha256=-euVNvWeaEsD4t2i5FiismLUs4pFULNbjzpeNICY6-U,98
+dserver_retrieve_plugin_mongo-0.4.2.dist-info/top_level.txt,sha256=PFMUMkELchp13zmA1esF_2PvjfolPRy8ivyDLuQ10V0,30
+dserver_retrieve_plugin_mongo-0.4.2.dist-info/RECORD,,
