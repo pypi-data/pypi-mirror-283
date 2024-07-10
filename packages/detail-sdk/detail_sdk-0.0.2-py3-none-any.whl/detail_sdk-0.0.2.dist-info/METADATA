@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: detail-sdk
+Version: 0.0.2
+Summary: 
+Home-page: https://detail.dev
+Author: Detail
+Author-email: pypi@detail.dev
+Requires-Python: >=3.8,<3.12
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: forbiddenfruit
+Requires-Dist: opentelemetry-exporter-otlp
+Requires-Dist: opentelemetry-exporter-otlp-proto-http
+Requires-Dist: opentelemetry-instrumentation-django (>=0.45b0)
+Requires-Dist: opentelemetry-instrumentation-flask (>=0.45b0)
+Requires-Dist: opentelemetry-instrumentation-psycopg2 (>=0.45b0)
+Requires-Dist: opentelemetry-instrumentation-sqlite3 (>=0.45b0)
+Requires-Dist: opentelemetry-sdk
+Requires-Dist: types-psycopg2
+Requires-Dist: vcrpy
+Requires-Dist: wrapt
