@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: upsay_jupyter_ai
+Version: 0.3
+Summary: Testing the deployment of UPSayAI
+Author-email: Paulo Couto <paulohenriquecrs@hotmail.com>
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: transformers
+Requires-Dist: IPython
+Requires-Dist: IPython.core.magic
+Requires-Dist: IPython.display
+Requires-Dist: torch
+Requires-Dist: pandas
+Requires-Dist: ast
+Requires-Dist: numpy
+Requires-Dist: threading
+Requires-Dist: time
+Requires-Dist: rank_bm25
+Requires-Dist: nltk
+Requires-Dist: nltk.tokenize
+Requires-Dist: huggingface_hub
+Requires-Dist: random
+Requires-Dist: ipywidgets
+Requires-Dist: json
+Project-URL: Home, https://gitlab.dsi.universite-paris-saclay.fr/paulo.couto-de-resende-silva/upsayai
