@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "gbsd"
+version = "0.1.0"
+description = "A Python package for determining the structures of materials with gradient-based methods."
+authors = ["Xander Gouws <xander.gouws@uwaterloo.ca>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+torch = "^2"
+
+[tool.poetry.group.dev.dependencies]
+pymatgen = "^2024"
+numpy = "^1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
