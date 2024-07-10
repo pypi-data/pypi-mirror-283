@@ -1,0 +1,2 @@
+[console_scripts]
+bo4e-dotnet-generator = bo4egenerator.cli:cli
