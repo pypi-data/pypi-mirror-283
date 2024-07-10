@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+amberdata_rest/__init__.py
+amberdata_rest/myfunctions.py
+amberdata_rest.egg-info/PKG-INFO
+amberdata_rest.egg-info/SOURCES.txt
+amberdata_rest.egg-info/dependency_links.txt
+amberdata_rest.egg-info/top_level.txt
+tests/test_myfunctions.py
