@@ -1,0 +1,2 @@
+[console_scripts]
+ssfuzz = syntax_symphony.cli:ssfuzz
