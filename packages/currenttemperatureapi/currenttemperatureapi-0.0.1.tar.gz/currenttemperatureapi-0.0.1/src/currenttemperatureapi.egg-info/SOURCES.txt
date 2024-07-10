@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+src/currenttemperatureapi.egg-info/PKG-INFO
+src/currenttemperatureapi.egg-info/SOURCES.txt
+src/currenttemperatureapi.egg-info/dependency_links.txt
+src/currenttemperatureapi.egg-info/requires.txt
+src/currenttemperatureapi.egg-info/top_level.txt

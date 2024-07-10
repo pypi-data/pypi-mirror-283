@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: currenttemperatureapi
+Version: 0.0.1
+Summary: get current temperature from provider
+Home-page: https://github.com/asrinvakili/WeatherTemperatureAPI
+Author: Asrin Vakili
+Author-email: asrin_vakili@yahoo.com
+Project-URL: Author, https://github.com/asrinvakili
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+How to use:
+
+from currenttemperature.api import OpenMeteo, OpenWeather
+
+open_meteo_obj = OpenMeteo(latitude,longitude)
+print(open_meteo_obj.get_weather_temp())
+
+open_weather_obj = OpenWeather(latitude,longitude,token_id)
+print(open_weather_obj.get_weather_temp())
