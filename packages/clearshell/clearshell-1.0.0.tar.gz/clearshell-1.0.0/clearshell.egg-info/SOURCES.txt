@@ -1,0 +1,10 @@
+README.md
+setup.py
+clearshell/__init__.py
+clearshell/cli.py
+clearshell/decrypt.py
+clearshell.egg-info/PKG-INFO
+clearshell.egg-info/SOURCES.txt
+clearshell.egg-info/dependency_links.txt
+clearshell.egg-info/entry_points.txt
+clearshell.egg-info/top_level.txt
