@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: OptiMultiPy
+Version: 0.0.1.1
+Summary: Sintonia do controlador PID utilizando algoritmo de otimização
+Home-page: https://github.com/Marcos9971/OptiMultiPy.git
+Author: Marcos Antônio Leandro
+Author-email: marcos352354@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: licence
+
+# OptiMultiPy
+
+Uma biblioteca de otimizaÃ§Ã£o em Python que oferece algoritmos eficientes para resolver problemas de otimizaÃ§Ã£o matemÃ¡tica.
+
+## SumÃ¡rio
+
+- [InstalaÃ§Ã£o](#instalaÃ§Ã£o)
+- [Uso](#uso)
+- [Funcionalidades](#funcionalidades)
+- [Contribuindo](#contribuindo)
+- [LicenÃ§a](#licenÃ§a)
+
+## InstalaÃ§Ã£o
+
+Para instalar a biblioteca, vocÃª pode usar o pip:
+
+```bash
+pip install OptiMultiPy
+
+
+from OptiMultiPy import algoritmo_otimizacao
+
+# Defina seu problema de otimizaÃ§Ã£o
+def funcao_objetivo(x):
+    return x**2 + 3*x + 2
+
+# ConfiguraÃ§Ãµes iniciais
+x_inicial = 0
+
+# Execute o algoritmo de otimizaÃ§Ã£o
+resultado = algoritmo_otimizacao(funcao_objetivo, x_inicial)
+
+print(f"Resultado da otimizaÃ§Ã£o: {resultado}")
+
+
+### VerificaÃ§Ã£o no `setup.py`
+
+No arquivo `setup.py`, certifique-se de que estÃ¡ lendo o `README.md` com a codificaÃ§Ã£o UTF-8 explicitamente:
+
+```python
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
