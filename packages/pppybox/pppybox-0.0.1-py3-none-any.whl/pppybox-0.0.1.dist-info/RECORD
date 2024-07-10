@@ -1,0 +1,11 @@
+pybox/__about__.py,sha256=ur418GqwxSqNonQpJwIO3MVXXaHatAKANw-w8mx0mOg,141
+pybox/__init__.py,sha256=D55LjI10YPblW-bfIEpAUJXghP4yBGJWE8uM87gv2WE,404
+pybox/base.py,sha256=jOSkZD_TvUSw3nWmslvOo0ldYqq6eFM029nSqtaeAIg,2228
+pybox/local.py,sha256=2BH83fyEPgN3VjGEwQggMgtE2jgTf2cOyBmNPKC9Gas,12110
+pybox/remote.py,sha256=ZYAYEMuo-FpyZkIvNs1OZHuXFB81joB8uOEO-Af_kw4,17095
+pybox/schema.py,sha256=zncq3f9wMfQKcZ2ImvNbV__d3nVjjE1NUmAPM71U58w,5232
+pybox/utils.py,sha256=xG0hO1AJ9qotEjOnAQAYV3pxa91Th2XfKSxj5n9W5J0,218
+pppybox-0.0.1.dist-info/METADATA,sha256=nn689xkXOr_Hb0dkiysVxCr1ygu4rPpaVFltOmuuf7c,1770
+pppybox-0.0.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+pppybox-0.0.1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pppybox-0.0.1.dist-info/RECORD,,
