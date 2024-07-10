@@ -1,0 +1,17 @@
+qm9pack/__init__.py,sha256=hcJVFgWlf0UbLj0j98v79vqsNNeE1o0CCMqquhT2ltc,111
+qm9pack/qm9pack_getdata.py,sha256=CVNEnNLhGFt8Ld8lfCwfXorzFAp3bAhCTIXC5keXrnM,1330
+qm9pack/qm9pack_utility.py,sha256=BjIM44A5bycP7Mhfb9gbzEM3vAJKze5EoToJ00ZPJZw,3698
+qm9pack/__pycache__/__init__.cpython-311.pyc,sha256=ZffgDgF6vkXIAp-diHS9YHhlrZM7m-8YgV16fCkXi-c,322
+qm9pack/__pycache__/__init__.cpython-37.pyc,sha256=84KaCaCPIS2EYwXWzz8BEgHfl3qwNth9E1pVWRMknkA,253
+qm9pack/__pycache__/qm9pack_getdata.cpython-311.pyc,sha256=N7yYs_h9_MFxxdB1XOiR1de_Tov5doTpg9QfhYPuw7E,2303
+qm9pack/__pycache__/qm9pack_getdata.cpython-37.pyc,sha256=4OWSirI9aIA0imB-SHw3QxP8SphV5P00kJrBMwi_FHQ,1207
+qm9pack/__pycache__/qm9pack_utility.cpython-311.pyc,sha256=g6sn6A2JRIM_JoDp3n2V5B2tT2XUoJSNFYrs8OXvs2E,5726
+qm9pack/__pycache__/qm9pack_utility.cpython-37.pyc,sha256=Etd9xVQJEloiEq5Dg6-hpkf4P0Rb4wUK-4yxaDjk19g,3612
+qm9pack/data/qm9_part1.csv,sha256=GfCl1ZVGLVLNgu7zNw8-nrVaH1LLFJhWVyADSVaN7_M,69693764
+qm9pack/data/qm9_part2.csv,sha256=K8oRP9wLKKE1Y8gO2bJA6TTz2mxkxk_nTdtPDzYDbmE,76868612
+qm9pack/data/qm9_part3.csv,sha256=nF77VzPSrxSduNldNv8Zi0_-0S2fezRCIKHlh31cakM,79083002
+qm9pack-1.0.1.dist-info/LICENSE,sha256=68solF1GuQVDtRg0OGoJ_FtsYxyoxpx4V35Q34m6lIo,1062
+qm9pack-1.0.1.dist-info/METADATA,sha256=i8eyIrRk_QthMBE1m-7foM7P4FS39ptvo-Nn7VjWr8M,326
+qm9pack-1.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+qm9pack-1.0.1.dist-info/top_level.txt,sha256=wAce5W6FWYwKrrHCV3j120OcwytLRdXmIO-lWRTMucM,8
+qm9pack-1.0.1.dist-info/RECORD,,
