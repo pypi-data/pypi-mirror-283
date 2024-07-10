@@ -1,0 +1,190 @@
+/* -*- Mode: C; indent-tabs-mode: t; c-basic-offset: 4; tab-width: 4 -*-  */
+/*
+ * client.c
+ * Copyright (C) ${YEAR} Vladimir Roncevic <elektron.ronca@gmail.com>
+ *
+ * ${PRO} is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the
+ * Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * ${PRO} is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+#include "shared_memory.h" 
+
+int main(void)
+{
+    //////////////////////////////////////////////////////////////////////////
+    /// Mutual exclusion semaphore shared memory
+    sem_t *mutex_sem = sem_open(SHM_SEM_MUTEX_NAME, 0, 0, 0);
+
+    if (mutex_sem == SEM_FAILED)
+    {
+        perror("Failed to open shared memory segment SHM SEM MUTEX.");
+        exit(SHM_ERROR);
+    }
+
+    //////////////////////////////////////////////////////////////////////////
+    /// Gets shared memory
+    int fd_shm = shm_open(SHM_NAME, O_RDWR, 0);
+
+    if (fd_shm == -1)
+    {
+        perror("Failed to open shared memory segment.");
+        exit(SHM_ERROR);
+    }
+
+    //////////////////////////////////////////////////////////////////////////
+    /// Map shared memory to process address space 
+    struct shared_memory *shared_mem_ptr = mmap(
+        NULL,
+        sizeof(struct shared_memory),
+        PROT_READ | PROT_WRITE,
+        MAP_SHARED,
+        fd_shm,
+        0
+    );
+
+    if (shared_mem_ptr == MAP_FAILED)
+    {
+        perror("Failed to map shared memory segment.");
+        exit(SHM_ERROR);
+    }
+
+    //////////////////////////////////////////////////////////////////////////
+    /// Counting semaphore  indicating the number of available buffers
+    sem_t *buffer_count_sem = sem_open(SHM_SEM_BUFFER_COUNT_NAME, 0, 0, 0);
+
+    if (buffer_count_sem == SEM_FAILED)
+    {
+        perror("Failed to open shared memory segment SHM SEM BUFFER COUNT.");
+        exit(SHM_ERROR);
+    }
+
+    //////////////////////////////////////////////////////////////////////////
+    /// Counting semaphore indicating the number of strings to be printed
+    sem_t *spool_signal_sem = sem_open(SHM_SEM_SPOOL_SIGNAL_NAME, 0, 0, 0);
+
+    if (spool_signal_sem == SEM_FAILED)        
+    {
+        perror("Failed to open shared memory segment SHM SEM SPOOL SIGNAL.");
+        exit(SHM_ERROR);
+    }
+
+    //////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////
+    /// Integration section
+
+    char buffer[200], *time_stamp;
+    printf("message > ");
+
+    while (fgets(buffer, 198, stdin))
+    {
+        //////////////////////////////////////////////////////////////////////
+        /// Removes newline from string
+        int length = strlen(buffer);
+
+        if (buffer[length - 1] == '\n')
+        {
+            buffer[length - 1] = '\0';
+        }
+
+        //////////////////////////////////////////////////////////////////////
+        /// Gets a buffer: P (buffer_count_sem);
+        if (sem_wait(buffer_count_sem) == -1)
+        {
+            perror("SEM_WAIT: Failed buffer count semaphore.");
+            exit(SHM_ERROR);
+        }
+
+        //////////////////////////////////////////////////////////////////////
+        /// There might be multiple producers. We must ensure that
+        /// only one producer uses buffer_index at a time. P (mutex_sem);
+        if (sem_wait(mutex_sem) == -1)
+        {
+            perror("SEM_WAIT: Failed mutex semaphore.");
+            exit(SHM_ERROR);
+        }
+
+        //////////////////////////////////////////////////////////////////////
+        /// Critical section
+        time_t now = time(NULL);
+        time_stamp = ctime(&now);
+        int len = strlen(time_stamp);
+
+        if (*(time_stamp + len - 1) == '\n')
+        {
+            *(time_stamp + len - 1) = '\0';
+        }
+
+        sprintf(
+            shared_mem_ptr->buffer[shared_mem_ptr->buffer_index],
+            "%d: %s %s\n", getpid(), time_stamp, buffer
+        );
+
+        (shared_mem_ptr->buffer_index)++;
+
+        if (shared_mem_ptr->buffer_index == SHM_MAX_BUFFERS)
+        {
+            shared_mem_ptr->buffer_index = 0;
+        }
+
+        //////////////////////////////////////////////////////////////////////
+        /// Release mutex sem: V (mutex_sem)
+        if (sem_post(mutex_sem) == -1)
+        {
+            perror("SEM_POST: Failed mutex semaphore.");
+            exit(SHM_ERROR);
+        }
+
+        //////////////////////////////////////////////////////////////////////
+        /// Tell spooler that there is a string to print: V (spool_signal_sem);
+        if (sem_post(spool_signal_sem) == -1)
+        {
+            perror("SEM_POST: Failed spool signal semaphore.");
+            exit(SHM_ERROR);
+        }
+
+        printf("message > ");
+    }
+
+    /// Integration section
+    //////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////
+    /// Unmap shared memory from process address space
+    if (munmap(shared_mem_ptr, sizeof(struct shared_memory)) == -1)
+    {
+        perror("Failed to unmap shared memory segment.");
+        exit(SHM_ERROR);
+    }
+
+    if(sem_close(mutex_sem) == -1)
+    {
+        perror("Failed to close mutex semaphore.");
+        exit(SHM_ERROR);
+    }
+
+    if(sem_close(buffer_count_sem) == -1)
+    {
+        perror("Failed to close buffer count semaphore.");
+        exit(SHM_ERROR);
+    }
+
+    if(sem_close(spool_signal_sem) == -1)
+    {
+        perror("Failed to close spool signal semaphore.");
+        exit(SHM_ERROR);
+    }
+
+    exit(SHM_SUCCESS);
+}
