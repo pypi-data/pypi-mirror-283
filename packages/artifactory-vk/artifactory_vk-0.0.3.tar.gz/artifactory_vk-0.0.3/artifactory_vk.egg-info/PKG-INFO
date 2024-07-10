@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: artifactory-vk
+Version: 0.0.3
+Requires-Python: >=3.12
+Requires-Dist: pydantic~=2.8.2
+Requires-Dist: requests~=2.32.3
+Requires-Dist: tuspy~=1.0.3
