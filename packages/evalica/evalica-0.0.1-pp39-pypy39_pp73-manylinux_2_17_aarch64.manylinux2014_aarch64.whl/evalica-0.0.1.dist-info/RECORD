@@ -1,0 +1,10 @@
+evalica-0.0.1.dist-info/METADATA,sha256=mGcf8vSlv8xMpWmh9s-AbW72URBctcY5H3JMUCyTz0o,1671
+evalica-0.0.1.dist-info/WHEEL,sha256=wMbIg4Vm31VrXkmaccV8MFKVP8SgCG1CDrVbXGAsuCc,136
+evalica-0.0.1.dist-info/license_files/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+evalica/py.typed,sha256=QE6PZoTns-xBPou7DD0hAAAHF-fTAYJ4NlJRRZRaFSw,7
+evalica/test_evalica.py,sha256=xBwPxmhgrmqrzY_Gwvh8JIpcRPpSzeFNsFbF5_0PyWY,7982
+evalica/evalica.pyi,sha256=U1Ejk2ktR13-hOXtliyO-OKDvIubfzDA9V0iRk2nxKQ,1603
+evalica/__init__.py,sha256=Nh4qFOvNrrB3D-0z0rXRTRIWI2i2xShuqbeInu09ycw,8822
+evalica/naive.py,sha256=4AqPWmONRDsVlWXJxprql4EhVTNQo_O0jywyZBEuods,3560
+evalica/evalica.pypy39-pp73-aarch64-linux-gnu.so,sha256=IpRN39hI0YyM5lPMCkR0QU3cwwz6CswJO51DC_I1ksY,831768
+evalica-0.0.1.dist-info/RECORD,,
