@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "gen3users"
+version = "1.1.1"
+description = "Utils for Gen3 Commons user management"
+authors = ["CTDS UChicago <cdis@uchicago.edu>"]
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/uc-cdis/gen3users"
+include = [
+  "CHANGELOG.md",
+  "NOTICE",
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+cdislogging = "^1"
+click = "*"
+pyyaml = "^6"
+requests = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+
+[tool.poetry.scripts]
+gen3users = "gen3users.main:main"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
