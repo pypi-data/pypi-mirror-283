@@ -1,0 +1,13 @@
+JPSL_Tools_Menu/__init__.py,sha256=vo3mUL6m9IQx2h80rUUXjS3nQ8QJ2YdJTbRsx0_DqiI,588
+JPSL_Tools_Menu/_version.py,sha256=dbXiAxBw0oBlK5T2c8iY7BGL76_buVaFYbDl1K5f0bU,174
+jpsl_tools_menu-0.2.0rc0.data/data/share/jupyter/labextensions/JPSL_Tools_Menu/package.json,sha256=01PZQzF6IgmNY_BNgjdlCwVDOnrLuSaDX7cI4UVgU8E,5979
+jpsl_tools_menu-0.2.0rc0.data/data/share/jupyter/labextensions/JPSL_Tools_Menu/static/509.dd503d352f64abb795c9.js,sha256=3VA9NS9kq7eVyUfGzjLxEOg5diiblMYd5peiFGQVk9Y,6490
+jpsl_tools_menu-0.2.0rc0.data/data/share/jupyter/labextensions/JPSL_Tools_Menu/static/728.4b0a6968be066b447aa8.js,sha256=SwppaL4Ga0R6qPFlUj2DJ8kggK9i2W_r7492VUif7i4,4008
+jpsl_tools_menu-0.2.0rc0.data/data/share/jupyter/labextensions/JPSL_Tools_Menu/static/remoteEntry.f011adb527f3de322771.js,sha256=8BGttSfz3jIncfSKzG4OeaPCTd0c-B2UHv1MbSIio1M,6555
+jpsl_tools_menu-0.2.0rc0.data/data/share/jupyter/labextensions/JPSL_Tools_Menu/static/style.js,sha256=k7PIuXjhSf1PcVvTD8vvL6CHXZk2qos91nx85ZUMN2k,158
+jpsl_tools_menu-0.2.0rc0.data/data/share/jupyter/labextensions/JPSL_Tools_Menu/static/third-party-licenses.json,sha256=W6N2sSD7tQihMqQk64F9xMd1Flfr2KO97esAiHUOYdM,2453
+jpsl_tools_menu-0.2.0rc0.data/data/share/jupyter/labextensions/JPSL_Tools_Menu/install.json,sha256=_bqgP2Q5Crr9wLryiPGgg3rJgx-2n30ESadHQd-MnbI,191
+jpsl_tools_menu-0.2.0rc0.dist-info/METADATA,sha256=TP4osxpIV_7qifZ58cMafoD3WtBoWG-eNX_xgmcMht4,8448
+jpsl_tools_menu-0.2.0rc0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+jpsl_tools_menu-0.2.0rc0.dist-info/licenses/LICENSE,sha256=cNp0hfQHiqyP4kve8AaYl--Qk4fFR1rIuLWzN5uUq8I,1522
+jpsl_tools_menu-0.2.0rc0.dist-info/RECORD,,
