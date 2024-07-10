@@ -1,0 +1,8 @@
+README.md
+setup.py
+dgtl_logging/__init__.py
+dgtl_logging/dgtl_logging.py
+dgtl_logging.egg-info/PKG-INFO
+dgtl_logging.egg-info/SOURCES.txt
+dgtl_logging.egg-info/dependency_links.txt
+dgtl_logging.egg-info/top_level.txt
