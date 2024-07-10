@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+ahk_wmutil/__init__.py
+ahk_wmutil/py.typed
+ahk_wmutil.egg-info/PKG-INFO
+ahk_wmutil.egg-info/SOURCES.txt
+ahk_wmutil.egg-info/dependency_links.txt
+ahk_wmutil.egg-info/requires.txt
+ahk_wmutil.egg-info/top_level.txt
