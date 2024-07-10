@@ -1,0 +1,10 @@
+AUTHORS.md
+LICENSE
+README.md
+freez_setup.py
+setup.py
+freez/__init__.py
+freez.egg-info/PKG-INFO
+freez.egg-info/SOURCES.txt
+freez.egg-info/dependency_links.txt
+freez.egg-info/top_level.txt
