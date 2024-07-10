@@ -1,0 +1,8 @@
+mormiz-0.0.12.dist-info/METADATA,sha256=jUlse4YB7pOZfKbCE03bDaJyGpQYw4Gwh7rYMbTZXgU,428
+mormiz-0.0.12.dist-info/WHEEL,sha256=WdQznVppN7z1Vmr3uommICdFQ8BTH-_snRK0jTnZY7g,95
+mormiz-0.0.12.dist-info/license_files/LICENSE,sha256=LhtFSVTkUNEnaTfIJ2vwgPrs_1Vnlvrs8VoZPkJWNKA,58
+mormiz/core.py,sha256=WTjKqA7901vlaZzVw-khHtwFxiY7j8O6Z3nFTlkd6eg,260
+mormiz/tokenizer,sha256=gusdN0L_wU0VUwkRJBcmMNbRcw0OGN8sNeSiT6mPKcg,1162358
+mormiz/__init__.py,sha256=gjSKEovg7EzofAFp-TGGnR4_Y8ET-6PMNIq8vswvNLU,28
+mormiz/mormiz.cp310-win_amd64.pyd,sha256=AecsrJCuush1PfwwNtYTitJ2JIG_gcrF8kfdUiVO_ng,383488
+mormiz-0.0.12.dist-info/RECORD,,
