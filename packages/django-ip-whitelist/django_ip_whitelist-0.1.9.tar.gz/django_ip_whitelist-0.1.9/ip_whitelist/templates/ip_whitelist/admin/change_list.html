@@ -1,0 +1,26 @@
+{% extends "admin/change_list.html" %}
+{% load i18n admin_list %}
+{% block result_list %}
+    <div class="extra_results">
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col" class="column-__str__">
+                        <div class="text">
+                            <span>{{ extra_results_header }}</span>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for extra_result in extra_results %}
+                    <tr>
+                        <td>{{ extra_result }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <br>
+    {{ block.super }}
+{% endblock result_list %}
