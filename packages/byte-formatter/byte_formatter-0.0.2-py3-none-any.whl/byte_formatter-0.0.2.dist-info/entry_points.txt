@@ -1,0 +1,3 @@
+[console_scripts]
+byte-formatter=byte_formatter.cli:main
+
