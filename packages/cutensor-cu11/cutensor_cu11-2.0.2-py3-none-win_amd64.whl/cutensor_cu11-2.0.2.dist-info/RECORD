@@ -1,0 +1,12 @@
+cutensor/LICENSE,sha256=imWi3_s5nV7GrLi05rQySCVr6lglz4Zz14EpX5ceo8s,17971
+cutensor/bin/cutensor.dll,sha256=44DH0jrJFc_jIJaMYG1JrcwoO3NktL5Mv0VQF30GLzs,211809792
+cutensor/bin/cutensorMg.dll,sha256=XsodtRKEub4hpq3mIsBAeqAiEes9NmelK8YazBSikIs,1581056
+cutensor/include/cutensor.h,sha256=awTxZQWqKHGafxSe9oiGt2Ot3AlHYQYuePxwD_hhX60,71739
+cutensor/include/cutensorMg.h,sha256=D1rqO9N8HZJmB7y6yN28OCuNEBtTZhPl7rq04r5_uAM,32727
+cutensor/include/cutensor/types.h,sha256=-rnmZfOn0YKGepNMi2LEkxLmsQaECIAOI81uFY__HCs,15634
+cutensor/lib/cutensor.lib,sha256=mDkZuHWA-Y9y-g24a7rXLooOUr5as_pnWcsdknUGqS8,13614
+cutensor/lib/cutensorMg.lib,sha256=DyyS1gCvj-0lRJj5-wyNhZWVHZnox79qqUCWduNXuCQ,6642
+cutensor_cu11-2.0.2.dist-info/METADATA,sha256=p5m9spZld6PRrTx3fJ0qDIRUoN08AxEEe6BD4tP4eiU,2055
+cutensor_cu11-2.0.2.dist-info/WHEEL,sha256=at4xwl6JdXdkZHxdo5ixTwJ7ENtVftSy2wqmsdmo_4U,98
+cutensor_cu11-2.0.2.dist-info/top_level.txt,sha256=T2b8AsqjjAnjHSVQLjOfwvRxAuwvFzYos2RxmwsOzhY,9
+cutensor_cu11-2.0.2.dist-info/RECORD,,
