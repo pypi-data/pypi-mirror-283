@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+dyca/__init__.py
+dyca/dyca.py
+dyca/dyca_internal.py
+dyca.egg-info/PKG-INFO
+dyca.egg-info/SOURCES.txt
+dyca.egg-info/dependency_links.txt
+dyca.egg-info/requires.txt
+dyca.egg-info/top_level.txt
