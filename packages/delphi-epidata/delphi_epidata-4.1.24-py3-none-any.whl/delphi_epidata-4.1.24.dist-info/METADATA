@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: delphi_epidata
+Version: 4.1.24
+Summary: A programmatic interface to Delphi's Epidata API.
+Author-email: David Farrow <dfarrow0@gmail.com>
+Maintainer-email: Delphi Support <delphi-support+pypi@andrew.cmu.edu>
+License: The MIT License (MIT)
+        
+        Copyright (c) 2018 The Delphi Group at Carnegie Mellon University
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/cmu-delphi/delphi-epidata
+Project-URL: Changelog, https://github.com/cmu-delphi/delphi-epidata/blob/main/src/client/packaging/pypi/CHANGELOG.md
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp
+Requires-Dist: requests >=2.7.0
+Requires-Dist: tenacity
+
+# Delphi Epidata API Client
+
+This package provides a programmatic interface to
+[Delphi](https://delphi.cmu.edu/)'s epidemiological data ("epidata")
+API. Source code and usage information can be found at
+[https://github.com/cmu-delphi/delphi-epidata](https://github.com/cmu-delphi/delphi-epidata).
