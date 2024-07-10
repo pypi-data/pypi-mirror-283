@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: morseet
+Version: 1.0.0
+Summary: morseet, is a command-line tool to convert morse code to text and vice versa.
+Home-page: https://github.com/AnirudhG07/morseet
+Author: Anirudh Gupta
+Keywords: terminal,Morse Code converted,Encryption,CLI
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Games/Entertainment
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: toml
+
+
+# morseet
+morseet(slang for morse-it) is a command line tool to convert text to morse-code and vice versa. It has various features and customization options making it the only tool
+you would go to. 
+
+# Features
+
+- Text to Morse code converter
+- Morse Code to text converter
+- Easily unserstand minor bugged morse codes
+- SOS signal
+- See delayed morse code formation real time
+- Amazing color scheme customizability
+
+# Installation
+To install morseet, please fulfill the dependicies and run the following command:
+```bash
+pip install morseet
+```
+To run the command, run the following command:
+```bash
+morseet
+```
+And you are good to go!
+
+## Dependencies
+- toml
+- Other python libraries which will be installed automatically
+
+Visit the Github Repository for more details: https://github.com/AnirudhG07/morseet
+
+# Version
+1.0.0
+
+# Note:
+1) The tool is developed using Python.
+2) This tools is crossplatform for MacOS, Linux, Windows, etc.
+
