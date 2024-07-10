@@ -1,0 +1,12 @@
+product/__init__.py,sha256=bpT73UG7mZL_JjEqMwbYx6q69jA8J5Jcoul1LcDokhA,81
+product/tools/__init__.py,sha256=bpT73UG7mZL_JjEqMwbYx6q69jA8J5Jcoul1LcDokhA,81
+product/tools/product_api_tool.py,sha256=9TuwMnuPNLrrkiA-sH1dv12CeilXbw_AKNxIi6H2Vt4,2107
+product/tools/utils.py,sha256=JfavnyUYcJGy1XlVOOlkRB-FFWuMOaRSRWpYGieMxTQ,535
+product/yamls/product_api_tool.yaml,sha256=k53RkMt7-A9Dvy2THlTamZjCkbmIUmrgM4rsxjdWtkk,490
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_product_api_tool.py,sha256=0sOLfNhc6JxBFDNL-Jpf54Ze48hzPZigaAxeNxJ0NAY,1013
+product_intelligence_flow-0.0.1.dist-info/METADATA,sha256=ZFlZQxRxbgDihECRyDWUDB2YIpNK87-Xn2INBFxIF9w,151
+product_intelligence_flow-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+product_intelligence_flow-0.0.1.dist-info/entry_points.txt,sha256=RwLc8jS4ZopBZ6mpRnNE0o-s_mxOGebHi4mlV58GFUs,74
+product_intelligence_flow-0.0.1.dist-info/top_level.txt,sha256=C_Xg0udnyvNBSHSgYmlVYLKn1j_lVGxPsfyzg-BI0SQ,14
+product_intelligence_flow-0.0.1.dist-info/RECORD,,

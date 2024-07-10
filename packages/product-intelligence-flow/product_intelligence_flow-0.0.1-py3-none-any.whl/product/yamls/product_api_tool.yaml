@@ -1,0 +1,22 @@
+product.tools.product_api_tool.get_product_intelligence_flow_api:
+  function: get_product_intelligence_flow_api
+  inputs:
+    allowed:
+      type:
+      - bool
+    chat_input:
+      type:
+      - string
+    end_point:
+      type:
+      - string
+    api_key:
+      type:
+      - string
+    deployment_name:
+      type:
+      - string
+  module: product.tools.product_api_tool
+  name: product intelligence prompt flow
+  description: This is product intelligence prompt flow tool
+  type: python
