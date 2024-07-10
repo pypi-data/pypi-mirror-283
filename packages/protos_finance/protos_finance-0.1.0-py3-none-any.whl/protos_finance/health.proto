@@ -1,0 +1,22 @@
+syntax = "proto3";
+package protos;
+import "google/protobuf/empty.proto";
+
+//调用服务
+
+message reponseData{
+    string code = 1;
+    string msg = 2;
+    string data = 3;
+}
+
+service reqData{
+    rpc doHealth(HealthRequest) returns(reponseData);
+    rpc domheart(HealthRequest) returns(google.protobuf.Empty);
+}
+
+message HealthRequest{
+    string code = 1;
+    string msg = 2;
+    string data = 3;
+}

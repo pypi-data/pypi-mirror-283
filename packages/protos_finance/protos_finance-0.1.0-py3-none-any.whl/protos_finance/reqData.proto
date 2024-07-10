@@ -1,0 +1,31 @@
+syntax = "proto3";
+package protos;
+import "google/protobuf/empty.proto";
+
+//调用服务
+message DoArithRequest{
+    string serviceName = 1;
+    string isSplite = 2;
+    string spliteBy = 3;
+    string spliteNum=4 ;
+    string node = 5;
+    string param= 6;
+}
+
+message reponseData{
+    string code = 1;
+    string msg = 2;
+    string data = 3;
+}
+
+service reqData{
+    rpc doArith(DoArithRequest) returns(reponseData);
+    rpc doHealth(HealthRequest) returns(reponseData);
+    rpc domheart(HealthRequest) returns(google.protobuf.Empty);
+}
+
+message HealthRequest{
+    string code = 1;
+    string msg = 2;
+    string data = 3;
+}
