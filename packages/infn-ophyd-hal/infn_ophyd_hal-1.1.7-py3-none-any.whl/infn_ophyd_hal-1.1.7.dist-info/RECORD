@@ -1,0 +1,8 @@
+infn_ophyd_hal/__init__.py,sha256=rOagsFSMqG7g-csqrJ-4hMkwfrZL5g0daJGU5FhqSWM,81
+infn_ophyd_hal/opyhd_motor.py,sha256=Lyzcle4hqtyT9s5yiR_PlmWYMlMqXR6ji2v9ShRf3dE,3908
+infn_ophyd_hal/spp_ophyd_bpm.py,sha256=VW0D9NXkV83mJqlHctsgonHJlAc5-BJl_vpQ8-niR-w,1161
+infn_ophyd_hal/tml_ophyd_motor.py,sha256=JbWioCPnPTXeTOpWqLXj16fK1GkIP4ewIeLI7meqkYA,13165
+infn_ophyd_hal-1.1.7.dist-info/METADATA,sha256=ZqZVvEygJA2U7u9p_mgI97SGaRgwoU0L9qMKnA2P3-E,455
+infn_ophyd_hal-1.1.7.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+infn_ophyd_hal-1.1.7.dist-info/top_level.txt,sha256=v1NytCYkxLw7KeV8ELMfu4L0Y19G05IrVD3PF6srqIc,15
+infn_ophyd_hal-1.1.7.dist-info/RECORD,,
