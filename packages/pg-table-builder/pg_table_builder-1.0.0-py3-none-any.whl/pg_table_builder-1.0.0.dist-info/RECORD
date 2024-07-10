@@ -1,0 +1,8 @@
+pg_table_builder/__init__.py,sha256=v_tR-8fssErW7dAH-6cQ44k0Q_lnwCAB8_kRe9pJejE,42
+pg_table_builder/exceptions.py,sha256=xEDi-NgFGEqdxmgHbmhjPMe8y-soc3Sp64jwxsBw8KM,1850
+pg_table_builder/types.py,sha256=ioSzUeNQmsJumBD9uiYjLTm25iJcYESm7NyjJWo2lOY,4035
+pg_table_builder-1.0.0.dist-info/LICENSE.md,sha256=yaiGjOmFkjRkw9LqRX7vNFAsUadpwHVJG-S03t25G-Y,1088
+pg_table_builder-1.0.0.dist-info/METADATA,sha256=U2y9hKmTkVoqmM9o87NWj-eHZs2WcbyGqndhIoMVMms,774
+pg_table_builder-1.0.0.dist-info/WHEEL,sha256=cpQTJ5IWu9CdaPViMhC9YzF8gZuS5-vlfoFihTBC86A,91
+pg_table_builder-1.0.0.dist-info/top_level.txt,sha256=nQQDKMjt7AzElt3H5ZD_tWwdQr2vfjdwX-a3cy9ES8Q,17
+pg_table_builder-1.0.0.dist-info/RECORD,,
