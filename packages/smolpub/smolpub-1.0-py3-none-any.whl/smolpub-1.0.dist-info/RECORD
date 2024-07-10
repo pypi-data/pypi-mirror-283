@@ -1,0 +1,7 @@
+smolpub/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+smolpub/__main__.py,sha256=5R1VB10K6xVwQ92O7FWLvIndKE_aKC4Brnt6pFj2zY4,66
+smolpub/app.py,sha256=CRfUv61kY8nP6zpIr5sJ1OQgZSfXs6GFaxEAJLUxXsg,4448
+smolpub-1.0.dist-info/METADATA,sha256=A73sEu4RVko2YX78-moK12q2Wmv2I2U2mLmdx7k-jfM,3624
+smolpub-1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+smolpub-1.0.dist-info/entry_points.txt,sha256=4y26_wlVKfKrt6cwIJ_BQetAy2F5ApMJHsWl26qMfdo,48
+smolpub-1.0.dist-info/RECORD,,
