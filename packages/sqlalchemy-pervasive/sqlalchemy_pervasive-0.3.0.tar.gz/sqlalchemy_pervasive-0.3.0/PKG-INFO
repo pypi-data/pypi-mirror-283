@@ -1,0 +1,29 @@
+Metadata-Version: 2.3
+Name: sqlalchemy-pervasive
+Version: 0.3.0
+Summary: SQLAlchemy Dialect for Pervasive PSQL
+Project-URL: Homepage, https://kallithea.rattailproject.org/rattail-project-contrib/sqlalchemy-pervasive
+Project-URL: Repository, https://kallithea.rattailproject.org/rattail-project-contrib/sqlalchemy-pervasive
+Project-URL: Changelog, https://kallithea.rattailproject.org/rattail-project-contrib/sqlalchemy-pervasive/files/master/CHANGELOG.md
+Author-email: Lance Edgar <lance@edbob.org>
+License: GNU GPL v3+
+License-File: COPYING.txt
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: pyodbc
+Requires-Dist: sqlalchemy
+Description-Content-Type: text/x-rst
+
+
+sqlalchemy-pervasive
+====================
+
+A SQLAlchemy dialect for the `Pervasive PSQL`_ database engine.
+
+.. _Pervasive PSQL: http://www.pervasive.com/database/

@@ -1,0 +1,4 @@
+*~
+*.pyc
+dist/
+sqlalchemy_pervasive.egg-info
