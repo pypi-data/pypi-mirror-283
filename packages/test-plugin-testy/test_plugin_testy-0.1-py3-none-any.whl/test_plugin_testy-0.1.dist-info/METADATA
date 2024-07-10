@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: test-plugin-testy
+Version: 0.1
+Summary: Test plugin for uploading files
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: django
+Requires-Dist: testy
+
+UNKNOWN
+
