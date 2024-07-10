@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: gospeed_api
+Version: 1.0.1
+Summary: Default template for PDM package
+Author-Email: tick97115115 <32931796+tick97115115@users.noreply.github.com>
+License: MIT
+Requires-Python: >=3.10
+Requires-Dist: pydantic>=2.8.2
+Requires-Dist: requests>=2.32.3
+Description-Content-Type: text/markdown
+
+# gospeed_api
+
+This project provide Gospeed downloader RestAPI full-covered interacting.
+
+All  data model is type checked in runtime by using [Pydantic](https://docs.pydantic.dev/).
+
+## Usage Example
+
+Every usage example is written in test file, for more detail please take a look: [test_index.py](./tests/test_index.py)
