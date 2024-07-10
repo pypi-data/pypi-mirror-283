@@ -1,0 +1,4 @@
+[console_scripts]
+kaskade=kaskade.main:cli
+kskd=kaskade.main:cli
+
