@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+hatch_cpp.egg-info/PKG-INFO
+hatch_cpp.egg-info/SOURCES.txt
+hatch_cpp.egg-info/dependency_links.txt
+hatch_cpp.egg-info/top_level.txt
