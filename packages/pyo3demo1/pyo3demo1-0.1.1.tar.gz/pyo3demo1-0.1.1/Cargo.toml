@@ -1,0 +1,14 @@
+[package]
+name = "pyo3demo1"
+version = "0.1.1"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "pyo3demo1"
+crate-type = ["cdylib"]
+
+[dependencies]
+#pyo3 = "0.22.0"
+pyo3 = { version = "0.22.0", features = ["abi3-py38", "chrono", "extension-module", "multiple-pymethods", "generate-import-lib"] }
+libc = "0.2"
