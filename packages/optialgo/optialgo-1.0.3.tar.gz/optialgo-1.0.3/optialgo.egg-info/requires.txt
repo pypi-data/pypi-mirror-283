@@ -1,0 +1,15 @@
+scikit-learn
+skfeature-chappers
+xgboost
+imblearn
+category_encoders
+matplotlib
+seaborn
+pandas
+numpy==1.26.4
+rich
+tqdm
+nltk
+sastrawi
+nlp_id==0.1.16.0
+ipywidgets
