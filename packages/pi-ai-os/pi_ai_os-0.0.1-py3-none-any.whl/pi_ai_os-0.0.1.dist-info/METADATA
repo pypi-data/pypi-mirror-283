@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: pi-ai-os
+Version: 0.0.1
+Summary: Integrate your OS with an LLM.
+License: Apache 2.0
+Author: piEsposito
+Author-email: piero.skywalker@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pillow (>=10.4.0,<11.0.0)
+Requires-Dist: tiny-ai-client (>=0.0.11,<0.0.12)
+Description-Content-Type: text/markdown
+
+# AI-OS: Plug an LLM into your OS
+
+## Installation
+
+1. Clone this repository.
+2. Run `poetry install` in the project directory.
+3. Alternatively `pip install pi-ai-os`
+
+## Usage
+
+```bash
+aios [options] [initial message]
+```
+
+Options:
+
+- `-m`, `--model`: Specify the AI model to use (default: claude-3-5-sonnet-20240620)
+- `-c`, `--config`: Path to the configuration file
+
+Example:
+
+```bash
+export ANTHROPIC_API_KEY=your_api_key_here
+aios -m claude-3-5-sonnet-20240620 "List all files in the current directory"
+```
+
+## Features
+
+### Image Analysis
+
+To include an image in your query, use the `/image` command followed by the path to the image:
+
+```
+/image path/to/your/image.jpg Describe this image
+```
+
+### Configuration File
+
+AIOS can use a configuration file to provide context about your project. By default, it looks for a file named `.aios.yaml` in the current directory. You can specify a different config file using the `-c` option.
+
+Example configuration file:
+
+```yaml
+directories:
+  - /path/to/project
+
+context:
+  - file: pi_ai_os.py
+    description: Main application file
+  - file: README.md
+    description: Configuration settings
+```
+
+### Clearing Context
+
+Type `/clear` during your interaction with AIOS.
+
