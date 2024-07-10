@@ -1,0 +1,2 @@
+[console_scripts]
+my-voice-assistant = my_voice_assistant.main:main

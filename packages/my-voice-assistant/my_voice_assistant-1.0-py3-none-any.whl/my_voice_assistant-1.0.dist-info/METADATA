@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: my_voice_assistant
+Version: 1.0
+Requires-Dist: SpeechRecognition
+Requires-Dist: pyttsx3
+Requires-Dist: google.generativeai
+
