@@ -1,0 +1,16 @@
+tqbus_sdk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tqbus_sdk/banca/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tqbus_sdk/banca/generics.py,sha256=DzamvRkPzM1TEdcnhwLWL0BfsgjgLeD50KKsHBCu7aM,1237
+tqbus_sdk/crm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tqbus_sdk/crm/countries.py,sha256=BQ5MnznIxEZPltua1QzpqSMKeZ8pvhEdW6NaNHZcJN0,907
+tqbus_sdk/crm/tqclients.py,sha256=VNp7VigPnVcFx_c1b6H0-RRlpYmT7pyOCglI9kB0-_w,6606
+tqbus_sdk/gis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tqbus_sdk/gis/endorsements.py,sha256=-dWM2gh0ghpEedtPlxEUV_3dcvIktpLre8bF0Wn_Tzs,1439
+tqbus_sdk/gis/policies.py,sha256=vBLA_RamWK_6iASZU7Jw_vNTKk5NZsAfPRhNOU835-Q,1699
+tqbus_sdk/gis/quotations.py,sha256=mIOqUJg8mlR1upefxmUqNBGsGDWJUanVbw3B8jiQgwc,6282
+tqbus_sdk/lms/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tqbus_sdk/lms/generics.py,sha256=Nv0U6NFt7oUgXftXaYDxKL939KKVOG7rLvgiMn8NJRc,1611
+tqbus_sdk/tqsystem.py,sha256=e7j50_GoRDiNcUJAWu9gLvbXhVLvOTXCcY5c7VDOix4,8874
+tqbus_sdk-0.1.6.dist-info/METADATA,sha256=oKYFPy30XFlzgMyuaXEGTJ2fHofCzqsGa6SS5KcE-uQ,572
+tqbus_sdk-0.1.6.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+tqbus_sdk-0.1.6.dist-info/RECORD,,
