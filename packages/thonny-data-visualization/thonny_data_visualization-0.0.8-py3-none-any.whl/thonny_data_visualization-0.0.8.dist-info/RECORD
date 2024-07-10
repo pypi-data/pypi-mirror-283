@@ -1,0 +1,13 @@
+thonnycontrib/data_visualization/Network_view.py,sha256=ouV8j1h6ZXwwWDOJps5_ewdkXAAxbn-T54aR2tGFXMg,16041
+thonnycontrib/data_visualization/__init__.py,sha256=uAL8ICc9JUU6lbyrIZV_B2516lwOknMrsxaHGfGW-mI,469
+thonnycontrib/data_visualization/hierarchic_view.py,sha256=msr2LEhN3Q49VQuQmBNJUP5D0gsNnfYibCR9AMsOCh0,17077
+thonnycontrib/data_visualization/locals_variables_view.py,sha256=80RIp9QnUHd28Qpinb0gOHAkX5MBaDQUQlmmlvigGcA,3045
+thonnycontrib/data_visualization/representation_format.py,sha256=21VJf-2etNIZBGMwPiPOYcewEXoE9g2vHGWpvfaNjDY,1365
+thonnycontrib/data_visualization/sender.py,sha256=FnqdULLRpcYYXF63-io9UOjRj8kBERxJ5AJronfHxSw,1916
+thonnycontrib/data_visualization/Network/DB.py,sha256=aIFfrcnhp6x88PCGBrcLo5XLrUiXpi-DHr4Lpr-ZC8k,11801
+thonnycontrib/data_visualization/Network/graphic.py,sha256=R1LjYQqFlXB-gEUPtgk0R7WG1XE9SegE_M1Nuf2OocA,10417
+thonny_data_visualization-0.0.8.dist-info/LICENSE,sha256=DJHNRDm8kn2mORclZmmQTmCVTZGEB-AqmKgUdwPsh1k,1094
+thonny_data_visualization-0.0.8.dist-info/METADATA,sha256=N9YSNOBFhoFZT02lin0JA4Mk9pszaNKsnjbCHvJqlVg,1285
+thonny_data_visualization-0.0.8.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+thonny_data_visualization-0.0.8.dist-info/top_level.txt,sha256=thF9WQtY_lcNKOOR4SQeeWLAVWb4i8XhdGC7pEMAOHY,14
+thonny_data_visualization-0.0.8.dist-info/RECORD,,
