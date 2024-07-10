@@ -1,0 +1,17 @@
+pynvjitlink/_nvjitlinklib.cpp,sha256=e5MZPr7_7KLs5v5Dx4buldJe_spk_SBsPYz8CrvaMRg,11392
+pynvjitlink/api.py,sha256=CgTnAWcfd92Rhl2OjQcTuZl0JwHo_DdupHnCT0V1n2Q,3008
+pynvjitlink/_nvjitlinklib.cpython-312-x86_64-linux-gnu.so,sha256=UrBAVHEn4uM07VHwcNmMPiEQwNjxUc5RUPvjbmTBnuk,61994328
+pynvjitlink/__init__.py,sha256=EFkfQuWE1aTiSNcOb2MmvuGMMC5nUu9pGpWNU1XzjXM,306
+pynvjitlink/_version.py,sha256=JFUb3lz1QqbbQIYG54KJxSJkvyGUDEhygpTSAgcUdAY,965
+pynvjitlink/patch.py,sha256=pdqsrq8ftNw_ZaWacS0afTjJ3YYJdLftnyC9ojbhRSo,7724
+pynvjitlink/VERSION,sha256=2RXMldbKj0euKXcT7UbU5cXZnd0p_Dxh4mO98wXytbA,6
+pynvjitlink/GIT_COMMIT,sha256=AWr04gyzugqxbGDPa-hp0XLXTwasM7AtV8uburhgrZQ,41
+pynvjitlink/tests/test_version.py,sha256=iDvpieWbk4K18ej_OUnNnc9btsqveML7kqqitlYVLFg,501
+pynvjitlink/tests/test_pynvjitlink_api.py,sha256=SplEWxPHIZiU6CgAS0xU7Lv3DepH9fXH8Bfq-vgCxOw,4431
+pynvjitlink/tests/conftest.py,sha256=QO-WG1SJMbfZ26vx4_p7IGFApDlnqJJ9iaLxuDt4Hjs,4312
+pynvjitlink/tests/test_pynvjitlink.py,sha256=LKbJUDsN9HR3BD01OTeDNv7SlTbomaILQZFrP7JOyMA,6325
+pynvjitlink/tests/test_patch.py,sha256=z-B4gcMdQDt-YG-WqALKP3OiIsmjBJxQqGwyBhA8yTg,5862
+pynvjitlink_cu12-0.3.0.dist-info/METADATA,sha256=CQ7m5lX8gaFfjgbvqOBpSnTpVdM3BgInoVz6KLlZkbE,1489
+pynvjitlink_cu12-0.3.0.dist-info/RECORD,,
+pynvjitlink_cu12-0.3.0.dist-info/WHEEL,sha256=wzUkgUE3kESFpY9Mvru6Fc6F1aw_l9CzmEMIPB1kvQs,156
+pynvjitlink_cu12-0.3.0.dist-info/licenses/LICENSE,sha256=4YCpjWCbYMkMQFW47JXsorZLOaP957HwmP6oHW2_ngM,11348
