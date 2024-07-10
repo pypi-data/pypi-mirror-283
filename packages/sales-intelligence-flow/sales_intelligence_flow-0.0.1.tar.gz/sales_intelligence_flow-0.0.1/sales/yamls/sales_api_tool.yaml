@@ -1,0 +1,22 @@
+sales.tools.sales_api_tool.get_sales_intelligence_flow_api:
+  function: get_sales_intelligence_flow_api
+  inputs:
+    allowed:
+      type:
+      - bool
+    chat_input:
+      type:
+      - string
+    end_point:
+      type:
+      - string
+    api_key:
+      type:
+      - string
+    deployment_name:
+      type:
+      - string
+  module: sales.tools.sales_api_tool
+  name: sales intelligence prompt flow
+  description: This is sales intelligence prompt flow tool
+  type: python
