@@ -1,0 +1,5 @@
+numpy
+lmfit
+matplotlib
+astropy
+astroplan
