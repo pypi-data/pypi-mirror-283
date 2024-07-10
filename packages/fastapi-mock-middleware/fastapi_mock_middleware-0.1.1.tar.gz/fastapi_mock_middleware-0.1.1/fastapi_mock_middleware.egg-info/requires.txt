@@ -1,0 +1,13 @@
+fastapi>=0.103.0
+polyfactory>=2.8.0
+
+[dev]
+uvicorn
+ipython
+
+[test]
+pytest
+pytest-asyncio
+pytest-cov
+flake8
+httpx

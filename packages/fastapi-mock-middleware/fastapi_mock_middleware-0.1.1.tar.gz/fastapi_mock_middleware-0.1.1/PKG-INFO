@@ -1,0 +1,118 @@
+Metadata-Version: 2.1
+Name: fastapi-mock-middleware
+Version: 0.1.1
+Summary: FastAPI middleware for mocking response data of non-implemented endpoints
+Author-email: Niyaz Batyrshin <Niyaz.Batyrshin@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2023 Niyaz Batyrshin
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: homepage, https://NiyazNz.github.io/fastapi-mock-middleware
+Project-URL: repository, https://github.com/NiyazNz/fastapi-mock-middleware.git
+Project-URL: issues, https://github.com/NiyazNz/fastapi-mock-middleware/issues
+Keywords: fastapi,mock,mock API,mock fastapi,mock response,API first
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: fastapi>=0.103.0
+Requires-Dist: polyfactory>=2.8.0
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-asyncio; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: flake8; extra == "test"
+Requires-Dist: httpx; extra == "test"
+Provides-Extra: dev
+Requires-Dist: uvicorn; extra == "dev"
+Requires-Dist: ipython; extra == "dev"
+
+# FastAPI mock middleware
+
+[![license](https://img.shields.io/badge/License-MIT-dark)](https://github.com/NiyazNz/fastapi-mock-middleware/blob/main/LICENSE.txt)
+[![pypi](https://img.shields.io/pypi/v/fastapi-mock-middleware?color=00FF00)](https://pypi.org/project/fastapi-mock-middleware/)
+[![test](https://github.com/NiyazNz/fastapi-mock-middleware/workflows/Test/badge.svg)](https://github.com/NiyazNz/fastapi-mock-middleware/actions/workflows/test.yml)
+[![codecov](https://codecov.io/gh/NiyazNz/fastapi-mock-middleware/graph/badge.svg?token=GX8A8HD0KL)](https://codecov.io/gh/NiyazNz/fastapi-mock-middleware)
+
+FastAPI middleware for mocking response data of non-implemented endpoints.
+
+Mock data is generated in accordance with endpoint return type or provided
+response_model using [polifactory](https://github.com/litestar-org/polyfactory).
+
+---
+
+For more information on how to use fastapi-mock-middleware, please refer to the
+[official documentation](https://niyaznz.github.io/fastapi-mock-middleware/).
+
+## Installation
+
+```shell
+pip install fastapi-mock-middleware
+```
+
+## Usage example
+
+Add `MockAPIMiddleware` middleware to app and raise `APINotImplementedError` in
+your endpoint stubs.
+
+```Python hl_lines="8 18"
+import uvicorn
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+from fastapi_mock_middleware import MockAPIMiddleware, APINotImplementedError
+
+app = FastAPI()
+app.add_middleware(MockAPIMiddleware)
+
+
+class Item(BaseModel):
+    id: int
+    name: str
+
+
+@app.get('/')
+async def list_items() -> list[Item]:
+    raise APINotImplementedError()
+
+
+if __name__ == '__main__':
+    uvicorn.run('example:app', reload=True)
+```
+
+Check the response using `curl`.
+
+```shell
+curl http://127.0.0.1:8000/
+```
+
+Called API must return mocked data:
+
+```json
+[
+  {
+    "id": 5392,
+    "name": "gVzyVVUmGGevXlQvXGBW"
+  }
+]
+```
