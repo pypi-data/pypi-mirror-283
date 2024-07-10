@@ -1,0 +1,14 @@
+firestarter/__init__.py,sha256=3qPJsI_cs0SlJn5DWM459KiP-4DSaTWmW-7lyF1jPMo,23
+firestarter/avr_tool.py,sha256=79cdQHcChx3jlk4KVca7iiAYc5Hs99RdS7OMw-YsjE8,2873
+firestarter/database.py,sha256=IqYx5v7Luz1nhbhPSya1kSnyAEKb50gbWQ8E9xnW2sc,4642
+firestarter/ic_layout.py,sha256=SmVvwcqGDl2G6WdlRQP-4QpeTSbYfmzMxw_7uhwztgI,4663
+firestarter/main.py,sha256=S6EJkkHO7IxFNfn8wi7Gqc5sqrKZUsFbhVVpU8B4K4Q,20353
+firestarter/data/avrdude.conf,sha256=vmkKv86ekefcro1BfheZ3COwMXnDByAGXR9r86ZFgwA,536804
+firestarter/data/database.json,sha256=JdIzLGn5yDmRGPezoVSFOA0zG4_7Y7f6RMSgiSnnTRM,567246
+firestarter/data/pin-maps.json,sha256=1CYwIH2ytqa1pswWEGKD3meiu-r5PSMr-ANFY4ZL9Fw,893
+firestarter-1.0.22.dist-info/LICENSE,sha256=9ztcEKxcb4Hz5B2cF0nYB_eGeNdgyZt_3sR8Pw2V95c,1070
+firestarter-1.0.22.dist-info/METADATA,sha256=lO-vQmh-yrtTV-hUI3XP4jVSA5DmWQUsgpkBfd2xXJo,1302
+firestarter-1.0.22.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+firestarter-1.0.22.dist-info/entry_points.txt,sha256=_s-2jjqG7vwqoDns4Xz534xTCm4TzfhNF84-I9L-Bv0,54
+firestarter-1.0.22.dist-info/top_level.txt,sha256=qHuqDWyW4kVcqbYZpvbwLwJ_Q3Nezm_3mwM6E2wJPRg,12
+firestarter-1.0.22.dist-info/RECORD,,
