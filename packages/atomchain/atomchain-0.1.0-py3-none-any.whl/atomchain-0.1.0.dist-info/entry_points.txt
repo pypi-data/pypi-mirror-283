@@ -1,0 +1,4 @@
+[console_scripts]
+mlgap = atomchain.gap:mlgap_cli
+mlphonon = atomchain.phonon:mlphonon_cli
+mlrelax = atomchain.relax:mlrelax_cli
