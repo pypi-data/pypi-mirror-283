@@ -1,0 +1,17 @@
+migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xlsx_export/__init__.py,sha256=yTE6sUfSqQyl1RX71oZBewiJ9MfqoF_aoJUpIheWNYM,452
+xlsx_export/admin.py,sha256=suMo4x8I3JBxAFBVIdE-5qnqZ6JAZV0FESABHOSc-vg,63
+xlsx_export/apps.py,sha256=E-zv6UjZUn5jg1UXXcNfPVaxUYEPv4JHcwJWftXfbS0,89
+xlsx_export/forms.py,sha256=qzP1pVmPqGwKA5ynA4BeORj6mgTzt4f3TP-uLc-OJS0,87
+xlsx_export/models.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xlsx_export/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+xlsx_export/urls.py,sha256=1xykWvO7fKll9grrkxJcMnGOz1bpph80Vfu9fG9dY2E,225
+xlsx_export/views.py,sha256=ZdYmvEfYha5f5TobCp7ZCwXhl1Qm8YQPQbsqt2APV1U,7069
+xlsx_export/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xlsx_export/templates/success.html,sha256=cjCliWv7ILPCMO3E_VMwWLbaHid3NJRUCjdXAxTOVLM,2450
+xlsx_export/templates/upload.html,sha256=E7KFRaClOyfzx30Ft4OFx_jphBCeIxoUMWaONGOF2qg,6029
+xlsx_export-0.0.14.dist-info/METADATA,sha256=7vMQZ0dWmDNZldLyG7_IdT7LWHQGBaMpNQyX2mJf9PQ,275
+xlsx_export-0.0.14.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+xlsx_export-0.0.14.dist-info/entry_points.txt,sha256=z2Ba2FXUZAnY4Kp3MqOpDQCbrKd7QlBLVbRwXOeBlv8,35
+xlsx_export-0.0.14.dist-info/top_level.txt,sha256=mFBSW8p_t8UKb54hG800n4s81nWrbm5EokSvRjJyMnw,12
+xlsx_export-0.0.14.dist-info/RECORD,,
