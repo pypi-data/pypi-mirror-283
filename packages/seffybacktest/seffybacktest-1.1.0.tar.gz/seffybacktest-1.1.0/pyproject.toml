@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "seffybacktest"
+version = "1.1.0"
+description = "This is a statisical portfolio analysis tool built to facilitate quantitative systems at The Equate Fund - UofT"
+authors = ["Youssef Hany Saad"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^2.0.0"
+pandas = "^2.2.2"
+scipy = "^1.14.0"
+yfinance = "^0.2.40"
+DateTime = "^5.5"
+scikit-learn = "^1.5"
+matplotlib = "^3.9.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
