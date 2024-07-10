@@ -1,0 +1,2 @@
+[psychopy.experiment.components]
+PelletDispenserComponent = psychopy_ivp.components.pellet_dispenser:PelletDispenserComponent

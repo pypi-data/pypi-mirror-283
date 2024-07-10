@@ -1,0 +1,14 @@
+psychopy_ivp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+psychopy_ivp/components/pellet_dispenser/__init__.py,sha256=2dQZRoCNzXs1CosutF5eDgZF2OyMVve0eKle1AIuYHU,7063
+psychopy_ivp/components/pellet_dispenser/classic/reward.png,sha256=vyZ_dk0wfIvy48NUGNVLaORColywK6YFWSszqbEO5KI,23809
+psychopy_ivp/components/pellet_dispenser/classic/reward@2x.png,sha256=xA2x6-mJ4UFYnG5UFlu1qHyzEAeMWOkLp3bFe74AAd4,38863
+psychopy_ivp/components/pellet_dispenser/dark/reward.png,sha256=vyZ_dk0wfIvy48NUGNVLaORColywK6YFWSszqbEO5KI,23809
+psychopy_ivp/components/pellet_dispenser/dark/reward@2x.png,sha256=xA2x6-mJ4UFYnG5UFlu1qHyzEAeMWOkLp3bFe74AAd4,38863
+psychopy_ivp/components/pellet_dispenser/light/reward.png,sha256=vyZ_dk0wfIvy48NUGNVLaORColywK6YFWSszqbEO5KI,23809
+psychopy_ivp/components/pellet_dispenser/light/reward@2x.png,sha256=xA2x6-mJ4UFYnG5UFlu1qHyzEAeMWOkLp3bFe74AAd4,38863
+psychopy_ivp/devices/pellet_dispenser.py,sha256=h74LvOVJtOdYF7waHowqV1ZvzqeLRG47dPThaJUOdlA,4465
+psychopy_ivp-0.0.1a2.dist-info/METADATA,sha256=8LLlVYGxvP7IlJ6D4RCEwgxHuH7SvK2_sF-SYLPje2s,2319
+psychopy_ivp-0.0.1a2.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+psychopy_ivp-0.0.1a2.dist-info/entry_points.txt,sha256=3rWKnnBWVrNzbvOSuJAuCxElusEvPhHMT-T9-zrf04Q,126
+psychopy_ivp-0.0.1a2.dist-info/top_level.txt,sha256=L0VRR_Tqrwx0U5D8OzsH9FaXk8fePQu-7SS-dJLb5wk,13
+psychopy_ivp-0.0.1a2.dist-info/RECORD,,
