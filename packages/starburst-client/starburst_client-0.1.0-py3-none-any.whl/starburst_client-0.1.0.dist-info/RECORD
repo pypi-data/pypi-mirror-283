@@ -1,0 +1,12 @@
+starburst_client/__init__.py,sha256=SXK1rcJ7ZsCZ-S4AoFIrUJe2wl2H__u1s-ew8L768B4,380
+starburst_client/_version.py,sha256=aOR0_phyHXeh38mk83q8NrJU-yjn_LRVDeIS7bqg4WQ,281
+starburst_client/auth.py,sha256=Jv1rDz1fc5kt9d5k8yLXrg5tjaQG5zRL_MX-upyq2tQ,1626
+starburst_client/client.py,sha256=Z5Mi3UIt3TkWtBn3u6t1F9EY9pxvTcIhRvGIJ-7gGjo,21169
+starburst_client/exceptions.py,sha256=Y7nxGENUO_amFFVhEPB11vpAhG56U-uzIeUhP4Mxfhs,2493
+starburst_client/model.py,sha256=sqxBeHB2eWW_-ccMP_KmLjkNqBjGxa8QeSXwJG6CVnw,17802
+starburst_client/starburst.py,sha256=G_J23Uto7Zdkd2jSdv5Hxv0gwLcAI_BGy8GpNbN0AgM,2499
+starburst_client-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+starburst_client-0.1.0.dist-info/METADATA,sha256=zLfnerZhciCbOCcRyqPYDVOdQkOXCCcH5C3Gvh_5llE,2246
+starburst_client-0.1.0.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+starburst_client-0.1.0.dist-info/top_level.txt,sha256=l5y4RLJqD_hLk-AlaQeG0QvzilPXi27gKPrxVoPOeZw,17
+starburst_client-0.1.0.dist-info/RECORD,,
