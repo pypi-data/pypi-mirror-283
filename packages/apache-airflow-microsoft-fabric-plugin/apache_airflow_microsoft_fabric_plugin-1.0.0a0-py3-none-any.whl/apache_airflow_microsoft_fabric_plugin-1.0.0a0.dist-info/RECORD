@@ -1,0 +1,9 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/hooks/__init__.py,sha256=DxQcGqj_jXO8WtRcnb9toDSKXZJbRIzmq01CvCz3tS4,8528
+tests/operators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/triggers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apache_airflow_microsoft_fabric_plugin-1.0.0a0.dist-info/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+apache_airflow_microsoft_fabric_plugin-1.0.0a0.dist-info/METADATA,sha256=J2EPwet2wV-VPIdlLRpPCfVaOfSBFoBBjxXDm-Soe8U,4352
+apache_airflow_microsoft_fabric_plugin-1.0.0a0.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+apache_airflow_microsoft_fabric_plugin-1.0.0a0.dist-info/top_level.txt,sha256=EdW7283x-lr_cbuivW8Ij7ANAP-ZJ9sLtILQseEPxXg,6
+apache_airflow_microsoft_fabric_plugin-1.0.0a0.dist-info/RECORD,,
