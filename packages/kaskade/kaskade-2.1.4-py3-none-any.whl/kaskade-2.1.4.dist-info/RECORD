@@ -1,0 +1,15 @@
+LICENSE,sha256=ORtkbSoSB05uDX4iSK4gzvKwOpIgWxZbk024R3OUr24,1068
+kaskade/__init__.py,sha256=WVj0VUzJnJY-9W4lEEokgdH35m9FuGt0S9NYOZVydQk,1035
+kaskade/admin.py,sha256=Gj1pSxT3nGaGTD62lACrtdOeOfNy5Jkynqlh0zHJ6LM,19875
+kaskade/colors.py,sha256=MS1mWpiqUrMZEzsJfXvPFiHxgnQ9pc1dFfn9ruBQrJc,42
+kaskade/consumer.py,sha256=Sr4HZTEe0RTTjU9BWm-VXji9sgM7wbLsKjmlN8LkyMU,11462
+kaskade/main.py,sha256=XtFAnNPfl_GlcRySWkIc8Wv7nmhsjhjOl6Sy5RfeEs0,4663
+kaskade/models.py,sha256=W4Xkv799mCAn7svMy_fuoRIevPYDTAB0rve45fY7iio,14112
+kaskade/services.py,sha256=TXp0I5QHOZ8cc9brWcy4UnU5Mvx4KvYK3yjoZP6PY1A,14907
+kaskade/styles.css,sha256=8hmHTvKTi-qgBopTHOM7dFJhWZAyKsTRT0WCUYVLo34,4456
+kaskade/unicodes.py,sha256=zgk1Hi4s-3MS8fgvt7nxW8JD0h7ogpdvYPyBewrFaIE,188
+kaskade-2.1.4.dist-info/LICENSE,sha256=ORtkbSoSB05uDX4iSK4gzvKwOpIgWxZbk024R3OUr24,1068
+kaskade-2.1.4.dist-info/METADATA,sha256=jhIK5aHR5lp5jhQW3zkmE5si-CVQJULSZEf4YQTFIjo,6268
+kaskade-2.1.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+kaskade-2.1.4.dist-info/entry_points.txt,sha256=Yl3dh1NFP4cCc8Ed_gbASUHY4MkOBN4KnMrem5mWSVE,66
+kaskade-2.1.4.dist-info/RECORD,,
