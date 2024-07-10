@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/nominal.py
+src/nominal.egg-info/PKG-INFO
+src/nominal.egg-info/SOURCES.txt
+src/nominal.egg-info/dependency_links.txt
+src/nominal.egg-info/top_level.txt
