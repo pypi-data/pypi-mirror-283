@@ -1,0 +1,8 @@
+libsql-experimental
+loguru
+
+[lint]
+black
+ruff
+pyroma
+pytype
