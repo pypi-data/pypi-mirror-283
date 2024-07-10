@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+starburst_client/__init__.py
+starburst_client/_version.py
+starburst_client/auth.py
+starburst_client/client.py
+starburst_client/exceptions.py
+starburst_client/model.py
+starburst_client/starburst.py
+starburst_client.egg-info/PKG-INFO
+starburst_client.egg-info/SOURCES.txt
+starburst_client.egg-info/dependency_links.txt
+starburst_client.egg-info/requires.txt
+starburst_client.egg-info/top_level.txt
+tests/test_auth.py
