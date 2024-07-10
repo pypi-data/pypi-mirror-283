@@ -1,0 +1,12 @@
+[
+    {
+        "name": "name", 
+        "type": "string", 
+        "default": ""
+    }, 
+    {
+        "name": "description", 
+        "type": "text", 
+        "default": ""
+    }
+]

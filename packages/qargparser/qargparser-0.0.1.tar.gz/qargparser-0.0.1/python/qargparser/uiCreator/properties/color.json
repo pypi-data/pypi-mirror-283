@@ -1,0 +1,23 @@
+[
+    {
+        "name": "default", 
+        "type": "color", 
+        "alpha":  false,
+        "default": [0.0, 0.0, 0.0]
+    }, 
+    {
+        "name": "slider", 
+        "type": "bool", 
+        "default": true
+    }, 
+    {
+        "name": "spinbox", 
+        "type": "bool", 
+        "default": true
+    },
+    {
+        "name": "alpha", 
+        "type": "bool", 
+        "default": false
+    }
+]

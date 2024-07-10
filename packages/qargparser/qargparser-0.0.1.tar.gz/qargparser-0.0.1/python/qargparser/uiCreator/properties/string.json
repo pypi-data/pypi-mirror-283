@@ -1,0 +1,12 @@
+[
+    {
+        "name": "default", 
+        "type": "string", 
+        "default": ""
+    },
+    {
+        "name": "placeHolder", 
+        "type": "string", 
+        "default": ""
+    }
+]

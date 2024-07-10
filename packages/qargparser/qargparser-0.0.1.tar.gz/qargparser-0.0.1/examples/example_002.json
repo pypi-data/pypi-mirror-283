@@ -1,0 +1,42 @@
+[
+    {
+        "name": "digits", 
+        "type": "array", 
+        "max": null, 
+        "min": 1, 
+        "default": [
+            {
+                "prefix": "thumb", 
+                "nbDigits": 3
+            }, 
+            {
+                "prefix": "point"
+            }, 
+            {
+                "prefix": "middle"
+            }, 
+            {
+                "prefix": "ring"
+            }, 
+            {
+                "prefix": "pinky"
+            }
+        ], 
+        "items": {
+            "type": "object", 
+            "items": [
+                {
+                    "name": "prefix", 
+                    "type": "string", 
+                    "default": "Digit"
+                }, 
+                {
+                    "name": "nbDigits", 
+                    "type": "integer", 
+                    "min": 1, 
+                    "default": 4
+                }
+            ]
+        }
+    }
+]

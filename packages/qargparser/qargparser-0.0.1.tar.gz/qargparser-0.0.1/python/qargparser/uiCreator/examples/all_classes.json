@@ -1,0 +1,198 @@
+[    
+    {
+        "name": "asTab", 
+        "type": "tab", 
+        "default": {}, 
+        "description": "I am a tab",
+        "items": [
+            {
+                "name": "tab 1",
+                "type": "object", 
+                "default": {},
+                "description": "I am a tab object",
+                "items": [
+                    {
+                        "name": "str",
+                        "type": "string", 
+                        "default": "I am an item string child"
+                    }, 
+                    {
+                        "name": "int",
+                        "type": "integer", 
+                        "min": 1, 
+                        "default": 4,
+                        "slider": true
+                    }, 
+                    {
+                        "name": "bool",
+                        "type": "boolean", 
+                        "default": true
+                    }
+                ]
+            },
+            {
+                "name": "tab 2",
+                "type": "object", 
+                "default": {},
+                "description": "I am a tab object",
+                "items": []
+            }
+        ]
+    }, 
+    {
+        "name": "asString", 
+        "type": "string", 
+        "placeHolder": "Enter something", 
+        "default": "I am a string", 
+        "description": "I am a string"
+    }, 
+    {
+        "name": "asEnum", 
+        "type": "enum", 
+        "default": "blue", 
+        "enums": [
+            "green", 
+            "blue", 
+            "red"
+        ], 
+        "description": "I am a color enumeration", 
+        "enumsDescriptions": ["I am green", "I am blue"]
+    }, 
+    {
+        "name": "asInfo", 
+        "type": "info", 
+        "default": "I am an info", 
+        "description": "I am an info"
+    }, 
+    {
+        "name": "asText", 
+        "type": "text", 
+        "default": "Three can keep a secret,\nif two of them are dead", 
+        "description": "I am a text"
+    }, 
+    {
+        "name": "asDoc", 
+        "type": "doc", 
+        "default": "This is a documentation of ...", 
+        "description": "I am a doc"
+    }, 
+    {
+        "name": "asMel", 
+        "type": "mel", 
+        "default": "string $objects[] = `ls -sl`;\nfor ($obj in $objects) {\nsetAttr ($obj + \".template\") (!`getAttr ($obj + \".template\")`);\n}", 
+        "description": "I am a mel"
+    }, 
+    {
+        "name": "asPython", 
+        "type": "python", 
+        "default": "import os\nprint(os.environ[\"path\"])", 
+        "description": "I am a python"
+    }, 
+    {
+        "name": "asPath", 
+        "type": "path", 
+        "default": "C://", 
+        "description": "I am a path"
+    }, 
+    {
+        "name": "asBoolean", 
+        "type": "bool", 
+        "default": true, 
+        "description": "I am a boolean"
+    }, 
+    {
+        "name": "asArray", 
+        "type": "array", 
+        "default": [
+            "arrayItemA", 
+            "arrayItemB", 
+            "arrayItemC"
+        ],
+        "description": "I am a array",
+        "buttonLabel": "+",
+        "items": {
+            "type": "string", 
+            "default": "NewArrayItem",
+            "description": "I am a string array item"
+        }
+    }, 
+    {
+        "name": "asNestedArray", 
+        "type": "array", 
+        "min": 2,
+        "max": 3,
+        "default": [
+            0  
+        ], 
+        "description": "I am a nested array", 
+        "items": {
+            "type": "array", 
+            "min": 1,
+            "description": "I am a array", 
+            "default": [
+                0, 
+                5, 
+                10
+            ], 
+            "items": {
+                "type": "int", 
+                "description": "I am a int array item"
+            }
+        }
+    }, 
+    {
+        "name": "asItemArray", 
+        "type": "array", 
+        "max": null, 
+        "min": 1, 
+        "default": [
+            {
+                "str": "I am the 1st item string child", 
+                "int": 3
+            }, 
+            {
+                "str": "I am the 2nd item string child"
+            }
+        ], 
+        "items": {
+            "type": "object",
+            "items": [
+                {
+                    "name": "str",
+                    "type": "string", 
+                    "default": "I am an item string child"
+                }, 
+                {
+                    "name": "int",
+                    "type": "integer", 
+                    "min": 1, 
+                    "default": 4,
+                    "slider": true
+                }, 
+                {
+                    "name": "bool",
+                    "type": "boolean", 
+                    "default": true
+                }
+            ]
+        }
+    }, 
+    {
+        "name": "asFloat", 
+        "type": "float", 
+        "default": 3.5, 
+        "min": -10.0, 
+        "max": 10.0, 
+        "slider": true, 
+        "description": "I am a float"
+    }, 
+    {
+        "name": "asInteger", 
+        "type": "int", 
+        "default": 5, 
+        "min": -10, 
+        "max": null, 
+        "slider": true, 
+        "description": "I am an Integer"
+    }
+]

@@ -1,0 +1,23 @@
+[
+    {
+        "name": "default", 
+        "type": "string", 
+        "default": ""
+    }, 
+    {
+        "name": "enums", 
+        "type": "array", 
+        "default": [], 
+        "items": {
+            "type": "string"
+        }
+    }, 
+    {
+        "name": "enumsDescriptions", 
+        "type": "array", 
+        "default": [], 
+        "items": {
+            "type": "string"
+        }
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "name": "default", 
+        "type": "int", 
+        "default": 0
+    }, 
+    {
+        "name": "min", 
+        "type": "int", 
+        "default": null
+    }, 
+    {
+        "name": "max", 
+        "type": "int", 
+        "default": null
+    }, 
+    {
+        "name": "step", 
+        "type": "int", 
+        "default": 1
+    }, 
+    {
+        "name": "slider", 
+        "type": "bool", 
+        "default": true
+    }
+]

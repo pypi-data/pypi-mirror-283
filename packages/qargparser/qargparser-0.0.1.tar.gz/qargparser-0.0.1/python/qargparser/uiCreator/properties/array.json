@@ -1,0 +1,23 @@
+[
+    {
+        "name": "default", 
+        "type": "array", 
+        "default": [], 
+        "items": {}
+    },
+    {
+        "name": "min", 
+        "type": "int", 
+        "default": null
+    }, 
+    {
+        "name": "max", 
+        "type": "int", 
+        "default": null
+    },
+    {
+        "name": "buttonLabel", 
+        "type": "string", 
+        "default": "Add Item"
+    }
+]
