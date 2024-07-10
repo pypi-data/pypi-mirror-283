@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: piconetcontrol
+Version: 0.0.1
+Summary: Client-server package to remotely control a Raspberrypi Pi.
+Home-page: https://github.com/matthiaszeller/picoserver
+Author: Matthias Gilles Zeller
+Author-email: matthias.gilles.zeller@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Hardware
+Classifier: Topic :: System :: Networking
+License-File: LICENSE
+
+This packages provides two classes (`Client` and `Server`)
