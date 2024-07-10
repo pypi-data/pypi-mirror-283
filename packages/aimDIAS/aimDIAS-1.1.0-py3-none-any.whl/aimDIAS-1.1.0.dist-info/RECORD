@@ -1,0 +1,17 @@
+aimDIAS/DIAS.py,sha256=LZ1-jGY4FuMdKlC3iYhYiOn_Z3M-IjeVvLwXrzUjzHA,33531
+aimDIAS/__init__.py,sha256=KBs6cHpn3QpK99s2WHiNxN1yQPfNqauxfoJloGSnEoo,2857
+aimDIAS/aimnet2ase.py,sha256=9zT-Yjp0vj90h6HMTi--o4gTX7_gRPRyunngzpCD2JE,2800
+aimDIAS/samples.py,sha256=xMEKu4zAMyGUEhDwtG1kjoFprd2IqTKG5g7o9VP12Z0,2651
+aimDIAS/utilities.py,sha256=XvPh1v3LMCGtDfp3s_wwuXiEhwj5pdAHWmcopJNUal0,8558
+aimDIAS/models/aimnet2_b973c_ens.jpt,sha256=cwBIBS_bV1T6pWwtYMyqaLcicQsnMUcO7cqBjx7eVt8,46391881
+aimDIAS/models/aimnet2_wb97m-d3_ens.jpt,sha256=LopwCJPQjH-YK3jnNy08-VpIC11GEW-XEit_IKA8nYg,46391881
+build/lib/aimDIAS/DIAS.py,sha256=LZ1-jGY4FuMdKlC3iYhYiOn_Z3M-IjeVvLwXrzUjzHA,33531
+build/lib/aimDIAS/__init__.py,sha256=KBs6cHpn3QpK99s2WHiNxN1yQPfNqauxfoJloGSnEoo,2857
+build/lib/aimDIAS/aimnet2ase.py,sha256=9zT-Yjp0vj90h6HMTi--o4gTX7_gRPRyunngzpCD2JE,2800
+build/lib/aimDIAS/samples.py,sha256=xMEKu4zAMyGUEhDwtG1kjoFprd2IqTKG5g7o9VP12Z0,2651
+build/lib/aimDIAS/utilities.py,sha256=XvPh1v3LMCGtDfp3s_wwuXiEhwj5pdAHWmcopJNUal0,8558
+aimDIAS-1.1.0.dist-info/LICENSE,sha256=7M8VVSAA4kZgKYLZ10yJzsS6iO22hN58cMZPgXnRFNU,1088
+aimDIAS-1.1.0.dist-info/METADATA,sha256=NLngYdMTyoZ4QEP7_Th_2nlwLijq1arDPR7Y986TKLI,3969
+aimDIAS-1.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+aimDIAS-1.1.0.dist-info/top_level.txt,sha256=I7ZN1DF4BbqNDXwvtO5xs8nBdsJXdHOJeBBOST1KMkA,50
+aimDIAS-1.1.0.dist-info/RECORD,,
