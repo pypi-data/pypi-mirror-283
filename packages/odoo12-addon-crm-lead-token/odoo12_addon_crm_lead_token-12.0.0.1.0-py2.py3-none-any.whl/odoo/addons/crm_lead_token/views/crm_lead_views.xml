@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <record id="crm_case_form_view_oppor_token" model="ir.ui.view">
+      <field name="name">crm.lead.form.opportunity.token</field>
+      <field name="model">crm.lead</field>
+      <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+      <field name="arch" type="xml">
+        <xpath expr="//page[@name='lead']" position="after">
+            <page string="API">
+                <group>
+                    <group string="Info" name="token">
+                        <field name="token" readonly="1"/>
+                    </group>
+                </group>
+            </page>
+        </xpath>
+      </field>
+  </record>
+</odoo>
