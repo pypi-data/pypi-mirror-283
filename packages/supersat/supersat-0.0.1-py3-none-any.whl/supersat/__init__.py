@@ -1,0 +1,1 @@
+from supersat.model import SuperSat
