@@ -1,0 +1,1 @@
+export PYTHONPATH=${PYTHONPATH}:../../../transforms/universal/noop/python/src:../../../transforms/universal/wdu_pdf2md/python/src:../../../transforms/universal/doc_id/ray/src

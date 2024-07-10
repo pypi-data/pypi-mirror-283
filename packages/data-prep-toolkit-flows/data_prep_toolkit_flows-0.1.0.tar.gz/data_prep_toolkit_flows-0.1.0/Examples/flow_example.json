@@ -1,0 +1,48 @@
+{
+    "flow": {
+        "name": "sample flow",
+        "description": "a sample flow to demonstrate the DataprepKit pipeline",
+        "use_virtual_env": false,
+        "global_parameters": {
+            "runtime_pipeline_id": "pipeline_id",
+            "runtime_job_id": "job_id",
+            "runtime_code_location": {
+                "github": "github",
+                "commit_hash": "12345",
+                "path": "path"
+            },
+            "data_local_config": {
+                "input_folder": "../test-data/input/wdu_pdf2md/1_file",
+                "output_folder": "../test-data/output",
+                "intermediate_folder": "../test-data/intermediate"
+            }
+        },
+        "steps": [
+            {
+                "transform_config_class": "wdu_pdf2md_transform_python.WduPdf2MdTransformPythonConfiguration",
+                "parameters": {
+                    "data_files_to_use": "['.zip']"
+                }
+            },
+            {
+                "transform_config_class": "doc_id_transform_ray.DocIDRayTransformConfiguration",
+                "parameters": {
+                    "doc_id_doc_column": "contents",
+                    "doc_id_hash_column": "hash_column",
+                    "doc_id_int_column": "int_id_column",
+                    "runtime_worker_options": {
+                        "num_cpus": 0.8
+                    },
+                    "runtime_num_workers": 3,
+                    "run_locally": true
+                }
+            },
+            {
+                "transform_config_class": "noop_transform_python.NOOPPythonTransformConfiguration",
+                "parameters": {
+                    "noop_sleep_sec": 1
+                }
+            }
+        ]
+    }
+}
