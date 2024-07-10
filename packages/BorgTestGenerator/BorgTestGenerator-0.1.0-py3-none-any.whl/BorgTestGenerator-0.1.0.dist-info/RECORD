@@ -1,0 +1,10 @@
+BorgTestGenerator/__init__.py,sha256=ac-iqM0RU7yeDfsZ-26AwgRjLGXwe66rcWkLcdTF-og,33
+BorgTestGenerator/assistant.py,sha256=krpsOPRuJvl81xm9zTClE01UJY9q84q_-HL0SAXZ8Dw,2586
+BorgTestGenerator/generator.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_generator.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+BorgTestGenerator-0.1.0.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+BorgTestGenerator-0.1.0.dist-info/METADATA,sha256=nytFGNc76UVSQ17vwKroFTaedkBP-xEEwAiSZqBTbbY,750
+BorgTestGenerator-0.1.0.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+BorgTestGenerator-0.1.0.dist-info/top_level.txt,sha256=6RZj25lV9tQlgIHU-yuH9QeApnE81x4m32S4uZqVJwI,24
+BorgTestGenerator-0.1.0.dist-info/RECORD,,
