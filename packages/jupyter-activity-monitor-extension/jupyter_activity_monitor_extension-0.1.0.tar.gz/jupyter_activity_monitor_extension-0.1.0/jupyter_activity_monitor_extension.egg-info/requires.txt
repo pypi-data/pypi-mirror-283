@@ -1,0 +1,8 @@
+jupyter_server>=2.0.0
+tornado
+
+[dev]
+pytest>=6
+pytest-cov
+black
+pytest_jupyter
