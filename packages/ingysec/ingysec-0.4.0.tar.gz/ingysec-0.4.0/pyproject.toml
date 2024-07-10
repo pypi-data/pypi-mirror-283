@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "ingysec"
+version = "0.4.0"
+description = ""
+authors = ["briskdust <briskdust@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+flask = "^3.0.3"
+requests = "^2.31.0"
+requests-toolbelt = "^1.0.0"
+flask-cors = "^4.0.0"
+tabulate = "^0.9.0"
+boofuzz = "^0.4.2"
+semgrep = "^1.75.0"
+bandit = "^1.7.8"
+jira = "^3.8.0"
+
+[tool.poetry.scripts]
+ingysec = "ingysec.ingy:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
