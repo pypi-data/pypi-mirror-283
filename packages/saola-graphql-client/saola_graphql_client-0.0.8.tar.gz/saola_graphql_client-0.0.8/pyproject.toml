@@ -1,0 +1,25 @@
+[project]
+name = "saola_graphql_client"
+version = "0.0.8"
+authors = [
+  { name="Saola", email="support@saola.sg" },
+]
+description = "A Python client for Saola's GraphQL API"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "ariadne-codegen==0.12.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/saola-tech/saola-graphql-client"
+Issues = "https://github.com/saola-tech/saola-graphql-client/issues"
+
+[build-system]
+requires = ["setuptools>=70.2.0"]
+build-backend = "setuptools.build_meta"
