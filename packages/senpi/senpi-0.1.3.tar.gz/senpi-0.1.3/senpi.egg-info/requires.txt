@@ -1,0 +1,9 @@
+kornia
+matplotlib
+numpy
+opencv_python
+pandas
+Pillow
+seaborn
+torch
+tqdm
