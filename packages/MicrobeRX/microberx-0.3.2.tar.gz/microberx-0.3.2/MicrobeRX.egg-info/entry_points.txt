@@ -1,0 +1,2 @@
+[console_scripts]
+microberx = microberx_cli:main
