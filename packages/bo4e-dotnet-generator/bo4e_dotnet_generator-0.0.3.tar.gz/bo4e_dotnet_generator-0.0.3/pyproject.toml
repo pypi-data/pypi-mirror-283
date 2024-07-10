@@ -1,0 +1,76 @@
+[project]
+name = "bo4e-dotnet-generator"
+description = "Generates C# Classes from JSON schemas for a 100% code-generated BO4E.NEt v2"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+authors = [{ name = "Hamid Hajiparvaneh", email = "info+github@hochfrequenz.de" }]
+keywords = ["BO4E", "Code Generation", "JSON schema"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "BO4E-Schema-Tool>=0.0.7",
+    "typer"
+    # add all the dependencies here
+]
+dynamic = ["readme", "version"]
+
+[project.urls]
+Changelog = "https://github.com/Hochfrequenz/bo4e-dotnet-generator.py/releases"
+Homepage = "https://github.com/Hochfrequenz/bo4e-dotnet-generator.py"
+
+[project.scripts]
+bo4e-dotnet-generator = "bo4egenerator.cli:cli"
+# bo4egenerator is the package in the src directory
+# .cli means the cli.py module inside the bo4e-dotnet-generator package
+# :cli means the cli function inside the cli.py module
+
+
+[tool.black]
+line-length = 120
+target_version = ["py311", "py312"]
+
+[tool.isort]
+line_length = 120
+profile = "black"
+
+[tool.pylint."MESSAGES CONTROL"]
+max-line-length = 120
+
+[mypy]
+truethy-bool = true
+
+[tool.mypy]
+disable_error_code = []
+
+[build-system]
+requires = ["hatchling>=1.8.0", "hatch-vcs", "hatch-fancy-pypi-readme"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata.hooks.fancy-pypi-readme]
+content-type = "text/markdown"
+fragments = [{ path = "README.md" }]
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/_bo4e-dotnet-generator_version.py"
+template = '''
+version = "{version}"
+'''
+
+[tool.hatch.build.targets.sdist]
+exclude = ["/unittests"]
+
+[tool.hatch.build.targets.wheel]
+only-include = ["src"]
+sources = ["src"]
