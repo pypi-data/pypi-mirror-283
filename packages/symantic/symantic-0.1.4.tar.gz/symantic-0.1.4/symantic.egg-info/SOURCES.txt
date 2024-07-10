@@ -1,0 +1,14 @@
+pyproject.toml
+setup.py
+symantic/DimensionalFeatureSpaceConstruction.py
+symantic/FeatureSpaceConstruction.py
+symantic/Final_case_studies.py
+symantic/Regressor.py
+symantic/Regressor_dimension.py
+symantic/__init__.py
+symantic/model.py
+symantic.egg-info/PKG-INFO
+symantic.egg-info/SOURCES.txt
+symantic.egg-info/dependency_links.txt
+symantic.egg-info/requires.txt
+symantic.egg-info/top_level.txt
