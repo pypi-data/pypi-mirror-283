@@ -1,0 +1,12 @@
+.env
+test/db.json
+test/routes.json
+dist/
+src/supergood.egg-info/
+bin/
+lib
+pyvenv.cfg
+.eggs
+__pycache__/
+**/__pycache__/
+.vscode/
