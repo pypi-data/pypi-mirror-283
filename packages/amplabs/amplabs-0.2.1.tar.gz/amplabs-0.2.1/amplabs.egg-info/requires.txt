@@ -1,0 +1,7 @@
+pandas
+plotly==5.22.0
+dash
+dash-bootstrap-components>=1.4.2
+pyyaml<=6.0.1,>=6.0
+dash-mantine-components>=0.14.0
+dash-iconify

@@ -1,0 +1,2 @@
+include amplabs/config.yaml
+recursive-include amplabs/assets *

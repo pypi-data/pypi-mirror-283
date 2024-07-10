@@ -1,0 +1,1 @@
+from .app import call_dash_app as open_dashboard

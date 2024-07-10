@@ -1,0 +1,63 @@
+graph_settings:
+  title:
+    font:
+      color: blue
+      family: Times New Roman
+      size: 35
+    position: 0.5
+    text: Voltage and temperatures vs Time
+  traces:
+    default:
+      color:
+        - red
+    y1:
+      color:
+        - green
+        - orange
+        - pink
+    y2:
+      color:
+        - blue
+  x_axis:
+    columns: Test Time (min)
+    label:
+      font:
+        color: black
+        family: Times New Roman
+        size: 25
+      text: Test Time (min)
+  y_axis:
+    default:
+      label:
+        font:
+          color: green
+          family: Times New Roman
+          size: 25
+    y1:
+      columns: tc[4-8]*
+      label:
+        font:
+          color: "#000000"
+          family: Times New Roman
+          size: 25
+        text: "Temperatures (\xB0C)"
+      wildcard_matching: true
+    y2:
+      columns: "*Voltage"
+      label:
+        font:
+          color: red
+          family: Georgia, serif
+          size: 25
+        text: Voltage (V)
+      wildcard_matching: true
+plot_area:
+  height: 500
+  width: 500
+transformations:
+  - column: Test Time
+    expression: "{x} / 60"
+    new_column_name: Test Time (min)
+  - column: Test Time (min)
+    expression: "{x} / 60"
+    new_column_name: Test Time (hours)
