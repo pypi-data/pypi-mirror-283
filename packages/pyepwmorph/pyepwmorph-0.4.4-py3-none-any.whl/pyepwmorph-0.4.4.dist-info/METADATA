@@ -1,0 +1,30 @@
+Metadata-Version: 2.3
+Name: pyepwmorph
+Version: 0.4.4
+Summary: A python package to enable simple and easy gathering of climate model data and morphing of EPW files
+Project-URL: Homepage, https://github.com/justinfmccarty/pyepwmorph
+Project-URL: Issues, https://github.com/justinfmccarty/pyepwmorph/issues
+Author-email: Justin McCarty <mccarty.justin.f@gmail.com>
+License-Expression: GPL-3.0-or-later
+License-File: LICENSE
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: bokeh==3.2.2
+Requires-Dist: build==1.2.1
+Requires-Dist: distributed==2023.8.1
+Requires-Dist: gcsfs==2023.6.0
+Requires-Dist: intake-esm==2023.7.7
+Requires-Dist: ipykernel==6.25.1
+Requires-Dist: lz4==4.3.2
+Requires-Dist: meteocalc==1.1.0
+Requires-Dist: pvlib==0.10.1
+Requires-Dist: pyarrow==14.1.0
+Requires-Dist: skyfield==1.46
+Requires-Dist: timezonefinder==6.2.0
+Requires-Dist: xclim==0.44.0
+Description-Content-Type: text/markdown
+
+# pyepwmorph
+ A python package for accessing global climate models and using them to morph time series weather data in EPW files.
