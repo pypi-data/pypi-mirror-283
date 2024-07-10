@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+hatch_jupyter.egg-info/PKG-INFO
+hatch_jupyter.egg-info/SOURCES.txt
+hatch_jupyter.egg-info/dependency_links.txt
+hatch_jupyter.egg-info/top_level.txt
