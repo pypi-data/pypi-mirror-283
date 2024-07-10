@@ -1,0 +1,8 @@
+README.md
+setup.py
+power_genai/__init__.py
+power_genai/powerai.py
+power_genai.egg-info/PKG-INFO
+power_genai.egg-info/SOURCES.txt
+power_genai.egg-info/dependency_links.txt
+power_genai.egg-info/top_level.txt
