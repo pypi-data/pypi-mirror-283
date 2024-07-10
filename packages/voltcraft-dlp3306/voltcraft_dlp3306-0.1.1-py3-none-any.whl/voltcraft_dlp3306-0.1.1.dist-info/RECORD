@@ -1,0 +1,9 @@
+voltcraft_dlp3306/__init__.py,sha256=jw_SEOct9T5GpkEfCdDnWrm3TnKWyIusNEJWCtxdjX0,723
+voltcraft_dlp3306/tcp.py,sha256=Rtam_P_G4jW5ZkZzxJFt61eZdvQM8DPsK79jvL7qDv4,2212
+voltcraft_dlp3306/voltcraft.py,sha256=1Mf3fi82xe1ocE7q25ivwD1XhPAaRFr4QRfJ7lIT-kY,7492
+voltcraft_dlp3306/writer.py,sha256=uOVdtzJ_jKaare-XvDZS1F4qZucLEinMMVhgWNB1HYA,1868
+voltcraft_dlp3306-0.1.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+voltcraft_dlp3306-0.1.1.dist-info/METADATA,sha256=gM-1vAWjyeZ4_a3s-k11MoPXYNZMkk4dkqWMfpuzmn4,2750
+voltcraft_dlp3306-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+voltcraft_dlp3306-0.1.1.dist-info/top_level.txt,sha256=p2EWaINcwMimWsvgTvtOVWKM3lYkQEd4EJ-t5fkjVcU,18
+voltcraft_dlp3306-0.1.1.dist-info/RECORD,,
