@@ -1,0 +1,41 @@
+[project]
+name = "htflow-utils"
+version = "1.0.3"
+description = "utility functions and classes for SurfFlow and TriboFlow"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Other/Nonlisted Topic",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "pymatgen",
+]
+requires-python = ">=3.10"
+
+[[project.authors]]
+name = "Michael Wolloch, Firat Yalcin"
+email = "michael.wolloch@univie.ac.at, firat.yalcin@univie.ac.at"
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+Homepage = "https://github.com/fyalcin/htflow-utils"
+
+[project.optional-dependencies]
+workflows = [
+    "ase",
+    "matgl",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool]
