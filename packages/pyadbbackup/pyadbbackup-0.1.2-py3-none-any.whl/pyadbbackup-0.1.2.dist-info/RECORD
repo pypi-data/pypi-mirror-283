@@ -1,0 +1,10 @@
+pyadbbackup/__init__.py,sha256=UomiJPs4wVowMDnIdIiXZWBIRVCJs_sjwdZS0hz4Pig,159
+pyadbbackup/__main__.py,sha256=7tzuGbeA5JiJWE_g9pzlcTXSsKlR-iEXNEbdYd4jZMs,62
+pyadbbackup/backup.py,sha256=UATSDGSZxF_WeFpuKF_hJDTLJNffUjZisOaoqxLz5AE,5242
+pyadbbackup/exceptions.py,sha256=s2xdIQHyQWhcPZK7aG0ys9jTEVrjKiDWeHA-6o4_S8Y,1059
+pyadbbackup/main.py,sha256=ItBL0i4iiy-WKnLEGrBVNlBPGpGN9MVhO-iYi_5cdu8,3775
+pyadbbackup/partition.py,sha256=tbSmPSDZ5bci4rI9lLuMx7sKK2ZIKMp1hlfhy9qkE0U,826
+pyadbbackup-0.1.2.dist-info/LICENSE,sha256=s0fvkDDUlyC82Nd9R2zqexEZRh-AfOCcc6WIMFVpFL0,1064
+pyadbbackup-0.1.2.dist-info/METADATA,sha256=SWowQubPCRHLInU_RuRleAkKu602r5xVl1tsXpUJOd4,518
+pyadbbackup-0.1.2.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+pyadbbackup-0.1.2.dist-info/RECORD,,
