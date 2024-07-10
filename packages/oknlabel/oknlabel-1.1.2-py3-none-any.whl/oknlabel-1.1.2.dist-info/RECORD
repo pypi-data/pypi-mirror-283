@@ -1,0 +1,10 @@
+oknlabel/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oknlabel/okn_detection_rule.json,sha256=I2IO-kBdHtIXLaxyoDebpE_8gvjAnOMmy67toYvLnYI,54
+oknlabel/oknlabel.py,sha256=R44FPg28RZRkihqogyVDZKCi3H7KdUSCUcSWEekf7yo,21315
+oknlabel/oknlabel_config.json,sha256=JFL_wzMY8LOVI6Y9QtbRT_EBwDHeFLx2L7w86ZZAFRs,903
+oknlabel-1.1.2.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+oknlabel-1.1.2.dist-info/METADATA,sha256=-e1nNk-0iXN2Q4Q8S4gaLaYIL9LHBuGK0NmthKKgf9k,2826
+oknlabel-1.1.2.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+oknlabel-1.1.2.dist-info/entry_points.txt,sha256=HTQOFIAWKaJUEiuDXCGpJNbUP9XLTXHWtOPQ5weneXM,52
+oknlabel-1.1.2.dist-info/top_level.txt,sha256=GGRABt17B36xsIXkAc1cEEr-J0Ydd5_NTcRneejacNw,9
+oknlabel-1.1.2.dist-info/RECORD,,
