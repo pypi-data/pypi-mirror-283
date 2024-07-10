@@ -1,0 +1,1 @@
+A validação do VFM foi realizada a partir dos dados de PRODUÇÃO BRUTA MEDIDOR (sum_i [Qo_SC_i+Ql_SC_i]), PRODUÇÃO LÍQUIDA DE ÓLEO (sum_i Qo_SC_i), e GÁS PRODUZIDO (sum_i Qg_SC_i), onde o indice "i" corresponde a cada poço conectado à plataforma.
