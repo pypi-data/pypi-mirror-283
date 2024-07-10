@@ -1,0 +1,10 @@
+README.md
+license.txt
+setup.py
+pro_video_ferramentas-jhonatan/__init__.py
+pro_video_ferramentas-jhonatan/camera.py
+pro_video_ferramentas-jhonatan/video.py
+pro_video_ferramentas_jhonatan_2024.egg-info/PKG-INFO
+pro_video_ferramentas_jhonatan_2024.egg-info/SOURCES.txt
+pro_video_ferramentas_jhonatan_2024.egg-info/dependency_links.txt
+pro_video_ferramentas_jhonatan_2024.egg-info/top_level.txt
