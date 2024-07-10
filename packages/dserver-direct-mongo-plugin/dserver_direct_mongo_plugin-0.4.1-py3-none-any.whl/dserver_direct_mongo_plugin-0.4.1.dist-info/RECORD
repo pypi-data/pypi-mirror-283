@@ -1,0 +1,11 @@
+dserver_direct_mongo_plugin/__init__.py,sha256=c-TMNdt3UQ7XE9wUdne3FlmLpPLtLKZ-_YM88K50wCg,8229
+dserver_direct_mongo_plugin/config.py,sha256=qO0k-vWHLb7-hOfbxT5qTklItTpfw-FQgXfnDcZubQY,1569
+dserver_direct_mongo_plugin/schemas.py,sha256=kLzM-0wPkiUZlVzhOWfxgadNom7dezSpbHzesbXz9rg,283
+dserver_direct_mongo_plugin/utils.py,sha256=aR9tajp3eh6mngzEJPp0eK9WMwCS0VRD7C8IKnlf_vk,6572
+dserver_direct_mongo_plugin/version.py,sha256=H6xAc33bJwmO0oYU-O7_wWInmGAifNGi6CO6khT0G1g,411
+dserver_direct_mongo_plugin-0.4.1.dist-info/LICENSE,sha256=y_8GezixTmSB9ABV6KXvfXWhBYEAF8A5Hw_TaXbdvIU,1105
+dserver_direct_mongo_plugin-0.4.1.dist-info/METADATA,sha256=dwrA7JqP5Cd0aerrfzIweWVfCue6cLIS00N5l0o5ThY,9120
+dserver_direct_mongo_plugin-0.4.1.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+dserver_direct_mongo_plugin-0.4.1.dist-info/entry_points.txt,sha256=3JYrj406hM8GKst1mRvv21YTpiidpWOxlljujL8xpgo,96
+dserver_direct_mongo_plugin-0.4.1.dist-info/top_level.txt,sha256=_qti3zWAH8sGM54thBQwmcMAuXgrmvOF-k1UMHw3SJ8,28
+dserver_direct_mongo_plugin-0.4.1.dist-info/RECORD,,
