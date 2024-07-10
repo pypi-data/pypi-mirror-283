@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: llama-cpp-cffi
+Version: 0.0.2
+Summary: Python binding for llama.cpp using cffi
+Home-page: https://github.com/mtasic85/llama-cpp-cffi
+License: MIT
+Author: Marko Tasic
+Author-email: mtasic85@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: attrs (>=23.2.0,<24.0.0)
+Requires-Dist: cffi (>=1.16.0,<2.0.0)
+Requires-Dist: huggingface-hub (>=0.23.4,<0.24.0)
+Requires-Dist: setuptools (>=70.2.0,<71.0.0)
+Project-URL: Repository, https://github.com/mtasic85/llama-cpp-cffi
+Description-Content-Type: text/markdown
+
+# llama-cpp-cffi
+
+Python binding for llama.cpp using cffi
+
+## Build
+
+```bash
+#
+# setup venv
+#
+python -m venv venv
+source venv/bin/activate
+pip install poetry
+
+poetry run cibuildwheel --output-dir wheelhouse --platform linux .
+poetry run cibuildwheel --output-dir wheelhouse --platform pyodide .
+
+#
+# run demos
+#
+python -B examples/demo_cffi.py
+python -B examples/demo_ctypes.py
+```
+
