@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: rdfc
+Version: 0.2.6
+Summary: Convert RDF files to any serialization format via rdflib
+Author-email: svenrdz <srodriguez@ipsl.fr>
+License: BSD-3-Clause
+Classifier: License :: OSI Approved :: BSD License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: rdflib>=6.3.2
+Requires-Dist: typer[all]>=0.9.0
+
+# rdfc
+
+Convert RDF files to any serialization format via [rdflib](https://github.com/RDFLib/rdflib)
+
+## Installation
+
+Install using `pip`:
+
+```shell
+$ pip install git+https://github.com/svenrdz/rdfc
+```
+
+## Examples
+
+```shell
+$ rdfc file.jsonld ttl
+Triples written to ~/file.ttl
+```
+
+```shell
+$ rdfc file.jsonld /tmp/output.n3
+Triples written to /tmp/output.n3
+```
+
+```shell
+$ rdfc file.jsonld ttl
+Triples written to ~/file.ttl
+
+$ rdfc file.jsonld file.ttl
+Output file exists already ~/file.ttl
+Aborted.
+
+$ rdfc file.jsonld file.ttl --force
+Output file exists already ~/ws/file.ttl
+Overriding since `--force` is used.
+Triples written to ~/ws/file.ttl
+```
+
+## Help
+
+```shell
+$ rdfc --help
+
+ Usage: rdfc [OPTIONS] INPUT OUTPUT_OR_FORMAT
+
+╭─ Arguments ──────────────────────────────────────────────────────────────────────────────────────────────╮
+│ *    input                 PATH  [default: None] [required]                                              │
+│ *    output_or_format      TEXT  [default: None] [required]                                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Options ────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ --force                 --no-force      [default: no-force]                                              │
+│ --install-completion                    Install completion for the current shell.                        │
+│ --show-completion                       Show completion for the current shell, to copy it or customize   │
+│                                         the installation.                                                │
+│ --help                                  Show this message and exit.                                      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+```
