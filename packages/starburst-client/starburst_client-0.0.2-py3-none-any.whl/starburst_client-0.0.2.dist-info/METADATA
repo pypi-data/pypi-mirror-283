@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: starburst-client
+Version: 0.0.2
+Summary: Starburst Enterprise REST API Client
+Home-page: https://github.com/aksakalli/starburst-python-client
+Author: Can Güney Aksakalli
+Author-email: cgaksakalli@gmail.com
+License: Apache 2.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
+# Starburst Python Client
+
+Typed interaction with [Starburst Enterprise API](https://docs.starburst.io/latest/api/index.html).
+
+## Usage
+
+Install the package from PyPi
+
+```bash
+pip install starburst-client
+```
+
+Start using the API client:
+
+```python
+from starburst_client import Starburst
+from starburst_client.auth import BasicAuth
+
+
+auth = BasicAuth("username", "password")
+
+s = Starburst(base_url="https://{hostname}/api/v1", auth=auth)
+
+# Create a role
+role = s.create_role("hr")
+
+# Update role description
+role.description = "HR department users"
+
+# Assign role to a user
+role.create_user_assignment("alice")
+
+user = s.get_user("alice")
+for assignment in user.get_role_assignments():
+    print(f"{user} has {assignment.get_role().name} role")  # alice has hr role
+    assignment.delete()
+
+role.delete()
+```
+
+Error handling:
+
+```python
+from starburst_client.exceptions import ConflictError, BadRequestError
+
+role = s.create_role("test_role")
+
+try:
+    s.create_role("test_role")
+except ConflictError:
+    print("role already exists")
+
+
+try:
+    s.create_role("test-role")
+except BadRequestError as e:
+    # Invalid value for argument: name: may contain only lowercase latin characters ...
+    print(e.message)
+```
+
+## License
+
+Released under [the Apache License 2.0](LICENSE).
