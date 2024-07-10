@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="header-line">
+    <h1>{{ project.name }}</h1>
+    <a role="button" href="{% url 'admin:api_project_change' project.id %}">Edit</a>
+    {% if project.description %}<p>{{ project.description }}</p>{% endif %}
+  </div>
+  <article>
+    <h3>Overview</h3>
+    <hr>
+    <ul>
+      <li>
+        Each container can be viewed as an isolated R environment. It has its
+        own R version, R packages, and RStudio instance. What's shared between the
+        containers of each project are the <strong>data</strong> and
+        <strong>workspace</strong> directories.
+      </li>
+      <ul>
+        <li>
+          The <strong>data</strong> on the R-Server is located at
+          <code>{{ project.data_path }}</code>. It's mounted inside the containers at
+          <code>/data</code>. This is where the raw, processed, and output data
+          should be stored. This should never be checked into version control.
+        </li>
+        <li>
+          The <strong>workspace</strong> on the host is located at <code>{{ project.workspace_path }}</code>.
+          It's mounted inside the containers at <code>/root/workspace</code> or
+          <code>/root/rstudio</code> (depending on the version of RStudio, see the
+          container card below). This is where the R scripts, R Markdown files, and other
+          project-specific files should be stored. This should be checked into
+          version control. Please note: that if the user is
+          <code>rstudio</code>, you need to run
+          <code>chown -R rstudio:rstudio /root/rstudio</code>
+          to make the files editable in RStudio.
+        </li>
+      </ul>
+      {% if project.auto_commit_enabled %}
+        <li>
+          <strong>Auto-commit</strong> is currently enabled. This means that changes to
+          the workspace are committed
+          to <code>{{ project.git_repo_url }}</code> every
+          <strong>{{ project.commit_interval }}</strong> minute(s).
+        </li>
+      {% else %}
+        <li>
+          <strong>Auto-commit</strong> is disabled. Changes to the workspace are not committed
+          automatically. Setup up auto-commit <a href="{% url 'admin:api_project_change' project.id %}">here</a>.
+        </li>
+      {% endif %}
+    </ul>
+  </article>
+  <br>
+  <hgroup>
+    <h2>Containers</h2>
+    <p>Use the form below to create a new container for your project</p>
+  </hgroup>
+  <!-- Form to create a new container -->
+  <div data-loading-states>
+    <form method="post"
+          hx-post="{% url 'create_container' project.pk %}"
+          hx-target="#container-list"
+          hx-swap="outerHTML">
+      {% csrf_token %}
+      <fieldset role="group">
+        <input placeholder="Enter RAM for container"
+               type="number"
+               id="ram"
+               name="ram"
+               aria-label="RAM"
+               required
+               min="1"
+               max="{{ project.max_ram }}"
+               step="1">
+        <input placeholder="Enter R Version for container (e.g. '4.1.1')"
+               type="text"
+               id="tag"
+               name="tag"
+               aria-label="tag">
+      </fieldset>
+      <fieldset role="group">
+        <input placeholder="Enter password for RStudio"
+               type="password"
+               id="password"
+               name="password"
+               aria-label="Password"
+               required>
+        <button data-loading-aria-busy>Create</button>
+      </fieldset>
+      <small id="password-helper">
+        Please store the password securely, as even administrators won't be able
+        to recover it. The user is either <code>root</code> (for newer versions
+        of RStudio) or <code>rstudio</code> (for older ones).
+      </small>
+    </form>
+  </div>
+  <hr>
+  <!-- Messages -->
+  <div id="messages">{% include "messages.html" %}</div>
+  <!-- Container list -->
+  {% include "container_list.html" %}
+  <!-- Footer -->
+  <hr>
+  <footer>
+    <a role="button" class="secondary" href="{% url 'project_list' %}">Back to project list</a>
+  </footer>
+{% endblock content %}
