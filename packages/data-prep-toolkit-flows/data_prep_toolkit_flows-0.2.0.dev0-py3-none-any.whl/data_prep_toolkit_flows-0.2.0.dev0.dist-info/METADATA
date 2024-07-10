@@ -1,0 +1,100 @@
+Metadata-Version: 2.1
+Name: data_prep_toolkit-flows
+Version: 0.2.0.dev0
+Summary: Data Preparation Toolkit Library for creation and execution of ttansformers flows
+Author-email: Alexey Roytman <aroytman@il.ibm.com>, Mohammad Nassar <Mohammad.Nassar@ibm.com>, Revital Eres <eres@il.ibm.com>
+License: Apache-2.0
+Keywords: data,data preprocessing,data preparation,llm,generative,ai,fine-tuning,llmapps
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: data-prep-toolkit ==0.2.0
+Provides-Extra: dev
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: pytest >=7.3.2 ; extra == 'dev'
+Requires-Dist: pytest-dotenv >=0.5.2 ; extra == 'dev'
+Requires-Dist: pytest-env >=1.0.0 ; extra == 'dev'
+Requires-Dist: pre-commit >=3.3.2 ; extra == 'dev'
+Requires-Dist: pytest-cov >=4.1.0 ; extra == 'dev'
+Requires-Dist: pytest-mock >=3.10.0 ; extra == 'dev'
+Requires-Dist: moto ==5.0.5 ; extra == 'dev'
+Requires-Dist: markupsafe ==2.0.1 ; extra == 'dev'
+
+# Flows Data Processing Library
+
+This is a framework for combining and local execution of DatPrepKit -transforms_.
+The large-scale execution of transformers is based on use of 
+[KubeFlow Pipelines](https://www.kubeflow.org/docs/components/pipelines/v1/introduction/) and 
+[KubeRay](https://docs.ray.io/en/latest/cluster/kubernetes/index.html) on  big Kubernetes clusters. 
+The project provides two example of "super" KFP workflows, 
+[one](../../kfp/superworkflows/ray/kfp_v1/superworkflow_dedups_sample_wf.py) that combines '_exact dedup_', 
+'_document identification_' and '_fuzzy dedup_'. Another 
+[workflow](../../kfp/superworkflows/ray/kfp_v1/superworkflow_code_sample_wf.py) demonstrates processing of programming 
+code. This workflow starts from _transformation of the code to parquet files_, after that it executes '_exact dedup_', 
+"document identification_', '_fuzzy dedup_', 'programming language select_', '_code quality_', 'malware' transformers. 
+The workflow finishes with '_tokenization'  transformers.
+
+However, sometimes developers or data scientists would like to execute a set of transformers locally. This can be 
+during the development process or due to the size of the processed data sets.
+
+This package demonstrates two options for how this can be done.
+
+## Data Processing Flows
+
+[Flow](./src/data_processing_flows/flow.py) iis a Python representation of a workflow definition. It defines a set of 
+steps that should be executed and a set of global parameters that are common to all steps. Each step can overwrite 
+its corresponding parameters. To provide a "real" data-flow, _Flow_ automatically connects the input of each step to 
+the output of the previous one. The global parameter set defines only the entire _Flow_ input and output, 
+which are set to the first and last steps, respectively.
+
+Currently, _Flow_ supports pure Python local transformers and Ray local transformers. Different transformer types can be 
+part of the same _Flow_. Other transformer types will be added later.
+
+### Flow creation
+We provide two options of _Flow_ creation: programmatically or by [flow_loader](./src/data_processing_flows/flow_loader.py) 
+from a JSON file. _Flow_ JSON schema is defined in [flow_schema.json](./src/data_processing_flows/flow_schema.json).
+
+The [examples](./Examples) directory demonstrates creation of a simple _Flow_ with 3 steps: transformation of PDF files 
+into parquet files, document identification and noop transformation. When the pdf and noop transformations are pure 
+python transformers, and the document identification is a Ray local transformation.
+You can see the JSON _Flow_ definition at [flow_example.json](./Examples/flow_example.json) and its execution at 
+[run_example.py](./Examples/run_example.py). The file [flow_example.py](./Examples/flow_example.py) does the same 
+programmatically.
+
+### Flow execution from a Jupyter notebook
+The [wdu jupyter notebook](./Examples/wdu.ipynb) is an example of a flow with one step of WDU transform. We can run this by running the following commands from [flows](.) directory:
+```
+make venv   # need to run only during the first execution
+. ./venv/bin/activate
+pip install jupyter
+pip install ipykernel
+
+# execute the Jupyter
+python -m ipykernel install --user --name=venv --display-name="Python venv"
+jupyter notebook
+
+```
+The notebook exists in [wdu.ipynb](./Examples/wdu.ipynb)
+
+## KFP Local Pipelines
+KFPv2 added an option to execute components and pipelines locally, see [Execute KFP pipelines locally
+Overview ](https://www.kubeflow.org/docs/components/pipelines/user-guides/core-functions/execute-kfp-pipelines-locally/). 
+Depending on the user's knowledge and preferences, this feature can be another option for executing workflows locally.  
+
+KFP supports two local runner types which indicate how and where executed components should be executed: _DockerRunner_ 
+and _SubprocessRunner_.
+DockerRunner is the recommended option, because it executes each task in a separate container.
+It offers the strongest form of local runtime environment isolation; is most faithful to the remote runtime environment, 
+but might require a prebuilt docker image. 
+
+The files [local_subprocess_wdu_docId_noop_super_pipeline.py](./Examples/local_subprocess_wdu_docId_noop_super_pipeline.py) 
+and [local_docker_wdu_docId_noop_super_pipeline.py](./Examples/local_docker_wdu_docId_noop_super_pipeline.py) 
+demonstrate a KFP local definition of the same workflow using _SubprocessRunner_ and _DockerRunner_, respectively.
+
+**_Note:_** in order to execute the transformation of PDF files into parquet files you should be connected to the IBM 
+Intranet with the "TUNNELAL" VPN
+
+## Next Steps
+- Extend support to S3 data sources
+- Support Spark transformers
+- Support isolated virtual environments by executing _FlowSteps_ in subprocesses.
+- Investigate more KFP local opportunities
