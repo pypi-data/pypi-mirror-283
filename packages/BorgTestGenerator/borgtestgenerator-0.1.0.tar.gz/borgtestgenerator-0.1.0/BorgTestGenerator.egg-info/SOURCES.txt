@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+BorgTestGenerator/__init__.py
+BorgTestGenerator/assistant.py
+BorgTestGenerator/generator.py
+BorgTestGenerator.egg-info/PKG-INFO
+BorgTestGenerator.egg-info/SOURCES.txt
+BorgTestGenerator.egg-info/dependency_links.txt
+BorgTestGenerator.egg-info/requires.txt
+BorgTestGenerator.egg-info/top_level.txt
+tests/__init__.py
+tests/test_generator.py
