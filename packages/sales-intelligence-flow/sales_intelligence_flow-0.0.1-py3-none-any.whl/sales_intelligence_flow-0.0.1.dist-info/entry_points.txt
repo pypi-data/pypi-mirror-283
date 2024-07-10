@@ -1,0 +1,2 @@
+[package_tools]
+sales_api_tool = sales.tools.utils:list_package_tools

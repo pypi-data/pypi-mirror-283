@@ -1,0 +1,12 @@
+sales/__init__.py,sha256=bpT73UG7mZL_JjEqMwbYx6q69jA8J5Jcoul1LcDokhA,81
+sales/tools/__init__.py,sha256=bpT73UG7mZL_JjEqMwbYx6q69jA8J5Jcoul1LcDokhA,81
+sales/tools/sales_api_tool.py,sha256=qN2fBnYOa0LSP4G1qhXx254h-T83EjBObB5NiTIVhl4,2105
+sales/tools/utils.py,sha256=JfavnyUYcJGy1XlVOOlkRB-FFWuMOaRSRWpYGieMxTQ,535
+sales/yamls/sales_api_tool.yaml,sha256=TG2cW9InarKos2a3Jh1pH5plwrW2KLYIL6y8TgxhRQU,474
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_sales_api_tool.py,sha256=Su8NoyufWOk83NldtQr7fWqd7sfmnLgpcgGCmqkO2D0,988
+sales_intelligence_flow-0.0.1.dist-info/METADATA,sha256=JCgUVg5CCWpv_sH5nUO5FylFqjNZ2esT6no8vq8ORtw,155
+sales_intelligence_flow-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+sales_intelligence_flow-0.0.1.dist-info/entry_points.txt,sha256=0UQjnpLwkHr4qK52zjTNpbr3ZnQJ8Wov5R7Yfu_brR4,70
+sales_intelligence_flow-0.0.1.dist-info/top_level.txt,sha256=eJ2aknXBqMUykC-U-rEZzc2cSJpuPIvkBu6NMSTJ8O4,12
+sales_intelligence_flow-0.0.1.dist-info/RECORD,,
