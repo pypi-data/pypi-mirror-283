@@ -1,0 +1,11 @@
+autoboot_data/__init__.py,sha256=QEdOOin17pfJQClAx6lE1V8N4JGBBEUiFyp5XPzLMPs,18
+autoboot_data/autoboot-data-redis.schema.json,sha256=wMaJT4KzjsebMGjo_-rbdCLlzfaXI4ziUq7_2E-3HwM,3114
+autoboot_data/redis/__init__.py,sha256=9F2u1dPzQPx2xJzdH-GNgDYciGbcXKyGzBZNJaB1pJM,127
+autoboot_data/redis/queue.py,sha256=BuDo80s4ub7GG355zpsrEbJG0jxtJDkpLBXVJPzrfrA,790
+autoboot_data/redis/redis_config.py,sha256=udfUcZDeay97ReWEBAYDxQYFP0uoLhfq7n_RdeWfvjk,1725
+autoboot_data/redis/redis_properties.py,sha256=f--sQBwyL3mvljvj5PmmLyYGeZPESHg6DnwgVDhSxH4,1368
+autoboot_data-0.5.0.dist-info/LICENSE.txt,sha256=FwLkb8bmjvOcUI-5BT3e4ecVnqCcavzKb3Uhtvy24Gc,1065
+autoboot_data-0.5.0.dist-info/METADATA,sha256=PMyrjxpbQx2wwQehBehdYAurOhCWloQVS8odaLafwpo,2637
+autoboot_data-0.5.0.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+autoboot_data-0.5.0.dist-info/top_level.txt,sha256=oywgkB6vPTdLTvh96dijKdf0C53puhMm35GZRSu0Y28,14
+autoboot_data-0.5.0.dist-info/RECORD,,
