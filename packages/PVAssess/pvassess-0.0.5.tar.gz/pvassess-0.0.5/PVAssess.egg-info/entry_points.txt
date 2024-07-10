@@ -1,0 +1,3 @@
+[console_scripts]
+input_file_generation = pvskite.generation:create_input
+out_file_processing = pvskite.processing:process_output
