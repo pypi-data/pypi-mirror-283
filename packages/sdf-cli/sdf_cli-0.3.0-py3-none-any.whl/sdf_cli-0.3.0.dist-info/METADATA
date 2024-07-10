@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: sdf-cli
+Version: 0.3.0
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# sdf-cli
+
+A package to house the sdf binary install via python's pip
