@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: constants-importer-3
+Version: 9.0.0
+Summary: A package for initialising the path to the Constants.py file in a root repo, and then importing said constants into the current directory
+Author-email: J J <jai.jalah@krakenflex.com>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# constants-importer
+
+A package for initialising the path to the Constants.py file in a root repo, and then importing said constants into the current directory.
+
+## Usage
+
+1. Import the module in your file
+```
+from constants_importer.import_constants import get_constants
+```
+
+2. Within the file you would like to pull your constants into, get the system path.
+```
+system_path = sys.path[0]
+```
+
+3. Use the `get_constants` method to import your constants, pass through the system path and the name of the root repository where the Constants.py file lives.
+
+```
+constants = get_constants(system_path, "platform-enablement")
+```
+
+4. Reference the specific constants you need as such:
+```
+PROD_URL = constants.PROD_URL
+```

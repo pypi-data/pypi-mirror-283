@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "constants-importer-3"
+authors = [
+    {name = "J J", email = "jai.jalah@krakenflex.com"}
+]
+description = "A package for initialising the path to the Constants.py file in a root repo, and then importing said constants into the current directory"
+version = "9.0.0"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
