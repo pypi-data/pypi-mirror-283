@@ -1,0 +1,17 @@
+NaPaM/__init__.py,sha256=SKSryjeWzJyEa7jU_qbjwKHbhS5qYVNzMKaL_R8HUkY,269
+NaPaM/_reader.py,sha256=PdW16yIyvcmbOa07KGVeYfVMUUV6htdCCLgOmCHu6Lk,2556
+NaPaM/_sample_data.py,sha256=pLoHrJkt-xF1KWTvY0bnI1m-qUXLx_OmxRiz1Cfv8wI,665
+NaPaM/_widget.py,sha256=eEI19P0Io4prEZxJ4hn814jtR60WN1CLMcuvp7Sq0Zo,19977
+NaPaM/_writer.py,sha256=xdvctbVatUqcWt_VERjselnOzBNkqNAvZOCXxv82vf8,1998
+NaPaM/napari.yaml,sha256=i8hv6VX1OyHfTyZBrSKC9VPTLu8birxo4HwZKBwzJT4,1459
+NaPaM/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+NaPaM/_tests/test_reader.py,sha256=p-wKRzv5YMKyaq9uMvwJ5NE5Zxo-GPQLBkg9XTBgJCI,998
+NaPaM/_tests/test_sample_data.py,sha256=0QsfloBjdwcEGYa_48ZXSz-EoTC18i4Q6uarEIlMZpk,824
+NaPaM/_tests/test_widget.py,sha256=FUV4zrOdBr_f4NUBHQb_o4pnZgFrHq057iA7mdubT68,1728
+NaPaM/_tests/test_writer.py,sha256=o-GN_j932bI_xCtQtCKh768_2PrRTbmypEQrRGkP-M0,121
+napam-0.1.0.dist-info/LICENSE,sha256=YDaYheio3uXZC3GXibWnpPDBh-1AvUESmLcII9YHP3U,1514
+napam-0.1.0.dist-info/METADATA,sha256=BOsx1FFC8R6xlDmYWcu_UkiwEMqojcssjAjKyupPI70,3877
+napam-0.1.0.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+napam-0.1.0.dist-info/entry_points.txt,sha256=LqrXIgkX48Ks08Mth9-HcWOOhldJQDu2W8HiKxN71R0,44
+napam-0.1.0.dist-info/top_level.txt,sha256=-dyeo2tmsNjVYNqVG6mClh0KUzZBG7TXsJXi9n5nYkk,6
+napam-0.1.0.dist-info/RECORD,,
