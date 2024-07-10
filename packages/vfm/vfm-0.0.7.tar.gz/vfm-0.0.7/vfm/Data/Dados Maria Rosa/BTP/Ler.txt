@@ -1,0 +1,16 @@
+O teste PVT não fornece nenhum input exclusivo do PVT que não esteja descrito no BTP. O fator de encolhimento poderia ser utilizado para calcular o Bo a partir de dados experimentais como uma validação adicional. Há códigos comentados com este cálculo, porém nenhuma documentação ou planilha relacionada a eles.
+
+O teste CG fornece a massa molar média, fator de compressibilidade, densidade relativa, coeficiente isentrópico e viscosidade dinâmica da fase gás que não são apresentadas no BTP e podem ser inputs da segunda parte do VFM, respectiva ao cálculo das composições do gás. Apenas o primeiro é um input no cálculo das vazões.
+
+O teste BTP fornece os dados dos demais testes além do teste de poço. Os inputs são detalhados brevemente abaixo:
+
+- Os potenciais de produção corrigido correspondem às vazões nas condições padrões (Ql_SC, Qg_SC, Qw_SC)
+
+- BSW é fornecido pelo teste PVT, porém planilhas de resultam indicam que Maria Rosa calculava BSW = Qw_SC/(Ql_SC+Qw_SC) pelos resultados do BTP
+
+- RGO é fornecido pelo teste BTP e é calculado por RGO = Qg_SC/Qo_SC. A razão de solubilidade calculada no teste PVT e fornecida também no BTP permite calcular o Rs a partir de dados experimentais como uma validação adicional. Há códigos comentados com este cálculo, porém nenhuma documentação ou planilha relacionada a eles.
+
+- Massa especifica do óleo proveniente do teste PVT
+
+- Composições da fase gás provenientes do teste CG
+

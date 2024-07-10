@@ -1,0 +1,1 @@
+Planilhas dentro do arquivo PI_BTP correspondem ao poço que foi testado no referido dia.

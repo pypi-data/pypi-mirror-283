@@ -1,0 +1,3 @@
+O arquivo excel fornece todas os dados de entrada e saída do VFM conforme os resultados apresentados no relatório 4 do Replicantes. Fonte importante para testar o modelo traduzido.
+
+
