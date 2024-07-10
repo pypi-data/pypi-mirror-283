@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: ahk-wmutil
+Version: 0.1.0
+Summary: A Python AHK extension providing monitor functionality
+Home-page: https://github.com/spyoungtech/ahk-wmutil
+Author: Spencer Young
+Author-email: spencer.young@spyoung.com
+Project-URL: Documentation, https://github.com/spyoungtech/ahk-wmutil
+Project-URL: Funding, https://github.com/sponsors/spyoungtech/
+Project-URL: Source, https://github.com/spyoungtech/ahk-wmutil
+Project-URL: Tracker, https://github.com/spyoungtech/ahk-wmutil/issues
+Keywords: ahk,autohotkey,windows,mouse,keyboard,automation,pyautogui,wmutil,screeninfo
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Desktop Environment
+Classifier: Programming Language :: Python
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Typing :: Typed
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: wmutil
+Requires-Dist: ahk >=1.7.8
+
+# ahk-wmutil
+
+This is an extension package intended to be used with the Python [ahk](https://github.com/spyoungtech/ahk) package. 
+It adds functionality provided by the [`wmutil`](https://github.com/spyoungtech/wmutil) package into a convenient 
+ahk extension.
+
+## Installation
+
+```
+pip install ahk-wmutil
+```
+
+## Usage
+
+
+```python
+from ahk import AHK
+import wmutil
+from ahk_wmutil import wmutil_extension
+
+ahk = AHK(extensions=[wmutil_extension])
+
+win = ahk.active_window
+
+primary_monitor = wmutil.get_primary_monitor()
+
+# move a window to a given monitor
+win.move_to_monitor(primary_monitor)
+
+# Get the monitor the window is using
+mon = win.get_monitor() 
+assert mon == primary_monitor # True
+
+# Get the monitor that the mouse cursor is on
+mon = ahk.monitor_from_mouse_position()
+```
+
+
+Possible future work:
+
+- [ ] A customized `Monitor` class that provides additional functionality, like listing all windows on a monitor
+- [ ] Easy positioning of windows within a monitor (e.g., split left/right, quadrants, etc.)
