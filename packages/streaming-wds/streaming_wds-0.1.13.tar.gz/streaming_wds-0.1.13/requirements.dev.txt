@@ -1,0 +1,7 @@
+ruff
+uv
+twine
+build
+setuptools_scm
+handsdown
+pre-commit
