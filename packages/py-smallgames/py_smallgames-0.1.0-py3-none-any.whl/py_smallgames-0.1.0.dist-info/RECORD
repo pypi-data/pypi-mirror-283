@@ -1,0 +1,10 @@
+py_smallgames/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+py_smallgames/snakegame/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+py_smallgames/snakegame/assets/fonts/SourceHanSansCN-Bold.ttf,sha256=EfOlL1bRs2D3AP_Qg60hm-skL0qaiAtxeB6XkEjaTew,10676740
+py_smallgames/snakegame/assets/images/snake.png,sha256=HaYNKtEAAo8WRNzaVhzUXvCFlNfZQM5yLwvKx2p30H4,6266
+py_smallgames/snakegame/assets/music/snake.wav,sha256=B1BwfFaPIsSxaash-igVI_YE9SQd1BCXRTnSAKsNunY,78464
+py_smallgames/snakegame/assets/snake.ico,sha256=Tv3fEg4T7cvChzRklvFLuE8Wb22W93ozAM-LCrte1Io,37081
+py_smallgames/snakegame/snakegame.py,sha256=Bmh6B542Ih9snvq0G_WRWu40bLcYRcku_QefAnaCqKA,9098
+py_smallgames-0.1.0.dist-info/METADATA,sha256=MMlVUJGW7O1Co_UoLJQzWNxVC-DMu5Lxi34RNNHCYxc,575
+py_smallgames-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+py_smallgames-0.1.0.dist-info/RECORD,,
