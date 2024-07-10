@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: PVAssess
+Version: 0.0.5
+Home-page: 
+Author: ['Zayah Cortright', 'Stephen Lim']
+Author-email: ['zayahcortright@gmail.com', 'stephenlimzy2008@gmail.com']
+Requires-Dist: ase
+Requires-Dist: pandas
+
