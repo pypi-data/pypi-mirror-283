@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: cofcokoai
+Version: 2024.0.1
+Summary: 中粮可口可乐AIToolkit
+Home-page: https://github.com/lampda/cofcokoai
+License: MIT
+Author: lisheng
+Author-email: lisheng5@hq.cofcoko.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: numpy (>=2.0.0,<3.0.0)
+Project-URL: Repository, https://github.com/lampda/cofcokoai
+Description-Content-Type: text/markdown
+
+# 中粮可口可乐AIToolkit
+
+本项目及工具为中粮可口可乐（中可）AI团队开发的AI Toolkit。
+
