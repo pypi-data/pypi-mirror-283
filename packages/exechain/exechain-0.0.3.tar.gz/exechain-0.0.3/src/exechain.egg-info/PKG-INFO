@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: exechain
+Version: 0.0.3
+Summary: Система сборки похожая по духу на make
+Author-email: Леонов Артур <depish.eskry@yandex.ru>
+Project-URL: Homepage, https://gitverse.ru/Depish/exechain
+Project-URL: Bug Tracker, https://gitverse.ru/Depish/exechain/tasktracker
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: requests
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: pylint; extra == "dev"
