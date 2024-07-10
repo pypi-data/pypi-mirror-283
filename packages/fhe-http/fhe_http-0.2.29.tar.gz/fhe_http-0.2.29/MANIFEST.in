@@ -1,0 +1,4 @@
+include fhe/Cargo.toml
+include fhe/pyproject.toml
+recursive-include fhe/src *
+recursive-include ../target
