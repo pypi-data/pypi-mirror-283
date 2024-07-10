@@ -1,0 +1,9 @@
+LICENSE
+README.rst
+setup.py
+iPyPNG.egg-info/PKG-INFO
+iPyPNG.egg-info/SOURCES.txt
+iPyPNG.egg-info/dependency_links.txt
+iPyPNG.egg-info/top_level.txt
+pyipng/__init__.py
+pyipng/ipypng.py
