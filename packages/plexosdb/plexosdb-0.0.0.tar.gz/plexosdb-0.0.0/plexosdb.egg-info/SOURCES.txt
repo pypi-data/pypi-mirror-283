@@ -1,0 +1,6 @@
+README.md
+pyproject.toml
+plexosdb.egg-info/PKG-INFO
+plexosdb.egg-info/SOURCES.txt
+plexosdb.egg-info/dependency_links.txt
+plexosdb.egg-info/top_level.txt
