@@ -1,0 +1,11 @@
+telempack/__init__.py,sha256=XlIZZ35pa88vf5dpiEnRaooQmO_zFy-Bw_g9wbIc3JA,242
+telempack/opentelemetry_kit/Observer.py,sha256=6hGy9bybhCyuTdGiw53qZglaN239XmSi6pfKxn3jdyk,11253
+telempack/opentelemetry_kit/Resource.py,sha256=DSMjqI6laiz9A1QMY6SyB3mkO42DbwEafSLhu2ER-bs,1729
+telempack/opentelemetry_kit/__init__.py,sha256=aqMi7gGWRzfVAownX0myeMa3qlyAyeF5SgMio3SlxAE,143
+telempack/opentelemetry_kit/refactor.py,sha256=6bvfrVgkhEB59KLWr9JADLI6kHRq2eZrDmVzIh8NV2Q,3883
+telempack/opentelemetry_kit/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+telempack/opentelemetry_kit/utils/logger.py,sha256=mKtS-qcNfpj9An0BXpixsSsXGb3sBuf8Wlp70QLlyDc,840
+telempack-1.2.0.dist-info/LICENSE,sha256=YF4YrpgutnTFQocyuBLGvz1De1xERiGCdGvaYwnJTNE,328
+telempack-1.2.0.dist-info/METADATA,sha256=v016LWVsvDII1laSLB9AYLHioJDU2jHJWNjLhiJUD3c,5011
+telempack-1.2.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+telempack-1.2.0.dist-info/RECORD,,
