@@ -1,0 +1,5 @@
+corva_otel/autoinstrumentation/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+corva_otel/autoinstrumentation/autoinstrumentation.py,sha256=MVVEfXnluUwbYTKzDWmlCqy4BRym0Xdgm1kHEoaU4V0,2605
+corva_otel_autoinstrumentation-0.1.0.dist-info/METADATA,sha256=VqU-QRlkqwWEeeAVmipOXP9wp4z8DghiiUlmhCFCfoI,489
+corva_otel_autoinstrumentation-0.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+corva_otel_autoinstrumentation-0.1.0.dist-info/RECORD,,
