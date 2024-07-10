@@ -1,0 +1,7 @@
+litellm
+jinja2
+PyYAML
+python-dotenv
+
+[dev]
+pylint==2.16.2
