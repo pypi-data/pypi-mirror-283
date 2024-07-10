@@ -1,0 +1,17 @@
+quick-django-docker-setup/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+quick-django-docker-setup/celery.py,sha256=ZQLi2gp9wOWJrZnniHib0m5V3vH8jkreABSzmR5kz3k,793
+quick-django-docker-setup/django_project.py,sha256=fpM266LpsSUML3apXcF3qHsxvUtzkjK3QWsCbvfbBkU,1958
+quick-django-docker-setup/docker_compose.py,sha256=cECW9VgdNV3mJjws2DtFnU0caqUsedshf7uOU7ZnIaE,1470
+quick-django-docker-setup/dockerfile.py,sha256=p4dS4uEx6Y7Jv5BYk0gDoZ4ztxSosB8Wbz8btt7Q0jo,955
+quick-django-docker-setup/env_file.py,sha256=1bt4A1OLpg3U51D1nTypaJ4O1yet9e6VjsMsQn-alcw,1078
+quick-django-docker-setup/main.py,sha256=Erh-YE1ePPEOqPHqShe-jEHFU_FRZmgOJaNnIMpLC9Q,1998
+quick-django-docker-setup/package_manager.py,sha256=V6Zb6VZwyp1f2g0MJFGlBY80Apuz5Nf1EYHy82xNdZI,3366
+quick-django-docker-setup/settings.py,sha256=Yne7UeUVnXoU2tUozYqf_wbx0g8RTJ8jG0wbv_fFdXc,5047
+quick-django-docker-setup/urls.py,sha256=piqUMTa9Tpq0dAMsf-IUUWljgjUG3HkKexoUeZlHB7M,2509
+quick-django-docker-setup/utils.py,sha256=yK3dt-ggtCnOd2LuWnCAkHpunz3hmE6PIIs3w8QK3Jg,2092
+quick_django_docker_setup-0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+quick_django_docker_setup-0.1.dist-info/METADATA,sha256=SjlW2F1voZflNsv704NbDxKp1IQLextmxKvGBXNnch4,375
+quick_django_docker_setup-0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+quick_django_docker_setup-0.1.dist-info/entry_points.txt,sha256=19ai9WxHKC8s8KuYy_zcatpVHhnY0uOCK-T1dn-Xfek,56
+quick_django_docker_setup-0.1.dist-info/top_level.txt,sha256=r0gjhhoII-o7uQCzpt-5sfiVRLRmQQ5Oja_XwZ1JBDA,26
+quick_django_docker_setup-0.1.dist-info/RECORD,,
