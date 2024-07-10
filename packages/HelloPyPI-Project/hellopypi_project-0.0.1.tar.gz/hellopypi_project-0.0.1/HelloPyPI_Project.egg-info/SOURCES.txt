@@ -1,0 +1,8 @@
+setup.py
+HelloPyPI_Project.egg-info/PKG-INFO
+HelloPyPI_Project.egg-info/SOURCES.txt
+HelloPyPI_Project.egg-info/dependency_links.txt
+HelloPyPI_Project.egg-info/requires.txt
+HelloPyPI_Project.egg-info/top_level.txt
+TestLibrary/__init__.py
+TestLibrary/hello.py
