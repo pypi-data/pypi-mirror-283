@@ -1,0 +1,46 @@
+Metadata-Version: 2.3
+Name: evalica
+Version: 0.0.1
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Typing :: Typed
+Requires-Dist: numpy >=1.16.0
+Requires-Dist: pandas
+Requires-Dist: hypothesis[numpy] ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: nbqa ; extra == 'dev'
+Requires-Dist: notebook ; extra == 'dev'
+Requires-Dist: pandas-stubs ; extra == 'dev'
+Requires-Dist: plotly ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: ruff ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Provides-Extra: dev
+License-File: LICENSE
+Summary: Evalica, your favourite evaluation toolkit.
+Keywords: evaluation,pairwise comparisons,ranking,Elo
+License: Apache-2.0
+Requires-Python: ~=3.8
+Description-Content-Type: text/markdown
+Project-URL: Homepage, https://github.com/dustalov/evalica
+
+# Evalica
+
+[![Tests][github_tests_badge]][github_tests_link] 
+
+[github_tests_badge]: https://github.com/dustalov/evalica/actions/workflows/test.yml/badge.svg?branch=master
+[github_tests_link]: https://github.com/dustalov/evalica/actions/workflows/test.yml
+
+Evalica, your favourite evaluation toolkit.
+
+- [Tutorial.ipynb](Tutorial.ipynb)
+
+![Evalica](Evalica.svg)
+
