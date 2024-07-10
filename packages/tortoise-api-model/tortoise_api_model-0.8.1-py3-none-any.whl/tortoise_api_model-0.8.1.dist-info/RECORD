@@ -1,0 +1,12 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_db.py,sha256=Qbb0p9OsTqD9OsHH94UHiRNJyo-k4tF2jcPdu8jCC-8,311
+tortoise_api_model/__init__.py,sha256=vYGzu4dnv0e1i3UOCzq9-GHl-it2Hp2tiUML5D42w9s,800
+tortoise_api_model/enum.py,sha256=ErWoDPYkdw9NJwDOkXF7GpEVbgajY5cHEBiQLbExSXg,562
+tortoise_api_model/field.py,sha256=9j9qaRUAui-Jjw06kSdKhbViZ4lp9WHO9Kbz1fZsQTQ,2747
+tortoise_api_model/func.py,sha256=DfEhEuId1PZTL6R6KBum0i3RveHmXjwqbcDta4vqedg,288
+tortoise_api_model/model.py,sha256=QRSecxa_Df7LgN6-Kczk1fcf0Bn5yf3jbUubiflmcTM,13255
+tortoise_api_model/pydantic.py,sha256=RpiyhPWNy03MaxMBZf5Ic3a2v0N2GXoBgQhcs3r6yvc,651
+tortoise_api_model-0.8.1.dist-info/METADATA,sha256=JqbW01OstLD3ku9muxutVJ8Y0vHiONRaX2s8-5G6oF8,579
+tortoise_api_model-0.8.1.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+tortoise_api_model-0.8.1.dist-info/top_level.txt,sha256=rXDmT55r8flKQMWW2YrlG0Mw7G0S8K0YJvTyTSgiCY4,25
+tortoise_api_model-0.8.1.dist-info/RECORD,,
