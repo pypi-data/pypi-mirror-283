@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: deep_reps
+Version: 0.0.1
+Summary: Representational Similarity Measures for Deep Learning
+Author: Mezosky
+Author-email: <imezadelajara@gmail.com>
+Keywords: python,deep-learning,torch,similarity,representations
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: torch>=2.3.1
+Requires-Dist: matplotlib>=3.6.0
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: pandas>=1.5.0
+Requires-Dist: plotly>=5.11.0
+
+DeepReps is a comprehensive library designed to centralize various measures of similarity for deep learning representations. It is specifically tailored for comparing the weights and outputs of deep learning models, providing a valuable toolkit for researchers and practitioners to assess and analyze model similarities.
