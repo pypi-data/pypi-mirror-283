@@ -1,0 +1,4 @@
+wheel
+fastapi
+uvicorn
+rpi.gpio
