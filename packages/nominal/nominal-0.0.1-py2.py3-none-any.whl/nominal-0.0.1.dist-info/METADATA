@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: nominal
+Version: 0.0.1
+Summary: Stub for Nominal Python package
+Author-email: JP <jack.parmer@pm.me>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
