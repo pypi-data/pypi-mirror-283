@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pg_table_builder
+Version: 1.0.0
+Summary: Table builder for postgresql
+Home-page: https://github.com/byBenPuls/pg_table_builder
+Maintainer: Ben Puls
+Maintainer-email: discordben7@gmail.com
+License: LICENSE.md
+Keywords: postgres,builder,postgresql
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Security :: Cryptography
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+
+Table builder (for postgresql)
