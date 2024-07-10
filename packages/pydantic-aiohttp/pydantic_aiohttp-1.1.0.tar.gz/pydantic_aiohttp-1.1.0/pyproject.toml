@@ -1,0 +1,61 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pydantic_aiohttp"
+dynamic = ["version"]
+description = "Simple HTTP Client based on aiohttp with integration of pydantic"
+authors = [
+    { name = "pylakey", email = "pylakey@protonmail.com" }
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.9"
+homepage = "https://github.com/pylakey/pydantic_aiohttp"
+repository = "https://github.com/pylakey/pydantic_aiohttp"
+classifiers = [
+    "Framework :: AsyncIO",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+dependencies = [
+    "aiofiles>=23.0.0",
+    "aiohttp[speedups]==3.*",
+    "pydantic>=2,<3",
+    "ujson>=5.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.2,<8.0",
+]
+
+[project.urls]
+Source = "https://github.com/pylakey/pydantic_aiohttp"
+Homepage = "https://github.com/pylakey/pydantic_aiohttp"
+
+[tool.hatch.version]
+path = "pydantic_aiohttp/__init__.py"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build]
+skip-excluded-dirs = true
+include = [
+    "pydantic_aiohttp",
+    "README.md",
+    "CHANGELOG.md",
+]
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    "**/__pycache__",
+    "**/*.py[cod]"
+]
+
+[tool.hatch.build.targets.wheel]
+only-packages = true
