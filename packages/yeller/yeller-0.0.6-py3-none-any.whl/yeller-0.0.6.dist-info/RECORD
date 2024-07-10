@@ -1,0 +1,12 @@
+yeller.py,sha256=WC8OALyzjvx5aWf1r0ZJrmgUaRlhNa77SsQYa24JLDM,947
+yeller-0.0.6.data/scripts/hello.py,sha256=qLIVEJxEKAQfGceNPT3cDQvow6J8eEfMAoj1waNqz5A,173
+yeller-0.0.6.data/scripts/install_dev.py,sha256=oXGBDcT4ctSfLPVRM2TDo7Z4a1H64Q4p68ppn_QOxWg,1753
+yeller-0.0.6.data/scripts/redhat.sh,sha256=-j2ozc_9ScXwRItNExK_yu16XCzDdlpSIqeEGiycESc,111
+yeller-0.0.6.data/scripts/rocky.sh,sha256=M2wTNwfDeY0Uy-FwLKcI6-T6MSoG4rZbFwD7qGiDBQI,111
+yeller-0.0.6.data/scripts/ubuntu.sh,sha256=dXe2uZDOCkQmXGd_xhryd2LE7Oank3rVmbhuoNZuh0o,111
+yeller-0.0.6.data/scripts/windows.ps1,sha256=YhqDLyGdhn7akMS4lZIrfOWvlpORLsdpS9dqm0P6LJk,3003
+yeller-0.0.6.dist-info/METADATA,sha256=OXInTiMLtZrwbJwWWaaVaqk1iEDYlGpBavIitf65Ew4,740
+yeller-0.0.6.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+yeller-0.0.6.dist-info/entry_points.txt,sha256=BvwKdl8LYa1L3ZeTHnlszcoxnHRD9DkL8k5jxEOYtR0,39
+yeller-0.0.6.dist-info/top_level.txt,sha256=yhGCb1ZKPJLGsFCfeWroZshM7GqLPWHcjiZN8lqx-_I,7
+yeller-0.0.6.dist-info/RECORD,,
