@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: iPyPNG
+Version: 1.0.0
+Summary: Convert real PNG to Apple fake PNG (CgBI)
+Home-page: https://github.com/HGStyle/iPyPNG
+Author: HGStyle
+Author-email: hgstyle@outlook.fr
+Project-URL: Documentation, https://github.com/HGStyle/iPyPNG
+Keywords: CgBI
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Requires-Python: >=3.9
+License-File: LICENSE
+
+iPyPNG
+=======
+Convert real PNGs to Apple fake PNG (CgBI).
+
+This is basically the reverse of venjye's PyiPNG (I forked it so people could see it).
+
+Original (reverse) project: https://github.com/venjye/PyiPNG
+
+Requirements
+-------------
+
+None
+
+Installation
+-------------
+
+Package is uploaded on `PyPI<https://pypi.org/project/ipypng>`.
+You can install it with pip::
+
+    $ python3 -m pip install iPyPNG
+
+
+Example
+-------------
+
+See `example.py<https://github.com/HGStyle/iPyPNG/blob/master/example.py>`
+
+
+
+License
+-------
+
+iPyPNG is released under the MIT License. See LICENSE for more information.
