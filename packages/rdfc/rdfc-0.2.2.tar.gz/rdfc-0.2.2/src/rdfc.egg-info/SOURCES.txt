@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/rdfc/__init__.py
+src/rdfc/__main__.py
+src/rdfc.egg-info/PKG-INFO
+src/rdfc.egg-info/SOURCES.txt
+src/rdfc.egg-info/dependency_links.txt
+src/rdfc.egg-info/entry_points.txt
+src/rdfc.egg-info/requires.txt
+src/rdfc.egg-info/top_level.txt
