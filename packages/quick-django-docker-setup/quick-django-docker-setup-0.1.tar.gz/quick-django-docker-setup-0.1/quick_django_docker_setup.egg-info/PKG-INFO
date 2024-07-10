@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: quick-django-docker-setup
+Version: 0.1
+Home-page: https://github.com/KrzysztofCzapla/quick-django-docker-setup
+Keywords: quick,django,docker,setup
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Quick Django Docker Setup
+Command Line Tool that will help quickly set up django projects in docker
+
+
