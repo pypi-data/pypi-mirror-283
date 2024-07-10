@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: super-easypypi
+Version: 0.0.1
+Summary: Super easypypi
+Home-page: https://github.com/yell0w4x/super-easypypi
+Author: yell0w4x
+Author-email: yell0w4x@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/yell0w4x/super-easypypi/issues
+Keywords: easy pypi
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Easy pypi
+
+
+```
+pip install easypypi
+```
+
+Then
+
+```
+```
