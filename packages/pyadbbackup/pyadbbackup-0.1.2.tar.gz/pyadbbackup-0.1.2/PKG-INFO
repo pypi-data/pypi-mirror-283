@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pyadbbackup
+Version: 0.1.2
+Summary: Tool to backup android partitions via adb.
+Author: RuslanUC
+Author-email: dev_ruslan_uc@protonmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Provides-Extra: cli
+Requires-Dist: click (>=8.1.7,<9.0.0) ; extra == "cli"
+Requires-Dist: pure-python-adb (==0.3.*)
+Description-Content-Type: text/markdown
+
+# pyAdbBackup
+
