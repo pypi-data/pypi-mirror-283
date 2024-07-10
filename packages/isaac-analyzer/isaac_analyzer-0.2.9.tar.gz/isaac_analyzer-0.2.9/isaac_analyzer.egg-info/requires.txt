@@ -1,0 +1,6 @@
+pyyaml
+tabulate
+jsonschema
+matplotlib
+numpy
+Pillow
