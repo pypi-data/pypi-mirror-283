@@ -1,0 +1,138 @@
+Metadata-Version: 2.1
+Name: ocelotz
+Version: 0.4.2
+Summary:  OCELOT: diffeOmorphiC rEgistration for voxel-wise anOmaly Tracking - a tool to generate cohort specific normative PET/CT images.
+Home-page: https://github.com/Keyn34/OCELOT
+Author: Sebastian Gutschmayer
+Author-email: sebastian.gutschmayer@meduniwien.ac.at
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: pyfiglet
+Requires-Dist: emoji
+Requires-Dist: SimpleITK
+Requires-Dist: natsort
+Requires-Dist: numpy==1.26.0
+Requires-Dist: pydicom
+Requires-Dist: tqdm
+Requires-Dist: rich
+Requires-Dist: requests
+Requires-Dist: moosez==2.4.0
+Requires-Dist: pandas
+Requires-Dist: dicom2nifti
+Requires-Dist: six
+
+![OCELOT: diffeOmorphiC rEgistration for voxel-wise anOmaly Tracking](OCELOT.jpg)
+
+# OCELOT
+**diffeOmorphiC rEgistration for voxel-wise anOmaly Tracking**
+
+**A tool to generate cohort specific normative PET/CT images and allow comparison with patient PET/CT images.**
+
+## 🖥️ System  Requirements and Recommendations
+Depending on the images you are processing (FOV, Spacing, Matrix size), it is recommended to use a system that has at least 64GB of RAM.
+
+It is also HIGHLY suggested to use a system with a recent NVIDIA Graphics card. 
+
+## 🛠 Installation Guide
+### Virtual Environment Setup
+
+Creating a virtual environment is highly recommended to avoid any potential conflicts with other Python packages.
+
+- **Windows**:
+```
+python -m venv ocelotz_env
+.\ocelotz_env\Scripts\activate
+```
+
+- **Linux/Mac**:
+```
+python3 -m venv ocelotz_env
+source ocelotz_env/bin/activate
+```
+
+### Installing OCELOT
+
+With your virtual environment activated, install OCELOT using pip:
+
+```
+pip install ocelotz # stable recommended version
+```
+
+## 📁 Folder Structure
+To start processing data with OCELOT (the stratification pipeline, please see below) a simple folder structure is recommend: 
+```
+stratification_directory
+    ├── Subject_1
+    │         ├── CT_FOLDER
+    │         │    └── DICOM_FILES.dcm
+    │         └── PT_FOLDER
+    │              └── DICOM_FILES.dcm
+    ├── Subject_2
+    │         ├── CT_FOLDER
+    │         │    └── DICOM_FILES.dcm
+    │         └── PT_FOLDER
+    │              └── DICOM_FILES.dcm
+    .
+    .
+    .
+    └── Subject_N
+              ├── CT_FOLDER
+              │    └── DICOM_FILES.dcm 
+              └── PT_FOLDER
+                   └── DICOM_FILES.dcm
+```
+The naming of the individual folders does not matter. It is only important that two sets of DICOM files exist within the subject directory: CT and PET.
+
+**Note:** OCELOT might fail if specific header tags are not provided with the PET and CT DICOM files. 
+
+Following the stratification, you can then simply run OCELOT within normalization mode on the resulting stratified directory or compare the build NormDB with an incoming patient.
+
+## 📚 Usage Guide
+### Getting started
+OCELOT has three modes of operation: stratify, normalize and compare. 
+To get an overview of the modes, you can simply do:
+```
+ocelot -h
+ ```
+To get more information for each mode, you can also do:
+```
+ocelot <mode> -h
+ ```
+So for example:
+```
+ocelot <stratify> -h
+```
+This will give you more information on the input parameters of the mode. 
+
+### Stratification
+The command structure for stratification is:
+```
+ocelot stratify -dir <directory/of/subject/data>
+```
+OCELOT will attempt to stratify the given presented subjects in `-dir` based on sex, BMI, age and height, standardize them and copy them into a new directory.
+
+### Template creation
+```
+ocelot normalize -sub-dir <directory/of/stratified/subject/data> -clean-up
+```
+OCELOT will attempt to normalize all subject in the provided `-sub-dir` and create a NormDB from them, including a reference 
+- CT
+- PET
+- SUV-PET
+- STD-SUV-PET
+
+### Subject comparison
+```
+ocelot compare -ref-dir <directory/of/template> -sub-dir <directory/of/stratified/subject/data/to/compare> -clean-up -mask-regions [arms | legs | head]
+```
+OCELOT will attempt to compare all subjects in the `-sub-dir` to the NormDB in the `-ref-dir`. `-clean-up` is optional and removes all intermediate processing data after OCELOT is done. `-mask-regions` is optional and can be used to ignore regions during comparison.
+
+### Output
+OCELOT will generate a folder named `OCELOT` in each directory where the results of each processing pipeline can be found.
+
+## 🐾 OCELOT: A part of the [enhance.pet](https://enhance.pet) community
+
+[![Visit: https://enhance.pet](ENHANCE.gif)](https://enhance.pet)
