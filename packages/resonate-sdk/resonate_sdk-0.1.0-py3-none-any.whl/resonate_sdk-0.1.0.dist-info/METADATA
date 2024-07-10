@@ -1,0 +1,20 @@
+Metadata-Version: 2.3
+Name: resonate-sdk
+Version: 0.1.0
+Summary: Distributed Async Await by Resonate HQ, Inc
+Project-URL: Documentation, https://github.com/resonatehq/resonate-sdk-py#readme
+Project-URL: Issues, https://github.com/resonatehq/resonate-sdk-py/issues
+Project-URL: Source, https://github.com/resonatehq/resonate-sdk-py
+Author-email: "Resonate HQ, Inc" <contact@resonatehq.io>
+License: Apache-2.0
+License-File: LICENSE
+Requires-Python: >=3.9
+Requires-Dist: result>=0.17.0
+Requires-Dist: typing-extensions>=4.12.2
+Description-Content-Type: text/markdown
+
+# resonate
+
+1. Retry logic
+2. Implement the Invocation with retry logic
+3. Support coroutines that return a Promise. Where the scheduler MUST resolve the promise.
