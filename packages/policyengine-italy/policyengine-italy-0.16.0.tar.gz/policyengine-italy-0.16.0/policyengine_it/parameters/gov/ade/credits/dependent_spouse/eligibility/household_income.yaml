@@ -1,0 +1,7 @@
+description: Max annual combined household income for dependent spouse tax credit
+metadata:
+  unit: currency-EUR
+  label: Household income max value
+  period: year
+values:
+  0000-01-01: 80_000

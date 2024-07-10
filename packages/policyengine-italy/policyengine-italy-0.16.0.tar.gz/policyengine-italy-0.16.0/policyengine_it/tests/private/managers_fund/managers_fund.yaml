@@ -1,0 +1,47 @@
+- name: Unemployed person
+  period: 2024
+  input:
+    employment_category: UNEMPLOYED
+    total_individual_pre_tax_income: 0
+  output:
+    managers_fund: 0
+
+- name: Employee (not eligible)
+  period: 2024
+  input:
+    employment_category: EMPLOYEE
+    total_individual_pre_tax_income: 50_000
+  output:
+    managers_fund: 0
+
+- name: Executive with zero income
+  period: 2024
+  input:
+    employment_category: EXECUTIVE
+    total_individual_pre_tax_income: 0
+  output:
+    managers_fund: 0
+
+- name: Executive with income below threshold
+  period: 2024
+  input:
+    employment_category: EXECUTIVE
+    total_individual_pre_tax_income: 30_000
+  output:
+    managers_fund: 1_200
+
+- name: Executive at threshold
+  period: 2024
+  input:
+    employment_category: EXECUTIVE
+    total_individual_pre_tax_income: 180_000
+  output:
+    managers_fund: 7_200
+
+- name: Executive above threshold
+  period: 2024
+  input:
+    employment_category: EXECUTIVE
+    total_individual_pre_tax_income: 260_000
+  output:
+    managers_fund: 7_200

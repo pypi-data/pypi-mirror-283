@@ -1,0 +1,55 @@
+- name: Unemployed person
+  period: 2024
+  input:
+    employment_category: UNEMPLOYED
+    total_individual_pre_tax_income: 0
+  output:
+    mario_besusso: 0
+
+- name: Employee (not eligible)
+  period: 2024
+  input:
+    employment_category: EMPLOYEE
+    total_individual_pre_tax_income: 50_000
+  output:
+    mario_besusso: 0
+
+- name: Executive with zero income
+  period: 2024
+  input:
+    employment_category: EXECUTIVE
+    total_individual_pre_tax_income: 0
+  output:
+    mario_besusso: 0
+
+- name: Executive with income below threshold
+  period: 2024
+  input:
+    employment_category: EXECUTIVE
+    total_individual_pre_tax_income: 30_000
+  output:
+    mario_besusso: 561
+
+- name: Executive at threshold
+  period: 2024
+  input:
+    employment_category: EXECUTIVE
+    total_individual_pre_tax_income: 45_940
+  output:
+    mario_besusso: 859.078
+
+- name: Executive above threshold
+  period: 2024
+  input:
+    employment_category: EXECUTIVE
+    total_individual_pre_tax_income: 60_000
+  output:
+    mario_besusso: 859.078
+
+- name: Executive well above threshold
+  period: 2024
+  input:
+    employment_category: EXECUTIVE
+    total_individual_pre_tax_income: 100_000
+  output:
+    mario_besusso: 859.078

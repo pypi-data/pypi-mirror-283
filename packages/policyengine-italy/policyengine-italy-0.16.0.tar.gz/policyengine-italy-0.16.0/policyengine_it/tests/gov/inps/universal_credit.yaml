@@ -1,0 +1,165 @@
+- name: Household with two parents and no children (does not qualify)
+  period: 2024
+  input:
+    people:
+      parent1:
+        age: 40
+      parent2:
+        age: 38
+    households:
+      household:
+        members: [parent1, parent2]
+        head_market_income: 50_000
+        spouse_market_income: 30_000
+  output:
+    universal_credit: 0
+
+- name: Household with one child under the age of 1
+  period: 2024
+  input:
+    people:
+      parent1:
+        age: 35
+      parent2:
+        age: 33
+      child1:
+        age: 0
+        is_dependent: true
+    households:
+      household:
+        members: [parent1, parent2, child1]
+        head_market_income: 35_000
+        spouse_market_income: 25_000
+  output:
+    universal_credit: 2_025
+
+- name: Household with one child between 1 and 18
+  period: 2024
+  input:
+    people:
+      parent1:
+        age: 40
+      parent2:
+        age: 38
+      child1:
+        age: 10
+        is_dependent: true
+    households:
+      household:
+        members: [parent1, parent2, child1]
+        head_market_income: 30_000
+        spouse_market_income: 20_000
+  output:
+    universal_credit: 1_350
+
+- name: Household with one child who's 19
+  period: 2024
+  input:
+    people:
+      parent1:
+        age: 45
+      parent2:
+        age: 43
+      child1:
+        age: 19
+        is_dependent: true
+        total_individual_pre_tax_income: 3_000
+    households:
+      household:
+        members: [parent1, parent2, child1]
+        head_market_income: 40_000
+        spouse_market_income: 30_000
+  output:
+    universal_credit: 660
+
+- name: Household with a dependent child over 21 (does not qualify)
+  period: 2024
+  input:
+    people:
+      parent1:
+        age: 50
+      parent2:
+        age: 48
+      child1:
+        age: 22
+        is_dependent: true
+        total_individual_pre_tax_income: 5_000
+    households:
+      household:
+        members: [parent1, parent2, child1]
+        head_market_income: 45_000
+        spouse_market_income: 35_000
+  output:
+    universal_credit: 0
+
+- name: Household in the higher income bracket (over €40,000 a year)
+  period: 2024
+  input:
+    people:
+      parent1:
+        age: 42
+      parent2:
+        age: 40
+      child1:
+        age: 8
+        is_dependent: true
+      child2:
+        age: 6
+        is_dependent: true
+    households:
+      household:
+        members: [parent1, parent2, child1, child2]
+        head_market_income: 55_000
+        spouse_market_income: 45_000
+  output:
+    universal_credit: 2_700
+
+- name: Household in the lower income bracket
+  period: 2024
+  input:
+    people:
+      parent1:
+        age: 38
+      parent2:
+        age: 36
+      child1:
+        age: 5
+        is_dependent: true
+      child2:
+        age: 3
+        is_dependent: true
+    households:
+      household:
+        members: [parent1, parent2, child1, child2]
+        head_market_income: 25_000
+        spouse_market_income: 15_000
+  output:
+    universal_credit: 2_700
+
+- name: Household in the lower income bracket with 3+ children
+  period: 2024
+  input:
+    people:
+      parent1:
+        age: 40
+      parent2:
+        age: 38
+      child1:
+        age: 10
+        is_dependent: true
+      child2:
+        age: 8
+        is_dependent: true
+      child3:
+        age: 6
+        is_dependent: true
+      child4:
+        age: 2
+        is_dependent: true
+    households:
+      household:
+        members: [parent1, parent2, child1, child2, child3, child4]
+        head_market_income: 22_000
+        spouse_market_income: 18_000
+  output:
+    universal_credit: 8_100

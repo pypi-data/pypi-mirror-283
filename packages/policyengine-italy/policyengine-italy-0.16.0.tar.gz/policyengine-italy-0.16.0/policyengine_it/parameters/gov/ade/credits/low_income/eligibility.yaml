@@ -1,0 +1,13 @@
+description: Italy limits low income tax credit eligibility to individuals making less than or equal to this threshold per year, depending on employment status.
+metadata:
+  unit: currency-EUR
+  label: Employee max income
+  period: year
+  breakdown:
+  - employment_category
+EMPLOYEE:
+  0000-01-01: 8_000
+EXECUTIVE:
+  0000-01-01: 4_800
+UNEMPLOYED:
+  0000-01-01: 4_800

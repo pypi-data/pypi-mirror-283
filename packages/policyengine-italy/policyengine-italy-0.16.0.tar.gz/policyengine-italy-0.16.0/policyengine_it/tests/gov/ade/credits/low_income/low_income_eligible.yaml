@@ -1,0 +1,47 @@
+- name: Employee below income threshold, eligible for exemption
+  period: 2024
+  input:
+    total_individual_pre_tax_income: 7_500
+    employment_category: EMPLOYEE
+  output:
+    low_income_eligible: true
+
+- name: Employee above income threshold, not eligible for exemption
+  period: 2024
+  input:
+    total_individual_pre_tax_income: 10_000
+    employment_category: EMPLOYEE
+  output:
+    low_income_eligible: false
+
+- name: Executive below income threshold, eligible for exemption
+  period: 2024
+  input:
+    total_individual_pre_tax_income: 4_500
+    employment_category: EXECUTIVE
+  output:
+    low_income_eligible: true
+
+- name: Executive above income threshold, not eligible for exemption
+  period: 2024
+  input:
+    total_individual_pre_tax_income: 5_000
+    employment_category: EXECUTIVE
+  output:
+    low_income_eligible: false
+
+- name: Unemployed below income threshold, eligible for exemption
+  period: 2024
+  input:
+    total_individual_pre_tax_income: 4_700
+    employment_category: UNEMPLOYED
+  output:
+    low_income_eligible: true
+
+- name: Unemployed above income threshold, not eligible for exemption
+  period: 2024
+  input:
+    total_individual_pre_tax_income: 5_500
+    employment_category: UNEMPLOYED
+  output:
+    low_income_eligible: false

@@ -1,0 +1,21 @@
+description: To qualify for the dependent child credit, the child must make below this limit at each age threshold
+
+brackets:
+  - threshold:
+      values:
+        0000-01-01: 21
+    amount:
+      values:
+        0000-01-01: 4_000
+  - threshold:
+      values:
+        0000-01-01: 24
+    amount:
+      values:
+        0000-01-01: 2_340.51
+metadata:
+  type: single_amount
+  threshold_unit: year
+  amount_unit: currency-EUR
+  amount_period: year
+  label: Dependent child credit income limit

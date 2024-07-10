@@ -1,0 +1,16 @@
+description: Phase-out rate of the universal allowance's low-income bonus
+metadata:
+  threshold_unit: currency-EUR
+  rate_unit: /1
+  period: year
+  type: marginal_rate
+  label: Universal allowance low-income bonus phase-out rate
+brackets:
+  - threshold:
+      2024-01-01: 0
+    rate:
+      2024-01-01: 0
+  - threshold:
+      2024-01-01: 1_250
+    rate:
+      2024-01-01: 0.0144

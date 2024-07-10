@@ -1,0 +1,36 @@
+description: Additional credit for select earners, dependent spouse credit
+metadata:
+  threshold_unit: currency-EUR
+  rate_unit: currency-EUR
+  period: year
+  type: single_amount
+  label: Dependent spouse credit, additional credit
+brackets:
+  - threshold:
+      2024-01-01: 0
+    amount:
+      2024-01-01: 0
+  - threshold:
+      2024-01-01: 29_000
+    amount:
+      2024-01-01: 10
+  - threshold:
+      2024-01-01: 29_200
+    amount:
+      2024-01-01: 20
+  - threshold:
+      2024-01-01: 34_700
+    amount:
+      2024-01-01: 30
+  - threshold:
+      2024-01-01: 35_000
+    amount:
+      2024-01-01: 20
+  - threshold:
+      2024-01-01: 35_100
+    amount:
+      2024-01-01: 10
+  - threshold:
+      2024-01-01: 35_200
+    amount:
+      2024-01-01: 0

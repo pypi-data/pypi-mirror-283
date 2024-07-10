@@ -1,0 +1,17 @@
+description: Mario Negri Fund contribution rates for executives
+brackets:
+  - threshold:
+      0000-01-01: 0
+    rate:
+      0000-01-01: 0.01
+  - threshold:
+      0000-01-01: 59_224.54
+    rate:
+      0000-01-01: 0
+
+metadata:
+  type: marginal_rate
+  rate_unit: /1
+  threshold_unit: currency-EUR
+  label: Mario Negri Fund contribution rates
+  period: year

@@ -1,0 +1,20 @@
+- name: Standard employee is not eligible
+  period: 2024
+  input:
+    employment_category: EMPLOYEE
+  output:
+    fasi_eligible: false
+
+- name: UNEMPLOYED is not eligible
+  period: 2024
+  input:
+    employment_category: UNEMPLOYED
+  output:
+    fasi_eligible: false
+  
+- name: EXECUTIVE is eligible
+  period: 2024
+  input:
+    employment_category: EXECUTIVE
+  output:
+    fasi_eligible: true

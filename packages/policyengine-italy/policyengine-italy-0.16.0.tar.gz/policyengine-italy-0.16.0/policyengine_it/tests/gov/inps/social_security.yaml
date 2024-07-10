@@ -1,0 +1,47 @@
+- name: Employee with zero income
+  period: 2024
+  input:
+    employment_category: EMPLOYEE
+    total_individual_pre_tax_income: 0
+  output:
+    social_security: 0
+
+- name: Employee with €40,000 income
+  period: 2024
+  input:
+    employment_category: EMPLOYEE
+    total_individual_pre_tax_income: 40_000
+  output:
+    social_security: 16_000
+
+- name: Executive with zero income
+  period: 2024
+  input:
+    employment_category: EXECUTIVE
+    total_individual_pre_tax_income: 0
+  output:
+    social_security: 0
+
+- name: Executive below €55,008 threshold
+  period: 2024
+  input:
+    employment_category: EXECUTIVE
+    total_individual_pre_tax_income: 50_000
+  output:
+    social_security: 4_595
+
+- name: Executive above €55,008 threshold
+  period: 2024
+  input:
+    employment_category: EXECUTIVE
+    total_individual_pre_tax_income: 60_000
+  output:
+    social_security: 5_563.92
+
+- name: Unemployed person
+  period: 2024
+  input:
+    employment_category: UNEMPLOYED
+    total_individual_pre_tax_income: 0
+  output:
+    social_security: 0
