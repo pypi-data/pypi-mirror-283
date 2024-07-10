@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+SpeechCraft.egg-info/PKG-INFO
+SpeechCraft.egg-info/SOURCES.txt
+SpeechCraft.egg-info/dependency_links.txt
+SpeechCraft.egg-info/requires.txt
+SpeechCraft.egg-info/top_level.txt
+speechcraft/__init__.py
+speechcraft/cli.py
+speechcraft/server.py
+speechcraft/settings.py
+speechcraft/text2voice.py
+speechcraft/voice2voice.py
+test/test.py
