@@ -1,0 +1,6 @@
+[build2docker.engines]
+docker = build2docker.docker:DockerEngine
+
+[console_scripts]
+build2docker = build2docker.__main__:main
+jupyter-build2docker = build2docker.__main__:main
