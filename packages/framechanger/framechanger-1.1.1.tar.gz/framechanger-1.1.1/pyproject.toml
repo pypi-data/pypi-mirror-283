@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "framechanger"
+version = "1.1.1"
+authors = [
+  { name="Akash Seam", email="akash.seam@gmail.com" },
+]
+description = "A wallpaper changer app that fetches images from TMDB"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "requests",
+    "pyqt5",
+]
+dynamic = ["scripts"]
+
+[project.urls]
+Homepage = "https://github.com/SkyCreates/FrameChanger"
+Issues = "https://github.com/SkyCreates/FrameChanger/issues"

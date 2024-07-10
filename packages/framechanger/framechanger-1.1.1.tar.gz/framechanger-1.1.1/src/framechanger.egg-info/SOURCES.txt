@@ -1,0 +1,14 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+src/framechanger/__init__.py
+src/framechanger/app.py
+src/framechanger/icon.ico
+src/framechanger/wallpaper_changer.py
+src/framechanger.egg-info/PKG-INFO
+src/framechanger.egg-info/SOURCES.txt
+src/framechanger.egg-info/dependency_links.txt
+src/framechanger.egg-info/entry_points.txt
+src/framechanger.egg-info/requires.txt
+src/framechanger.egg-info/top_level.txt
