@@ -1,0 +1,28 @@
+# Select the settings you would like to use
+[settings]
+space_char = 1 # 0 = '/', 1 = '.......', else default 1
+delay_unit = 0.2 # in seconds. default = 0.2
+
+[color_schemes]
+# Red = "34"
+# Green = "32"
+# Yellow = "33"
+# Blue = "34"
+# Magenta = "35"
+# Cyan = "36"
+# White = "37"
+# Orange = "31"
+# purple = "35"
+# Bold = "1"
+# Underline = "4"
+# Blink = "5"
+# Italic = "3"
+# These are some of the color codes you can use.
+greeting = "36;1" # default = cyan
+main_strings = "32" # default = green
+option_nums = "1;35" # default = 
+option_text = "33" # default = yellow
+error = "31" # default = red
+success = "32" # default = green
+
+

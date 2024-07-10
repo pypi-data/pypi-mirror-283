@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+morseet/__init__.py
+morseet/config.toml
+morseet/convert.py
+morseet/entry.py
+morseet/main.py
+morseet/morse_dict.py
+morseet.egg-info/PKG-INFO
+morseet.egg-info/SOURCES.txt
+morseet.egg-info/dependency_links.txt
+morseet.egg-info/entry_points.txt
+morseet.egg-info/requires.txt
+morseet.egg-info/top_level.txt
