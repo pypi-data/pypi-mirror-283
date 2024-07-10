@@ -1,0 +1,2 @@
+[console_scripts]
+sqlaxe = sqlaxe.sqlaxe:main
