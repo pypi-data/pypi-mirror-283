@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: opyni
+Version: 0.1.0
+Summary: Automatically generate unit tests
+License: MIT
+Keywords: unit test,test generation
+Author: iahsanujunda
+Requires-Python: >=3.10,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Education :: Testing
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Testing :: Unit
+Requires-Dist: black (>=24.4.2,<25.0.0)
+Requires-Dist: langchain (>=0.2.6,<0.3.0)
+Requires-Dist: langchain-community (>=0.2.6,<0.3.0)
+Requires-Dist: langchain-openai (>=0.1.13,<0.2.0)
+Description-Content-Type: text/markdown
+
+# Opyni
+
+Opyni is a tool that can help you generate unit tests automatically.
+
