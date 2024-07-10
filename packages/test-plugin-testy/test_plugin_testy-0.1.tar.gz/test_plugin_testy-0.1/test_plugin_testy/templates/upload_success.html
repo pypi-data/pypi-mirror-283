@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Success</title>
+    <style>
+        /* Пример стилей для страницы успешной загрузки */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .success-container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        .success-container h2 {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <h2>File Successfully Uploaded!</h2>
+        <a href="{% url 'plugins:test_plugin:upload-file-form' %}">Upload another file</a>
+    </div>
+</body>
+</html>
