@@ -1,0 +1,11 @@
+recipys/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+recipys/ingredients.py,sha256=gRlDa-6DY3lRT7e56pJTlCM_w4QGqS6DRxSOofPd9yo,6713
+recipys/recipe.py,sha256=BLeKcPLPU3s7JaibI4hR5a-tNjUb49Uc7Eq8XAQbN8o,6564
+recipys/selector.py,sha256=Mn6h84HqLHgKI-t6LdZDI-ify4Mo1240fBLxvMlEbYA,9353
+recipys/step.py,sha256=9chRIreTKf-Rj1_ve1CmC_LGmL4Q06wJdIymmlz8h_s,17691
+recipies-1.0rc1.dist-info/LICENSE,sha256=76BsoJ12c3WvG9nIr6zreenJl8xyCKUbfLW2AvNujJc,1135
+recipies-1.0rc1.dist-info/METADATA,sha256=-I2y6bAiI2dANtpGRlDxjvuF6aFot41WyWASwm6riM4,3828
+recipies-1.0rc1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+recipies-1.0rc1.dist-info/entry_points.txt,sha256=Qy5oAg74Y2_tWBsN74H1sxSTU4FqNfgCScaE5gBbIe8,50
+recipies-1.0rc1.dist-info/top_level.txt,sha256=aoSBVXxn5toticrVI-8zVNNOLeccKdC6S9WHB0b9Q80,8
+recipies-1.0rc1.dist-info/RECORD,,
