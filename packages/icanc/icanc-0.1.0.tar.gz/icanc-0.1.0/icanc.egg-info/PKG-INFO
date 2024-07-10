@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: icanc
+Version: 0.1.0
+Summary: A C preprocessor and command line utility for leetcode.
+Author-email: voxelstack <voxelstack@gmail.com>
+Project-URL: repository, https://github.com/voxelstack/icanc
+Keywords: leetcode,c
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click==8.*
+Requires-Dist: pyperclip==1.*
+Requires-Dist: watchdog==4.*
+
+# icc
