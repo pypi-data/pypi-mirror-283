@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "memberla-backoffice",
+  "private_key_id": "e4efc0c6de0cddbbb7b1ffd4009d838fd4ca7ce6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC8VqmAlrTGDlbL\nmIZ4LPa2kvLCUVVLE1ghqpheyZeJnoNE6B3qVKaTihEJFVLELfR2SHK5uNXGiwiK\noUFKOzIV6RZXh159tylEn2wS5xlhaaPGg3SN+70nPy2NLtfFBUnrY4h+pZTV4orh\nAFXH0Lfr4IJBf9Ar4EbcltaI0tFY5TlEotAQnqeu9wlclwTbaFveX5xe0n7nFum8\nAseFQGxGtXiE1W1YRXzOgfZvig2Uw2Md2HVxtcIJ8M06J0BBustrJkGbrpVxT98m\nycznaXlwetVkuY0uVswBfvt+NvjoUbqRf3oQ0uOIzsipSNmui7DwVsgsnaF5bta9\njbJ7MuvJAgMBAAECggEACPBaCirc+Jt8nhwmobSMnxy5XeSrVi1cXPiyU6lgwlze\nIRqdNN6Aq3b9mP9EluARfr2wiEUQDGTT6nR9206U8XpHH69imjfjwwiIAhuq1jdD\n2SurEAQXNbIncNB82DKIkB4Av/YO6tneOpCgAaRT3mOg+wfccwCpjFWyZ/sNiZj+\nm2fePAYAltIegFoHsutyT6SRSflnENdLb+1b38Eg8b1oJM8xhIsHVlehJEb5rs2i\nWrRQIjrXUslvoiSMi8eIwg3dtwSasQpLiHPscc31q03Y7HKx8CeAhjERqz5M1G5q\n76IpFw2KnNYiAwr85MciavaEXkTSpv42SXJGK71UyQKBgQDzQZ0ayuWwilwkKtno\nZ5+JdahzamKLgBOtQeGPVeX1y/AYYiOXw1vs0tM71+/EMSljpiKiIlt+hbzaU07d\nZtaFDFD2Z1Mc//GAxQoy0L+7K8c4qZHDDBvYRb3wc01T9qyo9+AI5jFTaxI0rlm4\nkAcutza5X4GB0pAXW3FR8u1vhQKBgQDGNIdngYlYMQP34RSNf4AhXs7eWEDz/+Zd\n1QyJcuHAMRT4lPv2HNSAxJWLupzM1+i/czYGILsL3qwoRJz9ZBUTqks10MlzH1sc\nmiuCFCkmEgsfHTVWbf58leM1u0nEUrMSLAeos+ZajDTqdwucbTyvJuaVdvcYIukD\nJVNtaVNkdQKBgQDj+Z4vOfBBn6nzC2XldRgDT41rfUyVyJaoTZIDL1GxJkwBzhfl\nZ2WDcaId96XxjNFpXo4evWxaCySOyHyk6ngpgP1vsC4og4XmVMPWE+VcmQ7Af8rn\nrTV7XwE/lA/onMn8ITKJpJKdxz7suGnFmtXgZjyXRnatIJWCDmUJlE4JsQKBgCGV\nBNwktoCazXFSUYkn8S22QpapnVe6I+4CCv2+2UEXD9aOZ6JrgBXROQVTuP18F5NY\nke633PlF4SVxeqf0LR4H3HZhycAXr/hIptaDU/V/WSMMb90VBelV/Ak+kmERIgYS\nL7oFwSHWX6DaSr1WRNHoZWktnvAX+iLuUBRZpCeBAoGBAO20oN47Af6MK1DeJ9lK\nOOFjPdb/toM5SaiGyRQLntsIwi00xnraMcpYdNeNzLk4j6s6bA/AIInEhSgjOCN9\ntQlm+X6kEJlcg2vU9OYO8fWelydPEyVcUzfglx/BgtazU8ZfSXqJCguIl0jy3cQE\nOmRJc5qPnNtTJCGS0bJf0oDM\n-----END PRIVATE KEY-----\n",
+  "client_email": "cloud-storage-serv-acct@memberla-backoffice.iam.gserviceaccount.com",
+  "client_id": "111346366858647078602",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cloud-storage-serv-acct%40memberla-backoffice.iam.gserviceaccount.com"
+}
