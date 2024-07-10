@@ -1,0 +1,16 @@
+amsdal_glue_connections/__about__.py,sha256=-Wqu9UyJphp-2_EahEsqQvkcE0VBhm1-N7D6e5rANdY,22
+amsdal_glue_connections/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+amsdal_glue_connections/sql/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+amsdal_glue_connections/sql/connections/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+amsdal_glue_connections/sql/connections/postgres_connection.py,sha256=GxafvDCp5eVT2XHm2OVuQeYIHySK5NNOFCMDUNR5Zhg,21313
+amsdal_glue_connections/sql/connections/sqlite_connection.py,sha256=rEGokCaGhsSJIFJ3pubAw-ciRZLgYqdzBr1jXWLKgGg,10737
+amsdal_glue_connections/sql/sql_builders/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+amsdal_glue_connections/sql/sql_builders/command_builder.py,sha256=NYzt5ChXcSCpioo-lJuziscUWhvyuyFsguRV1MWj-4U,5734
+amsdal_glue_connections/sql/sql_builders/operator_constructor.py,sha256=aZgnaVTsUp2Jcz_3zoOIQldeYUV_8AlzrTgd0_W4cYY,7336
+amsdal_glue_connections/sql/sql_builders/query_builder.py,sha256=xeqSMDYI3U7hiU3wGEYwBFtDdaEpnORQkFpQOVsiJeg,14172
+amsdal_glue_connections/sql/sql_builders/schema_builder.py,sha256=rAhijVH8VTT_OHjKjJz5gLUpZ8T9t0wBmZQoi2bZjyM,8034
+amsdal_glue_connections-0.0.4.dist-info/METADATA,sha256=3GDPoQ7XvdqM1OKtQNijgkWRPilYMAejxp2h7K4Q62Q,12977
+amsdal_glue_connections-0.0.4.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+amsdal_glue_connections-0.0.4.dist-info/licenses/LICENSE.txt,sha256=zE1N4JILDTkSIDtdmqdnKKxKEQh_VdqeoAV2230eNOI,10141
+amsdal_glue_connections-0.0.4.dist-info/licenses/NOTICE.txt,sha256=6g1F5p0Z4m_h7JOwYKDW3y7TpAWPPyQZX9s25GVs4O8,506
+amsdal_glue_connections-0.0.4.dist-info/RECORD,,
