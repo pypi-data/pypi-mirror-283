@@ -1,0 +1,14 @@
+vpredicto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vpredicto/main.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vpredicto/API/BaseClass.py,sha256=5o3ocF2E_RiBujttSHdFd4ZYB3-uIl9wDWGkz2_t5Xk,2630
+vpredicto/API/__init__.py,sha256=jcz0u_lxBw9xuup_Up6p1jSicbdr93RJauoW-3KJfds,34
+vpredicto/Utils/__init__.py,sha256=o0Hv-cyEj_MNlOvTQ09xNrdRSMUUlgnCHlDM5QZuc9I,88
+vpredicto/Utils/utils.py,sha256=wiwctjz7BoafgaXuaE1mNvrrjvpSWng7bS6vLirNmd8,9744
+vpredicto/models/CausalLSTM.py,sha256=K6tdTLIL0fRHCo1Esg6rarWwekjPGGOB3gCMQTjlE1E,5591
+vpredicto/models/MIM.py,sha256=dgxbJSz83SFNjX5Pku5x80TEyxaILW9uhSvIUEJG0bI,4504
+vpredicto/models/PredRNNPlusPlus.py,sha256=C0xIa2wDiHim0APWud5nqmfUuO87yG8nU-mgRkljVjY,8055
+vpredicto/models/__init__.py,sha256=KVqDcu00b-ZyAoLpQpzwQoHatSNzoflB8xOurPXSCZ4,126
+vpredicto-0.1.9.dist-info/METADATA,sha256=RrGdOX6V5e-sb61whNkRQHqKF8C1jCD79rAoi68yOz4,1672
+vpredicto-0.1.9.dist-info/WHEEL,sha256=mguMlWGMX-VHnMpKOjjQidIo1ssRlCFu4a4mBpz1s2M,91
+vpredicto-0.1.9.dist-info/top_level.txt,sha256=efGzUArkOTnrl0WudOw0ts0kHTVHJ3b5xL-KfJyNXkU,10
+vpredicto-0.1.9.dist-info/RECORD,,
