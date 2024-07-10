@@ -1,0 +1,14 @@
+asaas/__init__.py,sha256=_AznUjHx2r3156gYN7hlEzKzMPhUd1nLTPxHMkahveI,24543
+asaas/customer.py,sha256=yzWmk7ohMVSI4BQMQ3kJXUsIs6RoM4lur27l_77hp3M,2487
+asaas/encoder.py,sha256=1OJwQPoR4jUHp4MTK_J2FOqd79qfBfI-8E9E4hn0SAA,218
+asaas/exceptions.py,sha256=92DYtq5QORwAeIqxMaIi9j1obyrS0hLDepd7mPh0TBc,1446
+asaas/payments.py,sha256=WWSHxncOTNp8XB04_9zNuV-D9h8B7PkBIINNZpOiXLM,12046
+asaas/status.py,sha256=JiA5nis2X_6VrMiUwUTj3ZImqwDG3sV4_su-h6lOrlY,2023
+asaas/subscriptions.py,sha256=hiHOQMBYf3u6hYppX91Prdf97Pg6LL7EFlpPKl1anHw,3828
+asaas/utils.py,sha256=Z6nczu35WYdL-DnbGbA3FVmiJLMIre-RrJ8DpXECTeY,127
+asaas/webhooks.py,sha256=qx5HKM0KNZ3Rp7qDyT2Atj3DR48I54L_na16e18uxdk,1315
+asaas_sdk_wlc-0.1.5.dist-info/LICENSE,sha256=IZmbZWsztIADZxmJhkKBPS7d2hLS6A1fIKgnvvF7aLQ,554
+asaas_sdk_wlc-0.1.5.dist-info/METADATA,sha256=N5chGqpgHrT4mF8ykRRC67AuB4mDuM8NHzovRcDuLds,551
+asaas_sdk_wlc-0.1.5.dist-info/WHEEL,sha256=mguMlWGMX-VHnMpKOjjQidIo1ssRlCFu4a4mBpz1s2M,91
+asaas_sdk_wlc-0.1.5.dist-info/top_level.txt,sha256=jm8UycQCfooE3BOWd0rT6ryIrmolHeRuitqwTxFRkSA,6
+asaas_sdk_wlc-0.1.5.dist-info/RECORD,,
