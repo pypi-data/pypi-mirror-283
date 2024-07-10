@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+bin/inkscape-figures
+inkscape_1.3_figures.egg-info/PKG-INFO
+inkscape_1.3_figures.egg-info/SOURCES.txt
+inkscape_1.3_figures.egg-info/dependency_links.txt
+inkscape_1.3_figures.egg-info/requires.txt
+inkscape_1.3_figures.egg-info/top_level.txt
+inkscapefigures/__init__.py
+inkscapefigures/main.py
+inkscapefigures/picker.py
+inkscapefigures/template.svg
