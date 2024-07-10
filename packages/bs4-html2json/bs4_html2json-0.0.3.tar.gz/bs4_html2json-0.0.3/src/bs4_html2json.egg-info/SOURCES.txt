@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/bs4_html2json.egg-info/PKG-INFO
+src/bs4_html2json.egg-info/SOURCES.txt
+src/bs4_html2json.egg-info/dependency_links.txt
+src/bs4_html2json.egg-info/requires.txt
+src/bs4_html2json.egg-info/top_level.txt
+src/html2json/__init__.py
+src/html2json/parser.py
+tests/test_html2json.py
+tests/test_html2json_class.py
+tests/test_html2json_ids.py
