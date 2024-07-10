@@ -1,0 +1,17 @@
+streaming_wds/__init__.py,sha256=hcIa5A6AwhrPhu_FSJufj4nskP_q0VinL5m0D2OLJRA,257
+streaming_wds/_version.py,sha256=OlU-0MLtaQ7ll0HdupjJCZh-Vh2MGu3Nz7DmVY-TiEA,413
+streaming_wds/dataloader.py,sha256=qeV1jL-Z7jEAJolpTNH33puIHwT1Nqi_D66s9ctD_5Y,7142
+streaming_wds/dataset.py,sha256=V5EC9ACSi1LQV1xVisfAqbh8SlS3Bbxppa3yOGYjnho,12218
+streaming_wds/decoders.py,sha256=0H0BjbR5Y0G5KlyLG3KrCwODU8_lezoZprokaiSQh6s,2162
+streaming_wds/utils.py,sha256=Ln_MbC0yJMtZ5YuTyvp9n3aGAgFBep8-nDjend3BHdU,5493
+streaming_wds/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+streaming_wds/core/cache.py,sha256=y87BEgQTfeuxAJHoErVXriOv92760udY3zmZ_8tBqDo,10443
+streaming_wds/core/downloader.py,sha256=Go_6F_CbIArD18gtTwrXn90NfumBw4uPdMLY3IGJMJE,7705
+streaming_wds/core/extractor.py,sha256=Ll1fe9NT0AMQyEYpPL-6HbsLKunF_jTC91xYRO2ZM08,6016
+streaming_wds/core/sharder.py,sha256=vvWs3Uwb5SQJEfTXoMOHHqDbD-U0XOybZHCHOD-vq_E,6307
+streaming_wds/core/types.py,sha256=_BZknM5DpuNh8FKPYJatW-ITtqN40tMtzhlKrIZE8ZA,4101
+streaming_wds-0.1.20.dist-info/LICENSE,sha256=KiRfWrsrczVMui5_LWydtCaJaoKcWcE6qkYxd8f1k6A,1057
+streaming_wds-0.1.20.dist-info/METADATA,sha256=g10xR2NEpx74X2d5ye1uTivgTRfBy3x1nTNVfcZjXS0,3726
+streaming_wds-0.1.20.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+streaming_wds-0.1.20.dist-info/top_level.txt,sha256=_hGaN-GI3aXhzzkMtTGPGg0Y5ca8CgB5wBL8wsEL8Po,14
+streaming_wds-0.1.20.dist-info/RECORD,,
