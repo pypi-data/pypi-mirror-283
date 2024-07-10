@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: etypography
+Version: 0.3.1
+Summary: Layout text.
+Author: Erik Soma
+Author-email: stillusingirc@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: egeometry (>=0.2.1,<0.3.0)
+Requires-Dist: emath (>=0.1.12,<0.2.0)
+Requires-Dist: freetype-py (>=2.4.0,<3.0.0)
+Requires-Dist: uharfbuzz (>=0.39.0,<0.40.0)
