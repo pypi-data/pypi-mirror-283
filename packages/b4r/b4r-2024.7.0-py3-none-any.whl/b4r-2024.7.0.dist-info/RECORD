@@ -1,0 +1,13 @@
+b4r/__init__.py,sha256=hHMkWFkEkaomUnoRXZkcGAyHpjyZMuuQatA428OBbSc,79
+b4r/pipe/CreateMs2.py,sha256=yLbmctzGHYyCi505xnmJPcSR1QZvp51CGO6BmVxu3a0,51164
+b4r/pipe/LibB4Rtools.py,sha256=f4i6DkGxn0H0q34qFKt_nEKpNR5DhBFtCCZCadL40MY,57619
+b4r/pipe/__init__.py,sha256=Z1icu5jiOHwcysgXC-yfHulGrFpxKURvAGDW3XGsKsU,28
+b4r/pipe/b4rquery.py,sha256=lbEucVR0LUxV-m3PHXsbTWy5NSEYF9cLSPdX57Cv0dY,3347
+b4r/pipe/godec.py,sha256=myOgK-xaLa93qqY28NlGECVQzU8dLv3dOcdqVxnCrFQ,4194
+b4r/pipe/main.py,sha256=vp-BlRybuo5AIepV-EYOeBCy2TPrXXbCwmH84nntFZ4,3704
+b4r/pipe/makedatalist.py,sha256=u50Ubu-ntNQTbBCrh_7eZm2IOgtFdxLsAbSBua9Zd6Q,6141
+b4r/pipe/specfile4.py,sha256=_yiWR16OeGKzCaO_5xY1vkbzoYqMzzMksxWAm39UDM4,12000
+b4r-2024.7.0.dist-info/LICENSE,sha256=y4Omy7p6UUIf6b7FP1iA-9HoRzNh0Ukq-S2KDQR697s,1071
+b4r-2024.7.0.dist-info/METADATA,sha256=MmEDmHq6CsoU44RamyOjW4iUF0eMJSEn7X7EJNqBiCI,3044
+b4r-2024.7.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+b4r-2024.7.0.dist-info/RECORD,,
