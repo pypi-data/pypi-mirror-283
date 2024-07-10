@@ -1,0 +1,3 @@
+[console_scripts]
+brintelcollector = brintelcollector.main:main
+
