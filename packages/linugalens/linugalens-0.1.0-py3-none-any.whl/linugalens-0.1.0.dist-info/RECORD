@@ -1,0 +1,15 @@
+lingualens/__init__.py,sha256=vwSzE44318Y_mg_x-lgucHo-Zb3PEAxJgUZpVeGFZ-E,308
+lingualens/analyzer.py,sha256=W1D5koWx_YiQfSNU4UsWxb8Tl6JEbDX7XafZxrKKh7E,565
+lingualens/metrics.py,sha256=4sTMhHe_Z3R9CK3StVDh_TrfxWv3VokDndhfIweCWVc,2674
+lingualens/pipelines.py,sha256=Dx_NnY0JfyUnDrEze7kgJ2nlf5ABuTXuMrogKMK1kTc,958
+lingualens/utils.py,sha256=EbY5FPCLHoP6quwz1FvXyujo2gDegdsRAO7fOSq3p-c,521
+text_compare/__init__.py,sha256=vwSzE44318Y_mg_x-lgucHo-Zb3PEAxJgUZpVeGFZ-E,308
+text_compare/analyzer.py,sha256=W1D5koWx_YiQfSNU4UsWxb8Tl6JEbDX7XafZxrKKh7E,565
+text_compare/metrics.py,sha256=4sTMhHe_Z3R9CK3StVDh_TrfxWv3VokDndhfIweCWVc,2674
+text_compare/pipelines.py,sha256=Dx_NnY0JfyUnDrEze7kgJ2nlf5ABuTXuMrogKMK1kTc,958
+text_compare/utils.py,sha256=EbY5FPCLHoP6quwz1FvXyujo2gDegdsRAO7fOSq3p-c,521
+linugalens-0.1.0.dist-info/LICENSE,sha256=EaLOaw88CeyX4ND9YWZmF2rbpHF-2KYTacMFP3o_-FE,1097
+linugalens-0.1.0.dist-info/METADATA,sha256=Ni3Zfp93uCDmwgjhnrOCyzlGTg0HQQY7ano7LR-o4sI,822
+linugalens-0.1.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+linugalens-0.1.0.dist-info/top_level.txt,sha256=v4RCDUdIrT5jmG2BM_X4MR2JaTXPJxROUK0QTPXhoYM,11
+linugalens-0.1.0.dist-info/RECORD,,
