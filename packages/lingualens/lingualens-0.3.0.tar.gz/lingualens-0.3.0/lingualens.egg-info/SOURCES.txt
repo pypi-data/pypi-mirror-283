@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+lingualens.egg-info/PKG-INFO
+lingualens.egg-info/SOURCES.txt
+lingualens.egg-info/dependency_links.txt
+lingualens.egg-info/requires.txt
+lingualens.egg-info/top_level.txt
