@@ -1,0 +1,17 @@
+otter/__init__.py,sha256=ml7fLtTVno4fvpJvw91bAp8ff2nuRG1hZ1lMCt3ZumY,440
+otter/_version.py,sha256=IwGQL03Wwse3OmpK33wS6CFwrF8rqxvbN79PydSE480,76
+otter/exceptions.py,sha256=3lQF4AXVTfs9VRsVePQoIrXnramsPZbUL5crvf1s9Ng,1702
+otter/util.py,sha256=7ZJYeTjBmwpXKgqXcmBtxhtn2j7XSQMaBbTurPKyEO0,15788
+otter/io/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+otter/io/data_finder.py,sha256=pBGtfzjFt9pbJQR4exXP17eZoHVHClm_Jno1vXmcpAU,28026
+otter/io/host.py,sha256=ZYewz347_6FD5mVcQLDxHSS75n5RCv69xxLHAmpjoiI,4410
+otter/io/otter.py,sha256=VMtDCfiQniQNLIOL_P3NySwS-YnDF-nT4ceQjV0XJfE,18016
+otter/io/transient.py,sha256=YVOppPAqhChPx8sxRPfuC_9BBJVtE7ku5ITKkWKSL9w,35551
+otter/plotter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+otter/plotter/otter_plotter.py,sha256=iQe5AFsB5plw5eClUfuEfqcNRiXEcKc5-hkLPVKCkg8,2091
+otter/plotter/plotter.py,sha256=i9ZAlbIjftpzyFzgCIFdye9XnppTwOSwazb5ruLpjnE,2896
+astro_otter-0.1.0.dist-info/LICENSE,sha256=s9IPE8A3CAMEaZpDhj4eaorpmfLYGB0mIGphq301PUY,1067
+astro_otter-0.1.0.dist-info/METADATA,sha256=nR8WxIF2Yez-yZxyv0kMZ-QZHuJJdcClr--J9cvbqHw,5905
+astro_otter-0.1.0.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+astro_otter-0.1.0.dist-info/top_level.txt,sha256=Wth72sCwBRUk3KZGknSKvLQDMFuJk6qiaAavMDOdG5k,6
+astro_otter-0.1.0.dist-info/RECORD,,
