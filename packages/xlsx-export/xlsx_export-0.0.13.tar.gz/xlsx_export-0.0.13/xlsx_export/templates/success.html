@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Successful</title>
+    <style>
+        /* Стили для вашего шаблона */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            color: #004d99;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .test-case {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 1px solid #e6e6e6;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .test-case strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #004d99;
+            font-weight: bold;
+        }
+
+        .test-case span {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .test-case span.description {
+            margin-bottom: 0;
+            color: #666;
+        }
+
+        .step {
+            margin-top: 10px;
+            padding: 5px;
+            background-color: #f2f2f2;
+            border-left: 3px solid #007bff;
+            border-radius: 3px;
+        }
+
+        .step p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload Successful</h1>
+
+    <h2>Test Suites</h2>
+    <ul>
+        {% for suite in created_test_suites %}
+            <li>{{ suite }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Test Cases</h2>
+    <div class="test-cases">
+        {% for case in created_test_cases %}
+            <div class="test-case">
+                <strong>{{ case.name }}</strong>
+                <span>Suite: {{ case.suite.name }}</span>
+                <span>Setup: {{ case.setup }}</span>
+                <div class="steps">
+                    <strong>Scenario:</strong>
+                    {% for step in case.scenario %}
+                        <div class="step">
+                            <p>{{ step.Шаги }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+                <span>Expected: {{ case.expected }}</span>
+                <span class="description">Description: {{ case.description }}</span>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
