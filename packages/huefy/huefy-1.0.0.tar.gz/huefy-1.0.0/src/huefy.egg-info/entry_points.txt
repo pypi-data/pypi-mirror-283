@@ -1,0 +1,2 @@
+[console_scripts]
+hue = huefy.main:main
