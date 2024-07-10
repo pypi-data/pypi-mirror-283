@@ -1,0 +1,10 @@
+ygojson/__init__.py,sha256=4P2wTyWhmGrhJjMc2gtgwvnXTGJaBlhQVMAsZ988zAE,223
+ygojson/__main__.py,sha256=1cvsls_ze2hFNyDXyvnQR3g-diBjhWmy06vYZc-6niU,6565
+ygojson/database.py,sha256=gjbMcOojf48RLixN12f0l-fyvs8gS9qictkhYox1qhE,115457
+ygojson/version.py,sha256=Zn1KFblwuFHiDRdRAiRnDBRkbPttWh44jKa5zG2ov0E,22
+ygojson-0.2.0.dist-info/LICENSE,sha256=kK4GBD43il_ylxS6y8agzH6holw_ixW2MQPeU03vmR0,1058
+ygojson-0.2.0.dist-info/METADATA,sha256=3b9vDnABEWmhQ7pGG4toaPweFgY6FMsxntWPnOi0LBE,7089
+ygojson-0.2.0.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+ygojson-0.2.0.dist-info/entry_points.txt,sha256=cZHAT34uF2y_ONon0K7Dlv7EIm6tFL_CpVY2QH5icXc,50
+ygojson-0.2.0.dist-info/top_level.txt,sha256=ly0HbmVuCpIR91X74sGIGuDT-WlTcdpGm-D5QDlZgg8,8
+ygojson-0.2.0.dist-info/RECORD,,
