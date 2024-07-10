@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"
+      data-theme="light"
+      description="R-Shepard is a friendly tool to manage R Studio environments on a single powerful host"
+      keywords="R, R Studio, Docker, Podman, Containers, Data Science, Data Analysis, Data Visualization">
+  <head>
+    <title>
+      {% block title %}{% endblock %}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'pico.blue.min.css' %}">
+    <link rel="stylesheet" href="{% static 'pico.colors.min.css' %}">
+    <link rel="stylesheet" href="{% static 'custom.css' %}">
+    <link rel="shortcut icon"
+          href="{% static 'favicon.ico' %}"
+          type="image/x-icon">
+    <script src="{% static 'htmx.min.js' %}" defer></script>
+    <script src="{% static 'ext/loading-states.js' %}" defer></script>
+    {% block extra_media %}{% endblock %}
+  </head>
+  <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'
+        hx-ext="loading-states">
+    {% block content_wrapper %}
+      <main class="container">
+        {% block content %}{% endblock %}
+      </main>
+    {% endblock %}
+  </body>
+</html>

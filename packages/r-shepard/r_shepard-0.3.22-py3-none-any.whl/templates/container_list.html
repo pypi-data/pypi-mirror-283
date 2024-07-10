@@ -1,0 +1,57 @@
+<div class="container-list" id="container-list" data-loading-states>
+  {% for container in project.containers.all %}
+    <article class="container-card" id="container-card">
+      <div class="grid">
+        <h3 class="container-title">{{ container.container_id }}</h3>
+        {% if container.local_url and container.is_running %}
+          <a class="open-button"
+             href="{{ container.local_url }}"
+             target="_blank"
+             data-loading-disable>Open</a>
+        {% endif %}
+      </div>
+      <div class="grid">
+        <code>
+          <strong>{{ container.image }}</strong>:{{ container.tag }}
+        </code>
+      </div>
+      <div class="grid">
+        <code class="info-pill"><strong>{{ container.ram }}GB</strong> RAM</code>
+        <code class="info-pill"><strong>username:</strong> {{ container.username }}</code>
+      </div>
+      <hr>
+      {% if container.is_running %}
+        <button hx-post="{% url 'stop_container' project.pk container.pk %}"
+                hx-target="#container-list"
+                hx-swap="outerHTML"
+                class="action-button secondary"
+                type="submit"
+                data-loading-disable>Stop</button>
+        <form class="grid"
+              method="post"
+              hx-post="{% url 'change_ram_limit' project.pk container.pk %}"
+              hx-target="#container-list"
+              hx-swap="outerHTML">
+          {% csrf_token %}
+          <input type="number" name="new_ram" min="1" class="small-input" required>
+          <button class="action-button secondary" type="submit" data-loading-disable>Change RAM limit</button>
+        </form>
+      {% else %}
+        <button hx-post="{% url 'start_container' project.pk container.pk %}"
+                hx-target="#container-list"
+                hx-swap="outerHTML"
+                class="action-button primary"
+                type="submit"
+                data-loading-disable>Start</button>
+      {% endif %}
+      <button hx-post="{% url 'delete_container' project.pk container.pk %}"
+              hx-target="#container-list"
+              hx-swap="outerHTML"
+              class="action-button delete-button"
+              type="submit"
+              data-loading-disable>Delete</button>
+    </article>
+  {% empty %}
+    <p>No containers have been created yet...</p>
+  {% endfor %}
+</div>
