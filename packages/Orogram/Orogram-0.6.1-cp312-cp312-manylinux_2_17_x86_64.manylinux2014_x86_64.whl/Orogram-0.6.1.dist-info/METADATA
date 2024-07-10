@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: Orogram
+Version: 0.6.1
+Summary: A library for working with 1D PDFs represented with piecewise linear functions.
+Home-page: https://github.com/thaines/orogram
+Author: Tom SF Haines
+Author-email: thaines@gmail.com
+License: Apache 2.0
+Requires-Python: >=3.6
+License-File: LICENSE.txt
+Requires-Dist: numpy
+
