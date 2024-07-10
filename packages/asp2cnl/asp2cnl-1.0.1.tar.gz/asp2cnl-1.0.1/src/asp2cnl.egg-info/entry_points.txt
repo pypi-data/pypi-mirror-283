@@ -1,0 +1,4 @@
+[console_scripts]
+asp2cnl = asp2cnl.asp2cnl:run_asp2cnl
+asp2nl = asp2nl.asp2nl:run_asp2nl
+cnl2nl = cnl2nl.cnl2nl:run_cnl2nl
