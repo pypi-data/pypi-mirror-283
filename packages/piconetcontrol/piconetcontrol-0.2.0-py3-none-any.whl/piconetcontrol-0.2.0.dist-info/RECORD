@@ -1,0 +1,14 @@
+piconetcontrol/__init__.py,sha256=uL-2nshg_tMigNWfvL1fVChQYcXOXnkhxJ0z_eKndf0,706
+piconetcontrol/client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+piconetcontrol/client/client.py,sha256=xzF9NpOJ0-iePTGjD03Pz6mpOk-ZI4whEWDt4uAnjoU,8948
+piconetcontrol/client/update.py,sha256=dgGmzzM08tYWoNUVu0U2CnzIJ3FUgi8pbiUsPDD42kM,1460
+piconetcontrol/server/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+piconetcontrol/server/main.py,sha256=ACj39eMC6pT15tE9OTVk5MUPbwPGBGAAILa6SFIN_cI,1479
+piconetcontrol/server/server_base.py,sha256=PiLuygScIosLm7hldJIqcnd3JRRCkrC4hzWG1NL4XtE,10790
+piconetcontrol/server/server_pico.py,sha256=l3lUCbxVb79vn2ryKt22Wqy5Na1IXx1GDbsbbX1lHtI,3529
+piconetcontrol/server/server_rpi.py,sha256=DmYXjKrB6ocRkWpYdJj30UEeqyowh5xILrHJID2fY6I,742
+piconetcontrol-0.2.0.dist-info/LICENSE,sha256=pe9n9mxf_iQs2xIj35M6hKKkOdMoSlP-deOnMK2ggw0,1080
+piconetcontrol-0.2.0.dist-info/METADATA,sha256=i5sYUzCrhTY443HB5Jxfxixbu-tpjSXUSxqiDAgxXn4,734
+piconetcontrol-0.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+piconetcontrol-0.2.0.dist-info/top_level.txt,sha256=uDQLGzEMwIudeSznThmhXWdFT2iHN4L2RUi05zrRxbU,15
+piconetcontrol-0.2.0.dist-info/RECORD,,
