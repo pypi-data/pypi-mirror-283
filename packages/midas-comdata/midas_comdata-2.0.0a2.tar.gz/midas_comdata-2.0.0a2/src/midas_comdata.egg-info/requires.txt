@@ -1,0 +1,2 @@
+midas_powerseries>=2.0.0a2
+wget
