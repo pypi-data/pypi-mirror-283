@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+jonson/__init__.py
+jonson.egg-info/PKG-INFO
+jonson.egg-info/SOURCES.txt
+jonson.egg-info/dependency_links.txt
+jonson.egg-info/top_level.txt
