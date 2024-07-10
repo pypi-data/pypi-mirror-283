@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+cvtk/__init__.py
+cvtk/base.py
+cvtk/coco.py
+cvtk/format.py
+cvtk/torch.py
+cvtk.egg-info/PKG-INFO
+cvtk.egg-info/SOURCES.txt
+cvtk.egg-info/dependency_links.txt
+cvtk.egg-info/requires.txt
+cvtk.egg-info/top_level.txt
