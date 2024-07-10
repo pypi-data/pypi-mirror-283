@@ -1,0 +1,3 @@
+[console_scripts]
+beancount-ing-ec=beancount_ing.cli:ec
+
