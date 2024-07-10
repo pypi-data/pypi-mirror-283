@@ -1,0 +1,4 @@
+
+[all]
+opencv-python
+numpy

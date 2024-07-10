@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "RCC8D"
+version = "0.0.1"
+authors = [
+  { name = "Victoria Porter", email = "vporter03@qub.ac.uk" },
+]
+description = "A Python-based implementation of the RCC8D ImageJ/Fiji plugin created by Gabriel Landini and David A Randell."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+    "Operating System :: Microsoft :: Windows",
+]
+
+[project.urls]
+Homepage = "https://github.com/victoriaporter58/RCC8D"

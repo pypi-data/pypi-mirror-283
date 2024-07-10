@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/RCC8D/__init__.py
+src/RCC8D/rcc8d.py
+src/RCC8D.egg-info/PKG-INFO
+src/RCC8D.egg-info/SOURCES.txt
+src/RCC8D.egg-info/dependency_links.txt
+src/RCC8D.egg-info/requires.txt
+src/RCC8D.egg-info/top_level.txt
