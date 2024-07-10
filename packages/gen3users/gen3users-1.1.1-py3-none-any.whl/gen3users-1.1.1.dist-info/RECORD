@@ -1,0 +1,13 @@
+NOTICE,sha256=BN-N5OFW2ca9M1U96moyGse8lXVYhG7RD5BHlRie-M4,558
+gen3users/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gen3users/base_abac.json,sha256=qE6kVLl9z7zzVX2djdahMlprzhwVP-NK6AYKv89gvKE,2303
+gen3users/conversion.py,sha256=KOAE4ZN5QsRMfAN9eO6t1u_-OnjtRO6pFR60cW3TCzs,8661
+gen3users/main.py,sha256=xCS-T-BrHHLmxumftnWLwMXygdHW8yAwZyHnYaytRS0,1438
+gen3users/user_security.py,sha256=BUX0WAsZhMyZ7QeFgFLbhBYI6Dq5w5_MDDrF6kDoSSc,9371
+gen3users/validation.py,sha256=V1oWSRYC-MGo_f4zLnNDZO8cb5YtdyGq22-2hak5LSE,23370
+gen3users-1.1.1.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+gen3users-1.1.1.dist-info/METADATA,sha256=tIkzP2naFIR_DPoFR_G7oDILKMIBH2c83EUrg5tJSYs,1882
+gen3users-1.1.1.dist-info/NOTICE,sha256=BN-N5OFW2ca9M1U96moyGse8lXVYhG7RD5BHlRie-M4,558
+gen3users-1.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+gen3users-1.1.1.dist-info/entry_points.txt,sha256=BWGo5JK10dvidaSeHCco9fvqoi8Y4SBZkwj_8H0vG4A,49
+gen3users-1.1.1.dist-info/RECORD,,
