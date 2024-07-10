@@ -1,0 +1,10 @@
+h5py
+importlib_resources
+matplotlib
+numpy
+pandas
+pillow
+scipy
+
+[crtomo]
+crtomo_tools
