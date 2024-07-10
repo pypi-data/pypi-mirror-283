@@ -1,0 +1,42 @@
+[project]
+name = "pg-lo-storage"
+version = "0.1.4"
+authors = [
+#  { name="Bibenga", email="" },
+]
+description = "Use PostgreSQL large objects for file storage"
+license = {text = "MIT"}
+readme = "README.md"
+keywords = ["django"]
+classifiers = [
+    'Environment :: Web Environment',
+    'Framework :: Django',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: MIT License',
+    "Operating System :: OS Independent",
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Topic :: Internet :: WWW/HTTP',
+    'Topic :: System :: Distributed Computing',
+    'Topic :: Software Development :: Libraries :: Python Modules',
+]
+
+requires-python = ">=3.10"
+dependencies = [
+    "django>=5,<6",
+]
+
+[project.urls]
+Homepage = "https://github.com/bibenga/pg-lo-storage"
+Issues = "https://github.com/bibenga/pg-lo-storage/issues"
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["pg_lo_storage"]
+
