@@ -1,0 +1,5 @@
+torch
+dash
+dash-svg
+dash-bootstrap-components>=1.5.0
+msgpack
