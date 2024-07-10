@@ -1,0 +1,75 @@
+/* -*- Mode: H; indent-tabs-mode: t; c-basic-offset: 4; tab-width: 4 -*-  */
+/*
+ * shared_memory.h
+ * Copyright (C) ${YEAR} Vladimir Roncevic <elektron.ronca@gmail.com>
+ *
+ * ${PRO} is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the
+ * Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * ${PRO} is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+#pragma once
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
+#include <semaphore.h>
+#include <sys/mman.h>
+
+//////////////////////////////////////////////////////////////////////////////
+/// @brief Shared memory max number of buffers
+#define SHM_MAX_BUFFERS 10
+
+//////////////////////////////////////////////////////////////////////////////
+/// @brief Shared memory buffer size
+#define SHM_SIZE_BUFFER 256
+
+//////////////////////////////////////////////////////////////////////////////
+/// @brief Shared memory log file path
+#define SHM_LOGFILE "/tmp/${PRO}.log"
+
+//////////////////////////////////////////////////////////////////////////////
+/// @brief Shared memory semaphore mutex name
+#define SHM_SEM_MUTEX_NAME "/sem-mutex"
+
+//////////////////////////////////////////////////////////////////////////////
+/// @brief Shared memory semaphore count name
+#define SHM_SEM_BUFFER_COUNT_NAME "/sem-buffer-count"
+
+//////////////////////////////////////////////////////////////////////////////
+/// @brief Shared memory semaphore spool signal name
+#define SHM_SEM_SPOOL_SIGNAL_NAME "/sem-spool-signal"
+
+//////////////////////////////////////////////////////////////////////////////
+/// @brief Shared memory name
+#define SHM_NAME "/posix-shared-mem-${PRO}"
+
+//////////////////////////////////////////////////////////////////////////////
+/// @brief Shared memory error code
+#define SHM_ERROR -1
+
+//////////////////////////////////////////////////////////////////////////////
+/// @brief Shared memory success code
+#define SHM_SUCCESS 0
+
+//////////////////////////////////////////////////////////////////////////////
+/// @brief Shared memory structure
+struct shared_memory
+{
+    char buffer[SHM_MAX_BUFFERS][SHM_SIZE_BUFFER];
+    int buffer_index;
+    int buffer_print_index;
+};

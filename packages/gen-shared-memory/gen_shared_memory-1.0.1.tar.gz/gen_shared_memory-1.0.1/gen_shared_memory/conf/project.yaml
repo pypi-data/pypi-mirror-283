@@ -1,0 +1,11 @@
+templates:
+  - shared_memory.template
+  - client.template
+  - server.template
+  - Makefile.template
+
+modules:
+  - shared_memory.h
+  - client.c
+  - server.c
+  - Makefile
