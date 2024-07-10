@@ -1,0 +1,9 @@
+pydantic[email]
+mysql-connector-python
+pyYAML
+paho-mqtt
+astropy
+google_spreadsheet
+google-auth-oauthlib
+html2text
+pyserial

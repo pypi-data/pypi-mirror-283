@@ -1,0 +1,4 @@
+[console_scripts]
+list_roofs = obstechutils.roof:list_roofs
+mqtt_console = obstechutils.mqtt:console_script
+report_device_status = obstechutils.device_status:main_script
