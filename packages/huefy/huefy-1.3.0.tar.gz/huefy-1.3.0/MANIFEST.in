@@ -1,0 +1,6 @@
+include README.md
+recursive-include src/huefy *.config
+recursive-include src *.config
+recursive-include src/huefy *.theme *.config *.py
+recursive-include src/huefy/themes.d *.theme
+recursive-include src/scripts *.sh *.py
