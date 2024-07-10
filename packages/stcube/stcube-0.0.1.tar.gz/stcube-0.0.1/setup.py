@@ -1,0 +1,82 @@
+#!/usr/bin/env python
+# coding:utf-8
+import os
+import sys
+import ctypes
+import tempfile
+from setuptools import find_packages, setup
+from setuptools.command.install import install
+
+long_description = """
+STCube Command Executor v0.0.1
+------------------------------------------------------------
+>>> help
+        -q|quit:
+            Quit the STCube command executoh
+            r.
+
+        -h|help:
+            Show the help information.
+
+        -n|new:
+            Create a new Project from Library.
+
+        -o|cd|open:
+            Change the current project directory.
+                * will close the current project if has.
+
+        -u|up|update:
+            Update the current project to maintaince it's entry.
+
+        -a|auto:
+            Auto update when cubemx saving.
+                * check the file change time.
+
+        -l|lib:
+            Library management.
+                - Library is made from stm32cube project directory.
+                - Need gen codes first in cubemx
+            .new: Create a new library from the stm32cube project directory.
+            .exp: Open the library directory in the explorer.
+
+        -m|mod:
+            Modules management.
+                - Module is made from some .c/cpp .h/hpp files.
+                - Import module will copy file and write the main.h
+            .new: Create a new module from current project directory.
+            .exp: Open the module directory in the explorer.
+
+"""
+
+setup(
+    name='stcube',
+    version='0.0.1',
+    description='(not finish)used to manage stm32cubemx template project and some user source file.',
+    long_description=long_description,
+    long_description_content_type="text/plain",
+    author_email='2229066748@qq.com',
+    maintainer="Eagle'sBaby",
+    maintainer_email='2229066748@qq.com',
+    packages=find_packages(),
+    license='Apache Licence 2.0',
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'Operating System :: Microsoft :: Windows',
+    ],
+    keywords=['management'],
+    python_requires='>=3',
+    install_requires=[
+
+    ],
+    entry_points={
+        # 'console_scripts': [
+        #     'f3 = files3:cmd_show',
+        #     'f3open = files3:cmd_open',
+        #     'f3assoc = files3:cmd_assoc',
+        #     'f3unassoc = files3:cmd_unassoc',
+        # ],
+    },
+    # cmdclass={
+    #     'install': PostInstallCommand,
+    # },
+)
