@@ -1,0 +1,14 @@
+cefi/__init__.py,sha256=v9D-OTa2jJnrl7dKzW_380dhkAJtVi6SxGozPJbtors,87
+cefi/config.py,sha256=GmmvquQlCTzy_X_puck0OjkYk3HWpR_krK1MLTMx-sA,464
+cefi/default_settings.toml,sha256=Y15k4EdQWxGKv9ZjKLPFI4y985rqksJdugtgikpM9h0,3617
+cefi/handler/__init__.py,sha256=NcvHhIY1NrFZeORwFXYTXzxKnjWXZOR7vvsAoZaei9w,158
+cefi/handler/capitalcom.py,sha256=0dIEDCfPMjZExfbpxGOjwxAdvzCj7doqhIrGOAJTklo,13569
+cefi/handler/ccxt.py,sha256=mZa0V-uvy9eay4Pt2ZPJ8jv7BCByJYXCcRX_Zeagpxk,5542
+cefi/handler/client.py,sha256=d7DPK8DjMlommelPN8E-T-6FPCJY2wY1dY85lpbdNpU,9225
+cefi/handler/ctrader.py,sha256=nZIkQD8GUYzXovNEwgYN45E93phxBQ-HIVltTFZzoUc,1938
+cefi/handler/ib_sync.py,sha256=0DzrIHII7qXYtXFrDV2-i71MAs27e9jZgsq9oDJkO8Y,7006
+cefi/main.py,sha256=A6FkjyPlEJCH5Tz4ZF1y3P_RCOh94HDx420zdGcXn3w,8567
+cefi-4.8.1.dist-info/LICENSE,sha256=Ym-WJCFdWfn0XKn-qLQI-u5nxBJX6F2kl-hPeRJp1fI,1064
+cefi-4.8.1.dist-info/METADATA,sha256=wo9gszG6P92Pwh7nN5a7HpvE0odyzTyV_zJEbnhdSZ4,3657
+cefi-4.8.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+cefi-4.8.1.dist-info/RECORD,,
