@@ -1,0 +1,14 @@
+liftwing/__init__.py,sha256=J0nsR4RMvhQ2YfPzQ5mmDjmdWMRFxMcU2P3fptfr2AI,1144
+liftwing/__main__.py,sha256=a7RrlNeSOPD28Na_fMb4I4BIwK5eC_LJ2HIh50aG7aA,167
+liftwing/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+liftwing/models/article_topic.py,sha256=fZeELxg5hQYznW6Uc8gs9Uk6av_TfWaGq25Bft8z5B0,2010
+liftwing/models/language_id.py,sha256=VSWoGkOMWBZ-UHfjEeqcoaW7VbrhnrZmD14R2ABH2DE,891
+liftwing/models/liftwing_model.py,sha256=kFi_gKSOnNca4iiZRIoqfHWfYJXxC-QVhpl38uye7VQ,1556
+liftwing/models/readability.py,sha256=6w_0J_YWeVreJmY8iavFr8sLUQdxGIPRdYUT2RxowrU,1127
+liftwing/models/revertrisk.py,sha256=7r91mv3miN_g6rIcQePBmyJZhjdo5PxknmjW1UR6ONw,1164
+liftwing/models/revertrisk_multilingual.py,sha256=X3iqBcLWoEHzsg-lveuPM3taimTXuKb3mdtPPdUeI1Y,1172
+liftwing/models/revscoring.py,sha256=7Vn17-VkjbwTDbW-iFOuaXQTyqUqhZHSsxyk8S_o3nw,4178
+liftwing-0.1.1.dist-info/METADATA,sha256=HdSRpMxKTIlTck_-fVkJb1nWyIbzyuyPR97866uI9qo,1527
+liftwing-0.1.1.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+liftwing-0.1.1.dist-info/top_level.txt,sha256=RFsGi3y0G4xqBnbg6kYPhlhygGltG8aP-lpYzsqEzGQ,9
+liftwing-0.1.1.dist-info/RECORD,,
