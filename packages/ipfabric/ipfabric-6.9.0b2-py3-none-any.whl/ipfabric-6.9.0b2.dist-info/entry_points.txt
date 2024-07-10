@@ -1,0 +1,4 @@
+[console_scripts]
+ipf_global_search=ipfabric.scripts.global_search:main
+ipf_route_search=ipfabric.scripts.route_search:main
+
