@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+pydantic_collections/__init__.py
+pydantic_collections/__init__.pyi
+pydantic_collections/_v1.py
+pydantic_collections/_v2.py
+pydantic_collections.egg-info/PKG-INFO
+pydantic_collections.egg-info/SOURCES.txt
+pydantic_collections.egg-info/dependency_links.txt
+pydantic_collections.egg-info/requires.txt
+pydantic_collections.egg-info/top_level.txt
+tests/test_v1.py
+tests/test_v2.py
