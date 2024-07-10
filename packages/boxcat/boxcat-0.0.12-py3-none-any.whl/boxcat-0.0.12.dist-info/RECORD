@@ -1,0 +1,11 @@
+boxcat/Either.py,sha256=P19WniGnU6y5yB6yihzTMQT3Q97czbmY85vQ9yfaHQk,1183
+boxcat/Option.py,sha256=vhuv4NIGmGyW-A1p6Yp9_KQOHbnPrJdziH1Uee5DEFY,1599
+boxcat/Seq.py,sha256=ZTp7k6PLEj2Jyp1x8i1YXUORy8dTynV6qNQw8sddnbU,1956
+boxcat/Tuple.py,sha256=ZcgaIe0pLMBw2HGcSFPanGJ-yHwCy8cWOJ5sZLyKiTc,951
+boxcat/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boxcat-0.0.12.dist-info/LICENSE,sha256=LbCmZTRcVLXOb7y3CzxN6qHrLSr-JhRQw082yHB2Dtc,1068
+boxcat-0.0.12.dist-info/METADATA,sha256=072ip4CgzQz7K4aToxH7OqmrfOIxHecbVnb0UIHEE-o,4561
+boxcat-0.0.12.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+boxcat-0.0.12.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+boxcat-0.0.12.dist-info/top_level.txt,sha256=mv8EKwHQkqasSZMdu2PBIE4AOTb7c0xJaLU2wyAVM3E,7
+boxcat-0.0.12.dist-info/RECORD,,
