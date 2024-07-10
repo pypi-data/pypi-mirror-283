@@ -1,0 +1,3 @@
+[console_scripts]
+smolpub=smolpub.__main__:app
+
