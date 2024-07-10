@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+apache_airflow_microsoft_fabric_plugin.egg-info/PKG-INFO
+apache_airflow_microsoft_fabric_plugin.egg-info/SOURCES.txt
+apache_airflow_microsoft_fabric_plugin.egg-info/dependency_links.txt
+apache_airflow_microsoft_fabric_plugin.egg-info/top_level.txt
+tests/__init__.py
+tests/hooks/__init__.py
+tests/operators/__init__.py
+tests/triggers/__init__.py
