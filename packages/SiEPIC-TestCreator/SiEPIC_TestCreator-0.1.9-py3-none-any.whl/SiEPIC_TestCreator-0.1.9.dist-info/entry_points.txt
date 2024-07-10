@@ -1,0 +1,2 @@
+[console_scripts]
+siepic_testcreator = Siepic_TestCreator.__main__:main
