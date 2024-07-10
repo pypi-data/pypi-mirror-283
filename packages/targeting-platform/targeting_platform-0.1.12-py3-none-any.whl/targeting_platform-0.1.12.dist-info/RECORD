@@ -1,0 +1,12 @@
+targeting_platform/__init__.py,sha256=KOzjdPFhdASTHI5Y7VtUlyey0sR6IITyF7sfRokyNwE,722
+targeting_platform/platform.py,sha256=CMCyEOl5u7Uts7K5JoO2mv31tefTW63rwpeuohqbuN0,15119
+targeting_platform/platform_dv360.py,sha256=UR1Zc7X-tqyOrkMahM-dqEi8DQHLFey9mkEh_HubkrU,59027
+targeting_platform/platform_meta.py,sha256=mgxqUdALjHerQ2eDmPV_OS49EU_I_YlW2fiEz-ZJTo4,34303
+targeting_platform/platform_ttd.py,sha256=Zr8A1FxjJk0MwHyQgHR7F7r7ui17wbxZiWjNzYgYRXs,22561
+targeting_platform/utils_cache.py,sha256=gmHvEIQkOeNAkseWL7_kMaR--bc4KG_XUQfzCCdZewo,4753
+targeting_platform/utils_common.py,sha256=cq1lKJgpI_cTNnVGPYoppYlY5nYs5GObfJ79eLDhjfA,1831
+targeting_platform-0.1.12.dist-info/LICENSE,sha256=Rp9Y918BKmTPEohmQoLMW-KD42GZHUDYaollM8NB48Q,35141
+targeting_platform-0.1.12.dist-info/METADATA,sha256=WrhdFcd9fPflJJ09yfOpGV-cclycnKKEOEttFSp04x0,3310
+targeting_platform-0.1.12.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+targeting_platform-0.1.12.dist-info/top_level.txt,sha256=fXaM5Ji1k6bERAxZiHbhTU28Hi9rT6ffoB8daYoeybE,19
+targeting_platform-0.1.12.dist-info/RECORD,,
