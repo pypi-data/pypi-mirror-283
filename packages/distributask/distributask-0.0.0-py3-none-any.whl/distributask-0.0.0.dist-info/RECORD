@@ -1,0 +1,15 @@
+distributask/__init__.py,sha256=25yu9lnZmb9ZxakZzP3HUExiQYJVSrVLk7VS7G4V20o,28
+distributask/distributask.py,sha256=bKEOnPgutbIG_UFtXy8nZ_-faggEv2lxI7CQd02nAFg,27546
+distributask/example/__init__.py,sha256=Ta78VBcFD6IOrS_8st_0z5_CIDjDX-KIcTtc57F0NoE,92
+distributask/example/distributed.py,sha256=ziZ6-bTIYLZ6uiyoATKwj7WfQM2oH8u9EGswQL8Pkeo,3363
+distributask/example/local.py,sha256=dt5aFc34xnlcLLZmgNWypPMfIR-Jkf7Y4hHzXILem8E,4113
+distributask/example/shared.py,sha256=4NU85fz1XVgERpI5nE_gB4rtAvBU-c6QJWOlurEk1vQ,834
+distributask/example/worker.py,sha256=CBwUOZS3vy-Gjb9Llwt3e5MR8Ry0BxM0uVQ2FjZgTLc,128
+distributask/tests/__init__.py,sha256=Dt-IGszzgc3pgSmFC1rZGzihuRAt1679AA-hgnxwJoQ,43
+distributask/tests/tests.py,sha256=G9znHjlQFNj6JShgeS8LBpWs1POpOVYvqp4x1gG9zW8,12769
+distributask/tests/worker.py,sha256=N0Bc3loUA2BVqrbI3qtO1A4HMfVJt8hUYotiZvqBbls,323
+distributask-0.0.0.dist-info/LICENSE,sha256=27jsz0mFpX12HOCriY24qaoKox2959iM6pQOTWAe_Rc,1126
+distributask-0.0.0.dist-info/METADATA,sha256=xNDqnHsMVPYYWhUFFRjM0cGXYeLOSNrXt85Wm5S6Tkk,4059
+distributask-0.0.0.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+distributask-0.0.0.dist-info/top_level.txt,sha256=m1ecQbJ79voM-i4PrJTJEK13gB-21Sjnv5tXPotXyEU,13
+distributask-0.0.0.dist-info/RECORD,,
