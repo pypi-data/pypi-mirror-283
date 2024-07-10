@@ -1,0 +1,10 @@
+snipinator/__init__.py,sha256=F6ekUSL_KNMzvo2gZXtNSRkXEwxS0_wZ1pHQ8P2SQsI,514
+snipinator/cli.py,sha256=Sv6RG9VMzZAmIobTtyTP5V7lCzxXXrRmS878ZQja8mc,26203
+snipinator/snipinate.py,sha256=k71GhlHHwhH_whg1RDMoTSRdy4dabc5yb3luz53q_JI,38279
+snipinator/snipinate_test.py,sha256=0v-HyNXZflwjpYc7ALlApC5Z1Q9PoYU8sMbQvtmcBbs,1004
+snipinator-2.2.0.dist-info/LICENSE.md,sha256=pB8Y9uQJ53ntqW8qACEsDRkGey4YoYJxbfnqrcd2o_w,1102
+snipinator-2.2.0.dist-info/METADATA,sha256=8TfU-zfdQ9q1UtFhXrcVBnpOn9rDMARsmVJtp7Yc9Bs,57316
+snipinator-2.2.0.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+snipinator-2.2.0.dist-info/entry_points.txt,sha256=Q6Ym7wk6bNqV2OHeUoPvkfyC8J3FJpiHK5hKCUzoWrM,51
+snipinator-2.2.0.dist-info/top_level.txt,sha256=WUxUKIq0MstXkOQo_34Uhkewsq9rJEVm-gTLmjHOXw8,11
+snipinator-2.2.0.dist-info/RECORD,,
