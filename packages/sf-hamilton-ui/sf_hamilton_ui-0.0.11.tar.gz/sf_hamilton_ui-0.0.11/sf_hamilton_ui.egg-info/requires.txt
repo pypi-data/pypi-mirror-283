@@ -1,0 +1,12 @@
+django
+click
+colorlog
+passlib
+aiofiles
+aiohttp
+psycopg2-binary
+loguru
+django-extensions
+requests
+django-ninja>=1.1.0
+typer
