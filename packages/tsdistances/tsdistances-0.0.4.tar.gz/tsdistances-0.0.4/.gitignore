@@ -1,0 +1,8 @@
+target/
+.venv/
+.vscode/
+*.csv
+*.so
+__pycache__/
+compute_ee.py
+.history/
