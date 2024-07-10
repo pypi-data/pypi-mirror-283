@@ -1,0 +1,33 @@
+*** What's New In Quarch Power Studio ***
+
+QPS version 1.42
+QIS version 1.44
+
+20th June 2024
+
+*** New Features ***
+
+- Support for breakers has now been migrated from TestMonkey, with numerous improvements and additional functionality.
+
+- The ability to create a "virtual device" comprising two or more physical devices.
+
+- The Common Connection Screen dialog now includes a left-hand side column that caters for firmware updates. This feature not only provides a mechanism to download the relevant update but also serves as a way of notifying you that a newer version of firmware is available.
+
+- The Common Connection Screen dialog now performs a background check when launched to confirm that the USB drivers/permissions are correct.
+
+- The right-hand side Annotations, Summary, Channels Tree, Statistics and Cursors tabs now all have a visible menu that replaces a right-click context menu in order to make it clearer of the available options.
+
+- Uncaught exception handling has been part of QPS for sometime but was disabled by default. It is now enabled by default. 
+
+- The top right corner of the toolbar now displays either a USB or LAN icon to indicate the connection type.
+
+- The QPS/QuarchPy command $connect has now been extended to also cater for specifying an IP address.
+
+*** Major Fixes ***
+
+- Bug fix relating to clearing a recording directory with subsequent streams, and also the addition of further checks associated with recording cleanup.
+
+- QIS/QPS resampling fix associated with compressed data.
+
+
+
