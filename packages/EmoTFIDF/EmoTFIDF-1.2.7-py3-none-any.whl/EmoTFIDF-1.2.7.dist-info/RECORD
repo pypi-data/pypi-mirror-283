@@ -1,0 +1,10 @@
+EmoTFIDF/EmoTFIDF.py,sha256=-e7ehWlSGp0eu8gFge1FB3fm8Yse5kf1ysJKPRDVBSE,6650
+EmoTFIDF/__init__.py,sha256=MB8pHSHNdLBanmPmAezPDUtT5EJJWNJDalKWBAf68GM,46
+EmoTFIDF/emotions_lex.json,sha256=oV7RlJYDwh2VxyVYa2B5dnm7owNvaD_vpr94av0C0aw,740417
+tests/__init__.py,sha256=MB8pHSHNdLBanmPmAezPDUtT5EJJWNJDalKWBAf68GM,46
+tests/test_emotfidf.py,sha256=6nE6l0BbxB-ZOlI6a_69ZHrUSsjWRvN6MO4BgzqUAN0,254
+EmoTFIDF-1.2.7.dist-info/LICENSE,sha256=NtgiPe6QVePc6rvKYX6Fk4M22KlErbBVvmu6PJNeTyI,1091
+EmoTFIDF-1.2.7.dist-info/METADATA,sha256=DRQaO9w7q4eaYDqMIxGaghZYXIjvTQUEC-Ys-yj1Evo,2490
+EmoTFIDF-1.2.7.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+EmoTFIDF-1.2.7.dist-info/top_level.txt,sha256=YZ3oIlqAMaCmf1FSW1l58Ibx3KKNDVi9W8wXGfN5K4Q,15
+EmoTFIDF-1.2.7.dist-info/RECORD,,
