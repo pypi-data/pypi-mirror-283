@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/anyparse/__init__.py
+src/anyparse/anyparse.py
+src/anyparse.egg-info/PKG-INFO
+src/anyparse.egg-info/SOURCES.txt
+src/anyparse.egg-info/dependency_links.txt
+src/anyparse.egg-info/top_level.txt
