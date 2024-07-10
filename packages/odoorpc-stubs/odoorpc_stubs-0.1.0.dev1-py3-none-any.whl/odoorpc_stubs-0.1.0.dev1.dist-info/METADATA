@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: odoorpc-stubs
+Version: 0.1.0.dev1
+Summary: Generated type stubs for odoorpc
+Author: Alexander Eisele
+Author-email: alexander.eisele@nexiles.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# Odoorpc-stubs
+
+Mypy type stubs for odoorpc
+
+Generated using mypy's stubgen
+
+```shell
+stubgen -p odoorpc
+```
+
