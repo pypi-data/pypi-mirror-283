@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+hatch_wasm.egg-info/PKG-INFO
+hatch_wasm.egg-info/SOURCES.txt
+hatch_wasm.egg-info/dependency_links.txt
+hatch_wasm.egg-info/top_level.txt
