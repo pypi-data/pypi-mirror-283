@@ -1,0 +1,13 @@
+README.md
+setup.py
+deep_reps/__init__.py
+deep_reps/cca_measures.py
+deep_reps/models.py
+deep_reps/rsm_measures.py
+deep_reps/similarity_functions.py
+deep_reps/utils.py
+deep_reps.egg-info/PKG-INFO
+deep_reps.egg-info/SOURCES.txt
+deep_reps.egg-info/dependency_links.txt
+deep_reps.egg-info/requires.txt
+deep_reps.egg-info/top_level.txt
