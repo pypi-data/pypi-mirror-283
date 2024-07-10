@@ -1,0 +1,9 @@
+README.md
+setup.py
+robotframework_restbridge/RestBridge.py
+robotframework_restbridge/__init__.py
+robotframework_restbridge.egg-info/PKG-INFO
+robotframework_restbridge.egg-info/SOURCES.txt
+robotframework_restbridge.egg-info/dependency_links.txt
+robotframework_restbridge.egg-info/requires.txt
+robotframework_restbridge.egg-info/top_level.txt
