@@ -1,0 +1,9 @@
+google_contact_local/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+google_contact_local/google_contacts.py,sha256=dvcdqtWCrBJx9Qbn8JY9q7ueHdGwqUKVC8enazomLHw,57322
+google_contact_local/google_contacts_constants.py,sha256=yov08F598zCO3Ss0wMlDCJJKh4Bp9jQQzCwqja9aq1A,1376
+google_contact_local/google_contacts_push.py,sha256=D1jVcvhQO-kApHLrDuOhfrog05hpdvwQNtV610HX1NY,20102
+google_contact_local/google_contacts_sync.py,sha256=QFB1T1riiproiZuY1A__bHSA7NYhIdsw0AjxEfstOlc,7410
+google_contact_local-0.0.46.dist-info/METADATA,sha256=ZWWk5WA3o_JNFTCov_gBVjzJdoU3Ge3qV78M1yQlwbw,1515
+google_contact_local-0.0.46.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+google_contact_local-0.0.46.dist-info/top_level.txt,sha256=dADBnwyP7tM96al8coasP-6RvoEomBgpmYFNuLE0eNU,21
+google_contact_local-0.0.46.dist-info/RECORD,,
