@@ -1,0 +1,3 @@
+[console_scripts]
+post_install=pdf_crawler.scripts:post_install_script
+
