@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/singlestore_source.py
+src/singlestore_bytewax_connector.egg-info/PKG-INFO
+src/singlestore_bytewax_connector.egg-info/SOURCES.txt
+src/singlestore_bytewax_connector.egg-info/dependency_links.txt
+src/singlestore_bytewax_connector.egg-info/requires.txt
+src/singlestore_bytewax_connector.egg-info/top_level.txt
