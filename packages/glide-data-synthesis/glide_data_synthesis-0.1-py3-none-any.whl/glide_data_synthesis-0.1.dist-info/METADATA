@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: glide-data-synthesis
+Version: 0.1
+Summary: A Python package to enable data synthesis for any GLIDE Table.
+Home-page: https://github.com/<TBD>
+Author: Venkatesh Gunda
+Author-email: venkatesh.gunda@servicenow.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+
