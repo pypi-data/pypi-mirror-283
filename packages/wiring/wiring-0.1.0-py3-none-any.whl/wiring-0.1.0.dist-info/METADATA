@@ -1,0 +1,112 @@
+Metadata-Version: 2.3
+Name: wiring
+Version: 0.1.0
+Summary: package for building bots that run on multiple platforms, like discord and telegram
+Project-URL: source code and issues, https://github.com/crucials/wiring
+License: MIT License
+        
+        Copyright (c) 2024 y
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Provides-Extra: discord
+Requires-Dist: discord-py; extra == 'discord'
+Provides-Extra: telegram
+Requires-Dist: python-telegram-bot; extra == 'telegram'
+Provides-Extra: twitch
+Requires-Dist: twitchio; extra == 'twitch'
+Description-Content-Type: text/markdown
+
+![logo with a label 'one bot codebase - multiple platforms'](https://i.ibb.co/1QGmCQx/343200157-4b987f42-1718-4a83-83b1-dc5556da28af.png)
+
+seamless api for developing bots that run on multiple platforms.
+**discord**, **telegram** and **twitch** are supported
+
+works with asyncio
+
+## install
+
+install the base library:
+
+```sh
+pip install wiring
+```
+
+then choose extra dependencies for platforms that you want your bot to run on
+
+```sh
+pip install wiring[discord] wiring[telegram]
+```
+
+## usage example
+
+```python
+import asyncio
+
+from wiring import (Bot, MultiPlatformMessage, MultiPlatformBot, MultiPlatformUser,
+                    Command)
+from wiring.platforms.discord import DiscordBot
+from wiring.platforms.telegram import TelegramBot
+
+
+DISCORD_TOKEN = 'place your token here or better load it from enviroment variables'
+TELEGRAM_TOKEN = 'place your token here or better load it from enviroment variables'
+
+async def send_commands_list(bot: Bot, message: MultiPlatformMessage,
+                             args: list[str]):
+    commands_list = '\n'.join(['/' + str(command.name) for command
+                               in bot.commands])
+
+    await bot.send_message(
+        message.chat.id,
+        'available commands:\n' + commands_list,
+        reply_message_id=message.id
+    )
+
+
+async def start_bots():
+    bot = MultiPlatformBot()
+
+    bot.platform_bots = [
+        DiscordBot(DISCORD_TOKEN),
+        TelegramBot(TELEGRAM_TOKEN)
+    ]
+
+    async with bot:
+        await bot.setup_commands([
+            Command('help', send_commands_list)
+        ])
+
+        # blocks the execution
+        await bot.listen_to_events()
+
+
+asyncio.run(start_bots())
+```
