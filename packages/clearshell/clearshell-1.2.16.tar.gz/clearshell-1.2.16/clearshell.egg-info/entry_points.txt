@@ -1,0 +1,2 @@
+[console_scripts]
+clearshell = clearshell.cli:main
