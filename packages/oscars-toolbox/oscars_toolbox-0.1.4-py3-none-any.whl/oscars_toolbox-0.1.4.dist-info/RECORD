@@ -1,0 +1,11 @@
+oscars_toolbox/__init__.py,sha256=Nqnn8clbgv-5l0PgxcTOldg8mkMKrFn4TvPL-rYUUGg,1
+oscars_toolbox/implement_torch.py,sha256=h2wRhzWdmrBlwYQs6cMW8W7rLP7zcR8KFQMxoT84Cfg,5325
+oscars_toolbox/implement_xgb.py,sha256=4dWS1yEyDIv0vCFRfYOk18sU9SxZUXxBP2cn8AVLqPA,2568
+oscars_toolbox/sample.py,sha256=Ah8wT5nGxr6vKJxNF05h7vG60i4tE0oGcnC7DsOswIM,2328
+oscars_toolbox/torch_models.py,sha256=vQY_QOS_yGW-tEwVT1mD_J-9_hS3LNf6mDeaz7MjlD8,8324
+oscars_toolbox/trabbit.py,sha256=bp_G_z-wcol17t9VFFfA3GU5YN2980EC_smRk8qIiEM,3276
+oscars_toolbox-0.1.4.dist-info/LICENSE,sha256=K5ProoM8t-APAWEjzKOvGj71XcUgDJzduliWBJsPMmo,1070
+oscars_toolbox-0.1.4.dist-info/METADATA,sha256=TRo2YtlcklkHrwtZcjyLh9QOptLNO6ObsXZjL9fMbFE,22086
+oscars_toolbox-0.1.4.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+oscars_toolbox-0.1.4.dist-info/top_level.txt,sha256=l_P3iyuilpICPfIOAr2gutyClfzEurmydae9QJ7KZaU,15
+oscars_toolbox-0.1.4.dist-info/RECORD,,
