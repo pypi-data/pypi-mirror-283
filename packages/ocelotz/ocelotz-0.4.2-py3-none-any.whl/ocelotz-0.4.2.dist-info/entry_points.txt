@@ -1,0 +1,2 @@
+[console_scripts]
+ocelotz = ocelotz.ocelotz:main
