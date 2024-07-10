@@ -1,0 +1,7 @@
+aimDIAS
+build
+dist
+docs
+examples
+models
+notebooks
