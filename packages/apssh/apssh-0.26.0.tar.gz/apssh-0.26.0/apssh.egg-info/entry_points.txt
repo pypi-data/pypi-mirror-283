@@ -1,0 +1,4 @@
+[console_scripts]
+appull = apssh.__main__:appull
+appush = apssh.__main__:appush
+apssh = apssh.__main__:apssh
