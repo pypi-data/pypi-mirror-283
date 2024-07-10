@@ -1,0 +1,11 @@
+description: Max dependent age for dependent to qualify for the universal allowance's low income bonus
+values:
+  0000-01-01: 18
+
+# Note that the standard/higher distinction appears to exist
+# in the law, but our reference material does not define it clearly,
+# hence the generic terminology in use in these params
+metadata:
+  unit: year
+  label: Max dependent age, single and universal allowance, low-income bonus
+  period: month

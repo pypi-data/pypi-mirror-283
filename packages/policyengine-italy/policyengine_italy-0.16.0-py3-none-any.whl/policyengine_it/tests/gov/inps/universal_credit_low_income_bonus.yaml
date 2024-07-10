@@ -1,0 +1,100 @@
+- name: Family with no children (does not qualify)
+  period: 2024
+  input:
+    people:
+      parent1:
+        age: 35
+      parent2:
+        age: 33
+    households:
+      household:
+        members: [parent1, parent2]
+        head_market_income: 20_000
+        spouse_market_income: 15_000
+  output:
+    universal_credit_low_income_bonus: 0
+
+- name: Family with one child and 0 income
+  period: 2024
+  input:
+    people:
+      parent1:
+        age: 30
+      parent2:
+        age: 28
+      child1:
+        age: 5
+        is_dependent: true
+    households:
+      household:
+        members: [parent1, parent2, child1]
+        head_market_income: 0
+        spouse_market_income: 0
+  output:
+    universal_credit_low_income_bonus: 360
+
+- name: Family with two children and income below €15,000 annually
+  period: 2024
+  input:
+    people:
+      parent1:
+        age: 40
+      parent2:
+        age: 38
+      child1:
+        age: 10
+        is_dependent: true
+      child2:
+        age: 7
+        is_dependent: true
+    households:
+      household:
+        members: [parent1, parent2, child1, child2]
+        head_market_income: 8_000
+        spouse_market_income: 6_000
+  output:
+    universal_credit_low_income_bonus: 720
+
+- name: Family with one child and income below €40,000 annually
+  period: 2024
+  input:
+    people:
+      parent1:
+        age: 45
+      parent2:
+        age: 43
+      child1:
+        age: 12
+        is_dependent: true
+    households:
+      household:
+        members: [parent1, parent2, child1]
+        head_market_income: 22_000
+        spouse_market_income: 16_000
+  output:
+    universal_credit_low_income_bonus: 259.2
+
+- name: Family with three children and income above €40,000 annually (does not qualify)
+  period: 2024
+  input:
+    people:
+      parent1:
+        age: 50
+      parent2:
+        age: 48
+      child1:
+        age: 15
+        is_dependent: true
+      child2:
+        age: 13
+        is_dependent: true
+      child3:
+        age: 9
+        is_dependent: true
+    households:
+      household:
+        members: [parent1, parent2, child1, child2, child3]
+        head_market_income: 50_000
+        spouse_market_income: 25_000
+  output:
+    universal_credit_low_income_bonus: 0

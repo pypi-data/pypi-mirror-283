@@ -1,0 +1,23 @@
+- name: Standard employee
+  period: 2024
+  input:
+    employment_category: EMPLOYEE
+    total_individual_pre_tax_income: 15_000
+  output:
+    fasi_base_amount: 0
+
+- name: Executive with lower income
+  period: 2024
+  input:
+    employment_category: EXECUTIVE
+    total_individual_pre_tax_income: 15_000
+  output:
+    fasi_base_amount: 1_120
+
+- name: Executive with higher income
+  period: 2024
+  input:
+    employment_category: EXECUTIVE
+    total_individual_pre_tax_income: 150_000
+  output:
+    fasi_base_amount: 1_120

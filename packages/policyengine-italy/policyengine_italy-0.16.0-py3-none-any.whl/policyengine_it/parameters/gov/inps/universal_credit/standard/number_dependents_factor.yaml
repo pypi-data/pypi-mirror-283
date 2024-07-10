@@ -1,0 +1,17 @@
+description: Multiplier factor, based on number of children under 21, for the single and universal allowance for dependent children
+brackets:
+  - threshold:
+      0000-01-01: 0
+    amount:
+      0000-01-01: 1
+  - threshold:
+      0000-01-01: 3
+    amount:
+      0000-01-01: 1.5
+
+metadata:
+  type: single_amount
+  amount_unit: /1
+  threshold_unit: person
+  label: Multiplier factor, single and universal allowance for dependent children, standard portion
+  period: month

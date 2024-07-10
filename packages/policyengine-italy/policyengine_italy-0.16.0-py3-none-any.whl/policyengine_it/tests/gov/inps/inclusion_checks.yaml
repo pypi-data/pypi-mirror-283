@@ -1,0 +1,47 @@
+- name: Family without children - no inclusion check
+  period: 2024
+  input:
+    people:
+      parent1:
+        is_head: true
+        total_individual_pre_tax_income: 15_000
+        age: 35
+      parent2:
+        is_spouse: true
+        age: 33
+  output:
+    inclusion_checks: 0
+
+- name: Family with one child - receives inclusion check
+  period: 2024
+  input:
+    people:
+      parent1:
+        is_head: true
+        age: 35
+        total_individual_pre_tax_income: 15_000
+      parent2:
+        is_spouse: true
+        age: 33
+      child1:
+        age: 7
+  output:
+    inclusion_checks: 6_000
+
+- name: Family with two children - receives inclusion check
+  period: 2024
+  input:
+    people:
+      parent1:
+        is_head: true
+        total_individual_pre_tax_income: 15_000
+        age: 35
+      parent2:
+        is_spouse: true
+        age: 36
+      child1:
+        age: 10
+      child2:
+        age: 5
+  output:
+    inclusion_checks: 6_000

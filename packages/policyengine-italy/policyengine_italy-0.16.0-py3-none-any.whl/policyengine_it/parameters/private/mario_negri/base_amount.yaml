@@ -1,0 +1,8 @@
+description: Mario Negri Fund base amount that all contributors pay
+values:
+  0000-01-01: 130
+
+metadata:
+  unit: currency-EUR
+  label: Mario Negri Fund base amount
+  period: year

@@ -1,0 +1,6 @@
+- name: Total individual pre-tax income includes all designated types of income
+  period: 2024
+  input:
+    employment_income: 15_000
+  output:
+    total_individual_pre_tax_income: 15_000
