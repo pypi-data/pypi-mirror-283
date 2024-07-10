@@ -1,0 +1,4 @@
+tqdm
+httpx
+media-toolkit>=0.0.2
+singleton_decorator==1.0.0
