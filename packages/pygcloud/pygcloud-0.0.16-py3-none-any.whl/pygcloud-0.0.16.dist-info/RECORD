@@ -1,0 +1,17 @@
+pygcloud/__init__.py,sha256=zAYSuScdlTW6axDLQh1Khkwl3ij9j3XMCImfp4l1rQs,408
+pygcloud/constants.py,sha256=f7zRtGpGv8HaN-7iCP20nBVxgRvUmDLRIKG9yHjstm0,259
+pygcloud/core.py,sha256=y_ecSZWbmizp1CjJ2vPhPYfVFBMV2NeWmEaaBjTRcQs,2949
+pygcloud/deployer.py,sha256=rYe2EL3je1NpJrIMfHWDLY83eT2IsmNVbD6ZQioOJc8,6654
+pygcloud/helpers.py,sha256=JPS1pKxlWIgCO3iVAJBYunTgA9wKtOIncXyeBCM6w7Q,428
+pygcloud/models.py,sha256=VUQvhM1rBKK6Gz_iffbBLbYDYr0hAkyFUVJD0Fk9zVo,9349
+pygcloud/utils.py,sha256=DnIqpAPRj3lDXprcFiYOpZZxWn_r_J5D8kL3EBJdLpw,1417
+pygcloud/gcp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pygcloud/gcp/labels.py,sha256=idfZXwGjHYeyphl1Z6ilMZpPz64bla9ItPxqIMRrUqs,1058
+pygcloud/gcp/services/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pygcloud/gcp/services/firestore.py,sha256=OxQIwMsvBjEEwHp1kc-LlEkxdHN3OhNA8iuGlsFXK-w,1768
+pygcloud/gcp/services/run.py,sha256=yjJgcs94UlDvZvNZxTtSdJNLODgOvbt_ia2kB1QiLI0,1329
+pygcloud/gcp/services/storage.py,sha256=0RT14p4P7YVW7BMiouuHx-sBKFURzLdVtsohY1Gdv7U,1377
+pygcloud-0.0.16.dist-info/METADATA,sha256=d7LduH8Y18KylB2F5OkbJJB3ZoYkStgeHtczomSx0s4,3901
+pygcloud-0.0.16.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+pygcloud-0.0.16.dist-info/top_level.txt,sha256=5HBDZzaTFxk8K43OlS08sBar2LMoM66HYLZ_5id1CbU,9
+pygcloud-0.0.16.dist-info/RECORD,,
