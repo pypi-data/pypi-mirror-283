@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: pocketpybase
+Version: 0.1.0
+Summary: A Python package for interacting with PocketBase
+Author: Champ
+Author-email: cs@two02.io
+Requires-Dist: httpx
