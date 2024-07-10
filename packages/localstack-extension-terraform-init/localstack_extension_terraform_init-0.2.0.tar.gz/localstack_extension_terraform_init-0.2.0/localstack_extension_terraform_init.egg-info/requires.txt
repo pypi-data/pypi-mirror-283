@@ -1,0 +1,2 @@
+localstack-core>=3.4
+plux
