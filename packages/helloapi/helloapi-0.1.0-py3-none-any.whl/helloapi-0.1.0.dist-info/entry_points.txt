@@ -1,0 +1,3 @@
+[console_scripts]
+helloapi=helloapi.__main__:main
+
