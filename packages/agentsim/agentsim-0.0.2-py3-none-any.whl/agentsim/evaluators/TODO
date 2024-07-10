@@ -1,0 +1,701 @@
+Here are some evaluators you can build using simple python scripts:
+
+Evaluator 1:
+	Input:
+		Format, AI message
+	Name:
+		Response Format Following
+	Description:
+		Check if the AI adheres to the specified response format or structure
+	Output:
+		Boolean
+	Target Score:
+		1.0
+	External Package:
+		1.0
+	
+Evaluator 2:
+	Input:
+		Tone, AI message
+	Name:
+		Tone Adherence
+	Description:
+		Check if the AI maintains the requested tone throughout the response
+	Output:
+		Float
+	Target Score:
+		0.9
+	External Package:
+		1.0
+	
+Evaluator 3:
+	Input:
+		Example, AI message
+	Name:
+		Example Emulation
+	Description:
+		Check if the AI effectively emulates or applies the given example
+	Output:
+		Boolean
+	Target Score:
+		1.0
+	External Package:
+		1.0
+	
+Evaluator 4:
+	Input:
+		AI message
+	Name:
+		Prompt Clarification Handling
+	Description:
+		Check if the AI appropriately seeks or provides clarification when needed
+	Output:
+		Boolean
+	Target Score:
+		1.0
+	External Package:
+		1.0
+	
+Evaluator 5:
+	Input:
+		System Prompt, AI message
+	Name:
+		Process Description
+	Description:
+		Check if the AI effectively describes its reasoning or decision-making process
+	Output:
+		Boolean
+	Target Score:
+		1.0
+	External Package:
+		1.0
+	
+Evaluator 6:
+	Input:
+		System Prompt, AI message
+	Name:
+		Quantity Compliance
+	Description:
+		Check if the AI adheres to specified numerical constraints or requirements
+	Output:
+		Float
+	Target Score:
+		0.9
+	External Package:
+		1.0
+	
+Evaluator 7:
+	Input:
+		System Prompt, AI message
+	Name:
+		Content Exclusion
+	Description:
+		Check if the AI correctly omits specified elements or topics
+	Output:
+		Boolean
+	Target Score:
+		1.0
+	External Package:
+		1.0
+	
+Evaluator 8:
+	Input:
+		System Prompt, AI message
+	Name:
+		Data Integration
+	Description:
+		Check if the AI effectively incorporates provided data or placeholders
+	Output:
+		Float
+	Target Score:
+		0.95
+	External Package:
+		1.0
+	
+Evaluator 9:
+	Input:
+		System Prompt, AI message
+	Name:
+		Content Inclusion
+	Description:
+		Check if the AI includes all required elements as specified
+	Output:
+		Boolean
+	Target Score:
+		1.0
+	Simple Python Script:
+		1.0
+	
+Evaluator 10:
+	Input:
+		System Prompt, AI message
+	Name:
+		Quality Criteria Adherence
+	Description:
+		Check if the AI meets specified qualitative standards or attributes
+	Output:
+		Float
+	Target Score:
+		0.9
+	Simple Python Script:
+		1.0
+	
+Evaluator 11:
+	Input:
+		Context, AI message
+	Name:
+		Context Integration
+	Description:
+		Check if the AI effectively uses provided context in its response
+	Output:
+		Float
+	Target Score:
+		0.95
+	Simple Python Script:
+		1.0
+	
+Evaluator 12:
+	Input:
+		System Prompt, AI message
+	Name:
+		Personalization Level
+	Description:
+		Check if the AI tailors the response to given user information or preferences
+	Output:
+		Float
+	Target Score:
+		0.9
+	Simple Python Script:
+		1.0
+	
+Evaluator 13:
+	Input:
+		Conciseness, AI message
+	Name:
+		Conciseness Adherence
+	Description:
+		Check if the AI's response meets specified length or conciseness requirements
+	Output:
+		Boolean
+	Target Score:
+		1.0
+	Another LLM:
+		1.0
+	
+Evaluator 14:
+	Input:
+		Context, AI message
+	Name:
+		Factual Accuracy
+	Description:
+		Check if the AI provides accurate information within its response
+	Output:
+		Float
+	Target Score:
+		0.98
+	Another LLM:
+		1.0
+	
+Evaluator 15:
+	Input:
+		History, AI message
+	Name:
+		Content Relevance
+	Description:
+		Check if the AI's response is relevant to the given prompt or user need
+	Output:
+		Float
+	Target Score:
+		0.95
+	Another LLM:
+		1.0
+	
+Evaluator 16:
+	Input:
+		AI message
+	Name:
+		Sensitivity Awareness
+	Description:
+		Check if the AI demonstrates appropriate sensitivity to potentially delicate topics
+	Output:
+		Boolean
+	Target Score:
+		1.0
+	Another LLM:
+		1.0
+	
+Evaluator 17:
+	Input:
+		AI message
+	Name:
+		Internal Consistency
+	Description:
+		Check if the AI maintains logical consistency throughout its response
+	Output:
+		Boolean
+	Target Score:
+		1.0
+	Another LLM:
+		1.0
+	
+Evaluator 18:
+	Input:
+		AI message
+	Name:
+		Creative Application
+	Description:
+		Check if the AI applies creative thinking within given constraints
+	Output:
+		Float
+	Target Score:
+		0.9
+	Another LLM:
+		1.0
+	
+Evaluator 19:
+	Input:
+		AI message
+	Name:
+		Objectivity Maintenance
+	Description:
+		Check if the AI maintains an appropriate level of objectivity in its response
+	Output:
+		Float
+	Target Score:
+		0.9
+	Another LLM:
+		1.0
+	
+Evaluator 20:
+	Input:
+		AI message
+	Name:
+		Toxicity
+	Description:
+		Check if the AI response is considered toxic by common conventions
+	Output:
+		Float
+	Target Score:
+		0.1
+	Another LLM:
+		1.0
+	
+Evaluator 21:
+	Input:
+		AI message
+	Name:
+		Keyword Assertion
+	Description:
+		Check if the AI response contains certain keywords
+	Output:
+		Boolean
+	Target Score:
+		1.0
+	Another LLM:
+		1.0
+	
+Evaluator 22:
+	Input:
+		System Prompt, AI message
+	Name:
+		Task Completeness
+	Description:
+		Check if the AI fully addresses all aspects of the given task or prompt
+	Output:
+		Boolean
+	Target Score:
+		1.0
+	Another LLM:
+		1.0
+	
+Evaluator 23:
+	Input:
+		Code, AI message
+	Name:
+		Syntactic Correctness
+	Description:
+		Check if the AI-generated code is syntactically correct for the specified language
+	Output:
+		Boolean
+	Target Score:
+		1.0
+	Another LLM:
+		1.0
+	
+Evaluator 24:
+	Input:
+		Code, AI message
+	Name:
+		Semantic Correctness
+	Description:
+		Check if the AI-generated code is semantically correct and achieves the intended functionality
+	Output:
+		Float
+	Target Score:
+		0.95
+	Another LLM:
+		1.0
+	
+Evaluator 25:
+	Input:
+		Code, AI message
+	Name:
+		Code Efficiency
+	Description:
+		Evaluate the efficiency of the AI-generated code (e.g. time and space complexity)
+	Output:
+		Float
+	Target Score:
+		0.9
+	Another LLM:
+		1.0
+	
+Evaluator 26:
+	Input:
+		Code, Style, AI message
+	Name:
+		Code Style Adherence
+	Description:
+		Check if the AI-generated code follows specified coding style guidelines
+	Output:
+		Float
+	Target Score:
+		0.9
+	Another LLM:
+		1.0
+	
+Evaluator 27:
+	Input:
+		Code, AI message
+	Name:
+		Error Handling
+	Description:
+		Assess the robustness of error handling in the AI-generated code
+	Output:
+		Float
+	Target Score:
+		0.9
+	Another LLM:
+		1.0
+	
+Evaluator 28:
+	Input:
+		Code, AI message
+	Name:
+		Security Best Practices
+	Description:
+		Evaluate adherence to security best practices in the AI-generated code
+	Output:
+		Float
+	Target Score:
+		0.95
+	Another LLM:
+		1.0
+	
+Evaluator 29:
+	Input:
+		Code, AI message
+	Name:
+		Documentation Quality
+	Description:
+		Assess the quality and completeness of code documentation or comments
+	Output:
+		Float
+	Target Score:
+		0.9
+	Another LLM:
+		1.0
+	
+Evaluator 30:
+	Input:
+		Code, AI message
+	Name:
+		Code Reusability
+	Description:
+		Assess the modularity and reusability of the AI-generated code
+	Output:
+		Float
+	Target Score:
+		0.8
+	Another LLM:
+		1.0
+	
+Evaluator 31:
+	Input:
+		Code, AI message
+	Name:
+		Performance Optimization
+	Description:
+		Evaluate the level of performance optimization in the AI-generated code
+	Output:
+		Float
+	Target Score:
+		0.85
+	Another LLM:
+		1.0
+	
+Evaluator 32:
+	Input:
+		Trajectory, LLM messages
+	Name:
+		Coherence
+	Description:
+		Assess the logical flow and coherence across multiple messages in the trajectory
+	Output:
+		Float
+	Target Score:
+		0.9
+	Another LLM:
+		1.0
+	
+Evaluator 33:
+	Input:
+		Trajectory, LLM messages
+	Name:
+		Goal Adherence
+	Description:
+		Evaluate how well the LLM maintains focus on the overall goal throughout the interaction
+	Output:
+		Float
+	Target Score:
+		0.95
+	Another LLM:
+		1.0
+	
+Evaluator 34:
+	Input:
+		Trajectory, LLM messages
+	Name:
+		Context Retention
+	Description:
+		Check if the LLM maintains and uses context from earlier in the conversation appropriately
+	Output:
+		Float
+	Target Score:
+		0.9
+	Another LLM:
+		1.0
+	
+Evaluator 35:
+	Input:
+		Trajectory, LLM messages
+	Name:
+		Adaptive Behavior
+	Description:
+		Assess the LLM's ability to adapt its responses based on user feedback or changing circumstances
+	Output:
+		Float
+	Target Score:
+		0.85
+	Another LLM:
+		1.0
+	
+Evaluator 36:
+	Input:
+		Trajectory, LLM messages
+	Name:
+		Consistency
+	Description:
+		Evaluate the consistency of information and stance across multiple messages
+	Output:
+		Float
+	Target Score:
+		0.95
+	Another LLM:
+		1.0
+	
+Evaluator 37:
+	Input:
+		Trajectory, LLM messages
+	Name:
+		Error Recovery
+	Description:
+		Assess the LLM's ability to recognize and recover from mistakes or misunderstandings
+	Output:
+		Float
+	Target Score:
+		0.8
+	Another LLM:
+		1.0
+	
+Evaluator 38:
+	Input:
+		Trajectory, LLM messages
+	Name:
+		Conversation Management
+	Description:
+		Evaluate the LLM's skills in managing the flow of conversation (e.g. turn-taking, topic transitions)
+	Output:
+		Float
+	Target Score:
+		0.9
+	Another LLM:
+		1.0
+	
+Evaluator 39:
+	Input:
+		Trajectory, LLM messages
+	Name:
+		Information Accumulation
+	Description:
+		Assess how well the LLM accumulates and synthesizes information across multiple turns
+	Output:
+		Float
+	Target Score:
+		0.85
+	Another LLM:
+		1.0
+	
+Evaluator 40:
+	Input:
+		Trajectory, LLM messages
+	Name:
+		Task Completion
+	Description:
+		Evaluate the LLM's effectiveness in completing the overall task or reaching the conversation goal
+	Output:
+		Float
+	Target Score:
+		0.95
+	Another LLM:
+		1.0
+	
+Evaluator 41:
+	Input:
+		Trajectory, LLM messages
+	Name:
+		User Engagement
+	Description:
+		Assess the LLM's ability to maintain user engagement throughout the interaction
+	Output:
+		Float
+	Target Score:
+		0.9
+	Another LLM:
+		1.0
+	
+Evaluator 42:
+	Input:
+		Trajectory, LLM messages
+	Name:
+		Ethical Consistency
+	Description:
+		Evaluate the consistency of ethical behavior and decision-making across the trajectory
+	Output:
+		Boolean
+	Target Score:
+		1.0
+	Another LLM:
+		1.0
+	
+Evaluator 43:
+	Input:
+		Trajectory, LLM messages
+	Name:
+		Long-term Memory Utilization
+	Description:
+		Check if the LLM effectively uses information from much earlier in the conversation when relevant
+	Output:
+		Float
+	Target Score:
+		0.8
+	Another LLM:
+		1.0
+	
+Evaluator 44:
+	Input:
+		Trajectory, LLM messages
+	Name:
+		Clarification Seeking
+	Description:
+		Assess the LLM's ability to ask for clarification when needed across multiple turns
+	Output:
+		Float
+	Target Score:
+		0.85
+	Another LLM:
+		1.0
+	
+Evaluator 45:
+	Input:
+		Trajectory, LLM messages
+	Name:
+		Personalization Consistency
+	Description:
+		Evaluate how consistently the LLM maintains personalization throughout the interaction
+	Output:
+		Float
+	Target Score:
+		0.9
+	Another LLM:
+		1.0
+	
+Evaluator 46:
+	Input:
+		Trajectory, LLM messages
+	Name:
+		Tone Consistency
+	Description:
+		Assess the consistency of tone and style across the entire conversation
+	Output:
+		Float
+	Target Score:
+		0.9
+	BERT Model:
+		1.0
+	
+Evaluator 47:
+	Input:
+		Trajectory, LLM messages
+	Name:
+		Efficiency
+	Description:
+		Evaluate how efficiently the LLM guides the conversation towards the goal
+	Output:
+		Float
+	Target Score:
+		0.85
+	BERT Model:
+		1.0
+	
+Evaluator 48:
+	Input:
+		Trajectory, LLM messages
+	Name:
+		Creativity Progression
+	Description:
+		Assess how the LLM's creative responses evolve and build upon each other throughout the interaction
+	Output:
+		Float
+	Target Score:
+		0.8
+	BERT Model:
+		1.0
+	
+Evaluator 49:
+	Input:
+		Trajectory, LLM messages
+	Name:
+		Knowledge Integration
+	Description:
+		Evaluate how well the LLM integrates new information learned during the conversation into subsequent responses
+	Output:
+		Float
+	Target Score:
+		0.85
+	BERT Model:
+		1.0
+	
+Evaluator 50:
+	Input:
+		Trajectory, LLM messages
+	Name:
+		Meta-cognitive Awareness
+	Description:
+		Assess the LLM's awareness and communication of its own capabilities and limitations throughout the interaction
+	Output:
+		Float
+	Target Score:
+		0.8
+	BERT Model:
+		1.0
