@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "smolpub"
+version = "1.0.2"
+description = "A script that allows to post a text file to https://smol.pub"
+repository = "https://github.com/fmaida/smol.pub"
+readme = "README.md"
+license = "MIT"
+authors = ["Francesco Maida <francesco.maida@gmail.com>"]
+maintainers = ["Francesco Maida <francesco.maida@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.32.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+poetry = "^1.8.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry-pyinstaller-plugin.scripts]
+smolpub = { source = "smolpub/__main__.py", type = "onefile", bundle = false }
+
+[tool.poetry.scripts]
+smolpub = "smolpub.__main__:app"
