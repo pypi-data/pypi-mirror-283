@@ -1,0 +1,98 @@
+Metadata-Version: 2.3
+Name: jupyter-launcher-shortcuts
+Version: 4.0.1
+Dynamic: Keywords
+Summary: Provide arbitrary shortcuts for apps in JupyterLab
+Project-URL: Homepage, https://github.com/yuvipanda/jupyter-launcher-shortcuts
+Project-URL: Bug Tracker, https://github.com/yuvipanda/jupyter-launcher-shortcuts/issues
+Project-URL: Repository, https://github.com/yuvipanda/jupyter-launcher-shortcuts.git
+Author: Yuvi Panda
+License: BSD 3-Clause License
+        
+        Copyright (c) 2019, Yuvi Panda
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        * Redistributions of source code must retain the above copyright notice, this
+          list of conditions and the following disclaimer.
+        
+        * Redistributions in binary form must reproduce the above copyright notice,
+          this list of conditions and the following disclaimer in the documentation
+          and/or other materials provided with the distribution.
+        
+        * Neither the name of the copyright holder nor the names of its
+          contributors may be used to endorse or promote products derived from
+          this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+License-File: LICENSE
+Classifier: Framework :: Jupyter
+Classifier: Framework :: Jupyter :: JupyterLab
+Classifier: Framework :: Jupyter :: JupyterLab :: 4
+Classifier: Framework :: Jupyter :: JupyterLab :: Extensions
+Classifier: Framework :: Jupyter :: JupyterLab :: Extensions :: Prebuilt
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Requires-Dist: jupyter-server
+Requires-Dist: jupyterlab<5,>=4
+Requires-Dist: tornado
+Requires-Dist: traitlets
+Description-Content-Type: text/markdown
+
+# Jupyter Launcher Shortcuts
+
+Extension for JupyterLab (version 4+) and classic Jupyter Notebook (version 7+,
+currently broken, see `Issue #25<https://github.com/2i2c-org/jupyter-launcher-shortcuts/issues/25>`_)
+to add **user defined** 'launcher' shortcuts. Primarily useful in JupyterHub /
+Binder situations.
+
+For JupyterLab, they're added in the launcher interface.
+
+![](labextension.png)
+
+For classic Jupyter Notebook, they are added under the 'New' button
+
+![](nbextension.png)
+
+## Installation
+
+The JupyterLab extension, the classic Jupyter Notebook extension, and a Jupyter
+Server extension required behind the scenes can all be installed with ``pip``.
+
+```bash
+pip install jupyter-launcher-shortcuts
+```
+
+## Configuring
+
+The extension can be configured in a ``jupyter_server_config.py``
+file created in any of the directories under ``config`` in the 
+output of ``jupyter --paths`` command.
+
+```python
+c.LauncherShortcuts.shortcuts = {
+    'my-shiny-application': {
+        'title': 'Human Readable Shortcut Title',
+        'target': '{base_url}shiny/my-shiny-application-directory/',
+        'icon_path': '/path/to/svg/file'
+    }
+}
+```
