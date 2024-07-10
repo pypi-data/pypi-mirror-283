@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "Conqace"
+version = "0.1.0"
+description = "A Python-based update manager."
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [
+    {include = "source/Conqace/*.py"},
+]
+
+[tool.poetry.dependencies]
+python   = ">=3.10"
+requests = "^2.32.3"
+python-dotenv = "^1.0.1"
+loguru = "^0.7.2"
+elevate = "^0.1.3"
+distro = "^1.9.0"
+cryptography = "^42.0.8"
+nox = "^2024.4.15"
+keyring = "^25.2.1"
+sphinx = "^7.3.7"
+pip-tools = "^7.4.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "conqace_FluxC0"
+version = "0.2.0"
+authors = [
+  { name="Kasen Engel", email="kasen.engel@gmail.com" },
+]
+description = "A Handy update manager that supports most major linux distributions. "
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GPLv3.0 License",
+    "Operating System :: Linux",
+]
+
+[project.urls]
+Homepage = "https://github.com/fluxc0/conqace"
+Issues = "https://github.com/fluxc0/conqace/issues"
