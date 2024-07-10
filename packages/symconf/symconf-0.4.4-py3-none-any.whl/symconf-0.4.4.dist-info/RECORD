@@ -1,0 +1,12 @@
+symconf/__init__.py,sha256=4ph_2vtg5iSuL6DtgifpJh_dKjdrvtA9bgR1_1Frzvw,185
+symconf/__main__.py,sha256=1bskNCYhMvTmZfALAosNQqOfEYAGcxp35RlI3kYK95Q,3239
+symconf/config.py,sha256=tjQWzPVKiqG_60Gv0lK63rrDm-8y-b28iv_HK9vi4PI,28331
+symconf/reader.py,sha256=-WfeVIqoO2szO7I7gokr4MiO8bZYFpP8vCHwexaelGE,2455
+symconf/theme.py,sha256=wk2t77izHiqNMT6-m2ffnMb_HMHco7PDVQuRJbSl2-A,2374
+symconf/util.py,sha256=D8IooCZk_dZuiRnaJsgJho_Z_bgWAimufM94w9JaacY,728
+symconf-0.4.4.dist-info/LICENSE,sha256=FXyb5PwRFpyvFDZvTk4pnSZPlyiEAkbLuawB2FVdMco,1071
+symconf-0.4.4.dist-info/METADATA,sha256=P8bj8tqxF1TF9xDnQh9hyBADImofO4627ZwxHkjcmhk,1708
+symconf-0.4.4.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+symconf-0.4.4.dist-info/entry_points.txt,sha256=QzwW0eeC-ibhiHbG8BBOJ3gOpdYKS2eYXz_cOFuP3nY,50
+symconf-0.4.4.dist-info/top_level.txt,sha256=p30g3wWaJaWHxAw8lleqSgYCTvBsMXruDG3TXehkBZk,8
+symconf-0.4.4.dist-info/RECORD,,
