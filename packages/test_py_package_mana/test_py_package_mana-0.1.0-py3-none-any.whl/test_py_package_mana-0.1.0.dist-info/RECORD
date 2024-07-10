@@ -1,0 +1,5 @@
+test_py_package_mana/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test_py_package_mana/main.py,sha256=3lko-LZV3eANns0kSkfTqitDSmuDwkj6x59HwYK9EMA,46
+test_py_package_mana-0.1.0.dist-info/METADATA,sha256=BzT9naXfBqKygPs77u51X_aNqyg4ThOrsrfY4VUSYTQ,398
+test_py_package_mana-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+test_py_package_mana-0.1.0.dist-info/RECORD,,
