@@ -1,0 +1,143 @@
+[build-system]
+requires = ["hatchling>=1.5.0", "jupyterlab>=4.0.0,<5", "hatch-nodejs-version>=0.3.2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jupyter-launcher-shortcuts"
+version = "4.0.3"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+classifiers = [
+    "Framework :: Jupyter",
+    "Framework :: Jupyter :: JupyterLab",
+    "Framework :: Jupyter :: JupyterLab :: 4",
+    "Framework :: Jupyter :: JupyterLab :: Extensions",
+    "Framework :: Jupyter :: JupyterLab :: Extensions :: Prebuilt",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "jupyter_server",
+    "jupyterlab>=4,<5",
+    "tornado",
+    "traitlets",
+]
+dynamic = ["description", "authors", "urls", "keywords"]
+
+
+# hatch ref: https://hatch.pypa.io/latest/
+#
+[tool.hatch.build.targets.sdist]
+artifacts = ["jupyter_launcher_shortcuts/labextension"]
+exclude = [".github"]
+
+[tool.hatch.build.targets.wheel.shared-data]
+"jupyter_launcher_shortcuts/labextension" = "share/jupyter/labextensions/jupyterlab-launcher-shortcuts"
+"labextension/install.json" = "share/jupyter/labextensions/jupyterlab-launcher-shortcuts/install.json"
+"jupyter_launcher_shortcuts/etc/serverextension.json" = "etc/jupyter/jupyter_server_config.d/jupyter_launcher_shortcuts.json"
+
+
+# hatch-nodejs-version is used to populate information in pyproject.toml
+# dynamically based on information in package.json
+#
+# ref: https://github.com/agoose77/hatch-nodejs-version#readme
+#
+[tool.hatch.metadata.hooks.nodejs]
+fields = ["description", "authors", "urls", "keywords"]
+path = "labextension/package.json"
+
+
+# jupyter-builder is used to ensure we build the jupyterlab extension when the
+# Python package is built
+#
+# ref: https://github.com/jupyterlab/hatch-jupyter-builder#readme
+#
+[tool.hatch.build.hooks.jupyter-builder]
+dependencies = ["hatch-jupyter-builder>=0.9.1"]
+build-function = "hatch_jupyter_builder.npm_builder"
+ensured-targets = [
+    "jupyter_launcher_shortcuts/labextension/static/style.js",
+    "jupyter_launcher_shortcuts/labextension/package.json",
+    "jupyter_launcher_shortcuts/labextension/static/third-party-licenses.json",
+]
+skip-if-exists = ["jupyter_launcher_shortcuts/labextension/package.json"]
+
+[tool.hatch.build.hooks.jupyter-builder.build-kwargs]
+path = "labextension"
+build_cmd = "build:prod"
+npm = ["jlpm"]
+
+[tool.hatch.build.hooks.jupyter-builder.editable-build-kwargs]
+path = "labextension"
+build_cmd = "install:extension"
+npm = ["jlpm"]
+source_dir = "labextension/src"
+build_dir = "jupyter_launcher_shortcuts/labextension"
+
+
+# jupyter-releaser isn't confirmed to be used in this project, is it?
+#
+# ref: https://github.com/jupyter-server/jupyter_releaser#readme
+#
+[tool.jupyter-releaser.options]
+version_cmd = "hatch version"
+
+[tool.jupyter-releaser.hooks]
+before-build-npm = [
+    "python -m pip install 'jupyterlab>=4.0.0,<5'",
+    "jlpm",
+    "jlpm build:prod"
+]
+before-build-python = ["jlpm clean:all"]
+
+
+# check-wheel-contents isn't confirmed to be used in this project, is it?
+#
+# ref: https://github.com/jwodder/check-wheel-contents#readme
+#
+[tool.check-wheel-contents]
+ignore = ["W002"]
+
+
+# tbump is used to simplify and standardize the release process when updating
+# the version, making a git commit and tag, and pushing changes.
+#
+# ref: https://github.com/your-tools/tbump#readme
+#
+[tool.tbump]
+github_url = "https://github.com/2i2c-org/jupyter-launcher-shortcuts"
+
+[tool.tbump.version]
+current = "4.0.3"
+regex = '''
+    (?P<major>\d+)
+    \.
+    (?P<minor>\d+)
+    \.
+    (?P<patch>\d+)
+    -?
+    (?P<pre>((alpha|beta|rc)\.\d+)|)
+    (?P<dev>(0\.dev)|)
+'''
+
+[tool.tbump.git]
+message_template = "Bump to {new_version}"
+tag_template = "v{new_version}"
+
+[[tool.tbump.file]]
+src = "jupyter_launcher_shortcuts/_version.py"
+
+[[tool.tbump.file]]
+src = "pyproject.toml"
+search = 'version = "{current_version}"'
+
+[[tool.tbump.file]]
+src = "labextension/package.json"
+search = '"version": "{current_version}"'
