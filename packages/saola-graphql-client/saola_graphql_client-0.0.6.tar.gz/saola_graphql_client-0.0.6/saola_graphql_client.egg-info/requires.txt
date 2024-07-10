@@ -1,0 +1,1 @@
+ariadne-codegen==0.12.0
