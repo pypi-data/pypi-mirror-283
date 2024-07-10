@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: dgtl_logging
+Version: 0.0.4
+Summary: DGTL Health BV NEN7513 compliant logging objects 
+Author: Olivier Witteman
+License: MIT
+Description-Content-Type: text/markdown
+
+# dgtl-logging
+NEN7513 compliant logging library according to the current scope of DGTL Health BV
+
+
+## Updating
+- update `setup.py` with new version number
+- push or merge pull request to master branch and a github action will build and publish the package
