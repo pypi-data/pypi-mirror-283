@@ -1,0 +1,14 @@
+blessings
+
+[dev]
+dev
+black
+build
+flake8
+line-profiler
+mypy
+pre-commit
+pylint
+pytest
+setuptools
+twine
