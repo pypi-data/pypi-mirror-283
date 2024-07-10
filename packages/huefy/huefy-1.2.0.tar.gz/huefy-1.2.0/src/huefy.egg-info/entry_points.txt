@@ -1,0 +1,2 @@
+[console_scripts]
+hue = huefy.hue:handle_arguments
