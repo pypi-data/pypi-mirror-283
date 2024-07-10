@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: randomjokeapi
+Version: 0.0.1
+Summary: get current temperature from provider
+Home-page: https://github.com/asrinvakili/RndomJokeAPI
+Author: Asrin Vakili
+Author-email: asrin_vakili@yahoo.com
+Project-URL: Author, https://github.com/asrinvakili
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+How to use:
+
+from randomjokeapi.api import A, B, C
+
+joke_A = A()
+print(joke_A.get_random_joke())
+
+joke_B = B()
+print(joke_B.get_random_joke())
+
+joke_C = C()
+print(joke_C.get_random_joke())

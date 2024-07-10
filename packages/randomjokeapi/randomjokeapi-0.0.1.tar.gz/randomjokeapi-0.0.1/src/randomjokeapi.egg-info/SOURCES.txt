@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+src/randomjokeapi/__init__.py
+src/randomjokeapi/api.py
+src/randomjokeapi/base.py
+src/randomjokeapi.egg-info/PKG-INFO
+src/randomjokeapi.egg-info/SOURCES.txt
+src/randomjokeapi.egg-info/dependency_links.txt
+src/randomjokeapi.egg-info/requires.txt
+src/randomjokeapi.egg-info/top_level.txt
